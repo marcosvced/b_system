@@ -1,0 +1,13 @@
+@use "const" as enum;
+
+@function size($size) {
+  @return var(#{enum.find(FS)}#{$size})
+}
+
+@function weight($weight) {
+  @return var(#{enum.find(FW)}#{$weight})
+}
+
+@function family($family) {
+  @return var(#{enum.find(FF)}#{$family})
+}

@@ -1,0 +1,20 @@
+@use "../../helpers/size";
+@use "../../helpers/colors";
+@use "../../mixins/space";
+@use "../../placeholders/fonts";
+
+a {
+  &.action-link {
+    @extend %body-regular-text;
+    color: colors.primary('blue');
+    display: flex;
+    align-items: center;
+    line-height: size.rem(24);
+    @include space.x(8);
+
+    > [class*='icon-'] {
+      font-size: size.rem(20);
+      display: inline-flex;
+    }
+  }
+}

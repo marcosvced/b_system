@@ -1,0 +1,26 @@
+@use "misc" as *;
+
+@function find($key, $map: $_const) {
+  @return map-get($map, $key);
+}
+
+$_font: (
+        FS: '--fs-',
+        FW: '--fw-',
+        FF: '--ff-'
+);
+
+$_palette: (
+        PRIMARY: '--c-primary__',
+        SECONDARY: '--c-secondary__',
+        GRAYSCALE: '--c-grayscale__',
+        OPACITY: '--c-opacity__',
+        BODY: '--c-body__',
+        BUTTON: '--c-button__'
+);
+
+$_spacing: (
+        SPACE: '--s-space__'
+);
+
+$_const: map-collect($_font, $_palette, $_spacing);

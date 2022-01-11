@@ -1,0 +1,27 @@
+@use "const" as enum;
+
+@function primary($color) {
+  @return var(#{enum.find(PRIMARY)}#{$color});
+}
+
+@function secondary($color) {
+  @return var(#{enum.find(SECONDARY)}#{$color});
+}
+
+
+@function grayscale($color) {
+  @return var(#{enum.find(GRAYSCALE)}#{$color});
+
+}
+
+@function opacity($color) {
+  @return var(#{enum.find(OPACITY)}#{$color});
+}
+
+@function body($color) {
+  @return var(#{enum.find(BODY)}#{$color});
+}
+
+@function button($color) {
+  @return var(#{enum.find(BUTTON)}#{$color});
+}

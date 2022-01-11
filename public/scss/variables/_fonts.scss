@@ -1,0 +1,39 @@
+@use "../helpers/size";
+
+// FONT FAMILY
+
+// Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+// Playfair display
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Code font
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+
+// FONT FAMILY
+$family: (
+        roboto: "'Roboto', sans-serif",
+        playfair: "'Playfair Display', serif",
+        code: "'JetBrains Mono', monospace",
+);
+
+// FONT WEIGHT
+$weight: (
+        light: 300,
+        regular: 400,
+        medium: 500,
+        bold: 700,
+);
+
+// FONT SIZE
+$size: (
+        xxl: size.rem(64),
+        xl: size.rem(40),
+        lg: size.rem(28),
+        md: size.rem(22),
+        sm: size.rem(18),
+        xs: size.rem(15),
+        xxs: size.rem(11),
+);

@@ -1,0 +1,33 @@
+/*
+ * 1º Common
+ * 2º Atoms
+ * 3º Molecules
+ * 4º Organisms
+ */
+
+/*
+ * 1º Common
+ */
+@use "common/root";
+@use "common/icons";
+@use "common/styles";
+
+/*
+ * 2º Atoms
+ */
+@use "components/atoms/tooltip";
+@use "components/atoms/button";
+@use "components/atoms/link";
+
+/*
+ * 3º Molecules
+ */
+@use "components/molecules/dropdown";
+@use "components/molecules/navdrawer";
+
+/*
+ * 4º Organisms
+ */
+@use "components/organisms/header";
+@use "components/organisms/marquee";
+@use "components/organisms/footer";

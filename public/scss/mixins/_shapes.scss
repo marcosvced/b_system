@@ -1,0 +1,17 @@
+@use "../helpers/size";
+
+@mixin square($size) {
+  width: size.rem($size);
+  height: size.rem($size);
+}
+
+@mixin circle($size) {
+  width: size.rem($size);
+  height: size.rem($size);
+  border-radius: 50%;
+}
+
+@mixin rectangle($width, $height) {
+  width: size.rem($width);
+  height: size.rem($height);
+}

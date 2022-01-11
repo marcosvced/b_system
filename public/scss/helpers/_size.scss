@@ -1,0 +1,15 @@
+@use "sass:math";
+@use "const" as enum;
+
+@function rem($font-size) {
+  @return #{math.div($font-size, 16)}rem;
+}
+
+@function em($font-size, $inherit) {
+  @return #{math.div($font-size, $inherit)}em;
+}
+
+@function space($space) {
+  @return var(#{enum.find(SPACE)}#{$space});
+}
+

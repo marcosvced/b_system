@@ -1,0 +1,38 @@
+@use "../../helpers/size";
+@use "../../helpers/colors";
+@use "../../mixins/space";
+@use "../../placeholders/fonts";
+
+.nav-item.dropdown {
+  .dropdown-toggle {
+    &:after {
+      display: none;
+    }
+  }
+
+  .dropdown-menu {
+    border: 1px solid #CBCBCB;
+    box-shadow: 0 2px 6px 0 rgba(black, .04);
+    border-radius: size.rem(4);
+    transform: translate(-50%, 0);
+    left: 50%;
+    padding: size.space(8);
+
+    .dropdown-item {
+      @extend %body-regular-text;
+      color: colors.body(23);
+      border-radius: size.rem(4);
+      padding-block: size.space(8);
+      text-align: left;
+
+      &:active,
+      &.active {
+        background-color: colors.grayscale(100);
+      }
+
+      &:hover {
+        background-color: colors.grayscale(100);
+      }
+    }
+  }
+}

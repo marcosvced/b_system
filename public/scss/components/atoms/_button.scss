@@ -1,0 +1,219 @@
+@use "../../variables/palette";
+@use "../../helpers/font";
+@use "../../helpers/colors";
+@use "../../helpers/size";
+@use "../../placeholders/fonts";
+@use "../../mixins/space";
+@use "../../mixins/shapes" as shape;
+
+.btn {
+  padding-inline: size.space(32);
+  padding-block: size.rem(12);
+  border-radius: size.rem(4);
+  border: none;
+  outline: none;
+  line-height: size.space(24);
+  transition: all .25s;
+  white-space: nowrap;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @include space.x(8);
+  @extend %body-bold-text;
+
+  > span:not([class^='icon-']) {
+    @extend %body-bold-text;
+  }
+
+  > [class^='icon-'] {
+    display: flex;
+    font-size: size.rem(18);
+  }
+
+  &-primary {
+    background-color: colors.button(primary);
+    color: colors.grayscale(light);
+    min-width: size.rem(216);
+    @include space.x(12);
+
+    &.btn-only-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: min-content;
+
+      padding-inline: size.rem(14);
+      padding-block: size.rem(14);
+      line-height: 1;
+      font-size: font.size(sm);
+    }
+
+    &.btn-primary-cta {
+      > [class^='icon-'] {
+        font-size: size.rem(12);
+        @include shape.circle(24);
+        line-height: 1;
+        display: inline-grid;
+        align-items: center;
+        justify-content: center;
+        background-color: colors.button(cta_icon);
+        transform: translateX(0);
+        transition: transform .25s ease-in;
+      }
+    }
+
+    &:hover:not(:disabled) {
+      background-color: colors.button(primary--hover);
+
+      &.btn-primary-cta {
+        > [class^='icon-'] {
+          background-color: colors.button(cta_icon--hover);
+          transform: translateX(size.rem(4));
+        }
+      }
+    }
+  }
+
+  &-secondary {
+    background-color: colors.button(secondary);
+
+    &:hover:not(:disabled) {
+      background-color: colors.button(secondary--hover);
+    }
+  }
+
+  &-tertiary {
+    background-color: colors.grayscale(100);
+    color: colors.body(off);
+
+
+    &:hover:not(:disabled) {
+      background-color: colors.grayscale(200);
+    }
+  }
+
+  &-subtle {
+    background-color: transparent;
+    color: colors.body(off);
+    border: size.rem(1) solid colors.grayscale(200);
+
+    &:hover:not(:disabled) {
+      background-color: transparent;
+      border: size.rem(1) solid colors.grayscale(400);
+    }
+  }
+
+  &-glass {
+    background-color: colors.opacity(light-100);
+    backdrop-filter: blur(size.rem(9));
+    color: colors.grayscale(light);
+
+    &:hover:not(:disabled) {
+      color: colors.grayscale(light);
+      background-color: colors.opacity(light-0);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: colors.opacity(light-200);
+    }
+  }
+
+  &-narrow {
+    padding-block: size.space(8);
+    min-width: size.rem(192);
+  }
+
+  &-fit {
+    min-width: auto;
+    width: min-content;
+  }
+
+  &-action {
+    &-next,
+    &-previous {
+      span:not([class^='icon-']) {
+        @extend %body-regular-text
+      }
+
+      [class^='icon-'] {
+        transition: transform .35s ease-in-out;
+      }
+    }
+
+    &-next:hover:not(:disabled) {
+      [class^='icon-'] {
+        transform: translateX(size.rem(4));
+      }
+    }
+
+    &-previous:hover:not(:disabled) {
+      [class^='icon-'] {
+        transform: translateX(-#{size.rem(4)});
+      }
+    }
+
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: colors.button(disabled);
+    color: colors.opacity(gray-400);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &-only-icon {
+    @include shape.square(32);
+    font-size: size.rem(18);
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    color: colors.grayscale(dark);
+
+    &:before {
+      display: flex;
+      margin: auto;
+      width: min-content;
+      height: min-content;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+/* DARK MODE */
+[data-b-system='dark-mode'] {
+  .btn {
+    &-tertiary {
+      background-color: colors.grayscale(900);
+      color: colors.grayscale(light);
+
+      &:hover:not(:disabled) {
+        background-color: colors.grayscale(1000);
+      }
+
+      &.transparent {
+        background-color: colors.opacity(light-100);
+        &:hover:not(:disabled) {
+          background-color: colors.opacity(light-0);
+        }
+      }
+
+    }
+
+    &-subtle {
+      color: colors.grayscale(light);
+    }
+
+    &:disabled {
+      background-color: colors.grayscale(900);
+      color: colors.opacity(light-200);
+    }
+  }
+}

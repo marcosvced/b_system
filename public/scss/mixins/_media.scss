@@ -1,0 +1,24 @@
+$breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+/*
+** Tools to crate media queries
+*/
+
+@mixin screen($breakpoint) {
+  @if map_has-key($breakpoints, $breakpoint) {
+    @media screen and (min-width: map_get($breakpoints, $breakpoint)) {
+      @content
+    }
+  } @else {
+    @media screen and (min-width: $breakpoint) {
+      @content
+    }
+  }
+}

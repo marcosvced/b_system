@@ -1,0 +1,57 @@
+@use "../helpers/const" as enum;
+@use "../variables/fonts";
+@use "../variables/palette";
+@use "../variables/spacing";
+
+:root {
+
+  /*
+   * FONTS
+   */
+  @each $_name, $_value in fonts.$size {
+     #{enum.find(FS)}#{$_name}: #{$_value};
+  }
+
+  @each $_name, $_value in fonts.$weight {
+     #{enum.find(FW)}#{$_name}: #{$_value};
+  }
+
+  @each $_name, $_value in fonts.$family {
+     #{enum.find(FF)}#{$_name}: #{$_value};
+  }
+
+
+  /*
+  * COLOURS
+  */
+  @each $_name, $_color in palette.$primary {
+    #{enum.find(PRIMARY)}#{$_name}: #{$_color};
+  }
+
+  @each $_name, $_color in palette.$secondary {
+    #{enum.find(SECONDARY)}#{$_name}: #{$_color};
+  }
+
+  @each $_name, $_color in palette.$opacity {
+    #{enum.find(OPACITY)}#{$_name}: #{$_color};
+  }
+
+  @each $_name, $_color in palette.$grayscale {
+    #{enum.find(GRAYSCALE)}#{$_name}: #{$_color};
+  }
+
+  @each $_name, $_color in palette.$body {
+    #{enum.find(BODY)}#{$_name}: #{$_color};
+  }
+
+  @each $_name, $_color in palette.$button {
+    #{enum.find(BUTTON)}#{$_name}: #{$_color};
+  }
+
+  /*
+   * SPACING
+   */
+  @each $_name, $_space in spacing.$space {
+    #{enum.find(SPACE)}#{$_name}: #{$_space};
+  }
+}

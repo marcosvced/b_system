@@ -1,0 +1,115 @@
+@use '../helpers/font';
+@use '../helpers/colors';
+
+%x1-text {
+  font: {
+    size: font.size(xxl);
+    family: font.family(roboto);
+    weight: font.weight(bold);
+  }
+}
+
+%x2-text {
+  font: {
+    size: font.size(xl);
+    family: font.family(roboto);
+    weight: font.weight(bold);
+  }
+}
+
+%x3-text {
+  font: {
+    size: font.size(lg);
+    family: font.family(roboto);
+    weight: font.weight(bold);
+  }
+}
+
+%x4-text {
+  font: {
+    size: font.size(md);
+    family: font.family(roboto);
+    weight: font.weight(bold);
+  }
+}
+
+%x5-text {
+  font: {
+    size: font.size(md);
+    family: font.family(roboto);
+    weight: font.weight(light);
+  }
+}
+
+%x6-text {
+  font: {
+    size: font.size(sm);
+    family: font.family(roboto);
+    weight: font.weight(bold);
+  }
+}
+
+%x7-text {
+  font: {
+    size: font.size(sm);
+    family: font.family(roboto);
+    weight: font.weight(medium);
+  }
+}
+
+%x8-text {
+  font: {
+    size: font.size(sm);
+    family: font.family(roboto);
+    weight: font.weight(regular);
+  }
+}
+
+%x9-text {
+  font: {
+    size: font.size(sm);
+    family: font.family(roboto);
+    weight: font.weight(light);
+  }
+}
+
+%x10-mini {
+  font: {
+    size: font.size(xxs);
+    family: font.family(roboto);
+    weight: font.weight(light);
+  }
+}
+
+%body-bold-text {
+  font: {
+    size: font.size(xs);
+    family: font.family(roboto);
+    weight: font.weight(bold);
+  };
+}
+
+%body-medium-text {
+  font: {
+    size: font.size(xs);
+    family: font.family(roboto);
+    weight: font.weight(medium);
+  };
+}
+
+%body-regular-text {
+  font: {
+    size: font.size(xs);
+    family: font.family(roboto);
+    weight: font.weight(regular);
+  };
+}
+
+%body-light-text {
+  font: {
+    size: font.size(xs);
+    family: font.family(roboto);
+    weight: font.weight(light);
+  };
+}
+

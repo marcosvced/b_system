@@ -1,0 +1,122 @@
+@use "../../variables/palette";
+@use "../../helpers/font";
+@use "../../helpers/colors";
+@use "../../helpers/size";
+@use "../../mixins/space";
+@use "../../mixins/shapes" as shape;
+@use "../../mixins/media";
+@use "../../placeholders/fonts";
+
+footer {
+  padding-block: size.rem(120);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .links-wrapper {
+    @include space.y(16);
+
+    &:first-of-type {
+      margin-bottom: size.space(48);
+      @include media.screen(md) {
+        margin-bottom: auto;
+      }
+    }
+
+
+    .title {
+      @extend %body-medium-text;
+      color: colors.body(off);
+      margin-bottom: size.space(32);
+    }
+
+    li:not(.title) {
+      @extend %body-regular-text;
+      color: colors.body(23);
+      transition: color .25s ease;
+
+      &>a:hover {
+          color: colors.primary('blue');
+      }
+
+    }
+  }
+
+  &.footer-corporate {
+    .footer-logo {
+      display: block;
+      margin-bottom: size.space(24);
+
+      @include media.screen(lg) {
+        margin-bottom: size.space(32);
+      }
+    }
+
+    .copy-wrapper {
+      margin-bottom: size.space(48);
+      @include media.screen(md) {
+        margin-bottom: size.space(64);
+      }
+      @include media.screen(lg) {
+        margin-bottom: size.space(0);
+      }
+
+      p.copy {
+        @extend %body-light-text;
+        color: colors.body(30);
+        margin-bottom: size.space(24);
+
+        @include media.screen(lg) {
+          margin-bottom: size.space(32);
+          max-width: size.rem(265);
+        }
+      }
+    }
+  }
+
+  &.footer-basic {
+
+  }
+
+  &.footer-darkener {
+    background-color: colors.grayscale(100);
+  }
+}
+
+[data-b-system='dark-mode'] {
+  footer {
+
+    background-color: colors.grayscale(1100);
+
+    .links-wrapper {
+      .title {
+        color: colors.grayscale(light);
+      }
+      li:not(.title) {
+        color: colors.grayscale(light);
+      }
+      &.footer-corporate {
+        .copy-wrapper {
+          margin-bottom: size.space(48);
+          @include media.screen(md) {
+            margin-bottom: size.space(64);
+          }
+          @include media.screen(lg) {
+            margin-bottom: size.space(0);
+          }
+          p.copy {
+            color: colors.body(67);
+          }
+        }
+      }
+
+    }
+
+    &.footer-darkener {
+      background-color: colors.grayscale(1200);
+    }
+  }
+}
