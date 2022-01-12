@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "node bin/www.js"
+    "dev": "node bin/www.js",
+    "sass": "sass lib/scss/style.scss assets/css/style.css",
+    "min-sass": "sass lib/scss/style.scss assets/css/style.min.css --style=compressed"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-ejs-extend": "^0.0.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "sass": "^1.47.0"
