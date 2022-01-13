@@ -65,4 +65,8 @@ router.get(ROUTES_PATHS.QUICK_START.FOOTERS.BASIC, (req, res) => {
   render(res, dir(ROUTES_NAMES.QUICK_START, 'modules', ['footers', 'basic']))
 })
 
+router.get(ROUTES_PATHS.QUICK_START.FOOTERS.CORPORATE, (req, res) => {
+  render(res, dir(ROUTES_NAMES.QUICK_START, 'modules', ['footers', 'corporate']))
+})
+
 module.exports = router

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node bin/www.js",
     "sass": "sass lib/scss/style.scss assets/css/style.css",
+    "js": "uglifyjs lib/js/b_system.js -o assets/js/b_system.min.js",
     "min-sass": "sass lib/scss/style.scss assets/css/style.min.css --style=compressed"
   },
   "dependencies": {
@@ -14,8 +15,7 @@
     "express": "~4.16.1",
     "express-ejs-extend": "^0.0.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "sass": "^1.47.0"
+    "morgan": "~1.9.1"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
@@ -23,6 +23,8 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "sass": "^1.47.0",
+    "uglify-js": "^3.14.5"
   }
 }
