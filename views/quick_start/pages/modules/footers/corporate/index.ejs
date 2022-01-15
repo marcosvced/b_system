@@ -1,15 +1,13 @@
-<%- extend(`${layout}/default`) %>
+<%- include(`${view}/quick_start/layout`)%>
 
-<%- include(`${component}/header/default`)%>
-
+<%- contentFor('body') %>
 <div class="main-content main-content-space-top">
     <section class="module-wrapper footer-basic">
-        <h3 class="example-title container">Footer Corporate White</h3>
         <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/corporate`) %>
-            <%- include(`${component}/footer/corporate`, {variant: 'footer-darkener'}) %>
-            <%- include(`${component}/footer/corporate`, { darkMode:true}) %>
-            <%- include(`${component}/footer/corporate`, {variant: 'footer-darkener', darkMode:true}) %>
+<!--            <%- include(`${component}/footer/corporate`) %>-->
+<!--            <%- include(`${component}/footer/corporate`, {variant: 'footer-darkener'}) %>-->
+<!--            <%- include(`${component}/footer/corporate`, { isDark:true}) %>-->
+<!--            <%- include(`${component}/footer/corporate`, {variant: 'footer-darkener', darkMode:true}) %>-->
         </div>
     </section>
 </div>

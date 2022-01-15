@@ -63,7 +63,7 @@ header {
 
   &.header-fixed {
     z-index: 100;
-    position: fixed;
+    position: sticky;
     width: 100vw;
     top: 0;
   }

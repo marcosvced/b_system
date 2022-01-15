@@ -966,7 +966,7 @@ header.header-transparent nav.navbar .navbar-nav .nav-item:hover a:not(.active):
 }
 header.header-fixed {
   z-index: 100;
-  position: fixed;
+  position: sticky;
   width: 100vw;
   top: 0;
 }

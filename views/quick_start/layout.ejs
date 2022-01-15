@@ -1,0 +1,104 @@
+<%- contentFor('header') %>
+<%
+const navigation = [
+        {
+            label: 'Demos'
+        },
+        {
+            label: 'Pages'
+        },
+        {
+            label: 'Modules',
+            entries: [
+                {
+                    href: '#',
+                    label: 'Menus'
+                },
+                {
+                    href: '#',
+                    label: 'Headers'
+                },
+                {
+                    href: '#',
+                    label: 'Contents'
+                },
+                {
+                    href: '#',
+                    label: 'Grids'
+                },
+                {
+                    href: '#',
+                    label: 'Cards'
+                },
+                {
+                    href: '#',
+                    label: 'Forms'
+                },
+                {
+                    href: QUICK_START.FOOTERS.BASIC,
+                    label: 'Footers'
+                }
+            ]
+
+        },
+        {
+            label: 'Components',
+            entries: [
+                {
+                    href: QUICK_START.BUTTONS,
+                    label: 'Buttons'
+                },
+                {
+                    href: '#',
+                    label: 'Forms'
+                },
+                {
+                    href: '#',
+                    label: 'Interaction'
+                },
+                {
+                    href: '#',
+                    label: 'Cards'
+                },
+                {
+                    href: '#',
+                    label: 'Product Cards'
+                },
+                {
+                    href: '#',
+                    label: 'Links'
+                },
+                {
+                    href: '#',
+                    label: 'Grid cells'
+                },
+                {
+                    href: '#',
+                    label: 'Icon + description'
+                },
+                {
+                    href: '#',
+                    label: 'Accordions'
+                },
+                {
+                    href: '#',
+                    label: 'Alerts'
+                },
+                {
+                    href: QUICK_START.FOOTERS.BASIC,
+                    label: 'Footers'
+                }
+            ]
+        },
+        {
+            label: 'Transactions'
+        }
+    ]
+%>
+<%- include(`${component}/header/default`, { items: navigation}) %>
+
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/basic`, { variant: 'darkener'}) %>
+
+
+

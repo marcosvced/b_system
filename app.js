@@ -3,13 +3,17 @@ const express = require('express')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
+const expressLayouts = require('express-ejs-layouts')
 
 const app = express()
 
-// view engine setup
-app.engine('ejs', require('express-ejs-extend'))
-
 app.set('view engine', 'ejs')
+app.use(expressLayouts)
+app.set('layout extractScripts', true)
+app.set('layout extractStyles', true)
+
+// app.set('layout', 'lib/layouts/default')
+
 app.set('views', path.join(__dirname, 'views'))
 
 app.use(logger('dev'))

@@ -3,10 +3,11 @@ const express = require('express')
 const router = express.Router()
 
 const srcDirs = {
-  assets: '/assets/',
-  image: '/assets/img/',
-  layout: `${process.cwd()}/lib/layouts/`,
-  component: `${process.cwd()}/lib/components/`,
+  assets: '/assets',
+  image: '/assets/img',
+  layout: `${process.cwd()}/lib/layouts`,
+  component: `${process.cwd()}/lib/components`,
+  view: `${process.cwd()}/views`,
 }
 
 const TITLE = 'B_System'
@@ -23,6 +24,7 @@ const ROUTES_PATHS = {
       BASIC: '/footers/basic',
       CORPORATE: '/footers/corporate',
     },
+    BUTTONS: '/buttons',
   },
 }
 
@@ -46,27 +48,38 @@ function render(view, path, extras = {}) {
     title: TITLE,
     ...srcDirs,
     ...ROUTES_PATHS,
+    layout: `${srcDirs.layout}/default`,
     ...extras,
   })
 }
 
+/* the default path "/" should redirect to Home */
+router.get('/', (request, response) => {
+  response.redirect(ROUTES_PATHS.QUICK_START.HOME)
+})
+
 /* home page. */
-router.get(ROUTES_PATHS.QUICK_START.HOME, (req, res) => {
-  render(res, dir(ROUTES_NAMES.QUICK_START))
+router.get(ROUTES_PATHS.QUICK_START.HOME, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START))
 })
 
 /* headers page. */
-router.get(ROUTES_PATHS.QUICK_START.HEADERS, (req, res) => {
-  render(res, dir(ROUTES_NAMES.QUICK_START, 'modules', ['headers']))
+router.get(ROUTES_PATHS.QUICK_START.HEADERS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'modules', ['headers']))
 })
 
 /* footers page. */
-router.get(ROUTES_PATHS.QUICK_START.FOOTERS.BASIC, (req, res) => {
-  render(res, dir(ROUTES_NAMES.QUICK_START, 'modules', ['footers', 'basic']))
+router.get(ROUTES_PATHS.QUICK_START.FOOTERS.BASIC, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'modules', ['footers', 'basic']))
 })
 
-router.get(ROUTES_PATHS.QUICK_START.FOOTERS.CORPORATE, (req, res) => {
-  render(res, dir(ROUTES_NAMES.QUICK_START, 'modules', ['footers', 'corporate']))
+router.get(ROUTES_PATHS.QUICK_START.FOOTERS.CORPORATE, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'modules', ['footers', 'corporate']))
+})
+
+/* Buttons page. */
+router.get(ROUTES_PATHS.QUICK_START.BUTTONS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['buttons']))
 })
 
 module.exports = router

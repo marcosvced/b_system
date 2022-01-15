@@ -46,8 +46,7 @@ const server = http.createServer(app)
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port)
-// eslint-disable-next-line no-console
-console.log('listening on port:', port)
-// eslint-disable-next-line no-console
-console.log(`http://localhost:${port}`)
+server.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log('Listening on http://localhost:%s/', port)
+})
