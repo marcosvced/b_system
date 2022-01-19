@@ -3,6 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "server": "nodemon bin/www.js",
+    "start": "gulp watcher",
+    "sass": "gulp compileSass",
+    "min": "gulp minCss",
+    "compileJs": "gulp compileJs",
+    "bundle": "gulp bundle",
+    "images": "gulp images",
     "dev": "node bin/www.js"
   },
   "dependencies": {
@@ -10,16 +17,24 @@
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-ejs-layouts": "^2.5.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "sass": "^1.47.0"
+    "nodemon": "^2.0.15"
   },
   "devDependencies": {
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "babel-preset-airbnb": "^5.0.0",
+    "browser-sync": "latest",
+    "css-loader": "^6.2.0",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "latest",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.47.0"
   }
 }
