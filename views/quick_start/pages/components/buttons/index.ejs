@@ -1,18 +1,12 @@
 <%- include(`${view}/quick_start/layout`)%>
 
 <%- contentFor('body') %>
-<section class="module-wrapper">
-    <div class="container">
-        <h3 class="module-title">Buttons</h3>
-        <div class="buttons-wrapper module-example-wrapper">
-            <div class="button-wrapper">
 
-                <button class="btn btn-primary btn-primary-cta">
-                    <span>Purchase</span>
-                    <span class="icon-btn-arrow"></span>
-                </button>
+<section class="section">
+    <div class="container d-flex flex-wrap gap-5">
+        <div class="d-flex flex-column gap-2">
 
-                <%- include(`${component}/button/button`, { label: 'Purchase', css_class: 'btn-primary btn-primary-cta', icon: 'icon-btn-arrow', icon_position: 'after' }) %>
+                <%- include(`${component}/button/button`, { label: 'Purchase', isCTA: true, icon: 'icon-btn-arrow', icon_position: 'after' }) %>
 
                 <span class="label">
                     Primary CTA
@@ -20,165 +14,161 @@
 
             </div>
 
-            <div class="button-wrapper">
-                <button class="btn btn-primary">
-                    Continue
-                </button>
-                <span class="label">
-                    Primary
-                </span>
-            </div>
-
-            <div class="button-wrapper">
-                <button class="btn btn-secondary">
-                    Send
-                </button>
-                <span class="label">
-                    Secondary
-                </span>
-            </div>
-
-            <div class="button-wrapper">
-                <button class="btn btn-tertiary btn-with-icon ">
-                    Access
-                </button>
-                <span class="label">
-                    Tertiary
-                </span>
-            </div>
-
-            <div class="button-wrapper">
-                <button class="btn btn-subtle">
-                    <span>Access</span>
-                    <span class="icon-avatar"></span>
-                </button>
-                <span class="label">
-                    Subtle
-                </span>
-            </div>
-
-            <div class="button-wrapper">
-                <button class="btn btn-tertiary btn-action-next">
-                    <span>Next</span>
-                    <span class="icon-next-mini"></span>
-                </button>
-                <span class="label">
-                    Tertiary Next
-                </span>
-            </div>
-
-            <div class="button-wrapper">
-                <button class="btn btn-tertiary btn-action-previous">
-                    <span class="icon-back-mini"></span>
-                    <span>Previous</span>
-                </button>
-                <span class="label">
-                    Tertiary Previous
-                </span>
-            </div>
-
-            <div class="button-wrapper">
-                <button class="btn btn-primary" disabled>
-                    Start with B_System
-                </button>
-                <span class="label">
-                    Disabled
-                </span>
-            </div>
-
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-primary">
+                Continue
+            </button>
+            <span class="label">
+                Primary
+            </span>
         </div>
+
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-secondary">
+                Send
+            </button>
+            <span class="label">
+                Secondary
+            </span>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-tertiary btn-with-icon ">
+                Access
+            </button>
+            <span class="label">
+                Tertiary
+            </span>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-subtle">
+                <span>Access</span>
+                <span class="icon-avatar"></span>
+            </button>
+            <span class="label">
+                Subtle
+            </span>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-tertiary btn-action-next">
+                <span>Next</span>
+                <span class="icon-next-mini"></span>
+            </button>
+            <span class="label">
+                Tertiary Next
+            </span>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-tertiary btn-action-previous">
+                <span class="icon-back-mini"></span>
+                <span>Previous</span>
+            </button>
+            <span class="label">
+                Tertiary Previous
+            </span>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-primary" disabled>
+                Start with B_System
+            </button>
+            <span class="label">
+                Disabled
+            </span>
+        </div>
+
     </div>
 </section>
 
-<section class="module-wrapper" data-b-system="dark-mode">
-    <div class="container">
-        <h3 class="module-title ">Buttons dark mode</h3>
-        <div class="buttons-wrapper module-example-wrapper">
-            <div class="button-wrapper">
-                <button class="btn btn-primary btn-primary-cta">
-                    <span>Purchase</span>
-                    <span class="icon-btn-arrow"></span>
-                </button>
-                <span class="label">
-                    Primary CTA
-                </span>
-            </div>
 
-            <div class="button-wrapper">
-                <button class="btn btn-primary">
-                    Continue
-                </button>
-                <span class="label">
-                    Primary
-                </span>
-            </div>
+<section class="section" data-b-system="dark-mode">
+    <div class="container d-flex flex-wrap gap-5">
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-primary btn-primary-cta">
+                <span>Purchase</span>
+                <span class="icon-btn-arrow"></span>
+            </button>
+            <span class="label">
+                Primary CTA
+            </span>
+        </div>
 
-            <div class="button-wrapper">
-                <button class="btn btn-secondary">
-                    Send
-                </button>
-                <span class="label">
-                    Secondary
-                </span>
-            </div>
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-primary">
+                Continue
+            </button>
+            <span class="label">
+                Primary
+            </span>
+        </div>
 
-            <div class="button-wrapper">
-                <button class="btn btn-tertiary btn-with-icon ">
-                    Access
-                </button>
-                <span class="label">
-                    Tertiary
-                </span>
-            </div>
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-secondary">
+                Send
+            </button>
+            <span class="label">
+                Secondary
+            </span>
+        </div>
 
-            <div class="button-wrapper">
-                <button class="btn btn-subtle">
-                    <span>Access</span>
-                    <span class="icon-avatar"></span>
-                </button>
-                <span class="label">
-                    Subtle
-                </span>
-            </div>
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-tertiary btn-with-icon ">
+                Access
+            </button>
+            <span class="label">
+                Tertiary
+            </span>
+        </div>
 
-            <div class="button-wrapper">
-                <button class="btn btn-tertiary btn-action-next">
-                    <span>Next</span>
-                    <span class="icon-next-mini"></span>
-                </button>
-                <span class="label">
-                    Tertiary Next
-                </span>
-            </div>
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-subtle">
+                <span>Access</span>
+                <span class="icon-avatar"></span>
+            </button>
+            <span class="label">
+                Subtle
+            </span>
+        </div>
 
-            <div class="button-wrapper">
-                <button class="btn btn-tertiary btn-action-previous">
-                    <span class="icon-back-mini"></span>
-                    <span>Previous</span>
-                </button>
-                <span class="label">
-                    Tertiary Previous
-                </span>
-            </div>
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-tertiary btn-action-next">
+                <span>Next</span>
+                <span class="icon-next-mini"></span>
+            </button>
+            <span class="label">
+                Tertiary Next
+            </span>
+        </div>
 
-            <div class="button-wrapper">
-                <button class="btn btn-primary" disabled>
-                    Start with B_System
-                </button>
-                <span class="label">
-                    Disabled
-                </span>
-            </div>
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-tertiary btn-action-previous">
+                <span class="icon-back-mini"></span>
+                <span>Previous</span>
+            </button>
+            <span class="label">
+                Tertiary Previous
+            </span>
+        </div>
 
-            <div class="button-wrapper">
-                <button class="btn btn-tertiary transparent">
-                    Access
-                </button>
-                <span class="label">
-                    Tertiary transparent
-                </span>
-            </div>
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-primary" disabled>
+                Start with B_System
+            </button>
+            <span class="label">
+                Disabled
+            </span>
+        </div>
 
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-tertiary transparent">
+                Access
+            </button>
+            <span class="label">
+                Tertiary transparent
+            </span>
         </div>
     </div>
 </section>

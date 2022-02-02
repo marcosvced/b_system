@@ -18,7 +18,9 @@ exports.sass = sass
 exports.default = () => {
   sass()
   gulp.watch('lib/scss/**/*.scss', sass)
+
   exec('node ./bin/www.js')
+
   browserSync.init({
     proxy: 'localhost:3000',
     port: 3001,

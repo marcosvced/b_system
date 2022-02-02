@@ -1,0 +1,31 @@
+@use "../helpers/size";
+@use "../helpers/colors";
+@use "../mixins/media";
+
+.section {
+  padding-block: size.rem(48);
+  padding-inline: size.rem(16);
+  @include media.screen(lg) {
+    padding-block: size.rem(56);
+  }
+  @include media.screen(xl) {
+    padding-block: size.rem(88);
+  }
+  @include media.screen(xxl) {
+    padding-block: size.rem(120);
+  }
+
+  &.darkener {
+    background-color: colors.grayscale(100);
+  }
+}
+
+[data-b-system='dark-mode'] {
+  .section,
+  &.section {
+      background-color: colors.grayscale(1100);
+    &.darkener {
+      background-color: colors.grayscale(1200);
+    }
+  }
+}
