@@ -25,6 +25,8 @@ const ROUTES_PATHS = {
       CORPORATE: '/footers/corporate',
     },
     BUTTONS: '/buttons',
+    FORMS: '/forms',
+    INTERACTION: '/interaction',
   },
 }
 
@@ -80,6 +82,16 @@ router.get(ROUTES_PATHS.QUICK_START.FOOTERS.CORPORATE, (request, response) => {
 /* Buttons page. */
 router.get(ROUTES_PATHS.QUICK_START.BUTTONS, (request, response) => {
   render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['buttons']))
+})
+
+/* Forms page. */
+router.get(ROUTES_PATHS.QUICK_START.FORMS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['forms']))
+})
+
+/* Interaction page. */
+router.get(ROUTES_PATHS.QUICK_START.INTERACTION, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['interaction']))
 })
 
 module.exports = router

@@ -1,0 +1,502 @@
+<%- include(`${view}/quick_start/layout`)%>
+
+<%- contentFor('body') %>
+
+<section class="section">
+
+    <h2 class="container">Interaction elements</h2>
+
+    <div class="container d-flex flex-wrap gap-5">
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/switch`, {
+                id: 'switch-id-01',
+                // label: 'Default switch checkbox input',
+                }) %>
+
+            <span class="label">
+                Switch<br>[Comp: SWITCH]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'rounded',
+                icon: 'back-mini',
+                href: '#',
+                // variant: 'custom-class',
+                // isCondensed: isCondensed,
+                }) %>
+
+            <span class="label">
+                Back component<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'rounded',
+                icon: 'next-mini',
+                href: '#',
+                // variant: 'custom-class',
+                // isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Next component<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'rounded',
+                icon: 'down',
+                href: '#',
+                // variant: 'custom-class',
+                isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Down component<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'squared',
+                icon: 'more',
+                href: '#',
+                // variant: 'custom-class',
+                // isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Add<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'squared',
+                icon: 'download',
+                href: '#',
+                // variant: 'custom-class',
+                isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Download<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'squared',
+                icon: 'hear',
+                href: '#',
+                // variant: 'custom-class',
+                // isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Like<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/badge`, {
+                label: '22/06',
+                // icon: 'hear',
+                // icon_position: 'after',
+                variant: 'info',
+                // isRounded: 'isRounded',
+                }) %>
+
+            <span class="label">
+                Date<br>[Comp: BADGE]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/badge`, {
+                label: '3',
+                icon: 'message',
+                icon_position: 'before',
+                // variant: 'info',
+                isRounded: 'isRounded',
+                }) %>
+
+            <span class="label">
+                Notification<br>[Comp: BADGE]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/badge`, {
+                label: 'Shipped',
+                // icon: 'hear',
+                // icon_position: 'after',
+                variant: 'info',
+                // isRounded: 'isRounded',
+                }) %>
+
+            <span class="label">
+                Purchase status<br>[Comp: BADGE]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/spinner`, {
+                // variant: '',
+                // label_hidden: '',
+                }) %>
+
+            <span class="label">
+                Timer<br>[Comp: SPINNER]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/ribbon`, {
+                type: 'data',
+                label: '8',
+                // icon: 'award',
+                variant: 'secondary',
+                }) %>
+
+            <span class="label">
+                Position number<br>[Comp: RIBBON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/ribbon`, {
+                type: 'icon',
+                // label: '8',
+                icon: 'award',
+                variant: '',
+                }) %>
+
+            <span class="label">
+                Position icon<br>[Comp: RIBBON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%
+            const breadcrumb_items = [
+                { label:'Home', href:'#' },
+                { label:'Library', href:'#' },
+                { label:'Data' }
+            ]
+            %>
+
+            <%- include( `${component}/interaction/breadcrumb`, {
+                items: breadcrumb_items
+                } ) %>
+
+            <span class="label">
+                Breadcrumb component<br>[Comp: BREADCRUMB]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%
+            const filter_items = [
+                { label:'Most recent' },
+                { label:'Most relevant', href:'#' }
+            ]
+            %>
+
+            <%- include( `${component}/interaction/filter`, {
+                items: filter_items
+                } ) %>
+
+            <span class="label">
+                Filter component<br>[Comp: FILTER]
+            </span>
+        </div>
+
+
+	</div>
+</section>
+
+
+<section class="section" data-b-system="dark-mode">
+
+    <h2 class="container">Interaction elements dark</h2>
+
+    <div class="container d-flex flex-wrap gap-5">
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/switch`, {
+                id: 'switch-id-01',
+                // label: 'Default switch checkbox input',
+                }) %>
+
+            <span class="label">
+                Switch<br>[Comp: SWITCH]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'rounded',
+                icon: 'back-mini',
+                href: '#',
+                // variant: 'custom-class',
+                // isCondensed: isCondensed,
+                }) %>
+
+            <span class="label">
+                Back component<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'rounded',
+                icon: 'next-mini',
+                href: '#',
+                // variant: 'custom-class',
+                // isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Next component<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'rounded',
+                icon: 'down',
+                href: '#',
+                // variant: 'custom-class',
+                isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Down component<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'squared',
+                icon: 'more',
+                href: '#',
+                // variant: 'custom-class',
+                // isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Add<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'squared',
+                icon: 'download',
+                href: '#',
+                // variant: 'custom-class',
+                isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Download<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/interaction-button`, {
+                type: 'squared',
+                icon: 'hear',
+                href: '#',
+                // variant: 'custom-class',
+                // isCondensed: 'isCondensed',
+                }) %>
+
+            <span class="label">
+                Like<br>[Comp: INTERACTION BUTTON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/badge`, {
+                label: '22/06',
+                // icon: 'hear',
+                // icon_position: 'after',
+                variant: 'info',
+                // isRounded: 'isRounded',
+                }) %>
+
+            <span class="label">
+                Date<br>[Comp: BADGE]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/badge`, {
+                label: '3',
+                icon: 'message',
+                icon_position: 'before',
+                // variant: 'info',
+                isRounded: 'isRounded',
+                }) %>
+
+            <span class="label">
+                Notification<br>[Comp: BADGE]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/badge`, {
+                label: 'Shipped',
+                // icon: 'hear',
+                // icon_position: 'after',
+                variant: 'info',
+                // isRounded: 'isRounded',
+                }) %>
+
+            <span class="label">
+                Purchase status<br>[Comp: BADGE]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/spinner`, {
+                // variant: '',
+                // label_hidden: '',
+                }) %>
+
+            <span class="label">
+                Timer<br>[Comp: SPINNER]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/ribbon`, {
+                type: 'data',
+                label: '8',
+                // icon: 'award',
+                variant: 'secondary',
+                }) %>
+
+            <span class="label">
+                Position number<br>[Comp: RIBBON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%- include(`${component}/interaction/ribbon`, {
+                type: 'icon',
+                // label: '8',
+                icon: 'award',
+                variant: '',
+                }) %>
+
+            <span class="label">
+                Position icon<br>[Comp: RIBBON]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%
+            const breadcrumb_items_dark = [
+                { label:'Home', href:'#' },
+                { label:'Library', href:'#' },
+                { label:'Data' }
+            ]
+            %>
+
+            <%- include( `${component}/interaction/breadcrumb`, {
+                items: breadcrumb_items_dark
+                } ) %>
+
+            <span class="label">
+                Breadcrumb component<br>[Comp: BREADCRUMB]
+            </span>
+        </div>
+
+
+        <div class="d-flex flex-column gap-2">
+
+            <%
+            const filter_items_dark = [
+                { label:'Most recent' },
+                { label:'Most relevant', href:'#' }
+            ]
+            %>
+
+            <%- include( `${component}/interaction/filter`, {
+                items: filter_items_dark
+                } ) %>
+
+            <span class="label">
+                Filter component<br>[Comp: FILTER]
+            </span>
+        </div>
+
+
+    </div>
+</section>

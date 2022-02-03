@@ -589,6 +589,39 @@ a {
   color: inherit;
 }
 
+/*
+** Tools to crate media queries
+*/
+.section {
+  padding-block: 3rem;
+  padding-inline: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .section {
+    padding-block: 3.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-block: 5.5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .section {
+    padding-block: 7.5rem;
+  }
+}
+.section.darkener {
+  background-color: var(--c-grayscale__100);
+}
+
+[data-b-system=dark-mode] .section, [data-b-system=dark-mode].section {
+  background-color: var(--c-grayscale__1100);
+}
+[data-b-system=dark-mode] .section.darkener, [data-b-system=dark-mode].section.darkener {
+  background-color: var(--c-grayscale__1200);
+}
+
 .tooltip-inner {
   line-height: 1.5;
   max-width: 15.625rem;
@@ -667,6 +700,7 @@ a {
   border: none;
   outline: none;
   line-height: var(--s-space__24);
+  min-width: 13.4375rem;
   transition: all 0.25s;
   white-space: nowrap;
   display: inline-flex;
@@ -821,6 +855,38 @@ a {
   color: var(--c-opacity__light-200);
 }
 
+.rounded-button {
+  padding: 0.25em;
+  font-size: 48px;
+  color: #000000;
+  background-color: #f6f6f6;
+  border: none;
+  border-radius: 2rem;
+}
+.rounded-button:not(.condensed) {
+  width: 1em;
+  height: 1em;
+}
+.rounded-button.condensed {
+  width: 2rem;
+  height: 3.5rem;
+}
+.rounded-button [class^=icon-] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9375rem;
+}
+.rounded-button [class^=icon-], .rounded-button [class^=icon-]::before {
+  color: inherit;
+}
+
+/* DARK MODE */
+[data-b-system=dark-mode] .rounded-button {
+  color: #3b3b3b;
+  background-color: #ffffff;
+}
+
 a.action-link {
   color: var(--c-primary__blue);
   display: flex;
@@ -859,9 +925,6 @@ a.action-link > [class*=icon-] {
   background-color: var(--c-grayscale__100);
 }
 
-/*
-** Tools to crate media queries
-*/
 .offcanvas.offcanvas-start .offcanvas-header {
   display: flex;
   justify-content: flex-end;
