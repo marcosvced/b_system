@@ -1,0 +1,13 @@
+<%- include(`${view}/quick_start/layout`)%>
+
+<%- contentFor('body') %>
+
+<section class="section">
+    <div class="container d-flex flex-wrap gap-5">
+
+        <div class="d-flex flex-column gap-2">
+            <%- include(`${component}/alert/alert`, { } ) %>
+        </div>
+
+    </div>
+</section>

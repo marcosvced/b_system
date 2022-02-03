@@ -589,6 +589,39 @@ a {
   color: inherit;
 }
 
+/*
+** Tools to crate media queries
+*/
+.section {
+  padding-block: 3rem;
+  padding-inline: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .section {
+    padding-block: 3.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-block: 5.5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .section {
+    padding-block: 7.5rem;
+  }
+}
+.section.darkener {
+  background-color: var(--c-grayscale__100);
+}
+
+[data-b-system=dark-mode] .section, [data-b-system=dark-mode].section {
+  background-color: var(--c-grayscale__1100);
+}
+[data-b-system=dark-mode] .section.darkener, [data-b-system=dark-mode].section.darkener {
+  background-color: var(--c-grayscale__1200);
+}
+
 .tooltip-inner {
   line-height: 1.5;
   max-width: 15.625rem;
@@ -660,6 +693,15 @@ a {
   border-left-color: var(--c-grayscale__1000);
 }
 
+/*
+ * Helpers
+ */
+/*
+ * Placeholder
+ */
+/*
+ * Mixin
+ */
 .btn {
   padding-inline: var(--s-space__32);
   padding-block: 0.75rem;
@@ -667,6 +709,7 @@ a {
   border: none;
   outline: none;
   line-height: var(--s-space__24);
+  min-width: 13.4375rem;
   transition: all 0.25s;
   white-space: nowrap;
   display: inline-flex;
@@ -859,9 +902,6 @@ a.action-link > [class*=icon-] {
   background-color: var(--c-grayscale__100);
 }
 
-/*
-** Tools to crate media queries
-*/
 .offcanvas.offcanvas-start .offcanvas-header {
   display: flex;
   justify-content: flex-end;
