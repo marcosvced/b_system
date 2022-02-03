@@ -14,7 +14,9 @@
             <%- include(`${component}/forms/input`, {
                 type: 'text',
                 id: 'input-text-id-01',
-                placeholder: 'Name',
+                label: 'Name',
+                // icon: 'icon',
+                // isRequired: true,
                 }) %>
 
             <span class="label">
@@ -28,8 +30,9 @@
             <%- include(`${component}/forms/input`, {
                 type: 'password',
                 id: 'input-text-id-02',
-                placeholder: 'Password',
+                label: 'Password',
                 icon: 'eye',
+                // isRequired: true,
                 }) %>
 
             <span class="label">
@@ -43,8 +46,9 @@
             <%- include(`${component}/forms/input`, {
                 type: 'text',
                 id: 'input-text-id-03',
-                placeholder: 'Search',
+                label: 'Search',
                 icon: 'magnifying-glass',
+                // isRequired: true,
                 }) %>
 
             <span class="label">
@@ -66,8 +70,7 @@
 
             <%- include(`${component}/forms/select`, {
                 items: select_items,
-                css: 'custom-css-class',
-                id: 'custom-id'
+				ariaLabel: 'Default select example',
                 }) %>
 
             <span class="label">
@@ -82,10 +85,7 @@
                 type: 'checkbox',
                 id: 'checkbox-custom-id-01',
                 label: 'I accept the treatment of my data.',
-                // checked: true,
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
+                // isChecked: true,
                 }) %>
 
             <span class="label">
@@ -100,10 +100,7 @@
                 type: 'radio',
                 id: 'radio-custom-id-01',
                 label: 'I choose the premium level.',
-                // checked: true,
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
+                // isChecked: true,
                 }) %>
 
             <span class="label">
@@ -153,7 +150,9 @@
             <%- include(`${component}/forms/input`, {
                 type: 'text',
                 id: 'input-text-id-04',
-                placeholder: 'Name',
+                label: 'Name',
+                // icon: 'icon',
+                // isRequired: true,
                 }) %>
 
             <span class="label">
@@ -167,8 +166,9 @@
             <%- include(`${component}/forms/input`, {
                 type: 'password',
                 id: 'input-text-id-05',
-                placeholder: 'Password',
+                label: 'Password',
                 icon: 'eye',
+                // isRequired: true,
                 }) %>
 
             <span class="label">
@@ -182,8 +182,9 @@
             <%- include(`${component}/forms/input`, {
                 type: 'text',
                 id: 'input-text-id-06',
-                placeholder: 'Search',
+                label: 'Search',
                 icon: 'magnifying-glass',
+                // isRequired: true,
                 }) %>
 
             <span class="label">
@@ -205,8 +206,7 @@
 
             <%- include(`${component}/forms/select`, {
                 items: select_items_dark,
-                css: 'custom-css-class',
-                id: 'custom-id'
+				ariaLabel: 'Default select example',
                 }) %>
 
             <span class="label">
@@ -221,10 +221,7 @@
                 type: 'checkbox',
                 id: 'checkbox-custom-id-02',
                 label: 'I accept the treatment of my data.',
-                // checked: true,
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
+                // isChecked: true,
                 }) %>
 
             <span class="label">
@@ -239,10 +236,7 @@
                 type: 'radio',
                 id: 'radio-custom-id-02',
                 label: 'I choose the premium level.',
-                // checked: true,
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
+                // isChecked: true,
                 }) %>
 
             <span class="label">
@@ -272,182 +266,6 @@
 
             <span class="label">
                 Info and link
-            </span>
-        </div>
-
-
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="section">
-
-    <h2 class="container">Checks and radios</h2>
-
-    <div class="container d-flex flex-wrap gap-5">
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'checkbox',
-                id: 'checkbox-custom-id-03',
-                label: 'I accept the treatment of my data.',
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
-                }) %>
-
-            <span class="label">
-                Check states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'checkbox',
-                id: 'checkbox-custom-id-04',
-                label: 'I accept the treatment of my data.',
-                checked: true,
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
-                }) %>
-
-            <span class="label">
-                Check states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'radio',
-                id: 'radio-custom-id-03',
-                label: 'I choose the premium level.',
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
-                }) %>
-
-            <span class="label">
-                Radio states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'radio',
-                id: 'radio-custom-id-04',
-                label: 'I choose the premium level.',
-                checked: true,
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
-                }) %>
-
-            <span class="label">
-                Radio states
-            </span>
-        </div>
-
-
-    </div>
-</section>
-
-
-<section class="section" data-b-system="dark-mode">
-
-    <h2 class="container">Checks and radios dark</h2>
-
-    <div class="container d-flex flex-wrap gap-5">
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'checkbox',
-                id: 'checkbox-custom-id-05',
-                label: 'I accept the treatment of my data.',
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
-                }) %>
-
-            <span class="label">
-                Check states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'checkbox',
-                id: 'checkbox-custom-id-06',
-                label: 'I accept the treatment of my data.',
-                checked: true,
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
-                }) %>
-
-            <span class="label">
-                Check states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'radio',
-                id: 'radio-custom-id-05',
-                label: 'I choose the premium level.',
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
-                }) %>
-
-            <span class="label">
-                Radio states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'radio',
-                id: 'radio-custom-id-06',
-                label: 'I choose the premium level.',
-                checked: true,
-                css_wrapper: 'wrapper-custom-class',
-                css_input: 'input-custom-class',
-                css_label: 'label-custom-class',
-                }) %>
-
-            <span class="label">
-                Radio states
             </span>
         </div>
 
