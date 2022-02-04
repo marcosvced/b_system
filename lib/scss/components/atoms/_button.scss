@@ -1,25 +1,30 @@
-@use "../../variables/palette";
-@use "../../helpers/font";
-@use "../../helpers/colors";
-@use "../../helpers/size";
-@use "../../placeholders/fonts";
-@use "../../mixins/space";
-@use "../../mixins/shapes" as shape;
+// @use "../../variables/palette";
+// @use "../../helpers/font";
+// @use "../../helpers/colors";
+// @use "../../helpers/size";
+@use 'helpers' as *;
+
+// @use "../../placeholders/fonts";
+@use 'placeholders' as *;
+
+// @use "../../mixins/space";
+// @use "../../mixins/shapes" as shape;
+@use 'mixins' as *;
 
 .btn {
-  padding-inline: size.space(32);
-  padding-block: size.rem(12);
-  border-radius: size.rem(4);
+  padding-inline: space(32);
+  padding-block: rem(12);
+  border-radius: rem(4);
   border: none;
   outline: none;
-  line-height: size.space(24);
-  min-width: size.rem(215);
+  line-height: space(24);
+  min-width: rem(215);
   transition: all .25s;
   white-space: nowrap;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  @include space.x(8);
+  @include x(8);
   @extend %body-bold-text;
 
   > span:not([class^='icon-']) {
@@ -28,14 +33,14 @@
 
   > [class^='icon-'] {
     display: flex;
-    font-size: size.rem(18);
+    font-size: rem(18);
   }
 
   &-primary {
-    background-color: colors.button(primary);
-    color: colors.grayscale(light);
-    min-width: size.rem(216);
-    @include space.x(12);
+    background-color: button(primary);
+    color: grayscale(light);
+    min-width: rem(216);
+    @include x(12);
 
     &.btn-only-icon {
       display: flex;
@@ -43,86 +48,86 @@
       justify-content: center;
       min-width: min-content;
 
-      padding-inline: size.rem(14);
-      padding-block: size.rem(14);
+      padding-inline: rem(14);
+      padding-block: rem(14);
       line-height: 1;
-      font-size: font.size(sm);
+      font-size: size(sm);
     }
 
     &.btn-primary-cta {
       > [class^='icon-'] {
-        font-size: size.rem(12);
-        @include shape.circle(24);
+        font-size: rem(12);
+        @include circle(24);
         line-height: 1;
         display: inline-grid;
         align-items: center;
         justify-content: center;
-        background-color: colors.button(cta_icon);
+        background-color: button(cta_icon);
         transform: translateX(0);
         transition: transform .25s ease-in;
       }
     }
 
     &:hover:not(:disabled) {
-      background-color: colors.button(primary--hover);
+      background-color: button(primary--hover);
 
       &.btn-primary-cta {
         > [class^='icon-'] {
-          background-color: colors.button(cta_icon--hover);
-          transform: translateX(size.rem(4));
+          background-color: button(cta_icon--hover);
+          transform: translateX(rem(4));
         }
       }
     }
   }
 
   &-secondary {
-    background-color: colors.button(secondary);
+    background-color: button(secondary);
 
     &:hover:not(:disabled) {
-      background-color: colors.button(secondary--hover);
+      background-color: button(secondary--hover);
     }
   }
 
   &-tertiary {
-    background-color: colors.grayscale(100);
-    color: colors.body(off);
+    background-color: grayscale(100);
+    color: body(off);
 
 
     &:hover:not(:disabled) {
-      background-color: colors.grayscale(200);
+      background-color: grayscale(200);
     }
   }
 
   &-subtle {
     background-color: transparent;
-    color: colors.body(off);
-    border: size.rem(1) solid colors.grayscale(200);
+    color: body(off);
+    border: rem(1) solid grayscale(200);
 
     &:hover:not(:disabled) {
       background-color: transparent;
-      border: size.rem(1) solid colors.grayscale(400);
+      border: rem(1) solid grayscale(400);
     }
   }
 
   &-glass {
-    background-color: colors.opacity(light-100);
-    backdrop-filter: blur(size.rem(9));
-    color: colors.grayscale(light);
+    background-color: opacity(light-100);
+    backdrop-filter: blur(rem(9));
+    color: grayscale(light);
 
     &:hover:not(:disabled) {
-      color: colors.grayscale(light);
-      background-color: colors.opacity(light-0);
+      color: grayscale(light);
+      background-color: opacity(light-0);
     }
 
     &:disabled {
       cursor: not-allowed;
-      color: colors.opacity(light-200);
+      color: opacity(light-200);
     }
   }
 
   &-narrow {
-    padding-block: size.space(8);
-    min-width: size.rem(192);
+    padding-block: space(8);
+    min-width: rem(192);
   }
 
   &-fit {
@@ -144,13 +149,13 @@
 
     &-next:hover:not(:disabled) {
       [class^='icon-'] {
-        transform: translateX(size.rem(4));
+        transform: translateX(rem(4));
       }
     }
 
     &-previous:hover:not(:disabled) {
       [class^='icon-'] {
-        transform: translateX(-#{size.rem(4)});
+        transform: translateX(-#{rem(4)});
       }
     }
 
@@ -158,22 +163,22 @@
 
   &:disabled {
     cursor: not-allowed;
-    background-color: colors.button(disabled);
-    color: colors.opacity(gray-400);
+    background-color: button(disabled);
+    color: opacity(gray-400);
     opacity: 1;
     pointer-events: auto;
   }
 
   &-only-icon {
-    @include shape.square(32);
-    font-size: size.rem(18);
+    @include square(32);
+    font-size: rem(18);
     align-items: center;
     justify-content: center;
     outline: none;
     padding: 0;
     border: 0;
     border-radius: 0;
-    color: colors.grayscale(dark);
+    color: grayscale(dark);
 
     &:before {
       display: flex;
@@ -192,29 +197,29 @@
 [data-b-system='dark-mode'] {
   .btn {
     &-tertiary {
-      background-color: colors.grayscale(900);
-      color: colors.grayscale(light);
+      background-color: grayscale(900);
+      color: grayscale(light);
 
       &:hover:not(:disabled) {
-        background-color: colors.grayscale(1000);
+        background-color: grayscale(1000);
       }
 
       &.transparent {
-        background-color: colors.opacity(light-100);
+        background-color: opacity(light-100);
         &:hover:not(:disabled) {
-          background-color: colors.opacity(light-0);
+          background-color: opacity(light-0);
         }
       }
 
     }
 
     &-subtle {
-      color: colors.grayscale(light);
+      color: grayscale(light);
     }
 
     &:disabled {
-      background-color: colors.grayscale(900);
-      color: colors.opacity(light-200);
+      background-color: grayscale(900);
+      color: opacity(light-200);
     }
   }
 }

@@ -12,4 +12,3 @@
 @function space($space) {
   @return var(#{enum.find(SPACE)}#{$space});
 }
-
