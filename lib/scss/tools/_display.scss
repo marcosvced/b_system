@@ -1,0 +1,35 @@
+@use "../variables/spacing";
+@use "../mixins/media";
+@use "../mixins/space";
+
+$positions: top, bottom, left, right, inline, block;
+
+@each $key, $value in spacing.$breakpoints {
+    $prefix: if($key != '', '#{$key}\\:', '');
+    @include media.screen($key) {
+        @each $space, $size in spacing.$space {
+           @each $position in $positions {
+               .#{$prefix}space-x\:#{$space}{
+                   @include space.x($space);
+               }
+
+               .#{$prefix}space-y\:#{$space}{
+                   @include space.y($space);
+               }
+
+               .#{$prefix}space-xy\:#{$space}{
+                   @include space.x-y($space);
+               }
+
+               .#{$prefix}space-#{$position}\:#{$space} {
+                   margin-#{$position}: $size;
+               }
+
+               .#{$prefix}inner-space-#{$position}\:#{$space} {
+                   padding-#{$position}: $size;
+               }
+           }
+
+        }
+    }
+}

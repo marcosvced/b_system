@@ -3,65 +3,64 @@
 ## Sass y funciones
 
 ### Variables y utilidades
-Tienes que incluir el codigo según las utilidades que necesites en tu component o modulo de sass
-```go
-@use 'variables' as *;
-@use 'common' as *;
-@use 'helpers' as *;
-@use 'mixins' as *;
-@use 'placeholders' as *;
-@use 'components' as *;
-@use 'helpers' as *;
+Tienes que incluir el codigo según las utilidades que necesites en tu componente o modulo de sass
+```scss
+@use '~variables' as variable;
+@use '~helpers' as helper;
+@use '~mixins' as mixin;
+@use '~helpers/themed';
+@use '~placeholders';
 ```
 Será muy habitual este comienzo
-```go
-@use 'helpers' as *;
-@use 'mixins' as *;
-@use 'placeholders' as *;
+```scss
+@use '../helpers' as helper;
+@use '../mixins' as mixin;
+@use '../helpers/themed';
+@use '../placeholders';
 ```
 
 ### Funciones
-```go
+```scss
 // sizes
-font-size: rem(40);
-font-size: em(40);
-line-height: space(24);
+font-size: helper.rem(40);
+font-size: helper.em(40);
+line-height: helper.space(24);
+// option spaces in - /lib/scss/variables/_spacing.scss
+
 
 // font
-font-size: size(sm);
-font-family: family(roboto);
-font-weight: weight(bold);
+font-size: helper.size(sm);
+font-family: helper.family(roboto);
+font-weight: helper.weight(bold);
 // size(xxs, xs, sm, md, lg, xl, xxl);
 // family(roboto, playfair, code);
 // weight(light, regular, medium, bold);
 
 // colors
-color: primary('blue');
-color: secondary('blue');
-color: grayscale(light);
-background-color: opacity(light-100);
-background-color: button(primary--hover);
+color: helper.primary('blue');
+color: helper.secondary('blue');
+color: helper.grayscale(light);
+background-color: helper.opacity(light-100);
+background-color: helper.button(primary--hover);
 // option colors in - /lib/scss/variables/_palette.scss
 
-// others
-backdrop-filter: blur(rem(9));
 ```
 
 ### Mixins
-```go
+```scss
 // margenes
-@include x(12);
-@include y(12);
-@include x-y(12);
+@include mixin.x(12);
+@include mixin.y(12);
+@include mixin.x-y(12);
 
 // shapes
-@include circle(24);
-@include square(32);
-@include rectangle(32);
+@include mixin.circle(24);
+@include mixin.square(32);
+@include mixin.rectangle(32);
 ```
 
 ### Placeholders
-```go
+```scss
 // font styles
 @extend %x1-text;
 @extend %x2-text;
@@ -77,4 +76,39 @@ backdrop-filter: blur(rem(9));
 @extend %body-medium-text;
 @extend %body-regular-text;
 @extend %body-light-text;
+```
+
+### Tools 
+```html
+<div class="{breakpoint}:space-{position}:{n}"></div>
+<div class="{breakpoint}:inner-space-{position}:{n}"></div>
+<div class="{breakpoint}:space-x:{n}"></div>
+<div class="{breakpoint}:space-y:{n}"></div>
+<div class="{breakpoint}:space-xy:{n}"></div>
+```
+· Siendo _breackpoint_ una key de los valores definidos en el map `$breakpoints` del fichero `/lib/scss/variables/_spacing.scss`.   
+· Estas clases se pueden definir sin el uso de un _breackpoint_.  
+· Siendo _position_ uno de los siguientes valores: _top, bottom, left, right, inline, block_.  
+· Siendo _n_ una de las keys definidas en la variable `$space` del fichero `/lib/scss/variables/_spacing.scss`.
+
+### Uso de theme
+
+```css
+@include themed.properties {
+    {propiedad-css}: themed.values(valor-light, valor-dark);
+}
+```
+**Ejemplo de uso:**
+```scss
+.section {
+  @include themed.properties {
+    background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+  }
+
+  &.darkener {
+    @include themed.properties {
+      background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
+    }
+  }
+}
 ```
