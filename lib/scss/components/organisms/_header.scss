@@ -7,7 +7,7 @@
 @use "../../mixins/media";
 @use "../../placeholders/fonts";
 
-header {
+header.header {
   padding-block: size.rem(12);
   padding-inline: size.space(16);
   min-height: size.rem(48);
