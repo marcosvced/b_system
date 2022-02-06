@@ -25,6 +25,9 @@ const ROUTES_PATHS = {
       CORPORATE: '/footers/corporate',
     },
     BUTTONS: '/buttons',
+    ALERTS: '/alerts',
+    ACCORDIONS: '/accordions',
+    ICONDESCRIPTION: '/icondescription',
   },
 }
 
@@ -80,6 +83,21 @@ router.get(ROUTES_PATHS.QUICK_START.FOOTERS.CORPORATE, (request, response) => {
 /* Buttons page. */
 router.get(ROUTES_PATHS.QUICK_START.BUTTONS, (request, response) => {
   render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['buttons']))
+})
+
+/* Alerts page. */
+router.get(ROUTES_PATHS.QUICK_START.ALERTS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['alerts']))
+})
+
+/* Accordions page. */
+router.get(ROUTES_PATHS.QUICK_START.ACCORDIONS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['accordions']))
+})
+
+/* Icon + description page. */
+router.get(ROUTES_PATHS.QUICK_START.ICONDESCRIPTION, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['icondescription']))
 })
 
 module.exports = router

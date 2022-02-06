@@ -1,0 +1,148 @@
+@use "../../helpers/size";
+@use "../../helpers/colors";
+@use "../../mixins/space";
+@use "../../placeholders/fonts";
+
+
+.accordion-button{
+  background: none;
+}
+.accordion-button:not(.collapsed)::after {
+  background:none;
+  transform:none;
+}
+.accordion-button:focus {
+  box-shadow: none;
+  border:0;
+}
+.accordion-button:not(.collapsed) {
+  background:none;
+}
+
+/*
+.accordion-item{
+    background: none !important;
+}
+*/
+
+.accordion-button::after {
+  font-family: "b-system" !important;
+  font-size:22px;
+  color:#0077e6;
+  background-image: none;
+  content: "\4e";
+  position:relative;
+  top:-3px;
+  right:5px;
+}
+
+/* BUTTON + */
+.accordion-button.collapsed::after {
+  content: "\4f";
+}
+
+.accordion-line-style {
+  .accordion-button {
+    padding-left:0;
+    padding-right:0;
+  }
+  .accordion-item {
+    border:0;
+    .accordion-button,.accordion-body {
+      font-size:15px;
+      color:#6e6e6e;
+      box-shadow:none;
+    }
+    .accordion-button{
+      padding-top:8px;
+      padding-bottom:8px;
+      border-bottom:1px solid #e1e1e1;
+    }
+    &:last-of-type, &:first-of-type {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .accordion-body{
+      padding:size.space(40) 0;
+    }
+  }
+
+}
+
+.accordion-bg-style {
+  .accordion-item {
+    margin-bottom:size.space(8);
+    .accordion-button {
+      border:0;
+      background-color: #f6f6f6;
+      color:#000;
+      &:not(.collapsed) {
+        background-color: #2b2b2b;
+        color:#fff;
+      }
+    }
+    .accordion-collapse {
+      background-color: #f6f6f6;
+      &:not(.collapsed) {
+        background-color: #2b2b2b;
+      }
+
+    }
+    border:0;
+    border-radius: size.space(4);
+    .accordion-button,.accordion-body {
+      font-size:15px !important;
+      box-shadow:none;
+    }
+    .accordion-body {
+      color:#aaaaaa;
+      padding-top:size.space(24);
+      padding-bottom:size.space(88);
+      font-weight: 300;  
+    }
+    .accordion-button{
+      padding:20px 16px;
+      font-weight: 700;
+    }
+  }
+}
+     
+
+/* DARK MODE */
+[data-b-system='dark-mode'] {
+
+  .accordion-line-style {
+    .accordion-item {
+      background: none;
+      .accordion-button,.accordion-body {
+        color:#aaaaaa;
+      }
+      .accordion-button {
+        border-bottom:1px solid #444;
+      }
+    }
+  }
+
+  .accordion-bg-style {
+    .accordion-button,.accordion-button:not(.collapsed),.accordion-collapse:not(.collapsed) {
+      background: none;      
+    }
+    .accordion-item {
+      background-color: #1e1e1e;
+      border: solid 1px #333;
+      box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.08);
+      .accordion-button {
+        color:#ffffff;
+      }
+      .accordion-body {
+        color:#aaaaaa;
+      }
+    }
+    .accordion-button:not(.collapsed),.accordion-collapse:not(.collapsed) {
+      background: #2b2b2b;
+    }
+  }
+
+}

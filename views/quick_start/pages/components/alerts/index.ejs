@@ -1,0 +1,147 @@
+<%- include(`${view}/quick_start/layout`)%>
+
+<%- contentFor('body') %>
+
+<section class="section">
+    <div class="container gap-5">
+        <h3>Alerts</h3>
+    </div>
+    <div class="container gap-5">
+        <div class="row">
+            <div class="col mb-5">
+                <%- include(`${component}/alert/alert`, { label: 'You must include at least one letter.', isCTA: true, icon: 'icon-lock', variant: 'info' }) %>
+                <span class="label">
+                    Info alert
+                </span>
+            </div>
+            <div class="col mb-5">
+                <%- include(`${component}/alert/alert`, { label: 'The data you have entered is already in our system.', isCTA: true, icon: 'icon-error', variant: 'error' }) %>
+                <span class="label">
+                    Error alert
+                </span>
+            </div>
+            <div class="col mb-5">
+                <%- include(`${component}/alert/alert`, { label: 'Your data is safe with B System. In no case may they be published.', isCTA: true, icon: 'icon-avatar', variant: 'advice' }) %>
+                <span class="label">
+                    Advice alert
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-5">
+                <%- include(`${component}/alert/alert`, { label: 'You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com.', isCTA: true, icon: 'icon-message', variant: 'primary' }) %>
+                <span class="label">
+                    Alert
+                </span>
+            </div>
+            <div class="col mb-5">
+                <%- include(`${component}/alert/alert`, { label: 'Find our offices easily in our search engine.', isCTA: true, icon: 'icon-place-holder', variant: 'link', href:"#" }) %>
+                <span class="label">
+                    Link alert
+                </span>
+            </div>
+            <div class="col mb-5">
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container d-flex flex-wrap gap-4">
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'You must include at least one letter.', isCTA: true, icon: 'icon-lock', variant: 'info' }) %>
+            <span class="label">
+                Info alert
+            </span>
+        </div>
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'The data you have entered is already in our system.', isCTA: true, icon: 'icon-error', variant: 'error' }) %>
+                <span class="label">
+                    Error alert
+                </span>
+        </div>
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'Your data is safe with B System. In no case may they be published.', isCTA: true, icon: 'icon-avatar', variant: 'advice' }) %>
+                <span class="label">
+                    Advice alert
+                </span>
+        </div>
+
+    </div>
+
+    <div class="container d-flex flex-wrap gap-4">
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com.', isCTA: true, icon: 'icon-message', variant: 'primary' }) %>
+                <span class="label">
+                    Alert
+                </span>
+        </div>
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'Find our offices easily in our search engine.', isCTA: true, icon: 'icon-place-holder', variant: 'link', href:"#" }) %>
+                <span class="label">
+                    Link alert
+                </span>
+        </div>
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+           
+        </div>
+
+    </div>
+</section>
+
+<section class="section" data-b-system="dark-mode">
+    <div class="container d-flex flex-wrap gap-4">
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'You must include at least one letter.', isCTA: true, icon: 'icon-lock', variant: 'info' }) %>
+            <span class="label">
+                Info alert
+            </span>
+        </div>
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'The data you have entered is already in our system.', isCTA: true, icon: 'icon-error', variant: 'error' }) %>
+                <span class="label">
+                    Error alert
+                </span>
+        </div>
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'Your data is safe with B System. In no case may they be published.', isCTA: true, icon: 'icon-avatar', variant: 'advice' }) %>
+                <span class="label">
+                    Advice alert
+                </span>
+        </div>
+
+    </div>
+
+    <div class="container d-flex flex-wrap gap-4">
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com.', isCTA: true, icon: 'icon-message', variant: 'primary' }) %>
+                <span class="label">
+                    Alert
+                </span>
+        </div>
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+            <%- include(`${component}/alert/alert`, { label: 'Find our offices easily in our search engine.', isCTA: true, icon: 'icon-place-holder', variant: 'link', href:"#" }) %>
+                <span class="label">
+                    Link alert
+                </span>
+        </div>
+
+        <div class="d-flex flex-column flex-fix gap-2 mb-5">            
+           
+        </div>
+
+    </div>
+</section>

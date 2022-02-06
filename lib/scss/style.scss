@@ -19,12 +19,15 @@
 @use "components/atoms/tooltip";
 @use "components/atoms/button";
 @use "components/atoms/link";
+@use "components/atoms/alert";
+@use "components/atoms/icondescription";
 
 /*
- * 3º Molecules
- */
+* 3º Molecules
+*/
 @use "components/molecules/dropdown";
 @use "components/molecules/navdrawer";
+@use "components/molecules/accordion";
 
 /*
  * 4º Organisms

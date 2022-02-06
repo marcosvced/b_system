@@ -1,0 +1,139 @@
+<%- include(`${view}/quick_start/layout`)%>
+
+<%- contentFor('body') %>
+
+
+<section class="section">
+    <div class="container gap-5">
+
+
+        <%
+        const accordion_items_line = [
+            {
+                idItem:'accordion-1',
+                label:'Éste és el título número 1',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                isOpen: true,
+            },
+            {
+                idItem:'accordion-2',
+                label:'Éste és el título número 2',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                // isOpen: true,
+            },
+            {
+                idItem:'accordion-3',
+                label:'Éste és el título número 3',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                // isOpen: true,
+            },
+        ]
+        %>
+        
+        <%- include( `${component}/accordion/accordion`, {
+            items: accordion_items_line,
+            idAccordion: 'one',
+            style: 'line',
+            } ) %>
+
+    </div>
+    
+    <div class="container gap-5">
+        <%
+        const accordion_items_bg = [
+            {
+                idItem:'accordion-1',
+                label:'Éste és el título número 1',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                isOpen: true,
+            },
+            {
+                idItem:'accordion-2',
+                label:'Éste és el título número 2',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                // isOpen: true,
+            },
+            {
+                idItem:'accordion-3',
+                label:'Éste és el título número 3',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                // isOpen: true,
+            },
+        ]
+        %>
+        
+        <%- include( `${component}/accordion/accordion`, {
+            items: accordion_items_bg,
+            idAccordion: 'two',
+            style: 'bg',
+            } ) %>
+    </div>
+</section>
+
+
+<section class="section" data-b-system="dark-mode">
+    <div class="container gap-5">
+
+
+        <%
+        const accordion_items_line_dark = [
+            {
+                idItem:'accordion-1',
+                label:'Éste és el título número 1',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                isOpen: true,
+            },
+            {
+                idItem:'accordion-2',
+                label:'Éste és el título número 2',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                // isOpen: true,
+            },
+            {
+                idItem:'accordion-3',
+                label:'Éste és el título número 3',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                // isOpen: true,
+            },
+        ]
+        %>
+        
+        <%- include( `${component}/accordion/accordion`, {
+            items: accordion_items_line_dark,
+            idAccordion: 'three',
+            style: 'line',
+            } ) %>
+
+    </div>
+    
+    <div class="container gap-5">
+        <%
+        const accordion_items_bg_dark = [
+            {
+                idItem:'accordion-1',
+                label:'Éste és el título número 1',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                isOpen: true,
+            },
+            {
+                idItem:'accordion-2',
+                label:'Éste és el título número 2',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                // isOpen: true,
+            },
+            {
+                idItem:'accordion-3',
+                label:'Éste és el título número 3',
+                content: `<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.`,
+                // isOpen: true,
+            },
+        ]
+        %>
+        
+        <%- include( `${component}/accordion/accordion`, {
+            items: accordion_items_bg_dark,
+            idAccordion: 'four',
+            style: 'bg',
+            } ) %>
+    </div>
+</section>

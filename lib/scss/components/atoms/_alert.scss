@@ -1,0 +1,67 @@
+@use "../../helpers/size";
+@use "../../helpers/colors";
+@use "../../mixins/space";
+@use "../../placeholders/fonts";
+
+
+.flex-fix {
+flex: 1;
+}
+
+.alert {
+  padding: size.space(24);
+  border:0;
+  color:#6e6e6e;
+  font-weight: 300;
+  &-info {
+    background-color: #dff0ff;
+  }
+  &-error {
+    background-color: #ffdbe0;        
+  }
+  &-advice {
+    background-color: #d5fdf1;        
+  }
+  &-primary {
+    background-color: #f6f6f6;        
+  }
+  &-link {
+    background-color: #f6f6f6;   
+    font-weight: 500;     
+    a, span[class*=icon-] {
+        color:#0077e6;
+    }
+  }
+  span {
+    display:block;
+    font-size:size.space(24);
+    color:#000;
+    &:before {
+        margin-bottom:size.space(24);
+        display: block;
+    }
+  }
+  .content {
+    min-height: 44px;
+  }
+}
+
+
+/* DARK MODE */
+[data-b-system='dark-mode'] {
+  .alert {
+    background-color: colors.grayscale(1200);
+    color: #aaaaaa;    
+    &-link {   
+        a, span[class*=icon-] {
+            color:#3ca1ff;
+        }
+    }
+    span {
+        color:#fff;
+    }
+  }
+  span.label {
+    color:#aaaaaa; 
+  }
+}

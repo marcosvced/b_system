@@ -589,6 +589,39 @@ a {
   color: inherit;
 }
 
+/*
+** Tools to crate media queries
+*/
+.section {
+  padding-block: 3rem;
+  padding-inline: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .section {
+    padding-block: 3.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-block: 5.5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .section {
+    padding-block: 7.5rem;
+  }
+}
+.section.darkener {
+  background-color: var(--c-grayscale__100);
+}
+
+[data-b-system=dark-mode] .section, [data-b-system=dark-mode].section {
+  background-color: var(--c-grayscale__1100);
+}
+[data-b-system=dark-mode] .section.darkener, [data-b-system=dark-mode].section.darkener {
+  background-color: var(--c-grayscale__1200);
+}
+
 .tooltip-inner {
   line-height: 1.5;
   max-width: 15.625rem;
@@ -667,6 +700,7 @@ a {
   border: none;
   outline: none;
   line-height: var(--s-space__24);
+  min-width: 13.4375rem;
   transition: all 0.25s;
   white-space: nowrap;
   display: inline-flex;
@@ -835,6 +869,102 @@ a.action-link > [class*=icon-] {
   display: inline-flex;
 }
 
+.flex-fix {
+  flex: 1;
+}
+
+.alert {
+  padding: var(--s-space__24);
+  border: 0;
+  color: #6e6e6e;
+  font-weight: 300;
+}
+.alert-info {
+  background-color: #dff0ff;
+}
+.alert-error {
+  background-color: #ffdbe0;
+}
+.alert-advice {
+  background-color: #d5fdf1;
+}
+.alert-primary {
+  background-color: #f6f6f6;
+}
+.alert-link {
+  background-color: #f6f6f6;
+  font-weight: 500;
+}
+.alert-link a, .alert-link span[class*=icon-] {
+  color: #0077e6;
+}
+.alert span {
+  display: block;
+  font-size: var(--s-space__24);
+  color: #000;
+}
+.alert span:before {
+  margin-bottom: var(--s-space__24);
+  display: block;
+}
+.alert .content {
+  min-height: 44px;
+}
+
+/* DARK MODE */
+[data-b-system=dark-mode] .alert {
+  background-color: var(--c-grayscale__1200);
+  color: #aaaaaa;
+}
+[data-b-system=dark-mode] .alert-link a, [data-b-system=dark-mode] .alert-link span[class*=icon-] {
+  color: #3ca1ff;
+}
+[data-b-system=dark-mode] .alert span {
+  color: #fff;
+}
+[data-b-system=dark-mode] span.label {
+  color: #aaaaaa;
+}
+
+.icondesc {
+  font-weight: 300;
+  color: #6e6e6e;
+}
+.icondesc .image {
+  margin-bottom: 16px;
+}
+.icondesc .image > span {
+  border: 1px solid #7e7e7e;
+  color: #7e7e7e;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  font-size: var(--s-space__24);
+  text-align: center;
+  padding-top: 8px;
+}
+.icondesc .image > img {
+  max-width: 88px;
+  max-height: 88px;
+}
+.icondesc .label {
+  font-weight: 500;
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+
+/* DARK MODE */
+[data-b-system=dark-mode] .icondesc {
+  color: #aaaaaa;
+}
+[data-b-system=dark-mode] .icondesc .image > span {
+  color: #6e6e6e;
+}
+[data-b-system=dark-mode] .icondesc .label {
+  color: #fff;
+}
+
 .nav-item.dropdown .dropdown-toggle:after {
   display: none;
 }
@@ -859,9 +989,6 @@ a.action-link > [class*=icon-] {
   background-color: var(--c-grayscale__100);
 }
 
-/*
-** Tools to crate media queries
-*/
 .offcanvas.offcanvas-start .offcanvas-header {
   display: flex;
   justify-content: flex-end;
@@ -925,6 +1052,135 @@ a.action-link > [class*=icon-] {
 }
 .offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
   padding-left: var(--s-space__16);
+}
+
+.accordion-button {
+  background: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background: none;
+  transform: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border: 0;
+}
+
+.accordion-button:not(.collapsed) {
+  background: none;
+}
+
+/*
+.accordion-item{
+    background: none !important;
+}
+*/
+.accordion-button::after {
+  font-family: "b-system" !important;
+  font-size: 22px;
+  color: #0077e6;
+  background-image: none;
+  content: "N";
+  position: relative;
+  top: -3px;
+  right: 5px;
+}
+
+/* BUTTON + */
+.accordion-button.collapsed::after {
+  content: "O";
+}
+
+.accordion-line-style .accordion-button {
+  padding-left: 0;
+  padding-right: 0;
+}
+.accordion-line-style .accordion-item {
+  border: 0;
+}
+.accordion-line-style .accordion-item .accordion-button, .accordion-line-style .accordion-item .accordion-body {
+  font-size: 15px;
+  color: #6e6e6e;
+  box-shadow: none;
+}
+.accordion-line-style .accordion-item .accordion-button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.accordion-line-style .accordion-item:last-of-type, .accordion-line-style .accordion-item:first-of-type {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.accordion-line-style .accordion-item .accordion-body {
+  padding: var(--s-space__40) 0;
+}
+
+.accordion-bg-style .accordion-item {
+  margin-bottom: var(--s-space__8);
+  border: 0;
+  border-radius: var(--s-space__4);
+}
+.accordion-bg-style .accordion-item .accordion-button {
+  border: 0;
+  background-color: #f6f6f6;
+  color: #000;
+}
+.accordion-bg-style .accordion-item .accordion-button:not(.collapsed) {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+.accordion-bg-style .accordion-item .accordion-collapse {
+  background-color: #f6f6f6;
+}
+.accordion-bg-style .accordion-item .accordion-collapse:not(.collapsed) {
+  background-color: #2b2b2b;
+}
+.accordion-bg-style .accordion-item .accordion-button, .accordion-bg-style .accordion-item .accordion-body {
+  font-size: 15px !important;
+  box-shadow: none;
+}
+.accordion-bg-style .accordion-item .accordion-body {
+  color: #aaaaaa;
+  padding-top: var(--s-space__24);
+  padding-bottom: var(--s-space__88);
+  font-weight: 300;
+}
+.accordion-bg-style .accordion-item .accordion-button {
+  padding: 20px 16px;
+  font-weight: 700;
+}
+
+/* DARK MODE */
+[data-b-system=dark-mode] .accordion-line-style .accordion-item {
+  background: none;
+}
+[data-b-system=dark-mode] .accordion-line-style .accordion-item .accordion-button, [data-b-system=dark-mode] .accordion-line-style .accordion-item .accordion-body {
+  color: #aaaaaa;
+}
+[data-b-system=dark-mode] .accordion-line-style .accordion-item .accordion-button {
+  border-bottom: 1px solid #444;
+}
+[data-b-system=dark-mode] .accordion-bg-style .accordion-button, [data-b-system=dark-mode] .accordion-bg-style .accordion-button:not(.collapsed), [data-b-system=dark-mode] .accordion-bg-style .accordion-collapse:not(.collapsed) {
+  background: none;
+}
+[data-b-system=dark-mode] .accordion-bg-style .accordion-item {
+  background-color: #1e1e1e;
+  border: solid 1px #333;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.08);
+}
+[data-b-system=dark-mode] .accordion-bg-style .accordion-item .accordion-button {
+  color: #ffffff;
+}
+[data-b-system=dark-mode] .accordion-bg-style .accordion-item .accordion-body {
+  color: #aaaaaa;
+}
+[data-b-system=dark-mode] .accordion-bg-style .accordion-button:not(.collapsed), [data-b-system=dark-mode] .accordion-bg-style .accordion-collapse:not(.collapsed) {
+  background: #2b2b2b;
 }
 
 header {
@@ -1237,8 +1493,8 @@ header .dropdown-menu.header-menu .header-menu-wrapper .menu-list .list-title {
  * 2º Atoms
  */
 /*
- * 3º Molecules
- */
+* 3º Molecules
+*/
 /*
  * 4º Organisms
  */
