@@ -26,6 +26,7 @@ const ROUTES_PATHS = {
     },
     BUTTONS: '/buttons',
     ALERTS: '/alerts',
+    LINKS: '/links',
   },
 }
 
@@ -86,6 +87,11 @@ router.get(ROUTES_PATHS.QUICK_START.BUTTONS, (request, response) => {
 /* Alerts page. */
 router.get(ROUTES_PATHS.QUICK_START.ALERTS, (request, response) => {
   render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['alerts']))
+})
+
+/* Links page. */
+router.get(ROUTES_PATHS.QUICK_START.LINKS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['links']))
 })
 
 module.exports = router
