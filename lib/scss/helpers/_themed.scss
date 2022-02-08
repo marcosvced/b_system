@@ -1,0 +1,50 @@
+@use "sass:selector";
+
+$current-theme-mode: null;
+
+@mixin dark() {
+  $selector: "[data-bsystem='dark']";
+
+  @at-root #{selector.unify(&, $selector)},
+  #{$selector} & {
+    @content;
+  }
+}
+
+@mixin light() {
+  $selector: "[data-bsystem='light']";
+
+  @at-root #{selector.unify(&, $selector)},
+  #{$selector} &,
+  & {
+    @content;
+  }
+}
+
+@mixin properties() {
+  @each $theme in (dark, light) {
+
+    $current-theme-mode: $theme !global;
+
+    @if ($current-theme-mode == dark) {
+      @include dark {
+        @content;
+      }
+    }
+
+    @if ($current-theme-mode == light) {
+      @include light {
+        @content;
+      }
+    }
+
+    $current-mode: null !global;
+  }
+}
+
+@function values($light, $dark) {
+  @if ($current-theme-mode == light) {
+    @return $light;
+  }
+  @return $dark;
+}

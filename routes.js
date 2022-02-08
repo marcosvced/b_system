@@ -25,6 +25,9 @@ const ROUTES_PATHS = {
       CORPORATE: '/footers/corporate',
     },
     BUTTONS: '/buttons',
+    ALERTS: '/alerts',
+    ICONS: '/icons',
+    LINKS: '/links',
     FORMS: '/forms',
     INTERACTION: '/interaction',
   },
@@ -82,6 +85,21 @@ router.get(ROUTES_PATHS.QUICK_START.FOOTERS.CORPORATE, (request, response) => {
 /* Buttons page. */
 router.get(ROUTES_PATHS.QUICK_START.BUTTONS, (request, response) => {
   render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['buttons']))
+})
+
+/* Alerts page. */
+router.get(ROUTES_PATHS.QUICK_START.ALERTS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['alerts']))
+})
+
+/* Icons page. */
+router.get(ROUTES_PATHS.QUICK_START.ICONS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['icons']))
+})
+
+/* Links page. */
+router.get(ROUTES_PATHS.QUICK_START.LINKS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['links']))
 })
 
 /* Forms page. */

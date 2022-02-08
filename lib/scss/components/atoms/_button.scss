@@ -1,25 +1,22 @@
-@use "../../variables/palette";
-@use "../../helpers/font";
-@use "../../helpers/colors";
-@use "../../helpers/size";
-@use "../../placeholders/fonts";
-@use "../../mixins/space";
-@use "../../mixins/shapes" as shape;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
 
 .btn {
-  padding-inline: size.space(32);
-  padding-block: size.rem(12);
-  border-radius: size.rem(4);
+  padding-inline: helper.space(32);
+  padding-block: helper.rem(12);
+  border-radius: helper.rem(4);
   border: none;
   outline: none;
-  line-height: size.space(24);
-  min-width: size.rem(215);
+  line-height: helper.space(24);
+  min-width: helper.rem(215);
   transition: all .25s;
   white-space: nowrap;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  @include space.x(8);
+  @include mixin.x(8);
   @extend %body-bold-text;
 
   > span:not([class^='icon-']) {
@@ -28,14 +25,14 @@
 
   > [class^='icon-'] {
     display: flex;
-    font-size: size.rem(18);
+    font-size: helper.rem(18);
   }
 
   &-primary {
-    background-color: colors.button(primary);
-    color: colors.grayscale(light);
-    min-width: size.rem(216);
-    @include space.x(12);
+    background-color: helper.button(primary);
+    color: helper.grayscale(light);
+    min-width: helper.rem(216);
+    @include mixin.x(12);
 
     &.btn-only-icon {
       display: flex;
@@ -43,86 +40,91 @@
       justify-content: center;
       min-width: min-content;
 
-      padding-inline: size.rem(14);
-      padding-block: size.rem(14);
+      padding-inline: helper.rem(14);
+      padding-block: helper.rem(14);
       line-height: 1;
-      font-size: font.size(sm);
+      font-size: helper.size(sm);
     }
 
     &.btn-primary-cta {
       > [class^='icon-'] {
-        font-size: size.rem(12);
-        @include shape.circle(24);
+        font-size: helper.rem(12);
+        @include mixin.circle(24);
         line-height: 1;
         display: inline-grid;
         align-items: center;
         justify-content: center;
-        background-color: colors.button(cta_icon);
+        background-color: helper.button(cta_icon);
         transform: translateX(0);
         transition: transform .25s ease-in;
       }
     }
 
     &:hover:not(:disabled) {
-      background-color: colors.button(primary--hover);
+      background-color: helper.button(primary--hover);
 
       &.btn-primary-cta {
         > [class^='icon-'] {
-          background-color: colors.button(cta_icon--hover);
-          transform: translateX(size.rem(4));
+          background-color: helper.button(cta_icon--hover);
+          transform: translateX(helper.rem(4));
         }
       }
     }
   }
 
   &-secondary {
-    background-color: colors.button(secondary);
+    background-color: helper.button(secondary);
 
     &:hover:not(:disabled) {
-      background-color: colors.button(secondary--hover);
+      background-color: helper.button(secondary--hover);
     }
   }
 
   &-tertiary {
-    background-color: colors.grayscale(100);
-    color: colors.body(off);
-
+    @include themed.properties {
+      background-color: themed.values(helper.grayscale(100), helper.grayscale(900));
+      color: themed.values(helper.body(off), helper.grayscale(light));
+    }
 
     &:hover:not(:disabled) {
-      background-color: colors.grayscale(200);
+      @include themed.properties {
+        background-color: themed.values(helper.grayscale(200), helper.grayscale(1000));
+      }
     }
   }
 
   &-subtle {
     background-color: transparent;
-    color: colors.body(off);
-    border: size.rem(1) solid colors.grayscale(200);
+    border: helper.rem(1) solid helper.grayscale(200);
+    @include themed.properties {
+      color: themed.values(helper.body(off), helper.grayscale(light));
+    }
 
     &:hover:not(:disabled) {
       background-color: transparent;
-      border: size.rem(1) solid colors.grayscale(400);
+      border: helper.rem(1) solid helper.grayscale(400);
     }
   }
 
   &-glass {
-    background-color: colors.opacity(light-100);
-    backdrop-filter: blur(size.rem(9));
-    color: colors.grayscale(light);
+    background-color: helper.opacity(light-100);
+    backdrop-filter: blur(helper.rem(9));
+    color: helper.grayscale(light);
 
     &:hover:not(:disabled) {
-      color: colors.grayscale(light);
-      background-color: colors.opacity(light-0);
+      color: helper.grayscale(light);
+      background-color: helper.opacity(light-0);
     }
 
     &:disabled {
       cursor: not-allowed;
-      color: colors.opacity(light-200);
+      color: helper.opacity(light-200);
     }
   }
 
   &-narrow {
-    padding-block: size.space(8);
-    min-width: size.rem(192);
+    padding-block: helper.space(8);
+    min-width: helper.rem(192);
   }
 
   &-fit {
@@ -144,13 +146,13 @@
 
     &-next:hover:not(:disabled) {
       [class^='icon-'] {
-        transform: translateX(size.rem(4));
+        transform: translateX(helper.rem(4));
       }
     }
 
     &-previous:hover:not(:disabled) {
       [class^='icon-'] {
-        transform: translateX(-#{size.rem(4)});
+        transform: translateX(-#{helper.rem(4)});
       }
     }
 
@@ -158,22 +160,24 @@
 
   &:disabled {
     cursor: not-allowed;
-    background-color: colors.button(disabled);
-    color: colors.opacity(gray-400);
     opacity: 1;
     pointer-events: auto;
+    @include themed.properties {
+      background-color: themed.values(helper.button(disabled), helper.grayscale(900));
+      color: themed.values(helper.opacity(gray-400), helper.opacity(light-200));
+    }
   }
 
   &-only-icon {
-    @include shape.square(32);
-    font-size: size.rem(18);
+    @include mixin.square(32);
+    font-size: helper.rem(18);
     align-items: center;
     justify-content: center;
     outline: none;
     padding: 0;
     border: 0;
     border-radius: 0;
-    color: colors.grayscale(dark);
+    color: helper.grayscale(dark);
 
     &:before {
       display: flex;
@@ -184,37 +188,6 @@
 
     &:focus {
       box-shadow: none;
-    }
-  }
-}
-
-/* DARK MODE */
-[data-b-system='dark-mode'] {
-  .btn {
-    &-tertiary {
-      background-color: colors.grayscale(900);
-      color: colors.grayscale(light);
-
-      &:hover:not(:disabled) {
-        background-color: colors.grayscale(1000);
-      }
-
-      &.transparent {
-        background-color: colors.opacity(light-100);
-        &:hover:not(:disabled) {
-          background-color: colors.opacity(light-0);
-        }
-      }
-
-    }
-
-    &-subtle {
-      color: colors.grayscale(light);
-    }
-
-    &:disabled {
-      background-color: colors.grayscale(900);
-      color: colors.opacity(light-200);
     }
   }
 }

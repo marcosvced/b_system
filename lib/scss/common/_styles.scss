@@ -2,7 +2,7 @@
 @use "../helpers/size";
 @use "../helpers/colors";
 
-[data-b-system='dark-mode'] {
+[data-bsystem='dark'] {
   background-color: colors.grayscale(1100);
 
   h1 {
