@@ -80,11 +80,11 @@ background-color: helper.button(primary--hover);
 
 ### Tools 
 ```html
-<div class="{breakpoint}:space-{position}:{n}"></div>
-<div class="{breakpoint}:inner-space-{position}:{n}"></div>
-<div class="{breakpoint}:space-x:{n}"></div>
-<div class="{breakpoint}:space-y:{n}"></div>
-<div class="{breakpoint}:space-xy:{n}"></div>
+<div class="space-{position}-{breakpoint}-{n}"></div>
+<div class="inner-space-{position}-{breakpoint}-{n}"></div>
+<div class="space-x-{breakpoint}-{n}"></div>
+<div class="space-y{breakpoint}-{n}"></div>
+<div class="space-xy-{breakpoint}-{n}"></div>
 ```
 · Siendo _breackpoint_ una key de los valores definidos en el map `$breakpoints` del fichero `/lib/scss/variables/_spacing.scss`.   
 · Estas clases se pueden definir sin el uso de un _breackpoint_.  
