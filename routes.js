@@ -27,6 +27,7 @@ const ROUTES_PATHS = {
     BUTTONS: '/buttons',
     ALERTS: '/alerts',
     ICONS: '/icons',
+    LINKS: '/links',
   },
 }
 
@@ -92,6 +93,11 @@ router.get(ROUTES_PATHS.QUICK_START.ALERTS, (request, response) => {
 /* Icons page. */
 router.get(ROUTES_PATHS.QUICK_START.ICONS, (request, response) => {
   render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['icons']))
+})
+
+/* Links page. */
+router.get(ROUTES_PATHS.QUICK_START.LINKS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['links']))
 })
 
 module.exports = router
