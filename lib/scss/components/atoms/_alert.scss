@@ -4,45 +4,41 @@
 @use "../../placeholders/fonts";
 
 
-.flex-fix {
-flex: 1;
-}
-
 .alert {
   padding: size.space(24);
   border:0;
-  color:#6e6e6e;
-  font-weight: 300;
+  color: colors.grayscale(800);
+  font-weight: fonts.weight(light);
   &-info {
-    background-color: #dff0ff;
+    background-color: colors.secondary(blue-200); 
   }
   &-error {
-    background-color: #ffdbe0;        
+    background-color: colors.secondary(red-100);        
   }
   &-advice {
-    background-color: #d5fdf1;        
+    background-color: colors.secondary(green-200);    
   }
-  &-primary {
-    background-color: #f6f6f6;        
+  &-primary { 
+    background-color: colors.grayscale(100);        
   }
   &-link {
-    background-color: #f6f6f6;   
-    font-weight: 500;     
+    background-color: colors.grayscale(100); 
+    font-weight: fonts.weight(medium);
     a, span[class*=icon-] {
-        color:#0077e6;
+        color:colors.primary(blue);
     }
   }
   span {
     display:block;
     font-size:size.space(24);
-    color:#000;
+    color:colors.grayscale(black);
     &:before {
         margin-bottom:size.space(24);
         display: block;
     }
   }
   .content {
-    min-height: 44px;
+    min-height: size.space(40);
   }
 }
 
@@ -51,17 +47,17 @@ flex: 1;
 [data-b-system='dark-mode'] {
   .alert {
     background-color: colors.grayscale(1200);
-    color: #aaaaaa;    
+    color: colors.grayscale(500);
     &-link {   
         a, span[class*=icon-] {
-            color:#3ca1ff;
+            color:colors.primary(blue)
         }
     }
     span {
-        color:#fff;
+        color:colors.grayscale(light);
     }
   }
   span.label {
-    color:#aaaaaa; 
+    color:colors.grayscale(500);
   }
 }
