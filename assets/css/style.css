@@ -13265,7 +13265,7 @@
    */
   --fs-xxl: 4rem;
   --fs-xl: 2.5rem;
-  --fs-lg: 1.75rem;
+  --fs-lg: 1.625rem;
   --fs-md: 1.375rem;
   --fs-sm: 1.125rem;
   --fs-xs: 0.9375rem;
@@ -13277,12 +13277,21 @@
   --ff-roboto: 'Roboto', sans-serif;
   --ff-playfair: 'Playfair Display', serif;
   --ff-code: 'JetBrains Mono', monospace;
+  --ft-inherit: inherit;
+  --ft-initial: initial;
+  --ft-italic: italic;
+  --ft-normal: normal;
+  --ft-oblique: oblique;
+  --ft-revert: revert;
+  --ft-unset: unset;
   /*
   * COLOURS
   */
   --c-primary__blue: #0077e6;
   --c-primary__green: #009e71;
   --c-primary__turquoise: #009ec2;
+  --c-primary__orange: #e66300;
+  --c-primary__red: #cb1029;
   --c-secondary__blue-100: aliceblue;
   --c-secondary__blue-300: #b8dcff;
   --c-secondary__blue-400: #3da1ff;
@@ -13735,46 +13744,125 @@
   content: "c";
 }
 
-h1 {
+.x1-text, h1 {
   font-size: var(--fs-xxl);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-bold);
 }
+[data-bsystem=dark].x1-text, h1[data-bsystem=dark], [data-bsystem=dark] .x1-text, [data-bsystem=dark] h1 {
+  color: var(--c-grayscale__light);
+}
 
-h2 {
+.x1-text, h1 {
+  color: var(--c-grayscale__dark);
+}
+
+.x2-text, h2 {
   font-size: var(--fs-xl);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-bold);
 }
+[data-bsystem=dark].x2-text, h2[data-bsystem=dark], [data-bsystem=dark] .x2-text, [data-bsystem=dark] h2 {
+  color: var(--c-grayscale__light);
+}
 
-h3 {
+.x2-text, h2 {
+  color: var(--c-grayscale__dark);
+}
+
+.x3-text, h3 {
   font-size: var(--fs-lg);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-bold);
 }
+[data-bsystem=dark].x3-text, h3[data-bsystem=dark], [data-bsystem=dark] .x3-text, [data-bsystem=dark] h3 {
+  color: var(--c-grayscale__light);
+}
 
-h4 {
+.x3-text, h3 {
+  color: var(--c-grayscale__dark);
+}
+
+.x4-text, h4 {
   font-size: var(--fs-md);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-bold);
 }
-
-h5 {
-  font-size: var(--fs-md);
-  font-family: var(--ff-roboto);
-  font-weight: var(--fw-light);
+[data-bsystem=dark].x4-text, h4[data-bsystem=dark], [data-bsystem=dark] .x4-text, [data-bsystem=dark] h4 {
+  color: var(--c-grayscale__light);
 }
 
-.offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item .nav-link.active {
+.x4-text, h4 {
+  color: var(--c-grayscale__dark);
+}
+
+.x5-text, h5 {
   font-size: var(--fs-sm);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-bold);
+  line-height: 1.44;
+  letter-spacing: 0.2px;
+}
+[data-bsystem=dark].x5-text, h5[data-bsystem=dark], [data-bsystem=dark] .x5-text, [data-bsystem=dark] h5 {
+  color: var(--c-grayscale__light);
 }
 
-.offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item .nav-link {
+.x5-text, h5 {
+  color: var(--c-grayscale__dark);
+}
+
+.offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item .nav-link.active, .x6-text {
+  font-size: var(--fs-sm);
+  font-family: var(--ff-roboto);
+  font-weight: var(--fw-medium);
+  line-height: 1.44;
+  letter-spacing: 0.2px;
+}
+.offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item [data-bsystem=dark].nav-link.active, [data-bsystem=dark].x6-text, [data-bsystem=dark] .offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item .nav-link.active, .offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item [data-bsystem=dark] .nav-link.active, [data-bsystem=dark] .x6-text {
+  color: var(--c-grayscale__light);
+}
+
+.offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item .nav-link.active, .x6-text {
+  color: var(--c-grayscale__dark);
+}
+
+.x7-text {
+  font-size: var(--fs-sm);
+  font-family: var(--ff-roboto);
+  font-weight: var(--fw-regular);
+  line-height: 1.44;
+  letter-spacing: 0.2px;
+}
+[data-bsystem=dark].x7-text, [data-bsystem=dark] .x7-text {
+  color: var(--c-grayscale__light);
+}
+
+.x7-text {
+  color: var(--c-grayscale__dark);
+}
+
+.x8-text {
   font-size: var(--fs-sm);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-light);
+  line-height: 1.44;
+  letter-spacing: 0.2px;
+}
+[data-bsystem=dark].x8-text, [data-bsystem=dark] .x8-text {
+  color: var(--c-grayscale__light);
+}
+
+.x8-text {
+  color: var(--c-grayscale__dark);
+}
+
+.offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item .nav-link, .x9-text {
+  font-size: var(--fs-xxs);
+  font-family: var(--ff-roboto);
+  font-weight: var(--fw-light);
+  line-height: 1.27;
+  letter-spacing: 0.18px;
+  color: var(--c-grayscale__500);
 }
 
 label.--small,
@@ -13784,30 +13872,189 @@ span.label.--small {
   font-weight: var(--fw-light);
 }
 
-header.header.header-transparent nav.navbar .navbar-nav .nav-item > a.active, header.header nav.navbar .navbar-nav .nav-item > a.active, .btn, .btn > span:not([class^=icon-]), b {
+.x1-text-serif {
+  font-size: var(--fs-xxl);
+  font-family: var(--ff-playfair);
+  line-height: 1.19;
+  letter-spacing: 0.6px;
+}
+[data-bsystem=dark].x1-text-serif, [data-bsystem=dark] .x1-text-serif {
+  color: var(--c-grayscale__light);
+}
+
+.x1-text-serif {
+  color: var(--c-grayscale__dark);
+}
+
+.x2-text-serif {
+  font-family: var(--ff-playfair);
+  font-size: 3.5rem;
+  line-height: 1.18;
+  letter-spacing: 0.53px;
+  color: var(--c-grayscale__dark);
+}
+[data-bsystem=dark].x2-text-serif, [data-bsystem=dark] .x2-text-serif {
+  color: var(--c-grayscale__light);
+}
+
+.x2-text-serif {
+  color: var(--c-grayscale__dark);
+}
+
+.x3-text-serif {
+  font-family: var(--ff-playfair);
+  font-size: 3.5rem;
+  font-style: var(--ft-italic);
+  line-height: 1.18;
+  letter-spacing: 0.53px;
+  color: var(--c-grayscale__dark);
+}
+[data-bsystem=dark].x3-text-serif, [data-bsystem=dark] .x3-text-serif {
+  color: var(--c-grayscale__light);
+}
+
+.x3-text-serif {
+  color: var(--c-grayscale__dark);
+}
+
+.x4-text-serif {
+  font-family: var(--ff-playfair);
+  font-size: var(--fs-md);
+  line-height: 1.36;
+  letter-spacing: 0.4px;
+}
+[data-bsystem=dark].x4-text-serif, [data-bsystem=dark] .x4-text-serif {
+  color: var(--c-grayscale__light);
+}
+
+.x4-text-serif {
+  color: var(--c-grayscale__dark);
+}
+
+header.header.header-transparent nav.navbar .navbar-nav .nav-item > a.active, header.header nav.navbar .navbar-nav .nav-item > a.active, .btn, .btn > span:not([class^=icon-]), .body-bold-text, b {
   font-size: var(--fs-xs);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-bold);
 }
+header.header nav.navbar .navbar-nav .nav-item > a[data-bsystem=dark].active, [data-bsystem=dark].btn, .btn > span[data-bsystem=dark]:not([class^=icon-]), [data-bsystem=dark].body-bold-text, b[data-bsystem=dark], [data-bsystem=dark] header.header nav.navbar .navbar-nav .nav-item > a.active, header.header nav.navbar .navbar-nav [data-bsystem=dark] .nav-item > a.active, [data-bsystem=dark] .btn, [data-bsystem=dark] .btn > span:not([class^=icon-]), [data-bsystem=dark] .body-bold-text, [data-bsystem=dark] b {
+  color: var(--c-grayscale__light);
+}
 
-.footer .links-wrapper .title {
+header.header nav.navbar .navbar-nav [data-bsystem=light] .nav-item > a.active, [data-bsystem=light] .btn > span:not([class^=icon-]), header.header.header-transparent nav.navbar .navbar-nav .nav-item > a.active, header.header nav.navbar .navbar-nav .nav-item > a.active, .btn, .btn > span:not([class^=icon-]), .body-bold-text, b {
+  color: var(--c-grayscale__dark);
+}
+
+.footer .links-wrapper .title, .body-medium-text {
   font-size: var(--fs-xs);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-medium);
 }
+.footer .links-wrapper [data-bsystem=dark].title, [data-bsystem=dark].body-medium-text, [data-bsystem=dark] .footer .links-wrapper .title, .footer .links-wrapper [data-bsystem=dark] .title, [data-bsystem=dark] .body-medium-text {
+  color: var(--c-grayscale__light);
+}
 
-.footer .links-wrapper li:not(.title), header.header.header-transparent nav.navbar .navbar-nav .nav-item > a, header.header nav.navbar .navbar-nav .nav-item > a, .offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item, .nav-item.dropdown .dropdown-menu .dropdown-item, a.action-link, .btn-action-next span:not([class^=icon-]), .btn-action-previous span:not([class^=icon-]), body, p,
+.footer .links-wrapper .title, .body-medium-text {
+  color: var(--c-grayscale__dark);
+}
+
+.footer .links-wrapper li:not(.title), header.header.header-transparent nav.navbar .navbar-nav .nav-item > a, header.header nav.navbar .navbar-nav .nav-item > a, .offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item, .nav-item.dropdown .dropdown-menu .dropdown-item, a.action-link, .btn-action-next span:not([class^=icon-]), .btn-action-previous span:not([class^=icon-]), .body-regular-text, body, p,
 span {
   font-size: var(--fs-xs);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-regular);
 }
+.footer .links-wrapper li[data-bsystem=dark]:not(.title), header.header nav.navbar .navbar-nav .nav-item > a[data-bsystem=dark], .offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu [data-bsystem=dark].dropdown-item, .nav-item.dropdown .dropdown-menu [data-bsystem=dark].dropdown-item, a[data-bsystem=dark].action-link, .btn-action-next span[data-bsystem=dark]:not([class^=icon-]), .btn-action-previous span[data-bsystem=dark]:not([class^=icon-]), [data-bsystem=dark].body-regular-text, body[data-bsystem=dark], p[data-bsystem=dark],
+span[data-bsystem=dark], [data-bsystem=dark] .footer .links-wrapper li:not(.title), .footer .links-wrapper [data-bsystem=dark] li:not(.title), [data-bsystem=dark] header.header nav.navbar .navbar-nav .nav-item > a, header.header nav.navbar .navbar-nav [data-bsystem=dark] .nav-item > a, [data-bsystem=dark] .offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item, .offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu [data-bsystem=dark] .dropdown-item, [data-bsystem=dark] .nav-item.dropdown .dropdown-menu .dropdown-item, .nav-item.dropdown .dropdown-menu [data-bsystem=dark] .dropdown-item, [data-bsystem=dark] a.action-link, [data-bsystem=dark] .btn-action-next span:not([class^=icon-]), .btn-action-next [data-bsystem=dark] span:not([class^=icon-]), [data-bsystem=dark] .btn-action-previous span:not([class^=icon-]), .btn-action-previous [data-bsystem=dark] span:not([class^=icon-]), [data-bsystem=dark] .body-regular-text, [data-bsystem=dark] body, [data-bsystem=dark] p,
+[data-bsystem=dark] span {
+  color: var(--c-grayscale__light);
+}
 
-.footer.footer-corporate .copy-wrapper p.copy, label,
+header.header nav.navbar .navbar-nav [data-bsystem=light] .nav-item > a, .footer .links-wrapper li:not(.title), header.header.header-transparent nav.navbar .navbar-nav .nav-item > a, header.header nav.navbar .navbar-nav .nav-item > a, .offcanvas.offcanvas-start .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item, .nav-item.dropdown .dropdown-menu .dropdown-item, a.action-link, .btn-action-next span:not([class^=icon-]), .btn-action-previous span:not([class^=icon-]), .body-regular-text, body, p,
+span {
+  color: var(--c-grayscale__800);
+}
+
+.footer.footer-corporate .copy-wrapper p.copy, .body-light-text, label,
 span.label {
   font-size: var(--fs-xs);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-light);
+}
+.footer.footer-corporate .copy-wrapper p[data-bsystem=dark].copy, [data-bsystem=dark].body-light-text, label[data-bsystem=dark],
+span[data-bsystem=dark].label, [data-bsystem=dark] .footer.footer-corporate .copy-wrapper p.copy, .footer.footer-corporate .copy-wrapper [data-bsystem=dark] p.copy, [data-bsystem=dark] .body-light-text, [data-bsystem=dark] label,
+[data-bsystem=dark] span.label {
+  color: var(--c-grayscale__light);
+}
+
+.footer.footer-corporate .copy-wrapper p.copy, .body-light-text, label,
+span.label {
+  color: var(--c-grayscale__800);
+}
+
+.body-italic-text {
+  font-style: var(--ft-italic);
+}
+[data-bsystem=dark].body-italic-text, [data-bsystem=dark] .body-italic-text {
+  color: var(--c-grayscale__light);
+}
+
+.body-italic-text {
+  color: var(--c-grayscale__800);
+}
+
+[data-bsystem=dark].body-regular-dark-text, [data-bsystem=dark] .body-regular-dark-text {
+  color: var(--c-grayscale__500);
+}
+
+.body-regular-dark-text {
+  color: var(--c-grayscale__dark);
+}
+
+.body-light-dark-text {
+  font-weight: var(--fw-light);
+}
+[data-bsystem=dark].body-light-dark-text, [data-bsystem=dark] .body-light-dark-text {
+  color: var(--c-grayscale__500);
+}
+
+.body-light-dark-text {
+  color: var(--c-grayscale__dark);
+}
+
+.link-bold {
+  font-weight: var(--fw-bold);
+  color: var(--c-primary__blue);
+}
+
+.link-medium {
+  font-weight: var(--fw-medium);
+  color: var(--c-primary__blue);
+}
+
+.link-regular {
+  font-weight: var(--fw-regular);
+  color: var(--c-primary__blue);
+}
+
+.link-light {
+  font-weight: var(--fw-light);
+  color: var(--c-primary__blue);
+}
+
+.body-blue-text {
+  color: var(--c-primary__blue);
+}
+
+.body-orange-text {
+  color: var(--c-primary__orange);
+}
+
+.body-red-text {
+  color: var(--c-primary__red);
+}
+
+.body-turquoise-text {
+  color: var(--c-primary__turquoise);
 }
 
 [data-bsystem=dark] {
@@ -13849,6 +14096,9 @@ a {
   color: inherit;
 }
 
+/*
+ * Placeholder
+ */
 /*
  * Helpers
  */
@@ -13961,9 +14211,6 @@ a {
   border-left-color: var(--c-grayscale__1000);
 }
 
-/*
- * Placeholder
- */
 .btn {
   padding-inline: var(--s-space__32);
   padding-block: 0.75rem;

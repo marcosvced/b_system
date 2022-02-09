@@ -1,11 +1,19 @@
 @use '../helpers/font';
 @use '../helpers/colors';
+@use "../helpers/size";
+@use '../helpers/themed';
+
+
+// X text
 
 %x1-text {
   font: {
     size: font.size(xxl);
     family: font.family(roboto);
     weight: font.weight(bold);
+  }
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -15,6 +23,9 @@
     family: font.family(roboto);
     weight: font.weight(bold);
   }
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
 }
 
 %x3-text {
@@ -22,6 +33,9 @@
     size: font.size(lg);
     family: font.family(roboto);
     weight: font.weight(bold);
+  }
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -31,13 +45,21 @@
     family: font.family(roboto);
     weight: font.weight(bold);
   }
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
 }
 
 %x5-text {
   font: {
-    size: font.size(md);
+    size: font.size(sm); //md
     family: font.family(roboto);
-    weight: font.weight(light);
+    weight: font.weight(bold); //light
+  }
+  line-height: 1.44;
+  letter-spacing: 0.2px;
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -45,7 +67,12 @@
   font: {
     size: font.size(sm);
     family: font.family(roboto);
-    weight: font.weight(bold);
+    weight: font.weight(medium); //bold
+  }
+  line-height: 1.44;
+  letter-spacing: 0.2px;
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -53,7 +80,12 @@
   font: {
     size: font.size(sm);
     family: font.family(roboto);
-    weight: font.weight(medium);
+    weight: font.weight(regular); //medium
+  }
+  line-height: 1.44;
+  letter-spacing: 0.2px;
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -61,16 +93,24 @@
   font: {
     size: font.size(sm);
     family: font.family(roboto);
-    weight: font.weight(regular);
+    weight: font.weight(light); //regular
+  }
+  line-height: 1.44;
+  letter-spacing: 0.2px;
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
 %x9-text {
   font: {
-    size: font.size(sm);
+    size: font.size(xxs); //sm
     family: font.family(roboto);
     weight: font.weight(light);
   }
+  line-height: 1.27;
+  letter-spacing: 0.18px;
+  color: colors.grayscale(500);
 }
 
 %x10-mini {
@@ -81,12 +121,64 @@
   }
 }
 
+
+// X text-serif
+
+%x1-text-serif {
+  font-size: font.size(xxl);
+  font-family: font.family(playfair);
+  line-height: 1.19;
+  letter-spacing: 0.6px;
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
+}
+
+%x2-text-serif {
+  font-family: font.family(playfair);
+  font-size: size.rem(56);
+  line-height: 1.18;
+  letter-spacing: 0.53px;
+  color: colors.grayscale(dark);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
+}
+
+%x3-text-serif {
+  font-family: font.family(playfair);
+  font-size: size.rem(56);
+  font-style: font.style(italic);
+  line-height: 1.18;
+  letter-spacing: 0.53px;
+  color: colors.grayscale(dark);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
+}
+
+%x4-text-serif {
+  font-family: font.family(playfair);
+  font-size: font.size(md);
+  line-height: 1.36;
+  letter-spacing: 0.4px;
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
+}
+
+
+// Text
+
 %body-bold-text {
   font: {
     size: font.size(xs);
     family: font.family(roboto);
     weight: font.weight(bold);
   };
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
 }
 
 %body-medium-text {
@@ -95,6 +187,9 @@
     family: font.family(roboto);
     weight: font.weight(medium);
   };
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
 }
 
 %body-regular-text {
@@ -103,6 +198,9 @@
     family: font.family(roboto);
     weight: font.weight(regular);
   };
+  @include themed.properties {
+    color: themed.values( colors.grayscale(800), colors.grayscale(light) );
+  }
 }
 
 %body-light-text {
@@ -111,5 +209,69 @@
     family: font.family(roboto);
     weight: font.weight(light);
   };
+  @include themed.properties {
+    color: themed.values( colors.grayscale(800), colors.grayscale(light) );
+  }
 }
 
+%body-italic-text {
+  font-style: font.style(italic);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(800), colors.grayscale(light) );
+  }
+}
+
+%body-regular-dark-text {
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(500) );
+  }
+}
+
+%body-light-dark-text {
+  font-weight: font.weight(light);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(500) );
+  }
+}
+
+
+// Link
+
+%link-bold {
+  font-weight: font.weight(bold);
+  color: colors.primary(blue);
+}
+
+%link-medium {
+  font-weight: font.weight(medium);
+  color: colors.primary(blue);
+}
+
+%link-regular {
+  font-weight: font.weight(regular);
+  color: colors.primary(blue);
+}
+
+%link-light {
+  font-weight: font.weight(light);
+  color: colors.primary(blue);
+}
+
+
+// Color
+
+%body-blue-text {
+  color: colors.primary(blue);
+}
+
+%body-orange-text {
+  color: colors.primary(orange);
+}
+
+%body-red-text {
+  color: colors.primary(red);
+}
+
+%body-turquoise-text {
+  color: colors.primary(turquoise);
+}

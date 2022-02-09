@@ -20,6 +20,10 @@
      #{enum.find(FF)}#{$_name}: #{$_value};
   }
 
+  @each $_name, $_value in fonts.$style {
+     #{enum.find(FT)}#{$_name}: #{$_value};
+  }
+
 
   /*
   * COLOURS
