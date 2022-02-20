@@ -31,5 +31,16 @@ $positions: top, bottom, left, right, inline, block;
            }
 
         }
+
+        /*
+        * Width
+        */
+        .col-#{$breakpoint}min {
+            width: min-content !important;
+        }
+        .col-#{$breakpoint}max {
+            width: max-content !important;
+        }
+
     }
 }
