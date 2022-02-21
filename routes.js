@@ -29,6 +29,8 @@ const ROUTES_PATHS = {
     ICONS: '/icons',
     LINKS: '/links',
     ILLUSTRATIONS: '/illustrations',
+    SCENES: '/scenes',
+    MICROILLUSTRATIONS: '/microillustrations',
   },
 }
 
@@ -104,6 +106,16 @@ router.get(ROUTES_PATHS.QUICK_START.LINKS, (request, response) => {
 /* Illustrations page. */
 router.get(ROUTES_PATHS.QUICK_START.ILLUSTRATIONS, (request, response) => {
   render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['illustrations']))
+})
+
+/* Scenes page. */
+router.get(ROUTES_PATHS.QUICK_START.SCENES, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['scenes']))
+})
+
+/* Microillustrations page. */
+router.get(ROUTES_PATHS.QUICK_START.MICROILLUSTRATIONS, (request, response) => {
+  render(response, dir(ROUTES_NAMES.QUICK_START, 'components', ['microillustrations']))
 })
 
 module.exports = router
