@@ -18,7 +18,9 @@
 @use "common/icons";
 @use "common/styles";
 @use "common/section";
-
+@use "common/shadows";
+@use "common/transitions";
+@use "common/squares";
 /*
  * 2º Atoms
  */
@@ -26,6 +28,7 @@
 @use "components/atoms/button";
 @use "components/atoms/rounded-button";
 @use "components/atoms/link";
+@use "components/atoms/interactions";
 
 /*
  * 3º Molecules
