@@ -7,68 +7,65 @@
         <header>
             <h3 class="space-bottom:88">Links</h3>
         </header>
-        <div class="d-flex flex-wrap space-xy:24 xl:space-xy:48">
+		<div class="demo-grid-size--180">
 
-            <div class="d-flex flex-column gap-2">
+			<div class="demo-cell">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						// icon: 'links',
+						// iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Basic link
+				</div>
+			</div>
 
-                <%- include( `${component}/links/link`, {
-                    href: '#',
-                    label: 'Learn more',
-                    // icon: 'links',
-                    // iconPosition: 'before'
-                    } ) %>
+			<div class="demo-cell">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'links',
+						// iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Link
+				</div>
+			</div>
 
-                <span class="label">
-                    Basic link
-                </span>
-            </div>
+			<div class="demo-cell">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'info',
+						iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					More info
+				</div>
+			</div>
 
+			<div class="demo-cell">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Exit',
+						icon: 'logout',
+						// iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Exit
+				</div>
+			</div>
 
-            <div class="d-flex flex-column gap-2">
-
-                <%- include( `${component}/links/link`, {
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links',
-                    // iconPosition: 'before'
-                    } ) %>
-
-                <span class="label">
-                    Basic link
-                </span>
-            </div>
-
-
-            <div class="d-flex flex-column gap-2">
-
-                <%- include( `${component}/links/link`, {
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'info',
-                    iconPosition: 'before'
-                    } ) %>
-
-                <span class="label">
-                    Basic link
-                </span>
-            </div>
-
-
-            <div class="d-flex flex-column gap-2">
-
-                <%- include( `${component}/links/link`, {
-                    href: '#',
-                    label: 'Exit',
-                    icon: 'logout',
-                    // iconPosition: 'before'
-                    } ) %>
-
-                <span class="label">
-                    Basic link
-                </span>
-            </div>
-
-        </div>
+		</div>
     </div>
 </section>
 
@@ -78,67 +75,64 @@
         <header>
             <h3 class="space-bottom:88">Links dark</h3>
         </header>
-        <div class="d-flex flex-wrap space-xy:24 xl:space-xy:48">
+        <div class="demo-grid-size--180">
 
-            <div class="d-flex flex-column gap-2">
+			<div class="demo-cell">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						// icon: 'links',
+						// iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Basic link
+				</div>
+			</div>
 
-                <%- include( `${component}/links/link`, {
-                    href: '#',
-                    label: 'Learn more',
-                    // icon: 'links',
-                    // iconPosition: 'before'
-                    } ) %>
+			<div class="demo-cell">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'links',
+						// iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Link
+				</div>
+			</div>
 
-                <span class="label">
-                    Basic link
-                </span>
-            </div>
+			<div class="demo-cell">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'info',
+						iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					More info
+				</div>
+			</div>
 
+			<div class="demo-cell">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Exit',
+						icon: 'logout',
+						// iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Exit
+				</div>
+			</div>
 
-            <div class="d-flex flex-column gap-2">
-
-                <%- include( `${component}/links/link`, {
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links',
-                    // iconPosition: 'before'
-                    } ) %>
-
-                <span class="label">
-                    Basic link
-                </span>
-            </div>
-
-
-            <div class="d-flex flex-column gap-2">
-
-                <%- include( `${component}/links/link`, {
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'info',
-                    iconPosition: 'before'
-                    } ) %>
-
-                <span class="label">
-                    Basic link
-                </span>
-            </div>
-
-
-            <div class="d-flex flex-column gap-2">
-
-                <%- include( `${component}/links/link`, {
-                    href: '#',
-                    label: 'Exit',
-                    icon: 'logout',
-                    // iconPosition: 'before'
-                    } ) %>
-
-                <span class="label">
-                    Basic link
-                </span>
-            </div>
-
-        </div>
+		</div>
     </div>
 </section>
