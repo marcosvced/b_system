@@ -82,6 +82,16 @@
 }
 
 
+// Text-serif
+
+.body-bold-text-serif {
+	@extend %body-bold-text-serif;
+}
+.body-regular-text-serif {
+	@extend %body-regular-text-serif;
+}
+
+
 // Link
 
 .link-bold {

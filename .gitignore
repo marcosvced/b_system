@@ -1,2 +1,4 @@
 /node_modules/
 /.idea/vcs.xml
+/assets/css/style.css
+/assets/css/style.min.css
