@@ -1,5 +1,6 @@
 const srcDirs = require('./dirs')
 const routePaths = require('./routePaths')
+const build = require('./routeBuild')
 
 const defaultOptions = {
   title: 'B_System',
@@ -10,12 +11,15 @@ const defaultOptions = {
 
 const routeRender = {
   dir: (view, page = 'home', children = []) => `${view}/pages/${page}${children ? `/${children.join('/')}` : ''}/index.ejs`,
-  render: (view, path, options = {}, extras = {}) => {
-    view.render(path, {
+  render: (response, path, options = {}, extras = {}) => {
+    response.render(path, {
       ...defaultOptions,
       ...options,
       ...extras,
+    }, (error, html) => {
+      build(response, response.req.route.path, html)
     })
   },
 }
+
 module.exports = routeRender

@@ -6,6 +6,8 @@ const gulpUglify = require('gulp-uglify')
 const browserSync = require('browser-sync').create()
 const { exec } = require('child_process')
 
+const remove = require('del')
+
 const sass = () => gulp.src('./lib/scss/style.scss')
   .pipe(gulpSass({ outputStyle: 'expanded' }, null)
     .on('error', gulpSass.logError))
@@ -21,6 +23,13 @@ const uglify = () => gulp.src('./lib/js/*.js')
   .pipe(gulpRename('bsystem.min.js'))
   .pipe(gulp.dest('./assets/js/'))
 
+const build = async () => {
+  remove('./dist/assets/**', { force: true })
+  await gulp.src('./assets/**/*')
+    .pipe(gulp.dest('./dist/assets/'))
+}
+
+exports.build = build
 exports.sass = sass
 exports.uglify = uglify
 

@@ -12,8 +12,6 @@ app.use(expressLayouts)
 app.set('layout extractScripts', true)
 app.set('layout extractStyles', true)
 
-// app.set('layout', 'lib/layouts/default')
-
 app.set('views', path.join(__dirname, 'views'))
 
 app.use(logger('dev'))

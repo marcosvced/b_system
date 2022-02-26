@@ -1,15 +1,15 @@
 module.exports = {
   QUICK_START: {
     ROUTE_NAME: 'quick_start',
-    HOME: '/home',
-    HEADERS: '/headers',
+    HOME: '/doc/home',
+    HEADERS: '/doc/headers',
     FOOTERS: {
-      BASIC: '/footers/basic',
-      CORPORATE: '/footers/corporate',
+      BASIC: '/doc/footers/basic',
+      CORPORATE: '/doc/footers/corporate',
     },
-    BUTTONS: '/buttons',
-    ALERTS: '/alerts',
-    ICONS: '/icons',
-    LINKS: '/links',
+    BUTTONS: '/doc/buttons',
+    ALERTS: '/doc/alerts',
+    ICONS: '/doc/icons',
+    LINKS: '/doc/links',
   },
 }
