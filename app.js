@@ -23,7 +23,7 @@ app.use(cookieParser())
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
 
-app.use('/', require('./routes'))
+app.use('/', require('./router/routes'))
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
