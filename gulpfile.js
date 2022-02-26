@@ -25,6 +25,10 @@ const uglify = () => gulp.src('./lib/js/*.js')
 
 const build = async () => {
   remove('./dist/assets/**', { force: true })
+
+  await gulp.src('./netlify.toml')
+    .pipe(gulp.dest('./dist/'))
+
   await gulp.src('./assets/**/*')
     .pipe(gulp.dest('./dist/assets/'))
 }
