@@ -17,6 +17,9 @@ const routeRender = {
       ...options,
       ...extras,
     }, (error, html) => {
+      if (error) {
+        throw new Error(error)
+      }
       build(response, response.req.route.path, html)
     })
   },
