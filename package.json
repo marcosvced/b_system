@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "gulp",
     "sass": "gulp sass",
-    "build": "gulp build"
+    "build": "gulp sass && gulp uglify && gulp build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
