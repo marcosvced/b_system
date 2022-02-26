@@ -7,46 +7,54 @@
         <header>
             <h3 class="space-bottom:88">Scenes</h3>
         </header>
-        <div class="d-flex flex-wrap space-xy:24 xl:space-xy:48">
+        <div class="demo-grid-size--560 demo-boxes">
 
-			<div class="d-flex flex-column gap-2">
-                <%- include(`${component}/illustrations/illustration`, {
+            <div class="demo-cell">
+                <div class="demo-element">
+                    <%- include(`${component}/illustrations/illustration`, {
                     type: 'scene',
                     illustration: 'couple',
                     } ) %>
-                <span class="label">
+                </div>
+                <div class="demo-label">
                     Couple
-                </span>
+                </div>
             </div>
 
-            <div class="d-flex flex-column gap-2">
-                <%- include(`${component}/illustrations/illustration`, {
+            <div class="demo-cell">
+                <div class="demo-element">
+                    <%- include(`${component}/illustrations/illustration`, {
                     type: 'scene',
                     illustration: 'man-resting-scene',
                     } ) %>
-                <span class="label">
+                </div>
+                <div class="demo-label">
                     Man resting scene
-                </span>
+                </div>
             </div>
 
-            <div class="d-flex flex-column gap-2">
-                <%- include(`${component}/illustrations/illustration`, {
+            <div class="demo-cell">
+                <div class="demo-element">
+                    <%- include(`${component}/illustrations/illustration`, {
                     type: 'scene',
                     illustration: 'man-working',
                     } ) %>
-                <span class="label">
+                </div>
+                <div class="demo-label">
                     Man working
-                </span>
+                </div>
             </div>
 
-            <div class="d-flex flex-column gap-2">
-                <%- include(`${component}/illustrations/illustration`, {
+            <div class="demo-cell">
+                <div class="demo-element">
+                    <%- include(`${component}/illustrations/illustration`, {
                     type: 'scene',
                     illustration: 'skyscraper',
                     } ) %>
-                <span class="label">
+                </div>
+                <div class="demo-label">
                     Skyscraper
-                </span>
+                </div>
             </div>
 
         </div>
