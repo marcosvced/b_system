@@ -3,4 +3,10 @@ module.exports = {
   rules: {
     semi: ['error', 'never'],
   },
+  globals: {
+    document: true,
+    foo: true,
+    window: true,
+    CustomEvent: true,
+  },
 }
