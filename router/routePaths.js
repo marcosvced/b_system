@@ -11,5 +11,6 @@ module.exports = {
     ALERTS: '/doc/alerts',
     ICONS: '/doc/icons',
     LINKS: '/doc/links',
+    TEXTS: '/doc/texts',
   },
 }
