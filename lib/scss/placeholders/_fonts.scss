@@ -264,7 +264,6 @@
   }
 }
 
-
 // Text-serif
 
 %body-bold-text-serif {
@@ -296,22 +295,22 @@
 // Link
 
 %link-bold {
-  font-weight: font.weight(bold);
+
   color: colors.primary(blue);
 }
 
 %link-medium {
-  font-weight: font.weight(medium);
+  ;
   color: colors.primary(blue);
 }
 
 %link-regular {
-  font-weight: font.weight(regular);
+
   color: colors.primary(blue);
 }
 
 %link-light {
-  font-weight: font.weight(light);
+
   color: colors.primary(blue);
 }
 

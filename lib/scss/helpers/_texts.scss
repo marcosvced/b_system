@@ -1,9 +1,6 @@
-
 @use '../placeholders';
 @use '../helpers/font';
-// @use "../helpers/size";
 @use "../helpers/colors";
-// @use '../helpers/themed';
 
 
 // X text
@@ -57,19 +54,15 @@
 
 .body-bold-text {
     @extend %body-bold-text;
-    // font-weight: font.weight(bold);
 }
 .body-medium-text {
     @extend %body-medium-text;
-    // font-weight: font.weight(medium);
 }
 .body-regular-text {
     @extend %body-regular-text;
-    // font-weight: font.weight(regular);
 }
 .body-light-text {
     @extend %body-light-text;
-    // font-weight: font.weight(light);
 }
 .body-italic-text {
     @extend %body-italic-text;
@@ -92,20 +85,6 @@
 }
 
 
-// Link
-
-.link-bold {
-    @extend %link-bold;
-}
-.link-medium {
-    @extend %link-medium;
-}
-.link-regular {
-    @extend %link-regular;
-}
-.link-light {
-    @extend %link-light;
-}
 
 
 // Color
@@ -125,67 +104,3 @@
 .body-turquoise-text {
     @extend %body-turquoise-text;
 }
-
-
-
-
-
-
-
-// .body-bold-text-serif {
-//     font-family: font.family(playfair);
-//     font-weight: font.weight(bold);
-//     @include themed.properties {
-//         color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
-//     }
-// }
-
-// .body-regular-text-serif {
-//     font-family: font.family(playfair);
-//     font-weight: font.weight(regular);
-//     @include themed.properties {
-//         color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
-//     }
-// }
-
-
-
-
-
-
-
-
-
-// .family-sansserif {
-//     font-family: font.family(roboto);
-// }
-// .family-serif {
-//     font-family: font.family(playfair);
-// }
-// .family-monospace {
-//     font-family: font.family(code);
-// }
-
-
-
-// .body-inherit-text {
-//     font-style: font.style(inherit);
-// }
-// .body-initial-text {
-//     font-style: font.style(initial);
-// }
-// .body-italic-text {
-//     font-style: font.style(italic);
-// }
-// .body-normal-text {
-//     font-style: font.style(normal);
-// }
-// .body-oblique-text {
-//     font-style: font.style(oblique);
-// }
-// .body-revert-text {
-//     font-style: font.style(revert);
-// }
-// .body-unset-text {
-//     font-style: font.style(unset);
-// }
