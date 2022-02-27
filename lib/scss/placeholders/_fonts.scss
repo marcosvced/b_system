@@ -1,11 +1,21 @@
 @use '../helpers/font';
 @use '../helpers/colors';
+@use "../helpers/size";
+@use '../helpers/themed';
+
+
+// X text
 
 %x1-text {
   font: {
     size: font.size(xxl);
     family: font.family(roboto);
     weight: font.weight(bold);
+  }
+  line-height: 1.19;
+  letter-spacing: size.rem(.6);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -15,6 +25,11 @@
     family: font.family(roboto);
     weight: font.weight(bold);
   }
+  line-height: 1.3;
+  letter-spacing: size.rem(.5);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
 }
 
 %x3-text {
@@ -22,6 +37,11 @@
     size: font.size(lg);
     family: font.family(roboto);
     weight: font.weight(bold);
+  }
+  line-height: 1.38;
+  letter-spacing: size.rem(.37);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -31,13 +51,23 @@
     family: font.family(roboto);
     weight: font.weight(bold);
   }
+  line-height: 1.27;
+  letter-spacing: size.rem(.3);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
 }
 
 %x5-text {
   font: {
-    size: font.size(md);
+    size: font.size(sm); //md
     family: font.family(roboto);
-    weight: font.weight(light);
+    weight: font.weight(bold); //light
+  }
+  line-height: 1.44;
+  letter-spacing: size.rem(.2);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -45,7 +75,12 @@
   font: {
     size: font.size(sm);
     family: font.family(roboto);
-    weight: font.weight(bold);
+    weight: font.weight(medium); //bold
+  }
+  line-height: 1.44;
+  letter-spacing: size.rem(.2);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -53,7 +88,14 @@
   font: {
     size: font.size(sm);
     family: font.family(roboto);
-    weight: font.weight(medium);
+    weight: font.weight(regular); //medium
+    line-height: 1.44;
+    letter-spacing: size.rem(.2);
+  }
+  line-height: 1.44;
+  letter-spacing: size.rem(.2);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
@@ -61,16 +103,24 @@
   font: {
     size: font.size(sm);
     family: font.family(roboto);
-    weight: font.weight(regular);
+    weight: font.weight(light); //regular
+  }
+  line-height: 1.44;
+  letter-spacing: size.rem(.2);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
   }
 }
 
 %x9-text {
   font: {
-    size: font.size(sm);
+    size: font.size(xxs); //sm
     family: font.family(roboto);
     weight: font.weight(light);
   }
+  line-height: 1.27;
+  letter-spacing: size.rem(.18);
+  color: colors.grayscale(500);
 }
 
 %x10-mini {
@@ -81,12 +131,72 @@
   }
 }
 
+
+// X text-serif
+
+%x1-text-serif {
+  @extend %x1-text;
+  font: {
+    family: font.family(playfair);
+    size: font.size(xxl);
+    weight: font.weight(normal);
+  }
+}
+
+%x2-text-serif {
+  font: {
+    family: font.family(playfair);
+    size: size.rem(56);
+    weight: font.weight(normal);
+  }
+  line-height: 1.18;
+  letter-spacing: size.rem(.53);
+  @include themed.properties {
+	  color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+	}
+}
+
+%x3-text-serif {
+  font: {
+    family: font.family(playfair);
+    size: size.rem(56);
+    weight: font.weight(normal);
+    style: font.style(italic);
+  }
+  line-height: 1.18;
+  letter-spacing: size.rem(.53);
+  @include themed.properties {
+	  color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+	}
+}
+
+%x4-text-serif {
+  font: {
+    family: font.family(playfair);
+    size: font.size(md);
+    weight: font.weight(normal);
+  }
+  line-height: 1.36;
+  letter-spacing: size.rem(.4);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
+}
+
+
+// Text
+
 %body-bold-text {
   font: {
     size: font.size(xs);
     family: font.family(roboto);
     weight: font.weight(bold);
   };
+  line-height: 1.6;
+  letter-spacing: size.rem(.28);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
 }
 
 %body-medium-text {
@@ -95,6 +205,11 @@
     family: font.family(roboto);
     weight: font.weight(medium);
   };
+  line-height: 1.6;
+  letter-spacing: size.rem(.28);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
 }
 
 %body-regular-text {
@@ -103,6 +218,11 @@
     family: font.family(roboto);
     weight: font.weight(regular);
   };
+  line-height: 1.6;
+  letter-spacing: size.rem(.25);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(800), colors.grayscale(light) );
+  }
 }
 
 %body-light-text {
@@ -111,5 +231,112 @@
     family: font.family(roboto);
     weight: font.weight(light);
   };
+  line-height: 1.6;
+  letter-spacing: size.rem(.25);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(800), colors.grayscale(light) );
+  }
 }
 
+%body-italic-text {
+  font-style: font.style(italic);
+  line-height: 1.6;
+  letter-spacing: size.rem(.25);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(800), colors.grayscale(light) );
+  }
+}
+
+%body-regular-dark-text {
+  line-height: 1.6;
+  letter-spacing: size.rem(.3);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(500) );
+  }
+}
+
+%body-light-dark-text {
+  font-weight: font.weight(light);
+  line-height: 1.6;
+  letter-spacing: size.rem(.3);
+  @include themed.properties {
+      color: themed.values( colors.grayscale(dark), colors.grayscale(500) );
+  }
+}
+
+// Text-serif
+
+%body-bold-text-serif {
+  font: {
+    size: font.size(xs);
+    family: font.family(playfair);
+    weight: font.weight(bold);
+  };
+  line-height: 1.6;
+  letter-spacing: size.rem(.28);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
+}
+%body-regular-text-serif {
+  font: {
+    size: font.size(xs);
+    family: font.family(playfair);
+    weight: font.weight(regular);
+  };
+  line-height: 1.6;
+  letter-spacing: size.rem(.28);
+  @include themed.properties {
+    color: themed.values( colors.grayscale(dark), colors.grayscale(light) );
+  }
+}
+
+
+// Link
+
+%link-bold {
+
+  color: colors.primary(blue);
+}
+
+%link-medium {
+  ;
+  color: colors.primary(blue);
+}
+
+%link-regular {
+
+  color: colors.primary(blue);
+}
+
+%link-light {
+
+  color: colors.primary(blue);
+}
+
+
+// Color
+
+%body-blue-text {
+  @include themed.properties {
+    color: themed.values( colors.primary(blue), colors.primary(blue) );
+  }
+}
+
+%body-orange-text {
+  @include themed.properties {
+    color: themed.values( colors.primary(orange), colors.primary(orange) );
+  }
+}
+
+%body-red-text {
+  @include themed.properties {
+    color: themed.values( colors.primary(red), colors.primary(red) );
+  }
+}
+
+%body-turquoise-text {
+  @include themed.properties {
+    color: themed.values( colors.primary(turquoise), colors.primary(turquoise) );
+  }
+}

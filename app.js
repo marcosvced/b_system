@@ -12,8 +12,6 @@ app.use(expressLayouts)
 app.set('layout extractScripts', true)
 app.set('layout extractStyles', true)
 
-// app.set('layout', 'lib/layouts/default')
-
 app.set('views', path.join(__dirname, 'views'))
 
 app.use(logger('dev'))
@@ -23,7 +21,7 @@ app.use(cookieParser())
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
 
-app.use('/', require('./routes'))
+app.use('/', require('./router/routes'))
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

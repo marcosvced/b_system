@@ -29,10 +29,21 @@ $weight: (
 // FONT SIZE
 $size: (
         xxl: size.rem(64),
-        xl: size.rem(40),
-        lg: size.rem(28),
+        xl: size.rem(40), //56
+        lg: size.rem(26), //28
         md: size.rem(22),
         sm: size.rem(18),
         xs: size.rem(15),
         xxs: size.rem(11),
+);
+
+// FONT STYLE
+$style: (
+        inherit: inherit,
+        initial: initial,
+        italic: italic,
+        normal: normal,
+        oblique: oblique,
+        revert: revert,
+        unset: unset,
 );

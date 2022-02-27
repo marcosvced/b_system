@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "gulp",
-    "sass": "gulp sass"
+    "sass": "gulp sass",
+    "build": "gulp sass && gulp uglify && gulp build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-plugin-import": "^2.25.3",
@@ -26,7 +28,9 @@
     "gulp": "^4.0.2",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
     "nodemon": "^2.0.15",
+    "pretty": "^2.0.0",
     "sass": "^1.47.0",
     "uglify-js": "^3.14.5"
   }

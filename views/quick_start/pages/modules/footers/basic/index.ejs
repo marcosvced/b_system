@@ -1,15 +1,15 @@
-<% extend(`${layout}/default`) %>
+<%- include(`${view}/quick_start/layout`) %>
 
-<%- include(`${component}/header/default`, { items }) %>
+<%- contentFor('body') %>
 
 <div class="main-content main-content-space-top">
     <section class="module-wrapper footer-basic">
         <h3 class="example-title container">Footer Corporate White</h3>
         <div class="module-view-example-wrapper">
             <%- include(`${component}/footer/basic`) %>
-            <%- include(`${component}/footer/basic`, {variant: 'footer-darkener'}) %>
+            <%- include(`${component}/footer/basic`, {variant: 'darkener'}) %>
             <%- include(`${component}/footer/basic`, { darkMode:true}) %>
-            <%- include(`${component}/footer/basic`, {variant: 'footer-darkener', darkMode:true}) %>
+            <%- include(`${component}/footer/basic`, {variant: 'darkener', darkMode:true}) %>
         </div>
     </section>
 </div>

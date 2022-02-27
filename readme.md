@@ -32,9 +32,11 @@ line-height: helper.space(24);
 font-size: helper.size(sm);
 font-family: helper.family(roboto);
 font-weight: helper.weight(bold);
+font-style: helper.style(italic);
 // size(xxs, xs, sm, md, lg, xl, xxl);
 // family(roboto, playfair, code);
 // weight(light, regular, medium, bold);
+// style(inherit, initial, italic, normal, oblique, revert, unset,);
 
 // colors
 color: helper.primary('blue');
@@ -78,7 +80,7 @@ background-color: helper.button(primary--hover);
 @extend %body-light-text;
 ```
 
-### Tools 
+### Tools
 ```html
 <div class="space-{position}-{breakpoint}-{n}"></div>
 <div class="inner-space-{position}-{breakpoint}-{n}"></div>
@@ -86,9 +88,9 @@ background-color: helper.button(primary--hover);
 <div class="space-y{breakpoint}-{n}"></div>
 <div class="space-xy-{breakpoint}-{n}"></div>
 ```
-· Siendo _breackpoint_ una key de los valores definidos en el map `$breakpoints` del fichero `/lib/scss/variables/_spacing.scss`.   
-· Estas clases se pueden definir sin el uso de un _breackpoint_.  
-· Siendo _position_ uno de los siguientes valores: _top, bottom, left, right, inline, block_.  
+· Siendo _breackpoint_ una key de los valores definidos en el map `$breakpoints` del fichero `/lib/scss/variables/_spacing.scss`.
+· Estas clases se pueden definir sin el uso de un _breackpoint_.
+· Siendo _position_ uno de los siguientes valores: _top, bottom, left, right, inline, block_.
 · Siendo _n_ una de las keys definidas en la variable `$space` del fichero `/lib/scss/variables/_spacing.scss`.
 
 ### Uso de theme
