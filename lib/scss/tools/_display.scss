@@ -1,6 +1,7 @@
 @use "../variables/spacing";
 @use "../mixins/media";
 @use "../mixins/space";
+@use "../helpers";
 
 $positions: top, bottom, left, right, inline, block;
 
@@ -8,28 +9,82 @@ $positions: top, bottom, left, right, inline, block;
     $breakpoint: if($key != '', '#{$key}-', '');
     @include media.screen($key) {
         @each $space, $size in spacing.$space {
-           @each $position in $positions {
-               .space-x-#{$breakpoint}#{$space}{
-                   @include space.x($space);
-               }
+            @each $position in $positions {
+                .space-x-#{$breakpoint}#{$space} {
+                    @include space.x($space);
+                }
 
-               .space-y-#{$breakpoint}#{$space}{
-                   @include space.y($space);
-               }
+                .space-y-#{$breakpoint}#{$space} {
+                    @include space.y($space);
+                }
 
-               .space-xy-#{$breakpoint}#{$space}{
-                   @include space.x-y($space);
-               }
+                .space-xy-#{$breakpoint}#{$space} {
+                    @include space.x-y($space);
+                }
 
-               .space-#{$position}-#{$breakpoint}#{$space} {
-                   margin-#{$position}: $size;
-               }
+                .space-#{$position}-#{$breakpoint}#{$space} {
+                    margin-#{$position}: $size;
+                }
 
-               .inner-space-#{$position}-#{$breakpoint}#{$space} {
-                   padding-#{$position}: $size;
-               }
-           }
+                .inner-space-#{$position}-#{$breakpoint}#{$space} {
+                    padding-#{$position}: $size;
+                }
+            }
 
         }
+
+        /*
+        * Width
+        */
+        .col-#{$breakpoint}min {
+            width: min-content !important;
+        }
+        .col-#{$breakpoint}max {
+            width: max-content !important;
+        }
+
+        /*
+         * Grid
+         */
+
+        @for $columns from 1 through 12 {
+            .grid-#{$breakpoint}#{$columns} {
+                grid-template-columns: repeat(#{$columns}, 1fr);
+                gap: helpers.space(32);
+            }
+
+            .grid-max-#{$breakpoint}#{$columns} {
+                grid-template-columns: repeat(#{$columns}, max-content);
+                gap: helpers.space(32);
+            }
+
+            .grid-min-#{$breakpoint}#{$columns} {
+                grid-template-columns: repeat(#{$columns}, min-content);
+                gap: helpers.space(32);
+            }
+        }
+
+        @for $start from 1 through 12 {
+            @for $end from 1 through 13 {
+                .col-#{$breakpoint}#{$start}-to-#{$end} {
+                    grid-column: #{$start} / #{$end};
+                }
+            }
+        }
+
+        @each $space, $size in spacing.$space {
+            .column-#{$breakpoint}gap-#{$space} {
+                column-gap: #{$size} !important;
+            }
+
+            .row-#{$breakpoint}gap-#{$space} {
+                row-gap: #{$size} !important;
+            }
+
+            .gap-#{$breakpoint}#{$space} {
+                gap: #{$size} !important;
+            }
+        }
+
     }
 }
