@@ -31,5 +31,26 @@ $positions: top, bottom, left, right, inline, block;
            }
 
         }
+
+        /*
+        * Width
+        */
+        .col-#{$breakpoint}min {
+            width: min-content !important;
+        }
+        .col-#{$breakpoint}max {
+            width: max-content !important;
+        }
+
+        /*
+         * Grid
+         */
+
+        @for $columns from 1 through 12 {
+            .grid-#{$breakpoint}#{$columns} {
+                grid-template-columns: repeat(#{$columns}, 1fr);
+            }
+        }
+
     }
 }

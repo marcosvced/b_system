@@ -4,190 +4,192 @@
 @use '../../mixins' as mixin;
 
 .btn {
-  padding-inline: helper.space(32);
-  padding-block: helper.rem(12);
-  border-radius: helper.rem(4);
-  border: none;
-  outline: none;
-  line-height: helper.space(24);
-  min-width: helper.rem(215);
-  transition: all .25s;
-  white-space: nowrap;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  @include mixin.x(8);
-  @extend %body-bold-text;
-
-  > span:not([class^='icon-']) {
+    padding-inline: helper.space(32);
+    padding-block: helper.rem(12);
+    border-radius: helper.rem(4);
+    border: none;
+    outline: none;
+    line-height: helper.em(24, 15);
+    //min-width: helper.rem(215);
+    transition: all .25s;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include mixin.x(8);
     @extend %body-bold-text;
-  }
 
-  > [class^='icon-'] {
-    display: flex;
-    font-size: helper.rem(18);
-  }
-
-  &-primary {
-    background-color: helper.button(primary);
-    color: helper.grayscale(light);
-    min-width: helper.rem(216);
-    @include mixin.x(12);
-
-    &.btn-only-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: min-content;
-
-      padding-inline: helper.rem(14);
-      padding-block: helper.rem(14);
-      line-height: 1;
-      font-size: helper.size(sm);
+    > span:not([class^='icon-']) {
+        @extend %body-bold-text;
     }
 
-    &.btn-primary-cta {
-      > [class^='icon-'] {
-        font-size: helper.rem(12);
-        @include mixin.circle(24);
-        line-height: 1;
-        display: inline-grid;
+    > [class^='icon-'] {
+        display: flex;
+        font-size: helper.rem(18);
+    }
+
+    &-primary {
+        background-color: helper.button(primary);
+        color: helper.grayscale(light);
+        min-width: helper.rem(216);
+        @include mixin.x(12);
+
+        &.btn-only-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: min-content;
+
+            padding-inline: helper.rem(14);
+            padding-block: helper.rem(14);
+            line-height: 1;
+            font-size: helper.size(sm);
+        }
+
+        &.btn-primary-cta {
+            > [class^='icon-'] {
+                font-size: helper.rem(12);
+                @include mixin.circle(24);
+                line-height: 1;
+                display: inline-grid;
+                align-items: center;
+                justify-content: center;
+                background-color: helper.button(cta_icon);
+                transform: translateX(0);
+                transition: transform .25s ease-in;
+            }
+        }
+
+        &:hover:not(:disabled) {
+            background-color: helper.button(primary--hover);
+
+            &.btn-primary-cta {
+                > [class^='icon-'] {
+                    background-color: helper.button(cta_icon--hover);
+                    transform: translateX(helper.rem(4));
+                }
+            }
+        }
+    }
+
+    &-secondary {
+        background-color: helper.button(secondary);
+
+        &:hover:not(:disabled) {
+            background-color: helper.button(secondary--hover);
+        }
+    }
+
+    &-tertiary {
+        @include themed.properties {
+            background-color: themed.values(helper.grayscale(100), helper.grayscale(900));
+            color: themed.values(helper.body(off), helper.grayscale(light));
+        }
+
+        &:hover:not(:disabled) {
+            @include themed.properties {
+                background-color: themed.values(helper.grayscale(200), helper.grayscale(1000));
+            }
+        }
+    }
+
+    &-subtle {
+        background-color: transparent;
+        border: helper.rem(1) solid helper.grayscale(200);
+        @include themed.properties {
+            color: themed.values(helper.body(off), helper.grayscale(light));
+        }
+
+        &:hover:not(:disabled) {
+            background-color: transparent;
+            border: helper.rem(1) solid helper.grayscale(400);
+        }
+    }
+
+    &-glass {
+        background-color: helper.opacity(light-100);
+        backdrop-filter: blur(helper.rem(9));
+        color: helper.grayscale(light);
+
+        &:hover:not(:disabled) {
+            color: helper.grayscale(light);
+            background-color: helper.opacity(light-0);
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            color: helper.opacity(light-200);
+        }
+    }
+
+    &-narrow {
+        padding-block: helper.space(8);
+        //min-width: helper.rem(192);
+    }
+
+    &-fit {
+        min-width: auto;
+        width: min-content;
+    }
+
+    &-action {
+        &-next,
+        &-previous {
+            span:not([class^='icon-']) {
+                @extend %body-regular-text
+            }
+
+            [class^='icon-'] {
+                transition: transform .35s ease-in-out;
+            }
+        }
+
+        &-next:hover:not(:disabled) {
+            [class^='icon-'] {
+                transform: translateX(helper.rem(4));
+            }
+        }
+
+        &-previous:hover:not(:disabled) {
+            [class^='icon-'] {
+                transform: translateX(-#{helper.rem(4)});
+            }
+        }
+
+    }
+
+    &-only-icon {
+        @include mixin.square(32);
+        font-size: helper.rem(18);
         align-items: center;
         justify-content: center;
-        background-color: helper.button(cta_icon);
-        transform: translateX(0);
-        transition: transform .25s ease-in;
-      }
-    }
-
-    &:hover:not(:disabled) {
-      background-color: helper.button(primary--hover);
-
-      &.btn-primary-cta {
-        > [class^='icon-'] {
-          background-color: helper.button(cta_icon--hover);
-          transform: translateX(helper.rem(4));
+        outline: none;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        @include themed.properties {
+            color: themed.values(helper.grayscale(dark), helper.grayscale(light));
         }
-      }
-    }
-  }
 
-  &-secondary {
-    background-color: helper.button(secondary);
+        &:before {
+            display: flex;
+            margin: auto;
+            width: min-content;
+            height: min-content;
+        }
 
-    &:hover:not(:disabled) {
-      background-color: helper.button(secondary--hover);
-    }
-  }
-
-  &-tertiary {
-    @include themed.properties {
-      background-color: themed.values(helper.grayscale(100), helper.grayscale(900));
-      color: themed.values(helper.body(off), helper.grayscale(light));
-    }
-
-    &:hover:not(:disabled) {
-      @include themed.properties {
-        background-color: themed.values(helper.grayscale(200), helper.grayscale(1000));
-      }
-    }
-  }
-
-  &-subtle {
-    background-color: transparent;
-    border: helper.rem(1) solid helper.grayscale(200);
-    @include themed.properties {
-      color: themed.values(helper.body(off), helper.grayscale(light));
-    }
-
-    &:hover:not(:disabled) {
-      background-color: transparent;
-      border: helper.rem(1) solid helper.grayscale(400);
-    }
-  }
-
-  &-glass {
-    background-color: helper.opacity(light-100);
-    backdrop-filter: blur(helper.rem(9));
-    color: helper.grayscale(light);
-
-    &:hover:not(:disabled) {
-      color: helper.grayscale(light);
-      background-color: helper.opacity(light-0);
+        &:focus {
+            box-shadow: none;
+        }
     }
 
     &:disabled {
-      cursor: not-allowed;
-      color: helper.opacity(light-200);
+        cursor: not-allowed;
+        opacity: 1;
+        pointer-events: auto;
+        @include themed.properties {
+            background-color: themed.values(helper.button(disabled), helper.grayscale(900));
+            color: themed.values(helper.opacity(gray-400), helper.opacity(light-200));
+        }
     }
-  }
-
-  &-narrow {
-    padding-block: helper.space(8);
-    min-width: helper.rem(192);
-  }
-
-  &-fit {
-    min-width: auto;
-    width: min-content;
-  }
-
-  &-action {
-    &-next,
-    &-previous {
-      span:not([class^='icon-']) {
-        @extend %body-regular-text
-      }
-
-      [class^='icon-'] {
-        transition: transform .35s ease-in-out;
-      }
-    }
-
-    &-next:hover:not(:disabled) {
-      [class^='icon-'] {
-        transform: translateX(helper.rem(4));
-      }
-    }
-
-    &-previous:hover:not(:disabled) {
-      [class^='icon-'] {
-        transform: translateX(-#{helper.rem(4)});
-      }
-    }
-
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 1;
-    pointer-events: auto;
-    @include themed.properties {
-      background-color: themed.values(helper.button(disabled), helper.grayscale(900));
-      color: themed.values(helper.opacity(gray-400), helper.opacity(light-200));
-    }
-  }
-
-  &-only-icon {
-    @include mixin.square(32);
-    font-size: helper.rem(18);
-    align-items: center;
-    justify-content: center;
-    outline: none;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    color: helper.grayscale(dark);
-
-    &:before {
-      display: flex;
-      margin: auto;
-      width: min-content;
-      height: min-content;
-    }
-
-    &:focus {
-      box-shadow: none;
-    }
-  }
 }
