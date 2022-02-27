@@ -1,22 +1,24 @@
 @use "../placeholders/fonts";
 @use "../helpers/size";
 @use "../helpers/colors";
+@use "../helpers/themed";
 
-
+* {
+    @include themed.properties {
+        color: themed.values(colors.grayscale('dark'), colors.grayscale('light'));
+    }
+}
 
 h1 {
     @extend %x1-text;
-    color: colors.body(off);
 }
 
 h2 {
     @extend %x2-text;
-    color: colors.body(off);
 }
 
 h3 {
     @extend %x3-text;
-    color: colors.body(off);
 }
 
 h4 {

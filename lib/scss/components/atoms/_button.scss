@@ -31,8 +31,12 @@
     &-primary {
         background-color: helper.button(primary);
         color: helper.grayscale(light);
-        min-width: helper.rem(216);
+        //min-width: helper.rem(216);
         @include mixin.x(12);
+
+        > span {
+            color: helper.grayscale(light);
+        }
 
         &.btn-only-icon {
             display: flex;
@@ -95,14 +99,14 @@
 
     &-subtle {
         background-color: transparent;
-        border: helper.rem(1) solid helper.grayscale(200);
+        border: helper.rem(1) solid helper.grayscale(400);
         @include themed.properties {
             color: themed.values(helper.body(off), helper.grayscale(light));
         }
 
         &:hover:not(:disabled) {
             background-color: transparent;
-            border: helper.rem(1) solid helper.grayscale(400);
+            border: helper.rem(1) solid helper.grayscale(700);
         }
     }
 
