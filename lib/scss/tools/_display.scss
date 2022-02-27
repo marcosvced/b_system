@@ -63,6 +63,7 @@ $positions: top, bottom, left, right, inline, block;
                 gap: helpers.space(32);
             }
         }
+
         @for $start from 1 through 12 {
             @for $end from 1 through 13 {
                 .col-#{$breakpoint}#{$start}-to-#{$end} {
@@ -71,6 +72,19 @@ $positions: top, bottom, left, right, inline, block;
             }
         }
 
+        @each $space, $size in spacing.$space {
+            .column-#{$breakpoint}gap-#{$space} {
+                column-gap: #{$size} !important;
+            }
+
+            .row-#{$breakpoint}gap-#{$space} {
+                row-gap: #{$size} !important;
+            }
+
+            .gap-#{$breakpoint}#{$space} {
+                gap: #{$size} !important;
+            }
+        }
 
     }
 }

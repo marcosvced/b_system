@@ -1,6 +1,8 @@
 @use '../placeholders';
 @use '../helpers/font';
-@use "../helpers/colors";
+@use '../helpers/colors';
+@use "../helpers/size";
+@use '../helpers/themed';
 
 
 // X text
@@ -8,29 +10,38 @@
 .x1-text {
     @extend %x1-text;
 }
+
 .x2-text {
     @extend %x2-text;
 }
+
 .x3-text {
     @extend %x3-text;
 }
+
 .x4-text {
     @extend %x4-text;
 }
+
 .x5-text {
     @extend %x5-text;
 }
+
 .x6-text {
     @extend %x6-text;
 }
+
 .x7-text {
     @extend %x7-text;
 }
+
 .x8-text {
     @extend %x8-text;
 }
+
 .x9-text {
     @extend %x9-text;
+    color: colors.grayscale(700);
 }
 
 
@@ -39,12 +50,15 @@
 .x1-text-serif {
     @extend %x1-text-serif;
 }
+
 .x2-text-serif {
     @extend %x2-text-serif;
 }
+
 .x3-text-serif {
     @extend %x3-text-serif;
 }
+
 .x4-text-serif {
     @extend %x4-text-serif;
 }
@@ -55,36 +69,63 @@
 .body-bold-text {
     @extend %body-bold-text;
 }
+
 .body-medium-text {
     @extend %body-medium-text;
 }
+
 .body-regular-text {
     @extend %body-regular-text;
+    @include themed.properties {
+        color: themed.values(colors.grayscale(800), colors.grayscale(light));
+    }
 }
+
 .body-light-text {
     @extend %body-light-text;
+    @include themed.properties {
+        color: themed.values(colors.grayscale(800), colors.grayscale(light));
+    }
 }
+
 .body-italic-text {
     @extend %body-italic-text;
+    @include themed.properties {
+        color: themed.values(colors.grayscale(800), colors.grayscale(light));
+    }
 }
-.body-regular-dark-text {
-    @extend %body-regular-dark-text;
-}
+
 .body-light-dark-text {
-    @extend %body-light-dark-text;
+    @extend %body-light-text;
+    color: colors.grayscale(dark);
+}
+
+.body-regular-gray-text {
+    @extend %body-regular-text;
+    color: colors.grayscale(600);
+    letter-spacing: size.rem(.3);
+}
+
+.body-light-gray-text {
+    @extend %body-light-text;
+    color: colors.grayscale(600);
+}
+
+.body-input-text {
+    @extend %body-light-text;
+    color: colors.grayscale(700);
 }
 
 
 // Text-serif
 
 .body-bold-text-serif {
-	@extend %body-bold-text-serif;
+    @extend %body-bold-text-serif;
 }
+
 .body-regular-text-serif {
-	@extend %body-regular-text-serif;
+    @extend %body-regular-text-serif;
 }
-
-
 
 
 // Color
