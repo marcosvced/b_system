@@ -2,98 +2,63 @@
 @use "../helpers/size";
 @use "../helpers/colors";
 
-[data-bsystem='dark'] {
-  background-color: colors.grayscale(1100);
 
-  h1 {
-    color: colors.grayscale(light);
-  }
-
-  h2 {
-    color: colors.grayscale(light);
-  }
-
-  h3 {
-    color: colors.grayscale(light);
-  }
-
-  h4 {
-  }
-
-  h5 {
-  }
-
-  body {
-  }
-
-  p,
-  span {
-  }
-
-  b {
-  }
-
-  label,
-  span.label {
-
-  }
-
-
-}
 
 h1 {
-  @extend %x1-text;
-  color: colors.body(off);
+    @extend %x1-text;
+    color: colors.body(off);
 }
 
 h2 {
-  @extend %x2-text;
-  color: colors.body(off);
+    @extend %x2-text;
+    color: colors.body(off);
 }
 
 h3 {
-  @extend %x3-text;
-  color: colors.body(off);
+    @extend %x3-text;
+    color: colors.body(off);
 }
 
 h4 {
-  @extend %x4-text;
+    @extend %x4-text;
 }
 
 h5 {
-  @extend %x5-text;
+    @extend %x5-text;
 }
 
 body {
-  @extend %body-regular-text;
+    @extend %body-regular-text;
 }
 
 p,
 span {
-  @extend %body-regular-text;
+    @extend %body-regular-text;
+    margin: 0;
+    padding: 0;
 }
 
 b {
-  @extend %body-bold-text;
+    @extend %body-bold-text;
 }
 
 label,
 span.label {
-  @extend %body-light-text;
-  color: colors.body(38);
+    @extend %body-light-text;
+    color: colors.body(38);
 
-  &.--small {
-    @extend %x10-mini;
-  }
+    &.--small {
+        @extend %x10-mini;
+    }
 }
 
 svg {
-  width: inherit;
-  height: inherit;
-  display: block;
+    width: inherit;
+    height: inherit;
+    display: block;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }

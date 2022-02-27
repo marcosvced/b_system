@@ -48,4 +48,9 @@ route.get(routePaths.QUICK_START.LINKS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['links']))
 })
 
+/* Texts page. */
+route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
+})
+
 module.exports = route
