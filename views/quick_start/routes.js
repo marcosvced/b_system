@@ -53,4 +53,19 @@ route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
 })
 
+/* Illustrations page. */
+route.get(routePaths.QUICK_START.ILLUSTRATIONS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['illustrations']))
+})
+
+/* Scenes page. */
+route.get(routePaths.QUICK_START.SCENES, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['scenes']))
+})
+
+/* Microillustrations page. */
+route.get(routePaths.QUICK_START.MICROILLUSTRATIONS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['microillustrations']))
+})
+
 module.exports = route

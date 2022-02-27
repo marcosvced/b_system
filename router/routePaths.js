@@ -12,5 +12,8 @@ module.exports = {
     ICONS: '/doc/icons',
     LINKS: '/doc/links',
     TEXTS: '/doc/texts',
+    ILLUSTRATIONS: '/doc/illustrations',
+    SCENES: '/doc/scenes',
+    MICROILLUSTRATIONS: '/doc/microillustrations',
   },
 }
