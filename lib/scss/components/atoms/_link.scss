@@ -4,6 +4,7 @@
 @use "../../placeholders/fonts";
 
 a {
+  &,
   &.action-link {
     @extend %body-regular-text;
     color: colors.primary('blue');
@@ -16,5 +17,12 @@ a {
       font-size: size.rem(20);
       display: inline-flex;
     }
+  }
+
+  &.has-icon-before > [class*='icon-'] {
+    margin-right: .5em;
+  }
+  &.has-icon-after > [class*='icon-'] {
+    margin-left: .5em;
   }
 }

@@ -1,97 +1,97 @@
 <%- contentFor('header') %>
 <%
 const navigation = [
-        {
-            label: 'Demos'
-        },
-        {
-            label: 'Pages'
-        },
-        {
-            label: 'Modules',
-            entries: [
-                {
-                    href: '#',
-                    label: 'Menus'
-                },
-                {
-                    href: '#',
-                    label: 'Headers'
-                },
-                {
-                    href: '#',
-                    label: 'Contents'
-                },
-                {
-                    href: '#',
-                    label: 'Grids'
-                },
-                {
-                    href: '#',
-                    label: 'Cards'
-                },
-                {
-                    href: '#',
-                    label: 'Forms'
-                },
-                {
-                    href: QUICK_START.FOOTERS.BASIC,
-                    label: 'Footers'
-                }
-            ]
+    {
+        label: 'Demos'
+    },
+    {
+        label: 'Pages'
+    },
+    {
+        label: 'Modules',
+        entries: [
+            {
+                href: '#',
+                label: 'Menus'
+            },
+            {
+                href: QUICK_START.HEADERS,
+                label: 'Headers'
+            },
+            {
+                href: '#',
+                label: 'Contents'
+            },
+            {
+                href: '#',
+                label: 'Grids'
+            },
+            {
+                href: '#',
+                label: 'Cards'
+            },
+            {
+                href: '#',
+                label: 'Forms'
+            },
+            {
+                href: QUICK_START.FOOTERS.BASIC,
+                label: 'Footers'
+            }
+        ]
 
-        },
-        {
-            label: 'Components',
-            entries: [
-                {
-                    href: QUICK_START.BUTTONS,
-                    label: 'Buttons'
-                },
-                {
-                    href: '#',
-                    label: 'Forms'
-                },
-                {
-                    href: '#',
-                    label: 'Interaction'
-                },
-                {
-                    href: '#',
-                    label: 'Cards'
-                },
-                {
-                    href: '#',
-                    label: 'Product Cards'
-                },
-                {
-                    href: QUICK_START.LINKS,
-                    label: 'Links'
-                },
-                {
-                    href: '#',
-                    label: 'Grid cells'
-                },
-                {
-                    href: '#',
-                    label: 'Icon + description'
-                },
-                {
-                    href: '#',
-                    label: 'Accordions'
-                },
-                {
-                    href: '#',
-                    label: 'Alerts'
-                },
-                {
-                    href: QUICK_START.ICONS,
-                    label: 'Icons'
-                },
-                {
-                    href: QUICK_START.FOOTERS.BASIC,
-                    label: 'Footers'
-                },
+    },
+    {
+        label: 'Components',
+        entries: [
+            {
+                href: QUICK_START.BUTTONS,
+                label: 'Buttons'
+            },
+            {
+                href: '#',
+                label: 'Forms'
+            },
+            {
+                href: '#',
+                label: 'Interaction'
+            },
+            {
+                href: '#',
+                label: 'Cards'
+            },
+            {
+                href: '#',
+                label: 'Product Cards'
+            },
+            {
+                href: QUICK_START.LINKS,
+                label: 'Links'
+            },
+            {
+                href: '#',
+                label: 'Grid cells'
+            },
+            {
+                href: '#',
+                label: 'Icon + description'
+            },
+            {
+                href: '#',
+                label: 'Accordions'
+            },
+            {
+                href: '#',
+                label: 'Alerts'
+            },
+            {
+                href: QUICK_START.ICONS,
+                label: 'Icons'
+            },
+            {
+                href: QUICK_START.FOOTERS.BASIC,
+                label: 'Footers'
+            },
                 {
                     href: QUICK_START.TEXTS,
                     label: 'Texts'
@@ -99,11 +99,23 @@ const navigation = [
             ]
         },
         {
-            label: 'Transactions'
+            label: 'Transactions'}
+]
+
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    buttons: [
+        {
+            label: 'Purchase B_System',
+            mobileIcon: 'cart'
         }
     ]
+}
 %>
-<%- include(`${component}/header/default`, { items: navigation}) %>
+<%- include(`${component}/header/standard`, { ...headerConfig }) %>
 
 <%- contentFor('footer') %>
 <%- include(`${component}/footer/basic`, { variant: 'darkener'}) %>
