@@ -50,6 +50,14 @@ $positions: top, bottom, left, right, inline, block;
             .grid-#{$breakpoint}#{$columns} {
                 grid-template-columns: repeat(#{$columns}, 1fr);
             }
+
+            .grid-max-#{$breakpoint}#{$columns} {
+                grid-template-columns: repeat(#{$columns}, max-content);
+            }
+
+            .grid-min-#{$breakpoint}#{$columns} {
+                grid-template-columns: repeat(#{$columns}, min-content);
+            }
         }
 
     }
