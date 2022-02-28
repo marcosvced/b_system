@@ -1,20 +1,45 @@
-@use "../../helpers/size";
-@use "../../helpers/colors";
-@use "../../mixins/space";
-@use "../../placeholders/fonts";
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
 
 a {
-  &.action-link {
-    @extend %body-regular-text;
-    color: colors.primary('blue');
-    display: flex;
-    align-items: center;
-    line-height: size.rem(24);
-    @include space.x(8);
+    &.action-link,
+    &.action-link:hover {
+        display: flex;
+        align-items: center;
 
-    > [class*='icon-'] {
-      font-size: size.rem(20);
-      display: inline-flex;
+        @include themed.properties {
+            color: themed.values(helper.primary('blue'), helper.secondary(blue-400));
+        }
+
+        > *:not(:last-child) {
+            margin-right: helper.em(8, 15);
+        }
+
+        > span {
+            font-weight: helper.weight(regular);
+            line-height: helper.rem(24);
+            color: inherit;
+
+        }
+
+        &.link-bold > span {
+            font-weight: helper.weight(bold);
+        }
+
+        &.link-medium > span {
+            font-weight: helper.weight(medium)
+        }
+
+        &.link-light > span {
+            font-weight: helper.weight(light);
+        }
+
+        > [class*='icon-'] {
+            font-size: helper.rem(20);
+            display: inline-flex;
+            color: inherit;
+        }
     }
-  }
 }

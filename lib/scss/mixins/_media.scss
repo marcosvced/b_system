@@ -1,19 +1,12 @@
-$breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px
-);
+@use "../variables/spacing";
 
 /*
 ** Tools to crate media queries
 */
 
 @mixin screen($breakpoint) {
-  @if map_has-key($breakpoints, $breakpoint) {
-    @media screen and (min-width: map_get($breakpoints, $breakpoint)) {
+  @if map_has-key(spacing.$breakpoints, $breakpoint) {
+    @media screen and (min-width: map_get(spacing.$breakpoints, $breakpoint)) {
       @content
     }
   } @else {

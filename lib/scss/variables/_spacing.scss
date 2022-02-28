@@ -1,17 +1,29 @@
 @use "../helpers/size";
 
 $space: (
-        4: size.rem(4),
-        8: size.rem(8),
-        16: size.rem(16),
-        24: size.rem(24),
-        32: size.rem(32),
-        40: size.rem(40),
-        48: size.rem(48),
-        56: size.rem(56),
-        64: size.rem(64),
-        72: size.rem(72),
-        80: size.rem(80),
-        88: size.rem(88),
-        96: size.rem(96),
+    4: size.rem(4),
+    8: size.rem(8),
+    16: size.rem(16),
+    24: size.rem(24),
+    32: size.rem(32),
+    40: size.rem(40),
+    48: size.rem(48),
+    56: size.rem(56),
+    64: size.rem(64),
+    72: size.rem(72),
+    80: size.rem(80),
+    88: size.rem(88),
+    96: size.rem(96),
+    104: size.rem(104),
+    112: size.rem(112),
+    120: size.rem(120),
+);
+
+$breakpoints: (
+    '': 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
 );

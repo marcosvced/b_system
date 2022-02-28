@@ -1,0 +1,131 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<section class="section">
+    <div class="container">
+        <header>
+            <h3 class="space-bottom-88">Links</h3>
+        </header>
+		<div class="d-grid grid-max-4 space-x-120">
+
+			<div class="space-y-24">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Basic link
+				</div>
+			</div>
+
+			<div class="space-y-24">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'btn-arrow',
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Link
+				</div>
+			</div>
+
+			<div class="space-y-24">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'info',
+						iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					More info
+				</div>
+			</div>
+
+			<div class="space-y-24">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Exit',
+						icon: 'logout',
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Exit
+				</div>
+			</div>
+
+		</div>
+    </div>
+</section>
+
+
+<section class="section" data-bsystem="dark">
+    <div class="container">
+        <header>
+            <h3 class="space-bottom-88">Links dark</h3>
+        </header>
+
+		<div class="d-grid grid-max-4 space-x-120">
+
+			<div class="space-y-24">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Basic link
+				</div>
+			</div>
+
+			<div class="space-y-24">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'btn-arrow',
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Link
+				</div>
+			</div>
+
+			<div class="space-y-24">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'info',
+						iconPosition: 'before'
+						} ) %>
+				</div>
+				<div class="demo-label">
+					More info
+				</div>
+			</div>
+
+			<div class="space-y-24">
+				<div class="demo-element">
+					<%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Exit',
+						icon: 'logout',
+						} ) %>
+				</div>
+				<div class="demo-label">
+					Exit
+				</div>
+			</div>
+
+		</div>
+    </div>
+</section>

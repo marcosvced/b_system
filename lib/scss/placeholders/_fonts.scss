@@ -1,115 +1,246 @@
 @use '../helpers/font';
 @use '../helpers/colors';
+@use "../helpers/size";
+@use '../helpers/themed';
+
+
+// X text
 
 %x1-text {
-  font: {
-    size: font.size(xxl);
-    family: font.family(roboto);
-    weight: font.weight(bold);
-  }
+    font: {
+        size: font.size(xxl);
+        family: font.family(roboto);
+        weight: font.weight(bold);
+    }
+    line-height: 1.19;
+    letter-spacing: size.rem(.6);
 }
 
 %x2-text {
-  font: {
-    size: font.size(xl);
-    family: font.family(roboto);
-    weight: font.weight(bold);
-  }
+    font: {
+        size: font.size(xl);
+        family: font.family(roboto);
+        weight: font.weight(bold);
+    }
+    line-height: 1.3;
+    letter-spacing: size.rem(.5);
+
 }
 
 %x3-text {
-  font: {
-    size: font.size(lg);
-    family: font.family(roboto);
-    weight: font.weight(bold);
-  }
+    font: {
+        size: font.size(lg);
+        family: font.family(roboto);
+        weight: font.weight(bold);
+    }
+    line-height: 1.38;
+    letter-spacing: size.rem(.37);
 }
 
 %x4-text {
-  font: {
-    size: font.size(md);
-    family: font.family(roboto);
-    weight: font.weight(bold);
-  }
+    font: {
+        size: font.size(md);
+        family: font.family(roboto);
+        weight: font.weight(bold);
+    }
+    line-height: 1.27;
+    letter-spacing: size.rem(.3);
+
 }
 
 %x5-text {
-  font: {
-    size: font.size(md);
-    family: font.family(roboto);
-    weight: font.weight(light);
-  }
+    font: {
+        size: font.size(sm); //md
+        family: font.family(roboto);
+        weight: font.weight(bold); //light
+    }
+    line-height: 1.44;
+    letter-spacing: size.rem(.2);
+
 }
 
 %x6-text {
-  font: {
-    size: font.size(sm);
-    family: font.family(roboto);
-    weight: font.weight(bold);
-  }
+    font: {
+        size: font.size(sm);
+        family: font.family(roboto);
+        weight: font.weight(medium); //bold
+    }
+    line-height: 1.44;
+    letter-spacing: size.rem(.2);
+
 }
 
 %x7-text {
-  font: {
-    size: font.size(sm);
-    family: font.family(roboto);
-    weight: font.weight(medium);
-  }
+    font: {
+        size: font.size(sm);
+        family: font.family(roboto);
+        weight: font.weight(regular); //medium
+    }
+    line-height: 1.44;
+    letter-spacing: size.rem(.2);
+
 }
 
 %x8-text {
-  font: {
-    size: font.size(sm);
-    family: font.family(roboto);
-    weight: font.weight(regular);
-  }
+    font: {
+        size: font.size(sm);
+        family: font.family(roboto);
+        weight: font.weight(light); //regular
+    }
+    line-height: 1.44;
+    letter-spacing: size.rem(.2);
+
 }
 
 %x9-text {
-  font: {
-    size: font.size(sm);
-    family: font.family(roboto);
-    weight: font.weight(light);
-  }
+    font: {
+        size: font.size(xxs); //sm
+        family: font.family(roboto);
+        weight: font.weight(light);
+    }
+    line-height: 1.27;
+    letter-spacing: size.rem(.18);
 }
 
 %x10-mini {
-  font: {
-    size: font.size(xxs);
-    family: font.family(roboto);
-    weight: font.weight(light);
-  }
+    font: {
+        size: font.size(xxs);
+        family: font.family(roboto);
+        weight: font.weight(light);
+    }
 }
 
+
+// X text-serif
+
+%x1-text-serif {
+    @extend %x1-text;
+    font: {
+        family: font.family(playfair);
+        size: font.size(xxl);
+        weight: font.weight(normal);
+    }
+}
+
+%x2-text-serif {
+    font: {
+        family: font.family(playfair);
+        size: size.rem(56);
+        weight: font.weight(normal);
+    }
+    line-height: 1.18;
+    letter-spacing: size.rem(.53);
+}
+
+%x3-text-serif {
+    font: {
+        family: font.family(playfair);
+        size: size.rem(56);
+        weight: font.weight(normal);
+        style: font.style(italic);
+    }
+    line-height: 1.18;
+    letter-spacing: size.rem(.53);
+}
+
+%x4-text-serif {
+    font: {
+        family: font.family(playfair);
+        size: font.size(md);
+        weight: font.weight(normal);
+    }
+    line-height: 1.36;
+    letter-spacing: size.rem(.4);
+}
+
+
+// Text
+
 %body-bold-text {
-  font: {
-    size: font.size(xs);
-    family: font.family(roboto);
-    weight: font.weight(bold);
-  };
+    font: {
+        size: font.size(xs);
+        family: font.family(roboto);
+        weight: font.weight(bold);
+    };
+    line-height: 1.6;
+    letter-spacing: size.rem(.28);
 }
 
 %body-medium-text {
-  font: {
-    size: font.size(xs);
-    family: font.family(roboto);
-    weight: font.weight(medium);
-  };
+    font: {
+        size: font.size(xs);
+        family: font.family(roboto);
+        weight: font.weight(medium);
+    };
+    line-height: 1.6;
+    letter-spacing: size.rem(.28);
 }
 
 %body-regular-text {
-  font: {
-    size: font.size(xs);
-    family: font.family(roboto);
-    weight: font.weight(regular);
-  };
+    font: {
+        size: font.size(xs);
+        family: font.family(roboto);
+        weight: font.weight(regular);
+    };
+    line-height: 1.6;
+    letter-spacing: size.rem(.25);
 }
 
 %body-light-text {
-  font: {
-    size: font.size(xs);
-    family: font.family(roboto);
-    weight: font.weight(light);
-  };
+    font: {
+        size: font.size(xs);
+        family: font.family(roboto);
+        weight: font.weight(light);
+    };
+    line-height: 1.6;
+    letter-spacing: size.rem(.3);
 }
 
+%body-italic-text {
+    font-style: font.style(italic);
+    line-height: 1.6;
+    letter-spacing: size.rem(.25);
+}
+
+
+// Text-serif
+
+%body-bold-text-serif {
+    font: {
+        size: font.size(xs);
+        family: font.family(playfair);
+        weight: font.weight(bold);
+    };
+    line-height: 1.6;
+    letter-spacing: size.rem(.28);
+}
+
+%body-regular-text-serif {
+    font: {
+        size: font.size(xs);
+        family: font.family(playfair);
+        weight: font.weight(regular);
+    };
+    line-height: 1.6;
+    letter-spacing: size.rem(.28);
+}
+
+
+// Color
+
+%body-blue-text {
+    color: colors.primary(blue);
+}
+
+%body-orange-text {
+    color: colors.primary(orange);
+}
+
+%body-red-text {
+    color: colors.primary(red),;
+
+}
+
+%body-turquoise-text {
+    color: colors.primary(turquoise);
+}
