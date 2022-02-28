@@ -12,6 +12,7 @@
 @use '../../mixins' as mixin;
 
 .footer {
+    flex-grow: 1;
     padding-block: size.space(88);
 
     @include themed.properties {
