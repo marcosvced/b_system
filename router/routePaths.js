@@ -12,5 +12,7 @@ module.exports = {
     ICONS: '/doc/icons',
     LINKS: '/doc/links',
     TEXTS: '/doc/texts',
+    ACCORDIONS: '/doc/accordions',
+    ICONDESCRIPTION: '/doc/icondescription',
   },
 }

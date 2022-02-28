@@ -1,23 +1,22 @@
 @use "../../helpers/size";
 @use "../../helpers/colors";
 @use "../../mixins/space";
-@use "../../placeholders/fonts";
 
 
 .icondesc {
   font-weight: 300;
-  color:colors.grayscale(800);
+  color: colors.grayscale(800);
   .image {
-    margin-bottom:size.rem(16);
+    margin-bottom: size.rem(16);
     > span {
       border:1px solid colors.grayscale(700);
-      color:colors.grayscale(700);
-      width: size.rem(48);
-      height:size.rem(48);
+      color: colors.grayscale(700);
+      width:  size.rem(48);
+      height: size.rem(48);
       display: inline-block;
       font-size: size.rem(24);
       text-align: center;
-      padding-top:size.rem(8);
+      padding-top: size.rem(8);
     }
     > img {
       max-width: size.rem(88);
@@ -26,24 +25,24 @@
   }
   .label {
     font-weight: 500;
-    color:colors.grayscale(dark);
+    color: colors.grayscale(dark);
     font-size: size.rem(18);
-    margin-bottom:size.rem(22);
+    margin-bottom: size.rem(22);
   }
 }
 
 
 /* DARK MODE */
-[data-b-system='dark-mode'] {
+[data-bsystem='dark'] {
   .icondesc {
       color: colors.grayscale(500);
       .image {
         > span {
-          color:colors.grayscale(800);
+          color: colors.grayscale(800);
         }
-      }  
+      }
       .label {
-        color:colors.grayscale(light);
-      }    
+        color: colors.grayscale(light);
+      }
   }
 }

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>B_System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
   </head>
@@ -92,10 +93,10 @@
                       <a class="dropdown-item" href="#">Grid cells</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Icon + description</a>
+                      <a class="dropdown-item" href="../../doc/icondescription">Icon + description</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Accordions</a>
+                      <a class="dropdown-item" href="../../doc/accordions">Accordions</a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="../../doc/alerts">Alerts</a>
@@ -105,6 +106,9 @@
                     </li>
                     <li>
                       <a class="dropdown-item" href="../../doc/footers/basic">Footers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../../doc/texts">Texts</a>
                     </li>
                   </ul>
                 </li>
@@ -126,9 +130,137 @@
     </header>
     <main class="main">
       <section class="section">
-        <div class="container d-flex flex-wrap gap-5">
-          <div class="d-flex flex-column gap-2">
-            ESTO ES UN ALERT
+        <div class="container gap-5">
+          <h3>Alerts</h3>
+        </div>
+        <div class="container gap-5">
+          <div class="row">
+            <div class="col mb-5">
+              <div class="alert alert-info " role="alert">
+                <span class="icon-lock"></span>
+                <div class="content">
+                  You must include at least one letter.
+                </div>
+              </div>
+              <span class="label">
+                    Info alert
+                </span>
+            </div>
+            <div class="col mb-5">
+              <div class="alert alert-error " role="alert">
+                <span class="icon-error"></span>
+                <div class="content">
+                  The data you have entered is already in our system.
+                </div>
+              </div>
+              <span class="label">
+                    Error alert
+                </span>
+            </div>
+            <div class="col mb-5">
+              <div class="alert alert-advice " role="alert">
+                <span class="icon-avatar"></span>
+                <div class="content">
+                  Your data is safe with B System. In no case may they be published.
+                </div>
+              </div>
+              <span class="label">
+                    Advice alert
+                </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-5">
+              <div class="alert alert-primary " role="alert">
+                <span class="icon-message"></span>
+                <div class="content">
+                  You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com.
+                </div>
+              </div>
+              <span class="label">
+                    Alert
+                </span>
+            </div>
+            <div class="col mb-5">
+              <div class="alert alert-link " role="alert">
+                <span class="icon-place-holder"></span>
+                <div class="content">
+                  <a href="#">
+                    Find our offices easily in our search engine.
+                  </a>
+                </div>
+              </div>
+              <span class="label">
+                    Link alert
+                </span>
+            </div>
+            <div class="col mb-5">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" data-bsystem="dark">
+        <div class="container d-flex flex-wrap gap-4">
+          <div class="d-flex flex-column flex-fix gap-2 mb-5">
+            <div class="alert alert-info " role="alert">
+              <span class="icon-lock"></span>
+              <div class="content">
+                You must include at least one letter.
+              </div>
+            </div>
+            <span class="label">
+                Info alert
+            </span>
+          </div>
+          <div class="d-flex flex-column flex-fix gap-2 mb-5">
+            <div class="alert alert-error " role="alert">
+              <span class="icon-error"></span>
+              <div class="content">
+                The data you have entered is already in our system.
+              </div>
+            </div>
+            <span class="label">
+                    Error alert
+                </span>
+          </div>
+          <div class="d-flex flex-column flex-fix gap-2 mb-5">
+            <div class="alert alert-advice " role="alert">
+              <span class="icon-avatar"></span>
+              <div class="content">
+                Your data is safe with B System. In no case may they be published.
+              </div>
+            </div>
+            <span class="label">
+                    Advice alert
+                </span>
+          </div>
+        </div>
+        <div class="container d-flex flex-wrap gap-4">
+          <div class="d-flex flex-column flex-fix gap-2 mb-5">
+            <div class="alert alert-primary " role="alert">
+              <span class="icon-message"></span>
+              <div class="content">
+                You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com.
+              </div>
+            </div>
+            <span class="label">
+                    Alert
+                </span>
+          </div>
+          <div class="d-flex flex-column flex-fix gap-2 mb-5">
+            <div class="alert alert-link " role="alert">
+              <span class="icon-place-holder"></span>
+              <div class="content">
+                <a href="#">
+                  Find our offices easily in our search engine.
+                </a>
+              </div>
+            </div>
+            <span class="label">
+                    Link alert
+                </span>
+          </div>
+          <div class="d-flex flex-column flex-fix gap-2 mb-5">
           </div>
         </div>
       </section>

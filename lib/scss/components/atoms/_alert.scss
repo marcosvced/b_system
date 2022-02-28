@@ -1,42 +1,51 @@
 @use "../../helpers/size";
 @use "../../helpers/colors";
+@use "../../helpers/font";
 @use "../../mixins/space";
-@use "../../placeholders/fonts";
 
 
 .alert {
   padding: size.space(24);
-  border:0;
+  border: 0;
   color: colors.grayscale(800);
-  font-weight: fonts.weight(light);
+  font-weight: font.weight(light);
+
   &-info {
-    background-color: colors.secondary(blue-200); 
+    background-color: colors.secondary(blue-200);
   }
+
   &-error {
-    background-color: colors.secondary(red-100);        
+    background-color: colors.secondary(red-100);
   }
+
   &-advice {
-    background-color: colors.secondary(green-200);    
+    background-color: colors.secondary(green-200);
   }
-  &-primary { 
-    background-color: colors.grayscale(100);        
+
+  &-primary {
+    background-color: colors.grayscale(100);
   }
+
   &-link {
-    background-color: colors.grayscale(100); 
-    font-weight: fonts.weight(medium);
+    background-color: colors.grayscale(100);
+    font-weight: font.weight(medium);
+
     a, span[class*=icon-] {
-        color:colors.primary(blue);
+      color: colors.primary(blue);
     }
   }
+
   span {
-    display:block;
-    font-size:size.space(24);
-    color:colors.grayscale(black);
+    display: block;
+    font-size: size.space(24);
+    color: colors.grayscale(black);
+
     &:before {
-        margin-bottom:size.space(24);
-        display: block;
+      margin-bottom: size.space(24);
+      display: block;
     }
   }
+
   .content {
     min-height: size.space(40);
   }
@@ -44,20 +53,23 @@
 
 
 /* DARK MODE */
-[data-b-system='dark-mode'] {
+[data-bsystem='dark'] {
   .alert {
     background-color: colors.grayscale(1200);
     color: colors.grayscale(500);
-    &-link {   
-        a, span[class*=icon-] {
-            color:colors.primary(blue)
-        }
+
+    &-link {
+      a, span[class*=icon-] {
+        color: colors.primary(blue)
+      }
     }
+
     span {
-        color:colors.grayscale(light);
+      color: colors.grayscale(light);
     }
   }
+
   span.label {
-    color:colors.grayscale(500);
+    color: colors.grayscale(500);
   }
 }

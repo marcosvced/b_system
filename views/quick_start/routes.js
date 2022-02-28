@@ -53,4 +53,14 @@ route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
 })
 
+/* Accordions page. */
+route.get(routePaths.QUICK_START.ACCORDIONS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['accordions']))
+})
+
+/* Icon + description page. */
+route.get(routePaths.QUICK_START.ICONDESCRIPTION, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['icondescription']))
+})
+
 module.exports = route
