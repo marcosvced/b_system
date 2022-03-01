@@ -41,6 +41,9 @@ span {
     @extend %body-regular-text;
     margin: 0;
     padding: 0;
+    @include themed.properties {
+        color: themed.values(colors.grayscale(800), colors.grayscale(light));
+    }
 }
 
 b {

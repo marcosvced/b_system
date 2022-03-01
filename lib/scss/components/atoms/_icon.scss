@@ -1,0 +1,11 @@
+[class^=icon-] {
+    display: block;
+    &:before {
+        display: block;
+    }
+}
+
+i[class^=icon-]{
+    width: 1em;
+    height: 1em;
+}
