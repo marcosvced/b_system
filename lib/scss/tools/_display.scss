@@ -53,12 +53,12 @@ $positions: top, bottom, left, right, inline, block;
                 gap: helpers.space(32);
             }
 
-            .grid-max-#{$breakpoint}#{$columns} {
+            .grid-#{$breakpoint}max-#{$columns} {
                 grid-template-columns: repeat(#{$columns}, max-content);
                 gap: helpers.space(32);
             }
 
-            .grid-min-#{$breakpoint}#{$columns} {
+            .grid-#{$breakpoint}min-#{$columns} {
                 grid-template-columns: repeat(#{$columns}, min-content);
                 gap: helpers.space(32);
             }
