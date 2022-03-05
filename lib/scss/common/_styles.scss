@@ -30,6 +30,7 @@ h5 {
 }
 
 body {
+    padding-top: size.rem(92);
     display: flex;
     flex-direction: column;
     min-height: 100vh;

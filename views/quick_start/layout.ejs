@@ -2,13 +2,16 @@
 <%
 const navigation = [
     {
-        label: 'Demos'
+        label: 'Demos',
+        key: 'demos'
     },
     {
-        label: 'Pages'
+        label: 'Pages',
+        key: 'pages'
     },
     {
         label: 'Modules',
+        key: 'modules',
         entries: [
             {
                 href: '#',
@@ -43,6 +46,7 @@ const navigation = [
     },
     {
         label: 'Components',
+        key: 'components',
         entries: [
             {
                 href: QUICK_START.BUTTONS,
@@ -92,14 +96,16 @@ const navigation = [
                 href: QUICK_START.FOOTERS.BASIC,
                 label: 'Footers'
             },
-                {
-                    href: QUICK_START.TEXTS,
-                    label: 'Texts'
-                },
-            ]
-        },
-        {
-            label: 'Transactions'}
+            {
+                href: QUICK_START.TEXTS,
+                label: 'Texts'
+            }
+        ]
+    },
+    {
+        label: 'Transitions',
+        key: 'transitions'
+    }
 ]
 
 const headerConfig = {

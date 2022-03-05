@@ -16,6 +16,7 @@ const routeRender = {
       ...defaultOptions,
       ...options,
       ...extras,
+      activeRoute: response.req.route.path,
     }, (error, html) => {
       if (error) {
         throw new Error(error)
