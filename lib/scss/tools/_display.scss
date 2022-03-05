@@ -9,25 +9,24 @@ $positions: top, bottom, left, right, inline, block;
     $breakpoint: if($key != '', '#{$key}-', '');
     @include media.screen($key) {
         @each $space, $size in spacing.$space {
+            .space-x-#{$breakpoint}#{$space} {
+                @include space.x($space);
+            }
+
+            .space-y-#{$breakpoint}#{$space} {
+                @include space.y($space);
+            }
+
+            .space-xy-#{$breakpoint}#{$space} {
+                @include space.x-y($space);
+            }
             @each $position in $positions {
-                .space-x-#{$breakpoint}#{$space} {
-                    @include space.x($space);
-                }
-
-                .space-y-#{$breakpoint}#{$space} {
-                    @include space.y($space);
-                }
-
-                .space-xy-#{$breakpoint}#{$space} {
-                    @include space.x-y($space);
-                }
-
                 .space-#{$position}-#{$breakpoint}#{$space} {
-                    margin-#{$position}: $size;
+                    margin-#{$position}: $size !important;
                 }
 
                 .inner-space-#{$position}-#{$breakpoint}#{$space} {
-                    padding-#{$position}: $size;
+                    padding-#{$position}: $size !important;
                 }
             }
 

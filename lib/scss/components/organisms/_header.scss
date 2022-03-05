@@ -152,7 +152,7 @@ nav {
                     @extend %body-regular-text;
                     text-align: center;
                     @include themed.properties {
-                        color: themed.values(colors.body(30), colors.body(67));
+                        color: themed.values(colors.grayscale(800), colors.grayscale(600));
                     }
 
                     &.active {
