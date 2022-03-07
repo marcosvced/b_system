@@ -2,12 +2,15 @@
 
 <%- contentFor('body') %>
 
+<!--BUTTONS-->
+
+<!--SECTION LIGHT-->
 <section class="section">
     <div class="container">
-        <header>
-            <h3 class="space-bottom-88">Buttons</h3>
-        </header>
-        <div class="d-grid grid-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
+
+        <h3 class="space-bottom-88">Buttons</h3>
+
+        <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Purchase', isCTA: true, icon: 'links', iconPosition: 'after' }) %>
                 <span class="body-light-gray-text">
@@ -69,14 +72,15 @@
 
 
 </section>
+<!--END: SECTION LIGHT-->
 
-
+<!--SECTION DARK-->
 <section class="section" data-bsystem="dark">
     <div class="container">
-        <header >
-            <h3 class="space-bottom-88">Buttons dark mode</h3>
-        </header>
-        <div class="d-grid grid-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
+
+        <h3 class="space-bottom-88">Buttons dark mode</h3>
+
+        <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Purchase', isCTA: true, icon: 'links', iconPosition: 'after' }) %>
                 <span class="body-light-gray-text">
@@ -143,3 +147,4 @@
         </div>
     </div>
 </section>
+<!--END: SECTION DARK-->
