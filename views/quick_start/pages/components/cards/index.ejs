@@ -1,0 +1,114 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<!--CARDS-->
+
+<!--SECTION LIGHT-->
+<section class="section">
+    <div class="container">
+
+        <h3 class="space-bottom-88">Cards</h3>
+
+        <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-3 row-xl-gap-32">
+           <div class="d-flex flex-column space-y-24">
+                <span class="body-light-gray-text">
+                    <p class="body-dark-gray-text fw-bold">.US</p>
+                    Product design
+                </span>
+                <span class="body-light-gray-text">
+                    Basic card
+                </span>
+           </div>
+
+           <div class="d-flex flex-column space-y-24">
+                <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+
+           <div class="d-flex flex-column space-y-24">
+                <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+           </div>
+
+           <div class="d-flex flex-column space-y-24">
+               <div class="space-y-24">
+                    <p class="body-dark-gray-text fw-bold">Well organized and layered</p>
+                    <p class="body-light-gray-text">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                    <%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'links',
+					} ) %>
+               </div>
+               <span class="body-light-gray-text">
+                    Card
+               </span>
+           </div>
+
+           <div class="d-flex flex-column space-y-24">
+                <div class="space-y-24">
+                    <p class="body-dark-gray-text fw-bold">Well organized and layered</p>
+                    <p class="body-light-gray-text">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                    <%- include( `${component}/links/link`, {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                    } ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Feature card
+                </span>
+            </div>
+
+            <div class="d-flex flex-column space-y-24">
+                <div class="d-flex flex-column space-y-8">
+                    <div class="d-flex justify-content-between">
+                        <h4>$ 12</h4>
+                        <%- include(`${component}/icons/icon`, { icon: 'saving' } ) %>
+                    </div>
+                    <h5>Basic product</h5>
+                    <p class="body-dark-gray-text fw-bold">Well organized and layered</p>
+                    <p class="body-light-gray-text">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center body-light-gray-text">
+                            <%- include(`${component}/icons/icon`, { icon: 'done' } ) %>
+                            Basic resource example.
+                        </li>
+                        <li class="d-flex align-items-center body-light-gray-text">
+                            <%- include(`${component}/icons/icon`, { icon: 'blade' } ) %>
+                            Unlimited websites.
+                        </li>
+                        <li class="d-flex align-items-center body-light-gray-text">
+                            <%- include(`${component}/icons/icon`, { icon: 'blade' } ) %>
+                            Unmetered storage.
+                        </li>
+                    </ul>
+                    <%- include( `${component}/links/link`, {
+                        href: '#',
+                        label: 'Choose',
+                        icon: 'links',
+                    } ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<!--END: SECTION LIGHT-->
+
+<!--SECTION DARK-->
+<section class="section" data-bsystem="dark">
+    <div class="container">
+
+        <h3 class="space-bottom-88">Cards dark mode</h3>
+
+    </div>
+</section>
+<!--END: SECTION DARK-->
