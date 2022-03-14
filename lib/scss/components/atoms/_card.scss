@@ -1,0 +1,37 @@
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.bg-card {
+    background-color: helper.grayscale(100);
+    border-radius: helper.rem(6);
+    padding: helper.rem(33) helper.rem(31) helper.rem(35) helper.rem(28);
+
+    .price-card {
+        & [class^='icon-'] {
+            font-size: helper.rem(23);
+            color: helper.grayscale(400);
+        }
+    }
+
+    .list-card {
+        & [class^='icon-'] {
+            font-size: helper.rem(12);
+            color: helper.grayscale(800);
+            @include mixin.circle(20);
+            border: helper.rem(1.5) solid helper.grayscale(800);
+            display: inline-grid;
+            align-items: center;
+            justify-content: center;
+            margin-right: helper.rem(8);
+        }
+
+        & .icon-done {
+            color: helper.button(secondary);
+            border-color: helper.button(secondary);
+        }
+    }
+}
+
+.grid-full {
+    grid-column: 1/4;
+}
