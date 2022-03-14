@@ -10,8 +10,8 @@
 
         <h3 class="space-bottom-88">Cards</h3>
 
-        <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-3 row-xl-gap-48">
-           <div class="d-flex flex-column space-y-24">
+        <div class="row row-gap-48">
+           <div class="col-12 col-lg-4 d-flex flex-column space-y-24">
                 <span class="body-light-gray-text">
                     <p class="body-dark-gray-text fw-bold">.US</p>
                     Product design
@@ -21,20 +21,23 @@
                 </span>
            </div>
 
-           <div class="d-flex flex-column space-y-24">
+           <div class="col-12 col-lg-4 d-flex flex-column space-y-24">
                 <span class="body-light-gray-text">
                     Basic image + Avatar
                 </span>
             </div>
 
-           <div class="d-flex flex-column space-y-24">
+           <div class="col-12 col-lg-4 d-flex flex-column space-y-24">
+               <div>
+                   <p>B_system</p>
+               </div>
                 <span class="body-light-gray-text">
                     Basic image + text
                 </span>
            </div>
 
-           <div class="d-flex flex-column space-y-24">
-               <div class="bg-card space-y-24">
+           <div class="col-12 col-lg-4 d-flex flex-column space-y-24">
+               <div class="bg-card padding-card space-y-24">
                     <p class="body-dark-gray-text fw-bold">Well organized and layered</p>
                     <p class="body-light-gray-text">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                     <%- include( `${component}/links/link`, {
@@ -48,8 +51,8 @@
                </span>
            </div>
 
-           <div class="d-flex flex-column space-y-24">
-                <div class="bg-card space-y-24">
+           <div class="col-12 col-lg-4 d-flex flex-column space-y-24">
+                <div class="bg-card padding-card space-y-24">
                     <p class="body-dark-gray-text fw-bold">Well organized and layered</p>
                     <p class="body-light-gray-text">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                     <%- include( `${component}/links/link`, {
@@ -63,9 +66,9 @@
                 </span>
             </div>
 
-            <div class="d-flex flex-column space-y-24">
-                <div class="d-flex flex-column bg-card space-y-16">
-                    <div class="price-card d-flex align-items-center justify-content-between space-bottom-8">
+            <div class="col-12 col-lg-4 d-flex flex-column space-y-24">
+                <div class="bg-card padding-card d-flex flex-column space-y-16">
+                    <div class="header-card d-flex align-items-center justify-content-between space-bottom-8">
                         <h4 class="mb-0">$ 12</h4>
                         <%- include(`${component}/icons/icon`, { icon: 'saving' } ) %>
                     </div>
@@ -74,15 +77,15 @@
                     <p class="body-light-gray-text mb-0">Sample text for basic product. Basic resources for starter brands.</p>
                     <ul class="list-card list-unstyled space-y-16 space-top-24 space-bottom-120">
                         <li class="d-flex align-items-center body-light-gray-text">
-                            <%- include(`${component}/icons/icon`, { icon: 'done' } ) %>
+                            <%- include(`${component}/icons/icon`, { icon: 'check' } ) %>
                             Basic resource example.
                         </li>
                         <li class="d-flex align-items-center body-light-gray-text">
-                            <%- include(`${component}/icons/icon`, { icon: 'blade' } ) %>
+                            <%- include(`${component}/icons/icon`, { icon: 'close-blade' } ) %>
                             Unlimited websites.
                         </li>
                         <li class="d-flex align-items-center body-light-gray-text">
-                            <%- include(`${component}/icons/icon`, { icon: 'blade' } ) %>
+                            <%- include(`${component}/icons/icon`, { icon: 'close-blade' } ) %>
                             Unmetered storage.
                         </li>
                     </ul>
@@ -97,8 +100,136 @@
                 </span>
             </div>
 
-            <div class="bg-card grid-full">
+            <div class="col-12">
+                <div class="bg-card padding-card full-card d-flex flex-column justify-content-between space-bottom-24">
+                    <div class="row header-card d-flex justify-content-between">
+                        <p class="col-11 body-light-gray-text fw-bold">Business case 1: Brandemic</p>
+                        <%- include(`${component}/icons/icon`, { icon: 'blade' } ) %></br>
+                        <p class="body-light-gray-text">New brand</p>
+                    </div>
+                    <div></div>
+                    <div class="d-flex justify-content-between">
+                        <p class="body-light-gray-text">23/03/2019</p>
+                        <%- include( `${component}/links/link`, {
+                            href: '#',
+                            label: 'More info',
+                            icon: 'info',
+                            iconPosition: 'after'
+                            } ) %>
+                    </div>
+                </div>
+                <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
 
+            <div class="col-12">
+                <div class="bg-card full-card d-flex space-bottom-24">
+                    <div></div>
+                    <div class="d-flex flex-column justify-content-between padding-card">
+                        <span class="tag-card d-flex justify-content-center align-items-end">
+                            1
+                        </span>
+                        <div class="space-y-24">
+                            <h4>Digital strategy</h4>
+                            <p class="body-light-gray-text">We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. </p>
+                        </div>
+                        <%- include( `${component}/links/link`, {
+                            href: '#',
+                            label: 'Learn more',
+                            icon: 'links',
+                        } ) %>
+                    </div>
+                </div>
+                <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+
+            <div class="col-12 col-lg-4 space-y-24">
+                <div class="bg-card padding-card space-y-24">
+                    <%- include(`${component}/icons/icon`, { icon: 'close-blade' } ) %>
+                    <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
+                    <div class="value-card d-flex space-x-4">
+                        <%- include(`${component}/icons/icon`, { icon: 'star' } ) %>
+                        <%- include(`${component}/icons/icon`, { icon: 'star' } ) %>
+                        <%- include(`${component}/icons/icon`, { icon: 'star' } ) %>
+                        <%- include(`${component}/icons/icon`, { icon: 'star' } ) %>
+                        <%- include(`${component}/icons/icon`, { icon: 'star' } ) %>
+                    </div>
+                    <div class="user-card d-flex space-x-16">
+                        <span class="body-light-gray-text">
+                            <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
+                            Marketing manager
+                        </span>
+                    </div>
+                </div>
+                <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+
+            <div class="col-3 space-y-24">
+                <div class="bg-card contact-card padding-card space-y-24">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="body-dark-gray-text fw-bold">Contact us</p>
+                        <%- include(`${component}/icons/icon`, { icon: 'blade' } ) %>
+                    </div>
+                    <span class="border-bottom d-block"></span>
+                    <%- include( `${component}/links/link`, {
+                        href: '#',
+                        label: 'Consult in our chat',
+                        icon: 'whatsapp',
+                    } ) %>
+                    <span class="border-bottom d-block"></span>
+                    <%- include( `${component}/links/link`, {
+                        href: '#',
+                        label: 'Shall we call you?',
+                        icon: 'contact',
+                    } ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+
+            <div class="col-3 space-y-24">
+                <div class="bg-card padding-card icon-desc-card space-y-16">
+                    <%- include(`${component}/icons/icon`, { icon: 'award' } ) %>
+                    <p class="body-light-gray-text">B system is a sketch.</p>
+                    <%- include( `${component}/links/link`, {
+						href: '#',
+						label: 'Learn more',
+						icon: 'links',
+					} ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+
+            <div class="col-12 col-lg-6 project-card space-y-24">
+                <div class="row">
+                    <div class="col-4 bg-card header-card d-flex align-items-center justify-content-center">
+                        <p class="fw-bold header-text">01</p>
+                    </div>
+                    <div class="col-8 bg-card padding-card d-flex align-items-center">
+                        <div class="space-y-16">
+                            <h3>Calgary museum</h3>
+                            <%- include( `${component}/links/link`, {
+                                href: '#',
+                                label: 'Learn more',
+                                icon: 'links',
+                            } ) %>
+                        </div>
+                        <div class="nav-card">
+                           
+                        </div>
+                    </div>
+                </div>
+                <span class="body-light-gray-text">
+                    Project card
+                </span>
             </div>
         </div>
     </div>

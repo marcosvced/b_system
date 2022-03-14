@@ -1,37 +1,91 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
+.padding-card {
+    padding: helper.rem(24);
+}
+
 .bg-card {
     background-color: helper.grayscale(100);
     border-radius: helper.rem(6);
-    padding: helper.rem(33) helper.rem(31) helper.rem(35) helper.rem(28);
 
-    .price-card {
+    .header-card {
         & [class^='icon-'] {
-            font-size: helper.rem(23);
             color: helper.grayscale(400);
+            font-size: helper.rem(23);
         }
     }
 
     .list-card {
         & [class^='icon-'] {
-            font-size: helper.rem(12);
+            font-size: helper.rem(20);
             color: helper.grayscale(800);
-            @include mixin.circle(20);
-            border: helper.rem(1.5) solid helper.grayscale(800);
             display: inline-grid;
             align-items: center;
             justify-content: center;
             margin-right: helper.rem(8);
         }
 
-        & .icon-done {
+        & .icon-check {
             color: helper.button(secondary);
             border-color: helper.button(secondary);
         }
     }
+
+    .tag-card {
+        background-color: helper.button(primary);
+        color: helper.grayscale(light);
+        width: helper.rem(48);
+        height: helper.rem(72);
+        padding-bottom: helper.rem(8);
+        border:{
+            bottom-left-radius: helper.rem(32);
+            bottom-right-radius: helper.rem(32);
+        }
+        transform: translateY(-24px);
+    }
 }
 
-.grid-full {
-    grid-column: 1/4;
+.full-card {
+    min-height: 494px;
+}
+
+.contact-card {
+    & .action-link {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.icon-desc-card [class^='icon-']:not(.icon-links) {
+    font-size: helper.rem(24);
+    color: helper.grayscale(800);
+    @include mixin.circle(48);
+    border:helper.rem(2) solid helper.grayscale(800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card {
+    & .bg-card:not(.header-card) {
+        border-radius: 0;
+    }
+
+    & .header-card {
+        background-color: helper.button(primary);
+        border: {
+            top-right-radius: 0;
+            bottom-right-radius: 0;
+            bottom-left-radius: 0;   
+        }
+        & .header-text {
+            font-size: helper.rem(72);
+            color: helper.grayscale(light);
+        }
+    }
+
+    & .padding-card {
+        padding: helper.rem(62) helper.rem(24);
+    }
 }
