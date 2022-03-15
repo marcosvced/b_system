@@ -18,7 +18,7 @@ header.header {
     transition: all .35s ease-in-out, width 0s;
     position: relative;
 
-    @include media.screen(lg) {
+    @include media.screen(xl) {
         min-height: size.rem(92);
         padding-block: size.rem(22);
         padding-inline: size.space(32);
@@ -26,6 +26,16 @@ header.header {
         &.header-narrow {
             padding-block: size.rem(16);
             min-height: size.rem(72);
+        }
+    }
+
+
+    // fixes bootstrap container padding 
+    > .container-xl {
+        padding: 0 ;
+        @include media.screen(xl) {
+            padding-left: .75rem ;
+            padding-right: .75rem ;
         }
     }
 
@@ -149,6 +159,7 @@ nav {
 
             .nav-item {
                 > a {
+                    padding: 0;
                     @extend %body-regular-text;
                     text-align: center;
                     @include themed.properties {
