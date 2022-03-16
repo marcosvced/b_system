@@ -12,25 +12,35 @@
 
         <div class="row row-gap-48">
            <div class="col-12 col-lg-4 d-flex flex-column space-y-24">
-                <span class="body-light-gray-text">
-                    <p class="body-dark-gray-text fw-bold">.US</p>
-                    Product design
-                </span>
+                <%- include( `${component}/card/basic`, {
+                    img: 'dummy-s.svg',
+                    imgAlt: 'Card image',
+                    titleBasic: '.US',
+                    textBasic: 'Product design'
+                } ) %>
                 <span class="body-light-gray-text">
                     Basic card
                 </span>
            </div>
 
-           <div class="col-12 col-lg-4 d-flex flex-column space-y-24">
+           <div class="col-12 col-lg-4 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'dummy-s.svg',
+                    imgAlt: 'Card image',
+                    avatar: '800x800_33.jpg',
+                    avatarAlt: 'This is a description text'
+                } ) %>
                 <span class="body-light-gray-text">
                     Basic image + Avatar
                 </span>
             </div>
 
-           <div class="col-12 col-lg-4 d-flex flex-column space-y-24">
-               <div>
-                   <p>B_system</p>
-               </div>
+           <div class="col-12 col-lg-4 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'dummy-s.svg',
+                    imgAlt: 'Card image',
+                    textOverImg: 'B_system'
+                } ) %>
                 <span class="body-light-gray-text">
                     Basic image + text
                 </span>
@@ -158,10 +168,10 @@
                         <%- include(`${component}/icons/icon`, { icon: 'star' } ) %>
                     </div>
                     <div class="user-card d-flex space-x-16">
-                        <span class="body-light-gray-text">
+                        <div class="body-light-gray-text">
                             <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
                             Marketing manager
-                        </span>
+                        </div>
                     </div>
                 </div>
                 <span class="body-light-gray-text">
@@ -194,7 +204,7 @@
             </div>
 
             <div class="col-3 space-y-24">
-                <div class="bg-card padding-card icon-desc-card space-y-16">
+                <div class="bg-card padding-card icon-description-card space-y-16">
                     <%- include(`${component}/icons/icon`, { icon: 'award' } ) %>
                     <p class="body-light-gray-text">B system is a sketch.</p>
                     <%- include( `${component}/links/link`, {

@@ -1,6 +1,20 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
+.basic-card {
+    & .avatar {
+        @include mixin.circle(64);
+        position: absolute;
+        left: helper.rem(24);
+        bottom: helper.rem(24);
+    }
+    & .simple-text {
+        position: absolute;
+        left: helper.rem(16);
+        bottom: helper.rem(16);
+    }
+}
+
 .padding-card {
     padding: helper.rem(24);
 }
@@ -42,12 +56,12 @@
             bottom-left-radius: helper.rem(32);
             bottom-right-radius: helper.rem(32);
         }
-        transform: translateY(-24px);
+        transform: translateY(- helper.rem(24));
     }
 }
 
 .full-card {
-    min-height: 494px;
+    min-height: helper.rem(464);
 }
 
 .contact-card {
@@ -57,7 +71,7 @@
     }
 }
 
-.icon-desc-card [class^='icon-']:not(.icon-links) {
+.icon-description-card [class^='icon-']:not(.icon-links) {
     font-size: helper.rem(24);
     color: helper.grayscale(800);
     @include mixin.circle(48);
