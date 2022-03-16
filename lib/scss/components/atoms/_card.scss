@@ -30,6 +30,10 @@
         }
     }
 
+    & .h5 {
+        font-weight: helper.weight(medium);
+    }
+
     .list-card {
         & [class^='icon-'] {
             font-size: helper.rem(20);
@@ -57,6 +61,19 @@
             bottom-right-radius: helper.rem(32);
         }
         transform: translateY(- helper.rem(24));
+    }
+}
+
+.corporative-card {
+    & .padding-card {
+        padding: helper.rem(32) helper.rem(24);
+    }
+
+    & .img-basic {
+        border:{
+            top-left-radius: helper.rem(6);
+            top-right-radius: helper.rem(6);
+        }
     }
 }
 
@@ -101,5 +118,24 @@
 
     & .padding-card {
         padding: helper.rem(62) helper.rem(24);
+    }
+}
+
+.img-container {
+    padding: 0;
+}
+
+.service-card {
+    & .padding-card {
+        padding:{
+            left: helper.rem(48);
+            right: helper.rem(48);
+        }
+    }
+    & .img-basic {
+        border:{
+            top-left-radius: helper.rem(6);
+            bottom-left-radius: helper.rem(6);
+        }
     }
 }
