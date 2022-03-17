@@ -188,10 +188,195 @@
             </div>
         </div>
     </div>
-
-
 </section>
 <!--END: SECTION LIGHT-->
+
+<!--SECTION ALTERN LIGHT (GRAY)-->
+<section class="section altern-light-mode">
+    <div class="container">
+
+        <h3 class="space-bottom-88">Cards</h3>
+
+        <div class="row row-gap-48">
+           <div class="col-4 d-flex flex-column space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'dummy-s.svg',
+                    imgAlt: 'Card image',
+                    titleBasic: '.US',
+                    textBasic: 'Product design'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic card
+                </span>
+           </div>
+
+           <div class="col-4 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'dummy-s.svg',
+                    imgAlt: 'Card image',
+                    avatar: '800x800_33.jpg',
+                    avatarAlt: 'This is a description text'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+
+           <div class="col-4 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'dummy-s.svg',
+                    imgAlt: 'Card image',
+                    textOverImg: 'B_system'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+           </div>
+
+           <div class="col-4 space-y-24">
+                <%- include( `${component}/card/corporative`, {
+                    img: 'dummy-s.svg',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+               <span class="body-light-gray-text">
+                    Card
+               </span>
+           </div>
+
+           <div class="col-4 space-y-24">
+                <%- include( `${component}/card/corporative`, {
+                    img: 'dummy-s.svg',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Feature card
+                </span>
+            </div>
+
+            <div class="col-4 space-y-24">
+                <%- include( `${component}/card/corporative`, {
+                    price: '$ 12',
+                    icon: 'saving',
+                    titleCorporative: 'Basic product',
+                    text: 'Sample text for basic product. Basic resources for starter brands.',
+                    listElement1: 'Basic resource example.',
+                    listElement2: 'Unlimited websites.',
+                    listElement3: 'Unmetered storage.',
+                    iconElement1: 'check',
+                    iconElement2: 'close-blade',
+                    iconElement3: 'close-blade',
+                    hrefCard: '#',
+                    labelLink: 'Choose',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+
+            <div class="col-12">
+                <%- include( `${component}/card/business`, {
+                    titleBusiness: 'Business case 1: Brandemic',
+                    icon: 'saving',
+                    subtitle: 'New brand',
+                    logo: 'logo-brandemic.svg',
+                    logoAlt: 'Brandemic logo',
+                    date: '23/03/2019',
+                    hrefCard: '#',
+                    labelLink: 'More info',
+                    iconLink: 'info'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
+
+            <div class="col-12">
+                <%- include( `${component}/card/service`, {
+                    titleService: 'Digital strategy',
+                    text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
+                    textTag: '1',
+                    img: 'dummy-s.svg',
+                    imgAlt: 'This is a description text',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+
+            <div class="col-12 col-lg-4 space-y-24">
+                <%- include( `${component}/card/testimonial`, {
+                    text: '"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”',
+                    avatar: 'dummy-s.svg',
+                    userName: 'Sandra Golpe',
+                    userPosition: 'Marketing manager',
+                    starState1: 'on',
+                    starState2: 'on',
+                    starState3: 'on',
+                    starState4: 'on',
+                    starState5: 'off',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+
+            <div class="col-3 space-y-24">
+                <%- include( `${component}/card/sticky`, {
+                    titleContact: 'Contact us',
+                    iconClose: 'blade',
+                    hrefChat: '#',
+                    labelChat: 'Consult in our chat',
+                    iconChat: 'whatsapp',
+                    hrefPhone: '#',
+                    labelPhone: 'Shall we call you?',
+                    iconPhone: 'contact',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+
+            <div class="col-3 space-y-24">
+                <%- include( `${component}/card/icon`, {
+                    icon: 'award',
+                    text: 'B system is a sketch.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+
+            <div class="col-12 col-lg-6 project-card space-y-24">
+                <%- include( `${component}/card/project`, {
+                    textHeader: '01',
+                    titleProject: 'Calgary museum',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Project card
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+<!--END: SECTION ALTERN LIGHT (GRAY)-->
 
 <!--SECTION DARK-->
 <section class="section" data-bsystem="dark">
@@ -199,7 +384,7 @@
 
         <h3 class="space-bottom-88">Cards dark mode</h3>
 
-        <div class="row row-gap-48 dark-mode">
+        <div class="row row-gap-48">
             <div class="col-4 d-flex flex-column space-y-24">
                  <%- include( `${component}/card/basic`, {
                      img: 'dummy-s.svg',

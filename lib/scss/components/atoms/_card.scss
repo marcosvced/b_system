@@ -158,6 +158,17 @@
         font-size: helper.rem(48);
     }
 }
+
+// ALTERN LIGHT (GRAY)
+.altern-light-mode {
+    background-color: helper.grayscale(100);
+
+    & .bg-card:not(.project-card .header-card) {
+        background-color: helper.grayscale(light);
+    }
+}
+
+
 // DARK MODE
 
 [data-bsystem=dark] {
