@@ -53,8 +53,8 @@ route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
 })
 
-/* Product Cards page. */
-route.get(routePaths.QUICK_START.PRODUCT, (request, response) => {
+/* PRODUCT CARDS page. */
+route.get(routePaths.QUICK_START.PRODUCTS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['products']))
 })
 
