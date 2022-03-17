@@ -4,8 +4,7 @@
 @use '../../mixins' as mixin;
 
 a {
-    &.action-link,
-    &.action-link:hover {
+    &.action-link {
         display: flex;
         align-items: center;
 
@@ -14,11 +13,11 @@ a {
         }
 
         > *:not(:last-child) {
-            margin-right: helper.em(8, 15);
+            margin-right: helper.rem(8);
         }
 
         > span {
-            font-weight: helper.weight(regular);
+            font-weight: helper.weight(medium);
             line-height: helper.rem(24);
             color: inherit;
 
@@ -28,8 +27,8 @@ a {
             font-weight: helper.weight(bold);
         }
 
-        &.link-medium > span {
-            font-weight: helper.weight(medium)
+        &.link-regular > span {
+            font-weight: helper.weight(regular)
         }
 
         &.link-light > span {
@@ -40,6 +39,12 @@ a {
             font-size: helper.rem(20);
             display: inline-flex;
             color: inherit;
+        }
+
+        &:hover {
+            @include themed.properties {
+                color: themed.values(helper.secondary(blue-500), helper.primary('blue'));
+            }
         }
     }
 }
