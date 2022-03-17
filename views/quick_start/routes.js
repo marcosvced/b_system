@@ -53,4 +53,9 @@ route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
 })
 
+/* Product Cards page. */
+route.get(routePaths.QUICK_START.PRODUCT, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['products']))
+})
+
 module.exports = route

@@ -12,6 +12,6 @@ module.exports = {
     ICONS: '/components/icons',
     LINKS: '/components/links',
     TEXTS: '/components/texts',
-    PRODUCT: '/components/products'
+    PRODUCTS: '/components/product',
   },
 }
