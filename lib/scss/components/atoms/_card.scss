@@ -2,17 +2,20 @@
 @use '../../mixins' as mixin;
 
 .basic-card {
-    & .avatar {
-        @include mixin.circle(64);
-        position: absolute;
-        left: helper.rem(24);
-        bottom: helper.rem(24);
-    }
     & .simple-text {
         position: absolute;
         left: helper.rem(16);
         bottom: helper.rem(16);
     }
+    & .avatar {
+        position: absolute;
+        left: helper.rem(24);
+        bottom: helper.rem(24);
+    }
+}
+
+.avatar {
+    @include mixin.circle(64);
 }
 
 .padding-card {
@@ -64,11 +67,11 @@
     }
 }
 
-.corporative-card {
-    & .padding-card {
+.padding-xl {
         padding: helper.rem(32) helper.rem(24);
-    }
+}
 
+.corporative-card {
     & .img-basic {
         border:{
             top-left-radius: helper.rem(6);
@@ -86,16 +89,6 @@
         width: 100%;
         justify-content: space-between;
     }
-}
-
-.icon-description-card [class^='icon-']:not(.icon-links) {
-    font-size: helper.rem(24);
-    color: helper.grayscale(800);
-    @include mixin.circle(48);
-    border:helper.rem(2) solid helper.grayscale(800);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .project-card {
@@ -137,5 +130,20 @@
             top-left-radius: helper.rem(6);
             bottom-left-radius: helper.rem(6);
         }
+    }
+}
+
+.value-card {
+    & .star-off {
+        color: helper.grayscale(400);
+    }
+    & .star-on {
+        color: helper.primary(yellow);
+    }
+}
+
+.icon-description-card {
+    & [class^='icon-'] {
+        font-size: helper.rem(48);
     }
 }
