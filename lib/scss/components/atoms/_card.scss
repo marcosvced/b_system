@@ -28,7 +28,6 @@
 
     .header-card {
         & [class^='icon-'] {
-            color: helper.grayscale(400);
             font-size: helper.rem(23);
         }
     }
@@ -48,13 +47,13 @@
         }
 
         & .icon-check {
-            color: helper.button(secondary);
-            border-color: helper.button(secondary);
+            color: helper.secondary(green);
+            border-color: helper.secondary(green);
         }
     }
 
     .tag-card {
-        background-color: helper.button(primary);
+        background-color: helper.primary(blue);
         color: helper.grayscale(light);
         width: helper.rem(48);
         height: helper.rem(72);
@@ -97,7 +96,7 @@
     }
 
     & .header-card {
-        background-color: helper.button(primary);
+        background-color: helper.primary(blue);
         border: {
             top-right-radius: 0;
             bottom-right-radius: 0;
@@ -118,6 +117,10 @@
     padding: 0;
 }
 
+.business-card .img-basic {
+    max-height: helper.rem(30);
+}
+
 .service-card {
     & .padding-card {
         padding:{
@@ -133,10 +136,18 @@
     }
 }
 
+.testimonial-card {
+    & .header-card [class^='icon-'] {
+        font-size: helper.rem(56);
+        color: helper.grayscale(dark);
+    }
+}
+
 .value-card {
     & .star-off {
         color: helper.grayscale(400);
     }
+
     & .star-on {
         color: helper.primary(yellow);
     }
@@ -145,5 +156,24 @@
 .icon-description-card {
     & [class^='icon-'] {
         font-size: helper.rem(48);
+    }
+}
+// DARK MODE
+
+[data-bsystem=dark] {
+    & .bg-card:not(.project-card .header-card) {
+        background-color: helper.grayscale(1200);
+
+        & [class^='icon-']:not(.contact-card [class^=icon-], .icon-star, .action-link [class^=icon-]) {
+            color: helper.grayscale(800);
+        }
+
+        & .value-card .star-off {
+            color: helper.grayscale(900);
+        }
+    }
+
+    & .testimonial-card .header-card [class^='icon-'] {
+        color: helper.grayscale(400);
     }
 }
