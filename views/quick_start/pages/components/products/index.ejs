@@ -78,6 +78,81 @@
 </section>
 <!--END: SECTION LIGHT-->
 
+<!--SECTION LIGHT (GRAY)-->
+<section class="section altern-light-mode">
+
+    <div class="container">
+
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Product cards</h3>
+        <div class="row space-y-48">
+            <div class="col-4 space-y-24">
+                <%- include(`${component}/product/product`, { 
+                    img: 'product_example-1.jpg', 
+                    imgAlt: 'Product image',
+                    name:'T-shirt Perkins ',
+                    price: '$ 12.99',
+                }) %>
+                <span class="body-light-gray-text">
+                    Product basic
+                </span>
+            </div>
+
+            <div class="col-4 space-y-24">
+                <%- include(`${component}/product/product`, { 
+                    img: 'product_example-1.jpg', 
+                    imgAlt: 'Product image',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+                }) %>
+                <span class="body-light-gray-text">
+                    Product
+                </span>
+            </div>
+
+            <div class="col-4 space-y-24">
+                <%- include(`${component}/product/product`, { 
+                    img: 'product_example-1.jpg', 
+                    imgAlt: 'Product image',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+                }) %>
+                <span class="body-light-gray-text">
+                    Product extended
+                </span>
+            </div>
+
+            <div class="col-4 space-y-24">
+                <%- include(`${component}/product/product`, { 
+                    img: 'product_example-1.jpg', 
+                    imgAlt: 'Product image',
+                }) %>
+                <span class="body-light-gray-text">
+                    Product_image
+                </span>
+            </div>
+
+            <div class="col-4 space-y-24">
+                <%- include(`${component}/product/product`, { 
+                    img: 'product_example-1.jpg', 
+                    imgAlt: 'Product image',
+                    imgRounded: 'yes'
+                }) %>
+                <span class="body-light-gray-text">
+                    Product_image_rounded
+                </span>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--END: SECTION LIGHT (GRAY)-->
+
 <!--SECTION DARK-->
 <section class="section" data-bsystem="dark">
 
@@ -153,7 +228,7 @@
 </section>
 <!--END: SECTION DARK-->
 
-<!--SECTION DARK-->
+<!--SECTION DARKENER-->
 <section class="section darkener" data-bsystem="dark">
 
     <div class="container">
@@ -226,4 +301,4 @@
     </div>
 
 </section>
-<!--END: SECTION DARK-->
+<!--END: SECTION DARKENER-->
