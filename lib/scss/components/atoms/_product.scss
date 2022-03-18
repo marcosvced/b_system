@@ -1,0 +1,63 @@
+@use '../../helpers' as helper;
+
+.card {
+    background-color: transparent;
+
+    & .img-rounded-yes {
+        border-radius: helper.rem(8);
+    }
+
+    & .card-body {
+        & [class^='icon-'] {
+            font-size: helper.rem(20);
+        }
+        
+        & .product-price {
+            font-size: helper.rem(18);
+        }
+    }
+
+    & .bg-no {
+        background-color: transparent;
+        padding:{
+            top: helper.rem(24);
+            bottom: helper.rem(24);
+            left: 0;
+            right: 0;
+        }
+    }
+
+    & .bg-yes {
+        background-color: helper.grayscale(100);
+        padding: helper.rem(24);
+        border:{
+            bottom-left-radius: helper.rem(4);
+            bottom-right-radius: helper.rem(4);
+        }
+    }
+
+    & .rounded-top-yes {
+        border:{
+            top-left-radius: helper.rem(4);
+            top-right-radius: helper.rem(4);
+        }
+    }
+
+    & .product-colors .btn{
+        min-width: helper.rem(8);
+        height: helper.rem(8);
+        padding: 0;
+    }
+}
+
+[data-bsystem="dark"] {
+    & .bg-yes {
+        background-color: helper.grayscale(1200);
+    }
+}
+
+.darkener {
+    & .bg-yes {
+        background-color: helper.grayscale(1100);
+    }
+}
