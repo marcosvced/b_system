@@ -86,3 +86,15 @@ a {
         }
     }
 }
+
+
+.container.test {
+    height: 50vh;
+
+    .col, .column {
+        background-color: rgb(0, 0, 0, .45);
+    }
+    .column {
+        width: 100%;
+    }
+}
