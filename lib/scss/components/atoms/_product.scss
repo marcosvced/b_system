@@ -1,4 +1,5 @@
 @use '../../helpers' as helper;
+@use '../../mixins' as mixin;
 
 .card {
     background-color: transparent;
@@ -43,10 +44,14 @@
         }
     }
 
-    & .product-colors .btn{
-        min-width: helper.rem(8);
-        height: helper.rem(8);
-        padding: 0;
+    & .product-color {
+        @include mixin.circle(8);
+    }
+}
+
+[data-bsystem="light"].darkener {
+    & .bg-yes {
+        background-color: helper.grayscale(light);
     }
 }
 
@@ -56,7 +61,7 @@
     }
 }
 
-.darkener {
+[data-bsystem="dark"].darkener {
     & .bg-yes {
         background-color: helper.grayscale(1100);
     }
