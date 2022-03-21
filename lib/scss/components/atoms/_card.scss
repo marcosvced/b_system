@@ -1,25 +1,24 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-.basic-card {
+.card {
+    border: 0;
+    background-color: transparent;
+
     & .simple-text {
         position: absolute;
-        left: helper.rem(16);
-        bottom: helper.rem(16);
+        left: helper.space(16);
+        bottom: helper.space(16);
     }
     & .avatar {
         position: absolute;
-        left: helper.rem(24);
-        bottom: helper.rem(24);
+        left: helper.space(24);
+        bottom: helper.space(24);
     }
 }
 
 .avatar {
     @include mixin.circle(64);
-}
-
-.padding-card {
-    padding: helper.rem(24);
 }
 
 .bg-card {
@@ -54,8 +53,7 @@
         }
 
         & .icon-check {
-            color: helper.secondary(green);
-            border-color: helper.secondary(green);
+            color: helper.primary(green) !important;
         }
     }
 
@@ -74,21 +72,19 @@
     }
 }
 
-.padding-xl {
-        padding: helper.rem(32) helper.rem(24);
-}
-
-.corporative-card {
+.comparative-card {
     & .img-basic {
         border:{
             top-left-radius: helper.rem(6);
             top-right-radius: helper.rem(6);
+            bottom-left-radius: 0;
+            bottom-right-radius: 0;
         }
     }
 }
 
 .full-card {
-    min-height: helper.rem(464);
+    min-height: 32rem;
 }
 
 .contact-card {
@@ -99,6 +95,9 @@
 }
 
 .project-card {
+    grid-column: 1/3;
+    height: 12rem;
+
     & .bg-card:not(.header-card) {
         border-radius: 0;
     }
@@ -116,8 +115,8 @@
         }
     }
 
-    & .padding-card {
-        padding: helper.rem(62) helper.rem(24);
+    & .project-info {
+        grid-column: 2/4;
     }
 }
 
@@ -130,16 +129,12 @@
 }
 
 .service-card {
-    & .padding-card {
-        padding:{
-            left: helper.rem(48);
-            right: helper.rem(48);
-        }
-    }
     & .img-basic {
         border:{
             top-left-radius: helper.rem(6);
+            top-right-radius:0;
             bottom-left-radius: helper.rem(6);
+            bottom-right-radius: 0;
         }
     }
 }
@@ -157,7 +152,7 @@
     }
 
     & .star-on {
-        color: helper.primary(yellow);
+        color: helper.secondary(orange-400);
     }
 }
 
@@ -172,8 +167,12 @@
     transition: all .15s;
 }
 
+.grid-col-full {
+    grid-column: 1/4;
+}
+
 // ALTERN LIGHT (GRAY)
-.altern-light-mode {
+[data-bsystem=light].darkener {
     background-color: helper.grayscale(100);
 
     & .bg-card:not(.project-card .header-card) {
@@ -199,5 +198,15 @@
 
     & .testimonial-card .header-card [class^='icon-'] {
         color: helper.grayscale(400);
+    }
+
+    & .testimonial-card .header-card .avatar {
+        filter: invert(1);
+    }
+}
+
+[data-bsystem=dark].darkener {
+    & .bg-card:not(.project-card .header-card) {
+        background-color: helper.grayscale(1100);
     }
 }
