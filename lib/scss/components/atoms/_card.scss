@@ -1,15 +1,19 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
 .card {
     border: 0;
     background-color: transparent;
+}
 
     & .simple-text {
         position: absolute;
         left: helper.space(16);
         bottom: helper.space(16);
     }
+
     & .avatar {
         position: absolute;
         left: helper.space(24);
@@ -22,7 +26,11 @@
 }
 
 .bg-card {
-    background-color: helper.grayscale(100);
+
+    @include themed.properties {
+        background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
+        // box-shadow: theme.value(0 .125rem .25rem helper.primary(blue), none);
+    }
     border-radius: helper.rem(6);
 
     &.service-text {
@@ -35,6 +43,9 @@
     .header-card {
         & [class^='icon-'] {
             font-size: helper.rem(23);
+            @include themed.properties {
+                color: themed.values(helper.grayscale(400), helper.grayscale(800));
+            }
         }
     }
 
@@ -67,7 +78,7 @@
             bottom-left-radius: helper.rem(32);
             bottom-right-radius: helper.rem(32);
         }
-        
+
         transform: translateY(- helper.rem(32));
     }
 }
@@ -107,7 +118,7 @@
         border: {
             top-right-radius: 0;
             bottom-right-radius: 0;
-            bottom-left-radius: 0;   
+            bottom-left-radius: 0;
         }
         & .header-text {
             font-size: helper.rem(72);
@@ -139,16 +150,11 @@
     }
 }
 
-.testimonial-card {
-    & .header-card [class^='icon-'] {
-        font-size: helper.rem(56);
-        color: helper.grayscale(dark);
-    }
-}
-
 .value-card {
     & .star-off {
-        color: helper.grayscale(400);
+        @include themed.properties {
+            color: themed.values(helper.grayscale(400), helper.grayscale(900));
+        }
     }
 
     & .star-on {
@@ -159,54 +165,34 @@
 .icon-description-card {
     & [class^='icon-'] {
         font-size: helper.rem(48);
+        color: helper.grayscale(800);
     }
 }
 
-.interaction-card:hover {
-    border: helper.rem(2) solid helper.primary(blue);
-    transition: all .15s;
+.interaction-card {
+    border: helper.rem(2) solid transparent;
+
+    &:hover {
+        border-color: helper.primary(blue);
+        transition: all .2s;
+
+        & .action-link {
+            @include themed.properties {
+                color: themed.values(helper.secondary(blue-500), helper.primary(blue));
+            }
+        }
+    }
 }
 
 .grid-col-full {
     grid-column: 1/4;
 }
 
-// ALTERN LIGHT (GRAY)
-[data-bsystem=light].darkener {
-    background-color: helper.grayscale(100);
-
+// DARKENER (corregir y eliminar)
+.darkener {
     & .bg-card:not(.project-card .header-card) {
-        background-color: helper.grayscale(light);
-    }
-}
-
-
-// DARK MODE
-
-[data-bsystem=dark] {
-    & .bg-card:not(.project-card .header-card) {
-        background-color: helper.grayscale(1200);
-
-        & [class^='icon-']:not(.contact-card [class^=icon-], .icon-star, .action-link [class^=icon-]) {
-            color: helper.grayscale(800);
+        @include themed.properties {
+            background-color: themed.values(helper.grayscale(light), helper.grayscale(1100)));
         }
-
-        & .value-card .star-off {
-            color: helper.grayscale(900);
-        }
-    }
-
-    & .testimonial-card .header-card [class^='icon-'] {
-        color: helper.grayscale(400);
-    }
-
-    & .testimonial-card .header-card .avatar {
-        filter: invert(1);
-    }
-}
-
-[data-bsystem=dark].darkener {
-    & .bg-card:not(.project-card .header-card) {
-        background-color: helper.grayscale(1100);
     }
 }
