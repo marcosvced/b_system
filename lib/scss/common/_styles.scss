@@ -3,6 +3,7 @@
 @use "../helpers/colors";
 @use "../helpers/themed";
 @use "../mixins/media";
+@use '../helpers/font';
 
 * {
     @include themed.properties {
@@ -11,15 +12,60 @@
 }
 
 h1 {
-    @extend %x1-text;
+    @extend %x3-text;
+    @include media.screen(md) {
+        font: {
+            size: font.size(xl);
+            family: font.family(roboto);
+            weight: font.weight(bold);
+        }
+        line-height: 1.3;
+        letter-spacing: size.rem(.5);
+    }
+    @include media.screen(xl) {
+        font: {
+            size: font.size(xxl);
+            family: font.family(roboto);
+            weight: font.weight(bold);
+        }
+        line-height: 1.19;
+        letter-spacing: size.rem(.6);
+    }
 }
 
 h2 {
-    @extend %x2-text;
+    @extend %x4-text;
+    @include media.screen(md) {
+        font: {
+            size: font.size(lg);
+            family: font.family(roboto);
+            weight: font.weight(bold);
+        }
+        line-height: 1.38;
+        letter-spacing: size.rem(.37);
+    }
+    @include media.screen(xl) {
+        font: {
+            size: font.size(xl);
+            family: font.family(roboto);
+            weight: font.weight(bold);
+        }
+        line-height: 1.3;
+        letter-spacing: size.rem(.5);
+    }
 }
 
 h3 {
-    @extend %x3-text;
+    @extend %x4-text;
+    @include media.screen(md) {
+        font: {
+            size: font.size(lg);
+            family: font.family(roboto);
+            weight: font.weight(bold);
+        }
+        line-height: 1.38;
+        letter-spacing: size.rem(.37);
+    }
 }
 
 h4 {
@@ -94,6 +140,7 @@ a {
     .col, .column {
         background-color: rgb(0, 0, 0, .45);
     }
+
     .column {
         width: 100%;
     }
