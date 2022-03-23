@@ -33,10 +33,12 @@ header.header {
         padding: 0;
         margin: 0;
         height: size.rem(20);
+
         > img {
             height: 100%;
             display: block;
         }
+
         @include media.screen(xl) {
             height: size.rem(30);
         }
@@ -59,13 +61,9 @@ header.header {
     }
 
     &.header-transparent {
-        @extend .header-light;
-
-        @include media.screen(xl) {
-            @include themed.properties {
-                background-color: transparent;
-                box-shadow: none;
-            }
+        @include themed.properties {
+            background-color: transparent;
+            box-shadow: none;
         }
 
         nav.navbar {
