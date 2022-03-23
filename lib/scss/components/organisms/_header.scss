@@ -12,7 +12,7 @@
 @use '../../mixins' as mixin;
 
 header.header {
-    padding-block: size.rem(16);
+    padding-block: size.rem(14);
     padding-inline: size.space(16);
     min-height: size.rem(48);
     transition: all .35s ease-in-out, width 0s;
@@ -29,13 +29,25 @@ header.header {
         }
     }
 
-
-    // fixes bootstrap container padding 
-    > .container-xl {
-        padding: 0 ;
+    .navbar-brand {
+        padding: 0;
+        margin: 0;
+        height: size.rem(20);
+        > img {
+            height: 100%;
+            display: block;
+        }
         @include media.screen(xl) {
-            padding-left: .75rem ;
-            padding-right: .75rem ;
+            height: size.rem(30);
+        }
+    }
+
+    // fixes bootstrap container padding
+    > .container-xl {
+        padding: 0;
+        @include media.screen(xl) {
+            padding-left: .75rem;
+            padding-right: .75rem;
         }
     }
 
@@ -87,32 +99,8 @@ header.header {
         top: 0;
     }
 
-    .purchase-button-wrapper {
-        order: 1;
-        @include media.screen(lg) {
-            order: 4;
-        }
-    }
-
-    .header__logo {
-        order: 2;
-
-        @include media.screen(lg) {
-            order: 1;
-        }
-    }
-
-    .navigation-toggle {
-        order: 3;
-        display: block;
-        @include media.screen(lg) {
-            display: none;
-        }
-    }
-
     nav.navbar {
         padding: 0;
-
     }
 
     .dropdown-menu.header-menu {
