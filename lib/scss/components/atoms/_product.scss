@@ -1,5 +1,16 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
+
+.darkener {
+        & .bg-yes {
+            @include themed.properties {
+                background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+                box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100), none);
+            }
+        }
+}
 
 .card {
     background-color: transparent;
@@ -29,11 +40,14 @@
     }
 
     & .bg-yes {
-        background-color: helper.grayscale(100);
         padding: helper.rem(24);
         border:{
             bottom-left-radius: helper.rem(4);
             bottom-right-radius: helper.rem(4);
+        }
+
+        @include themed.properties {
+            background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
         }
     }
 
@@ -46,23 +60,5 @@
 
     & .product-color {
         @include mixin.circle(8);
-    }
-}
-
-[data-bsystem="light"].darkener {
-    & .bg-yes {
-        background-color: helper.grayscale(light);
-    }
-}
-
-[data-bsystem="dark"] {
-    & .bg-yes {
-        background-color: helper.grayscale(1200);
-    }
-}
-
-[data-bsystem="dark"].darkener {
-    & .bg-yes {
-        background-color: helper.grayscale(1100);
     }
 }
