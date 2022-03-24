@@ -3,10 +3,16 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
+.darkener .bg-card {
+    @include themed.properties {
+        background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+        box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100), none);
+    }
+}
+
 .card {
     border: 0;
     background-color: transparent;
-}
 
     & .simple-text {
         position: absolute;
@@ -21,23 +27,20 @@
     }
 }
 
-.avatar {
+.card .avatar, .bg-card .avatar {
     @include mixin.circle(64);
 }
 
 .bg-card {
+    border-radius: helper.rem(6);
 
     @include themed.properties {
         background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
-        // box-shadow: theme.value(0 .125rem .25rem helper.primary(blue), none);
     }
-    border-radius: helper.rem(6);
 
     &.service-text {
-        border:{
-            top-left-radius: 0;
-            bottom-left-radius: 0;
-        }
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
     .header-card {
@@ -64,7 +67,7 @@
         }
 
         & .icon-check {
-            color: helper.primary(green) !important;
+            color: helper.primary(green);
         }
     }
 
@@ -74,23 +77,18 @@
         width: helper.rem(48);
         height: helper.rem(72);
         padding-bottom: helper.rem(8);
-        border:{
-            bottom-left-radius: helper.rem(32);
-            bottom-right-radius: helper.rem(32);
-        }
-
+        border-bottom-left-radius: helper.rem(32);
+        border-bottom-right-radius: helper.rem(32);
         transform: translateY(- helper.rem(32));
     }
 }
 
 .comparative-card {
     & .img-basic {
-        border:{
-            top-left-radius: helper.rem(6);
-            top-right-radius: helper.rem(6);
-            bottom-left-radius: 0;
-            bottom-right-radius: 0;
-        }
+        border-top-left-radius: helper.rem(6);
+        border-top-right-radius: helper.rem(6);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }
 
@@ -104,49 +102,30 @@
         justify-content: space-between;
     }
 }
+.project-container {
+    min-height: 12rem;
 
-.project-card {
-    grid-column: 1/3;
-    height: 12rem;
-
-    & .bg-card:not(.header-card) {
+    & .project-card {
         border-radius: 0;
-    }
-
-    & .header-card {
-        background-color: helper.primary(blue);
-        border: {
-            top-right-radius: 0;
-            bottom-right-radius: 0;
-            bottom-left-radius: 0;
-        }
-        & .header-text {
-            font-size: helper.rem(72);
-            color: helper.grayscale(light);
+    
+        & .header-card {
+            & .header-text {
+                font-size: helper.rem(72);
+            }
         }
     }
-
-    & .project-info {
-        grid-column: 2/4;
-    }
-}
-
-.img-container {
-    padding: 0;
 }
 
 .business-card .img-basic {
-    max-height: helper.rem(30);
+    max-width: 13rem;
 }
 
 .service-card {
     & .img-basic {
-        border:{
-            top-left-radius: helper.rem(6);
-            top-right-radius:0;
-            bottom-left-radius: helper.rem(6);
-            bottom-right-radius: 0;
-        }
+        border-top-left-radius: helper.rem(6);
+        border-top-right-radius: helper.rem(6);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }
 
@@ -170,11 +149,8 @@
 }
 
 .interaction-card {
-    border: helper.rem(2) solid transparent;
-
     &:hover {
-        border-color: helper.primary(blue);
-        transition: all .2s;
+        outline: helper.rem(2) solid helper.primary(blue);
 
         & .action-link {
             @include themed.properties {
@@ -184,15 +160,46 @@
     }
 }
 
-.grid-col-full {
-    grid-column: 1/4;
+@media (min-width: 1200px) {
+    .service-card {
+        & .img-basic {
+            border-top-left-radius: helper.rem(6);
+            border-top-right-radius: 0;
+            border-bottom-left-radius: helper.rem(6);
+            border-bottom-right-radius: 0;
+        }
+
+        & .service-text {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    .project-container {
+        height: 12rem;
+
+        & .project-card {
+            width: 55% !important;
+            position: absolute;
+            bottom: 0;
+
+            & .header-card {
+                border-top-left-radius: helper.rem(6);
+            }
+        }
+    }
 }
 
-// DARKENER (corregir y eliminar)
-.darkener {
-    & .bg-card:not(.project-card .header-card) {
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(light), helper.grayscale(1100)));
+@media (min-width: 768px) {
+    .project-card {
+        min-height: 12rem;
+        padding: 0 !important;
+
+        & .header-card {
+            background-color: helper.primary(blue);
         }
+            & .header-text {
+                color: helper.grayscale(light);
+            }
     }
 }

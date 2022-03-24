@@ -6,12 +6,14 @@
 
 <!--SECTION LIGHT-->
 <section class="section">
+
     <div class="container">
 
         <h3 class="space-bottom-88">Cards</h3>
 
-        <div class="d-grid grid-3 column-gap-24 row-gap-48">
-           <div class="d-flex flex-column space-y-24">
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+
+           <div class="col-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -23,7 +25,7 @@
                 </span>
            </div>
 
-           <div class="space-y-24">
+           <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -35,7 +37,7 @@
                 </span>
             </div>
 
-           <div class="space-y-24">
+           <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -46,7 +48,7 @@
                 </span>
            </div>
 
-           <div class="d-flex flex-column justify-content-between space-y-24">
+           <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
                     img: 'img_feature-card-1.jpg',
                     titleFeature: 'Well organized and layered',
@@ -60,8 +62,9 @@
                </span>
            </div>
 
-           <div class="d-flex flex-column justify-content-between space-y-24">
+           <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
+                    innerShadow:'on',
                     img: 'img_feature-card-1.jpg',
                     titleFeature: 'Well organized and layered',
                     text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
@@ -74,7 +77,7 @@
                 </span>
             </div>
 
-            <div class="d-flex flex-column justify-content-between space-y-24">
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
                     price: '$ 15',
                     icon: 'saving-filled',
@@ -104,7 +107,7 @@
                 </span>
             </div>
 
-            <div class="grid-col-full space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
                 <%- include( `${component}/card/business`, {
                     titleBusiness: 'Business case 1: Brandemic',
                     icon: 'star',
@@ -121,7 +124,7 @@
                 </span>
             </div>
 
-            <div class="grid-col-full space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
                 <%- include( `${component}/card/service`, {
                     titleService: 'Digital strategy',
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
@@ -137,7 +140,10 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+        </div>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
                 <%- include( `${component}/card/testimonial`, {
                     img: 'quote.svg',
                     imgAlt: 'quote icon',
@@ -168,7 +174,7 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
                 <%- include( `${component}/card/sticky`, {
                     titleContact: 'Contact us',
                     iconClose: 'blade',
@@ -184,7 +190,7 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+            <div class="col-1-to-4 space-y-24">
                 <%- include( `${component}/card/icon`, {
                     icon: 'awards-circle',
                     text: 'B system is a sketch.',
@@ -196,32 +202,39 @@
                     Icon description card
                 </span>
             </div>
+        </div>
 
-            <div class="project-card space-y-24">
-                <%- include( `${component}/card/project`, {
-                    textHeader: '01',
-                    titleProject: 'Calgary museum',
-                    hrefCard: '#',
-                    labelLink: 'Learn more',
-                    iconLink: 'links',
-                } ) %>
+        <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+                <div class="position-relative h-100">
+                    <%- include( `${component}/card/project`, {
+                        textHeader: '01',
+                        titleProject: 'Calgary museum',
+                        hrefCard: '#',
+                        labelLink: 'Learn more',
+                        iconLink: 'links',
+                    } ) %>
+                </div>
                 <span class="body-light-gray-text">
                     Project card
                 </span>
             </div>
         </div>
+
     </div>
 </section>
 <!--END: SECTION LIGHT-->
 
-<!--SECTION ALTERN LIGHT (GRAY)-->
+<!--SECTION LIGHT (GRAY BRACKGROUND)-->
 <section class="section darkener">
+
     <div class="container">
 
         <h3 class="space-bottom-88">Cards</h3>
 
-        <div class="d-grid grid-3 column-gap-24 row-gap-48">
-           <div class="d-flex flex-column space-y-24">
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+
+           <div class="col-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -233,7 +246,7 @@
                 </span>
            </div>
 
-           <div class="space-y-24">
+           <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -245,7 +258,7 @@
                 </span>
             </div>
 
-           <div class="space-y-24">
+           <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -256,7 +269,7 @@
                 </span>
            </div>
 
-           <div class="d-flex flex-column justify-content-between space-y-24">
+           <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
                     img: 'img_feature-card-1.jpg',
                     titleFeature: 'Well organized and layered',
@@ -270,8 +283,9 @@
                </span>
            </div>
 
-           <div class="d-flex flex-column justify-content-between space-y-24">
+           <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
+                    innerShadow:'on',
                     img: 'img_feature-card-1.jpg',
                     titleFeature: 'Well organized and layered',
                     text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
@@ -284,7 +298,7 @@
                 </span>
             </div>
 
-            <div class="d-flex flex-column justify-content-between space-y-24">
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
                     price: '$ 15',
                     icon: 'saving-filled',
@@ -314,7 +328,7 @@
                 </span>
             </div>
 
-            <div class="grid-col-full space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
                 <%- include( `${component}/card/business`, {
                     titleBusiness: 'Business case 1: Brandemic',
                     icon: 'star',
@@ -331,7 +345,7 @@
                 </span>
             </div>
 
-            <div class="grid-col-full space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
                 <%- include( `${component}/card/service`, {
                     titleService: 'Digital strategy',
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
@@ -347,7 +361,10 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+        </div>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
                 <%- include( `${component}/card/testimonial`, {
                     img: 'quote.svg',
                     imgAlt: 'quote icon',
@@ -378,7 +395,7 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
                 <%- include( `${component}/card/sticky`, {
                     titleContact: 'Contact us',
                     iconClose: 'blade',
@@ -394,7 +411,7 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+            <div class="col-1-to-4 space-y-24">
                 <%- include( `${component}/card/icon`, {
                     icon: 'awards-circle',
                     text: 'B system is a sketch.',
@@ -406,32 +423,39 @@
                     Icon description card
                 </span>
             </div>
+        </div>
 
-            <div class="project-card space-y-24">
-                <%- include( `${component}/card/project`, {
-                    textHeader: '01',
-                    titleProject: 'Calgary museum',
-                    hrefCard: '#',
-                    labelLink: 'Learn more',
-                    iconLink: 'links',
-                } ) %>
+        <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+                <div class="position-relative h-100">
+                    <%- include( `${component}/card/project`, {
+                        textHeader: '01',
+                        titleProject: 'Calgary museum',
+                        hrefCard: '#',
+                        labelLink: 'Learn more',
+                        iconLink: 'links',
+                    } ) %>
+                </div>
                 <span class="body-light-gray-text">
                     Project card
                 </span>
             </div>
         </div>
+
     </div>
 </section>
-<!--END: SECTION ALTER LIGHT (GRAY)-->
+<!--END: SECTION LIGHT (GRAY BRACKGROUND)-->
 
 <!--SECTION DARK-->
 <section class="section" data-bsystem="dark">
+
     <div class="container">
 
         <h3 class="space-bottom-88">Form elements dark</h3>
 
-        <div class="d-grid grid-3 column-gap-24 row-gap-48">
-           <div class="d-flex flex-column space-y-24">
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+
+           <div class="col-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -443,7 +467,7 @@
                 </span>
            </div>
 
-           <div class="space-y-24">
+           <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -455,7 +479,7 @@
                 </span>
             </div>
 
-           <div class="space-y-24">
+           <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -466,7 +490,7 @@
                 </span>
            </div>
 
-           <div class="d-flex flex-column justify-content-between space-y-24">
+           <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
                     img: 'img_feature-card-1.jpg',
                     titleFeature: 'Well organized and layered',
@@ -480,8 +504,9 @@
                </span>
            </div>
 
-           <div class="d-flex flex-column justify-content-between space-y-24">
+           <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
+                    innerShadow:'on',
                     img: 'img_feature-card-1.jpg',
                     titleFeature: 'Well organized and layered',
                     text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
@@ -494,7 +519,7 @@
                 </span>
             </div>
 
-            <div class="d-flex flex-column justify-content-between space-y-24">
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
                     price: '$ 15',
                     icon: 'saving-filled',
@@ -524,7 +549,7 @@
                 </span>
             </div>
 
-            <div class="grid-col-full space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
                 <%- include( `${component}/card/business`, {
                     titleBusiness: 'Business case 1: Brandemic',
                     icon: 'star',
@@ -541,7 +566,7 @@
                 </span>
             </div>
 
-            <div class="grid-col-full space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
                 <%- include( `${component}/card/service`, {
                     titleService: 'Digital strategy',
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
@@ -557,7 +582,10 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+        </div>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
                 <%- include( `${component}/card/testimonial`, {
                     img: 'quote-light.svg',
                     imgAlt: 'quote icon',
@@ -588,7 +616,7 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
                 <%- include( `${component}/card/sticky`, {
                     titleContact: 'Contact us',
                     iconClose: 'blade',
@@ -604,7 +632,7 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+            <div class="col-1-to-4 space-y-24">
                 <%- include( `${component}/card/icon`, {
                     icon: 'awards-circle',
                     text: 'B system is a sketch.',
@@ -616,32 +644,39 @@
                     Icon description card
                 </span>
             </div>
+        </div>
 
-            <div class="project-card space-y-24">
-                <%- include( `${component}/card/project`, {
-                    textHeader: '01',
-                    titleProject: 'Calgary museum',
-                    hrefCard: '#',
-                    labelLink: 'Learn more',
-                    iconLink: 'links',
-                } ) %>
+        <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+                <div class="position-relative h-100">
+                    <%- include( `${component}/card/project`, {
+                        textHeader: '01',
+                        titleProject: 'Calgary museum',
+                        hrefCard: '#',
+                        labelLink: 'Learn more',
+                        iconLink: 'links',
+                    } ) %>
+                </div>
                 <span class="body-light-gray-text">
                     Project card
                 </span>
             </div>
         </div>
+
     </div>
 </section>
 <!--END: SECTION DARK-->
 
-<!--SECTION DARK-->
+<!--SECTION DARK (DARKENER BACKGROUND)-->
 <section class="section darkener" data-bsystem="dark">
+
     <div class="container">
 
         <h3 class="space-bottom-88">Form elements dark</h3>
 
-        <div class="d-grid grid-3 column-gap-24 row-gap-48">
-           <div class="d-flex flex-column space-y-24">
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+
+           <div class="col-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -653,7 +688,7 @@
                 </span>
            </div>
 
-           <div class="space-y-24">
+           <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -665,7 +700,7 @@
                 </span>
             </div>
 
-           <div class="space-y-24">
+           <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
                 <%- include( `${component}/card/basic`, {
                     img: 'dummy-s.svg',
                     imgAlt: 'Card image',
@@ -676,7 +711,7 @@
                 </span>
            </div>
 
-           <div class="d-flex flex-column justify-content-between space-y-24">
+           <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
                     img: 'img_feature-card-1.jpg',
                     titleFeature: 'Well organized and layered',
@@ -690,8 +725,9 @@
                </span>
            </div>
 
-           <div class="d-flex flex-column justify-content-between space-y-24">
+           <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
+                    innerShadow:'on',
                     img: 'img_feature-card-1.jpg',
                     titleFeature: 'Well organized and layered',
                     text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
@@ -704,7 +740,7 @@
                 </span>
             </div>
 
-            <div class="d-flex flex-column justify-content-between space-y-24">
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
                 <%- include( `${component}/card/comparative`, {
                     price: '$ 15',
                     icon: 'saving-filled',
@@ -734,7 +770,7 @@
                 </span>
             </div>
 
-            <div class="grid-col-full space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
                 <%- include( `${component}/card/business`, {
                     titleBusiness: 'Business case 1: Brandemic',
                     icon: 'star',
@@ -751,7 +787,7 @@
                 </span>
             </div>
 
-            <div class="grid-col-full space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
                 <%- include( `${component}/card/service`, {
                     titleService: 'Digital strategy',
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
@@ -767,7 +803,10 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+        </div>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
                 <%- include( `${component}/card/testimonial`, {
                     img: 'quote-light.svg',
                     imgAlt: 'quote icon',
@@ -798,7 +837,7 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
                 <%- include( `${component}/card/sticky`, {
                     titleContact: 'Contact us',
                     iconClose: 'blade',
@@ -814,7 +853,7 @@
                 </span>
             </div>
 
-            <div class="space-y-24">
+            <div class="col-1-to-4 space-y-24">
                 <%- include( `${component}/card/icon`, {
                     icon: 'awards-circle',
                     text: 'B system is a sketch.',
@@ -826,20 +865,25 @@
                     Icon description card
                 </span>
             </div>
+        </div>
 
-            <div class="project-card space-y-24">
-                <%- include( `${component}/card/project`, {
-                    textHeader: '01',
-                    titleProject: 'Calgary museum',
-                    hrefCard: '#',
-                    labelLink: 'Learn more',
-                    iconLink: 'links',
-                } ) %>
+        <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+                <div class="position-relative h-100">
+                    <%- include( `${component}/card/project`, {
+                        textHeader: '01',
+                        titleProject: 'Calgary museum',
+                        hrefCard: '#',
+                        labelLink: 'Learn more',
+                        iconLink: 'links',
+                    } ) %>
+                </div>
                 <span class="body-light-gray-text">
                     Project card
                 </span>
             </div>
         </div>
+
     </div>
 </section>
-<!--END: SECTION DARK-->
+<!--END: SECTION DARK (DARKENER BACKGROUND)-->
