@@ -13,11 +13,28 @@
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
             
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                <%- include(`${component}/product/basic`, { 
+                    img: 'light_product-basic.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
+
+                    typesColor: [
+                    {
+                        color: '#000000',
+                    },
+                    {
+                        color: '#b8ddff',
+                    },
+                    {
+                        color: '#f6f6f6',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product basic
@@ -26,13 +43,16 @@
 
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                    img: 'light_product-card.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
                     iconFavorite: 'yes',
                     iconShopping: 'yes',
                     background: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
                 }) %>
                 <span class="body-light-gray-text">
                     Product
@@ -40,14 +60,17 @@
             </div>
 
             <div class="col-1-to-5 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                <%- include(`${component}/product/extended`, { 
+                    img: 'light_product-extended.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
                     iconFavorite: 'yes',
                     iconShopping: 'yes',
                     background: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
 
                     typesColor: [
                     {
@@ -70,9 +93,30 @@
             </div>
 
             <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                <%- include(`${component}/product/onlyimage`, { 
+                    img: 'light_product-image.jpg', 
                     imgAlt: 'Product image',
+                    imgRounded: 'no',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#000000',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    {
+                        color: '#6e6e6e',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product_image
@@ -80,10 +124,30 @@
             </div>
 
             <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                <%- include(`${component}/product/onlyimage`, { 
+                    img: 'light_product-image-2.jpg', 
                     imgAlt: 'Product image',
-                    imgRounded: 'yes'
+                    imgRounded: 'yes',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#000000',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    {
+                        color: '#6e6e6e',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product_image_rounded
@@ -105,11 +169,28 @@
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
             
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                <%- include(`${component}/product/basic`, { 
+                    img: 'light_product-basic.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
+
+                    typesColor: [
+                    {
+                        color: '#000000',
+                    },
+                    {
+                        color: '#b8ddff',
+                    },
+                    {
+                        color: '#f6f6f6',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product basic
@@ -118,13 +199,16 @@
 
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                    img: 'light_product-card.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
                     iconFavorite: 'yes',
                     iconShopping: 'yes',
                     background: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
                 }) %>
                 <span class="body-light-gray-text">
                     Product
@@ -132,14 +216,17 @@
             </div>
 
             <div class="col-1-to-5 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                <%- include(`${component}/product/extended`, { 
+                    img: 'light_product-extended.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
                     iconFavorite: 'yes',
                     iconShopping: 'yes',
                     background: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
 
                     typesColor: [
                     {
@@ -162,9 +249,30 @@
             </div>
 
             <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                <%- include(`${component}/product/onlyimage`, { 
+                    img: 'light_product-image.jpg', 
                     imgAlt: 'Product image',
+                    imgRounded: 'no',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#000000',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    {
+                        color: '#6e6e6e',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product_image
@@ -172,10 +280,30 @@
             </div>
 
             <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-1.jpg', 
+                <%- include(`${component}/product/onlyimage`, { 
+                    img: 'light_product-image-2.jpg', 
                     imgAlt: 'Product image',
-                    imgRounded: 'yes'
+                    imgRounded: 'yes',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#000000',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    {
+                        color: '#6e6e6e',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product_image_rounded
@@ -197,11 +325,28 @@
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
             
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                <%- include(`${component}/product/basic`, { 
+                    img: 'dark_product-basic.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#9e9e9e',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product basic
@@ -210,13 +355,16 @@
 
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                    img: 'dark_product-card.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
                     iconFavorite: 'yes',
                     iconShopping: 'yes',
                     background: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
                 }) %>
                 <span class="body-light-gray-text">
                     Product
@@ -224,21 +372,24 @@
             </div>
 
             <div class="col-1-to-5 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                <%- include(`${component}/product/extended`, { 
+                    img: 'dark_product-extended.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
                     iconFavorite: 'yes',
                     iconShopping: 'yes',
                     background: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
 
                     typesColor: [
                     {
                         color: '#ffd4ab',
                     },
                     {
-                        color: '#000000',
+                        color: '#9e9e9e',
                     },
                     {
                         color: '#00abcc',
@@ -254,9 +405,30 @@
             </div>
 
             <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                <%- include(`${component}/product/onlyimage`, { 
+                    img: 'dark_product-image.jpg', 
                     imgAlt: 'Product image',
+                    imgRounded: 'no',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#9e9e9e',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    {
+                        color: '#6e6e6e',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product_image
@@ -264,10 +436,30 @@
             </div>
 
             <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                <%- include(`${component}/product/onlyimage`, { 
+                    img: 'dark_product-image-2.jpg', 
                     imgAlt: 'Product image',
-                    imgRounded: 'yes'
+                    imgRounded: 'yes',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#9e9e9e',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    {
+                        color: '#6e6e6e',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product_image_rounded
@@ -289,11 +481,28 @@
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
             
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                <%- include(`${component}/product/basic`, { 
+                    img: 'dark_product-basic.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#9e9e9e',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product basic
@@ -302,13 +511,16 @@
 
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                    img: 'dark_product-card.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
                     iconFavorite: 'yes',
                     iconShopping: 'yes',
                     background: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
                 }) %>
                 <span class="body-light-gray-text">
                     Product
@@ -316,21 +528,24 @@
             </div>
 
             <div class="col-1-to-5 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                <%- include(`${component}/product/extended`, { 
+                    img: 'dark_product-extended.jpg', 
                     imgAlt: 'Product image',
                     name:'T-shirt Perkins ',
                     iconFavorite: 'yes',
                     iconShopping: 'yes',
                     background: 'yes',
                     price: '$ 12.99',
+                    hrefCard: '#',
+                    labelLink: 'View more',
+                    iconLink: 'links',
 
                     typesColor: [
                     {
                         color: '#ffd4ab',
                     },
                     {
-                        color: '#000000',
+                        color: '#9e9e9e',
                     },
                     {
                         color: '#00abcc',
@@ -346,9 +561,30 @@
             </div>
 
             <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                <%- include(`${component}/product/onlyimage`, { 
+                    img: 'dark_product-image.jpg', 
                     imgAlt: 'Product image',
+                    imgRounded: 'no',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#9e9e9e',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    {
+                        color: '#6e6e6e',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product_image
@@ -356,10 +592,30 @@
             </div>
 
             <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-                <%- include(`${component}/product/product`, { 
-                    img: 'product_example-2.jpg', 
+                <%- include(`${component}/product/onlyimage`, { 
+                    img: 'dark_product-image-2.jpg', 
                     imgAlt: 'Product image',
-                    imgRounded: 'yes'
+                    imgRounded: 'yes',
+                    name:'T-shirt Perkins ',
+                    iconFavorite: 'yes',
+                    iconShopping: 'yes',
+                    background: 'yes',
+                    price: '$ 12.99',
+
+                    typesColor: [
+                    {
+                        color: '#ffd4ab',
+                    },
+                    {
+                        color: '#9e9e9e',
+                    },
+                    {
+                        color: '#00abcc',
+                    },
+                    {
+                        color: '#6e6e6e',
+                    },
+                    ],
                 }) %>
                 <span class="body-light-gray-text">
                     Product_image_rounded

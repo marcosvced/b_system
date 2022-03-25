@@ -148,15 +148,28 @@
           <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Product cards</h3>
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-no" src="../../assets/img/product_example-1.jpg" alt="Product image">
-                <div class="info-product bg-no card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
+              <div class="card border-0 h-100">
+                <div class="img-container position-relative">
+                  <img class="img-card img-rounded-" src="../../assets/img/light_product-basic.jpg" alt="Product image">
+                  <div class="img-info product-transition d-flex flex-column align-items-end justify-content-between position-absolute w-100 h-100 inner-space-block-24 inner-space-inline-24">
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                    <a href="#" class="action-link ">
+                      <span>View more</span>
+                      <i class="icon-links"></i>
+                    </a>
+                    <div class="product-picker d-flex space-x-16 space-top-16">
+                      <span class="product-color d-block" style="background-color: #000000;"></span>
+                      <span class="product-color d-block" style="background-color: #b8ddff;"></span>
+                      <span class="product-color d-block" style="background-color: #f6f6f6;"></span>
+                    </div>
                   </div>
+                </div>
+                <div class="product-info card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
-                  <div class="d-flex space-x-16 space-top-16">
-                  </div>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -164,19 +177,19 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-yes" src="../../assets/img/product_example-1.jpg" alt="Product image">
-                <div class="info-product bg-yes card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
-                    <div class="nav-icons d-flex space-x-16">
-                      <i class="icon-heart"></i>
-                      <i class="icon-shopping"></i>
-                    </div>
+              <div class="card border-0 product-extend">
+                <div class="img-container position-relative">
+                  <img class="img-card img-rounded-yes" src="../../assets/img/light_product-card.jpg" alt="Product image">
+                  <div class="img-info product-transition d-flex flex-column align-items-end justify-content-center position-absolute w-100 h-100 inner-space-block-24 inner-space-inline-24">
+                    <a href="#" class="action-link ">
+                      <span>View more</span>
+                      <i class="icon-links"></i>
+                    </a>
                   </div>
+                </div>
+                <div class="product-info bg-yes card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
-                  <div class="d-flex space-x-16 space-top-16">
-                  </div>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -184,9 +197,27 @@
                 </span>
             </div>
             <div class="col-1-to-5 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-yes" src="../../assets/img/product_example-1.jpg" alt="Product image">
-                <div class="info-product bg-yes card-body space-y-7">
+              <div class="card border-0 product-extend">
+                <img class="img-card img-rounded-yes" src="../../assets/img/light_product-extended.jpg" alt="Product image">
+                <div class="product-info bg-yes card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
+                  <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
+                  <div class="d-flex space-x-16 space-top-16">
+                    <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                    <span class="product-color d-block" style="background-color: #000000;"></span>
+                    <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Product extended
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
+              <div class="only-img card border-0 position-relative overflow-hidden">
+                <img class="img-basic img-card img-rounded-no" src="../../assets/img/light_product-image.jpg" alt="Product image">
+                <div class="product-info product-transition bg-yes card-body position-absolute w-100 space-y-7">
                   <div class="d-flex align-items-center justify-content-between">
                     <h5 class="mb-0">T-shirt Perkins </h5>
                     <div class="nav-icons d-flex space-x-16">
@@ -204,20 +235,28 @@
                 </div>
               </div>
               <span class="body-light-gray-text">
-                    Product extended
-                </span>
-            </div>
-            <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-no" src="../../assets/img/product_example-1.jpg" alt="Product image">
-              </div>
-              <span class="body-light-gray-text">
                     Product_image
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-yes rounded-top-no" src="../../assets/img/product_example-1.jpg" alt="Product image">
+              <div class="only-img card border-0 position-relative overflow-hidden">
+                <img class="img-basic img-card img-rounded-yes" src="../../assets/img/light_product-image-2.jpg" alt="Product image">
+                <div class="product-info product-transition bg-yes card-body position-absolute w-100 space-y-7">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0">T-shirt Perkins </h5>
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                  </div>
+                  <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
+                  <div class="d-flex space-x-16 space-top-16">
+                    <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                    <span class="product-color d-block" style="background-color: #000000;"></span>
+                    <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
+                  </div>
+                </div>
               </div>
               <span class="body-light-gray-text">
                     Product_image_rounded
@@ -235,15 +274,28 @@
           <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Product cards</h3>
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-no" src="../../assets/img/product_example-1.jpg" alt="Product image">
-                <div class="info-product bg-no card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
+              <div class="card border-0 h-100">
+                <div class="img-container position-relative">
+                  <img class="img-card img-rounded-" src="../../assets/img/light_product-basic.jpg" alt="Product image">
+                  <div class="img-info product-transition d-flex flex-column align-items-end justify-content-between position-absolute w-100 h-100 inner-space-block-24 inner-space-inline-24">
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                    <a href="#" class="action-link ">
+                      <span>View more</span>
+                      <i class="icon-links"></i>
+                    </a>
+                    <div class="product-picker d-flex space-x-16 space-top-16">
+                      <span class="product-color d-block" style="background-color: #000000;"></span>
+                      <span class="product-color d-block" style="background-color: #b8ddff;"></span>
+                      <span class="product-color d-block" style="background-color: #f6f6f6;"></span>
+                    </div>
                   </div>
+                </div>
+                <div class="product-info card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
-                  <div class="d-flex space-x-16 space-top-16">
-                  </div>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -251,19 +303,19 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-yes" src="../../assets/img/product_example-1.jpg" alt="Product image">
-                <div class="info-product bg-yes card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
-                    <div class="nav-icons d-flex space-x-16">
-                      <i class="icon-heart"></i>
-                      <i class="icon-shopping"></i>
-                    </div>
+              <div class="card border-0 product-extend">
+                <div class="img-container position-relative">
+                  <img class="img-card img-rounded-yes" src="../../assets/img/light_product-card.jpg" alt="Product image">
+                  <div class="img-info product-transition d-flex flex-column align-items-end justify-content-center position-absolute w-100 h-100 inner-space-block-24 inner-space-inline-24">
+                    <a href="#" class="action-link ">
+                      <span>View more</span>
+                      <i class="icon-links"></i>
+                    </a>
                   </div>
+                </div>
+                <div class="product-info bg-yes card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
-                  <div class="d-flex space-x-16 space-top-16">
-                  </div>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -271,9 +323,27 @@
                 </span>
             </div>
             <div class="col-1-to-5 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-yes" src="../../assets/img/product_example-1.jpg" alt="Product image">
-                <div class="info-product bg-yes card-body space-y-7">
+              <div class="card border-0 product-extend">
+                <img class="img-card img-rounded-yes" src="../../assets/img/light_product-extended.jpg" alt="Product image">
+                <div class="product-info bg-yes card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
+                  <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
+                  <div class="d-flex space-x-16 space-top-16">
+                    <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                    <span class="product-color d-block" style="background-color: #000000;"></span>
+                    <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Product extended
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
+              <div class="only-img card border-0 position-relative overflow-hidden">
+                <img class="img-basic img-card img-rounded-no" src="../../assets/img/light_product-image.jpg" alt="Product image">
+                <div class="product-info product-transition bg-yes card-body position-absolute w-100 space-y-7">
                   <div class="d-flex align-items-center justify-content-between">
                     <h5 class="mb-0">T-shirt Perkins </h5>
                     <div class="nav-icons d-flex space-x-16">
@@ -291,20 +361,28 @@
                 </div>
               </div>
               <span class="body-light-gray-text">
-                    Product extended
-                </span>
-            </div>
-            <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-no" src="../../assets/img/product_example-1.jpg" alt="Product image">
-              </div>
-              <span class="body-light-gray-text">
                     Product_image
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-yes rounded-top-no" src="../../assets/img/product_example-1.jpg" alt="Product image">
+              <div class="only-img card border-0 position-relative overflow-hidden">
+                <img class="img-basic img-card img-rounded-yes" src="../../assets/img/light_product-image-2.jpg" alt="Product image">
+                <div class="product-info product-transition bg-yes card-body position-absolute w-100 space-y-7">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0">T-shirt Perkins </h5>
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                  </div>
+                  <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
+                  <div class="d-flex space-x-16 space-top-16">
+                    <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                    <span class="product-color d-block" style="background-color: #000000;"></span>
+                    <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
+                  </div>
+                </div>
               </div>
               <span class="body-light-gray-text">
                     Product_image_rounded
@@ -322,15 +400,28 @@
           <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Product cards</h3>
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-no" src="../../assets/img/product_example-2.jpg" alt="Product image">
-                <div class="info-product bg-no card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
+              <div class="card border-0 h-100">
+                <div class="img-container position-relative">
+                  <img class="img-card img-rounded-" src="../../assets/img/dark_product-basic.jpg" alt="Product image">
+                  <div class="img-info product-transition d-flex flex-column align-items-end justify-content-between position-absolute w-100 h-100 inner-space-block-24 inner-space-inline-24">
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                    <a href="#" class="action-link ">
+                      <span>View more</span>
+                      <i class="icon-links"></i>
+                    </a>
+                    <div class="product-picker d-flex space-x-16 space-top-16">
+                      <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                      <span class="product-color d-block" style="background-color: #9e9e9e;"></span>
+                      <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    </div>
                   </div>
+                </div>
+                <div class="product-info card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
-                  <div class="d-flex space-x-16 space-top-16">
-                  </div>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -338,19 +429,19 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-yes" src="../../assets/img/product_example-2.jpg" alt="Product image">
-                <div class="info-product bg-yes card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
-                    <div class="nav-icons d-flex space-x-16">
-                      <i class="icon-heart"></i>
-                      <i class="icon-shopping"></i>
-                    </div>
+              <div class="card border-0 product-extend">
+                <div class="img-container position-relative">
+                  <img class="img-card img-rounded-yes" src="../../assets/img/dark_product-card.jpg" alt="Product image">
+                  <div class="img-info product-transition d-flex flex-column align-items-end justify-content-center position-absolute w-100 h-100 inner-space-block-24 inner-space-inline-24">
+                    <a href="#" class="action-link ">
+                      <span>View more</span>
+                      <i class="icon-links"></i>
+                    </a>
                   </div>
+                </div>
+                <div class="product-info bg-yes card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
-                  <div class="d-flex space-x-16 space-top-16">
-                  </div>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -358,20 +449,14 @@
                 </span>
             </div>
             <div class="col-1-to-5 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-yes" src="../../assets/img/product_example-2.jpg" alt="Product image">
-                <div class="info-product bg-yes card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
-                    <div class="nav-icons d-flex space-x-16">
-                      <i class="icon-heart"></i>
-                      <i class="icon-shopping"></i>
-                    </div>
-                  </div>
+              <div class="card border-0 product-extend">
+                <img class="img-card img-rounded-yes" src="../../assets/img/dark_product-extended.jpg" alt="Product image">
+                <div class="product-info bg-yes card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
                   <div class="d-flex space-x-16 space-top-16">
                     <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
-                    <span class="product-color d-block" style="background-color: #000000;"></span>
+                    <span class="product-color d-block" style="background-color: #9e9e9e;"></span>
                     <span class="product-color d-block" style="background-color: #00abcc;"></span>
                     <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
                   </div>
@@ -382,16 +467,48 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-no" src="../../assets/img/product_example-2.jpg" alt="Product image">
+              <div class="only-img card border-0 position-relative overflow-hidden">
+                <img class="img-basic img-card img-rounded-no" src="../../assets/img/dark_product-image.jpg" alt="Product image">
+                <div class="product-info product-transition bg-yes card-body position-absolute w-100 space-y-7">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0">T-shirt Perkins </h5>
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                  </div>
+                  <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
+                  <div class="d-flex space-x-16 space-top-16">
+                    <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                    <span class="product-color d-block" style="background-color: #9e9e9e;"></span>
+                    <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
+                  </div>
+                </div>
               </div>
               <span class="body-light-gray-text">
                     Product_image
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-yes rounded-top-no" src="../../assets/img/product_example-2.jpg" alt="Product image">
+              <div class="only-img card border-0 position-relative overflow-hidden">
+                <img class="img-basic img-card img-rounded-yes" src="../../assets/img/dark_product-image-2.jpg" alt="Product image">
+                <div class="product-info product-transition bg-yes card-body position-absolute w-100 space-y-7">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0">T-shirt Perkins </h5>
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                  </div>
+                  <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
+                  <div class="d-flex space-x-16 space-top-16">
+                    <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                    <span class="product-color d-block" style="background-color: #9e9e9e;"></span>
+                    <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
+                  </div>
+                </div>
               </div>
               <span class="body-light-gray-text">
                     Product_image_rounded
@@ -409,15 +526,28 @@
           <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Product cards</h3>
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-no" src="../../assets/img/product_example-2.jpg" alt="Product image">
-                <div class="info-product bg-no card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
+              <div class="card border-0 h-100">
+                <div class="img-container position-relative">
+                  <img class="img-card img-rounded-" src="../../assets/img/dark_product-basic.jpg" alt="Product image">
+                  <div class="img-info product-transition d-flex flex-column align-items-end justify-content-between position-absolute w-100 h-100 inner-space-block-24 inner-space-inline-24">
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                    <a href="#" class="action-link ">
+                      <span>View more</span>
+                      <i class="icon-links"></i>
+                    </a>
+                    <div class="product-picker d-flex space-x-16 space-top-16">
+                      <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                      <span class="product-color d-block" style="background-color: #9e9e9e;"></span>
+                      <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    </div>
                   </div>
+                </div>
+                <div class="product-info card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
-                  <div class="d-flex space-x-16 space-top-16">
-                  </div>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -425,19 +555,19 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-yes" src="../../assets/img/product_example-2.jpg" alt="Product image">
-                <div class="info-product bg-yes card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
-                    <div class="nav-icons d-flex space-x-16">
-                      <i class="icon-heart"></i>
-                      <i class="icon-shopping"></i>
-                    </div>
+              <div class="card border-0 product-extend">
+                <div class="img-container position-relative">
+                  <img class="img-card img-rounded-yes" src="../../assets/img/dark_product-card.jpg" alt="Product image">
+                  <div class="img-info product-transition d-flex flex-column align-items-end justify-content-center position-absolute w-100 h-100 inner-space-block-24 inner-space-inline-24">
+                    <a href="#" class="action-link ">
+                      <span>View more</span>
+                      <i class="icon-links"></i>
+                    </a>
                   </div>
+                </div>
+                <div class="product-info bg-yes card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
-                  <div class="d-flex space-x-16 space-top-16">
-                  </div>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -445,20 +575,14 @@
                 </span>
             </div>
             <div class="col-1-to-5 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-yes" src="../../assets/img/product_example-2.jpg" alt="Product image">
-                <div class="info-product bg-yes card-body space-y-7">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">T-shirt Perkins </h5>
-                    <div class="nav-icons d-flex space-x-16">
-                      <i class="icon-heart"></i>
-                      <i class="icon-shopping"></i>
-                    </div>
-                  </div>
+              <div class="card border-0 product-extend">
+                <img class="img-card img-rounded-yes" src="../../assets/img/dark_product-extended.jpg" alt="Product image">
+                <div class="product-info bg-yes card-body space-y-7">
+                  <h5 class="mb-0">T-shirt Perkins </h5>
                   <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
                   <div class="d-flex space-x-16 space-top-16">
                     <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
-                    <span class="product-color d-block" style="background-color: #000000;"></span>
+                    <span class="product-color d-block" style="background-color: #9e9e9e;"></span>
                     <span class="product-color d-block" style="background-color: #00abcc;"></span>
                     <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
                   </div>
@@ -469,16 +593,48 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-no rounded-top-no" src="../../assets/img/product_example-2.jpg" alt="Product image">
+              <div class="only-img card border-0 position-relative overflow-hidden">
+                <img class="img-basic img-card img-rounded-no" src="../../assets/img/dark_product-image.jpg" alt="Product image">
+                <div class="product-info product-transition bg-yes card-body position-absolute w-100 space-y-7">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0">T-shirt Perkins </h5>
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                  </div>
+                  <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
+                  <div class="d-flex space-x-16 space-top-16">
+                    <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                    <span class="product-color d-block" style="background-color: #9e9e9e;"></span>
+                    <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
+                  </div>
+                </div>
               </div>
               <span class="body-light-gray-text">
                     Product_image
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-              <div class="card border-0">
-                <img class="img-basic img-card img-rounded-yes rounded-top-no" src="../../assets/img/product_example-2.jpg" alt="Product image">
+              <div class="only-img card border-0 position-relative overflow-hidden">
+                <img class="img-basic img-card img-rounded-yes" src="../../assets/img/dark_product-image-2.jpg" alt="Product image">
+                <div class="product-info product-transition bg-yes card-body position-absolute w-100 space-y-7">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0">T-shirt Perkins </h5>
+                    <div class="nav-icons d-flex space-x-16">
+                      <i class="icon-heart"></i>
+                      <i class="icon-shopping"></i>
+                    </div>
+                  </div>
+                  <h5 class="body-light-text product-price mb-0">$ 12.99</h5>
+                  <div class="d-flex space-x-16 space-top-16">
+                    <span class="product-color d-block" style="background-color: #ffd4ab;"></span>
+                    <span class="product-color d-block" style="background-color: #9e9e9e;"></span>
+                    <span class="product-color d-block" style="background-color: #00abcc;"></span>
+                    <span class="product-color d-block" style="background-color: #6e6e6e;"></span>
+                  </div>
+                </div>
               </div>
               <span class="body-light-gray-text">
                     Product_image_rounded

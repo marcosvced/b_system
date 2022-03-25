@@ -4,7 +4,7 @@
 @use '../../mixins' as mixin;
 
 .darkener {
-        & .bg-yes {
+        & .card .bg-yes {
             @include themed.properties {
                 background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
                 box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100), none);
@@ -19,14 +19,18 @@
         border-radius: helper.rem(8);
     }
 
-    & .card-body {
+    & .img-card {
+        max-width: 100%;
+    }
+
+    & .nav-icons {
         & [class^='icon-'] {
             font-size: helper.rem(20);
-        }
-        
-        & .product-price {
-            font-size: helper.rem(18);
-        }
+        }  
+    }
+
+    & .product-price {
+        font-size: helper.rem(18);
     }
 
     & .bg-no {
@@ -61,4 +65,77 @@
     & .product-color {
         @include mixin.circle(8);
     }
+}
+
+.product-extend {
+    .img-rounded-yes {
+        border:{
+            bottom-left-radius: 0;
+            bottom-right-radius: 0;
+        }
+    }
+}
+
+.img-container {
+    & .img.card:hover {
+        border-radius: helper.rem(4);
+    }
+
+    & .img-info {
+        background-color: helper.opacity(blue-500);
+        border-radius: helper.rem(4);
+        overflow: hidden;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+
+        & .action-link {
+            transform: translateX(8rem);
+            transition: 1.2s ease-in-out;
+        }
+
+        &:hover {
+            opacity: 1;
+
+            & .action-link {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    & [class^='icon-'], & .action-link, & .action-link:hover  {
+        color: helper.grayscale(light) !important;
+    }
+
+    & .product-picker {
+        background-color: helper.opacity(light-200);
+        padding: helper.rem(3) helper.rem(6);
+        border-radius: helper.rem(8);
+    }
+}
+
+.only-img {
+    border-radius: 0;
+    
+    & .product-info {
+        visibility: hidden;
+        bottom: -8rem;
+    }
+
+    &:hover .img-card {
+        border:{
+            bottom-left-radius: helper.rem(6);
+            bottom-right-radius: helper.rem(6); 
+        }
+        transition: .1s ease-in-out;
+    }
+
+    &:hover .product-info {
+        visibility: visible;
+        bottom: 0;
+    }
+}
+
+.product-transition {
+    transition: .95s ease-in-out;
 }
