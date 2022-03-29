@@ -13,6 +13,6 @@ module.exports = {
     LINKS: '/components/links',
     TEXTS: '/components/texts',
     CARDS: '/components/cards',
-    PRODUCTS: '/components/products',
+    PRODUCT_CARDS: '/components/productCards',
   },
 }
