@@ -3,103 +3,103 @@
 <%- contentFor('body') %>
 <!--PRODUCT CARDS-->
 
-<!--SECTION LIGHT-->
 <section class="section">
 
     <div class="container">
 
         <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Product cards</h3>
 
-        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
-            
-            <div class="col-1-to-5 d-flex flex-column space-y-24">
-                <%- include(`${component}/productCards/basic`, { 
-                    img: 'light_product-basic.jpg', 
-                    imgAlt: 'Product image',
+        <div class="d-grid grid-1 grid-sm-2 grid-xl-3 column-gap-24 space-bottom-48">
+            <div class="d-flex flex-column space-y-24">
+                <%- include(`${component}/productCards/basic`, {
+                    img: {src: 'light_product-basic', alt: 'Product image'},
                     name:'T-shirt Perkins',
-                    icon1: 'heart',
-                    icon2: 'shopping',
                     price: '$ 12.99',
-                    hrefCard: '#',
-                    labelLink: 'View more',
-                    iconLink: 'links',
-                    colors: ['#000000', '#b8ddff', '#f6f6f6'],
+                    link: {
+                        href: '#',
+                        label: 'View more',
+                        icon: 'links',
+                    },
+                    colors: ['#ffd4ab', '#000', '#00abcc', '#6e6e6e'],
+                    isDarkened: true
                 }) %>
                 <span class="body-light-gray-text">
                     Product basic
                 </span>
             </div>
-
-            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
-                <%- include(`${component}/productCards/product`, { 
-                    img: 'light_product-card.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    hrefCard: '#',
-                    labelLink: 'View more',
-                    iconLink: 'links',
-                }) %>
-                <span class="body-light-gray-text">
-                    Product
-                </span>
-            </div>
-
-            <div class="col-1-to-5 space-y-24">
-                <%- include(`${component}/productCards/extended`, { 
-                    img: 'light_product-extended.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#000000', '#00abcc', '#6e6e6e'],
-                }) %>
-                <span class="body-light-gray-text">
-                    Product extended
-                </span>
-            </div>
-
-            <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-                <%- include(`${component}/productCards/onlyimage`, { 
-                    img: 'light_product-image.jpg', 
-                    imgAlt: 'Product image',
-                    imgRounded: false,
+            <div class="d-flex flex-column space-y-24">
+                <%- include(`${component}/productCards/product`, {
+                    img: {src: 'light_product-basic', alt: 'Product image'},
                     name:'T-shirt Perkins',
-                    icon1: 'heart',
-                    icon2: 'shopping',
                     price: '$ 12.99',
-                    colors: ['#ffd4ab', '#000000', '#00abcc', '#6e6e6e'],
+                    link: {
+                        href: '#',
+                        label: 'View more',
+                        icon: 'links',
+                    },
+                    isDarkened: true
                 }) %>
                 <span class="body-light-gray-text">
-                    Product_image
+                    Product basic
                 </span>
             </div>
-
-            <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-                <%- include(`${component}/productCards/onlyimage`, { 
-                    img: 'light_product-image-2.jpg', 
-                    imgAlt: 'Product image',
-                    imgRounded: true,
-                    name:'T-shirt Perkins',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#000000', '#00abcc', '#6e6e6e'],
+        </div>
+        <div class="d-grid grid-1 grid-sm-2 grid-xl-3 column-gap-24">
+            <div class="d-flex flex-column space-y-24">
+                <%- include(`${component}/productCards/extended`, {
+                img: {src: 'light_product-basic', alt: 'Product image'},
+                name:'T-shirt Perkins',
+                price: '$ 12.99',
+                link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links',
+                },
+                colors: ['#ffd4ab', '#000', '#00abcc', '#6e6e6e'],
+                isDarkened: true
                 }) %>
                 <span class="body-light-gray-text">
-                    Product_image_rounded
+                    Product basic
+                </span>
+            </div>
+            <div class="d-flex flex-column space-y-24">
+                <%- include(`${component}/productCards/image`, {
+                img: {src: 'light_product-basic', alt: 'Product image'},
+                name:'T-shirt Perkins',
+                price: '$ 12.99',
+                link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links',
+                },
+                colors: ['#ffd4ab', '#000', '#00abcc', '#6e6e6e'],
+                isDarkened: true
+                }) %>
+                <span class="body-light-gray-text">
+                    Product basic
+                </span>
+            </div>
+            <div class="d-flex flex-column space-y-24">
+                <%- include(`${component}/productCards/image`, {
+                img: {src: 'light_product-basic', alt: 'Product image'},
+                name:'T-shirt Perkins',
+                price: '$ 12.99',
+                link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links',
+                },
+                colors: ['#ffd4ab', '#000', '#00abcc', '#6e6e6e'],
+                isDarkened: true
+                }) %>
+                <span class="body-light-gray-text">
+                    Product basic
                 </span>
             </div>
         </div>
     </div>
-
 </section>
-<!--END: SECTION LIGHT-->
 
-<!--SECTION LIGHT (GRAY BRACKGROUND)-->
 <section class="section darkener">
 
     <div class="container">
@@ -107,97 +107,27 @@
         <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Product cards</h3>
 
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
-            
+
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-                <%- include(`${component}/productCards/basic`, { 
-                    img: 'light_product-basic.jpg', 
-                    imgAlt: 'Product image',
+                <%- include(`${component}/productCards/product`, {
+                    img: {src: 'light_product-basic', alt: 'Product image'},
                     name:'T-shirt Perkins',
-                    icon1: 'heart',
-                    icon2: 'shopping',
                     price: '$ 12.99',
-                    hrefCard: '#',
-                    labelLink: 'View more',
-                    iconLink: 'links',
-                    colors: ['#000000', '#b8ddff', '#f6f6f6'],
+                    link: {
+                        href: '#',
+                        label: 'View more',
+                        icon: 'links',
+                    },
+                    colors: ['#ffd4ab', '#000', '#00abcc', '#6e6e6e'],
                 }) %>
                 <span class="body-light-gray-text">
                     Product basic
                 </span>
             </div>
-
-            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
-                <%- include(`${component}/productCards/product`, { 
-                    img: 'light_product-card.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    hrefCard: '#',
-                    labelLink: 'View more',
-                    iconLink: 'links',
-                    shadow: true,
-                }) %>
-                <span class="body-light-gray-text">
-                    Product
-                </span>
-            </div>
-
-            <div class="col-1-to-5 space-y-24">
-                <%- include(`${component}/productCards/extended`, { 
-                    img: 'light_product-extended.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#000000', '#00abcc', '#6e6e6e'],
-                    shadow: true,
-                }) %>
-                <span class="body-light-gray-text">
-                    Product extended
-                </span>
-            </div>
-
-            <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-                <%- include(`${component}/productCards/onlyimage`, { 
-                    img: 'light_product-image.jpg', 
-                    imgAlt: 'Product image',
-                    imgRounded: false,
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#000000', '#00abcc', '#6e6e6e'],
-                }) %>
-                <span class="body-light-gray-text">
-                    Product_image
-                </span>
-            </div>
-
-            <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-                <%- include(`${component}/productCards/onlyimage`, { 
-                    img: 'light_product-image-2.jpg', 
-                    imgAlt: 'Product image',
-                    imgRounded: true,
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#000000', '#00abcc', '#6e6e6e'],
-                }) %>
-                <span class="body-light-gray-text">
-                    Product_image_rounded
-                </span>
-            </div>
         </div>
     </div>
-
 </section>
-<!--END: SECTION LIGHT (GRAY BRACKGROUND)-->
 
-<!--SECTION DARK-->
 <section class="section" data-bsystem="dark">
 
     <div class="container">
@@ -205,187 +135,53 @@
         <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Product cards</h3>
 
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
-            
+
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-                <%- include(`${component}/productCards/basic`, { 
-                    img: 'dark_product-basic.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    hrefCard: '#',
-                    labelLink: 'View more',
-                    iconLink: 'links',
-                    colors: ['#000000', '#b8ddff', '#f6f6f6'],
+                <%- include(`${component}/productCards/product`, {
+                img: {src: 'light_product-basic', alt: 'Product image'},
+                name:'T-shirt Perkins',
+                price: '$ 12.99',
+                link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links',
+                },
+                colors: ['#ffd4ab', '#000', '#00abcc', '#6e6e6e'],
+                isDarkened: true
                 }) %>
                 <span class="body-light-gray-text">
                     Product basic
                 </span>
             </div>
 
-            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
-                <%- include(`${component}/productCards/product`, { 
-                    img: 'dark_product-card.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    hrefCard: '#',
-                    labelLink: 'View more',
-                    iconLink: 'links',
-                }) %>
-                <span class="body-light-gray-text">
-                    Product
-                </span>
-            </div>
-
-            <div class="col-1-to-5 space-y-24">
-                <%- include(`${component}/productCards/extended`, { 
-                    img: 'dark_product-extended.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#9e9e9e', '#00abcc', '#6e6e6e'],
-                }) %>
-                <span class="body-light-gray-text">
-                    Product extended
-                </span>
-            </div>
-
-            <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-                <%- include(`${component}/productCards/onlyimage`, { 
-                    img: 'dark_product-image.jpg', 
-                    imgAlt: 'Product image',
-                    imgRounded: false,
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#9e9e9e', '#00abcc', '#6e6e6e'],
-                }) %>
-                <span class="body-light-gray-text">
-                    Product_image
-                </span>
-            </div>
-
-            <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-                <%- include(`${component}/productCards/onlyimage`, { 
-                    img: 'dark_product-image-2.jpg', 
-                    imgAlt: 'Product image',
-                    imgRounded: true,
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#9e9e9e', '#00abcc', '#6e6e6e'],
-                }) %>
-                <span class="body-light-gray-text">
-                    Product_image_rounded
-                </span>
-            </div>
         </div>
     </div>
-
 </section>
-<!--END: SECTION DARK-->
 
-<!--SECTION DARK (DARKENER BACKGROUND))-->
 <section class="section darkener" data-bsystem="dark">
-
     <div class="container">
-
         <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Product cards</h3>
-
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48">
-            
             <div class="col-1-to-5 d-flex flex-column space-y-24">
-                <%- include(`${component}/productCards/basic`, { 
-                    img: 'dark_product-basic.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    hrefCard: '#',
-                    labelLink: 'View more',
-                    iconLink: 'links',
-                    colors: ['#000000', '#b8ddff', '#f6f6f6'],
+                <%- include(`${component}/productCards/product`, {
+                img: {src: 'light_product-basic', alt: 'Product image'},
+                name:'T-shirt Perkins',
+                price: '$ 12.99',
+                link: {
+                    href: '#',
+                    label: 'View more',
+                    icon: 'links',
+                },
+                colors: ['#ffd4ab', '#000', '#00abcc', '#6e6e6e'],
                 }) %>
                 <span class="body-light-gray-text">
                     Product basic
-                </span>
-            </div>
-
-            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
-                <%- include(`${component}/productCards/product`, { 
-                    img: 'dark_product-card.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    hrefCard: '#',
-                    labelLink: 'View more',
-                    iconLink: 'links',
-                }) %>
-                <span class="body-light-gray-text">
-                    Product
-                </span>
-            </div>
-
-            <div class="col-1-to-5 space-y-24">
-                <%- include(`${component}/productCards/extended`, { 
-                    img: 'dark_product-extended.jpg', 
-                    imgAlt: 'Product image',
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#9e9e9e', '#00abcc', '#6e6e6e'],
-                }) %>
-                <span class="body-light-gray-text">
-                    Product extended
-                </span>
-            </div>
-
-            <div class="col-1-to-5 col-xl-5-to-9 space-y-24">
-                <%- include(`${component}/productCards/onlyimage`, { 
-                    img: 'dark_product-image.jpg', 
-                    imgAlt: 'Product image',
-                    imgRounded: false,
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#9e9e9e', '#00abcc', '#6e6e6e'],
-                }) %>
-                <span class="body-light-gray-text">
-                    Product_image
-                </span>
-            </div>
-
-            <div class="col-1-to-5 col-sm-5-to-9 col-xl-9-to-13 space-y-24">
-                <%- include(`${component}/productCards/onlyimage`, { 
-                    img: 'dark_product-image-2.jpg', 
-                    imgAlt: 'Product image',
-                    imgRounded: true,
-                    name:'T-shirt Perkins ',
-                    icon1: 'heart',
-                    icon2: 'shopping',
-                    price: '$ 12.99',
-                    colors: ['#ffd4ab', '#9e9e9e', '#00abcc', '#6e6e6e'],
-                }) %>
-                <span class="body-light-gray-text">
-                    Product_image_rounded
                 </span>
             </div>
         </div>
     </div>
 
 </section>
-<!--END: SECTION DARK (DARKENER BACKGROUND)-->
+
+
 
