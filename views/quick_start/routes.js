@@ -53,4 +53,9 @@ route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
 })
 
+/* Grid Cells page. */
+route.get(routePaths.QUICK_START.GRIDCELLS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['gridCells']))
+})
+
 module.exports = route
