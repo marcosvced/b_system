@@ -12,15 +12,14 @@ a {
             color: themed.values(helper.primary('blue'), helper.secondary(blue-400));
         }
 
-        > *:not(:last-child) {
-            margin-right: helper.rem(8);
-        }
+        @include mixin.x(8);
+
 
         > span {
             font-weight: helper.weight(medium);
             line-height: helper.rem(24);
             color: inherit;
-
+            transition: margin-right .25s ease-in-out;
         }
 
         &.link-bold > span {
@@ -39,9 +38,14 @@ a {
             font-size: helper.rem(20);
             display: inline-flex;
             color: inherit;
+            transition: transform .25 ease-in-out;
         }
 
         &:hover {
+            > span {
+                margin-right: helper.rem(12);
+            }
+
             @include themed.properties {
                 color: themed.values(helper.secondary(blue-500), helper.primary('blue'));
             }

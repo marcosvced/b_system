@@ -1,0 +1,56 @@
+@use '../helpers/font';
+@use '../helpers/colors';
+@use "../helpers/size";
+@use '../helpers/themed';
+
+
+// BACKGROUNDS BORDERS
+
+@mixin white-line-100 {
+    border-bottom: 1px solid colors.grayscale(300);
+}
+
+@mixin dark-line-1100 {
+    border-bottom: 1px solid colors.grayscale(900);
+}
+
+@mixin grey-line-100 {
+    border-bottom: 1px solid colors.grayscale(400);
+}
+
+@mixin dark-line-1200 {
+    border-bottom: 1px solid colors.grayscale(1000);
+}
+
+
+// BORDERS
+
+@mixin border-white($width: 1px, $borders: ['left','top','right','bottom']) {
+
+
+    @each $border in $borders {
+        @if (map-has-key(['left','top','right','bottom'], $border)) {
+            border-#{$border}: $width solid colors.grayscale(light);
+        }
+        @else {
+            @error "#{$border} isn't a valid value.";
+        }
+    }
+}
+
+@mixin border-grey($hue, $borders: ('left','top','right','bottom')) {
+
+    @if (false == map-has-key((100,200,300,400,500), $hue)) {
+        @each $border in $borders {
+            @if (map-has-key(('left','top','right','bottom'), $border)) {
+                border-#{$border}: 1px solid colors.grayscale(200);
+            }
+            @else {
+                @error "#{$border} isn't a valid value.";
+            }
+        }
+    } @else {
+        @error "Property $hue must be either 100, 200, 300, 400 or 500.";
+    }
+
+}
