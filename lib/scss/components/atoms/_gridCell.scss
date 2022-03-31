@@ -1,0 +1,47 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+%horizontal {
+    width: 49rem;
+}
+
+%vertical {
+    height: 52rem;
+}
+
+.gridcell-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cellbasic-horizontal {
+    @extend %horizontal;
+}
+
+.cellbasic-vertical {
+    @extend %vertical;
+}
+
+.cellbasic {
+    padding: helper.space(24);
+    height: 26rem;
+}
+
+.gridcell-component {
+    @extend %horizontal;
+
+    .cellcomponent {
+        border-radius: helper.rem(8);
+        @extend %vertical;
+
+        .cellcomponent-info {
+            bottom: 0;
+        }
+    }
+}
+
+.bg-opacity {
+    background-color: helper.opacity(gray-200);
+}
