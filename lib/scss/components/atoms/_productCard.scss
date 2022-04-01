@@ -171,8 +171,8 @@
             bottom: 0;
             transform: translateY(100%);
             @include mixin.slow-transition(transform);
-            border-bottom-left-radius: calc(#{$product-card-cr-standard} - 1px);
-            border-bottom-right-radius: calc(#{$product-card-cr-standard} - 1px);
+            border-bottom-left-radius: calc(#{$product-card-cr-standard} - 0.1rem);
+            border-bottom-right-radius: calc(#{$product-card-cr-standard} - 0.1rem);
         }
 
         &:hover {
@@ -187,8 +187,8 @@
             border-radius: $product-card-cr-rounded !important;
 
             .product-info {
-                border-bottom-left-radius: calc(#{$product-card-cr-rounded} - 1px);
-                border-bottom-right-radius: calc(#{$product-card-cr-rounded} - 1px);
+                border-bottom-left-radius: calc(#{$product-card-cr-rounded} - 0.1rem);
+                border-bottom-right-radius: calc(#{$product-card-cr-rounded} - 0.1rem);
             }
         }
     }
