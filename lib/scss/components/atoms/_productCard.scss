@@ -3,143 +3,10 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-/*.section {
-    & .card .bg-none {
-        background-color: transparent !important;
-        padding: {
-            inline: 0;
-        }
-    }
-}
-
-.darkener {
-    & .card .product-info {
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
-        }
-    }
-}
-
-.card-shadow {
-    box-shadow: 0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100);
-}
-
-.card {
-    background-color: transparent;
-
-    & .img-rounded {
-        border-radius: helper.rem(8);
-    }
-
-    & .img-card {
-        max-width: 100%;
-    }
-
-    & .nav-icons {
-        & [class^='icon-'] {
-            font-size: helper.rem(20);
-        }
-    }
-
-    & .product-price {
-        font-size: helper.rem(18);
-    }
-
-    & .product-info {
-        padding: helper.rem(24);
-        border: {
-            bottom-left-radius: helper.rem(4);
-            bottom-right-radius: helper.rem(4);
-        }
-
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
-        }
-    }
-
-    & .product-color {
-        @include mixin.circle(8);
-    }
-}
-
-.product-extend {
-    .img-rounded {
-        border: {
-            bottom-left-radius: 0;
-            bottom-right-radius: 0;
-        }
-    }
-}
-
-.img-container {
-    & .img-card:hover {
-        border-radius: helper.rem(4);
-    }
-
-    & .img-info {
-        width: 100%;
-        height: 100%;
-        background-color: helper.opacity(blue-500);
-        border-radius: helper.rem(4);
-        padding: helper.rem(24);
-        overflow: hidden;
-        top: 0;
-        opacity: 0;
-        cursor: pointer;
-
-        & .action-link {
-            transform: translateX(8rem);
-            transition: .25s ease-in-out;
-        }
-
-        &:hover {
-            opacity: 1;
-
-            & .action-link {
-                transform: translateX(0);
-            }
-        }
-    }
-
-    & [class^='icon-'], & .action-link, & .action-link:hover {
-        color: helper.grayscale(light) !important;
-    }
-
-    & .product-picker {
-        background-color: helper.opacity(light-200);
-        padding: helper.rem(3) helper.rem(6);
-        border-radius: helper.rem(8);
-    }
-}
-
-.only-img {
-    border: none;
-    border-radius: 0;
-
-    & .product-info {
-        visibility: hidden;
-        bottom: -8rem;
-    }
-
-    &:hover .img-card {
-        border: {
-            bottom-left-radius: helper.rem(6);
-            bottom-right-radius: helper.rem(6);
-        }
-        transition: .25s ease-in-out;
-    }
-
-    &:hover .product-info {
-        visibility: visible;
-        bottom: 0;
-    }
-}
-
-.product-transition {
-    transition: .25s ease-in-out;
-}*/
-
 .product-card {
+    $product-card-cr-standard: helper.rem(4);
+    $product-card-cr-rounded: helper.rem(8);
+
     @include themed.light {
         @include mixin.shadow-500;
     }
@@ -148,8 +15,14 @@
     }
 
     &.rounded {
+        .product-image {
+            border-top-left-radius: $product-card-cr-rounded;
+            border-top-right-radius: $product-card-cr-rounded;
+        }
+
         .product-info {
-            // Border bottom radius
+            border-bottom-left-radius: $product-card-cr-rounded;
+            border-bottom-right-radius: $product-card-cr-rounded;
         }
     }
 
@@ -166,8 +39,8 @@
     .product-image {
         position: relative;
         overflow: hidden;
-        border-top-left-radius: helper.rem(4);
-        border-top-right-radius: helper.rem(4);
+        border-top-left-radius: $product-card-cr-standard;
+        border-top-right-radius: $product-card-cr-standard;
 
         picture {
             width: 100%;
@@ -214,8 +87,8 @@
     }
 
     .product-info {
-        border-bottom-left-radius: helper.rem(4);
-        border-bottom-right-radius: helper.rem(4);
+        border-bottom-left-radius: $product-card-cr-standard;
+        border-bottom-right-radius: $product-card-cr-standard;
         padding: helper.space(24);
         @include themed.properties {
             background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
@@ -244,9 +117,16 @@
     &-basic {
         &,
         &.darkened {
+            box-shadow: none;
+
+            .product-image {
+                border-radius: $product-card-cr-standard;
+            }
+
             .product-info-icons {
                 position: absolute;
                 right: helper.space(24);
+
 
                 & > * > i {
                     color: helper.grayscale(light);
@@ -254,6 +134,7 @@
             }
 
             .product-info {
+                padding-inline: 0;
                 @include themed.properties {
                     background-color: themed.values(transparent, transparent);
                 }
@@ -269,7 +150,6 @@
                 bottom: helper.space(24);
             }
         }
-
     }
 
     &-extended {
@@ -277,27 +157,38 @@
     }
 
     &-image {
-        border-radius: helper.rem(4);
         position: relative;
         overflow: hidden;
         cursor: pointer;
+        border-radius: $product-card-cr-standard;
 
-        .product-image {
-            border-radius: helper.rem(4);
-        }
+        // Safari border radius overflow hidden fixed
+        transform: translateX(0);
 
         .product-info {
             position: absolute;
             width: 100%;
             bottom: 0;
             transform: translateY(100%);
-            @include mixin.slow-transition(transform)
+            @include mixin.slow-transition(transform);
+            border-bottom-left-radius: calc(#{$product-card-cr-standard} - 1px);
+            border-bottom-right-radius: calc(#{$product-card-cr-standard} - 1px);
         }
 
         &:hover {
             .product-info {
                 transform: translateY(0);
 
+            }
+        }
+
+        &.rounded {
+            // It's important because of Bootstrap
+            border-radius: $product-card-cr-rounded !important;
+
+            .product-info {
+                border-bottom-left-radius: calc(#{$product-card-cr-rounded} - 1px);
+                border-bottom-right-radius: calc(#{$product-card-cr-rounded} - 1px);
             }
         }
     }
