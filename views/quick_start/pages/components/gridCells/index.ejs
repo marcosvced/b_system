@@ -11,12 +11,18 @@
 
         <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Grid Cells</h3>
         
-        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
-            <div class="col-1-to-5 space-y-24">
+        <div class="d-grid grid-1 grid-lg-3 column-gap-24 space-bottom-48">
+            <div class="space-y-24">
                 <%- include(`${component}/gridCell/basic`, {
                     name:'Danielle Jolie',
                     job:'UX/UI',
-                    img:'gridcells_basic-01.jpg',
+                    img: {src: 'gridcells_basic-01', alt: 'Grid cell basic'},
+                    link: {
+                        href: '#',
+                        label: 'Profile',
+                        icon: 'links',
+                    },
+                    
                     variant: 'basic'
                 }) %>
                 <span class="body-light-gray-text">
@@ -24,39 +30,66 @@
                 </span>
             </div>
 
-            <div class="col-5-to-13 space-y-24 space-left-72">
+            <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
                 <%- include(`${component}/gridCell/basic`, {
                     name:'Marza Jolie',
                     job:'UI Designer',
-                    img:'gridcells_basic-02.jpg',
+                    img: {src: 'gridcells_basic-02', alt: 'Grid cell basic'},
+                    link: {
+                        href: '#',
+                        label: 'Profile',
+                        icon: 'links',
+                    },
                     variant: 'horizontal'
                 }) %>
                 <span class="body-light-gray-text">
                     Grid cell basic horizontal
                 </span>
             </div>
+        </div>
 
-            <div class="gridcell-vertical col-1-to-5 row-2-to-4 space-y-24">
+        <div class="d-grid grid-1 grid-lg-3 column-gap-24 space-bottom-48">
+            <div class="space-y-24">
                 <%- include(`${component}/gridCell/basic`, {
                     name:'Martha Nielsen',
                     job:'UX Writer',
-                    img:'gridcells_basic-03.jpg',
+                    img: {src: 'gridcells_basic-03', alt: 'Grid cell basic'},
+                    link: {
+                        href: '#',
+                        label: 'Profile',
+                        icon: 'links',
+                    },
+                    variant: 'vertical',
                 }) %>
                 <span class="body-light-gray-text">
                     Grid cell basic vertical
                 </span>
             </div>
 
-            <div class="gridcell-component col-5-to-13 row-2-to-4 space-y-24 space-left-72">
+            <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
                 <%- include(`${component}/gridCell/component`, {
                     title:'An organic design system',
                     text:'With fully scalable and reusable components.',
-                    img:'gridcells_component-01.jpg',
+                    img: {src: 'gridcells_component-01', alt: 'Grid cell component'},
                 }) %>
                 <span class="body-light-gray-text">
                     Grid cell component
                 </span>
             </div>
         </div>
+
+        <div class="d-grid grid-1 grid-lg-2 column-gap-24 space-bottom-48">
+            <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
+                <%- include(`${component}/gridCell/component`, {
+                    title:'An organic design system',
+                    text:'With fully scalable and reusable components.',
+                    img: {src: 'gridcells_component-01', alt: 'Grid cell component'},
+                }) %>
+                <span class="body-light-gray-text">
+                    Grid cell component
+                </span>
+            </div>
+        </div>
+
     </div>
 </section>

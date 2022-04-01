@@ -3,45 +3,114 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-%horizontal {
-    width: 49rem;
-}
-
 %vertical {
-    height: 52rem;
+    height: helper.rem(736);
 }
 
-.gridcell-cover {
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+.gridcell {
+    position: relative;
+    z-index: 0;
+    
+    .gridcell-containter-img {
+        width:100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
 
-.cellbasic-horizontal {
-    @extend %horizontal;
-}
+        .gridcell-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
-.cellbasic-vertical {
-    @extend %vertical;
+    [class^=icon-] {
+        color: helper.grayscale(light);
+    }
 }
 
 .cellbasic {
-    padding: helper.space(24);
-    height: 26rem;
-}
+    height: helper.rem(368);
+    overflow: hidden;
 
-.gridcell-component {
-    @extend %horizontal;
-
-    .cellcomponent {
-        border-radius: helper.rem(8);
+    &.cellbasic-vertical {
         @extend %vertical;
+    }
 
-        .cellcomponent-info {
-            bottom: 0;
+    .cellbasic-profile {
+        padding: helper.space(24);
+
+        .action-link {
+            color: helper.grayscale(light);
+            position: absolute;
+            right: helper.space(24);
+            transform: translateX(-10%);
+            opacity: 0;
+            transition: .25s ease;
+        }
+    }
+
+    .cellbasic-contact {
+        width: 100%;
+        padding: helper.space(24);
+        position: absolute;
+        bottom: 0;
+        transform: translateY(100%);
+        transition: .25s ease;
+    }
+
+    &:hover {
+        .cellbasic-contact {
+            transform: translateY(0);
+        }
+
+        .action-link {
+            transform: translateX(0);
+            opacity: 1;
         }
     }
 }
 
-.bg-opacity {
+.cellcomponent {
+    border-radius: helper.rem(8);
+    @extend %vertical;
+    position: relative;
+    z-index: 0;
+
+    .cellcomponent-info {
+        bottom: 0;
+        transition: .25s ease;
+    }
+
+    .cellcomponent-nav-hover {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        transition: .25s ease;
+    }
+
+    &:hover {
+        .bg-opacity {
+            background-color: transparent;
+    
+            &.cellcomponent-info {
+                transform: translateY(-18rem);
+                transition-delay: .15s;
+            }
+        }
+
+        .cellcomponent-nav-hover {
+            opacity: 1;
+        }
+    }
+}
+
+.bg-opacity, .cellcomponent-nav-hover {
     background-color: helper.opacity(gray-200);
 }
