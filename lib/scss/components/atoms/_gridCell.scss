@@ -113,11 +113,26 @@
 
 .cellcontent {
     height: helper.rem(568);
+    transition: .25s ease;
+
+    &.gridcell-border {
+        outline: helper.rem(1) solid helper.grayscale(300);
+        outline-offset: - helper.rem(1);
+    }
+
+    &:not(.bg-transparent) .text, &:not(.bg-transparent) .action-link {
+        color: helper.grayscale(light);
+    }
 
     .cellcontent-content {
         height: 100%;
     }
+    
+    &:not(.bg-transparent):hover {
+        background-color: helper.secondary(blue-500) !important;
+    }
 }
+
 
 .bg-opacity, .cellcomponent-nav-hover {
     background-color: helper.opacity(gray-200);
