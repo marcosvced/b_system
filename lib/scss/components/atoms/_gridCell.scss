@@ -111,6 +111,14 @@
     }
 }
 
+.cellcontent {
+    height: helper.rem(568);
+
+    .cellcontent-content {
+        height: 100%;
+    }
+}
+
 .bg-opacity, .cellcomponent-nav-hover {
     background-color: helper.opacity(gray-200);
 }

@@ -80,15 +80,28 @@
 
         <div class="d-grid grid-1 grid-lg-2 column-gap-24 space-bottom-48">
             <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
-                <%- include(`${component}/gridCell/component`, {
-                    title:'An organic design system',
-                    text:'With fully scalable and reusable components.',
-                    img: {src: 'gridcells_component-01', alt: 'Grid cell component'},
+                <%- include(`${component}/gridCell/content`, {
+                    img: {src: 'gridcells_portfolio-01', alt: 'Grid cell content'},
                 }) %>
                 <span class="body-light-gray-text">
                     Grid cell component
                 </span>
             </div>
+
+            <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
+                <%- include(`${component}/gridCell/content`, {
+                    title:'Packaging design',
+                    text:'We create boxes, bottles, bags, packaging, labels, signage of spaces, exterior signage, corporeal.',
+                    img: {src: 'gridcells_portfolio-01', alt: 'Grid cell content'},
+                    linkHref: '#',
+                    linkLabel: 'View more',
+                    linkIcon: 'link',
+                }) %>
+                <span class="body-light-gray-text">
+                    Grid cell component
+                </span>
+            </div>
+
         </div>
 
     </div>
