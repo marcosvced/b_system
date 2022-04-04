@@ -12,6 +12,8 @@ module.exports = {
     ICONS: '/components/icons',
     LINKS: '/components/links',
     TEXTS: '/components/texts',
+    CARDS: '/components/cards',
+    PRODUCT_CARDS: '/components/productCards',
     GRIDCELLS: '/components/gridCells',
   },
 }

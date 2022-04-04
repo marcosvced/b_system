@@ -38,12 +38,12 @@ a {
             font-size: helper.rem(20);
             display: inline-flex;
             color: inherit;
-            transition: transform .25 ease-in-out;
+            @include mixin.fast-transition(transform);
         }
 
         &:hover {
-            > span {
-                margin-right: helper.rem(12);
+            > span + [class*='icon-'] {
+                transform: translateX(helper.rem(4));
             }
 
             @include themed.properties {
