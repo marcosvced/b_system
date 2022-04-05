@@ -7,12 +7,15 @@
     height: helper.rem(736);
 }
 
-.gridcell {
+.grid-cell {
+    $parent: &;
     position: relative;
     z-index: 0;
-    
-    .gridcell-containter-img {
-        width:100%;
+    overflow: hidden;
+    width: 100%;
+
+    #{&}-container-img {
+        width: 100%;
         height: 100%;
         display: block;
         position: absolute;
@@ -20,7 +23,7 @@
         left: 0;
         z-index: -1;
 
-        .gridcell-img {
+        #{$parent}-img {
             display: block;
             width: 100%;
             height: 100%;
@@ -28,20 +31,9 @@
         }
     }
 
-    [class^=icon-] {
-        color: helper.grayscale(light);
-    }
-}
-
-.cellbasic {
-    height: helper.rem(368);
-    overflow: hidden;
-
-    &.cellbasic-vertical {
-        @extend %vertical;
-    }
-
-    .cellbasic-profile {
+    #{&}-profile {
+        position: absolute;
+        width: 100%;
         padding: helper.space(24);
 
         .action-link {
@@ -50,21 +42,29 @@
             right: helper.space(24);
             transform: translateX(-10%);
             opacity: 0;
-            transition: .25s ease;
+            @include mixin.slow-transition('opacity, transform');
         }
     }
 
-    .cellbasic-contact {
+    #{&}-social {
         width: 100%;
         padding: helper.space(24);
         position: absolute;
         bottom: 0;
         transform: translateY(100%);
-        transition: .25s ease;
+        background-color: helper.opacity(gray-200);
+        @include mixin.slow-transition(transform);
+
+        > .btn-only-icon {
+            [class^=icon-] {
+                color: helper.grayscale(light);
+                font-size: helper.rem(24);
+            }
+        }
     }
 
     &:hover {
-        .cellbasic-contact {
+        #{$parent}-social {
             transform: translateY(0);
         }
 
@@ -73,67 +73,73 @@
             opacity: 1;
         }
     }
-}
 
-.cellcomponent {
-    border-radius: helper.rem(8);
-    @extend %vertical;
-    position: relative;
-    z-index: 0;
+    &-basic {
+        padding-bottom: 100%;
 
-    .cellcomponent-info {
-        bottom: 0;
-        transition: .25s ease;
+        &-horizontal {
+            padding-bottom: 50%;
+        }
+
+        &-vertical {
+            padding-bottom: 200%;
+        }
     }
 
-    .cellcomponent-nav-hover {
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        position: absolute;
-        z-index: -1;
-        transition: .25s ease;
-    }
+    &-component {
+        $parent: &;
+        border-radius: helper.rem(8);
+        padding-bottom: 100%;
 
-    &:hover {
-        .bg-opacity {
-            background-color: transparent;
-    
-            &.cellcomponent-info {
-                transform: translateY(-18rem);
-                transition-delay: .15s;
+        &:hover {
+            #{$parent}-info {
+                //background-color: transparent;
+                //bottom: 50%;
+                //transform: translateY(50%);
+                min-height: 100%;
             }
         }
 
-        .cellcomponent-nav-hover {
-            opacity: 1;
+        #{&}-info {
+            background-color: helper.opacity(gray-200);
+            bottom: 0;
+            transition-delay: .15s;
+            position: absolute;
+            width: 100%;
+            min-height: 0;
+            @include mixin.slow-transition(min-height);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
         }
-    }
-}
 
-.cellcontent {
-    height: helper.rem(568);
-    transition: .25s ease;
-
-    &.gridcell-border {
-        outline: helper.rem(1) solid helper.grayscale(300);
-        outline-offset: - helper.rem(1);
     }
 
-    &:not(.bg-transparent) .text, &:not(.bg-transparent) .action-link {
-        color: helper.grayscale(light);
-    }
+    &-content {
+        padding-bottom: 100%;
+        #{&}-wrapper {
+            position: absolute;
+            padding: 0 helper.space(48) helper.space(48);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-    .cellcontent-content {
-        height: 100%;
-    }
-    
-    &:not(.bg-transparent):hover {
-        background-color: helper.secondary(blue-500) !important;
-    }
-}
+        &.grid-cell-border {
+            border: helper.rem(1) solid helper.grayscale(300);
+        }
+
+        &:not(.bg-transparent) .text, &:not(.bg-transparent) .action-link {
+            color: helper.grayscale(light);
+        }
 
 
-.bg-opacity, .cellcomponent-nav-hover {
-    background-color: helper.opacity(gray-200);
+        &:not(.bg-transparent):hover {
+            background-color: helper.secondary(blue-500) !important;
+        }
+
+    }
 }

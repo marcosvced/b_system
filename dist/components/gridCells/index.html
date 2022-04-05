@@ -9,6 +9,17 @@
 
     <!--B_System styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
+    <style lang="css">
+      .grid-cell.grid-cell-basic-horizontal {
+        padding-bottom: calc(50% - 12px);
+      }
+      .grid-cell.grid-cell-component {
+        padding-bottom: calc(100% - 24px);
+      }
+      .size-fixed .grid-cell.grid-cell-content {
+        padding-bottom: calc(100% - 24px);
+      }
+    </style>
   </head>
   <body>
 
@@ -90,7 +101,7 @@
                       <a class="dropdown-item " href="#">Cards</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Product Cards</a>
+                      <a class="dropdown-item " href="../../components/productCards">Product Cards</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../components/links">Links</a>
@@ -148,12 +159,12 @@
           <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Grid Cells</h3>
           <div class="d-grid grid-1 grid-lg-3 column-gap-24 space-bottom-48">
             <div class="space-y-24">
-              <div class="gridcell cellbasic cellbasic-basic">
-                <picture class="gridcell-containter-img">
-                  <img class="gridcell-img" src="../../assets/img/gridcells_basic-01.jpg" alt="Grid cell basic">
+              <div class="grid-cell grid-cell-basic">
+                <picture class="grid-cell-container-img">
+                  <img class="grid-cell-img" src="../../assets/img/gridcells_basic-01.jpg" alt="Grid cell basic">
                 </picture>
-                <div class="cellbasic-profile d-flex justify-content-between align-items-start">
-                  <div class="cellbasic-user">
+                <div class="grid-cell-profile d-flex justify-content-between align-items-start">
+                  <div class="grid-cell-user">
                     <p class="body-bold-text text-white mb-0">Danielle Jolie</p>
                     <p class="text-white mb-0">UX/UI</p>
                   </div>
@@ -162,10 +173,16 @@
                     <i class="icon-links"></i>
                   </a>
                 </div>
-                <div class="cellbasic-contact bg-opacity d-flex justify-content-center gap-48">
-                  <i class="icon-twitter"></i>
-                  <i class="icon-behance"></i>
-                  <i class="icon-linkedin"></i>
+                <div class="grid-cell-social bg-opacity d-flex justify-content-center gap-48">
+                  <button href="#" class="btn btn-only-icon">
+                    <i class="icon-twitter"></i>
+                  </button>
+                  <button href="#" class="btn btn-only-icon">
+                    <i class="icon-behance"></i>
+                  </button>
+                  <button href="#" class="btn btn-only-icon">
+                    <i class="icon-linkedin"></i>
+                  </button>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -173,12 +190,12 @@
                 </span>
             </div>
             <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
-              <div class="gridcell cellbasic cellbasic-horizontal">
-                <picture class="gridcell-containter-img">
-                  <img class="gridcell-img" src="../../assets/img/gridcells_basic-02.jpg" alt="Grid cell basic">
+              <div class="grid-cell grid-cell-basic-horizontal">
+                <picture class="grid-cell-container-img">
+                  <img class="grid-cell-img" src="../../assets/img/gridcells_basic-02.jpg" alt="Grid cell basic">
                 </picture>
-                <div class="cellbasic-profile d-flex justify-content-between align-items-start">
-                  <div class="cellbasic-user">
+                <div class="grid-cell-profile d-flex justify-content-between align-items-start">
+                  <div class="grid-cell-user">
                     <p class="body-bold-text text-white mb-0">Marza Jolie</p>
                     <p class="text-white mb-0">UI Designer</p>
                   </div>
@@ -187,10 +204,16 @@
                     <i class="icon-links"></i>
                   </a>
                 </div>
-                <div class="cellbasic-contact bg-opacity d-flex justify-content-center gap-48">
-                  <i class="icon-twitter"></i>
-                  <i class="icon-behance"></i>
-                  <i class="icon-linkedin"></i>
+                <div class="grid-cell-social bg-opacity d-flex justify-content-center gap-48">
+                  <button href="#" class="btn btn-only-icon">
+                    <i class="icon-twitter"></i>
+                  </button>
+                  <button href="#" class="btn btn-only-icon">
+                    <i class="icon-behance"></i>
+                  </button>
+                  <button href="#" class="btn btn-only-icon">
+                    <i class="icon-linkedin"></i>
+                  </button>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -200,12 +223,12 @@
           </div>
           <div class="d-grid grid-1 grid-lg-3 column-gap-24 space-bottom-48">
             <div class="space-y-24">
-              <div class="gridcell cellbasic cellbasic-vertical">
-                <picture class="gridcell-containter-img">
-                  <img class="gridcell-img" src="../../assets/img/gridcells_basic-03.jpg" alt="Grid cell basic">
+              <div class="grid-cell grid-cell-basic-vertical">
+                <picture class="grid-cell-container-img">
+                  <img class="grid-cell-img" src="../../assets/img/gridcells_basic-03.jpg" alt="Grid cell basic">
                 </picture>
-                <div class="cellbasic-profile d-flex justify-content-between align-items-start">
-                  <div class="cellbasic-user">
+                <div class="grid-cell-profile d-flex justify-content-between align-items-start">
+                  <div class="grid-cell-user">
                     <p class="body-bold-text text-white mb-0">Martha Nielsen</p>
                     <p class="text-white mb-0">UX Writer</p>
                   </div>
@@ -214,10 +237,16 @@
                     <i class="icon-links"></i>
                   </a>
                 </div>
-                <div class="cellbasic-contact bg-opacity d-flex justify-content-center gap-48">
-                  <i class="icon-twitter"></i>
-                  <i class="icon-behance"></i>
-                  <i class="icon-linkedin"></i>
+                <div class="grid-cell-social bg-opacity d-flex justify-content-center gap-48">
+                  <button href="#" class="btn btn-only-icon">
+                    <i class="icon-twitter"></i>
+                  </button>
+                  <button href="#" class="btn btn-only-icon">
+                    <i class="icon-behance"></i>
+                  </button>
+                  <button href="#" class="btn btn-only-icon">
+                    <i class="icon-linkedin"></i>
+                  </button>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -225,19 +254,15 @@
                 </span>
             </div>
             <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
-              <div class="cellcomponent gridcell overflow-hidden">
-                <picture class="gridcell-containter-img">
-                  <img class="gridcell-img" src="../../assets/img/gridcells_component-01.jpg" alt="Grid cell component">
+              <div class="grid-cell grid-cell-component overflow-hidden">
+                <picture class="grid-cell-container-img">
+                  <img class="grid-cell-img" src="../../assets/img/gridcells_component-01.jpg" alt="Grid cell component">
                 </picture>
-                <div class="cellcomponent-info bg-opacity position-absolute w-100 inner-space-block-32 inner-space-inline-32">
-                  <h4 class="text-white">An organic design system</h4>
-                  <p class="text-white mb-0">With fully scalable and reusable components.</p>
-                </div>
-                <div class="cellcomponent-nav-hover d-flex flex-column justify-content-between align-items-end inner-space-block-32 inner-space-inline-32">
-                  <div class="cellcomponent-icons d-flex column-gap-16">
+                <div class="grid-cell-component-info inner-space-block-32 inner-space-inline-32">
+                  <div class="info-wrapper">
+                    <h4 class="text-white">An organic design system</h4>
+                    <p class="text-white mb-0">With fully scalable and reusable components.</p>
                   </div>
-                  <i class="icon-dart-next"></i>
-                  <i class="icon-download"></i>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -247,21 +272,22 @@
           </div>
           <div class="d-grid grid-1 grid-lg-2 column-gap-24 space-bottom-48">
             <div class="col-1-to-2 space-y-24">
-              <div class="cellcontent gridcell false">
-                <picture class="gridcell-containter-img">
-                  <img class="gridcell-img" src="../../assets/img/gridcells_portfolio-01.jpg" alt="Grid basic portfolios cell">
+              <div class="grid-cell grid-cell-content false">
+                <picture class="grid-cell-container-img">
+                  <img class="grid-cell-img" src="../../assets/img/gridcells_portfolio-01.jpg" alt="Grid basic portfolios cell">
                 </picture>
               </div>
               <span class="body-light-gray-text">
                     Grid basic portfolios cell
                 </span>
             </div>
-            <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
-              <div class="cellcontent gridcell bg-transparent gridcell-border">
-                <div class="cellcontent-content d-flex flex-column justify-content-between inner-space-block-48 inner-space-left-48 inner-space-right-72">
-                  <div>
+            <div class="col-1-to-2 col-lg-2-to-4 space-y-24 size-fixed">
+              <div class="grid-cell grid-cell-content bg-transparent grid-cell-border">
+                <div class="grid-cell-content-wrapper ">
+                  <div class="interaction-element">
+                    1
                   </div>
-                  <div class="cellcontent-info">
+                  <div class="grid-cell-content-info">
                     <h4 class="text">Packaging design</h4>
                     <p class="text body-light-gray-text mb-0">We create boxes, bottles, bags, packaging, labels, signage of spaces, exterior signage, corporeal.</p>
                   </div>
@@ -276,21 +302,22 @@
                 </span>
             </div>
             <div class="col-1-to-2 space-y-24">
-              <div class="cellcontent gridcell false">
-                <picture class="gridcell-containter-img">
-                  <img class="gridcell-img" src="../../assets/img/gridcells_portfolio-02.jpg" alt="Grid basic portfolios cell">
+              <div class="grid-cell grid-cell-content false">
+                <picture class="grid-cell-container-img">
+                  <img class="grid-cell-img" src="../../assets/img/gridcells_portfolio-02.jpg" alt="Grid basic portfolios cell">
                 </picture>
               </div>
               <span class="body-light-gray-text">
                     Grid basic portfolios cell
                 </span>
             </div>
-            <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
-              <div class="cellcontent gridcell bg-dark">
-                <div class="cellcontent-content d-flex flex-column justify-content-between inner-space-block-48 inner-space-left-48 inner-space-right-72">
-                  <div>
+            <div class="col-1-to-2 col-lg-2-to-4 space-y-24 size-fixed">
+              <div class="grid-cell grid-cell-content bg-dark">
+                <div class="grid-cell-content-wrapper ">
+                  <div class="interaction-element">
+                    1
                   </div>
-                  <div class="cellcontent-info">
+                  <div class="grid-cell-content-info">
                     <h4 class="text">Packaging design</h4>
                     <p class="text body-light-gray-text mb-0">We create boxes, bottles, bags, packaging, labels, signage of spaces, exterior signage, corporeal.</p>
                   </div>
