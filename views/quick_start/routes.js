@@ -24,8 +24,16 @@ route.get(routePaths.QUICK_START.FOOTERS.BASIC, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'basic']))
 })
 
+route.get(routePaths.QUICK_START.FOOTERS.ESTANDAR, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'estandar']))
+})
+
 route.get(routePaths.QUICK_START.FOOTERS.CORPORATE, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'corporate']))
+})
+
+route.get(routePaths.QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'newsletter']))
 })
 
 /* Buttons page. */

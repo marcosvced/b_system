@@ -5,7 +5,9 @@ module.exports = {
     HEADERS: '/modules/headers',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
+      ESTANDAR: '/modules/footers/estandar',
       CORPORATE: '/modules/footers/corporate',
+      NEWSLETTER: '/modules/footers/newsletter',
     },
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
