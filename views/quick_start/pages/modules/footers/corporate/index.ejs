@@ -2,13 +2,394 @@
 
 <%- contentFor('body') %>
 <div class="main-content main-content-space-top">
-    <section class="module-wrapper footer-basic">
+    <section class="module-wrapper">
         <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/basic`, {
+            <%- include(`${component}/footer/corporate`, {
                 img: 'logo-dark.svg',
                 imgAlt: 'Logo dark',
                 text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
-                setup: 'estandar',
+                link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+                navColumns: [
+                    [
+                        {
+                            title: 'About',
+                        },
+                        {
+                            name: 'B_system',
+                            href: '#'
+                        },
+                        {
+                            name: 'About us',
+                            href: '#'
+                        },
+                        {
+                            name: 'Our services',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contact us',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Services'
+                        },
+                        {
+                            name: 'Our services',
+                            href: '#'
+                        },
+                        {
+                            name: 'What we offer',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contact classic',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contracting',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Customer'
+                        },
+                        {
+                            name: 'Customer support',
+                            href: '#'
+                        },
+                        {
+                            name: 'Testimonials',
+                            href: '#'
+                        },
+                        {
+                            name: 'Team classic',
+                            href: '#'
+                        },
+                        {
+                            name: 'Team modern',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Featured demos'
+                        },
+                        {
+                            name: 'Startup',
+                            href: '#'
+                        },
+                        {
+                            name: 'Design studio',
+                            href: '#'
+                        },
+                        {
+                            name: 'Branding agency',
+                            href: '#'
+                        },
+                        {
+                            name: 'Freelance',
+                            href: '#'
+                        },
+                    ]
+                ]
+            }) %>
+        </div>
+    </section>
+
+    <section class="module-wrapper darkener">
+        <div class="module-view-example-wrapper">
+            <%- include(`${component}/footer/corporate`, {
+                img: 'logo-dark.svg',
+                imgAlt: 'Logo dark',
+                text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+                link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+                variant: 'darkener',
+                navColumns: [
+                    [
+                        {
+                            title: 'About',
+                        },
+                        {
+                            name: 'B_system',
+                            href: '#'
+                        },
+                        {
+                            name: 'About us',
+                            href: '#'
+                        },
+                        {
+                            name: 'Our services',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contact us',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Services'
+                        },
+                        {
+                            name: 'Our services',
+                            href: '#'
+                        },
+                        {
+                            name: 'What we offer',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contact classic',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contracting',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Customer'
+                        },
+                        {
+                            name: 'Customer support',
+                            href: '#'
+                        },
+                        {
+                            name: 'Testimonials',
+                            href: '#'
+                        },
+                        {
+                            name: 'Team classic',
+                            href: '#'
+                        },
+                        {
+                            name: 'Team modern',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Featured demos'
+                        },
+                        {
+                            name: 'Startup',
+                            href: '#'
+                        },
+                        {
+                            name: 'Design studio',
+                            href: '#'
+                        },
+                        {
+                            name: 'Branding agency',
+                            href: '#'
+                        },
+                        {
+                            name: 'Freelance',
+                            href: '#'
+                        },
+                    ]
+                ]
+            }) %>
+        </div>
+    </section>
+
+    <section class="module-wrapper" data-bsystem='dark'>
+        <div class="module-view-example-wrapper">
+            <%- include(`${component}/footer/corporate`, {
+                img: 'logo-light.svg',
+                imgAlt: 'Logo dark',
+                text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+                link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+                isDark: true,
+                navColumns: [
+                    [
+                        {
+                            title: 'About',
+                        },
+                        {
+                            name: 'B_system',
+                            href: '#'
+                        },
+                        {
+                            name: 'About us',
+                            href: '#'
+                        },
+                        {
+                            name: 'Our services',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contact us',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Services'
+                        },
+                        {
+                            name: 'Our services',
+                            href: '#'
+                        },
+                        {
+                            name: 'What we offer',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contact classic',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contracting',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Customer'
+                        },
+                        {
+                            name: 'Customer support',
+                            href: '#'
+                        },
+                        {
+                            name: 'Testimonials',
+                            href: '#'
+                        },
+                        {
+                            name: 'Team classic',
+                            href: '#'
+                        },
+                        {
+                            name: 'Team modern',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Featured demos'
+                        },
+                        {
+                            name: 'Startup',
+                            href: '#'
+                        },
+                        {
+                            name: 'Design studio',
+                            href: '#'
+                        },
+                        {
+                            name: 'Branding agency',
+                            href: '#'
+                        },
+                        {
+                            name: 'Freelance',
+                            href: '#'
+                        },
+                    ]
+                ]
+            }) %>
+        </div>
+    </section>
+
+    <section class="module-wrapper" data-bsystem='dark'>
+        <div class="module-view-example-wrapper">
+            <%- include(`${component}/footer/corporate`, {
+                img: 'logo-light.svg',
+                imgAlt: 'Logo dark',
+                text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+                link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+                variant: 'darkener',
+                isDark: true,
+                navColumns: [
+                    [
+                        {
+                            title: 'About',
+                        },
+                        {
+                            name: 'B_system',
+                            href: '#'
+                        },
+                        {
+                            name: 'About us',
+                            href: '#'
+                        },
+                        {
+                            name: 'Our services',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contact us',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Services'
+                        },
+                        {
+                            name: 'Our services',
+                            href: '#'
+                        },
+                        {
+                            name: 'What we offer',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contact classic',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contracting',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Customer'
+                        },
+                        {
+                            name: 'Customer support',
+                            href: '#'
+                        },
+                        {
+                            name: 'Testimonials',
+                            href: '#'
+                        },
+                        {
+                            name: 'Team classic',
+                            href: '#'
+                        },
+                        {
+                            name: 'Team modern',
+                            href: '#'
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Featured demos'
+                        },
+                        {
+                            name: 'Startup',
+                            href: '#'
+                        },
+                        {
+                            name: 'Design studio',
+                            href: '#'
+                        },
+                        {
+                            name: 'Branding agency',
+                            href: '#'
+                        },
+                        {
+                            name: 'Freelance',
+                            href: '#'
+                        },
+                    ]
+                ]
             }) %>
         </div>
     </section>

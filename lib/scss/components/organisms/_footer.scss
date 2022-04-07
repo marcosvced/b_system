@@ -12,169 +12,139 @@
 @use '../../mixins' as mixin;
 
 .footer {
-    flex-grow: 1;
-    padding-block: size.space(88);
-
     @include themed.properties {
-        background-color: themed.values(helper.grayscale('light'), helper.grayscale(1100));
+        background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
     }
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .links-wrapper {
-        @include space.y(16);
-
-        &:first-of-type {
-            margin-bottom: size.space(48);
-            @include media.screen(md) {
-                margin-bottom: auto;
-            }
-        }
-
-
-        .title {
-            @extend %body-medium-text;
-            color: colors.body(off);
-            margin-bottom: size.space(32);
-        }
-
-        li:not(.title) {
-            @extend %body-regular-text;
-            color: colors.body(23);
-            transition: color .25s ease;
-
-            & > a:hover {
-                color: colors.primary('blue');
-            }
-
+    &.darkener {
+        @include themed.properties {
+            background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
         }
     }
 
-    &.footer-corporate {
-        .footer-logo {
-            display: block;
-            margin-bottom: size.space(24);
-
-            @include media.screen(lg) {
-                margin-bottom: size.space(32);
-            }
-        }
-
-        .copy-wrapper {
-            margin-bottom: size.space(48);
-            @include media.screen(md) {
-                margin-bottom: size.space(64);
-            }
-            @include media.screen(lg) {
-                margin-bottom: size.space(0);
-            }
-
-            p.copy {
-                @extend %body-light-text;
-                color: colors.body(30);
-                margin-bottom: size.space(24);
-
-                @include media.screen(lg) {
-                    margin-bottom: size.space(32);
-                    max-width: size.rem(265);
-                }
-            }
-        }
+    .footer-content {
+       flex-direction: column; 
+       align-items: center;
     }
 
-    &.footer-basic {
+    .copy {
+        text-align: center;
+    }
 
+    .copy, .corporate-link {
+        @include themed.properties {
+            color: themed.values(helper.grayscale(800), helper.grayscale(600));
+         }
     }
 
     &.footer-newsletter {
-        .subscribe-text {
-            margin: 0 auto;
-            text-align: center;
+        .footer-subscribe {
+            justify-content: center;
+            align-items: center;
+            padding-top: 0 !important;
+
+            .copy {
+                text-align: center;
+            }
+
+            .subscribe-form {
+                flex-direction: column;
+                align-items: center;
+                gap: helper.space(32);
+            }
         }
     }
 
     &.footer-darkener {
         background-color: colors.grayscale(100);
     }
-}
 
-[data-bsystem='dark'] {
-    .footer,
-    &.footer {
-        background-color: colors.grayscale(1100);
-
-        .links-wrapper {
-            .title {
-                color: colors.grayscale(light);
-            }
-
-            li:not(.title) {
-                color: colors.grayscale(light);
-            }
-
-            &.footer-corporate {
-                .copy-wrapper {
-                    margin-bottom: size.space(48);
-                    @include media.screen(md) {
-                        margin-bottom: size.space(64);
-                    }
-                    @include media.screen(lg) {
-                        margin-bottom: size.space(0);
-                    }
-
-                    p.copy {
-                        color: colors.body(67);
-                    }
-                }
-            }
-
-        }
-
-        &.footer-darkener {
-            background-color: colors.grayscale(1200);
+    &.footer-corporate {
+        .copy {
+            text-align: start;
         }
     }
 }
 
 @media (min-width: 1000px) {
-    .copy {
-        max-width: 65%;
+    .footer:not(.footer-newsletter, .footer-corporate) {
+        .copy {
+            max-width: 70%;
+        }
     }
 }
+
 
 @media (min-width: 1200px) {
     .footer {
         &.footer-basic {
             .footer-content {
-                flex-direction: row !important;
-                text-align: start !important;
+                flex-direction: row;
+                column-gap: 20% !important;
 
                 .copy {
-                    margin-left: helper.rem(200);
+                    text-align: start;
                 }
             }
         }
+        
         &.footer-newsletter {
-
             .footer-wrapper {
                 display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
+                justify-content: space-between;
+                flex-wrap: wrap;
 
-                .footer-content  {
-                    align-items: flex-start !important;
+                .footer-content, .footer-subscribe {
+                    width: 45%;
+                    align-items: flex-start;
+
+                    .copy {
+                        text-align: start;
+                    }
+                }
+
+                .footer-subscribe {
+                    padding-block: 0 !important;
+
+                    .subscribe-form {
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+
+        &.footer-corporate {
+            .footer-contain {
+                display: flex;
+                column-gap: helper.space(112);
+
+                .corporate-columns-nav {
+                    width: 150%;
                 }
             }
         }
     }
+}
 
-    &.footer-basic, &.footer-newsletter {
-        .copy {
-            text-align: start !important;
+// Provisional accordion styles
+.footer {
+    .accordion {
+        @include themed.properties {
+            border-top: helper.rem(1) solid themed.values(helper.grayscale(200), helper.grayscale(1000)); 
         }
+    }
+
+    .accordion-item, .accordion-button {
+        @include themed.properties {
+            background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
+        }
+    }
+
+    &.darkener {
+       .accordion-item, .accordion-button {
+            @include themed.properties {
+                background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+            }
+       }
     }
 }
