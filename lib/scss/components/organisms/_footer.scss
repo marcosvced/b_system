@@ -1,17 +1,10 @@
-@use "../../variables/palette";
-@use "../../helpers/font";
-@use "../../helpers/colors";
-@use "../../helpers/size";
-@use "../../mixins/space";
-@use "../../mixins/shapes" as shape;
-@use "../../mixins/media";
-@use "../../placeholders/fonts";
-
-@use '../../helpers' as helper;
+@use '../../placeholders';
 @use '../../helpers/themed';
+@use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
 .footer {
+    $parent: &;
     @include themed.properties {
         background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
     }
@@ -22,7 +15,7 @@
         }
     }
 
-    .footer-content {
+    #{&}-content {
        flex-direction: column; 
        align-items: center;
     }
@@ -31,14 +24,14 @@
         text-align: center;
     }
 
-    .copy, .corporate-link {
+    .copy, #{&}-link {
         @include themed.properties {
             color: themed.values(helper.grayscale(800), helper.grayscale(600));
          }
     }
 
-    &.footer-newsletter {
-        .footer-subscribe {
+    &-newsletter {
+        #{$parent}-subscribe {
             justify-content: center;
             align-items: center;
             padding-top: 0 !important;
@@ -47,7 +40,7 @@
                 text-align: center;
             }
 
-            .subscribe-form {
+            #{$parent}-form {
                 flex-direction: column;
                 align-items: center;
                 gap: helper.space(32);
@@ -55,11 +48,7 @@
         }
     }
 
-    &.footer-darkener {
-        background-color: colors.grayscale(100);
-    }
-
-    &.footer-corporate {
+    &-corporate {
         .copy {
             text-align: start;
         }
@@ -77,8 +66,10 @@
 
 @media (min-width: 1200px) {
     .footer {
-        &.footer-basic {
-            .footer-content {
+        $parent: &;
+
+        &-basic {
+            #{$parent}-content {
                 flex-direction: row;
                 column-gap: 20% !important;
 
@@ -88,13 +79,13 @@
             }
         }
         
-        &.footer-newsletter {
-            .footer-wrapper {
+        &-newsletter {
+            #{$parent}-wrapper {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
 
-                .footer-content, .footer-subscribe {
+                #{$parent}-content, #{$parent}-subscribe {
                     width: 45%;
                     align-items: flex-start;
 
@@ -103,22 +94,22 @@
                     }
                 }
 
-                .footer-subscribe {
+                #{$parent}-subscribe {
                     padding-block: 0 !important;
 
-                    .subscribe-form {
+                    #{$parent}-form {
                         flex-direction: row;
                     }
                 }
             }
         }
 
-        &.footer-corporate {
-            .footer-contain {
+        &-corporate {
+            #{$parent}-contain {
                 display: flex;
                 column-gap: helper.space(112);
 
-                .corporate-columns-nav {
+                #{$parent}-columns-container {
                     width: 150%;
                 }
             }

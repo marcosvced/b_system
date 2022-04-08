@@ -1,15 +1,15 @@
-<%- include(`${view}/quick_start/layout`)%>
+<%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('body') %>
+
 <div class="main-content main-content-space-top">
     <section class="module-wrapper">
         <div class="module-view-example-wrapper">
             <%- include(`${component}/footer/corporate`, {
-                img: 'logo-dark.svg',
-                imgAlt: 'Logo dark',
+                img: {src: 'logo-dark-gray.svg', alt: 'logo'},
                 text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
-                navColumns: [
+                columns: [
                     [
                         {
                             title: 'About',
@@ -99,15 +99,14 @@
         </div>
     </section>
 
-    <section class="module-wrapper darkener">
+    <section class="module-wrapper">
         <div class="module-view-example-wrapper">
             <%- include(`${component}/footer/corporate`, {
-                img: 'logo-dark.svg',
-                imgAlt: 'Logo dark',
+                img: {src: 'logo-dark-gray.svg', alt: 'logo'},
                 text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
                 variant: 'darkener',
-                navColumns: [
+                columns: [
                     [
                         {
                             title: 'About',
@@ -197,15 +196,14 @@
         </div>
     </section>
 
-    <section class="module-wrapper" data-bsystem='dark'>
+    <section class="module-wrapper">
         <div class="module-view-example-wrapper">
             <%- include(`${component}/footer/corporate`, {
-                img: 'logo-light.svg',
-                imgAlt: 'Logo dark',
+                img: {src: 'logo-light-gray.svg', alt: 'logo'},
                 text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
                 isDark: true,
-                navColumns: [
+                columns: [
                     [
                         {
                             title: 'About',
@@ -295,16 +293,15 @@
         </div>
     </section>
 
-    <section class="module-wrapper" data-bsystem='dark'>
+    <section class="module-wrapper">
         <div class="module-view-example-wrapper">
             <%- include(`${component}/footer/corporate`, {
-                img: 'logo-light.svg',
-                imgAlt: 'Logo dark',
+                img: {src: 'logo-light-gray.svg', alt: 'logo'},
                 text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
                 variant: 'darkener',
                 isDark: true,
-                navColumns: [
+                columns: [
                     [
                         {
                             title: 'About',
@@ -394,5 +391,3 @@
         </div>
     </section>
 </div>
-
-
