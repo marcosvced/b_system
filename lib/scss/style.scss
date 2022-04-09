@@ -19,16 +19,20 @@
 @use "common/styles";
 @use "common/section";
 @use "common/texts";
+@use "common/shadows";
+@use "common/squares";
 
 /*
  * 2º Atoms
  */
 @use "components/atoms/tooltip";
 @use "components/atoms/button";
+@use "components/atoms/rounded-button";
 @use "components/atoms/link";
 @use "components/atoms/icon";
 @use "components/atoms/productCard";
 @use "components/atoms/gridCell";
+@use "components/atoms/interactions";
 
 /*
  * 3º Molecules
