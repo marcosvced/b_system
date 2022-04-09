@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>B_System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap + reset styles-->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
+
+    <!--B_System styles-->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' />
+    <style lang="css">
+    </style>
+  </head>
+  <body>
+
+    <!--MAIN HEADER-->
+    <header class="header header-fixed header-light " data-bsystem="sticky">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
+          <div class="d-flex d-xl-none order-0">
+            <button href="#" class="btn btn-only-icon">
+              <i class="icon-cart"></i>
+            </button>
+          </div>
+          <div class="d-none d-xl-block order-1">
+            <button href="#" class="btn btn-primary     btn-fit">
+              Purchase B_System
+            </button>
+          </div>
+        </div>
+        <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min ">
+          <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
+        </a>
+        <div class="nav-wrapper order-2 order-xl-1 col">
+          <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
+            <nav class="navbar navbar-expand-lg">
+              <ul class="navbar-nav">
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Demos
+                  </a>
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Pages
+                  </a>
+                </li>
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Modules
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="modules_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="#">Menus</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/headers">Headers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Contents</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Grids</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link active  dropdown-toggle " href="#" id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Components
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="components_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../components/buttons">Buttons</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item active" href="../../components/interaction">Interaction</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/productCards">Product Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/links">Links</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/gridCells">Grid cells</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Icon + description</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Accordions</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Alerts</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/icons">Icons</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/texts">Texts</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Transitions
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="d-flex d-xl-none justify-content-end">
+            <button href="#" class="btn btn-only-icon">
+              <i class="icon-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--END: MAIN HEADER-->
+
+    <!--MAIN CONTENT-->
+    <main class="main">
+      <section class="section darkener">
+        <h2 class="container">Interaction elements</h2>
+        <div class="container gap-5">
+          <div class="row">
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input bg-transition" type="checkbox" id="switch-id-01">
+                    <div class="form-switch-wrapper">
+                      <span class="form-switch-dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Switch<br>[Comp: SWITCH]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component rounded-button">
+                    <i class="icon-back-mini"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Back component<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component rounded-button">
+                    <i class="icon-next-mini"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Next component<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component rounded-button condensed">
+                    <i class="icon-btn-arrow"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Down component<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component squared-button">
+                    <i class="icon-more"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Add<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component squared-button">
+                    <i class="icon-download"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Download<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component squared-button">
+                    <i class="icon-hear"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Like<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <span class="badge  bg-info text-dark">
+        <span>22/06</span>
+                  </span>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Date<br>[Comp: BADGE]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <span class="badge rounded-pill bg-primary">
+        <span>3</span>
+                  <i class="icon-message"></i>
+                  </span>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Notification<br>[Comp: BADGE]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <span class="badge  bg-info text-dark">
+        <span>Shipped</span>
+                  </span>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Purchase status<br>[Comp: BADGE]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="spinner-wrap">
+                    <div class="spinner-border" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Timer<br>[Comp: SPINNER]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="tooltip bs-tooltip-top" role="tooltip">
+                    <div class="arrow"></div>
+                    <div class="tooltip-inner">
+                      1,09 - 03 April
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Tooltip
+            </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="ribbon bg-primary">
+                    <span>8</span>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Position number<br>[Comp: RIBBON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="ribbon bg-primary">
+                    <i class="icon-award"></i>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Position icon<br>[Comp: RIBBON]
+            </span>
+            </div>
+            <div class="col-4 gap-2 mb-5">
+              <div class="square-wrap square-half-height shadow-600">
+                <div class="square-content">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Breadcrumb component<br>[Comp: BREADCRUMB]
+            </span>
+            </div>
+            <div class="col-4 gap-2 mb-5">
+              <div class="square-wrap square-half-height shadow-600">
+                <div class="square-content">
+                  <nav aria-label="filter">
+                    <ul class="filter">
+                      <li><a href="#">Most recent</a></li>
+                      <li><a href="#" class="active">Most relevant</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Filter component<br>[Comp: FILTER]
+            </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section darkener" data-bsystem="dark">
+        <h2 class="container">Interaction elements</h2>
+        <div class="container gap-5">
+          <div class="row">
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input bg-transition" type="checkbox" id="switch-id-01">
+                    <div class="form-switch-wrapper">
+                      <span class="form-switch-dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Switch<br>[Comp: SWITCH]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component rounded-button">
+                    <i class="icon-back-mini"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Back component<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component rounded-button">
+                    <i class="icon-next-mini"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Next component<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component rounded-button condensed">
+                    <i class="icon-btn-arrow"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Down component<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component squared-button">
+                    <i class="icon-more"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Add<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component squared-button">
+                    <i class="icon-download"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Download<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <button href="#" class="button-component squared-button">
+                    <i class="icon-hear"></i>
+                  </button>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Like<br>[Comp: INTERACTION BUTTON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <span class="badge  bg-info text-dark">
+        <span>22/06</span>
+                  </span>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Date<br>[Comp: BADGE]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <span class="badge rounded-pill bg-primary">
+        <span>3</span>
+                  <i class="icon-message"></i>
+                  </span>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Notification<br>[Comp: BADGE]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <span class="badge  bg-info text-dark">
+        <span>Shipped</span>
+                  </span>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Purchase status<br>[Comp: BADGE]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="spinner-wrap">
+                    <div class="spinner-border" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Timer<br>[Comp: SPINNER]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="tooltip bs-tooltip-top" role="tooltip">
+                    <div class="arrow"></div>
+                    <div class="tooltip-inner">
+                      1,09 - 03 April
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Tooltip
+            </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="ribbon bg-primary">
+                    <span>8</span>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Position number<br>[Comp: RIBBON]
+            </span>
+            </div>
+            <div class="col-2 gap-2 mb-5">
+              <div class="square-wrap shadow-600">
+                <div class="square-content">
+                  <div class="ribbon bg-primary">
+                    <i class="icon-award"></i>
+                  </div>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Position icon<br>[Comp: RIBBON]
+            </span>
+            </div>
+            <div class="col-4 gap-2 mb-5">
+              <div class="square-wrap square-half-height shadow-600">
+                <div class="square-content">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Breadcrumb component<br>[Comp: BREADCRUMB]
+            </span>
+            </div>
+            <div class="col-4 gap-2 mb-5">
+              <div class="square-wrap square-half-height shadow-600">
+                <div class="square-content">
+                  <nav aria-label="filter">
+                    <ul class="filter">
+                      <li><a href="#">Most recent</a></li>
+                      <li><a href="#" class="active">Most relevant</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <span class="label mt-4 d-block">
+                Filter component<br>[Comp: FILTER]
+            </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--END: MAIN CONTENT-->
+
+    <!--MAIN FOOTER-->
+    <footer class="footer footer-basic footer-darkener">
+      <div class="footer-wrapper container">
+        <div class="row">
+          <a class="footer-logo col-12 col-lg-3" href="../../home">
+            <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
+          </a>
+          <p class="copy col-12 col-lg-8 offset-lg-1">
+            .Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--END: MAIN FOOTER-->
+
+    <!--SCRIPTS-->
+
+    <!--Bootstrap JS Bundle-->
+    <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!--B_System JS-->
+    <script src="../../assets/js/bsystem.min.js"></script>
+
+    <!--END: SCRIPTS-->
+  </body>
+</html>
