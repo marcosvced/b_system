@@ -68,4 +68,9 @@ route.get(routePaths.QUICK_START.GRIDCELLS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['gridCells']))
 })
 
+/* Interaction page. */
+route.get(routePaths.QUICK_START.INTERACTION, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['interaction']))
+})
+
 module.exports = route

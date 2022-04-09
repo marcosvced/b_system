@@ -4,5 +4,4 @@
 /assets/css/style.min.css
 /assets/css/
 /assets/js/bsystem.min.js
-/dist/assets/
-/dist/netlify.toml
+/dist
