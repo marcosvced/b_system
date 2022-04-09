@@ -25,16 +25,19 @@
  */
 @use "components/atoms/tooltip";
 @use "components/atoms/button";
+@use "components/atoms/rounded-button";
 @use "components/atoms/link";
 @use "components/atoms/icon";
-@use "components/atoms/productCard";
-@use "components/atoms/gridCell";
+//@use "components/atoms/interactions";
+@use "components/atoms/switch";
 
 /*
  * 3º Molecules
  */
 @use "components/molecules/dropdown";
 @use "components/molecules/navdrawer";
+@use "components/molecules/product-card";
+@use "components/molecules/grid-cell";
 
 /*
  * 4º Organisms
