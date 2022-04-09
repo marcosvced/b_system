@@ -19,6 +19,11 @@ route.get(routePaths.QUICK_START.HEADERS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['headers']))
 })
 
+/* categories menu page. */
+route.get(routePaths.QUICK_START.CATEGORIES_MENU, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['categoriesMenu']))
+})
+
 /* footers page. */
 route.get(routePaths.QUICK_START.FOOTERS.BASIC, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'basic']))
