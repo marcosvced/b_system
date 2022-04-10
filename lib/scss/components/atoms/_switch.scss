@@ -22,8 +22,11 @@
         &:hover,
         &:active {
             filter: none;
-            & + .form-switch-wrapper {
-                background-color: helper.grayscale(500);
+
+            &:not(:checked) + .form-switch-wrapper {
+                @include themed.properties {
+                    background-color: themed.values(helper.grayscale(500), helper.grayscale(800));
+                }
             }
         }
 
@@ -40,20 +43,26 @@
     }
 
 
-
     #{&}-wrapper {
         width: helper.rem(48);
         height: helper.rem(24);
         border-radius: 2em;
-        background-color: helper.grayscale(400);
         pointer-events: none;
         z-index: -1;
         @include mixin.fast-transition(background-color);
 
+        @include themed.properties {
+            background-color: themed.values(helper.grayscale(400), helper.grayscale(900));
+        }
+
         .form-switch-dot {
             pointer-events: none;
             display: block;
-            background-color: helper.grayscale(light);
+
+            @include themed.properties {
+                background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+            }
+
             @include mixin.circle(20);
             position: absolute;
             left: 0;
