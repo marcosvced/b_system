@@ -1,413 +1,123 @@
-<%- include(`${view}/quick_start/layout`)%>
+<%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('body') %>
 
 <section class="section darkener">
-
-    <h2 class="container">Interaction elements</h2>
-
-    <div class="container gap-5">
-
-        <div class="row">
-
-        <div class="col-2 gap-2 mb-5">
-
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-                    
-                    
+    <div class="container">
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Interaction elements</h3>
+        <div class="d-grid grid-4 grid-md-8 grid-lg-12">
+            <div class="space-y-24 col-1-to-3">
+                <div class="demo-card">
                     <%- include(`${component}/interaction/switch`, {
-                id: 'switch-id-01',
-                // label: 'Default switch checkbox input',
-                }) %>
+                    id: 'switch-id-01',
+                    }) %>
                 </div>
-
+                <span class="body-light-gray-text">
+                    Switch
+                </span>
             </div>
-            <span class="label mt-4 d-block">
-                Switch<br>[Comp: SWITCH]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
+            <div class="space-y-24 col-3-to-5">
+                <div class="demo-card">
                     <%- include(`${component}/interaction/interaction-button`, {
-                type: 'rounded',
-                icon: 'back-mini',
-                href: '#',
-                // isCondensed: true,
-                }) %>
-            </div>
-            </div>  
-            <span class="label mt-4 d-block">
-                Back component<br>[Comp: INTERACTION BUTTON]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-                    <%- include(`${component}/interaction/interaction-button`, {
-                type: 'rounded',
-                icon: 'next-mini',
-                href: '#',
-                // isCondensed: true,
-                }) %>
+                        isRounded: true,
+                        isBack: true
+                    }) %>
                 </div>
+                <span class="body-light-gray-text">
+                    Back component
+                </span>
             </div>
-            <span class="label mt-4 d-block">
-                Next component<br>[Comp: INTERACTION BUTTON]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
+            <div class="space-y-24 col-5-to-7">
+                <div class="demo-card">
                     <%- include(`${component}/interaction/interaction-button`, {
-                type: 'rounded',
-                icon: 'btn-arrow',
-                href: '#',
-                isCondensed: true,
-                }) %>
+                        isRounded: true,
+                        isNext: true
+                    }) %>
                 </div>
+                <span class="body-light-gray-text">
+                    Next component
+                </span>
             </div>
-            <span class="label mt-4 d-block">
-                Down component<br>[Comp: INTERACTION BUTTON]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
+            <div class="space-y-24 col-7-to-9">
+                <div class="demo-card">
                     <%- include(`${component}/interaction/interaction-button`, {
-                type: 'squared',
-                icon: 'more',
-                href: '#',
-                // isCondensed: true,
-                }) %>
+                        isRounded: true,
+                        isTight: true,
+                        isDown: true
+                    }) %>
                 </div>
+                <span class="body-light-gray-text">
+                    Next component
+                </span>
             </div>
-            <span class="label mt-4 d-block">
-                Add<br>[Comp: INTERACTION BUTTON]
-            </span>
         </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-                    
-                    <%- include(`${component}/interaction/interaction-button`, {
-                type: 'squared',
-                icon: 'download',
-                href: '#',
-                isCondensed: true,
-                }) %>
-                </div>
-            </div>
-            <span class="label mt-4 d-block">
-                Download<br>[Comp: INTERACTION BUTTON]
-            </span>
-        </div>
-
-
     </div>
-    <div class="row">
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-            <%- include(`${component}/interaction/interaction-button`, {
-                type: 'squared',
-                icon: 'hear',
-                href: '#',
-                // isCondensed: true,
-                }) %>
-                </div>
-            </div>
-            <span class="label mt-4 d-block">
-                Like<br>[Comp: INTERACTION BUTTON]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-            <%- include(`${component}/interaction/badge`, {
-                label: '22/06',
-                // icon: 'hear',
-                // iconPosition: 'after',
-                color: 'info',
-                // isRounded: 'isRounded',
-                }) %>
-                </div>
-            </div>
-            <span class="label mt-4 d-block">
-                Date<br>[Comp: BADGE]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-            <%- include(`${component}/interaction/badge`, {
-                label: '3',
-                icon: 'message',
-                iconPosition: 'after',
-                // color: 'info',
-                isRounded: 'isRounded',
-                }) %>
-                </div>
-            </div>
-
-            <span class="label mt-4 d-block">
-                Notification<br>[Comp: BADGE]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-            <%- include(`${component}/interaction/badge`, {
-                label: 'Shipped',
-                // icon: 'hear',
-                // iconPosition: 'after',
-                color: 'info',
-                // isRounded: 'isRounded',
-                }) %>
-                </div>
-            </div>
-
-            <span class="label mt-4 d-block">
-                Purchase status<br>[Comp: BADGE]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-            <%- include(`${component}/interaction/spinner`, {
-                // type: 'grow',
-                // color: 'secondary',
-                // isSmall: true,
-                // hiddenLabel: 'Loading...',
-                }) %>
-                </div>
-            </div>
-
-            <span class="label mt-4 d-block">
-                Timer<br>[Comp: SPINNER]
-            </span>
-        </div>
-
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-                    <div class="tooltip bs-tooltip-top" role="tooltip">
-                        <div class="arrow"></div>
-                        <div class="tooltip-inner">
-                            1,09 - 03 April
-                        </div>
-                    </div>
-
-                </div>  
-            </div>
-
-            <span class="label mt-4 d-block">
-                Tooltip
-            </span>
-        </div>
-        
-    </div>
-    <div class="row">
-        
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-            <%- include(`${component}/interaction/ribbon`, {
-                type: 'data',
-                label: '8',
-                // icon: 'award',
-                color: 'primary',
-                }) %>
-                </div>
-            </div>
-
-            <span class="label mt-4 d-block">
-                Position number<br>[Comp: RIBBON]
-            </span>
-        </div>
-
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-            <%- include(`${component}/interaction/ribbon`, {
-                type: 'icon',
-                // label: '8',
-                icon: 'award',
-                // color: 'secondary',
-                }) %>
-                </div>
-            </div>
-
-            <span class="label mt-4 d-block">
-                Position icon<br>[Comp: RIBBON]
-            </span>
-        </div>
-
-
-        <div class="col-4 gap-2 mb-5">
-            <div class="square-wrap square-half-height shadow-600">
-                <div class="square-content">
-
-            <%
-            const breadcrumb_items = [
-                { label:'Home', href:'#' },
-                { label:'Library', href:'#' },
-                { label:'Data' }
-            ]
-            %>
-
-            <%- include( `${component}/interaction/breadcrumb`, {
-                items: breadcrumb_items
-                } ) %>
-
-                </div>
-            </div>
-
-            <span class="label mt-4 d-block">
-                Breadcrumb component<br>[Comp: BREADCRUMB]
-            </span>
-        </div>
-
-
-        <div class="col-4 gap-2 mb-5">
-            <div class="square-wrap square-half-height shadow-600">
-                <div class="square-content">
-
-            <%
-            const filter_items = [
-                { label:'Most recent', href:'#' },
-                { label:'Most relevant', href:'#', active:true }
-            ]
-            %>
-
-            <%- include( `${component}/interaction/filter`, {
-                items: filter_items
-                } ) %>
-                </div>
-            </div>
-
-            <span class="label mt-4 d-block">
-                Filter component<br>[Comp: FILTER]
-            </span>
-        </div>
-
-    </div>
-
-	</div>
 </section>
-
 
 <section class="section darkener" data-bsystem="dark">
-
-    <h2 class="container">Interaction elements</h2>
-
-    <div class="container gap-5">
-
-        <div class="row">
-
-        <div class="col-2 gap-2 mb-5">
-
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-                    
-                    
+    <div class="container">
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Interaction elements dark</h3>
+        <div class="d-grid grid-4 grid-md-8 grid-lg-12">
+            <div class="space-y-24 col-1-to-3">
+                <div class="demo-card">
                     <%- include(`${component}/interaction/switch`, {
-                id: 'switch-id-01',
-                // label: 'Default switch checkbox input',
-                }) %>
+                    id: 'switch-id-01',
+                    }) %>
                 </div>
-
+                <span class="body-light-gray-text">
+                    Switch
+                </span>
             </div>
-            <span class="label mt-4 d-block">
-                Switch<br>[Comp: SWITCH]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
+            <div class="space-y-24 col-3-to-5">
+                <div class="demo-card">
                     <%- include(`${component}/interaction/interaction-button`, {
-                type: 'rounded',
-                icon: 'back-mini',
-                href: '#',
-                // isCondensed: true,
-                }) %>
-            </div>
-            </div>  
-            <span class="label mt-4 d-block">
-                Back component<br>[Comp: INTERACTION BUTTON]
-            </span>
-        </div>
-
-
-        <div class="col-2 gap-2 mb-5">
-            <div class="square-wrap shadow-600">
-                <div class="square-content">
-
-                    <%- include(`${component}/interaction/interaction-button`, {
-                type: 'rounded',
-                icon: 'next-mini',
-                href: '#',
-                // isCondensed: true,
-                }) %>
+                    isRounded: true,
+                    isBack: true
+                    }) %>
                 </div>
+                <span class="body-light-gray-text">
+                    Back component
+                </span>
             </div>
-            <span class="label mt-4 d-block">
-                Next component<br>[Comp: INTERACTION BUTTON]
-            </span>
+            <div class="space-y-24 col-5-to-7">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isRounded: true,
+                    isNext: true
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Next component
+                </span>
+            </div>
+            <div class="space-y-24 col-7-to-9">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isRounded: true,
+                    isTight: true,
+                    isDown: true
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Next component
+                </span>
+            </div>
         </div>
+    </div>
+</section>
 
-
+<!--<div class="container gap-5">
+    <div class="row">
         <div class="col-2 gap-2 mb-5">
             <div class="square-wrap shadow-600">
                 <div class="square-content">
 
                     <%- include(`${component}/interaction/interaction-button`, {
-                type: 'rounded',
-                icon: 'btn-arrow',
-                href: '#',
-                isCondensed: true,
-                }) %>
+                    type: 'rounded',
+                    icon: 'btn-arrow',
+                    href: '#',
+                    isCondensed: true,
+                    }) %>
                 </div>
             </div>
             <span class="label mt-4 d-block">
@@ -421,11 +131,11 @@
                 <div class="square-content">
 
                     <%- include(`${component}/interaction/interaction-button`, {
-                type: 'squared',
-                icon: 'more',
-                href: '#',
-                // isCondensed: true,
-                }) %>
+                    type: 'squared',
+                    icon: 'more',
+                    href: '#',
+                    // isCondensed: true,
+                    }) %>
                 </div>
             </div>
             <span class="label mt-4 d-block">
@@ -437,13 +147,13 @@
         <div class="col-2 gap-2 mb-5">
             <div class="square-wrap shadow-600">
                 <div class="square-content">
-                    
+
                     <%- include(`${component}/interaction/interaction-button`, {
-                type: 'squared',
-                icon: 'download',
-                href: '#',
-                isCondensed: true,
-                }) %>
+                    type: 'squared',
+                    icon: 'download',
+                    href: '#',
+                    isCondensed: true,
+                    }) %>
                 </div>
             </div>
             <span class="label mt-4 d-block">
@@ -459,12 +169,12 @@
             <div class="square-wrap shadow-600">
                 <div class="square-content">
 
-            <%- include(`${component}/interaction/interaction-button`, {
-                type: 'squared',
-                icon: 'hear',
-                href: '#',
-                // isCondensed: true,
-                }) %>
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    type: 'squared',
+                    icon: 'hear',
+                    href: '#',
+                    // isCondensed: true,
+                    }) %>
                 </div>
             </div>
             <span class="label mt-4 d-block">
@@ -477,13 +187,13 @@
             <div class="square-wrap shadow-600">
                 <div class="square-content">
 
-            <%- include(`${component}/interaction/badge`, {
-                label: '22/06',
-                // icon: 'hear',
-                // iconPosition: 'after',
-                color: 'info',
-                // isRounded: 'isRounded',
-                }) %>
+                    <%- include(`${component}/interaction/badge`, {
+                    label: '22/06',
+                    // icon: 'hear',
+                    // iconPosition: 'after',
+                    color: 'info',
+                    // isRounded: 'isRounded',
+                    }) %>
                 </div>
             </div>
             <span class="label mt-4 d-block">
@@ -496,13 +206,13 @@
             <div class="square-wrap shadow-600">
                 <div class="square-content">
 
-            <%- include(`${component}/interaction/badge`, {
-                label: '3',
-                icon: 'message',
-                iconPosition: 'after',
-                // color: 'info',
-                isRounded: 'isRounded',
-                }) %>
+                    <%- include(`${component}/interaction/badge`, {
+                    label: '3',
+                    icon: 'message',
+                    iconPosition: 'after',
+                    // color: 'info',
+                    isRounded: 'isRounded',
+                    }) %>
                 </div>
             </div>
 
@@ -516,13 +226,13 @@
             <div class="square-wrap shadow-600">
                 <div class="square-content">
 
-            <%- include(`${component}/interaction/badge`, {
-                label: 'Shipped',
-                // icon: 'hear',
-                // iconPosition: 'after',
-                color: 'info',
-                // isRounded: 'isRounded',
-                }) %>
+                    <%- include(`${component}/interaction/badge`, {
+                    label: 'Shipped',
+                    // icon: 'hear',
+                    // iconPosition: 'after',
+                    color: 'info',
+                    // isRounded: 'isRounded',
+                    }) %>
                 </div>
             </div>
 
@@ -536,12 +246,12 @@
             <div class="square-wrap shadow-600">
                 <div class="square-content">
 
-            <%- include(`${component}/interaction/spinner`, {
-                // type: 'grow',
-                // color: 'secondary',
-                // isSmall: true,
-                // hiddenLabel: 'Loading...',
-                }) %>
+                    <%- include(`${component}/interaction/spinner`, {
+                    // type: 'grow',
+                    // color: 'secondary',
+                    // isSmall: true,
+                    // hiddenLabel: 'Loading...',
+                    }) %>
                 </div>
             </div>
 
@@ -549,7 +259,6 @@
                 Timer<br>[Comp: SPINNER]
             </span>
         </div>
-
 
 
         <div class="col-2 gap-2 mb-5">
@@ -563,27 +272,27 @@
                         </div>
                     </div>
 
-                </div>  
+                </div>
             </div>
 
             <span class="label mt-4 d-block">
                 Tooltip
             </span>
         </div>
-        
+
     </div>
     <div class="row">
-        
+
         <div class="col-2 gap-2 mb-5">
             <div class="square-wrap shadow-600">
                 <div class="square-content">
 
-            <%- include(`${component}/interaction/ribbon`, {
-                type: 'data',
-                label: '8',
-                // icon: 'award',
-                color: 'primary',
-                }) %>
+                    <%- include(`${component}/interaction/ribbon`, {
+                    type: 'data',
+                    label: '8',
+                    // icon: 'award',
+                    color: 'primary',
+                    }) %>
                 </div>
             </div>
 
@@ -593,17 +302,16 @@
         </div>
 
 
-
         <div class="col-2 gap-2 mb-5">
             <div class="square-wrap shadow-600">
                 <div class="square-content">
 
-            <%- include(`${component}/interaction/ribbon`, {
-                type: 'icon',
-                // label: '8',
-                icon: 'award',
-                // color: 'secondary',
-                }) %>
+                    <%- include(`${component}/interaction/ribbon`, {
+                    type: 'icon',
+                    // label: '8',
+                    icon: 'award',
+                    // color: 'secondary',
+                    }) %>
                 </div>
             </div>
 
@@ -617,17 +325,23 @@
             <div class="square-wrap square-half-height shadow-600">
                 <div class="square-content">
 
-            <%
-            const breadcrumb_items_dark = [
-                { label:'Home', href:'#' },
-                { label:'Library', href:'#' },
-                { label:'Data' }
-            ]
-            %>
+                    <%
+                    const breadcrumb_items = [
+                        {
+                            label: 'Home',
+                            href: '#'
+                        },
+                        {
+                            label: 'Library',
+                            href: '#'
+                        },
+                        { label: 'Data' }
+                    ]
+                    %>
 
-            <%- include( `${component}/interaction/breadcrumb`, {
-                items: breadcrumb_items_dark
-                } ) %>
+                    <%- include( `${component}/interaction/breadcrumb`, {
+                    items: breadcrumb_items
+                    } ) %>
 
                 </div>
             </div>
@@ -642,16 +356,23 @@
             <div class="square-wrap square-half-height shadow-600">
                 <div class="square-content">
 
-            <%
-            const filter_items_dark = [
-                { label:'Most recent', href:'#' },
-                { label:'Most relevant', href:'#', active:true }
-            ]
-            %>
+                    <%
+                    const filter_items = [
+                        {
+                            label: 'Most recent',
+                            href: '#'
+                        },
+                        {
+                            label: 'Most relevant',
+                            href: '#',
+                            active: true
+                        }
+                    ]
+                    %>
 
-            <%- include( `${component}/interaction/filter`, {
-                items: filter_items_dark
-                } ) %>
+                    <%- include( `${component}/interaction/filter`, {
+                    items: filter_items
+                    } ) %>
                 </div>
             </div>
 
@@ -662,5 +383,4 @@
 
     </div>
 
-	</div>
-</section>
+</div>-->
