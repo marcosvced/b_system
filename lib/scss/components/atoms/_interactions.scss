@@ -5,53 +5,6 @@
 
 
 
-.button-component {
-    @include themed.properties {
-        background-color: themed.values(helper.grayscale(100), #3b3b3b);
-        color: themed.values(helper.grayscale(dark), helper.grayscale(light));
-    }
-
-    &:hover {
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(300), helper.grayscale(900));
-        }
-    }
-
-    i {
-        &:before {
-            font-size: helper.rem(24);
-        }
-    }
-
-    &.condensed {
-        .icon-btn-arrow {
-            -moz-transform: rotate(90deg);
-            -webkit-transform: rotate(90deg);
-            -o-transform: rotate(90deg);
-            -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-        }
-    }
-
-    &.squared-button {
-        border: 0;
-        @include themed.properties {
-            background-color: themed.values(hsla(0, 0%, 0%, 0.26), rgba(255, 255, 255, 0.14));
-        }
-        color: helper.grayscale(300);
-        height: helper.rem(48);
-        width: helper.rem(56);
-        border-radius: 4px;
-
-        i {
-            display: grid;
-
-            &:before {
-                font-size: helper.space(24);
-            }
-        }
-    }
-}
 
 
 .badge {
