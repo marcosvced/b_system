@@ -10,16 +10,17 @@
 
     .input {
         background-color: transparent;
+        @include themed.properties {
+            border-color: themed.values(helper.grayscale(500), helper.grayscale(700));
+        }
+
+        &.form-control {
+            min-height: helper.rem(48);
+        }
     }
 
     .form-check-input:checked {
         background-color: helper.primary(blue);
-    }
-
-    .input {
-        @include themed.properties {
-            border-color: themed.values(helper.grayscale(500), helper.grayscale(700));
-        }
     }
 
     .input, .form-control::placeholder, [class*='icon-'], .form-check-label {
