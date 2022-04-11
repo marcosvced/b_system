@@ -50,6 +50,7 @@ $grayscale: (
 );
 
 $opacity: (
+  blue-500: hsla(209, 100%, 38%, .9),
   light-0: rgba($_white, .08),
   light-100: rgba($_white, .14),
   light-200: rgba($_white, .40),

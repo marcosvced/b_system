@@ -53,11 +53,11 @@ const navigation = [
                 label: 'Buttons'
             },
             {
-                href: '#',
+                href: QUICK_START.FORMS,
                 label: 'Forms'
             },
             {
-                href: '#',
+                href: QUICK_START.INTERACTION,
                 label: 'Interaction'
             },
             {
@@ -65,7 +65,7 @@ const navigation = [
                 label: 'Cards'
             },
             {
-                href: '#',
+                href: QUICK_START.PRODUCT_CARDS,
                 label: 'Product Cards'
             },
             {
@@ -73,7 +73,7 @@ const navigation = [
                 label: 'Links'
             },
             {
-                href: '#',
+                href: QUICK_START.GRIDCELLS,
                 label: 'Grid cells'
             },
             {
@@ -121,7 +121,7 @@ const headerConfig = {
     ]
 }
 %>
-<%- include(`${component}/header/standard`, { ...headerConfig }) %>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <%- contentFor('footer') %>
 <%- include(`${component}/footer/basic`, { variant: 'darkener'}) %>

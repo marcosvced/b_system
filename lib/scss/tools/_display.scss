@@ -49,17 +49,17 @@ $positions: top, bottom, left, right, inline, block;
         @for $columns from 1 through 12 {
             .grid-#{$breakpoint}#{$columns} {
                 grid-template-columns: repeat(#{$columns}, 1fr);
-                gap: helpers.space(32);
+                gap: helpers.space(24);
             }
 
             .grid-#{$breakpoint}max-#{$columns} {
                 grid-template-columns: repeat(#{$columns}, max-content);
-                gap: helpers.space(32);
+                gap: helpers.space(24);
             }
 
             .grid-#{$breakpoint}min-#{$columns} {
                 grid-template-columns: repeat(#{$columns}, min-content);
-                gap: helpers.space(32);
+                gap: helpers.space(24);
             }
         }
 

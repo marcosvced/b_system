@@ -159,7 +159,8 @@
 
     &-only-icon {
         min-width: min-content;
-        @include mixin.square(32);
+        width: 1em;
+        height: 1em;
         font-size: helper.rem(18);
         align-items: center;
         justify-content: center;
