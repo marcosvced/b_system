@@ -1,0 +1,40 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.form-group {
+    [class*='icon-'] {
+        font-size: helper.rem(20);
+    }
+
+    .input {
+        background-color: transparent;
+    }
+
+    .form-check-input:checked {
+        background-color: helper.primary(blue);
+    }
+
+    .input {
+        @include themed.properties {
+            border-color: themed.values(helper.grayscale(500), helper.grayscale(700));
+        }
+    }
+
+    .input, .form-control::placeholder, [class*='icon-'], .form-check-label {
+        @include themed.properties {
+            color: themed.values(helper.grayscale(600), helper.grayscale(800));
+        }
+    }
+}
+
+.form-control::placeholder {
+    font-size: helper.rem(15);
+}
+
+.form-check-input {
+    width: helper.rem(20);
+    height: helper.rem(20);
+    margin-top: 0;
+}

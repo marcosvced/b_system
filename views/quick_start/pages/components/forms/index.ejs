@@ -10,42 +10,42 @@
 
         <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
             <div class="h-100 space-y-24">
-                <%- include(`${component}/form/form`, { componentType: 'text', name: 'Name' }) %>
+                <%- include(`${component}/form/form`, { componentType: 'text', name: 'Name', isDarkened: false }) %>
                 <span class="body-light-gray-text">
                     Input states
                 </span>
             </div>
 
             <div class="h-100 space-y-24">
-                <%- include(`${component}/form/form`, { componentType: 'password', name: 'Password' }) %>
+                <%- include(`${component}/form/form`, { componentType: 'password', name: 'Password', isDarkened: false }) %>
                 <span class="body-light-gray-text">
                     Input hideable states 
                 </span>
             </div>
 
             <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/form`, { componentType: 'checkbox', label: 'I accept the treatment of my data.', id: 'check-states' }) %>
+                <%- include(`${component}/form/form`, { componentType: 'checkbox', label: 'I accept the treatment of my data.', id: 'check-states', isDarkened: false }) %>
                 <span class="body-light-gray-text">
                     Check states 
                 </span>
             </div>
 
             <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/form`, { componentType: 'radio', label: 'I choose the premium level.', id: 'radio-states' }) %>
+                <%- include(`${component}/form/form`, { componentType: 'radio', label: 'I choose the premium level.', id: 'radio-states', isDarkened: false }) %>
                 <span class="body-light-gray-text">
                     Radio states
                 </span>
             </div>
 
             <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/form`, {componentType: 'info', icon: 'info', text:'Gift cards cannot be used to pay cash.' }) %>
+                <%- include(`${component}/form/form`, {componentType: 'info', icon: 'info', text:'Gift cards cannot be used to pay cash.', position: 'before', isDarkened: false }) %>
                 <span class="body-light-gray-text">
                     Info
                 </span>
             </div>
 
             <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                
+                <%- include(`${component}/form/form`, {componentType: 'link', link: {src: '#', label: 'Gift cards cannot be used to pay cash.', iconLink: 'info', position: 'before'}, isDarkened: false }) %>
                 <span class="body-light-gray-text">
                     Info and link
                 </span>
@@ -55,5 +55,53 @@
 <!--END: SECTION LIGHT-->
 
 <!--SECTION DARK-->
+<section class="section" data-bsystem="dark">
+    <div class="container">
 
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Form elements dark</h3>
+
+        <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="h-100 space-y-24">
+                <%- include(`${component}/form/form`, { componentType: 'text', name: 'Name', isDarkened: false }) %>
+                <span class="body-light-gray-text">
+                    Input states
+                </span>
+            </div>
+
+            <div class="h-100 space-y-24">
+                <%- include(`${component}/form/form`, { componentType: 'password', name: 'Password', isDarkened: false }) %>
+                <span class="body-light-gray-text">
+                    Input hideable states 
+                </span>
+            </div>
+
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/form`, { componentType: 'checkbox', label: 'I accept the treatment of my data.', id: 'check-states', isDarkened: false }) %>
+                <span class="body-light-gray-text">
+                    Check states 
+                </span>
+            </div>
+
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/form`, { componentType: 'radio', label: 'I choose the premium level.', id: 'radio-states', isDarkened: false }) %>
+                <span class="body-light-gray-text">
+                    Radio states
+                </span>
+            </div>
+
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/form`, {componentType: 'info', icon: 'info', text:'Gift cards cannot be used to pay cash.', position: 'before', isDarkened: false }) %>
+                <span class="body-light-gray-text">
+                    Info
+                </span>
+            </div>
+
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/form`, {componentType: 'link', link: {src: '#', label: 'Gift cards cannot be used to pay cash.', iconLink: 'info', position: 'before'}, isDarkened: false }) %>
+                <span class="body-light-gray-text">
+                    Info and link
+                </span>
+            </div>
+        </form>
+</section>
 <!--END: SECTION DARK-->
