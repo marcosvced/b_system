@@ -5,48 +5,42 @@
 <div class="main-content main-content-space-top">
     <section class="module-wrapper">
         <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/basic`, {
+            <%- include(`${component}/footer/newsletter`, {
                 img: {src: 'logo-dark-gray.svg', alt: 'logo '},
                 text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 textNewsletter: 'Find out about all our news in our newsletter:',
-                setup: 'newsletter',
             }) %>
         </div>
     </section>
 
     <section class="module-wrapper">
         <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/basic`, {
+            <%- include(`${component}/footer/newsletter`, {
                 img: {src: 'logo-dark-gray.svg', alt: 'logo'},
                 text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 textNewsletter: 'Find out about all our news in our newsletter:',
-                setup: 'newsletter',
-                variant: 'darkener',
+                isDarkened: true,
             }) %>
         </div>
     </section>
 
     <section class="module-wrapper">
-        <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/basic`, {
+        <div class="module-view-example-wrapper" data-bsystem="dark">
+            <%- include(`${component}/footer/newsletter`, {
                 img: {src: 'logo-light-gray.svg', alt: 'logo'},
                 text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 textNewsletter: 'Find out about all our news in our newsletter:',
-                setup: 'newsletter',
-                isDark: true,
             }) %>
         </div>
     </section>
 
-    <section class="module-wrapper">
+    <section class="module-wrapper" data-bsystem="dark">
         <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/basic`, {
+            <%- include(`${component}/footer/newsletter`, {
                 img: {src: 'logo-light-gray.svg', alt: 'logo'},
                 text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 textNewsletter: 'Find out about all our news in our newsletter:',
-                setup: 'newsletter',
-                variant: 'darkener',
-                isDark: true,
+                isDarkened: true,
             }) %>
         </div>
     </section>

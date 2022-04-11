@@ -9,7 +9,7 @@
         background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
     }
 
-    &.darkener {
+    &.darkened {
         @include themed.properties {
             background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
         }
@@ -53,21 +53,8 @@
             text-align: start;
         }
     }
-}
 
-@media (min-width: 1000px) {
-    .footer:not(.footer-newsletter, .footer-corporate) {
-        .copy {
-            max-width: 70%;
-        }
-    }
-}
-
-
-@media (min-width: 1200px) {
-    .footer {
-        $parent: &;
-
+    @include mixin.screen(xl) {
         &-basic {
             #{$parent}-content {
                 flex-direction: row;
@@ -78,64 +65,50 @@
                 }
             }
         }
-        
+
         &-newsletter {
             #{$parent}-wrapper {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
-
+    
                 #{$parent}-content, #{$parent}-subscribe {
                     width: 45%;
                     align-items: flex-start;
-
+    
                     .copy {
                         text-align: start;
                     }
                 }
-
+    
                 #{$parent}-subscribe {
                     padding-block: 0 !important;
-
+    
                     #{$parent}-form {
                         flex-direction: row;
                     }
                 }
             }
         }
-
+    
         &-corporate {
             #{$parent}-contain {
                 display: flex;
                 column-gap: helper.space(112);
-
+    
                 #{$parent}-columns-container {
                     width: 150%;
                 }
             }
         }
     }
-}
 
-// Provisional accordion styles
-.footer {
-    .accordion {
-        @include themed.properties {
-            border-top: helper.rem(1) solid themed.values(helper.grayscale(200), helper.grayscale(1000)); 
-        }
-    }
-
-    .accordion-item, .accordion-button {
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
-        }
-    }
-
-    &.darkener {
-       .accordion-item, .accordion-button {
-            @include themed.properties {
-                background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+    &:not(.footer-newsletter, .footer-corporate) {
+        @include mixin.screen(lg) {
+            .copy {
+                max-width: 70%;
             }
-       }
+        }
     }
+
 }
