@@ -1,0 +1,893 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<!--CARDS-->
+
+<!--SECTION LIGHT-->
+<section class="section">
+
+    <div class="container">
+
+        <h3 class="space-bottom-88">Cards</h3>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+
+           <div class="col-1-to-5 d-flex flex-column space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card.jpg',
+                    imgAlt: 'Card image',
+                    titleBasic: '.US',
+                    textBasic: 'Product design'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic card
+                </span>
+           </div>
+
+           <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card-2.jpg',
+                    imgAlt: 'Card image',
+                    avatar: '800x800_33.jpg',
+                    avatarAlt: 'This is a description text'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+
+           <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card-3.jpg',
+                    imgAlt: 'Card image',
+                    textOverImg: 'B_system'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+           </div>
+
+           <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/comparative`, {
+                    img: 'img_feature-card-1.jpg',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+               <span class="body-light-gray-text">
+                    Card
+               </span>
+           </div>
+
+           <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/feature`, {
+                    innerShadow:'on',
+                    img: 'img_featured-card.svg',
+                    backgroundFeature: '#0077e6',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Feature card
+                </span>
+            </div>
+
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/comparative`, {
+                    price: '$ 12',
+                    icon: 'saving-filled',
+                    titleComparative: 'Basic product',
+                    text: 'Sample text for basic product. Basic resources for starter brands.',
+                    hrefCard: '#',
+                    labelLink: 'Choose',
+                    iconLink: 'links',
+
+                    typesListElements: [
+                    {
+                        icon: "check",
+                        text:"Basic resource example.",
+                    },
+                    {
+                        icon: "close-blade",
+                        text:"Unlimited websites.",
+                    },
+                    {
+                        icon: "close-blade",
+                        text:"Unmetered storage.",
+                    },
+                    ],
+                } ) %>
+                <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+                <%- include( `${component}/card/business`, {
+                    titleBusiness: 'Business case 1: Brandemic',
+                    icon: 'star',
+                    subtitle: 'New brand',
+                    logo: 'logo-brandemic.svg',
+                    logoAlt: 'Brandemic logo',
+                    date: '23/03/2019',
+                    hrefCard: '#',
+                    labelLink: 'More info',
+                    iconLink: 'info'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
+
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+                <%- include( `${component}/card/service`, {
+                    titleService: 'Digital strategy',
+                    text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
+                    textTag: '1',
+                    img: 'img_service-1.jpg',
+                    imgAlt: 'This is a description text',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+
+        </div>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+                <%- include( `${component}/card/testimonial`, {
+                    img: 'quote.svg',
+                    imgAlt: 'quote icon',
+                    text: '"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”',
+                    avatar: 'avatar_testimonial-1.jpg',
+                    userName: 'Sandra Golpe',
+                    userJob: 'Marketing manager',
+                    typesStars: [
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "off",
+                    },
+                    ],
+                } ) %>
+                <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
+                <%- include( `${component}/card/sticky`, {
+                    titleContact: 'Contact us',
+                    iconClose: 'blade',
+                    hrefChat: '#',
+                    labelChat: 'Consult in our chat',
+                    iconChat: 'whatsapp',
+                    hrefPhone: '#',
+                    labelPhone: 'Shall we call you?',
+                    iconPhone: 'contact',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+
+            <div class="col-1-to-5 space-y-24">
+                <%- include( `${component}/card/icon`, {
+                    icon: 'awards-circle',
+                    text: 'B system is a sketch.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+        </div>
+
+        <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+                <div class="position-relative h-100">
+                    <%- include( `${component}/card/project`, {
+                        textHeader: '01',
+                        titleProject: 'Calgary museum',
+                        hrefCard: '#',
+                        labelLink: 'Learn more',
+                        iconLink: 'links',
+                    } ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Project card
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--END: SECTION LIGHT-->
+
+<!--SECTION LIGHT (GRAY BRACKGROUND)-->
+<section class="section darkener">
+
+    <div class="container">
+
+        <h3 class="space-bottom-88">Cards</h3>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+
+           <div class="col-1-to-5 d-flex flex-column space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card.jpg',
+                    imgAlt: 'Card image',
+                    titleBasic: '.US',
+                    textBasic: 'Product design'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic card
+                </span>
+           </div>
+
+           <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card-2.jpg',
+                    imgAlt: 'Card image',
+                    avatar: '800x800_33.jpg',
+                    avatarAlt: 'This is a description text'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+
+           <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card-3.jpg',
+                    imgAlt: 'Card image',
+                    textOverImg: 'B_system'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+           </div>
+
+           <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/comparative`, {
+                    img: 'img_feature-card-1.jpg',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+               <span class="body-light-gray-text">
+                    Card
+               </span>
+           </div>
+
+           <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/feature`, {
+                    innerShadow:'on',
+                    img: 'img_featured-card.svg',
+                    backgroundFeature: '#0077e6',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Feature card
+                </span>
+        </div>
+
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/comparative`, {
+                    price: '$ 12',
+                    icon: 'saving-filled',
+                    titleComparative: 'Basic product',
+                    text: 'Sample text for basic product. Basic resources for starter brands.',
+                    hrefCard: '#',
+                    labelLink: 'Choose',
+                    iconLink: 'links',
+
+                    typesListElements: [
+                    {
+                        icon: "check",
+                        text:"Basic resource example.",
+                    },
+                    {
+                        icon: "close-blade",
+                        text:"Unlimited websites.",
+                    },
+                    {
+                        icon: "close-blade",
+                        text:"Unmetered storage.",
+                    },
+                    ],
+                } ) %>
+                <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+                <%- include( `${component}/card/business`, {
+                    titleBusiness: 'Business case 1: Brandemic',
+                    icon: 'star',
+                    subtitle: 'New brand',
+                    logo: 'logo-brandemic.svg',
+                    logoAlt: 'Brandemic logo',
+                    date: '23/03/2019',
+                    hrefCard: '#',
+                    labelLink: 'More info',
+                    iconLink: 'info'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
+
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+                <%- include( `${component}/card/service`, {
+                    titleService: 'Digital strategy',
+                    text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
+                    textTag: '1',
+                    img: 'img_service-1.jpg',
+                    imgAlt: 'This is a description text',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+
+        </div>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+                <%- include( `${component}/card/testimonial`, {
+                    img: 'quote.svg',
+                    imgAlt: 'quote icon',
+                    text: '"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”',
+                    avatar: 'avatar_testimonial-1.jpg',
+                    userName: 'Sandra Golpe',
+                    userJob: 'Marketing manager',
+                    typesStars: [
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "off",
+                    },
+                    ],
+                } ) %>
+                <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
+                <%- include( `${component}/card/sticky`, {
+                    titleContact: 'Contact us',
+                    iconClose: 'blade',
+                    hrefChat: '#',
+                    labelChat: 'Consult in our chat',
+                    iconChat: 'whatsapp',
+                    hrefPhone: '#',
+                    labelPhone: 'Shall we call you?',
+                    iconPhone: 'contact',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+
+            <div class="col-1-to-5 space-y-24">
+                <%- include( `${component}/card/icon`, {
+                    icon: 'awards-circle',
+                    text: 'B system is a sketch.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+        </div>
+
+        <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+                <div class="position-relative h-100">
+                    <%- include( `${component}/card/project`, {
+                        textHeader: '01',
+                        titleProject: 'Calgary museum',
+                        hrefCard: '#',
+                        labelLink: 'Learn more',
+                        iconLink: 'links',
+                    } ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Project card
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--END: SECTION LIGHT (GRAY BRACKGROUND)-->
+
+<!--SECTION DARK-->
+<section class="section" data-bsystem="dark">
+
+    <div class="container">
+
+        <h3 class="space-bottom-88">Form elements dark</h3>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+
+           <div class="col-1-to-5 d-flex flex-column space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card.jpg',
+                    imgAlt: 'Card image',
+                    titleBasic: '.US',
+                    textBasic: 'Product design'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic card
+                </span>
+           </div>
+
+           <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card-2.jpg',
+                    imgAlt: 'Card image',
+                    avatar: '800x800_33.jpg',
+                    avatarAlt: 'This is a description text'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+
+           <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card-3.jpg',
+                    imgAlt: 'Card image',
+                    textOverImg: 'B_system'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+           </div>
+
+           <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/comparative`, {
+                    img: 'img_feature-card-1.jpg',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+               <span class="body-light-gray-text">
+                    Card
+               </span>
+           </div>
+
+           <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/feature`, {
+                    innerShadow:'on',
+                    img: 'img_featured-card.svg',
+                    backgroundFeature: '#0077e6',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Feature card
+                </span>
+        </div>
+
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/comparative`, {
+                    price: '$ 12',
+                    icon: 'saving-filled',
+                    titleComparative: 'Basic product',
+                    text: 'Sample text for basic product. Basic resources for starter brands.',
+                    hrefCard: '#',
+                    labelLink: 'Choose',
+                    iconLink: 'links',
+
+                    typesListElements: [
+                    {
+                        icon: "check",
+                        text:"Basic resource example.",
+                    },
+                    {
+                        icon: "close-blade",
+                        text:"Unlimited websites.",
+                    },
+                    {
+                        icon: "close-blade",
+                        text:"Unmetered storage.",
+                    },
+                    ],
+                } ) %>
+                <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+                <%- include( `${component}/card/business`, {
+                    titleBusiness: 'Business case 1: Brandemic',
+                    icon: 'star',
+                    subtitle: 'New brand',
+                    logo: 'logo-brandemic-light.svg',
+                    logoAlt: 'Brandemic logo',
+                    date: '23/03/2019',
+                    hrefCard: '#',
+                    labelLink: 'More info',
+                    iconLink: 'info'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
+
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+                <%- include( `${component}/card/service`, {
+                    titleService: 'Digital strategy',
+                    text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
+                    textTag: '1',
+                    img: 'img_service-1.jpg',
+                    imgAlt: 'This is a description text',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+
+        </div>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+                <%- include( `${component}/card/testimonial`, {
+                    img: 'quote-light.svg',
+                    imgAlt: 'quote icon',
+                    text: '"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”',
+                    avatar: 'avatar_testimonial-1.jpg',
+                    userName: 'Sandra Golpe',
+                    userJob: 'Marketing manager',
+                    typesStars: [
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "off",
+                    },
+                    ],
+                } ) %>
+                <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
+                <%- include( `${component}/card/sticky`, {
+                    titleContact: 'Contact us',
+                    iconClose: 'blade',
+                    hrefChat: '#',
+                    labelChat: 'Consult in our chat',
+                    iconChat: 'whatsapp',
+                    hrefPhone: '#',
+                    labelPhone: 'Shall we call you?',
+                    iconPhone: 'contact',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+
+            <div class="col-1-to-5 space-y-24">
+                <%- include( `${component}/card/icon`, {
+                    icon: 'awards-circle',
+                    text: 'B system is a sketch.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+        </div>
+
+        <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+                <div class="position-relative h-100">
+                    <%- include( `${component}/card/project`, {
+                        textHeader: '01',
+                        titleProject: 'Calgary museum',
+                        hrefCard: '#',
+                        labelLink: 'Learn more',
+                        iconLink: 'links',
+                    } ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Project card
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--END: SECTION DARK-->
+
+<!--SECTION DARK (DARKENER BACKGROUND)-->
+<section class="section darkener" data-bsystem="dark">
+
+    <div class="container">
+
+        <h3 class="space-bottom-88">Form elements dark</h3>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+
+           <div class="col-1-to-5 d-flex flex-column space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card.jpg',
+                    imgAlt: 'Card image',
+                    titleBasic: '.US',
+                    textBasic: 'Product design'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic card
+                </span>
+           </div>
+
+           <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card-2.jpg',
+                    imgAlt: 'Card image',
+                    avatar: '800x800_33.jpg',
+                    avatarAlt: 'This is a description text'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+
+           <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
+                <%- include( `${component}/card/basic`, {
+                    img: 'img_basic-card-3.jpg',
+                    imgAlt: 'Card image',
+                    textOverImg: 'B_system'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+           </div>
+
+           <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/comparative`, {
+                    img: 'img_feature-card-1.jpg',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+               <span class="body-light-gray-text">
+                    Card
+               </span>
+           </div>
+
+           <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/feature`, {
+                    innerShadow:'on',
+                    img: 'img_featured-card.svg',
+                    backgroundFeature: '#0077e6',
+                    titleFeature: 'Well organized and layered',
+                    text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Feature card
+                </span>
+        </div>
+
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
+                <%- include( `${component}/card/comparative`, {
+                    price: '$ 15',
+                    icon: 'saving-filled',
+                    titleComparative: 'Basic product',
+                    text: 'Sample text for basic product. Basic resources for starter brands.',
+                    hrefCard: '#',
+                    labelLink: 'Choose',
+                    iconLink: 'links',
+
+                    typesListElements: [
+                    {
+                        icon: "check",
+                        text:"Basic resource example.",
+                    },
+                    {
+                        icon: "close-blade",
+                        text:"Unlimited websites.",
+                    },
+                    {
+                        icon: "close-blade",
+                        text:"Unmetered storage.",
+                    },
+                    ],
+                } ) %>
+                <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+                <%- include( `${component}/card/business`, {
+                    titleBusiness: 'Business case 1: Brandemic',
+                    icon: 'star',
+                    subtitle: 'New brand',
+                    logo: 'logo-brandemic-light.svg',
+                    logoAlt: 'Brandemic logo',
+                    date: '23/03/2019',
+                    hrefCard: '#',
+                    labelLink: 'More info',
+                    iconLink: 'info'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
+
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+                <%- include( `${component}/card/service`, {
+                    titleService: 'Digital strategy',
+                    text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
+                    textTag: '1',
+                    img: 'img_service-1.jpg',
+                    imgAlt: 'This is a description text',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links'
+                } ) %>
+                <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+
+        </div>
+
+        <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+                <%- include( `${component}/card/testimonial`, {
+                    img: 'quote-light.svg',
+                    imgAlt: 'quote icon',
+                    text: '"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”',
+                    avatar: 'avatar_testimonial-1.jpg',
+                    userName: 'Sandra Golpe',
+                    userJob: 'Marketing manager',
+                    typesStars: [
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "on",
+                    },
+                    {
+                        starState: "off",
+                    },
+                    ],
+                } ) %>
+                <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
+                <%- include( `${component}/card/sticky`, {
+                    titleContact: 'Contact us',
+                    iconClose: 'blade',
+                    hrefChat: '#',
+                    labelChat: 'Consult in our chat',
+                    iconChat: 'whatsapp',
+                    hrefPhone: '#',
+                    labelPhone: 'Shall we call you?',
+                    iconPhone: 'contact',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+
+            <div class="col-1-to-5 space-y-24">
+                <%- include( `${component}/card/icon`, {
+                    icon: 'awards-circle',
+                    text: 'B system is a sketch.',
+                    hrefCard: '#',
+                    labelLink: 'Learn more',
+                    iconLink: 'links',
+                } ) %>
+                <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+        </div>
+
+        <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+                <div class="position-relative h-100">
+                    <%- include( `${component}/card/project`, {
+                        textHeader: '01',
+                        titleProject: 'Calgary museum',
+                        hrefCard: '#',
+                        labelLink: 'Learn more',
+                        iconLink: 'links',
+                    } ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Project card
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--END: SECTION DARK (DARKENER BACKGROUND)-->
