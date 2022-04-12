@@ -93,6 +93,19 @@ background-color: helper.button(primary--hover);
 · Siendo _position_ uno de los siguientes valores: _top, bottom, left, right, inline, block_.
 · Siendo _n_ una de las keys definidas en la variable `$space` del fichero `/lib/scss/variables/_spacing.scss`.
 
+Para crear un grid de n columnas podemos usar las clases `d-grid` y `grid-{n}`. (Deben usarse junstas)
+Para determinar el tamaño de cada elemento hijo, están las clase `col-span-{n}` y `col-{start}-to-{end}`
+```html
+<div class="d-grid grid-{breakpoint}-{n}">
+  <div class="col-span-{breakpoint}-{n}"></div>
+</div>
+```
+```html
+<div class="d-grid grid-{breakpoint}-{n}">
+  <div class="col-{breakpoint}-{start}-to-{end}"></div>
+</div>
+```
+
 ### Uso de theme
 
 ```css
