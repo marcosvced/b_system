@@ -86,7 +86,6 @@ const navbarFullCenterSticky = {
 
 const navbarStandardTransparent = {
     ...navbarStandard,
-    buttons: navbarStandard.buttons.map(button => ({...button, variant: 'tertiary'})),
     hasBackground: false
 }
 const navbarFullRightTransparent = {
@@ -95,168 +94,207 @@ const navbarFullRightTransparent = {
 }
 const navbarFullCenterTransparent = {
     ...navbarFullCenter,
-    buttons: navbarFullCenter.buttons.map(button => ({...button, variant: 'tertiary'})),
     hasBackground: false
 }
 const navbarShopTransparent = {
     ...navbarShop,
-    buttons: navbarShop.buttons.map(button => ({...button, variant: 'tertiary'})),
+    hasBackground: false
+}
+
+const navbarStandardTransparentDark = {
+    ...navbarStandard,
+    buttons: navbarStandard.buttons.map(button => ({
+        ...button,
+        variant: 'tertiary'
+    })),
+    hasBackground: false
+}
+const navbarFullRightTransparentDark = {
+    ...navbarFullRight,
+    hasBackground: false
+}
+const navbarFullCenterTransparentDark = {
+    ...navbarFullCenter,
+    buttons: navbarFullCenter.buttons.map(button => ({
+        ...button,
+        variant: 'tertiary'
+    })),
+    hasBackground: false
+}
+const navbarShopTransparentDark = {
+    ...navbarShop,
+    buttons: navbarShop.buttons.map(button => ({
+        ...button,
+        variant: 'tertiary'
+    })),
     hasBackground: false
 }
 %>
 
 <div class="section darkener px-0 pb-0">
     <div class="container">
-        <h3 class="inner-space-block-48 inner-space-block-lg-88">Header menus</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Header menus' }) %>
     </div>
-    <div class="wrapper-standard">
-        <%- include(`${component}/header/header`, { ...navbarStandard }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-32 inner-space-top-lg-32 inner-space-bottom-lg-40">Header standard</span>
+    <div class="headers-wrapper space-y-32 space-y-lg-40">
+        <div class="wrapper-standard space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarStandard }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header standard</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-full-right">
-        <%- include(`${component}/header/header`, { ...navbarFullRight }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen right aligned</span>
+        <div class="wrapper-full-right space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullRight }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen right aligned</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-full-center">
-        <%- include(`${component}/header/header`, { ...navbarFullCenter }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen center aligned</span>
+        <div class="wrapper-full-center space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullCenter }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen center aligned</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-shop">
-        <%- include(`${component}/header/header`, { ...navbarShop }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header shop</span>
+        <div class="wrapper-shop space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarShop }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header shop</span>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="section darkener px-0 py-0">
     <div class="container">
-        <h3 class="inner-space-block-48 inner-space-block-lg-88">Header sticky</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Header sticky' }) %>
     </div>
-    <div class="wrapper-full-right-sticky">
-        <%- include(`${component}/header/header`, { ...navbarFullRightSticky }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen right aligned sticky</span>
+    <div class="headers-wrapper space-y-32 space-y-lg-40">
+        <div class="wrapper-full-right-sticky space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullRightSticky }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen right aligned sticky</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-full-center-sticky">
-        <%- include(`${component}/header/header`, { ...navbarFullCenterSticky }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen center aligned sticky</span>
+        <div class="wrapper-full-center-sticky space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullCenterSticky }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen center aligned sticky</span>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="section darkener px-0 py-0 ">
+<div class="section darkener px-0 pt-0 inner-space-bottom-48 inner-space-bottom-lg-88">
     <div class="container">
-        <h3 class="inner-space-block-48 inner-space-block-lg-88">Header menus transparent</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Header menus transparent' }) %>
     </div>
-    <div class="wrapper-standard">
-        <%- include(`${component}/header/header`, { ...navbarStandardTransparent }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header standard transparent</span>
+    <div class="headers-wrapper space-y-32 space-y-lg-40">
+        <div class="wrapper-standard space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarStandardTransparent }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header standard transparent</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-full-right">
-        <%- include(`${component}/header/header`, { ...navbarFullRightTransparent }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen right aligned transparent</span>
+        <div class="wrapper-full-right space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullRightTransparent }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen right aligned transparent</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-full-center">
-        <%- include(`${component}/header/header`, { ...navbarFullCenterTransparent }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen center aligned transparent</span>
+        <div class="wrapper-full-center space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullCenterTransparent }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen center aligned transparent</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-shop">
-        <%- include(`${component}/header/header`, { ...navbarShopTransparent }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-32 inner-space-bottom-88">Header shop transparent</span>
+        <div class="wrapper-shop space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarShopTransparent }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header shop transparent</span>
+            </div>
         </div>
     </div>
 </div>
 
 <div data-bsystem="dark" class="section darkener px-0 py-0 ">
     <div class="container">
-        <h3 class="inner-space-block-48 inner-space-block-lg-88">Header menus dark</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Header menus dark' }) %>
     </div>
-    <div class="wrapper-standard">
-        <%- include(`${component}/header/header`, { ...navbarStandard, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header standard</span>
+    <div class="headers-wrapper space-y-32 space-y-lg-40">
+        <div class="wrapper-standard space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarStandard, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header standard</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-full-right">
-        <%- include(`${component}/header/header`, { ...navbarFullRight, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen right aligned</span>
+        <div class="wrapper-full-right space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullRight, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen right aligned</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-full-center">
-        <%- include(`${component}/header/header`, { ...navbarFullCenter, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen center aligned</span>
+        <div class="wrapper-full-center space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullCenter, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen center aligned</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-shop">
-        <%- include(`${component}/header/header`, { ...navbarShop, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header shop</span>
-        </div>
-    </div>
-</div>
-
-<div data-bsystem="dark" class="section darkener px-0 py-0">
-    <div class="container">
-        <h3 class="inner-space-block-48 inner-space-block-lg-88">Header sticky dark</h3>
-    </div>
-    <div class="wrapper-full-right-sticky">
-        <%- include(`${component}/header/header`, { ...navbarFullRightSticky, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen right aligned sticky</span>
-        </div>
-    </div>
-    <div class="wrapper-full-center-sticky">
-        <%- include(`${component}/header/header`, { ...navbarFullCenterSticky, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen center aligned sticky</span>
+        <div class="wrapper-shop space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarShop, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header shop</span>
+            </div>
         </div>
     </div>
 </div>
 
 <div data-bsystem="dark" class="section darkener px-0 py-0">
     <div class="container">
-        <h3 class="inner-space-block-48 inner-space-block-lg-88">Header menus transparent dark</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Header sticky dark' }) %>
     </div>
-    <div class="wrapper-standard">
-        <%- include(`${component}/header/header`, { ...navbarStandardTransparent, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header standard transparent</span>
+    <div class="headers-wrapper space-y-32 space-y-lg-40">
+        <div class="wrapper-full-right-sticky space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullRightSticky, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen right aligned sticky</span>
+            </div>
+        </div>
+        <div class="wrapper-full-center-sticky space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullCenterSticky, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen center aligned sticky</span>
+            </div>
         </div>
     </div>
-    <div class="wrapper-full-right">
-        <%- include(`${component}/header/header`, { ...navbarFullRightTransparent, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen right aligned transparent</span>
-        </div>
+</div>
+
+<div data-bsystem="dark" class="section darkener px-0 pt-0 inner-space-bottom-48 inner-space-bottom-lg-88">
+    <div class="container">
+        <%- include(`${component}/text/head-x3`, { text: 'Header menus transparent dark' }) %>
     </div>
-    <div class="wrapper-full-center">
-        <%- include(`${component}/header/header`, { ...navbarFullCenterTransparent, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-24 inner-space-bottom-48 inner-space-top-lg-32 inner-space-bottom-lg-40">Header fullscreen center aligned transparent</span>
+    <div class="headers-wrapper space-y-32 space-y-lg-40">
+        <div class="wrapper-standard space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarStandardTransparentDark, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header standard transparent</span>
+            </div>
         </div>
-    </div>
-    <div class="wrapper-shop">
-        <%- include(`${component}/header/header`, { ...navbarShopTransparent, logo: 'light' }) %>
-        <div class="container">
-            <span class="body-light-gray-text d-block inner-space-top-32  inner-space-bottom-88">Header shop transparent</span>
+        <div class="wrapper-full-right space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullRightTransparentDark, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen right aligned transparent</span>
+            </div>
+        </div>
+        <div class="wrapper-full-center space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarFullCenterTransparentDark, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header fullscreen center aligned transparent</span>
+            </div>
+        </div>
+        <div class="wrapper-shop space-y-24 space-y-lg-32">
+            <%- include(`${component}/header/header`, { ...navbarShopTransparentDark, logo: 'light' }) %>
+            <div class="container">
+                <span class="body-light-gray-text">Header shop transparent</span>
+            </div>
         </div>
     </div>
 </div>
