@@ -16,5 +16,7 @@ module.exports = {
     TEXTS: '/components/texts',
     CARDS: '/components/cards',
     PRODUCT_CARDS: '/components/productCards',
+    GRIDCELLS: '/components/gridCells',
+    FORMS: '/components/forms',
   },
 }

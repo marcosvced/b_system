@@ -66,4 +66,14 @@ route.get(routePaths.QUICK_START.PRODUCT_CARDS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['productCards']))
 })
 
+/* Grid Cells page. */
+route.get(routePaths.QUICK_START.GRIDCELLS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['gridCells']))
+})
+
+/* Forms page. */
+route.get(routePaths.QUICK_START.FORMS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['forms']))
+})
+
 module.exports = route

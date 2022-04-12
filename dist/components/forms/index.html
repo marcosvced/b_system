@@ -9,6 +9,8 @@
 
     <!--B_System styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
+    <style lang="css">
+    </style>
   </head>
   <body>
 
@@ -87,10 +89,10 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="components_dropdown_menu">
                     <li>
-                      <a class="dropdown-item active" href="../../components/buttons">Buttons</a>
+                      <a class="dropdown-item " href="../../components/buttons">Buttons</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Forms</a>
+                      <a class="dropdown-item active" href="../../components/forms">Forms</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="#">Interaction</a>
@@ -149,83 +151,70 @@
     <!--MAIN CONTENT-->
     <main class="main">
 
-      <!--BUTTONS-->
-
       <!--SECTION LIGHT-->
       <section class="section">
         <div class="container">
-          <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Buttons</h3>
-          <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-primary btn-primary-cta">
-                <span>Purchase</span>
-                <i class="icon-links"></i>
-              </button>
+          <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Form elements</h3>
+          <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="h-100 space-y-24">
+              <div class="form-group ">
+                <input type="text" class="input-basic form-control input" placeholder="Name">
+              </div>
               <span class="body-light-gray-text">
-                    Primary CTA
+                    Input states
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-primary">
-                Continue
-              </button>
+            <div class="h-100 space-y-24">
+              <div class="form-group ">
+                <input type="password" class="input-hiddeable form-control input" placeholder="Password">
+              </div>
               <span class="body-light-gray-text">
-                    Primary
+                    Input hideable states 
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-secondary">
-                Send
-              </button>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+              <div class="form-group ">
+                <input type="checkbox" class="input-check form-check-input input space-right-8" id="check-states">
+                <label class="form-check-label" for="check-states">I accept the treatment of my data.</label>
+              </div>
               <span class="body-light-gray-text">
-                    Secondary
+                    Check states 
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-tertiary">
-                Access
-              </button>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+              <div class="form-group ">
+                <input type="radio" class="input-radio form-check-input input space-right-8" id="radio-states">
+                <label class="form-check-label" for="radio-states">I choose the premium level.</label>
+              </div>
               <span class="body-light-gray-text">
-                    Tertiary
+                    Radio states
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-subtle">
-                <span>Access</span>
-                <i class="icon-avatar"></i>
-              </button>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+              <div class="form-group ">
+                <div class="form-info d-flex align-items-center space-x-8">
+                  <i class="icon-info"></i>
+                  <p class="body-light-gray-text">Gift cards cannot be used to pay cash.</p>
+                </div>
+              </div>
               <span class="body-light-gray-text">
-                    Subtle
+                    Info
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-tertiary  btn-action-next">
-                <span>Next</span>
-                <i class="icon-next"></i>
-              </button>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+              <div class="form-group ">
+                <div class="form-info d-flex align-items-center space-x-8">
+                  <a href="#" class="action-link ">
+                    <i class="icon-info"></i>
+                    <span>Gift cards cannot be used to pay cash.</span>
+                  </a>
+                </div>
+              </div>
               <span class="body-light-gray-text">
-                    Tertiary Next
+                    Info and link
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-tertiary  btn-action-previous">
-                <i class="icon-back"></i>
-                <span>Previous</span>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Previous
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-primary" disabled>
-                Start with B_System
-              </button>
-              <span class="body-light-gray-text">
-                    Disabled
-                </span>
-            </div>
-          </div>
-        </div>
+          </form>
       </section>
 
       <!--END: SECTION LIGHT-->
@@ -233,86 +222,67 @@
       <!--SECTION DARK-->
       <section class="section" data-bsystem="dark">
         <div class="container">
-          <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Buttons dark mode</h3>
-          <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-primary btn-primary-cta">
-                <span>Purchase</span>
-                <i class="icon-links"></i>
-              </button>
+          <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Form elements dark</h3>
+          <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="h-100 space-y-24">
+              <div class="form-group ">
+                <input type="text" class="input-basic form-control input" placeholder="Name">
+              </div>
               <span class="body-light-gray-text">
-                    Primary CTA
+                    Input states
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-primary">
-                Continue
-              </button>
+            <div class="h-100 space-y-24">
+              <div class="form-group ">
+                <input type="password" class="input-hiddeable form-control input" placeholder="Password">
+              </div>
               <span class="body-light-gray-text">
-                    Primary
+                    Input hideable states 
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-secondary">
-                Send
-              </button>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+              <div class="form-group ">
+                <input type="checkbox" class="input-check form-check-input input space-right-8" id="check-states">
+                <label class="form-check-label" for="check-states">I accept the treatment of my data.</label>
+              </div>
               <span class="body-light-gray-text">
-                    Secondary
+                    Check states 
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-tertiary">
-                Access
-              </button>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+              <div class="form-group ">
+                <input type="radio" class="input-radio form-check-input input space-right-8" id="radio-states">
+                <label class="form-check-label" for="radio-states">I choose the premium level.</label>
+              </div>
               <span class="body-light-gray-text">
-                    Tertiary
+                    Radio states
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-subtle">
-                <span>Access</span>
-                <i class="icon-avatar"></i>
-              </button>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+              <div class="form-group ">
+                <div class="form-info d-flex align-items-center space-x-8">
+                  <i class="icon-info"></i>
+                  <p class="body-light-gray-text">Gift cards cannot be used to pay cash.</p>
+                </div>
+              </div>
               <span class="body-light-gray-text">
-                    Subtle
+                    Info
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-tertiary  btn-action-next">
-                <span>Next</span>
-                <i class="icon-next"></i>
-              </button>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+              <div class="form-group ">
+                <div class="form-info d-flex align-items-center space-x-8">
+                  <a href="" class="action-link ">
+                    <i class="icon-info"></i>
+                    <span>Gift cards cannot be used to pay cash.</span>
+                  </a>
+                </div>
+              </div>
               <span class="body-light-gray-text">
-                    Tertiary Next
+                    Info and link
                 </span>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-tertiary  btn-action-previous">
-                <i class="icon-back"></i>
-                <span>Previous</span>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Previous
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-primary" disabled>
-                Start with B_System
-              </button>
-              <span class="body-light-gray-text">
-                    Disabled
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button href="#" class="btn btn-tertiary    transparent">
-                Access
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary transparent
-                </span>
-            </div>
-          </div>
-        </div>
+          </form>
       </section>
 
       <!--END: SECTION DARK-->
@@ -321,11 +291,11 @@
     <!--END: MAIN CONTENT-->
 
     <!--MAIN FOOTER-->
-    <footer class="footer footer-basic footer-darkener">
+    <footer class="footer footer-basic  inner-space-inline-16 inner-space-inline-sm-24">
       <div class="footer-wrapper container">
-        <div class="footer-content d-flex gap-24 space-bottom-24 space-bottom-sm-16">
+        <div class="footer-content d-flex gap-32 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-72">
           <a class="footer-logo" href="../../home">
-            <img src="../../assets/img/logo-dark.svg" class="logo" alt="Logo dark" />
+            <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="B_system logo" />
           </a>
           <p class="copy">
             .Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio
