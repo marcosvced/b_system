@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>B_System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap + reset styles-->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
+
+    <!--B_system styles-->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' />
+    <style lang="css">
+    </style>
+  </head>
+  <body>
+
+    <!--MAIN HEADER-->
+    <header class="header header-fixed header-light " data-bsystem="sticky">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
+          <div class="d-flex d-xl-none order-0">
+            <button href="#" class="btn btn-only-icon">
+              <i class="icon-cart"></i>
+            </button>
+          </div>
+          <div class="d-none d-xl-block order-1">
+            <button href="#" class="btn btn-primary     btn-fit">
+              Purchase B_system
+            </button>
+          </div>
+        </div>
+        <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min ">
+          <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
+        </a>
+        <div class="nav-wrapper order-2 order-xl-1 col">
+          <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
+            <nav class="navbar navbar-expand-lg">
+              <ul class="navbar-nav">
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Demos
+                  </a>
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Pages
+                  </a>
+                </li>
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Modules
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="modules_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="#">Menus</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/headers">Headers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Contents</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Grids</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link active  dropdown-toggle " href="#" id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Components
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="components_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../components/buttons">Buttons</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/interaction">Interaction</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item active" href="../../components/cards">Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/productCards">Product Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/links">Links</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/gridCells">Grid cells</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Icon + description</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Accordions</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Alerts</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/icons">Icons</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/texts">Texts</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Transitions
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
+            <button href="#" class="btn btn-only-icon">
+              <i class="icon-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--END: MAIN HEADER-->
+
+    <!--MAIN CONTENT-->
+    <main class="main">
+
+      <!--CARDS-->
+
+      <!--SECTION LIGHT-->
+      <section class="section">
+        <div class="container">
+          <h3 class="space-bottom-88">Cards</h3>
+          <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 d-flex flex-column space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">.US</p>
+                  <p class="body-light-gray-text">Product design</p>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                  <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+            </div>
+            <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
+              <div class="card comparative-card bg-card interaction-card h-100">
+                <img class="img-basic" src="../../assets/img/img_feature-card-1.jpg" alt="Card image">
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <h5 class="space-bottom-24">Well organized and layered</h5>
+                    <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Card
+               </span>
+            </div>
+            <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
+              <div class="card feature-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
+                  <img class="img-basic" src="../../assets/img/img_featured-card.svg" alt="Card image">
+                </div>
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <h5 class="space-bottom-24">Well organized and layered</h5>
+                    <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Feature card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
+              <div class="card comparative-card bg-card interaction-card h-100">
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <div class="header-card d-flex align-items-center justify-content-between space-top-6 space-bottom-8">
+                      <h4 class="mb-0">$ 12</h4>
+                      <i class="icon-saving-filled"></i>
+                    </div>
+                    <h5 class="h5">Basic product</h5>
+                    <span class="d-block border-bottom"></span>
+                    <p class="body-light-gray-text space-bottom-24">Sample text for basic product. Basic resources for starter brands.</p>
+                    <ul class="list-card list-unstyled space-y-16">
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-check"></i>
+                        Basic resource example.
+                      </li>
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-close-blade"></i>
+                        Unlimited websites.
+                      </li>
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-close-blade"></i>
+                        Unmetered storage.
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Choose</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+                <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                  <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
+                  <i class="icon-star"></i>
+                  <p class="body-light-gray-text w-100">New brand</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="body-light-gray-text">23/03/2019</p>
+                  <a href="#" class="action-link ">
+                    <span>More info</span>
+                    <i class="icon-info"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
+                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+                  <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
+                </div>
+                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                  <span class="tag-card d-flex justify-content-center align-items-end">
+            1        </span>
+                  <div class="space-y-24">
+                    <h4>Digital strategy</h4>
+                    <p class="body-light-gray-text">We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. </p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+          </div>
+          <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+              <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
+                <div class="header-card d-flex justify-content-center">
+                  <img class="avatar" src="../../assets/img/quote.svg" alt="quote icon">
+                </div>
+                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
+                <div class="value-card d-flex space-x-4">
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-off"></i>
+                </div>
+                <div class="user-card d-flex align-items-center space-x-16">
+                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <div class="body-light-gray-text">
+                    <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
+                    Marketing manager
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
+              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="body-dark-gray-text fw-bold">Contact us</p>
+                  <i class="icon-blade"></i>
+                </div>
+                <span class="border-bottom d-block"></span>
+                <a href="#" class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
+                <span class="border-bottom d-block"></span>
+                <a href="#" class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+              </div>
+              <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+            <div class="col-1-to-5 space-y-24">
+              <div class="bg-card icon-description-card interaction-card space-y-16 inner-space-block-24  inner-space-inline-24">
+                <i class="icon-awards-circle"></i>
+                <p class="body-light-gray-text">B_system is a sketch.</p>
+                <a href="#" class="action-link ">
+                  <span>Learn more</span>
+                  <i class="icon-links"></i>
+                </a>
+              </div>
+              <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+          </div>
+          <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+              <div class="position-relative h-100">
+                <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
+                  <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
+                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                  </div>
+                  <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
+                    <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
+                      <h3>Calgary museum</h3>
+                      <a href="#" class="action-link ">
+                        <span>Learn more</span>
+                        <i class="icon-links"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Project card
+                </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--END: SECTION LIGHT-->
+
+      <!--SECTION LIGHT (GRAY BRACKGROUND)-->
+      <section class="section darkener">
+        <div class="container">
+          <h3 class="space-bottom-88">Cards</h3>
+          <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 d-flex flex-column space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">.US</p>
+                  <p class="body-light-gray-text">Product design</p>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                  <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+            </div>
+            <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
+              <div class="card comparative-card bg-card interaction-card h-100">
+                <img class="img-basic" src="../../assets/img/img_feature-card-1.jpg" alt="Card image">
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <h5 class="space-bottom-24">Well organized and layered</h5>
+                    <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Card
+               </span>
+            </div>
+            <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
+              <div class="card feature-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
+                  <img class="img-basic" src="../../assets/img/img_featured-card.svg" alt="Card image">
+                </div>
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <h5 class="space-bottom-24">Well organized and layered</h5>
+                    <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Feature card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
+              <div class="card comparative-card bg-card interaction-card h-100">
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <div class="header-card d-flex align-items-center justify-content-between space-top-6 space-bottom-8">
+                      <h4 class="mb-0">$ 12</h4>
+                      <i class="icon-saving-filled"></i>
+                    </div>
+                    <h5 class="h5">Basic product</h5>
+                    <span class="d-block border-bottom"></span>
+                    <p class="body-light-gray-text space-bottom-24">Sample text for basic product. Basic resources for starter brands.</p>
+                    <ul class="list-card list-unstyled space-y-16">
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-check"></i>
+                        Basic resource example.
+                      </li>
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-close-blade"></i>
+                        Unlimited websites.
+                      </li>
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-close-blade"></i>
+                        Unmetered storage.
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Choose</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+                <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                  <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
+                  <i class="icon-star"></i>
+                  <p class="body-light-gray-text w-100">New brand</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="body-light-gray-text">23/03/2019</p>
+                  <a href="#" class="action-link ">
+                    <span>More info</span>
+                    <i class="icon-info"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
+                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+                  <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
+                </div>
+                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                  <span class="tag-card d-flex justify-content-center align-items-end">
+            1        </span>
+                  <div class="space-y-24">
+                    <h4>Digital strategy</h4>
+                    <p class="body-light-gray-text">We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. </p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+          </div>
+          <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+              <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
+                <div class="header-card d-flex justify-content-center">
+                  <img class="avatar" src="../../assets/img/quote.svg" alt="quote icon">
+                </div>
+                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
+                <div class="value-card d-flex space-x-4">
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-off"></i>
+                </div>
+                <div class="user-card d-flex align-items-center space-x-16">
+                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <div class="body-light-gray-text">
+                    <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
+                    Marketing manager
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
+              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="body-dark-gray-text fw-bold">Contact us</p>
+                  <i class="icon-blade"></i>
+                </div>
+                <span class="border-bottom d-block"></span>
+                <a href="#" class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
+                <span class="border-bottom d-block"></span>
+                <a href="#" class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+              </div>
+              <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+            <div class="col-1-to-5 space-y-24">
+              <div class="bg-card icon-description-card interaction-card space-y-16 inner-space-block-24  inner-space-inline-24">
+                <i class="icon-awards-circle"></i>
+                <p class="body-light-gray-text">B_system is a sketch.</p>
+                <a href="#" class="action-link ">
+                  <span>Learn more</span>
+                  <i class="icon-links"></i>
+                </a>
+              </div>
+              <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+          </div>
+          <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+              <div class="position-relative h-100">
+                <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
+                  <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
+                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                  </div>
+                  <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
+                    <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
+                      <h3>Calgary museum</h3>
+                      <a href="#" class="action-link ">
+                        <span>Learn more</span>
+                        <i class="icon-links"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Project card
+                </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--END: SECTION LIGHT (GRAY BRACKGROUND)-->
+
+      <!--SECTION DARK-->
+      <section class="section" data-bsystem="dark">
+        <div class="container">
+          <h3 class="space-bottom-88">Form elements dark</h3>
+          <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 d-flex flex-column space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">.US</p>
+                  <p class="body-light-gray-text">Product design</p>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                  <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+            </div>
+            <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
+              <div class="card comparative-card bg-card interaction-card h-100">
+                <img class="img-basic" src="../../assets/img/img_feature-card-1.jpg" alt="Card image">
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <h5 class="space-bottom-24">Well organized and layered</h5>
+                    <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Card
+               </span>
+            </div>
+            <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
+              <div class="card feature-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
+                  <img class="img-basic" src="../../assets/img/img_featured-card.svg" alt="Card image">
+                </div>
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <h5 class="space-bottom-24">Well organized and layered</h5>
+                    <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Feature card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
+              <div class="card comparative-card bg-card interaction-card h-100">
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <div class="header-card d-flex align-items-center justify-content-between space-top-6 space-bottom-8">
+                      <h4 class="mb-0">$ 12</h4>
+                      <i class="icon-saving-filled"></i>
+                    </div>
+                    <h5 class="h5">Basic product</h5>
+                    <span class="d-block border-bottom"></span>
+                    <p class="body-light-gray-text space-bottom-24">Sample text for basic product. Basic resources for starter brands.</p>
+                    <ul class="list-card list-unstyled space-y-16">
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-check"></i>
+                        Basic resource example.
+                      </li>
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-close-blade"></i>
+                        Unlimited websites.
+                      </li>
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-close-blade"></i>
+                        Unmetered storage.
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Choose</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+                <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                  <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
+                  <i class="icon-star"></i>
+                  <p class="body-light-gray-text w-100">New brand</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <img class="img-basic" src="../../assets/img/logo-brandemic-light.svg" alt="Brandemic logo">
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="body-light-gray-text">23/03/2019</p>
+                  <a href="#" class="action-link ">
+                    <span>More info</span>
+                    <i class="icon-info"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
+                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+                  <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
+                </div>
+                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                  <span class="tag-card d-flex justify-content-center align-items-end">
+            1        </span>
+                  <div class="space-y-24">
+                    <h4>Digital strategy</h4>
+                    <p class="body-light-gray-text">We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. </p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+          </div>
+          <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+              <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
+                <div class="header-card d-flex justify-content-center">
+                  <img class="avatar" src="../../assets/img/quote-light.svg" alt="quote icon">
+                </div>
+                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
+                <div class="value-card d-flex space-x-4">
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-off"></i>
+                </div>
+                <div class="user-card d-flex align-items-center space-x-16">
+                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <div class="body-light-gray-text">
+                    <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
+                    Marketing manager
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
+              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="body-dark-gray-text fw-bold">Contact us</p>
+                  <i class="icon-blade"></i>
+                </div>
+                <span class="border-bottom d-block"></span>
+                <a href="#" class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
+                <span class="border-bottom d-block"></span>
+                <a href="#" class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+              </div>
+              <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+            <div class="col-1-to-5 space-y-24">
+              <div class="bg-card icon-description-card interaction-card space-y-16 inner-space-block-24  inner-space-inline-24">
+                <i class="icon-awards-circle"></i>
+                <p class="body-light-gray-text">B_system is a sketch.</p>
+                <a href="#" class="action-link ">
+                  <span>Learn more</span>
+                  <i class="icon-links"></i>
+                </a>
+              </div>
+              <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+          </div>
+          <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+              <div class="position-relative h-100">
+                <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
+                  <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
+                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                  </div>
+                  <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
+                    <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
+                      <h3>Calgary museum</h3>
+                      <a href="#" class="action-link ">
+                        <span>Learn more</span>
+                        <i class="icon-links"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Project card
+                </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--END: SECTION DARK-->
+
+      <!--SECTION DARK (DARKENER BACKGROUND)-->
+      <section class="section darkener" data-bsystem="dark">
+        <div class="container">
+          <h3 class="space-bottom-88">Form elements dark</h3>
+          <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 d-flex flex-column space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">.US</p>
+                  <p class="body-light-gray-text">Product design</p>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic image + Avatar
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative">
+                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                  <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Basic image + text
+                </span>
+            </div>
+            <div class="col-1-to-5 d-flex flex-column justify-content-between space-y-24">
+              <div class="card comparative-card bg-card interaction-card h-100">
+                <img class="img-basic" src="../../assets/img/img_feature-card-1.jpg" alt="Card image">
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <h5 class="space-bottom-24">Well organized and layered</h5>
+                    <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Card
+               </span>
+            </div>
+            <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
+              <div class="card feature-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
+                  <img class="img-basic" src="../../assets/img/img_featured-card.svg" alt="Card image">
+                </div>
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <h5 class="space-bottom-24">Well organized and layered</h5>
+                    <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Feature card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-xl-9-to-13 d-flex flex-column justify-content-between space-y-24">
+              <div class="card comparative-card bg-card interaction-card h-100">
+                <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
+                  <div class="comparative-info space-y-16">
+                    <div class="header-card d-flex align-items-center justify-content-between space-top-6 space-bottom-8">
+                      <h4 class="mb-0">$ 15</h4>
+                      <i class="icon-saving-filled"></i>
+                    </div>
+                    <h5 class="h5">Basic product</h5>
+                    <span class="d-block border-bottom"></span>
+                    <p class="body-light-gray-text space-bottom-24">Sample text for basic product. Basic resources for starter brands.</p>
+                    <ul class="list-card list-unstyled space-y-16">
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-check"></i>
+                        Basic resource example.
+                      </li>
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-close-blade"></i>
+                        Unlimited websites.
+                      </li>
+                      <li class="d-flex align-items-center body-light-gray-text">
+                        <i class="icon-close-blade"></i>
+                        Unmetered storage.
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Choose</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Comparative card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+                <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                  <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
+                  <i class="icon-star"></i>
+                  <p class="body-light-gray-text w-100">New brand</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <img class="img-basic" src="../../assets/img/logo-brandemic-light.svg" alt="Brandemic logo">
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="body-light-gray-text">23/03/2019</p>
+                  <a href="#" class="action-link ">
+                    <span>More info</span>
+                    <i class="icon-info"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Business case card
+                </span>
+            </div>
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
+                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+                  <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
+                </div>
+                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                  <span class="tag-card d-flex justify-content-center align-items-end">
+            1        </span>
+                  <div class="space-y-24">
+                    <h4>Digital strategy</h4>
+                    <p class="body-light-gray-text">We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. </p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <span>Learn more</span>
+                    <i class="icon-links"></i>
+                  </a>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Service card
+                </span>
+            </div>
+          </div>
+          <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+              <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
+                <div class="header-card d-flex justify-content-center">
+                  <img class="avatar" src="../../assets/img/quote-light.svg" alt="quote icon">
+                </div>
+                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
+                <div class="value-card d-flex space-x-4">
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-on"></i>
+                  <i class="icon-star star-off"></i>
+                </div>
+                <div class="user-card d-flex align-items-center space-x-16">
+                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <div class="body-light-gray-text">
+                    <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
+                    Marketing manager
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Testimonial card
+                </span>
+            </div>
+            <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
+              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="body-dark-gray-text fw-bold">Contact us</p>
+                  <i class="icon-blade"></i>
+                </div>
+                <span class="border-bottom d-block"></span>
+                <a href="#" class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
+                <span class="border-bottom d-block"></span>
+                <a href="#" class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+              </div>
+              <span class="body-light-gray-text">
+                    Sticky banner
+                </span>
+            </div>
+            <div class="col-1-to-5 space-y-24">
+              <div class="bg-card icon-description-card interaction-card space-y-16 inner-space-block-24  inner-space-inline-24">
+                <i class="icon-awards-circle"></i>
+                <p class="body-light-gray-text">B_system is a sketch.</p>
+                <a href="#" class="action-link ">
+                  <span>Learn more</span>
+                  <i class="icon-links"></i>
+                </a>
+              </div>
+              <span class="body-light-gray-text">
+                    Icon description card
+                </span>
+            </div>
+          </div>
+          <div class="inner-space-block-24">
+            <div class="project-container space-y-24">
+              <div class="position-relative h-100">
+                <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
+                  <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
+                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                  </div>
+                  <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
+                    <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
+                      <h3>Calgary museum</h3>
+                      <a href="#" class="action-link ">
+                        <span>Learn more</span>
+                        <i class="icon-links"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="body-light-gray-text">
+                    Project card
+                </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--END: SECTION DARK (DARKENER BACKGROUND)-->
+    </main>
+
+    <!--END: MAIN CONTENT-->
+
+    <!--MAIN FOOTER-->
+    <footer class="footer footer-basic footer-darkener">
+      <div class="footer-wrapper container">
+        <div class="row">
+          <a class="footer-logo col-12 col-lg-3" href="../../home">
+            <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
+          </a>
+          <p class="copy col-12 col-lg-8 offset-lg-1">
+            .Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--END: MAIN FOOTER-->
+
+    <!--SCRIPTS-->
+
+    <!--Bootstrap JS Bundle-->
+    <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!--B_system JS-->
+    <script src="../../assets/js/bsystem.min.js"></script>
+
+    <!--END: SCRIPTS-->
+  </body>
+</html>

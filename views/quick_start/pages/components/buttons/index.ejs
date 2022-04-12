@@ -2,65 +2,67 @@
 
 <%- contentFor('body') %>
 
+<!--BUTTONS-->
+
+<!--SECTION LIGHT-->
 <section class="section">
     <div class="container">
-        <header>
-            <h3 class="space-bottom-88">Buttons</h3>
-        </header>
-        <div class="d-grid grid-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
+
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Buttons</h3>
+
+        <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Purchase', isCTA: true, icon: 'links', iconPosition: 'after' }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Primary CTA
                 </span>
-
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Continue' }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Primary
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Send', variant: 'secondary' }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Secondary
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
-                <%- include(`${component}/button/button`, { label: 'Acces', variant: 'tertiary' }) %>
-                <span class="body-regular-text">
+                <%- include(`${component}/button/button`, { label: 'Access', variant: 'tertiary' }) %>
+                <span class="body-light-gray-text">
                     Tertiary
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Access', variant: 'subtle', icon:'avatar' }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Subtle
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Next', variant: 'tertiary', isActionNext: true }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Tertiary Next
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Previous', variant: 'tertiary', isActionPrevious: true }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Tertiary Previous
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
-                <%- include(`${component}/button/button`, { label: 'Start with B_System', isDisabled: true }) %>
-                <span class="body-regular-text">
+                <%- include(`${component}/button/button`, { label: 'Start with B_system', isDisabled: true }) %>
+                <span class="body-light-gray-text">
                     Disabled
                 </span>
             </div>
@@ -69,17 +71,18 @@
 
 
 </section>
+<!--END: SECTION LIGHT-->
 
-
+<!--SECTION DARK-->
 <section class="section" data-bsystem="dark">
     <div class="container">
-        <header >
-            <h3 class="space-bottom-88">Buttons dark mode</h3>
-        </header>
-        <div class="d-grid grid-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
+
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Buttons dark mode</h3>
+
+        <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Purchase', isCTA: true, icon: 'links', iconPosition: 'after' }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Primary CTA
                 </span>
 
@@ -87,59 +90,60 @@
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Continue' }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Primary
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Send', variant: 'secondary' }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Secondary
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
-                <%- include(`${component}/button/button`, { label: 'Acces', variant: 'tertiary' }) %>
-                <span class="body-regular-text">
+                <%- include(`${component}/button/button`, { label: 'Access', variant: 'tertiary' }) %>
+                <span class="body-light-gray-text">
                     Tertiary
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Access', variant: 'subtle', icon:'avatar' }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Subtle
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Next', variant: 'tertiary', isActionNext: true }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Tertiary Next
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Previous', variant: 'tertiary', isActionPrevious: true }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Tertiary Previous
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
-                <%- include(`${component}/button/button`, { label: 'Start with B_System', isDisabled: true }) %>
-                <span class="body-regular-text">
+                <%- include(`${component}/button/button`, { label: 'Start with B_system', isDisabled: true }) %>
+                <span class="body-light-gray-text">
                     Disabled
                 </span>
             </div>
 
             <div class="d-flex flex-column space-y-24">
                 <%- include(`${component}/button/button`, { label: 'Access', variant: 'tertiary', isTransparent: true }) %>
-                <span class="body-regular-text">
+                <span class="body-light-gray-text">
                     Tertiary transparent
                 </span>
             </div>
         </div>
     </div>
 </section>
+<!--END: SECTION DARK-->

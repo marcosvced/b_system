@@ -4,13 +4,13 @@
 @use '../../mixins' as mixin;
 
 .btn {
-    padding-inline: helper.space(32);
+    padding-inline: helper.space(24);
     padding-block: helper.rem(12);
     border-radius: helper.rem(4);
     border: none;
     outline: none;
     line-height: helper.em(24, 15);
-    //min-width: helper.rem(215);
+    min-width: helper.rem(216);
     transition: all .25s;
     white-space: nowrap;
     display: inline-flex;
@@ -18,6 +18,10 @@
     align-items: center;
     @include mixin.x(8);
     @extend %body-bold-text;
+
+    &-fit {
+        width: max-content;
+    }
 
     > span:not([class^='icon-']) {
         @extend %body-bold-text;
@@ -31,23 +35,11 @@
     &-primary {
         background-color: helper.button(primary);
         color: helper.grayscale(light);
-        //min-width: helper.rem(216);
         @include mixin.x(12);
 
-        > span {
+        > span,
+        > i{
             color: helper.grayscale(light);
-        }
-
-        &.btn-only-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: min-content;
-
-            padding-inline: helper.rem(14);
-            padding-block: helper.rem(14);
-            line-height: 1;
-            font-size: helper.size(sm);
         }
 
         &.btn-primary-cta {
@@ -86,13 +78,13 @@
 
     &-tertiary {
         @include themed.properties {
-            background-color: themed.values(helper.grayscale(100), helper.grayscale(900));
+            background-color: themed.values(helper.grayscale(100), helper.grayscale(1000));
             color: themed.values(helper.body(off), helper.grayscale(light));
         }
 
         &:hover:not(:disabled) {
             @include themed.properties {
-                background-color: themed.values(helper.grayscale(200), helper.grayscale(1000));
+                background-color: themed.values(helper.grayscale(200), helper.grayscale(900));
             }
         }
     }
@@ -140,7 +132,10 @@
         &-next,
         &-previous {
             span:not([class^='icon-']) {
-                @extend %body-regular-text
+                @extend %body-regular-text;
+                @include themed.properties {
+                    color: themed.values(helper.grayscale(800), helper.grayscale(light));
+                }
             }
 
             [class^='icon-'] {
@@ -163,7 +158,9 @@
     }
 
     &-only-icon {
-        @include mixin.square(32);
+        min-width: min-content;
+        width: 1em;
+        height: 1em;
         font-size: helper.rem(18);
         align-items: center;
         justify-content: center;

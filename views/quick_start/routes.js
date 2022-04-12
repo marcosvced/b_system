@@ -53,19 +53,24 @@ route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
 })
 
-/* Illustrations page. */
-route.get(routePaths.QUICK_START.ILLUSTRATIONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['illustrations']))
+/* Cards page. */
+route.get(routePaths.QUICK_START.CARDS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['cards']))
 })
 
-/* Scenes page. */
-route.get(routePaths.QUICK_START.SCENES, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['scenes']))
+/* Product cards page. */
+route.get(routePaths.QUICK_START.PRODUCT_CARDS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['productCards']))
 })
 
-/* Microillustrations page. */
-route.get(routePaths.QUICK_START.MICROILLUSTRATIONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['microillustrations']))
+/* Grid Cells page. */
+route.get(routePaths.QUICK_START.GRIDCELLS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['gridCells']))
+})
+
+/* Interaction page. */
+route.get(routePaths.QUICK_START.INTERACTION, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['interaction']))
 })
 
 module.exports = route

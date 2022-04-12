@@ -85,7 +85,7 @@ background-color: helper.button(primary--hover);
 <div class="space-{position}-{breakpoint}-{n}"></div>
 <div class="inner-space-{position}-{breakpoint}-{n}"></div>
 <div class="space-x-{breakpoint}-{n}"></div>
-<div class="space-y{breakpoint}-{n}"></div>
+<div class="space-y-{breakpoint}-{n}"></div>
 <div class="space-xy-{breakpoint}-{n}"></div>
 ```
 · Siendo _breackpoint_ una key de los valores definidos en el map `$breakpoints` del fichero `/lib/scss/variables/_spacing.scss`.

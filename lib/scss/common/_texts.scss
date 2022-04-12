@@ -97,18 +97,21 @@
 
 .body-light-dark-text {
     @extend %body-light-text;
-    color: colors.grayscale(dark);
 }
 
 .body-regular-gray-text {
     @extend %body-regular-text;
-    color: colors.grayscale(600);
+    @include themed.properties {
+        color: themed.values(colors.grayscale(800), colors.grayscale(600));
+    }
     letter-spacing: size.rem(.3);
 }
 
 .body-light-gray-text {
     @extend %body-light-text;
-    color: colors.grayscale(600);
+    @include themed.properties {
+        color: themed.values(colors.grayscale(800), colors.grayscale(600));
+    }
 }
 
 .body-input-text {

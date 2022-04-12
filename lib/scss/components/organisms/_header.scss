@@ -12,13 +12,13 @@
 @use '../../mixins' as mixin;
 
 header.header {
-    padding-block: size.rem(16);
+    padding-block: size.rem(14);
     padding-inline: size.space(16);
     min-height: size.rem(48);
     transition: all .35s ease-in-out, width 0s;
     position: relative;
 
-    @include media.screen(lg) {
+    @include media.screen(xl) {
         min-height: size.rem(92);
         padding-block: size.rem(22);
         padding-inline: size.space(32);
@@ -26,6 +26,30 @@ header.header {
         &.header-narrow {
             padding-block: size.rem(16);
             min-height: size.rem(72);
+        }
+    }
+
+    .navbar-brand {
+        padding: 0;
+        margin: 0;
+        height: size.rem(20);
+
+        > img {
+            height: 100%;
+            display: block;
+        }
+
+        @include media.screen(xl) {
+            height: size.rem(30);
+        }
+    }
+
+    // fixes bootstrap container padding
+    > .container-xl {
+        padding: 0;
+        @include media.screen(xl) {
+            padding-left: .75rem;
+            padding-right: .75rem;
         }
     }
 
@@ -37,13 +61,9 @@ header.header {
     }
 
     &.header-transparent {
-        @extend .header-light;
-
-        @include media.screen(xl) {
-            @include themed.properties {
-                background-color: transparent;
-                box-shadow: none;
-            }
+        @include themed.properties {
+            background-color: transparent;
+            box-shadow: none;
         }
 
         nav.navbar {
@@ -72,37 +92,13 @@ header.header {
 
     &.header-fixed {
         z-index: 100;
-        position: sticky;
+        position: fixed;
         width: 100vw;
         top: 0;
     }
 
-    .purchase-button-wrapper {
-        order: 1;
-        @include media.screen(lg) {
-            order: 4;
-        }
-    }
-
-    .header__logo {
-        order: 2;
-
-        @include media.screen(lg) {
-            order: 1;
-        }
-    }
-
-    .navigation-toggle {
-        order: 3;
-        display: block;
-        @include media.screen(lg) {
-            display: none;
-        }
-    }
-
     nav.navbar {
         padding: 0;
-
     }
 
     .dropdown-menu.header-menu {
@@ -149,10 +145,11 @@ nav {
 
             .nav-item {
                 > a {
+                    padding: 0;
                     @extend %body-regular-text;
                     text-align: center;
                     @include themed.properties {
-                        color: themed.values(colors.body(30), colors.body(67));
+                        color: themed.values(colors.grayscale(800), colors.grayscale(600));
                     }
 
                     &.active {

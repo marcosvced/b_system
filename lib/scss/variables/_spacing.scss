@@ -19,6 +19,10 @@ $space: (
     120: size.rem(120),
 );
 
+/*
+ * 0 > 768 mobile / 768 > 1200 tablet / 1200 > X Desktop
+ */
+
 $breakpoints: (
     '': 0,
     sm: 576px,
