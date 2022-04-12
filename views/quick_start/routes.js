@@ -73,4 +73,9 @@ route.get(routePaths.QUICK_START.INTERACTION, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['interaction']))
 })
 
+/* Scenes page. */
+route.get(routePaths.QUICK_START.SCENES, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['scenes']))
+})
+
 module.exports = route

@@ -2,19 +2,50 @@
 
 <%- contentFor('body') %>
 
-<section class="section">
+<section class="section darkener">
     <div class="container">
-        <header>
-            <h3 class="space-bottom:88">Scenes</h3>
-        </header>
-        <div class="demo-grid-size--560 demo-boxes">
-
-            <div class="demo-cell">
-                <div class="demo-element">
+        <h3 class="inner-space-block-48 inner-space-block-lg-88">Scenes</h3>
+        <div class="d-grid grid-2">
+            <div class="space-y-24">
+                <div class="demo-card --scene">
                     <%- include(`${component}/illustrations/illustration`, {
                     type: 'scene',
                     illustration: 'couple',
                     } ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Couple
+                </span>
+            </div>
+            <div class="space-y-24">
+                <div class="demo-card --scene">
+                    <%- include(`${component}/illustrations/illustration`, {
+                    type: 'scene',
+                    illustration: 'couple',
+                    } ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Couple
+                </span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--<section class="section">
+    <div class="container">
+        <header>
+            <h3 class="space-bottom:88">Scenes</h3>
+        </header>
+        <div class="demo-grid-size&#45;&#45;560 demo-boxes">
+
+            <div class="demo-cell">
+                <div class="demo-element">
+                    <%- include(`${component}/illustrations/illustration`, {
+type: 'scene',
+illustration: 'couple',
+} ) %>
                 </div>
                 <div class="demo-label">
                     Couple
@@ -24,9 +55,9 @@
             <div class="demo-cell">
                 <div class="demo-element">
                     <%- include(`${component}/illustrations/illustration`, {
-                    type: 'scene',
-                    illustration: 'man-resting-scene',
-                    } ) %>
+type: 'scene',
+illustration: 'man-resting-scene',
+} ) %>
                 </div>
                 <div class="demo-label">
                     Man resting scene
@@ -36,9 +67,9 @@
             <div class="demo-cell">
                 <div class="demo-element">
                     <%- include(`${component}/illustrations/illustration`, {
-                    type: 'scene',
-                    illustration: 'man-working',
-                    } ) %>
+type: 'scene',
+illustration: 'man-working',
+} ) %>
                 </div>
                 <div class="demo-label">
                     Man working
@@ -48,9 +79,9 @@
             <div class="demo-cell">
                 <div class="demo-element">
                     <%- include(`${component}/illustrations/illustration`, {
-                    type: 'scene',
-                    illustration: 'skyscraper',
-                    } ) %>
+type: 'scene',
+illustration: 'skyscraper',
+} ) %>
                 </div>
                 <div class="demo-label">
                     Skyscraper
@@ -59,4 +90,4 @@
 
         </div>
     </div>
-</section>
+</section>-->

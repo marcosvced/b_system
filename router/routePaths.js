@@ -15,6 +15,7 @@ module.exports = {
     CARDS: '/components/cards',
     PRODUCT_CARDS: '/components/productCards',
     INTERACTION: '/components/interaction',
+    SCENES: '/components/scenes',
     GRIDCELLS: '/components/gridCells',
   },
 }
