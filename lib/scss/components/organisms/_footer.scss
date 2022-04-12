@@ -44,6 +44,10 @@
                 flex-direction: column;
                 align-items: center;
                 gap: helper.space(32);
+                
+                .form-group {
+                    min-width: 50%;
+                }
             }
         }
     }
