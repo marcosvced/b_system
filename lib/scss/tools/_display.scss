@@ -64,10 +64,18 @@ $positions: top, bottom, left, right, inline, block;
         }
 
         @for $start from 1 through 12 {
+
             @for $end from 1 through 13 {
                 .col-#{$breakpoint}#{$start}-to-#{$end} {
                     grid-column: #{$start} / #{$end};
                 }
+
+
+            }
+        }
+        @for $col from 1 through 12 {
+            .col-span-#{$breakpoint}#{$col} {
+                grid-column: span #{$col};
             }
         }
 

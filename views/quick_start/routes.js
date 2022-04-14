@@ -58,7 +58,12 @@ route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
 })
 
-/* PRODUCT CARDS page. */
+/* Cards page. */
+route.get(routePaths.QUICK_START.CARDS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['cards']))
+})
+
+/* Product cards page. */
 route.get(routePaths.QUICK_START.PRODUCT_CARDS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['productCards']))
 })

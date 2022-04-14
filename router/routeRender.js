@@ -3,7 +3,7 @@ const routePaths = require('./routePaths')
 const build = require('./routeBuild')
 
 const defaultOptions = {
-  title: 'B_System',
+  title: 'B_system',
   ...srcDirs,
   ...routePaths,
   layout: `${srcDirs.layout}/default`,
