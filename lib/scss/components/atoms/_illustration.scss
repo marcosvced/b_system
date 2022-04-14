@@ -1,0 +1,38 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.illustration {
+    $parent: &;
+
+    &.darkener:first-of-type {
+        margin-top: 0 !important;
+    }
+
+    #{$parent}-container {
+        border-radius: helper.rem(8);
+        display: flex;
+        justify-content: center;
+
+        @include themed.properties {
+            background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+        }
+    }
+
+    #{$parent}-img {
+        width: 100%;
+    }
+
+    &.microillustration {
+        #{$parent}-container {
+            padding: helper.space(32);
+        }
+    }
+
+    .shadow {
+        @include themed.properties {
+            box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100) !important, none !important);
+        }
+    }
+}
