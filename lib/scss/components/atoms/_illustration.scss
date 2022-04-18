@@ -10,16 +10,6 @@
         margin-top: 0 !important;
     }
 
-    #{$parent}-container {
-        border-radius: helper.rem(8);
-        display: flex;
-        justify-content: center;
-
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
-        }
-    }
-
     #{$parent}-img {
         width: 100%;
     }

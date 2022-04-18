@@ -136,6 +136,7 @@ a {
 
 
 .demo-card {
+    $parent: &;
     width: 100%;
     padding-bottom: 100%;
     position: relative;
@@ -155,6 +156,12 @@ a {
         position: absolute !important;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+    &#{&}-micro {
+        > * {
+            transform: translate(-50%, -50%) scale(1.07);
+        }
     }
 }
