@@ -1,0 +1,22 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<div class="main-content main-content-space-top">
+    <section>
+        <%- include(`${component}/marquee/standar`, { 
+            img: {
+                src: 'marquee-02',
+                alt: 'Marquee image'
+            },
+            title: "Let's do it different",
+            btn: {
+                label: 'Start with B System', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            },
+            quote: 'People ignore design that ignores people'
+        }) %>
+    </section>
+</div>

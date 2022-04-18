@@ -1,0 +1,21 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<div class="main-content main-content-space-top">
+    <section>
+        <%- include(`${component}/marquee/basic`, { 
+            img: {
+                src: 'marquee-01',
+                alt: 'Marquee image'
+            },
+            title: 'Multi-Purpose HTML5 Template',
+            btn: {
+                label: 'Start with B System', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            }
+        }) %>
+    </section>
+</div>

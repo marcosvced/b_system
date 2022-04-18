@@ -28,6 +28,39 @@ route.get(routePaths.QUICK_START.FOOTERS.CORPORATE, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'corporate']))
 })
 
+/* Marquees page. */
+route.get(routePaths.QUICK_START.MARQUEES.BASIC, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'basic']))
+})
+
+route.get(routePaths.QUICK_START.MARQUEES.CTA, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'cta']))
+})
+
+route.get(routePaths.QUICK_START.MARQUEES.EXTENDED, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'extended']))
+})
+
+route.get(routePaths.QUICK_START.MARQUEES.ILLUSTRATION, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'illustration']))
+})
+
+route.get(routePaths.QUICK_START.MARQUEES.IMAGE, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'image']))
+})
+
+route.get(routePaths.QUICK_START.MARQUEES.STANDAR, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'standar']))
+})
+
+route.get(routePaths.QUICK_START.MARQUEES.TEXT, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'text']))
+})
+
+route.get(routePaths.QUICK_START.MARQUEES.TEXTIMAGE, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'textImage']))
+})
+
 /* Buttons page. */
 route.get(routePaths.QUICK_START.BUTTONS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['buttons']))

@@ -1,98 +1,71 @@
-@use "../../variables/palette";
-@use "../../helpers/font";
-@use "../../helpers/colors";
-@use "../../helpers/size";
-@use "../../mixins/space";
-@use "../../mixins/shapes" as shape;
-@use "../../mixins/media";
-@use "../../placeholders/fonts";
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
 
 .marquee {
-  &.carousel {
-    .carousel-control {
-      &-prev,
-      &-next {
-        opacity: 1;
-        &-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: colors.opacity(light-100);
-          color: colors.grayscale(light);
-          @include shape.circle(48);
-          > span {
-            font-size: size.rem(24);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-          }
-        }
-        &:hover {
-          .carousel-control-next-wrapper ,
-          .carousel-control-prev-wrapper {
-            background-color: colors.opacity(light-200);
-          }
-        }
-      }
+  $parent: &;
+  padding: helper.space(32);
+  height: helper.rem(400);
+  @include mixin.screen(xl) {
+    height: helper.rem(500);
+  }
 
-      &-prev {
-        justify-content: left;
-        padding-left: size.space(24);
-      }
-      &-next {
-        justify-content: right;
-        padding-right: size.space(24);
-      }
-      &-next-wrapper > span{
-        margin-left: size.rem(2);
-      }
-      &-prev-wrapper > span {
-        margin-right: size.rem(2);
-      }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+
+  #{$parent}-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.84);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &#{$parent}-standar {
+    height: helper.rem(400);
+    @include mixin.screen(md) {
+      height: helper.rem(600);
+    }
+    @include mixin.screen(xl) {
+      height: helper.rem(818);
     }
 
-    .carousel-indicators {
-      margin: 0;
-      justify-content: left;
-      left: size.space(32);
-      padding-bottom: size.rem(35);
+    justify-content: space-between;
 
-      > button {
-        height: size.rem(2);
-        width: size.rem(50);
-        background-color: rgba(255, 255, 255, 0.4);
-        border-radius: size.rem(8);
+    #{$parent}-slider-control {
+      width: 100%;
+      padding-inline: helper.space(24);
+      display: none;
+      @include mixin.screen(xl) {
+        display: flex;
+        justify-content: space-between;
+      }
 
-        &.active {
-          background-color: colors.grayscale(light);
-        }
+      top: 45%;
+
+      [class^=icon-] {
+        color: helper.grayscale(light);
       }
     }
+    #{$parent}-content-bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
 
-    .carousel-inner {
-      .carousel-item {
-        > img {
-          width: 100%;
-          object-fit: cover;
-        }
+      #{$parent}-quote {
+        display: none;
 
-        .carousel-caption {
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          bottom: auto;
-        }
-      }
-    }
-
-    &.full-height {
-      .carousel-inner {
-        .carousel-item {
-          > img {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-          }
+        @include mixin.screen(xl) {
+          display: inline;
         }
       }
     }
