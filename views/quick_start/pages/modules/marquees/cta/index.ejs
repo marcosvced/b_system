@@ -3,9 +3,19 @@
 <%- contentFor('body') %>
 
 <div class="main-content main-content-space-top">
-    <section class="module-wrapper footer-basic">
-        <div class="module-view-example-wrapper">
-            
-        </div>
+    <section>
+        <%- include(`${component}/marquee/cta`, {
+            title: {
+                emphasis: 'We combine creative talent, strategic vision, technical specialization.',
+                normal: 'And above all, the desire to feel pride in each job.'
+            },
+            btn: {
+                label: 'Start with B System', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            },
+            quote: '“People ignore design that ignores people”'
+        }) %>
     </section>
 </div>

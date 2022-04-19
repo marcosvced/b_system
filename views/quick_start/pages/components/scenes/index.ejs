@@ -1,0 +1,48 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+<!--MICROILLUSTRATIONS-->
+
+<section class="section illustration darkener">
+    <div class="container">
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Illustrations</h3>
+        <div class="d-grid grid-1 grid-xl-2 column-gap-24 row-gap-48 space-bottom-48">
+
+            <div class="space-y-24">
+                <div class="demo-card demo-card-scene shadow">
+                    <%- include(`${component}/illustration/illustration`, {img: {src: 'couple', size:'scenes', alt: 'couple'}} ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Couple
+                </span>
+            </div>
+
+            <div class="space-y-24">
+                <div class="demo-card demo-card-scene shadow">
+                    <%- include(`${component}/illustration/illustration`, {img: {src: 'man-resting', size:'scenes', alt: 'man resting'}} ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Man resting scene
+                </span>
+            </div>
+
+            <div class="space-y-24">
+                <div class="demo-card demo-card-scene shadow">
+                    <%- include(`${component}/illustration/illustration`, {img: {src: 'man-working', size:'scenes', alt: 'man working'}} ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Man working
+                </span>
+            </div>
+
+            <div class="space-y-24">
+                <div class="demo-card demo-card-scene shadow">
+                    <%- include(`${component}/illustration/illustration`, {img: {src: 'skyscraper', size:'scenes', alt: 'skycraper'}} ) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Skyscraper
+                </span>
+            </div>
+
+</section>
+

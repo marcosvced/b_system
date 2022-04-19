@@ -3,9 +3,19 @@
 <%- contentFor('body') %>
 
 <div class="main-content main-content-space-top">
-    <section class="module-wrapper footer-basic">
-        <div class="module-view-example-wrapper">
-            
-        </div>
+    <section>
+        <%- include(`${component}/marquee/image`, { 
+            img: {
+                src: 'marquee_image-01',
+                alt: 'Marquee image'
+            },
+            title: 'Enhance your competitive agility',
+            text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
+            btn: {
+                label: 'Discover B_system'
+            },
+            backgroundColor: 'success',
+            isDarkened: false
+        }) %>
     </section>
 </div>

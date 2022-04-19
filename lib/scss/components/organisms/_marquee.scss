@@ -79,20 +79,84 @@
   }
 
   &#{$parent}-illustration {
+    height: auto;
     justify-content: space-between;
+    gap: helper.space(32);
+    padding: {
+      top: 0;
+      bottom: helper.space(48);
+      inline: helper.space(16);
+    }
 
-    @include mixin.screen(xl) {
-      height: helper.rem(818);
+    @include mixin.screen(md) {
+      padding: {
+        block: helper.space(32);
+        inline: helper.space(80);
+      }
     }
 
     #{$parent}-illustration-container {
       height: 90%;
       display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
       align-items: center;
-      gap: helper.space(32);
+
+      @include mixin.screen(md) {
+        flex-direction: row;
+        gap: helper.space(32);
+      }
+      
 
       #{$parent}-content {
+        @include mixin.screen(md) {
+          text-align: left;
+        }
+      }
+
+      .illustration-container {
+        width: 80%;
+
+        .illustration-img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &#{$parent}-image {
+    gap: helper.space(32);
+    justify-content: space-between;
+    padding: {
+      block: helper.space(32);
+      inline: helper.space(16);
+    }
+
+    @include mixin.screen(md) {
+      height: helper.rem(600);
+      align-items: flex-start;
+      padding-inline: helper.space(80);
+    }
+
+    @include mixin.screen(xl) {
+      height: helper.rem(800);
+    }
+
+    #{$parent}-content {
+      @include mixin.screen(md) {
+        width: 57%;
         text-align: left;
+      }
+    }
+  }
+
+  &#{$parent}-cta {
+    #{$parent}-title {
+      color: helper.grayscale(600);
+      text-align: left;
+      
+      #{$parent}-title-emphasis {
+        @extend %x1-text;
       }
     }
   }
