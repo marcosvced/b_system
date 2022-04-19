@@ -3,9 +3,22 @@
 <%- contentFor('body') %>
 
 <div class="main-content main-content-space-top">
-    <section class="module-wrapper footer-basic">
-        <div class="module-view-example-wrapper">
-            
-        </div>
+    <section>
+        <%- include(`${component}/marquee/extended`, { 
+            img: {
+                src: 'marquee-02',
+                alt: 'Marquee image'
+            },
+            title: "Let's do it different",
+            text: 'Promote your business with B_system. The web design tool with the most complete design system.',
+            btn: {
+                label: 'Start with B System', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after'
+            },
+            quote: 'People ignore design that ignores people',
+            isDarkened: true
+        }) %>
     </section>
 </div>

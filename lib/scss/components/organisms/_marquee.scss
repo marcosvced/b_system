@@ -15,7 +15,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   position: relative;
   z-index: 0;
 
@@ -23,14 +22,51 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(.84);
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+
+    &-darkened {
+      filter: brightness(.84);
+    }
   }
 
-  &#{$parent}-standar {
+  #{$parent}-slider-control {
+    width: 100%;
+    padding-inline: helper.space(24);
+    display: none;
+    @include mixin.screen(xl) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    top: 45%;
+
+    [class^=icon-] {
+      color: helper.grayscale(light);
+    }
+  }
+
+  #{$parent}-content {
+    text-align: center;
+  }
+
+  #{$parent}-content-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    #{$parent}-quote {
+      display: none;
+
+      @include mixin.screen(xl) {
+        display: inline;
+      }
+    }
+  }
+
+  &#{$parent}-extended {
     height: helper.rem(400);
     @include mixin.screen(md) {
       height: helper.rem(600);
@@ -40,33 +76,23 @@
     }
 
     justify-content: space-between;
+  }
 
-    #{$parent}-slider-control {
-      width: 100%;
-      padding-inline: helper.space(24);
-      display: none;
-      @include mixin.screen(xl) {
-        display: flex;
-        justify-content: space-between;
-      }
+  &#{$parent}-illustration {
+    justify-content: space-between;
 
-      top: 45%;
-
-      [class^=icon-] {
-        color: helper.grayscale(light);
-      }
+    @include mixin.screen(xl) {
+      height: helper.rem(818);
     }
-    #{$parent}-content-bottom {
-      width: 100%;
+
+    #{$parent}-illustration-container {
+      height: 90%;
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      gap: helper.space(32);
 
-      #{$parent}-quote {
-        display: none;
-
-        @include mixin.screen(xl) {
-          display: inline;
-        }
+      #{$parent}-content {
+        text-align: left;
       }
     }
   }

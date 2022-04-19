@@ -3,9 +3,19 @@
 <%- contentFor('body') %>
 
 <div class="main-content main-content-space-top">
-    <section class="module-wrapper footer-basic">
-        <div class="module-view-example-wrapper">
-            
-        </div>
+    <section>
+        <%- include(`${component}/marquee/illustration`, { 
+            img: {
+                src: 'marquee-02',
+                alt: 'Marquee image'
+            },
+            title: 'Design brings prosperity',
+            text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
+            btn: {
+                label: 'Know more'
+            },
+            quote: 'People ignore design that ignores people',
+            backgroundColor: 'success'
+        }) %>
     </section>
 </div>
