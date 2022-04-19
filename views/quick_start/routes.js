@@ -61,7 +61,12 @@ route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
 })
 
-/* PRODUCT CARDS page. */
+/* Cards page. */
+route.get(routePaths.QUICK_START.CARDS, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['cards']))
+})
+
+/* Product cards page. */
 route.get(routePaths.QUICK_START.PRODUCT_CARDS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['productCards']))
 })
@@ -74,6 +79,11 @@ route.get(routePaths.QUICK_START.GRIDCELLS, (request, response) => {
 /* Forms page. */
 route.get(routePaths.QUICK_START.FORMS, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['forms']))
+})
+
+/* Interaction page. */
+route.get(routePaths.QUICK_START.INTERACTION, (request, response) => {
+  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['interaction']))
 })
 
 module.exports = route

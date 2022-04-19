@@ -3,6 +3,7 @@
 @use "../helpers/colors";
 @use "../helpers/themed";
 @use "../mixins/media";
+@use "../mixins/styles";
 @use '../helpers/font';
 
 * {
@@ -130,5 +131,30 @@ a {
                 margin-top: size.rem(-92);
             }
         }
+    }
+}
+
+
+.demo-card {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: size.rem(8);
+
+    @include themed.light {
+        @include styles.shadow-600;
+        background-color: colors.grayscale(light);
+    }
+
+    @include themed.dark {
+        background-color: colors.grayscale(1100);
+        @include styles.shadow-gray;
+    }
+
+    > * {
+        position: absolute !important;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }
