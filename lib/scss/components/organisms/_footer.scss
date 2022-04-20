@@ -5,18 +5,11 @@
 
 .footer {
     $parent: &;
-    @include themed.properties {
-        background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
-    }
 
-    &.darkened {
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
-        }
-    }
+    @extend %bg-darkened;
 
     #{&}-content {
-       flex-direction: column; 
+       flex-direction: column;
        align-items: center;
     }
 
@@ -44,7 +37,7 @@
                 flex-direction: column;
                 align-items: center;
                 gap: helper.space(32);
-                
+
                 .form-group {
                     min-width: 50%;
                 }
@@ -75,31 +68,31 @@
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
-    
+
                 #{$parent}-content, #{$parent}-subscribe {
                     width: 45%;
                     align-items: flex-start;
-    
+
                     .copy {
                         text-align: start;
                     }
                 }
-    
+
                 #{$parent}-subscribe {
                     padding-block: 0 !important;
-    
+
                     #{$parent}-form {
                         flex-direction: row;
                     }
                 }
             }
         }
-    
+
         &-corporate {
             #{$parent}-contain {
                 display: flex;
                 column-gap: helper.space(112);
-    
+
                 #{$parent}-columns-container {
                     width: 150%;
                 }

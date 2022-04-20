@@ -3,7 +3,7 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-.darkener .bg-card {
+.darkened .bg-card {
     @include themed.properties {
         background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
         box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100), none);
@@ -124,7 +124,7 @@
             top-left-radius: helper.rem(6);
             top-right-radius: helper.rem(6);
             bottom-left-radius: 0;
-            bottom-right-radius: 0; 
+            bottom-right-radius: 0;
         }
     }
 
@@ -148,7 +148,7 @@
 
     & .project-card {
         border-radius: 0;
-    
+
         & .header-card {
             & .header-text {
                 font-size: helper.rem(72);
@@ -229,7 +229,7 @@
                 bottom-left-radius: helper.rem(6);
                 bottom-right-radius: 0;
             }
-            
+
         }
 
         & .service-text {
