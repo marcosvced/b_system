@@ -123,7 +123,7 @@ a {
             padding-top: size.rem(92);
         }
 
-        > .section.darkener:first-of-type {
+        > .section.darkened:first-of-type {
             padding-top: size.rem(48);
             margin-top: size.rem(-48);
             @include media.screen(xl) {

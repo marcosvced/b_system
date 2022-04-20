@@ -1,274 +1,108 @@
-<%- include(`${view}/quick_start/layout`)%>
+<%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('body') %>
 
+<!--SECTION LIGHT-->
 <section class="section">
+    <div class="container">
 
-    <h2 class="container">Form elements</h2>
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Form elements</h3>
 
-    <div class="container d-flex flex-wrap gap-5">
+        <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="h-100 space-y-24">
+                <%- include(`${component}/form/form`, { type: 'text', name: 'Name'}) %>
+                <span class="body-light-gray-text">
+                    Input states
+                </span>
+            </div>
 
+            <div class="h-100 space-y-24">
+                <%- include(`${component}/form/form`, { type: 'password', name: 'Password'}) %>
+                <span class="body-light-gray-text">
+                    Input hideable states 
+                </span>
+            </div>
 
-        <div class="d-flex flex-column gap-2">
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/form`, { type: 'checkbox', label: 'I accept the treatment of my data.', id: 'check-states'}) %>
+                <span class="body-light-gray-text">
+                    Check states 
+                </span>
+            </div>
 
-            <%- include(`${component}/forms/input`, {
-                type: 'text',
-                id: 'input-text-id-01',
-                label: 'Name',
-                // icon: 'icon',
-                // isRequired: true,
-                }) %>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/form`, { type: 'radio', label: 'I choose the premium level.', id: 'radio-states'}) %>
+                <span class="body-light-gray-text">
+                    Radio states
+                </span>
+            </div>
 
-            <span class="label">
-                Input states
-            </span>
-        </div>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/info`, {icon: 'info', text:'Gift cards cannot be used to pay cash.'}) %>
+                <span class="body-light-gray-text">
+                    Info
+                </span>
+            </div>
 
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/input`, {
-                type: 'password',
-                id: 'input-text-id-02',
-                label: 'Password',
-                icon: 'eye',
-                // isRequired: true,
-                }) %>
-
-            <span class="label">
-                Input states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/input`, {
-                type: 'text',
-                id: 'input-text-id-03',
-                label: 'Search',
-                icon: 'magnifying-glass',
-                // isRequired: true,
-                }) %>
-
-            <span class="label">
-                Input states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%
-            const select_items = [
-                { label:'Open this select menu', value:'', selected: 'selected' },
-                { label:'One', value:'1' },
-                { label:'Two', value:'2' },
-                { label:'Three', value:'3' }
-            ]
-            %>
-
-            <%- include(`${component}/forms/select`, {
-                items: select_items,
-				ariaLabel: 'Default select example',
-                }) %>
-
-            <span class="label">
-                Dropdown states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'checkbox',
-                id: 'checkbox-custom-id-01',
-                label: 'I accept the treatment of my data.',
-                // isChecked: true,
-                }) %>
-
-            <span class="label">
-                Check states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'radio',
-                id: 'radio-custom-id-01',
-                label: 'I choose the premium level.',
-                // isChecked: true,
-                }) %>
-
-            <span class="label">
-                Radio states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/info`, {
-                label: 'Gift cards cannot be used to pay cash.',
-                }) %>
-
-            <span class="label">
-                Info
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/info`, {
-                label: 'Gift cards cannot be used to pay cash.',
-                href: '#',
-                }) %>
-
-            <span class="label">
-                Info and link
-            </span>
-        </div>
-
-
-    </div>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/link`, { href: '#', label: 'Gift cards cannot be used to pay cash.', icon: 'info', iconPosition: 'before' }) %>
+                <span class="body-light-gray-text">
+                    Info and link
+                </span>
+            </div>
+        </form>
 </section>
+<!--END: SECTION LIGHT-->
 
+<!--SECTION DARK-->
+<section class="section" data-bsystem="dark">
+    <div class="container">
 
-<section class="section" data-b-system="dark-mode">
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Form elements dark</h3>
 
-    <h2 class="container">Form elements dark</h2>
+        <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="h-100 space-y-24">
+                <%- include(`${component}/form/form`, { type: 'text', name: 'Name'}) %>
+                <span class="body-light-gray-text">
+                    Input states
+                </span>
+            </div>
 
-    <div class="container d-flex flex-wrap gap-5">
+            <div class="h-100 space-y-24">
+                <%- include(`${component}/form/form`, { type: 'password', name: 'Password'}) %>
+                <span class="body-light-gray-text">
+                    Input hideable states 
+                </span>
+            </div>
 
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/form`, { type: 'checkbox', label: 'I accept the treatment of my data.', id: 'check-states-dark'}) %>
+                <span class="body-light-gray-text">
+                    Check states 
+                </span>
+            </div>
 
-        <div class="d-flex flex-column gap-2">
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/form`, { type: 'radio', label: 'I choose the premium level.', id: 'radio-states-dark'}) %>
+                <span class="body-light-gray-text">
+                    Radio states
+                </span>
+            </div>
 
-            <%- include(`${component}/forms/input`, {
-                type: 'text',
-                id: 'input-text-id-04',
-                label: 'Name',
-                // icon: 'icon',
-                // isRequired: true,
-                }) %>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/info`, {icon: 'info', text:'Gift cards cannot be used to pay cash.'}) %>
+                <span class="body-light-gray-text">
+                    Info
+                </span>
+            </div>
 
-            <span class="label">
-                Input states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/input`, {
-                type: 'password',
-                id: 'input-text-id-05',
-                label: 'Password',
-                icon: 'eye',
-                // isRequired: true,
-                }) %>
-
-            <span class="label">
-                Input states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/input`, {
-                type: 'text',
-                id: 'input-text-id-06',
-                label: 'Search',
-                icon: 'magnifying-glass',
-                // isRequired: true,
-                }) %>
-
-            <span class="label">
-                Input states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%
-            const select_items_dark = [
-            { label:'Open this select menu', value:'', selected: 'selected' },
-                { label:'One', value:'1' },
-                { label:'Two', value:'2' },
-                { label:'Three', value:'3' }
-            ]
-            %>
-
-            <%- include(`${component}/forms/select`, {
-                items: select_items_dark,
-				ariaLabel: 'Default select example',
-                }) %>
-
-            <span class="label">
-                Dropdown states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'checkbox',
-                id: 'checkbox-custom-id-02',
-                label: 'I accept the treatment of my data.',
-                // isChecked: true,
-                }) %>
-
-            <span class="label">
-                Check states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/checkbox-radio`, {
-                type: 'radio',
-                id: 'radio-custom-id-02',
-                label: 'I choose the premium level.',
-                // isChecked: true,
-                }) %>
-
-            <span class="label">
-                Radio states
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/info`, {
-                label: 'Gift cards cannot be used to pay cash.',
-                }) %>
-
-            <span class="label">
-                Info
-            </span>
-        </div>
-
-
-        <div class="d-flex flex-column gap-2">
-
-            <%- include(`${component}/forms/info`, {
-                label: 'Gift cards cannot be used to pay cash.',
-                href: '#',
-                }) %>
-
-            <span class="label">
-                Info and link
-            </span>
-        </div>
-
-
-    </div>
+            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
+                <%- include(`${component}/form/link`, { href: '#', label: 'Gift cards cannot be used to pay cash.', icon: 'info', iconPosition: 'before' }) %>
+                
+                <span class="body-light-gray-text">
+                    Info and link
+                </span>
+            </div>
+        </form>
 </section>
+<!--END: SECTION DARK-->

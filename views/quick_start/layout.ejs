@@ -40,6 +40,18 @@ const navigation = [
             {
                 href: QUICK_START.FOOTERS.BASIC,
                 label: 'Footers'
+            },
+            {
+                href: QUICK_START.FOOTERS.ESTANDAR,
+                label: 'Footers Estandar'
+            },
+            {
+                href: QUICK_START.FOOTERS.CORPORATE,
+                label: 'Footers Corporate'
+            },
+            {
+                href: QUICK_START.FOOTERS.NEWSLETTER,
+                label: 'Footers Newsletter'
             }
         ]
 
@@ -124,4 +136,9 @@ const headerConfig = {
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <%- contentFor('footer') %>
-<%- include(`${component}/footer/basic`, { variant: 'darkener'}) %>
+<%- include(`${component}/footer/basic`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'B_system logo'},
+    text:'.Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+    setup: 'basic',
+    variant: 'darkened',
+}) %>
