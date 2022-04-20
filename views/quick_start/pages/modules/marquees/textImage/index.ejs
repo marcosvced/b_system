@@ -3,9 +3,21 @@
 <%- contentFor('body') %>
 
 <div class="main-content main-content-space-top">
-    <section class="module-wrapper footer-basic">
-        <div class="module-view-example-wrapper">
-            
-        </div>
+    <section>
+        <%- include(`${component}/marquee/textImage`, { 
+            img: {
+                src: 'marquee_textimage-01',
+                alt: 'Marquee image'
+            },
+            title: 'We are a new concept of digital studio, we create disruptive',
+            btn: {
+                label: 'Start with B System', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            },
+            quote: '“People ignore design that ignores people”',
+            isDarkened: true
+        }) %>
     </section>
 </div>

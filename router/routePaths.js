@@ -14,7 +14,6 @@ module.exports = {
       ILLUSTRATION: '/modules/marquees/illustration',
       IMAGE: '/modules/marquees/image',
       STANDAR: '/modules/marquees/standar',
-      TEXT: '/modules/marquees/text',
       TEXTIMAGE: '/modules/marquees/textImage',
     },
     BUTTONS: '/components/buttons',

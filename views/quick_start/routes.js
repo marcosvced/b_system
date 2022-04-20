@@ -53,10 +53,6 @@ route.get(routePaths.QUICK_START.MARQUEES.STANDAR, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'standar']))
 })
 
-route.get(routePaths.QUICK_START.MARQUEES.TEXT, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'text']))
-})
-
 route.get(routePaths.QUICK_START.MARQUEES.TEXTIMAGE, (request, response) => {
   routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'textImage']))
 })

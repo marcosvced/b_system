@@ -6,9 +6,9 @@
 .marquee {
   $parent: &;
   padding: helper.space(32);
-  height: helper.rem(400);
+  min-height: helper.rem(400);
   @include mixin.screen(xl) {
-    height: helper.rem(500);
+    min-height: helper.rem(500);
   }
 
   display: flex;
@@ -42,6 +42,7 @@
     }
 
     top: 45%;
+    left: 0;
 
     [class^=icon-] {
       color: helper.grayscale(light);
@@ -67,12 +68,13 @@
   }
 
   &#{$parent}-extended {
-    height: helper.rem(400);
+    min-height: helper.rem(400);
+
     @include mixin.screen(md) {
-      height: helper.rem(600);
+      min-height: helper.rem(600);
     }
     @include mixin.screen(xl) {
-      height: helper.rem(818);
+      min-height: helper.rem(818);
     }
 
     justify-content: space-between;
@@ -81,18 +83,9 @@
   &#{$parent}-illustration {
     height: auto;
     justify-content: space-between;
-    gap: helper.space(32);
     padding: {
       top: 0;
       bottom: helper.space(48);
-      inline: helper.space(16);
-    }
-
-    @include mixin.screen(md) {
-      padding: {
-        block: helper.space(32);
-        inline: helper.space(80);
-      }
     }
 
     #{$parent}-illustration-container {
@@ -116,30 +109,20 @@
 
       .illustration-container {
         width: 80%;
-
-        .illustration-img {
-          width: 100%;
-        }
       }
     }
   }
 
   &#{$parent}-image {
-    gap: helper.space(32);
     justify-content: space-between;
-    padding: {
-      block: helper.space(32);
-      inline: helper.space(16);
-    }
 
     @include mixin.screen(md) {
-      height: helper.rem(600);
+      min-height: helper.rem(600);
       align-items: flex-start;
-      padding-inline: helper.space(80);
     }
 
     @include mixin.screen(xl) {
-      height: helper.rem(800);
+      min-height: helper.rem(800);
     }
 
     #{$parent}-content {
@@ -151,12 +134,94 @@
   }
 
   &#{$parent}-cta {
-    #{$parent}-title {
-      color: helper.grayscale(600);
-      text-align: left;
-      
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mixin.screen(md) {
+      min-height: helper.rem(600);
+      padding-top: helper.space(104) !important;
+    }
+
+    @include mixin.screen(xl) {
+      min-height: helper.rem(800);
+    }
+
+    .illustration-container {
+      width: 35%;
+      max-width: helper.rem(533);
+      max-height: 100%;
+      display: none;
+      filter: grayscale(1);
+      opacity: .1;
+      position: absolute;
+      top: 9%;
+      right: 7%;
+      z-index: -1;
+
+      @include mixin.screen(xl) {
+        display: block;
+      }
+    }
+
+    #{$parent}-content {
+      @include mixin.screen(md) {
+        text-align: left;
+      }
+
+      @include mixin.screen(xl) {
+        width: 86%;
+      }
+
+      #{$parent}-title {
+        color: helper.grayscale(600);
+        text-align: left;
+      }
+  
       #{$parent}-title-emphasis {
-        @extend %x1-text;
+        font-size: helper.size(lg);
+  
+        @include mixin.screen(md) {
+          font-size: helper.size(xl);
+        }
+  
+        @include mixin.screen(xl) {
+          font-size: helper.size(xxl);
+        }
+      }
+    }
+  }
+
+  &#{$parent}-textimage {
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mixin.screen(md) {
+      min-height: helper.rem(600);
+    }
+
+    #{$parent}-content, #{$parent}-title {
+      text-align: left;
+    }
+
+    #{$parent}-content {
+      @include mixin.screen(xl) {
+        width: 65%;
+        margin-left: helper.space(56);
+      }
+    }
+  }
+
+  &#{$parent}-space {
+    gap: helper.space(32);
+    padding: {
+      block: helper.space(32);
+      inline: helper.space(16);
+    }
+
+    @include mixin.screen(md) {
+      padding: {
+        inline: helper.space(80);
       }
     }
   }
