@@ -118,16 +118,16 @@ a {
 
 .header-fixed {
     + .main {
-        padding-top: size.rem(48);
+        // padding-top: size.rem(48);
         @include media.screen(xl) {
-            padding-top: size.rem(92);
+            // padding-top: size.rem(92);
         }
 
         > .section.darkener:first-of-type {
-            padding-top: size.rem(48);
+            // padding-top: size.rem(48);
             margin-top: size.rem(-48);
             @include media.screen(xl) {
-                padding-top: size.rem(92);
+                // padding-top: size.rem(92);
                 margin-top: size.rem(-92);
             }
         }
