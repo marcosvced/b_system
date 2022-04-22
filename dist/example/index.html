@@ -10,12 +10,28 @@
     <!--B_system styles-->
     <link rel='stylesheet' href='../assets/css/style.min.css' />
     <style lang="css">
+      picture {
+        display: block;
+        width: 100%;
+        height: 100vh;
+      }
+      .example>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .h1-example {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     </style>
   </head>
   <body>
 
     <!--MAIN HEADER-->
-    <header class="header header-fixed header-light " data-bsystem="sticky">
+    <header class="header header-fixed header-transparent " data-bsystem="sticky">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
           <div class="d-flex d-xl-none order-0">
@@ -125,16 +141,7 @@
                       <a class="dropdown-item " href="../modules/footers/basic">Footers</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="">Texts</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../components/illustrations">Illustrations</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../components/microillustrations">Microillustrations</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../components/scenes">Scenes</a>
+                      <a class="dropdown-item " href="../components/texts">Texts</a>
                     </li>
                   </ul>
                 </li>
@@ -154,6 +161,10 @@
         </div>
       </div>
     </header>
+    <h1 class="h1-example">Scroll down</h1>
+    <picture class="example">
+      <img src="https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80" alt="">
+    </picture>
 
     <!--END: MAIN HEADER-->
 

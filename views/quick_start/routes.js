@@ -1,120 +1,161 @@
 const express = require('express')
-const routePaths = require('../../router/routePaths')
-const routeRender = require('../../router/routeRender')
+const { render, dir } = require('../../router/routeRender')
+const { QUICK_START } = require('./routePaths')
+const navigation = require('./navigation')
 
 const route = express.Router()
 
+function path(page = 'home', children = []) { return (dir(QUICK_START.ROUTE_NAME, page, children)) }
+
+/**
+ * 1 Home
+ * 2 Demos
+ * 3 Pages
+ * 4 Modules
+ * 5 Components
+ * 6 Transitions
+ */
+
 /* the default path "/" should redirect to Home */
 route.get('/', (request, response) => {
-  response.redirect(routePaths.QUICK_START.HOME)
+  response.redirect(QUICK_START.HOME)
 })
 
-/* home page. */
-route.get(routePaths.QUICK_START.HOME, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME))
+/**
+ * 1 Home
+ */
+
+route.get(QUICK_START.HOME, (request, response) => {
+  render(response, path(), {}, { navigation })
 })
 
-/* headers page. */
-route.get(routePaths.QUICK_START.HEADERS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['headers']))
+/**
+ * 4 Modules
+ */
+
+/* Headers */
+route.get(QUICK_START.HEADERS, (request, response) => {
+  render(response, path('modules', ['headers']), {}, { navigation })
 })
 
-/* footers page. */
-route.get(routePaths.QUICK_START.FOOTERS.BASIC, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'basic']))
+/* Footers. */
+route.get(QUICK_START.FOOTERS.BASIC, (request, response) => {
+  render(response, path('modules', ['footers', 'basic']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.FOOTERS.CORPORATE, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'corporate']))
+route.get(QUICK_START.FOOTERS.STANDARD, (request, response) => {
+  render(response, path('modules', ['footers', 'standard']), {}, { navigation })
 })
 
-/* Marquees page. */
-route.get(routePaths.QUICK_START.MARQUEES.BASIC, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'basic']))
+route.get(QUICK_START.FOOTERS.CORPORATE, (request, response) => {
+  render(response, path('modules', ['footers', 'corporate']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.MARQUEES.CTA, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'cta']))
+route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
+  render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.MARQUEES.EXTENDED, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'extended']))
+/* Marquees. */
+route.get(QUICK_START.MARQUEES.BASIC, (request, response) => {
+  render(response, path('modules', ['marquees', 'basic']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.MARQUEES.ILLUSTRATION, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'illustration']))
+route.get(QUICK_START.MARQUEES.CTA, (request, response) => {
+  render(response, path('modules', ['marquees', 'cta']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.MARQUEES.IMAGE, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'image']))
+route.get(QUICK_START.MARQUEES.EXTENDED, (request, response) => {
+  render(response, path('modules', ['marquees', 'extended']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.MARQUEES.STANDAR, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'standar']))
+route.get(QUICK_START.MARQUEES.ILLUSTRATION, (request, response) => {
+  render(response, path('modules', ['marquees', 'illustration']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.MARQUEES.TEXTIMAGE, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['marquees', 'textImage']))
+route.get(QUICK_START.MARQUEES.IMAGE, (request, response) => {
+  render(response, path('modules', ['marquees', 'image']), {}, { navigation })
 })
 
-/* Buttons page. */
-route.get(routePaths.QUICK_START.BUTTONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['buttons']))
+route.get(QUICK_START.MARQUEES.STANDAR, (request, response) => {
+  render(response, path('modules', ['marquees', 'standar']), {}, { navigation })
 })
 
-/* Alerts page. */
-route.get(routePaths.QUICK_START.ALERTS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['alerts']))
+route.get(QUICK_START.MARQUEES.TEXTIMAGE, (request, response) => {
+  render(response, path('modules', ['marquees', 'textImage']), {}, { navigation })
 })
 
-/* Icons page. */
-route.get(routePaths.QUICK_START.ICONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['icons']))
+/**
+ * 5 Components
+ */
+
+/* Buttons */
+route.get(QUICK_START.BUTTONS, (request, response) => {
+  render(response, path('components', ['buttons']), {}, { navigation })
 })
 
-/* Links page. */
-route.get(routePaths.QUICK_START.LINKS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['links']))
+/* Alerts */
+route.get(QUICK_START.ALERTS, (request, response) => {
+  render(response, path('components', ['alerts']), {}, { navigation })
 })
 
-/* Texts page. */
-route.get(routePaths.QUICK_START.TEXT, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['text']))
+  /* Icons */
+route.get(QUICK_START.ICONS, (request, response) => {
+  render(response, path('components', ['icons']), {}, { navigation })
 })
 
-/* Cards page. */
-route.get(routePaths.QUICK_START.CARDS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['cards']))
+/* Links */
+route.get(QUICK_START.LINKS, (request, response) => {
+  render(response, path('components', ['links']), {}, { navigation })
 })
 
-/* Product cards page. */
-route.get(routePaths.QUICK_START.PRODUCT_CARDS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['productCards']))
+/* Texts */
+route.get(QUICK_START.TEXTS, (request, response) => {
+  render(response, path('components', ['texts']), {}, { navigation })
 })
 
-/* Grid Cells page. */
-route.get(routePaths.QUICK_START.GRIDCELLS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['gridCells']))
+/* Cards */
+route.get(QUICK_START.CARDS, (request, response) => {
+  render(response, path('components', ['cards']), {}, { navigation })
 })
 
-/* Interaction page. */
-route.get(routePaths.QUICK_START.INTERACTION, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['interaction']))
+/* Product cards */
+route.get(QUICK_START.PRODUCT_CARDS, (request, response) => {
+  render(response, path('components', ['productCards']), {}, { navigation })
 })
 
-/* Illustrations page. */
-route.get(routePaths.QUICK_START.ILLUSTRATIONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['illustrations']))
+/* Grid cells */
+route.get(QUICK_START.GRID_CELLS, (request, response) => {
+  render(response, path('components', ['gridCells']), {}, { navigation })
 })
 
-/* Microillustrations page. */
-route.get(routePaths.QUICK_START.MICROILLUSTRATIONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['microillustrations']))
+/* Forms */
+route.get(QUICK_START.FORMS, (request, response) => {
+  render(response, path('components', ['forms']), {}, { navigation })
 })
 
-/* Scenes page. */
-route.get(routePaths.QUICK_START.SCENES, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['scenes']))
+/* Interaction */
+route.get(QUICK_START.INTERACTION, (request, response) => {
+  render(response, path('components', ['interaction']), {}, { navigation })
+})
+
+/* Illustrations */
+route.get(QUICK_START.ILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['illustrations']), {}, { navigation })
+})
+
+/* Microillustrations */
+route.get(QUICK_START.MICROILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['microillustrations']), {}, { navigation })
+})
+
+/* Scenes */
+route.get(QUICK_START.SCENES, (request, response) => {
+  render(response, path('components', ['scenes']), {}, { navigation })
+})
+
+// TODO: remove
+route.get('/example', (request, response) => {
+  render(response, path('example', []), {}, { navigation })
 })
 
 module.exports = route
