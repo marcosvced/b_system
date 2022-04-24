@@ -1,0 +1,29 @@
+@use "sass:map";
+@use '../helpers/misc' as f;
+@use "../variables/palette";
+
+$PAYLOAD_ENUM: (
+        ALL: 'all',
+        EXCLUDE: 'exclude'
+);
+
+$merged-palette: f.map-collect(
+                palette.$primary,
+                palette.$secondary,
+                palette.$grayscale,
+                palette.$opacity
+);
+
+@mixin can-use($payload: map.get($PAYLOAD_ENUM, ALL)) {
+  $colors: $merged-palette;
+  @if (map.has-key($payload, map.get($PAYLOAD_ENUM, EXCLUDE))) {
+    @each $key in map.get($payload, map.get($PAYLOAD_ENUM, EXCLUDE)) {
+      $colors: map.remove($colors, $key);
+    }
+  }
+  @each $class, $color in $colors {
+    &.bg-#{$class} {
+      background-color: $color;
+    }
+  }
+}

@@ -82,6 +82,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     @extend %body-regular-text;
+    padding-top: var(--head);
 }
 
 p,
@@ -115,25 +116,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
-.header-fixed {
-    + .main {
-        padding-top: size.rem(48);
-        @include media.screen(xl) {
-            padding-top: size.rem(92);
-        }
-
-        > .section.darkened:first-of-type {
-            padding-top: size.rem(48);
-            margin-top: size.rem(-48);
-            @include media.screen(xl) {
-                padding-top: size.rem(92);
-                margin-top: size.rem(-92);
-            }
-        }
-    }
-}
-
 
 .demo-card {
     width: 100%;
