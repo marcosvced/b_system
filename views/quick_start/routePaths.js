@@ -22,7 +22,7 @@ module.exports = {
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',
     LINKS: '/components/links',
-    TEXT: '/components/text',
+    TEXTS: '/components/texts',
     CARDS: '/components/cards',
     PRODUCT_CARDS: '/components/productCards',
     INTERACTION: '/components/interaction',
