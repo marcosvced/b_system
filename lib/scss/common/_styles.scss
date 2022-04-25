@@ -116,25 +116,6 @@ a {
     color: inherit;
 }
 
-.header-fixed {
-    + .main {
-        padding-top: size.rem(48);
-        @include media.screen(xl) {
-            padding-top: size.rem(92);
-        }
-
-        > .section.darkener:first-of-type {
-            padding-top: size.rem(48);
-            margin-top: size.rem(-48);
-            @include media.screen(xl) {
-                padding-top: size.rem(92);
-                margin-top: size.rem(-92);
-            }
-        }
-    }
-}
-
-
 .demo-card {
     $parent: &;
     width: 100%;

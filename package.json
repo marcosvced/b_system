@@ -30,6 +30,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "nodemon": "^2.0.15",
+    "pretty": "^2.0.0",
     "sass": "^1.47.0",
     "uglify-js": "^3.14.5"
   }
