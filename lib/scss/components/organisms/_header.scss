@@ -53,13 +53,6 @@ header.header {
         }
     }
 
-    &.header-light {
-        @include themed.properties {
-            background-color: themed.values(colors.grayscale(light), colors.grayscale(1100));
-            box-shadow: themed.values(0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 0 0 hsl(0, 0%, 27%));
-        }
-    }
-
     &.header-transparent {
         @include themed.properties {
             background-color: transparent;
@@ -90,11 +83,21 @@ header.header {
         }
     }
 
+    &.header-light {
+        @include themed.properties {
+            background-color: themed.values(colors.grayscale(light), colors.grayscale(1100));
+            box-shadow: themed.values(0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 0 0 hsl(0, 0%, 27%));
+        }
+    }
+
     &.header-fixed {
         z-index: 100;
-        position: fixed;
+        position: sticky;
         width: 100vw;
         top: 0;
+        &.header-transparent {
+            position: fixed;
+        }
     }
 
     nav.navbar {
