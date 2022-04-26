@@ -1,3 +1,4 @@
+@use '../variables/colors' as *;
 @use "../placeholders/fonts";
 @use "../helpers/size";
 @use "../helpers/colors";
@@ -17,7 +18,7 @@ h1 {
     @include media.screen(md) {
         font: {
             size: font.size(xl);
-            family: font.family(roboto);
+            family: font.family(sans-serif);
             weight: font.weight(bold);
         }
         line-height: 1.3;
@@ -26,7 +27,7 @@ h1 {
     @include media.screen(xl) {
         font: {
             size: font.size(xxl);
-            family: font.family(roboto);
+            family: font.family(sans-serif);
             weight: font.weight(bold);
         }
         line-height: 1.19;
@@ -39,7 +40,7 @@ h2 {
     @include media.screen(md) {
         font: {
             size: font.size(lg);
-            family: font.family(roboto);
+            family: font.family(sans-serif);
             weight: font.weight(bold);
         }
         line-height: 1.38;
@@ -48,7 +49,7 @@ h2 {
     @include media.screen(xl) {
         font: {
             size: font.size(xl);
-            family: font.family(roboto);
+            family: font.family(sans-serif);
             weight: font.weight(bold);
         }
         line-height: 1.3;
@@ -61,7 +62,7 @@ h3 {
     @include media.screen(md) {
         font: {
             size: font.size(lg);
-            family: font.family(roboto);
+            family: font.family(sans-serif);
             weight: font.weight(bold);
         }
         line-height: 1.38;

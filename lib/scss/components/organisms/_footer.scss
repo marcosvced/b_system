@@ -1,3 +1,4 @@
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
@@ -19,7 +20,7 @@
 
     .copy, #{&}-link {
         @include themed.properties {
-            color: themed.values(helper.grayscale(800), helper.grayscale(600));
+            color: themed.values($c-grayscale--800, helper.grayscale(600));
          }
     }
 
