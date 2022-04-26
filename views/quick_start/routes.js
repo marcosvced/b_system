@@ -109,24 +109,24 @@ route.get(QUICK_START.INTERACTION, (request, response) => {
   render(response, path('components', ['interaction']), {}, { navigation })
 })
 
-// TODO: remove
-route.get('/example', (request, response) => {
-  render(response, path('example', []), {}, { navigation })
-})
-
 /* Illustrations page. */
-route.get(routePaths.QUICK_START.ILLUSTRATIONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['illustrations']))
+route.get(QUICK_START.ILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['illustrations']), {}, { navigation })
 })
 
 /* Microillustrations page. */
-route.get(routePaths.QUICK_START.MICROILLUSTRATIONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['microillustrations']))
+route.get(QUICK_START.MICROILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['microillustrations']), {}, { navigation })
 })
 
 /* Scenes page. */
-route.get(routePaths.QUICK_START.SCENES, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['scenes']))
+route.get(QUICK_START.SCENES, (request, response) => {
+  render(response, path('components', ['scenes']), {}, { navigation })
+})
+
+// TODO: remove
+route.get('/example', (request, response) => {
+  render(response, path('example', []), {}, { navigation })
 })
 
 module.exports = route
