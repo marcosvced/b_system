@@ -9,6 +9,7 @@ module.exports = {
       CORPORATE: '/modules/footers/corporate',
       NEWSLETTER: '/modules/footers/newsletter',
     },
+    CONTACT_BAR: '/modules/contactBar',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

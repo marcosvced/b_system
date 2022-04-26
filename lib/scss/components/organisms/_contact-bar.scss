@@ -1,0 +1,67 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.contact-bar-darkened {
+    background-color: helper.grayscale(100);
+}
+
+.contact-bar {
+    $parent: &;
+    background-color: helper.primary(blue);
+    display: flex;
+    justify-content: space-between;
+
+    &-social {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        column-gap: helper.space(8);
+
+        @include mixin.screen(sm) {
+            column-gap: helper.space(16);
+        }
+
+        @include mixin.screen(md) {
+            width: auto;
+        }
+    }
+
+    &-contact, #{$parent}-text:not(.contact-bar-social-text) {
+        display: none;
+    }
+
+    &-contact {
+        @include mixin.screen(md) {
+            display: flex;
+        }
+    }
+
+    #{$parent}-text:not(.contact-bar-social-text) {
+        @include mixin.screen(xl) {
+            display: block;
+        }
+    }
+
+    .action-link, .btn [class^=icon-] {
+        color: helper.grayscale(light);
+    }
+
+    .action-link:hover {
+        color: helper.grayscale(light);
+    }
+
+    .btn [class^=icon-] {
+        @include mixin.circle(32);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mixin.slow-transition(background-color);
+        
+
+        &:hover {
+            background-color: helper.secondary(blue-500);
+        }
+    }
+}
