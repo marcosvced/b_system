@@ -1,0 +1,80 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('styles') %>
+picture {display: block; width: 100%; height: 100vh;}
+.example > img {width: 100%; height:100%; object-fit: cover;}
+
+.h1-example {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+
+<div class="main-content main-content-space-top">
+    <section class="module-wrapper">
+        <%- include(`${component}/cta/cta`, {
+            title: 'Do you want to start with B_system today?',
+            btn: {
+                label: 'Purchase B_system',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            isDarkened: false
+        }) %>
+    </section>
+
+    <section class="module-wrapper">
+        <%- include(`${component}/cta/cta`, {
+            title: 'Do you want to start with B_system today?',
+            btn: {
+                label: 'Purchase B_system',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            isDarkened: true
+        }) %>
+    </section>
+
+    <section class="module-wrapper" data-bsystem="dark">
+        <%- include(`${component}/cta/cta`, {
+            title: 'Do you want to start with B_system today?',
+            btn: {
+                label: 'Purchase B_system',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            isDarkened: false
+        }) %>
+    </section>
+
+    <section class="module-wrapper" data-bsystem="dark">
+        <%- include(`${component}/cta/cta`, {
+            title: 'Do you want to start with B_system today?',
+            btn: {
+                label: 'Purchase B_system',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            isDarkened: true
+        }) %>
+    </section>
+</div>

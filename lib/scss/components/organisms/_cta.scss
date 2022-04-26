@@ -1,0 +1,23 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.cta {
+    $parent: &;
+    @extend %bg-darkened;
+    padding-inline: helper.space(16);
+
+    @include mixin.screen(md) {
+        padding-inline: helper.space(80);
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #{$parent}-title {
+        text-align: center;
+        font-weight: 400;
+    }
+}
