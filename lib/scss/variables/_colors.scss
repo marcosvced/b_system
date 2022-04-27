@@ -1,0 +1,75 @@
+@use "../helpers/colors";
+
+
+/* PRIMARY */
+$c-eren: colors.primary(eren);
+$c-eren__hover: colors.hover(eren);
+
+$c-mikasa: colors.primary(mikasa);
+$c-mikasa__hover: colors.hover(mikasa);
+
+$c-armin: colors.primary(armin);
+$c-armin__hover: colors.hover(armin);
+
+/* SECONDARY */
+$c-eren--100: colors.secondary(eren-100);
+$c-eren--300: colors.secondary(eren-300);
+$c-eren--400: colors.secondary(eren-400);
+$c-eren--500: colors.secondary(eren-500);
+$c-eren--600: colors.secondary(eren-600);
+
+$c-mikasa--100: colors.secondary(mikasa-100);
+$c-mikasa--200: colors.secondary(mikasa-200);
+$c-mikasa--300: colors.secondary(mikasa-300);
+$c-mikasa--400: colors.secondary(mikasa-400);
+$c-mikasa--500: colors.secondary(mikasa-500);
+
+$c-armin--100: colors.secondary(armin-100);
+$c-armin--200: colors.secondary(armin-200);
+$c-armin--300: colors.secondary(armin-300);
+$c-armin--400: colors.secondary(armin-400);
+$c-armin--500: colors.secondary(armin-500);
+
+$c-danger--500: colors.secondary(danger-500);
+$c-danger--400: colors.secondary(danger-400);
+$c-danger--300: colors.secondary(danger-300);
+$c-danger--200: colors.secondary(danger-200);
+$c-danger--100: colors.secondary(danger-100);
+
+$c-warning--500: colors.secondary(warning-500);
+$c-warning--400: colors.secondary(warning-400);
+$c-warning--300: colors.secondary(warning-300);
+$c-warning--200: colors.secondary(warning-200);
+$c-warning--100: colors.secondary(warning-100);
+
+/* GRAYSCALE */
+$c-grayscale--light: colors.grayscale(light);
+$c-grayscale--100: colors.grayscale(100);
+$c-grayscale--200: colors.grayscale(200);
+$c-grayscale--300: colors.grayscale(300);
+$c-grayscale--400: colors.grayscale(400);
+$c-grayscale--500: colors.grayscale(500);
+$c-grayscale--600: colors.grayscale(600);
+$c-grayscale--700: colors.grayscale(700);
+$c-grayscale--800: colors.grayscale(800);
+$c-grayscale--900: colors.grayscale(900);
+$c-grayscale--1000: colors.grayscale(1000);
+$c-grayscale--1100: colors.grayscale(1100);
+$c-grayscale--1200: colors.grayscale(1200);
+$c-grayscale--1300: colors.grayscale(1300);
+$c-grayscale--ash: colors.grayscale(ash);
+
+/* OPACITY */
+$c-opacity__eren: colors.opacity(eren);
+$c-opacity__mikasa: colors.opacity(mikasa);
+$c-opacity__light--0: colors.opacity(light-0);
+$c-opacity__light--100: colors.opacity(light-100);
+$c-opacity__light--200: colors.opacity(light-200);
+$c-opacity__gray--100: colors.opacity(gray-100);
+$c-opacity__gray--200: colors.opacity(gray-200);
+$c-opacity__gray--300: colors.opacity(gray-300);
+$c-opacity__gray--400: colors.opacity(gray-400);
+$c-opacity__gray--500: colors.opacity(gray-500);
+$c-opacity__gray--600: colors.opacity(gray-600);
+$c-opacity__gray--700: colors.opacity(gray-700);
+

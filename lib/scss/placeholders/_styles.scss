@@ -1,0 +1,15 @@
+@use '../variables/colors' as *;
+@use '../helpers' as helper;
+@use '../helpers/themed';
+@use '../mixins' as mixin;
+
+%bg-darkened {
+  @include themed.properties {
+    background-color: themed.values($c-grayscale--light, helper.grayscale(1100));
+  }
+  &.darkened {
+    @include themed.properties {
+      background-color: themed.values($c-grayscale--100, helper.grayscale(1200));
+    }
+  }
+}

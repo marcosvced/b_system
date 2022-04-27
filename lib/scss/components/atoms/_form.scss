@@ -1,0 +1,157 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.form-group {
+    z-index: 0;
+
+    .input {
+        background-color: transparent;
+        @include mixin.slow-transition(transform);
+
+        @include themed.properties {
+            border-color: themed.values(helper.grayscale(600), $c-grayscale--800);
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &.form-control {
+            min-height: helper.rem(48);
+
+            &.input-basic, &.input-hideable {
+                padding-top: helper.space(16);
+
+                + .btn-only-icon {
+                    position: absolute;
+                    top: helper.space(16);
+                    right: helper.space(16);
+
+                    [class*='icon-'] {
+                        font-size: helper.rem(24);
+                        color: $c-eren;
+                    }
+                }
+            }
+
+            &:focus {
+                outline:{
+                    style: solid;
+                    width: helper.rem(2);
+                    offset: helper.rem(-1);
+                }
+
+                @include themed.properties {
+                    outline-color: themed.values(helper.secondary(eren-500), $c-eren);
+                    color: themed.values($c-grayscale--ash, $c-grayscale--light);
+                }
+            }
+
+            &:focus ~ .form-placeholder, &:not(:placeholder-shown) ~ .form-placeholder {
+                font-size: helper.rem(11);
+                transform: translateY(-45%);
+            }
+        }
+    }
+
+    .form-check-input {
+        width: helper.rem(20);
+        height: helper.rem(20);
+        margin-top: 0;
+        visibility: hidden;
+
+        &.input-check {
+
+            + [class*='icon-'] {
+                font-size: helper.rem(16);
+                position: absolute;
+                top: helper.rem(2);
+                left: helper.rem(2);
+                @include themed.properties {
+                    color: themed.values(helper.secondary(eren-500), $c-eren);
+                }
+                visibility: hidden;
+            }
+
+            &:checked + [class*='icon-'] {
+                visibility: visible;
+            }
+        }
+
+        &.input-radio {
+            &:checked {
+                + .label-radio:after {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .form-check-label {
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            width: helper.rem(20);
+            height: helper.rem(20);
+            border:{
+                width: helper.rem(1);
+                style: solid;
+            }
+
+            @include themed.properties {
+                border-color: themed.values(helper.grayscale(600), $c-grayscale--800);
+            }
+
+            border-radius: helper.rem(4);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &.label-radio:before {
+            @include mixin.circle(20);
+        }
+
+        &.label-radio:after {
+            content: '';
+            position: absolute;
+            top: helper.rem(6);
+            left: helper.rem(6);
+            @include mixin.circle(8);
+            @include themed.properties {
+                background-color: themed.values(helper.secondary(eren-500), $c-eren);
+            }
+            visibility: hidden;
+        }
+    }
+
+    .form-placeholder, .form-check-label {
+        @include themed.properties {
+            color: themed.values(helper.grayscale(600), $c-grayscale--800);
+        }
+    }
+
+    .form-placeholder {
+        position: absolute;
+        top: helper.rem(12);
+        left: helper.rem(13);
+        @include mixin.slow-transition(transform);
+        z-index: -1;
+    }
+
+
+}
+
+.form-group, .form-info {
+    [class*='icon-'] {
+        font-size: helper.rem(20);
+
+        @include themed.properties {
+            color: themed.values(helper.grayscale(600), $c-grayscale--800);
+        }
+    }
+}

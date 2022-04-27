@@ -1,3 +1,4 @@
+@use '../variables/colors' as *;
 @use '../placeholders';
 @use '../helpers/font';
 @use '../helpers/colors';
@@ -133,18 +134,18 @@
 
 // Color
 
-.body-blue-text {
-    @extend %body-blue-text;
+.body-eren-text {
+    @extend %body-eren-text;
 }
 
-.body-orange-text {
-    @extend %body-orange-text;
+.body-warning-text {
+    @extend %body-warning-text;
 }
 
-.body-red-text {
-    @extend %body-red-text;
+.body-danger-text {
+    @extend %body-danger-text;
 }
 
-.body-turquoise-text {
-    @extend %body-turquoise-text;
+.body-armin-text {
+    @extend %body-armin-text;
 }

@@ -1,51 +1,12 @@
+@use "sass:map";
+@use '../../variables/colors' as *;
 @use '../../placeholders';
+@use '../../variables/palette';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
-
-/*.button-component {
-    @include themed.properties {
-        background-color: themed.values(helper.grayscale(100), #3b3b3b);
-        color: themed.values(helper.grayscale(dark), helper.grayscale(light));
-    }
-
-    &:hover {
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(300), helper.grayscale(900));
-        }
-    }
-
-    i {
-        &:before {
-            font-size: helper.rem(24);
-        }
-    }
-
-    &.condensed {
-        .icon-btn-arrow {
-            transform: rotate(90deg);
-        }
-    }
-
-    &.squared-button {
-        border: 0;
-        @include themed.properties {
-            background-color: themed.values(hsla(0, 0%, 0%, 0.26), rgba(255, 255, 255, 0.14));
-        }
-        color: helper.grayscale(300);
-        height: helper.rem(48);
-        width: helper.rem(56);
-        border-radius: 4px;
-
-        i {
-            display: grid;
-
-            &:before {
-                font-size: helper.space(24);
-            }
-        }
-    }
-}*/
+@use '../../mixins/backgounds';
+@use '../../mixins/text-color';
 
 .btn-interactive {
     display: flex;
@@ -58,31 +19,35 @@
     height: helper.rem(48);
     border-radius: helper.rem(4);
 
+    @include text-color.can-use(palette.$grayscale);
+
+
     @include themed.properties {
-        background-color: themed.values(helper.grayscale(100), helper.grayscale(1000));
+        @include backgounds.can-use((exclude:(map.keys(palette.$secondary))));
+        background-color: themed.values($c-grayscale--100, $c-grayscale--1000);
     }
 
     &:hover,
     &:active {
         @include themed.properties {
-            background-color: themed.values(helper.grayscale(200), helper.grayscale(900));
+            background-color: themed.values($c-grayscale--200, $c-grayscale--900);
         }
     }
 
     &-darkened {
 
         @include themed.properties {
-            background-color: themed.values(helper.opacity(gray-300), helper.opacity(light-0));
+            background-color: themed.values(helper.opacity(gray-300), $c-opacity__light--0);
         }
 
         > i {
-            color: helper.grayscale(light);
+            color: $c-grayscale--light;
         }
 
         &:hover,
         &:active {
             @include themed.properties {
-                background-color: themed.values(helper.opacity(gray-300), helper.opacity(light-100));
+                background-color: themed.values(helper.opacity(gray-300), $c-opacity__light--100);
             }
         }
     }

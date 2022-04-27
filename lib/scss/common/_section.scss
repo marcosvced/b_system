@@ -1,8 +1,11 @@
 @use '../helpers' as helper;
 @use '../helpers/themed';
 @use '../mixins' as mixin;
+@use '../placeholders';
 
 .section {
+    @extend %bg-darkened;
+
     padding-block: helper.rem(48);
     padding-inline: helper.rem(16);
     @include mixin.screen(lg) {
@@ -15,10 +18,6 @@
         padding-block: helper.rem(120);
     }
 
-    @include themed.properties {
-        background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
-    }
-
     &.section-divider {
        @include themed.light {
            @include mixin.white-line-100;
@@ -28,10 +27,5 @@
         }
     }
 
-    &.darkener {
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
-        }
-    }
 }
 

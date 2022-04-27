@@ -6,7 +6,9 @@ module.exports = {
     CATEGORIES_MENU: '/modules/categories-menu',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
+      STANDARD: '/modules/footers/standard',
       CORPORATE: '/modules/footers/corporate',
+      NEWSLETTER: '/modules/footers/newsletter',
     },
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
@@ -16,6 +18,7 @@ module.exports = {
     CARDS: '/components/cards',
     PRODUCT_CARDS: '/components/productCards',
     INTERACTION: '/components/interaction',
-    GRIDCELLS: '/components/gridCells',
+    GRID_CELLS: '/components/gridCells',
+    FORMS: '/components/forms',
   },
 }
