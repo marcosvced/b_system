@@ -3,14 +3,39 @@
 
 .nav-tabs.bs-menu {
     border-bottom: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
 
     @include themed.properties {
         background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
         box-shadow: 0 1px 0 0 themed.values(helper.grayscale(300), helper.grayscale(900));
     }
 
+    &.--centered {
+        li:first-child {
+            margin-left: auto;
+        }
+
+        li:last-child {
+            margin-right: auto;
+        }
+    }
+
+    &.--right {
+        li:first-child {
+            margin-left: auto;
+        }
+    }
+
+    &.--left {
+        li:last-child {
+            margin-right: auto;
+        }
+    }
+
     .nav-link {
         border: 0;
+        white-space: nowrap;
         @include themed.properties {
             color: themed.values(helper.grayscale(800), helper.grayscale(600));
         }
