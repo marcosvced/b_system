@@ -1,0 +1,56 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.basic-content-wrapper {
+    background-color: helper.grayscale(light);
+}
+
+.basic-content {
+    $parent: &;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #{$parent}-title, #{$parent}-text {
+        text-align: center;
+    }
+
+    @include mixin.screen(xl) {
+        padding-inline: helper.rem(216) !important;
+    }
+
+    &-columns {
+        @include mixin.screen(xl) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            #{$parent}-title {
+                font-size: helper.rem(40);
+            }
+
+            #{$parent}-title, #{$parent}-text {
+                text-align: left;
+            }
+        }
+    }
+
+    &-left, &-fit {
+        align-items: flex-start;
+
+        #{$parent}-title, #{$parent}-text {
+            text-align: left;
+        }
+
+        @include mixin.screen(xl) {
+            max-width: 70%;
+            padding-right: 0 !important;
+        }
+
+        @include mixin.screen(xxl) {
+            max-width: 60%;
+        }
+    }
+}

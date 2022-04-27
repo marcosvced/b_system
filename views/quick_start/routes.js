@@ -55,6 +55,11 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
+/* Headers */
+route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
+  render(response, path('modules', ['basicContents']), {}, { navigation })
+})
+
 /**
  * 5 Components
  */
