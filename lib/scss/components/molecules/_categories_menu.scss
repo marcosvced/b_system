@@ -20,8 +20,8 @@
             background: transparent;
 
             @include themed.properties {
-                color: themed.values(helper.grayscale(dark), helper.grayscale(light));
-                border-bottom: 2px solid themed.values(helper.grayscale(dark), helper.grayscale(light));
+                color: themed.values(helper.grayscale(ash), helper.grayscale(light));
+                border-bottom: 2px solid themed.values(helper.grayscale(ash), helper.grayscale(light));
             }
         }
     }
