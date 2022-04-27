@@ -34,6 +34,11 @@ route.get(QUICK_START.HOME, (request, response) => {
  */
 
 /* Headers */
+route.get(QUICK_START.CATEGORIES_MENU, (request, response) => {
+  render(response, path('modules', ['categoriesMenu']), {}, { navigation })
+})
+
+/* Headers */
 route.get(QUICK_START.HEADERS, (request, response) => {
   render(response, path('modules', ['headers']), {}, { navigation })
 })
