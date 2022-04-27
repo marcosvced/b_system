@@ -5,6 +5,8 @@
     border-bottom: 0;
     overflow-x: auto;
     overflow-y: hidden;
+    margin-left: 16px;
+    margin-right: 16px;
 
     @include themed.properties {
         background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
@@ -36,6 +38,7 @@
     .nav-link {
         border: 0;
         white-space: nowrap;
+
         @include themed.properties {
             color: themed.values(helper.grayscale(800), helper.grayscale(600));
         }
