@@ -109,6 +109,21 @@ route.get(QUICK_START.INTERACTION, (request, response) => {
   render(response, path('components', ['interaction']), {}, { navigation })
 })
 
+/* Illustrations page. */
+route.get(QUICK_START.ILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['illustrations']), {}, { navigation })
+})
+
+/* Microillustrations page. */
+route.get(QUICK_START.MICROILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['microillustrations']), {}, { navigation })
+})
+
+/* Scenes page. */
+route.get(QUICK_START.SCENES, (request, response) => {
+  render(response, path('components', ['scenes']), {}, { navigation })
+})
+
 // TODO: remove
 route.get('/example', (request, response) => {
   render(response, path('example', []), {}, { navigation })

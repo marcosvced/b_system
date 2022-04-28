@@ -108,6 +108,19 @@ const navigation = [
         href: QUICK_START.TEXTS,
         label: 'Texts',
       },
+      {
+        href: QUICK_START.ILLUSTRATIONS,
+        label: 'Illustrations',
+      },
+      {
+        href: QUICK_START.MICROILLUSTRATIONS,
+        label: 'Microillustrations',
+      },
+      {
+        href: QUICK_START.SCENES,
+        label: 'Scenes',
+      },
+
     ],
   },
   {
