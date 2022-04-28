@@ -1,3 +1,4 @@
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
@@ -18,16 +19,21 @@
     }
 
     .copy, #{&}-link {
+        transition: .15s ease-in-out;
         @include themed.properties {
-            color: themed.values(helper.grayscale(800), helper.grayscale(600));
+            color: themed.values($c-grayscale--800, helper.grayscale(600));
          }
     }
 
     &-newsletter {
         #{$parent}-subscribe {
+            padding-top: helper.space(24);
+            @include mixin.screen(md) {
+                padding-top: helper.space(16);
+            }
+
             justify-content: center;
             align-items: center;
-            padding-top: 0 !important;
 
             .copy {
                 text-align: center;
@@ -50,6 +56,15 @@
             text-align: start;
         }
     }
+
+    #{$parent}-logo {
+        height: helper.rem(30);
+
+        .logo {
+            height: 100%;
+        }
+    }
+
 
     @include mixin.screen(xl) {
         &-basic {
@@ -79,8 +94,7 @@
                 }
 
                 #{$parent}-subscribe {
-                    padding-block: 0 !important;
-
+                    padding-top: 0;
                     #{$parent}-form {
                         flex-direction: row;
                     }
@@ -95,6 +109,12 @@
 
                 #{$parent}-columns-container {
                     width: 150%;
+
+                    #{$parent}-link:hover {
+                        @include themed.properties {
+                            color: themed.values(helper.grayscale(dark), helper.grayscale(light));
+                         }
+                    }
                 }
             }
         }

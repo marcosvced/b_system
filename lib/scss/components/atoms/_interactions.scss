@@ -1,10 +1,8 @@
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
-
-
-
 
 
 .badge {
@@ -15,7 +13,7 @@
 
     &.text-dark {
         span {
-            color: helper.grayscale(dark);
+            color: $c-grayscale--ash;
             font-weight: helper.weight(bold);
         }
     }
@@ -57,7 +55,7 @@
     border-style: solid;
     border-width: helper.rem(4);
     @include themed.properties {
-        border-color: themed.values(helper.grayscale(400), helper.grayscale(900));
+        border-color: themed.values($c-grayscale--400, $c-grayscale--900);
     }
     border-radius: 50%;
 }
@@ -73,7 +71,7 @@
     left: helper.rem(-4);
     top: helper.rem(-4);
     @include themed.properties {
-        border-color: themed.values(helper.grayscale(dark), helper.grayscale(light));
+        border-color: themed.values($c-grayscale--ash, $c-grayscale--light);
         border-right-color: transparent;
     }
 }
@@ -86,8 +84,8 @@
     .tooltip-inner {
         @include themed.properties {
             box-shadow: themed.values(0 3px 14px 0 helper.grayscale(300), 0 3px 14px 0 helper.grayscale(1200));
-            background-color: themed.values(helper.grayscale(light), helper.grayscale(900));
-            color: themed.values(helper.grayscale(800), hsl(0, 0%, 67%));
+            background-color: themed.values($c-grayscale--light, $c-grayscale--900);
+            color: themed.values($c-grayscale--800, hsl(0, 0%, 67%));
         }
         font-size: helper.rem(16);
         font-weight: helper.weight(light);
@@ -102,7 +100,7 @@
 
 
         @include themed.properties {
-            border-color: themed.values(helper.grayscale(light) transparent transparent transparent, helper.grayscale(900) transparent transparent transparent);
+            border-color: themed.values($c-grayscale--light transparent transparent transparent, $c-grayscale--900 transparent transparent transparent);
         }
         position: absolute;
         bottom: -2px;
@@ -125,7 +123,7 @@
     -moz-border-radius-bottomleft: 25px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
-    color: helper.grayscale(light);
+    color: $c-grayscale--light;
 
     span {
         font-size: helper.rem(18);
@@ -149,14 +147,14 @@
     .breadcrumb-item {
         a {
             @include themed.properties {
-                color: themed.values(helper.primary(blue), helper.secondary(blue-400));
+                color: themed.values($c-eren, helper.secondary(eren-400));
             }
             font-weight: helper.weight(medium);
             font-size: helper.rem(15);
 
             &:hover {
                 @include themed.properties {
-                    color: themed.values(hsl(213, 100%, 38%), helper.primary(blue));
+                    color: themed.values(hsl(213, 100%, 38%), $c-eren);
                 }
             }
         }
@@ -165,7 +163,7 @@
             font-family: "b-system";
             content: "o";
             @include themed.properties {
-                color: themed.values(helper.primary(blue), helper.secondary(blue-400));
+                color: themed.values($c-eren, helper.secondary(eren-400));
             }
         }
 
@@ -186,23 +184,23 @@
     > li {
         a {
             @include themed.properties {
-                color: themed.values(helper.grayscale(900), hsl(0, 0%, 67%));
+                color: themed.values($c-grayscale--900, hsl(0, 0%, 67%));
             }
             font-weight: helper.weight(regular);
             font-size: helper.rem(15);
 
             &:hover {
-                color: helper.grayscale(900);
+                color: $c-grayscale--900;
             }
 
             &.active {
                 @include themed.properties {
-                    color: themed.values(helper.primary(blue), helper.secondary(blue-400));
+                    color: themed.values($c-eren, helper.secondary(eren-400));
                 }
 
                 &:hover {
                     @include themed.properties {
-                        color: themed.values(hsl(213, 100%, 38%), helper.primary(blue));
+                        color: themed.values(hsl(213, 100%, 38%), $c-eren);
                     }
                 }
             }
@@ -212,7 +210,7 @@
             content: "";
             width: 1px;
             @include themed.properties {
-                color: themed.values(hsl(0, 0%, 78%), helper.grayscale(700));
+                color: themed.values(hsl(0, 0%, 78%), $c-grayscale--700);
             }
             background: hsl(0, 0%, 78%);
             height: helper.rem(24);

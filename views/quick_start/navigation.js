@@ -31,10 +31,6 @@ const navigation = [
       },
       {
         href: '#',
-        label: 'Cards',
-      },
-      {
-        href: '#',
         label: 'Forms',
       },
       {
