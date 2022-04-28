@@ -1,0 +1,75 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.form-switch {
+    position: relative;
+    padding: 0;
+    width: min-content;
+    z-index: 0;
+
+    .form-check-input {
+        width: 100%;
+        height: helper.rem(24);
+        cursor: pointer;
+        margin: 0;
+        border: 0;
+        transition: none;
+        background: transparent !important;
+        box-shadow: none !important;
+
+        &:hover,
+        &:active {
+            filter: none;
+
+            &:not(:checked) + .form-switch-wrapper {
+                @include themed.properties {
+                    background-color: themed.values(helper.grayscale(500), $c-grayscale--800);
+                }
+            }
+        }
+
+        &:checked {
+            & + .form-switch-wrapper {
+                background-color: $c-eren;
+
+                .form-switch-dot {
+                    transform: translateX(helper.rem(25));
+                }
+
+            }
+        }
+    }
+
+
+    #{&}-wrapper {
+        width: helper.rem(48);
+        height: helper.rem(24);
+        border-radius: 2em;
+        pointer-events: none;
+        z-index: -1;
+        @include mixin.fast-transition(background-color);
+
+        @include themed.properties {
+            background-color: themed.values($c-grayscale--400, $c-grayscale--900);
+        }
+
+        .form-switch-dot {
+            pointer-events: none;
+            display: block;
+
+            @include themed.properties {
+                background-color: themed.values($c-grayscale--light, helper.grayscale(1100));
+            }
+
+            @include mixin.circle(20);
+            position: absolute;
+            left: 0;
+            top: helper.rem(2);
+            transform: translateX(helper.rem(2));
+            @include mixin.fast-transition(transform);
+        }
+    }
+}

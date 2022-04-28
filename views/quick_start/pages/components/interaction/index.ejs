@@ -1,0 +1,173 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<section class="section darkened">
+    <div class="container">
+        <h3 class="space-block-48 space-block-md-56 space-block-lg-88">Interaction elements</h3>
+        <div class="d-grid grid-4 row-gap-32 row-gap-md-40 row-gap-48 grid-md-8 grid-lg-12">
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/switch`, {
+                    id: 'switch-id-01',
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Switch
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isRounded: true,
+                    icon: 'back'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Back component
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isRounded: true,
+                    icon: 'next'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Next component
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isRounded: true,
+                    isTight: true,
+                    icon: 'links'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Next component
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isDarkened: true,
+                    icon: 'more'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Add
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isDarkened: true,
+                    icon: 'download'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Download
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isDarkened: true,
+                    icon: 'heart'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Like
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section darkened" data-bsystem="dark">
+    <div class="container">
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Interaction elements dark</h3>
+        <div class="d-grid grid-4 row-gap-32 row-gap-md-40 row-gap-48 grid-md-8 grid-lg-12">
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/switch`, {
+                    id: 'switch-id-01',
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Switch
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isRounded: true,
+                    icon: 'back'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Back component
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isRounded: true,
+                    icon: 'next'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Next component
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isRounded: true,
+                    isTight: true,
+                    icon: 'links'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Next component
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isDarkened: true,
+                    icon: 'more'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Add
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isDarkened: true,
+                    icon: 'download'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Download
+                </span>
+            </div>
+            <div class="space-y-24 col-span-2">
+                <div class="demo-card">
+                    <%- include(`${component}/interaction/interaction-button`, {
+                    isDarkened: true,
+                    icon: 'heart'
+                    }) %>
+                </div>
+                <span class="body-light-gray-text">
+                    Like
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
