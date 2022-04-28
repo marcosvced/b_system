@@ -100,14 +100,19 @@
 
   &-subtle {
     background-color: transparent;
-    border: helper.rem(1) solid $c-grayscale--400;
     @include themed.properties {
       color: themed.values($c-grayscale--ash, $c-grayscale--light);
+      @include themed.light {
+        @include mixin.border-grey(200);
+      }
+      @include themed.dark {
+        @include mixin.border-grey(500);
+      }
     }
 
     &:hover:not(:disabled) {
       background-color: transparent;
-      border: helper.rem(1) solid $c-grayscale--700;
+      @include mixin.border-grey(400);
     }
   }
 
