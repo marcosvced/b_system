@@ -31,10 +31,6 @@ const navigation = [
       },
       {
         href: '#',
-        label: 'Cards',
-      },
-      {
-        href: '#',
         label: 'Forms',
       },
       {
@@ -85,7 +81,7 @@ const navigation = [
         label: 'Links',
       },
       {
-        href: QUICK_START.GRIDCELLS,
+        href: QUICK_START.GRID_CELLS,
         label: 'Grid cells',
       },
       {

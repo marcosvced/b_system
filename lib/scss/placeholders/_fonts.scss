@@ -50,9 +50,9 @@
 
 %x5-text {
     font: {
-        size: font.size(sm); //md
+        size: font.size(sm);
         family: font.family(sans-serif);
-        weight: font.weight(bold); //light
+        weight: font.weight(bold);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -63,7 +63,7 @@
     font: {
         size: font.size(sm);
         family: font.family(sans-serif);
-        weight: font.weight(medium); //bold
+        weight: font.weight(medium);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -74,7 +74,7 @@
     font: {
         size: font.size(sm);
         family: font.family(sans-serif);
-        weight: font.weight(regular); //medium
+        weight: font.weight(regular);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -85,7 +85,7 @@
     font: {
         size: font.size(sm);
         family: font.family(sans-serif);
-        weight: font.weight(light); //regular
+        weight: font.weight(light);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -94,7 +94,7 @@
 
 %x9-text {
     font: {
-        size: font.size(xxs); //sm
+        size: font.size(xxs);
         family: font.family(sans-serif);
         weight: font.weight(light);
     }
@@ -225,22 +225,41 @@
     letter-spacing: size.rem(.28);
 }
 
+%body-italic-text-serif {
+    font: {
+        size: font.size(xs);
+        family: font.family(serif);
+        weight: font.weight(regular);
+        style: font.style(italic);
+
+    };
+    line-height: 1.6;
+    letter-spacing: size.rem(.28);
+}
 
 // Color
 
 %body-eren-text {
-    color: colors.primary(eren);
+    @include themed.properties {
+        color: $c-eren;
+    }
 }
 
 %body-annie-text {
-    color: colors.primary(orange);
+     @include themed.properties {
+         color: $c-annie--500;
+     }
 }
 
 %body-levi-text {
-    color: colors.primary(red),;
+     @include themed.properties {
+         color: $c-levi--500;
+     }
 
 }
 
 %body-armin-text {
-    color: colors.primary(armin);
+     @include themed.properties {
+         color: $c-armin--500;
+     }
 }
