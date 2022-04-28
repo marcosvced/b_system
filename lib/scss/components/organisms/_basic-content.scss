@@ -4,7 +4,9 @@
 @use '../../mixins' as mixin;
 
 .basic-content-wrapper {
-    background-color: helper.grayscale(light);
+    @include themed.properties {
+        background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+    }
 }
 
 .basic-content {
@@ -22,7 +24,7 @@
         padding-inline: helper.rem(216) !important;
     }
 
-    &-columns {
+    &-simple-columns {
         @include mixin.screen(xl) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -37,7 +39,7 @@
         }
     }
 
-    &-left, &-fit {
+    &-simple-left, &-simple-fit {
         align-items: flex-start;
 
         #{$parent}-title, #{$parent}-text {
@@ -51,6 +53,123 @@
 
         @include mixin.screen(xxl) {
             max-width: 60%;
+        }
+    }
+
+    &-simple-fit {
+        @include mixin.screen(xl) {
+            max-width: 80%;
+        }
+
+        @include mixin.screen(xxl) {
+            max-width: 75%;
+        }
+    }
+
+    &-arguments {
+        gap: helper.space(32);
+
+        #{$parent}-title, #{$parent}-text {
+            text-align: left;
+        }
+
+        @include mixin.screen(md) {
+            row-gap: helper.space(40);
+
+            #{$parent}-text {
+                max-width: 82%;
+            }
+        }
+    }
+
+    &-description {
+        @include mixin.screen(md) {
+            #{$parent}-text {
+                padding-inline: helper.space(80);
+            }
+        }
+
+        @include mixin.screen(xxl) {
+            padding-inline: helper.rem(416) !important;
+
+            #{$parent}-text {
+                padding-inline: 0;
+            }
+        }
+    }
+
+    &-columns, &-image {
+
+        #{$parent}-title, #{$parent}-text {
+            text-align: left;
+        }
+    }
+
+    &-columns {
+        padding-inline: helper.space(16);
+        row-gap: helper.space(24);
+
+        @include mixin.screen(md) {
+            padding-inline: helper.space(80);
+            row-gap: helper.space(16);
+        }
+
+        @include mixin.screen(xl) {
+            column-gap: helper.space(32);
+        }
+
+        @include mixin.screen(xxl) {
+            #{$parent}-title {
+                width: 90%;
+            }
+        }
+
+        #{$parent}-container {
+            height: 100%;
+
+            @include mixin.screen(xl) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+
+        [class^=icon-] {
+            font-size: helper.rem(48);
+        }
+
+        [class^=icon-], .action-link {
+            display: none;
+
+            @include mixin.screen(xl) {
+                display: flex;
+            }
+        } 
+    }
+
+    &-image {
+        padding-inline: helper.space(16);
+        column-gap: helper.space(120);
+        row-gap: helper.space(56);
+
+        @include mixin.screen(md) {
+            padding-inline: helper.space(24);
+        }
+
+        @include mixin.screen(xl) {
+            padding-inline: helper.rem(216);
+        }
+
+        #{$parent}-img-container {
+            width: 60%;
+
+            #{$parent}-img {
+                width: 100%;
+            }
+        }
+
+        #{$parent}-container {
+            width: 100%;
         }
     }
 }
