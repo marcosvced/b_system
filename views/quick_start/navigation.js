@@ -42,8 +42,8 @@ const navigation = [
         label: 'Footers',
       },
       {
-        href: QUICK_START.FOOTERS.ESTANDAR,
-        label: 'Footers Estandar',
+        href: QUICK_START.FOOTERS.STANDARD,
+        label: 'Footers Standard',
       },
       {
         href: QUICK_START.FOOTERS.CORPORATE,
