@@ -102,7 +102,7 @@ span.label {
     color: colors.body(38);
 
     &.--small {
-        @extend %x10-mini;
+        @extend %x9-text;
     }
 }
 
