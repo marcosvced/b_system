@@ -26,16 +26,16 @@ $secondary: (
         armin-300: hsla(191, 92%, 83%, 1),
         armin-400: hsla(191, 87%, 50%, 1),
         armin-500: hsla(191, 100%, 34%, 1),
-        danger-500: hsla(352, 86%, 40%, 1),
-        danger-400: hsla(352, 100%, 47%, 1),
-        danger-300: hsla(352, 100%, 83%, 1),
-        danger-200: hsla(352, 100%, 93%, 1),
-        danger-100: hsla(352, 100%, 95%, 1),
-        warning-500: hsla(18, 100%, 47%, 1),
-        warning-400: hsla(34, 100%, 53%, 1),
-        warning-300: hsla(34, 100%, 84%, 1),
-        warning-200: hsla(34, 100%, 91%, 1),
-        warning-100: hsla(33, 100%, 94%, 1),
+        levi-500: hsla(352, 86%, 40%, 1),
+        levi: hsla(352, 100%, 47%, 1),
+        levi-300: hsla(352, 100%, 83%, 1),
+        levi-200: hsla(352, 100%, 93%, 1),
+        levi-100: hsla(352, 100%, 95%, 1),
+        annie-500: hsla(18, 100%, 47%, 1),
+        annie: hsla(34, 100%, 53%, 1),
+        annie-300: hsla(34, 100%, 84%, 1),
+        annie-200: hsla(34, 100%, 91%, 1),
+        annie-100: hsla(33, 100%, 94%, 1),
 );
 
 
@@ -91,5 +91,7 @@ $hover: (
         eren: colors.secondary(eren-500),
         mikasa: colors.secondary(mikasa-500),
         armin: colors.secondary(armin-500),
+        levi: colors.secondary(levi-500),
+        annie: colors.secondary(annie-500),
 );
 

@@ -30,17 +30,19 @@ $c-armin--300: colors.secondary(armin-300);
 $c-armin--400: colors.secondary(armin-400);
 $c-armin--500: colors.secondary(armin-500);
 
-$c-danger--500: colors.secondary(danger-500);
-$c-danger--400: colors.secondary(danger-400);
-$c-danger--300: colors.secondary(danger-300);
-$c-danger--200: colors.secondary(danger-200);
-$c-danger--100: colors.secondary(danger-100);
+$c-levi--500: colors.secondary(levi-500);
+$c-levi: colors.secondary(levi);
+$c-levi__hover: colors.hover(levi);
+$c-levi--300: colors.secondary(levi-300);
+$c-levi--200: colors.secondary(levi-200);
+$c-levi--100: colors.secondary(levi-100);
 
-$c-warning--500: colors.secondary(warning-500);
-$c-warning--400: colors.secondary(warning-400);
-$c-warning--300: colors.secondary(warning-300);
-$c-warning--200: colors.secondary(warning-200);
-$c-warning--100: colors.secondary(warning-100);
+$c-annie--500: colors.secondary(annie-500);
+$c-annie: colors.secondary(annie);
+$c-annie__hover: colors.hover(annie);
+$c-annie--300: colors.secondary(annie-300);
+$c-annie--200: colors.secondary(annie-200);
+$c-annie--100: colors.secondary(annie-100);
 
 /* GRAYSCALE */
 $c-grayscale--light: colors.grayscale(light);
