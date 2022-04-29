@@ -1,0 +1,50 @@
+@use 'sass:math';
+@use '../../variables/colors' as *;
+@use '../../variables/font' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers/size';
+@use '../../mixins/space';
+@use '../../mixins/styles';
+
+
+.form-floating {
+  $input-height: 48;
+  $font-base: 15;
+  $font-scale-down: 11;
+  $padding-inline: 12;
+  $padding-block: 16;
+  position: relative;
+
+  > i {
+    position: absolute;
+    font-size: size.rem(24);
+    color: $c-eren;
+    top: size.rem(math.div(24,2));
+    right: size.rem($padding-inline);
+  }
+
+  input.form-control {
+    height: size.em($input-height, $font-base);
+    padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base);
+    font-size: $f-s-xs;
+    @include styles.input-unfilled;
+    @include styles.input-filled;
+    @include styles.input-tap;
+    @include styles.input-error;
+
+  }
+
+  label {
+    padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base);
+  }
+
+  & > .form-control:focus ~ label,
+  & > .form-control:not(:placeholder-shown) ~ label,
+  & > .form-select ~ label {
+    $calc: $font-scale-down * 100;
+    $scale: math.div($calc, $font-base);
+    transform: scale(math.div($scale, 100)) translateY(-.5em) translateX(.5em);
+  }
+}
+
