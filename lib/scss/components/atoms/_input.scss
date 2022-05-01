@@ -32,6 +32,12 @@
     @include styles.input-filled;
     @include styles.input-tap;
     @include styles.input-error;
+    @include styles.input-inactive;
+
+    &[type='password'] {
+      font-family: Verdana, serif;
+      letter-spacing: 0.25em;
+    }
 
   }
 

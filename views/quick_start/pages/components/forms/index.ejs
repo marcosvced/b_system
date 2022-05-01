@@ -10,12 +10,23 @@
 
         <form class="d-grid grid-1 row-gap-48 space-bottom-48">
             <div class="space-y-24">
-                <%- include(`${component}/form/input`, { id:'name', label: 'Name', icon: 'eye'}) %>
+                <%- include(`${component}/form/input`, { id:'name', label:'Name'}) %>
                 <span class="body-light-gray-text">
                     Input states
                 </span>
             </div>
-
+            <div class="space-y-24">
+                <%- include(`${component}/form/input`, { id:'pass', label: 'Password', icon: 'eye', type:'password'}) %>
+                <span class="body-light-gray-text">
+                    Input states
+                </span>
+            </div>
+            <div class="space-y-24">
+                <%- include(`${component}/form/input`, { id:'email', label: 'Email', type:'email', validation:true}) %>
+                <span class="body-light-gray-text">
+                    Input states
+                </span>
+            </div>
         </form>
     </div>
 </section>

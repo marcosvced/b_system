@@ -164,9 +164,27 @@
           <form class="d-grid grid-1 row-gap-48 space-bottom-48">
             <div class="space-y-24">
               <div class="form-floating">
-                <input id="name" type="text" class="form-control" placeholder="Name">
+                <input id="name" type="text" class="form-control " placeholder="Name" aria-invalid="false" aria-required="true">
                 <label for="name" class="form-placeholder">Name</label>
+              </div>
+              <span class="body-light-gray-text">
+                    Input states
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="form-floating">
+                <input id="pass" type="password" class="form-control " placeholder="Password" aria-invalid="false" aria-required="true">
+                <label for="pass" class="form-placeholder">Password</label>
                 <i class="icon-eye"></i>
+              </div>
+              <span class="body-light-gray-text">
+                    Input states
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="form-floating">
+                <input id="email" type="email" class="form-control " placeholder="Email" aria-invalid="false" aria-required="true" data-bsystem="validate-email">
+                <label for="email" class="form-placeholder">Email</label>
               </div>
               <span class="body-light-gray-text">
                     Input states
