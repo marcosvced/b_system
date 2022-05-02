@@ -3,6 +3,21 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
+.section-modules {
+    &.darkened {
+        @include themed.properties {
+            background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
+        }
+    }
+
+    .section {
+        padding: {
+            bottom: 0;
+            inline: 0;
+        }
+    }
+}
+
 .basic-content-wrapper {
     @include themed.properties {
         background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
@@ -11,26 +26,74 @@
 
 .basic-content {
     $parent: &;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     #{$parent}-title, #{$parent}-text {
         text-align: center;
     }
 
-    @include mixin.screen(xl) {
-        padding-inline: helper.rem(216) !important;
+    &-simple {
+        column-gap: helper.space(24) !important;
+
+        #{$parent}-title, #{$parent}-text {
+            @include mixin.screen(md) {
+                grid-column: 2/8;
+            }
+
+            @include mixin.screen(xl) {
+                grid-column: 2/12;
+            }
+        }
+
+        &-columns {
+            @include mixin.screen(xl) {
+                #{$parent}-title {
+                    text-align: left;
+                    grid-column: 1/7;
+                }
+
+                #{$parent}-text {
+                    text-align: left;
+                    grid-column: 7/13;
+                }
+            }
+        }
+
+        &-left {
+            #{$parent}-title, #{$parent}-text {
+                text-align: left;
+
+                @include mixin.screen(xl) {
+                    grid-column: 1/8;
+                }
+            }
+        }
+
+        &-fit {
+            #{$parent}-title, #{$parent}-text {
+                text-align: left;
+
+                @include mixin.screen(xl) {
+                    grid-column: 1/11;
+                }
+            }
+        }
     }
 
-    &-simple-columns {
-        @include mixin.screen(xl) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+    &-arguments {
+        row-gap: helper.space(32);
 
-            #{$parent}-title {
-                font-size: helper.rem(40);
+        &-column {
+            @include mixin.screen(md) {
+                margin-right: helper.space(96);
+            }
+
+            @include mixin.screen(xl) {
+                margin-right: 0;
+
+                #{$parent}-text {
+                    margin-right: helper.space(96);
+                }
+
             }
 
             #{$parent}-title, #{$parent}-text {
@@ -39,99 +102,40 @@
         }
     }
 
-    &-simple-left, &-simple-fit {
-        align-items: flex-start;
-
-        #{$parent}-title, #{$parent}-text {
-            text-align: left;
-        }
-
-        @include mixin.screen(xl) {
-            max-width: 70%;
-            padding-right: 0 !important;
-        }
-
-        @include mixin.screen(xxl) {
-            max-width: 60%;
-        }
-    }
-
-    &-simple-fit {
-        @include mixin.screen(xl) {
-            max-width: 80%;
-        }
-
-        @include mixin.screen(xxl) {
-            max-width: 75%;
-        }
-    }
-
-    &-arguments {
-        gap: helper.space(32);
-
-        #{$parent}-title, #{$parent}-text {
-            text-align: left;
-        }
-
-        @include mixin.screen(md) {
-            row-gap: helper.space(40);
-
-            #{$parent}-text {
-                max-width: 82%;
-            }
-        }
-    }
-
     &-description {
+        row-gap: helper.space(24);
+
         @include mixin.screen(md) {
-            #{$parent}-text {
-                padding-inline: helper.space(80);
-            }
+            row-gap: helper.space(32);
         }
 
-        @include mixin.screen(xxl) {
-            padding-inline: helper.rem(416) !important;
-
-            #{$parent}-text {
-                padding-inline: 0;
-            }
-        }
-    }
-
-    &-columns, &-image {
-
-        #{$parent}-title, #{$parent}-text {
-            text-align: left;
+        @include mixin.screen(xl) {
+            row-gap: helper.space(40);
         }
     }
 
     &-columns {
-        padding-inline: helper.space(16);
-        row-gap: helper.space(24);
-
         @include mixin.screen(md) {
-            padding-inline: helper.space(80);
             row-gap: helper.space(16);
         }
 
-        @include mixin.screen(xl) {
-            column-gap: helper.space(32);
-        }
+        #{$parent}-title, #{$parent}-text {
+            @include mixin.screen(md) {
+                padding-inline: helper.space(64);
+            }
 
-        @include mixin.screen(xxl) {
-            #{$parent}-title {
-                width: 90%;
+            @include mixin.screen(xl) {
+                padding-inline: 0;
             }
         }
 
         #{$parent}-container {
-            height: 100%;
-
             @include mixin.screen(xl) {
+                grid-column: 8/13;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-            }
+            } 
         }
 
         [class^=icon-] {
@@ -144,32 +148,42 @@
             @include mixin.screen(xl) {
                 display: flex;
             }
-        } 
+        }
+    }
+
+    &-columns, &-image {
+        #{$parent}-title, #{$parent}-text {
+            text-align: left;
+        }
     }
 
     &-image {
-        padding-inline: helper.space(16);
-        column-gap: helper.space(120);
-        row-gap: helper.space(56);
+        row-gap: helper.space(40);
 
         @include mixin.screen(md) {
-            padding-inline: helper.space(24);
+            row-gap: helper.space(56);
         }
 
-        @include mixin.screen(xl) {
-            padding-inline: helper.rem(216);
-        }
-
-        #{$parent}-img-container {
-            width: 60%;
-
+        #{$parent}-img-container {    
             #{$parent}-img {
                 width: 100%;
             }
         }
 
         #{$parent}-container {
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: helper.space(40);
+
+            @include mixin.screen(md) {
+                gap: helper.space(32);
+            }
+
+            @include mixin.screen(xl) {
+                grid-column: 7/13;
+                justify-content: center;
+                gap: helper.space(24);
+            }
         }
     }
 }
