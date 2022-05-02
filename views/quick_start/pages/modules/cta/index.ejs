@@ -1,10 +1,6 @@
 <%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('styles') %>
-picture {display: block; width: 100%; height: 100vh;}
-.example > img {width: 100%; height:100%; object-fit: cover;}
-
-.h1-example {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
 
 <%- contentFor('header') %>
 <%
@@ -24,9 +20,8 @@ const headerConfig = {
 %>
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
-
-<div class="main-content main-content-space-top">
-    <section class="module-wrapper">
+<main class="main">
+    <section class="section section-divider">
         <%- include(`${component}/cta/cta`, {
             title: 'Do you want to start with B_system today?',
             btn: {
@@ -39,7 +34,7 @@ const headerConfig = {
         }) %>
     </section>
 
-    <section class="module-wrapper">
+    <section class="section section-divider darkened">
         <%- include(`${component}/cta/cta`, {
             title: 'Do you want to start with B_system today?',
             btn: {
@@ -52,7 +47,7 @@ const headerConfig = {
         }) %>
     </section>
 
-    <section class="module-wrapper" data-bsystem="dark">
+    <section class="section section-divider" data-bsystem="dark">
         <%- include(`${component}/cta/cta`, {
             title: 'Do you want to start with B_system today?',
             btn: {
@@ -65,7 +60,7 @@ const headerConfig = {
         }) %>
     </section>
 
-    <section class="module-wrapper" data-bsystem="dark">
+    <section class="section section-divider darkened" data-bsystem="dark">
         <%- include(`${component}/cta/cta`, {
             title: 'Do you want to start with B_system today?',
             btn: {
@@ -77,4 +72,4 @@ const headerConfig = {
             isDarkened: true
         }) %>
     </section>
-</div>
+</main>

@@ -5,7 +5,6 @@
 
 .cta {
     $parent: &;
-    @extend %bg-darkened;
     padding-inline: helper.space(16);
 
     @include mixin.screen(md) {
