@@ -3,9 +3,6 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-.contact-bar-darkened {
-    background-color: helper.grayscale(100);
-}
 
 .contact-bar {
     $parent: &;

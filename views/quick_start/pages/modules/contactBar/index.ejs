@@ -1,10 +1,6 @@
 <%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('styles') %>
-picture {display: block; width: 100%; height: 100vh;}
-.example > img {width: 100%; height:100%; object-fit: cover;}
-
-.h1-example {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
 
 <%- contentFor('header') %>
 <%
@@ -24,11 +20,11 @@ const headerConfig = {
 %>
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
-
-<div class="main-content main-content-space-top">
-    <section class="section contact-bar-darkened" style="padding-inline: 0;">
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88 space-bottom-xl-88 inner-space-inline-16 inner-space-inline-md-80 inner-space-inline-xl-120">Contact bar</h3>
-    
+<main class="main">
+    <section class="section darkened" style="padding-inline: 0;">
+        <div class="container">
+            <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Contact bar</h3>
+        </div>
         <div class="space-y-24 space-y-xl-32">
             <%- include(`${component}/contactBar/contactBar`, {
                 links: [
@@ -51,9 +47,9 @@ const headerConfig = {
                 },
                 socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin']
             }) %>
-            <span class="body-light-gray-text inner-space-inline-16 inner-space-inline-md-80 inner-space-inline-xl-120">
+            <span class="body-light-gray-text inner-space-inline-16 inner-space-inline-md-80">
                 Contact bar
             </span>
         </div>
     </section>
-</div>
+</main>
