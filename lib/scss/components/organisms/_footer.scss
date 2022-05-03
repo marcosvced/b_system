@@ -64,7 +64,11 @@
     }
 
     #{$parent}-logo {
-        height: helper.rem(30);
+        height: helper.rem(20);
+
+        @include mixin.screen(xl) {
+            height: helper.rem(30);
+        }
 
         .logo {
             height: 100%;
@@ -89,6 +93,11 @@
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
+
+                #{$parent}-logo {
+                    height: helper.rem(20);
+                }
+            
     
                 #{$parent}-content, #{$parent}-subscribe {
                     width: 45%;
