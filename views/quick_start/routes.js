@@ -124,6 +124,11 @@ route.get(QUICK_START.SCENES, (request, response) => {
   render(response, path('components', ['scenes']), {}, { navigation })
 })
 
+/* Scenes page. */
+route.get(QUICK_START.ICONS_DESCRIPTION, (request, response) => {
+  render(response, path('components', ['iconsDescription']), {}, { navigation })
+})
+
 // TODO: remove
 route.get('/example', (request, response) => {
   render(response, path('example', []), {}, { navigation })

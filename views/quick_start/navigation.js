@@ -85,7 +85,7 @@ const navigation = [
         label: 'Grid cells',
       },
       {
-        href: '#',
+        href: QUICK_START.ICONS_DESCRIPTION,
         label: 'Icon + description',
       },
       {
