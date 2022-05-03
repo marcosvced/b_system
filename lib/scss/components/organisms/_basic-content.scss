@@ -36,11 +36,13 @@
 
         #{$parent}-title, #{$parent}-text {
             @include mixin.screen(md) {
-                grid-column: 2/8;
+                grid-column: 1/9;
+                padding-inline: helper.space(64);
             }
 
             @include mixin.screen(xl) {
                 grid-column: 2/12;
+                padding-inline: 0;
             }
         }
 
@@ -82,9 +84,17 @@
     &-arguments {
         row-gap: helper.space(32);
 
+        @include mixin.screen(md) {
+            padding-inline: helper.space(64);
+        }
+
+        @include mixin.screen(xl) {
+            padding-inline: 0;
+        }
+
         &-column {
             @include mixin.screen(md) {
-                margin-right: helper.space(96);
+                margin-right: helper.space(40);
             }
 
             @include mixin.screen(xl) {
