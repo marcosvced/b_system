@@ -1,0 +1,129 @@
+
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('styles') %>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<main class="main">
+<!--ICON DESCRIPTION -->
+
+    <!--SECTION LIGHT-->
+    <section class="section">
+        <div class="container">
+
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12">
+
+                <div class="col-span-4 col-span-md-8 col-xl-1-to-5">
+                    <%- include(`${component}/iconDescription/content`, { 
+                        microillustration: {
+                            src: 'system',
+                            size: 'microillustration',
+                            alt: 'system'
+                        },
+                        title: 'An organic design system',
+                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
+                        } )
+                    %>
+                </div>
+
+                <div class="col-span-4 col-span-md-8 col-xl-5-to-9">
+                    <%- include(`${component}/iconDescription/content`, { 
+                        microillustration: {
+                            src: 'efficiency',
+                            size: 'microillustration',
+                            alt: 'efficiency'
+                        },
+                        title: 'An organic design system',
+                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
+                        } )
+                    %>
+                </div>
+
+                <div class="col-span-4 col-span-md-8 col-xl-9-to-13">
+                    <%- include(`${component}/iconDescription/content`, { 
+                        microillustration: {
+                            src: 'consistency',
+                            size: 'microillustration',
+                            alt: 'consistency'
+                        },
+                        title: 'An organic design system',
+                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
+                        } )
+                    %>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section darkened">
+        <div class="container">
+
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12">
+
+                <div class="col-span-4 col-span-md-8 col-xl-1-to-5">
+                    <%- include(`${component}/iconDescription/content`, { 
+                        microillustration: {
+                            src: 'system',
+                            size: 'microillustration',
+                            alt: 'system'
+                        },
+                        title: 'An organic design system',
+                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
+                        } )
+                    %>
+                </div>
+
+                <div class="col-span-4 col-span-md-8 col-xl-5-to-9">
+                    <%- include(`${component}/iconDescription/content`, { 
+                        microillustration: {
+                            src: 'efficiency',
+                            size: 'microillustration',
+                            alt: 'efficiency'
+                        },
+                        title: 'An organic design system',
+                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
+                        } )
+                    %>
+                </div>
+
+                <div class="col-span-4 col-span-md-8 col-xl-9-to-13">
+                    <%- include(`${component}/iconDescription/content`, { 
+                        microillustration: {
+                            src: 'consistency',
+                            size: 'microillustration',
+                            alt: 'consistency'
+                        },
+                        title: 'An organic design system',
+                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
+                        } )
+                    %>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!--END: SECTION LIGHT-->
+
+
+<!--SECTION DARK-->
+
+<!--END: SECTION DARK-->
+</main>

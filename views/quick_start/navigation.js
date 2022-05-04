@@ -34,6 +34,10 @@ const navigation = [
         label: 'Forms',
       },
       {
+        href: QUICK_START.ICON_DESCRIPTION,
+        label: 'Icon + description'
+      },
+      {
         href: QUICK_START.FOOTERS.BASIC,
         label: 'Footers',
       },
