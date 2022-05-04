@@ -10,7 +10,25 @@
 
     .btn-only-icon {
         [class^=icon-] {
-            font-size: helper.rem(24); 
+            font-size: helper.rem(24);
+            @include mixin.circle(40);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include mixin.slow-transition(background-color);
+
+            &:hover {
+                @include themed.properties {
+                    background-color: themed.values($c-grayscale--100, $c-grayscale--1200);
+                 }
+            }
+        }
+    }
+    &.darkened {
+        [class^=icon-]:hover {
+            @include themed.properties {
+                background-color: themed.values($c-grayscale--200, $c-grayscale--1200);
+             }
         }
     }
 }
