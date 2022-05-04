@@ -1,0 +1,16 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.icons-social {
+    display: flex;
+    justify-content: center;
+    gap: helper.space(32);
+
+    .btn-only-icon {
+        [class^=icon-] {
+            font-size: helper.rem(24); 
+        }
+    }
+}
