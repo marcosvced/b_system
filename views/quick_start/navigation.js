@@ -93,7 +93,7 @@ const navigation = [
         label: 'Accordions',
       },
       {
-        href: '#',
+        href: QUICK_START.ALERTS,
         label: 'Alerts',
       },
       {

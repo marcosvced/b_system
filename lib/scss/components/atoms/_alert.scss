@@ -1,0 +1,42 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.alert {
+    padding: helper.space(24);
+    border: none;  
+    @include themed.properties {
+        background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
+    }
+
+    &:not(&-link) {
+        height: 100%;
+    }
+
+    [class^=icon-], .action-link [class^=icon-] {
+        font-size: helper.rem(24);
+    }
+
+    &-info {
+        background-color: helper.secondary(eren-200);
+    }
+
+    &-error {
+        background-color: helper.secondary(levi-200);
+    }
+
+    &-advice {
+        background-color: helper.secondary(mikasa-200);
+    }
+
+    &-link {
+        .action-link {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: helper.space(24);
+
+
+        }
+    }
+}
