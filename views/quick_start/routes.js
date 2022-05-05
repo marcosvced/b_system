@@ -55,6 +55,11 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
+/* Busness Cases */
+route.get(QUICK_START.BUSINESS_CASES, (request, response) => {
+  render(response, path('modules', ['businessCases']), {}, { navigation })
+})
+
 /**
  * 5 Components
  */
