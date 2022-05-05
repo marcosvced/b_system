@@ -24,6 +24,14 @@
     right: size.rem($padding-inline);
   }
 
+  .chevron {
+    position: absolute;
+    right: size.rem($padding-inline);
+    top: 50%;
+    transform: translateY(-50%) scaleY(1);
+    @include styles.fast-transition(transform);
+  }
+
   select.form-select {
     height: size.em($input-height, $font-base);
     padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base) 0;
@@ -34,8 +42,8 @@
     @include styles.input-error;
     @include styles.input-inactive;
 
-    &:focus-within ~ .chevron {
-      transform: rotateX(.5turn) translateY(2px);
+    &:focus-within ~ .chevron  {
+      transform: translateY(-50%) scaleY(-1);
     }
   }
 
