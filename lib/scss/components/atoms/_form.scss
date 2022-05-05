@@ -7,7 +7,7 @@
 .form-check {
     padding: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 
     .form-check-input {
         width: helper.rem(24);
@@ -31,7 +31,7 @@
         + [class*='icon-'] {
             font-size: helper.rem(16);
             position: absolute;
-            top: 10%;
+            bottom: 8%;
             left: helper.rem(4);
             @include themed.properties {
                 color: themed.values(helper.secondary(eren-500), $c-eren);
@@ -62,7 +62,7 @@
 
             border-radius: helper.rem(4);
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
         }
 
@@ -73,7 +73,7 @@
         &.label-radio:after {
             content: '';
             position: absolute;
-            top: helper.rem(26);
+            bottom: helper.rem(7);
             left: helper.rem(7);
             @include mixin.circle(10);
             @include themed.properties {
