@@ -30,7 +30,7 @@
 @mixin border-white($width: 1px, $borders: ('left','top','right','bottom', 'inline', 'block')) {
 
   @each $border in $borders {
-    @if (map-has-key(('left','top','right','bottom', 'inline', 'block'), $border)) {
+    @if (map-has-key(('left', 'top', 'right', 'bottom', 'inline', 'block'), $border)) {
       border-#{$border}: $width solid $c-grayscale--light;
     } @else {
       @error "#{$border} isn't a valid value.";
@@ -49,7 +49,7 @@
   );
   @if (map.has-key($gray-hue, $hue)) {
     @each $border in $borders {
-      @if f.contains(('left','top','right','bottom', 'inline', 'block'), $border) {
+      @if f.contains(('left', 'top', 'right', 'bottom', 'inline', 'block'), $border) {
         border-#{$border}: 1px solid map.get($gray-hue, $hue);
       } @else {
         @error "#{$border} isn't a valid value.";
@@ -89,6 +89,52 @@
 
 @mixin shadow-gray {
   box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.14);
+}
+
+
+// Input borders
+@mixin input-unfilled {
+  border-color: $c-grayscale--500;
+  box-shadow: none;
+}
+
+@mixin input-filled {
+  &:not(:placeholder-shown) {
+    border-color: $c-grayscale--600;
+    box-shadow: none;
+  }
+}
+
+@mixin input-tap {
+  &:focus {
+    border-color: $c-eren--600;
+    box-shadow: inset 0 0 0 1px $c-eren--600;
+  }
+}
+
+@mixin input-error {
+  background-image: none;
+  &.is-invalid {
+    background-color: $c-levi--100;
+    border-color: $c-levi--500;
+    box-shadow: inset 0 0 0 1px $c-levi--500;
+
+    > i {
+      color: $c-levi;
+    }
+  }
+}
+
+@mixin input-inactive {
+  &:disabled {
+    background: $c-grayscale--light;
+    border-color: $c-grayscale--300;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .03);
+    cursor: not-allowed;
+  }
+  &:disabled + label {
+    color: $c-grayscale--700;
+  }
 }
 
 // Transitions

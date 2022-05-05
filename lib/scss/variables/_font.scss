@@ -1,0 +1,20 @@
+@use "fonts";
+@use "../helpers/font";
+$f-f-sans-serif: font.family(sans-serif);
+$f-f-serif: font.family(serif);
+$f-f-code: font.family(code);
+
+
+$f-w-light: font.weight(light);
+$f-w-regular: font.weight(regular);
+$f-w-medium: font.weight(medium);
+$f-w-bold: font.weight(bold);
+
+
+$f-s-xxl: font.size(xxl);
+$f-s-xl: font.size(xl);
+$f-s-lg: font.size(lg);
+$f-s-md: font.size(md);
+$f-s-sm: font.size(sm);
+$f-s-xs: font.size(xs);
+$f-s-xxs: font.size(xxs);
