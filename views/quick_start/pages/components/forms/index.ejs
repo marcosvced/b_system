@@ -27,6 +27,14 @@
                     Input states
                 </span>
             </div>
+
+            <div class="space-y-24">
+                <% const options = ['Option one','Option two','Option three','Option four'] %>
+                <%- include(`${component}/form/select`, { id:'select', label: 'Select example', options }) %>
+                <span class="body-light-gray-text">
+                    Input states
+                </span>
+            </div>
         </form>
     </div>
 </section>
