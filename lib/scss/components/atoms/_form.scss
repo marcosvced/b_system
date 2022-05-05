@@ -4,10 +4,10 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-.form-group {
+.form-group, .form-floating {
     z-index: 0;
 
-    .input {
+    .form-control {
         background-color: transparent;
         @include mixin.slow-transition(transform);
 
