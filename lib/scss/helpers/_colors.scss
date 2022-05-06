@@ -22,6 +22,6 @@
   @return var(#{enum.find(BODY)}#{$color});
 }
 
-@function button($color) {
-  @return var(#{enum.find(BUTTON)}#{$color});
+@function hover($color) {
+  @return var(#{enum.find(HOVER)}#{$color}__hover);
 }

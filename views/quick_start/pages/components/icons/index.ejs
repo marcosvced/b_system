@@ -1,16 +1,17 @@
 <%- include(`${view}/quick_start/layout`) %>
+<%- include(`${view}/quick_start/darkened-layout`) %>
 
 <%- contentFor('body') %>
 
-<section class="section">
+<section class="section section-divider darkened">
 
     <div class="container">
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Concept icons</h3>
-        <div class="d-grid grid-min-4 grid-md-min-8 grid-lg-min-12 justify-content-between row-gap-48 space-bottom-88">
+        <%- include(`${component}/text/head-x3`, { text: 'Concept icons' }) %>
+        <div class="d-grid grid-2 grid-md-4 grid-lg-6 row-gap-32 row-gap-lg-40 row-gap-lg-48 space-bottom-88">
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'avatar' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -19,7 +20,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'award' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -28,7 +29,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'blade' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -37,7 +38,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'back' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -46,7 +47,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'bullets' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -55,7 +56,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'calendar' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -64,7 +65,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'call' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -73,7 +74,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'cart' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -82,7 +83,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'charts' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -91,7 +92,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'check' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -100,7 +101,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'clock' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -109,7 +110,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'close' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -118,7 +119,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'close-blade' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -127,7 +128,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'dart-back' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -136,7 +137,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'dart-next' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -145,7 +146,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'docu' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -154,7 +155,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'done' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -163,7 +164,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'down' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -172,7 +173,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'download' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -181,7 +182,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'download-docu' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -190,7 +191,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'edit' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -199,7 +200,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'edit-content' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -208,7 +209,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'error' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -217,7 +218,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'eye' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -226,7 +227,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'filters' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -235,7 +236,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'folder' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -244,7 +245,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'garbage' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -253,7 +254,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'heart' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -262,7 +263,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'home' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -271,7 +272,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'image' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -280,7 +281,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'info' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -289,7 +290,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'm-glass' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -298,7 +299,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'medal' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -307,7 +308,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'menu' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -316,7 +317,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'message' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -325,7 +326,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'micro' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -334,7 +335,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'medal' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -343,7 +344,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'more-less' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -352,7 +353,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'more' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -361,7 +362,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'museum' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -370,7 +371,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'next' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -379,7 +380,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'less' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -388,7 +389,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'legal' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -397,7 +398,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'links' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -406,7 +407,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'lock' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -415,7 +416,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'logout' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -424,7 +425,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'open' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -433,7 +434,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'place' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -442,7 +443,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'purse' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -451,7 +452,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'rain' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -460,7 +461,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'saving' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -469,7 +470,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'secure' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -478,7 +479,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'settings' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -487,7 +488,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'share' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -496,7 +497,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'shopping' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -505,7 +506,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'sun' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -514,7 +515,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'transfer' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -523,7 +524,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'transfer-destin' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -532,7 +533,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'upgrade' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -541,7 +542,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'view-code' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -551,10 +552,10 @@
 
         </div>
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Concept icons filled</h3>
-        <div class="d-grid grid-min-4 grid-md-min-8 grid-lg-min-12 justify-content-between row-gap-48 space-bottom-88">
+        <%- include(`${component}/text/head-x3`, { text: 'Concept icons filled' }) %>
+        <div class="d-grid grid-2 grid-md-4 grid-lg-6 row-gap-32 row-gap-lg-40 row-gap-lg-48 space-bottom-88">
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'call', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -562,7 +563,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'cart', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -570,7 +571,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'check', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -578,7 +579,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'clock', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -586,7 +587,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'error', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -594,7 +595,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'eye', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -602,7 +603,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'folder', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -610,7 +611,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'garbage', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -618,7 +619,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'heart', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -626,7 +627,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'home', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -634,7 +635,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'image', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -642,7 +643,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'info', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -650,7 +651,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'message', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -658,7 +659,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'micro', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -666,7 +667,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'legal', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -674,7 +675,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'lock', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -682,7 +683,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'place', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -690,7 +691,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'rain', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -698,7 +699,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'saving', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -706,7 +707,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'secure', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -714,7 +715,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'settings', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -722,7 +723,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'shopping', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -730,7 +731,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'sun', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -738,7 +739,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'upgrade', iconVariant:'filled' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -747,11 +748,11 @@
             </div>
         </div>
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Numbers</h3>
-        <div class="d-grid grid-min-4 grid-md-min-8 grid-lg-min-12 justify-content-between row-gap-48 space-bottom-88">
+        <%- include(`${component}/text/head-x3`, { text: 'Numbers' }) %>
+        <div class="d-grid grid-2 grid-md-4 grid-lg-6 row-gap-32 row-gap-lg-40 row-gap-lg-48 space-bottom-88">
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-1' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -760,7 +761,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-2' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -769,7 +770,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-3' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -778,7 +779,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-4' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -787,7 +788,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-5' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -796,7 +797,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-6' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -805,7 +806,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-7' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -814,7 +815,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-8' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -823,7 +824,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-9' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -832,7 +833,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-10' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -841,7 +842,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-11' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -850,7 +851,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'n-12' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -860,11 +861,12 @@
 
         </div>
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Social</h3>
-        <div class="d-grid grid-min-4 grid-md-min-8 grid-lg-min-12 justify-content-between row-gap-48 space-bottom-88">
+
+        <%- include(`${component}/text/head-x3`, { text: 'Social' }) %>
+        <div class="d-grid grid-2 grid-md-4 grid-lg-6 row-gap-32 row-gap-lg-40 row-gap-lg-48 space-bottom-88">
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'behance' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -873,7 +875,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'linkedin' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -882,7 +884,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'pinterest' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -891,7 +893,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'twitter' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -900,7 +902,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'whatsapp' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -909,7 +911,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'youtube' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -918,7 +920,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'contact' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -927,7 +929,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 2rem">
+                <div class="demo-card" style="font-size: 2rem">
                     <%- include(`${component}/icons/icon`, { icon: 'star' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -937,10 +939,10 @@
 
         </div>
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Circle icons</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Circle icons' }) %>
         <div class="d-grid grid-2 grid-md-4 grid-lg-6 justify-content-between row-gap-48 space-bottom-88">
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: '1', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -948,7 +950,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'awards', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -956,7 +958,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'check', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -964,7 +966,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'component', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -972,7 +974,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'fonts', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -980,7 +982,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'image', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -989,7 +991,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'interaction', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -997,7 +999,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'legal', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1005,7 +1007,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'museum', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1013,7 +1015,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'paint', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1021,7 +1023,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'pencil', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1029,7 +1031,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'people', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1038,7 +1040,7 @@
             </div>
 
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'premium', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1046,7 +1048,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'purse', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1054,7 +1056,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'responsive', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1062,7 +1064,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'saving', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1070,7 +1072,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'secure', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -1078,7 +1080,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-                <div class="icon-wrapper" style="font-size: 6rem">
+                <div class="demo-card" style="font-size: 6rem">
                     <%- include(`${component}/icons/icon`, { icon: 'transfer', iconVariant:'circle' } ) %>
                 </div>
                 <span class="body-light-gray-text">

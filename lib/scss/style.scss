@@ -27,15 +27,22 @@
 @use "components/atoms/button";
 @use "components/atoms/link";
 @use "components/atoms/icon";
-@use "components/atoms/productCard";
-@use "components/atoms/gridCell";
+@use "components/atoms/card";
+//@use "components/atoms/interactions";
+@use "components/atoms/switch";
+@use "components/atoms/interaction-button";
 @use "components/atoms/form";
+@use "components/atoms/illustration";
+@use "components/atoms/input";
+@use "components/atoms/select";
 
 /*
  * 3º Molecules
  */
 @use "components/molecules/dropdown";
 @use "components/molecules/navdrawer";
+@use "components/molecules/product-card";
+@use "components/molecules/grid-cell";
 
 /*
  * 4º Organisms
@@ -43,3 +50,5 @@
 @use "components/organisms/header";
 @use "components/organisms/marquee";
 @use "components/organisms/footer";
+
+

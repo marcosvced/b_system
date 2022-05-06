@@ -1,3 +1,4 @@
+@use '../variables/colors' as *;
 @use '../placeholders';
 @use '../helpers/font';
 @use '../helpers/colors';
@@ -41,7 +42,7 @@
 
 .x9-text {
     @extend %x9-text;
-    color: colors.grayscale(700);
+    color: $c-grayscale--700;
 }
 
 
@@ -62,6 +63,9 @@
 .x4-text-serif {
     @extend %x4-text-serif;
 }
+.x5-text-serif {
+    @extend %x5-text-serif;
+}
 
 
 // Text
@@ -77,21 +81,21 @@
 .body-regular-text {
     @extend %body-regular-text;
     @include themed.properties {
-        color: themed.values(colors.grayscale(800), colors.grayscale(light));
+        color: themed.values($c-grayscale--800, $c-grayscale--light);
     }
 }
 
 .body-light-text {
     @extend %body-light-text;
     @include themed.properties {
-        color: themed.values(colors.grayscale(800), colors.grayscale(light));
+        color: themed.values($c-grayscale--800, $c-grayscale--light);
     }
 }
 
 .body-italic-text {
     @extend %body-italic-text;
     @include themed.properties {
-        color: themed.values(colors.grayscale(800), colors.grayscale(light));
+        color: themed.values($c-grayscale--800, $c-grayscale--light);
     }
 }
 
@@ -102,7 +106,7 @@
 .body-regular-gray-text {
     @extend %body-regular-text;
     @include themed.properties {
-        color: themed.values(colors.grayscale(800), colors.grayscale(600));
+        color: themed.values($c-grayscale--800, $c-grayscale--600);
     }
     letter-spacing: size.rem(.3);
 }
@@ -110,13 +114,13 @@
 .body-light-gray-text {
     @extend %body-light-text;
     @include themed.properties {
-        color: themed.values(colors.grayscale(800), colors.grayscale(600));
+        color: themed.values($c-grayscale--800, $c-grayscale--600);
     }
 }
 
 .body-input-text {
     @extend %body-light-text;
-    color: colors.grayscale(700);
+    color: $c-grayscale--700;
 }
 
 
@@ -130,21 +134,27 @@
     @extend %body-regular-text-serif;
 }
 
+.body-italic-text-serif {
+    @extend %body-italic-text-serif;
+    @include themed.properties {
+        color: themed.values($c-grayscale--ash, $c-grayscale--light);
+    }
+}
 
 // Color
 
-.body-blue-text {
-    @extend %body-blue-text;
+.body-eren-text {
+    @extend %body-eren-text;
 }
 
-.body-orange-text {
-    @extend %body-orange-text;
+.body-annie-text {
+    @extend %body-annie-text;
 }
 
-.body-red-text {
-    @extend %body-red-text;
+.body-levi-text {
+    @extend %body-levi-text;
 }
 
-.body-turquoise-text {
-    @extend %body-turquoise-text;
+.body-armin-text {
+    @extend %body-armin-text;
 }

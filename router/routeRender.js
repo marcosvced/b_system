@@ -1,16 +1,17 @@
 const srcDirs = require('./dirs')
-const routePaths = require('./routePaths')
 const build = require('./routeBuild')
 
+const quickStartPaths = require('../views/quick_start/routePaths')
+
 const defaultOptions = {
-  title: 'B_System',
+  title: 'B_system',
   ...srcDirs,
-  ...routePaths,
+  ...quickStartPaths,
   layout: `${srcDirs.layout}/default`,
 }
 
 const routeRender = {
-  dir: (view, page = 'home', children = []) => `${view}/pages/${page}${children ? `/${children.join('/')}` : ''}/index.ejs`,
+  dir: (view, page, children = []) => `${view}/pages/${page}${children ? `/${children.join('/')}` : ''}/index.ejs`,
   render: (response, path, options = {}, extras = {}) => {
     response.render(path, {
       ...defaultOptions,

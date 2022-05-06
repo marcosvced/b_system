@@ -1,3 +1,4 @@
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
@@ -5,18 +6,11 @@
 
 .footer {
     $parent: &;
-    @include themed.properties {
-        background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
-    }
 
-    &.darkened {
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
-        }
-    }
+    @extend %bg-darkened;
 
     #{&}-content {
-       flex-direction: column; 
+       flex-direction: column;
        align-items: center;
     }
 
@@ -27,7 +21,7 @@
     .copy, #{&}-link {
         transition: .15s ease-in-out;
         @include themed.properties {
-            color: themed.values(helper.grayscale(800), helper.grayscale(600));
+            color: themed.values($c-grayscale--800, helper.grayscale(600));
          }
     }
 
@@ -49,8 +43,8 @@
                 flex-direction: column;
                 align-items: center;
                 gap: helper.space(32);
-                
-                .form-group {
+
+                .form-floating {
                     min-width: 50%;
                 }
             }
@@ -102,27 +96,26 @@
                 #{$parent}-content, #{$parent}-subscribe {
                     width: 45%;
                     align-items: flex-start;
-    
+
                     .copy {
                         text-align: start;
                     }
                 }
-    
+
                 #{$parent}-subscribe {
                     padding-top: 0;
-
                     #{$parent}-form {
                         flex-direction: row;
                     }
                 }
             }
         }
-    
+
         &-corporate {
             #{$parent}-contain {
                 display: flex;
                 column-gap: helper.space(112);
-    
+
                 #{$parent}-columns-container {
                     width: 150%;
 

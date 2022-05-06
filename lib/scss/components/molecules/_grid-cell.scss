@@ -1,0 +1,146 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+%vertical {
+    height: helper.rem(736);
+}
+
+.grid-cell {
+    $parent: &;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    width: 100%;
+
+    #{&}-container-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        #{$parent}-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    #{&}-profile {
+        position: absolute;
+        width: 100%;
+        padding: helper.space(24);
+
+        .action-link {
+            color: $c-grayscale--light;
+            position: absolute;
+            right: helper.space(24);
+            transform: translateX(-10%);
+            opacity: 0;
+            @include mixin.slow-transition('opacity, transform');
+        }
+    }
+
+    #{&}-social {
+        width: 100%;
+        padding: helper.space(24);
+        position: absolute;
+        bottom: 0;
+        transform: translateY(100%);
+        background-color: helper.opacity(gray-200);
+        @include mixin.slow-transition(transform);
+
+        > .btn-only-icon {
+            [class^=icon-] {
+                color: $c-grayscale--light;
+                font-size: helper.rem(24);
+            }
+        }
+    }
+
+    &:hover {
+        #{$parent}-social {
+            transform: translateY(0);
+        }
+
+        .action-link {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    &-basic {
+        padding-bottom: 100%;
+
+        &-horizontal {
+            padding-bottom: 50%;
+        }
+
+        &-vertical {
+            padding-bottom: 200%;
+        }
+    }
+
+    &-component {
+        $parent: &;
+        border-radius: helper.rem(8);
+        padding-bottom: 100%;
+
+        &:hover {
+            #{$parent}-info {
+                //background-color: transparent;
+                //bottom: 50%;
+                //transform: translateY(50%);
+                min-height: 100%;
+            }
+        }
+
+        #{&}-info {
+            background-color: helper.opacity(gray-200);
+            bottom: 0;
+            transition-delay: .15s;
+            position: absolute;
+            width: 100%;
+            min-height: 0;
+            @include mixin.slow-transition(min-height);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+    }
+
+    &-content {
+        padding-bottom: 100%;
+        #{&}-wrapper {
+            position: absolute;
+            padding: 0 helper.space(48) helper.space(48);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &.grid-cell-border {
+            border: helper.rem(1) solid helper.grayscale(300);
+        }
+
+        &:not(.bg-transparent) .text, &:not(.bg-transparent) .action-link {
+            color: $c-grayscale--light;
+        }
+
+
+        &:not(.bg-transparent):hover {
+            background-color: helper.secondary(eren-500) !important;
+        }
+
+    }
+}

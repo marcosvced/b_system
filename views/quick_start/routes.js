@@ -1,79 +1,132 @@
 const express = require('express')
-const routePaths = require('../../router/routePaths')
-const routeRender = require('../../router/routeRender')
+const { render, dir } = require('../../router/routeRender')
+const { QUICK_START } = require('./routePaths')
+const navigation = require('./navigation')
 
 const route = express.Router()
 
+function path(page = 'home', children = []) { return (dir(QUICK_START.ROUTE_NAME, page, children)) }
+
+/**
+ * 1 Home
+ * 2 Demos
+ * 3 Pages
+ * 4 Modules
+ * 5 Components
+ * 6 Transitions
+ */
+
 /* the default path "/" should redirect to Home */
 route.get('/', (request, response) => {
-  response.redirect(routePaths.QUICK_START.HOME)
+  response.redirect(QUICK_START.HOME)
 })
 
-/* home page. */
-route.get(routePaths.QUICK_START.HOME, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME))
+/**
+ * 1 Home
+ */
+
+route.get(QUICK_START.HOME, (request, response) => {
+  render(response, path(), {}, { navigation })
 })
 
-/* headers page. */
-route.get(routePaths.QUICK_START.HEADERS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['headers']))
+/**
+ * 4 Modules
+ */
+
+/* Headers */
+route.get(QUICK_START.HEADERS, (request, response) => {
+  render(response, path('modules', ['headers']), {}, { navigation })
 })
 
-/* footers page. */
-route.get(routePaths.QUICK_START.FOOTERS.BASIC, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'basic']))
+/* Footers. */
+route.get(QUICK_START.FOOTERS.BASIC, (request, response) => {
+  render(response, path('modules', ['footers', 'basic']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.FOOTERS.ESTANDAR, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'estandar']))
+route.get(QUICK_START.FOOTERS.STANDARD, (request, response) => {
+  render(response, path('modules', ['footers', 'standard']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.FOOTERS.CORPORATE, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'corporate']))
+route.get(QUICK_START.FOOTERS.CORPORATE, (request, response) => {
+  render(response, path('modules', ['footers', 'corporate']), {}, { navigation })
 })
 
-route.get(routePaths.QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'modules', ['footers', 'newsletter']))
+route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
+  render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
-/* Buttons page. */
-route.get(routePaths.QUICK_START.BUTTONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['buttons']))
+/**
+ * 5 Components
+ */
+
+/* Buttons */
+route.get(QUICK_START.BUTTONS, (request, response) => {
+  render(response, path('components', ['buttons']), {}, { navigation })
 })
 
-/* Alerts page. */
-route.get(routePaths.QUICK_START.ALERTS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['alerts']))
+/* Alerts */
+route.get(QUICK_START.ALERTS, (request, response) => {
+  render(response, path('components', ['alerts']), {}, { navigation })
 })
 
-/* Icons page. */
-route.get(routePaths.QUICK_START.ICONS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['icons']))
+/* Icons */
+route.get(QUICK_START.ICONS, (request, response) => {
+  render(response, path('components', ['icons']), {}, { navigation })
 })
 
-/* Links page. */
-route.get(routePaths.QUICK_START.LINKS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['links']))
+/* Links */
+route.get(QUICK_START.LINKS, (request, response) => {
+  render(response, path('components', ['links']), {}, { navigation })
 })
 
-/* Texts page. */
-route.get(routePaths.QUICK_START.TEXTS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['texts']))
+/* Texts */
+route.get(QUICK_START.TEXTS, (request, response) => {
+  render(response, path('components', ['texts']), {}, { navigation })
 })
 
-/* PRODUCT CARDS page. */
-route.get(routePaths.QUICK_START.PRODUCT_CARDS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['productCards']))
+/* Cards */
+route.get(QUICK_START.CARDS, (request, response) => {
+  render(response, path('components', ['cards']), {}, { navigation })
 })
 
-/* Grid Cells page. */
-route.get(routePaths.QUICK_START.GRIDCELLS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['gridCells']))
+/* Product cards */
+route.get(QUICK_START.PRODUCT_CARDS, (request, response) => {
+  render(response, path('components', ['productCards']), {}, { navigation })
 })
 
-/* Forms page. */
-route.get(routePaths.QUICK_START.FORMS, (request, response) => {
-  routeRender.render(response, routeRender.dir(routePaths.QUICK_START.ROUTE_NAME, 'components', ['forms']))
+/* Grid cells */
+route.get(QUICK_START.GRID_CELLS, (request, response) => {
+  render(response, path('components', ['gridCells']), {}, { navigation })
+})
+
+/* Forms */
+route.get(QUICK_START.FORMS, (request, response) => {
+  render(response, path('components', ['forms']), {}, { navigation })
+})
+
+/* Interaction */
+route.get(QUICK_START.INTERACTION, (request, response) => {
+  render(response, path('components', ['interaction']), {}, { navigation })
+})
+
+/* Illustrations page. */
+route.get(QUICK_START.ILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['illustrations']), {}, { navigation })
+})
+
+/* Microillustrations page. */
+route.get(QUICK_START.MICROILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['microillustrations']), {}, { navigation })
+})
+
+/* Scenes page. */
+route.get(QUICK_START.SCENES, (request, response) => {
+  render(response, path('components', ['scenes']), {}, { navigation })
+})
+
+// TODO: remove
+route.get('/example', (request, response) => {
+  render(response, path('example', []), {}, { navigation })
 })
 
 module.exports = route
