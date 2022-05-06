@@ -4,6 +4,12 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
+.form-floating {
+    .form-control {
+        background-color: transparent;
+    }
+}
+
 .form-check {
     padding: 0;
     display: flex;
