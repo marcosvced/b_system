@@ -7,7 +7,7 @@
     padding: helper.space(24);
     border: none;  
     @include themed.properties {
-        background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
+        background-color: themed.values($c-grayscale--100, $c-grayscale--1200);
     }
 
     &:not(&-link) {
@@ -19,15 +19,15 @@
     }
 
     &-info {
-        background-color: helper.secondary(eren-200);
+        background-color: $c-eren--200;
     }
 
     &-error {
-        background-color: helper.secondary(levi-200);
+        background-color: $c-levi--200;
     }
 
     &-advice {
-        background-color: helper.secondary(mikasa-200);
+        background-color: $c-mikasa--200;
     }
 
     &-link {
