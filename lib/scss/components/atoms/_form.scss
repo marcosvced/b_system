@@ -31,7 +31,7 @@
         + [class*='icon-'] {
             font-size: helper.rem(16);
             position: absolute;
-            bottom: 8%;
+            bottom: helper.rem(4);
             left: helper.rem(4);
             @include themed.properties {
                 color: themed.values(helper.secondary(eren-500), $c-eren);
