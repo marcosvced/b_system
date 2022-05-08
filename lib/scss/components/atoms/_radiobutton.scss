@@ -10,7 +10,7 @@
 .form-check {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0;
 
   & > &-label {
@@ -19,6 +19,9 @@
     padding-left: size.rem(24 + 8);
     position: relative;
     z-index: 1;
+    @include themed.properties {
+      color: themed.values($c-grayscale--800, $c-grayscale--600);
+    }
   }
   & > &-input {
     background: none !important;
@@ -36,13 +39,16 @@
   }
 
   .dot {
+
     position: absolute;
-    @include shapes.circle(10);
-    background-color: $c-eren--600;
     left: size.rem(7);
     top: size.rem(7);
     transform: scale(0);
-    @include styles.quick-transition(transform);
+    @include themed.properties {
+      background-color: themed.values($c-eren--600, $c-eren);
+    }
+    @include shapes.circle(10);
+    @include styles.fast-transition(transform);
 
   }
 }

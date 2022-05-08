@@ -15,18 +15,33 @@
   $padding-block: 16;
   position: relative;
 
-  > i {
+  > .btn.btn-only-icon {
     position: absolute;
     font-size: size.rem(24);
-    color: $c-eren;
-    top: size.rem(math.div(24,2));
+    top: size.rem(math.div(24, 2));
     right: size.rem($padding-inline);
+    cursor: pointer;
+    color: $c-eren;
+    &:hover {
+      color: $c-eren--500;
+    }
+
+    > i {
+      color: inherit;
+      font-size: size.rem(24);
+    }
   }
 
   input.form-control {
+    color: inherit;
     height: size.em($input-height, $font-base);
     padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base);
     font-size: $f-s-xs;
+    font-weight: $f-w-light;
+    background-color: transparent;
+    @include themed.properties {
+      caret-color: themed.values($c-grayscale--ash, $c-grayscale--light);
+    }
     @include styles.input-unfilled;
     @include styles.input-filled;
     @include styles.input-tap;
@@ -41,6 +56,7 @@
   }
 
   label {
+    color: $c-grayscale--700;
     padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base);
   }
 
