@@ -1,0 +1,48 @@
+@use 'sass:math';
+@use '../../variables/colors' as *;
+@use '../../variables/font' as *;
+@use '../../helpers/themed';
+@use '../../helpers/size';
+@use '../../mixins/space';
+@use '../../mixins/shapes';
+@use '../../mixins/styles';
+
+.form-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  & > &-label {
+    cursor: pointer;
+    margin-left: -#{size.rem(24)};
+    padding-left: size.rem(24 + 8);
+    position: relative;
+    z-index: 1;
+  }
+  & > &-input {
+    background: none !important;
+    @include shapes.square(24);
+    @include styles.input-unfilled;
+    margin: 0;
+
+    &:checked {
+      @include styles.input-filled;
+
+      & ~ .dot {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .dot {
+    position: absolute;
+    @include shapes.circle(10);
+    background-color: $c-eren--600;
+    left: size.rem(7);
+    top: size.rem(7);
+    transform: scale(0);
+    @include styles.quick-transition(transform);
+
+  }
+}

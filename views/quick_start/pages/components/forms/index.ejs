@@ -42,7 +42,7 @@
                 </span>
             </div>
             <div class="col-span-4 d-flex flex-column space-y-24">
-                <%- include(`${component}/form/check`, { type:'radio', id:'radio-states', label: 'I choose the premium level.' }) %>
+                <%- include(`${component}/form/radiobutton`, { id:'radio', label: 'I choose the premium level.' }) %>
                 <span class="body-light-gray-text">
                     Radio states
                 </span>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="col-span-4 space-y-24">
-                <%- include(`${component}/form/link`, { href: '#', label: 'Gift cards cannot be used to pay cash.', icon: 'info', iconPosition: 'before' }) %>
+                <%- include(`${component}/links/link`, { href: '#', label: 'Gift cards cannot be used to pay cash.', icon: 'info', iconPosition: 'before' }) %>
                 <span class="body-light-gray-text">
                     Radio states
                 </span>

@@ -155,3 +155,11 @@
   };
 }
 
+@mixin quick-transition($properties) {
+  @include slow-transition($properties);
+  transition: {
+    duration: 0.15s;
+    timing-function: ease;
+  };
+}
+
