@@ -2,107 +2,153 @@
 
 <%- contentFor('body') %>
 
+<% const options = ['Admin', 'Member', 'Guest'] %>
 <!--SECTION LIGHT-->
 <section class="section">
     <div class="container">
-
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Form elements</h3>
-
-        <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
-            <div class="h-100 space-y-24">
-                <%- include(`${component}/form/form`, { type: 'text', name: 'Name'}) %>
-                <span class="body-light-gray-text">
-                    Input states
-                </span>
+        <%- include(`${component}/text/head-x3`, { text: 'Form elements' }) %>
+        <form class="space-bottom-48 space-y-48">
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 ">
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/input`, { id:'name', label:'Name'}) %>
+                    <span class="body-light-gray-text">
+                        Input text
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/input`, { id:'invalid', label: 'Email address', invalid:true, value:'helena.com'}) %>
+                    <span class="body-light-gray-text">
+                        Input invalid
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/input`, { id:'pass', label: 'Password', icon: 'eye', type:'password'}) %>
+                    <span class="body-light-gray-text">
+                        Input password
+                    </span>
+                </div>
             </div>
 
-            <div class="h-100 space-y-24">
-                <%- include(`${component}/form/form`, { type: 'password', name: 'Password'}) %>
-                <span class="body-light-gray-text">
-                    Input hideable states 
-                </span>
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 row-gap-48 ">
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/input`, { id:'email', label: 'Email address', type:'email', validation:true}) %>
+                    <span class="body-light-gray-text">
+                        Validation email
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/select`, { id:'select', label: 'User rol', options }) %>
+                    <span class="body-light-gray-text">
+                        Select
+                    </span>
+                </div>
             </div>
 
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/form`, { type: 'checkbox', label: 'I accept the treatment of my data.', id: 'check-states'}) %>
-                <span class="body-light-gray-text">
-                    Check states 
-                </span>
-            </div>
-
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/form`, { type: 'radio', label: 'I choose the premium level.', id: 'radio-states'}) %>
-                <span class="body-light-gray-text">
-                    Radio states
-                </span>
-            </div>
-
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/info`, {icon: 'info', text:'Gift cards cannot be used to pay cash.'}) %>
-                <span class="body-light-gray-text">
-                    Info
-                </span>
-            </div>
-
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/link`, { href: '#', label: 'Gift cards cannot be used to pay cash.', icon: 'info', iconPosition: 'before' }) %>
-                <span class="body-light-gray-text">
-                    Info and link
-                </span>
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 row-gap-48 ">
+                <div class="col-span-4 space-y-24">
+                    <div class="d-flex flex-column space-y-16">
+                        <%- include(`${component}/form/checkbox`, { id:'checkbox-light', label: 'I accept the treatment of my data.' }) %>
+                        <%- include(`${component}/form/checkbox`, { id:'checkbox-light-two', label: 'I want to receive information about new offers.' }) %>
+                    </div>
+                    <span class="body-light-gray-text">
+                        Check states
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <div class="d-flex flex-column space-y-16">
+                        <%- include(`${component}/form/radiobutton`, { id:'radio-premium-light', label: 'I choose the premium level.', group:'radio-group', checked: true}) %>
+                        <%- include(`${component}/form/radiobutton`, { id:'radio-standard-light', label: 'I choose the standard level.', group:'radio-group' }) %>
+                    </div>
+                    <span class="body-light-gray-text">
+                        Radio states
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <div class="d-flex flex-column space-y-16">
+                        <%- include(`${component}/form/info`, { icon: 'info', text:'Gift cards cannot be used to pay cash.' }) %>
+                        <%- include(`${component}/links/link`, { icon: 'info', href:'#', label:'Gift cards cannot be used to pay cash.', iconPosition:'before' }) %>
+                    </div>
+                    <span class="body-light-gray-text">
+                        Info & Link
+                    </span>
+                </div>
             </div>
         </form>
+    </div>
 </section>
 <!--END: SECTION LIGHT-->
 
 <!--SECTION DARK-->
-<section class="section" data-bsystem="dark">
+<section data-bsystem="dark" class="section">
     <div class="container">
-
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Form elements dark</h3>
-
-        <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
-            <div class="h-100 space-y-24">
-                <%- include(`${component}/form/form`, { type: 'text', name: 'Name'}) %>
-                <span class="body-light-gray-text">
-                    Input states
-                </span>
+        <%- include(`${component}/text/head-x3`, { text: 'Form elements' }) %>
+        <form class="space-bottom-48 space-y-48">
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 ">
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/input`, { id:'name-dark', label:'Name'}) %>
+                    <span class="body-light-gray-text">
+                        Input text
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/input`, { id:'invalid-dark', label: 'Email address', invalid:true, value:'helena.com'}) %>
+                    <span class="body-light-gray-text">
+                        Input invalid
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/input`, { id:'pass-dark', label: 'Password', icon: 'eye', type:'password'}) %>
+                    <span class="body-light-gray-text">
+                        Input password
+                    </span>
+                </div>
             </div>
 
-            <div class="h-100 space-y-24">
-                <%- include(`${component}/form/form`, { type: 'password', name: 'Password'}) %>
-                <span class="body-light-gray-text">
-                    Input hideable states 
-                </span>
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 row-gap-48 ">
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/input`, { id:'email-dark', label: 'Email address', type:'email', validation:true}) %>
+                    <span class="body-light-gray-text">
+                        Validation email
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <%- include(`${component}/form/select`, { id:'select-dark', label: 'User rol', options }) %>
+                    <span class="body-light-gray-text">
+                        Select
+                    </span>
+                </div>
             </div>
 
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/form`, { type: 'checkbox', label: 'I accept the treatment of my data.', id: 'check-states-dark'}) %>
-                <span class="body-light-gray-text">
-                    Check states 
-                </span>
-            </div>
-
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/form`, { type: 'radio', label: 'I choose the premium level.', id: 'radio-states-dark'}) %>
-                <span class="body-light-gray-text">
-                    Radio states
-                </span>
-            </div>
-
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/info`, {icon: 'info', text:'Gift cards cannot be used to pay cash.'}) %>
-                <span class="body-light-gray-text">
-                    Info
-                </span>
-            </div>
-
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-                <%- include(`${component}/form/link`, { href: '#', label: 'Gift cards cannot be used to pay cash.', icon: 'info', iconPosition: 'before' }) %>
-                
-                <span class="body-light-gray-text">
-                    Info and link
-                </span>
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 row-gap-48 ">
+                <div class="col-span-4 space-y-24">
+                    <div class="d-flex flex-column space-y-16">
+                        <%- include(`${component}/form/checkbox`, { id:'checkbox-dark', label: 'I accept the treatment of my data.' }) %>
+                        <%- include(`${component}/form/checkbox`, { id:'checkbox-dark-two', label: 'I want to receive information about new offers.' }) %>
+                    </div>
+                    <span class="body-light-gray-text">
+                        Check states
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <div class="d-flex flex-column space-y-16">
+                        <%- include(`${component}/form/radiobutton`, { id:'radio-premium-dark', label: 'I choose the premium level.', group:'radio-group', checked: true}) %>
+                        <%- include(`${component}/form/radiobutton`, { id:'radio-standard-dark', label: 'I choose the standard level.', group:'radio-group' }) %>
+                    </div>
+                    <span class="body-light-gray-text">
+                        Radio states
+                    </span>
+                </div>
+                <div class="col-span-4 space-y-24">
+                    <div class="d-flex flex-column space-y-16">
+                    <%- include(`${component}/form/info`, { icon: 'info', text:'Gift cards cannot be used to pay cash.' }) %>
+                    <%- include(`${component}/links/link`, { icon: 'info', href:'#', label:'Gift cards cannot be used to pay cash.', iconPosition:'before' }) %>
+                    </div>
+                    <span class="body-light-gray-text">
+                        Info & Link
+                    </span>
+                </div>
             </div>
         </form>
+    </div>
 </section>
 <!--END: SECTION DARK-->

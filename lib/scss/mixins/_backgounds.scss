@@ -46,6 +46,7 @@ $merged-palette: f.map-collect(
       background-color: $color;
 
       @if ($hover) {
+        &:active:not(:disabled),
         &:hover:not(:disabled) {
           background-color: colors.hover($key);
         }

@@ -51,19 +51,19 @@
         display: inline-grid;
         align-items: center;
         justify-content: center;
-        background-color: $c-eren--500;
+        background-color: $c-opacity__gray--200;
         transform: translateX(0);
         @include mixin.circle(24);
         @include mixin.fast-transition(transform);
       }
     }
 
+    &:active:not(:disabled),
     &:hover:not(:disabled) {
       background-color: $c-eren__hover;
 
       &#{$parent}-cta {
         > [class^='icon-'] {
-          background-color: $c-eren--600;
           transform: translateX(helper.rem(4));
         }
       }
@@ -75,11 +75,13 @@
   &-secondary {
     background-color: $c-mikasa;
 
+    &:focus:not(:disabled),
+    &:active:not(:disabled),
     &:hover:not(:disabled) {
       background-color: $c-mikasa__hover;
     }
 
-    @include backgounds.can-use((eren, armin), true);
+    @include backgounds.can-use((armin, levi, annie), true);
   }
 
   &-tertiary {
@@ -88,6 +90,7 @@
       color: themed.values($c-grayscale--ash, $c-grayscale--light);
     }
 
+    &:active:not(:disabled),
     &:hover:not(:disabled) {
       @include themed.properties {
         background-color: themed.values($c-grayscale--200, $c-grayscale--900);
@@ -97,14 +100,19 @@
 
   &-subtle {
     background-color: transparent;
-    border: helper.rem(1) solid $c-grayscale--400;
     @include themed.properties {
       color: themed.values($c-grayscale--ash, $c-grayscale--light);
+      @include themed.light {
+        @include mixin.border-grey(200);
+      }
+      @include themed.dark {
+        @include mixin.border-grey(500);
+      }
     }
 
     &:hover:not(:disabled) {
       background-color: transparent;
-      border: helper.rem(1) solid $c-grayscale--700;
+      @include mixin.border-grey(400);
     }
   }
 

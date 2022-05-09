@@ -50,9 +50,9 @@
 
 %x5-text {
     font: {
-        size: font.size(sm); //md
+        size: font.size(sm);
         family: font.family(sans-serif);
-        weight: font.weight(bold); //light
+        weight: font.weight(bold);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -63,7 +63,7 @@
     font: {
         size: font.size(sm);
         family: font.family(sans-serif);
-        weight: font.weight(medium); //bold
+        weight: font.weight(medium);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -74,7 +74,7 @@
     font: {
         size: font.size(sm);
         family: font.family(sans-serif);
-        weight: font.weight(regular); //medium
+        weight: font.weight(regular);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -85,7 +85,7 @@
     font: {
         size: font.size(sm);
         family: font.family(sans-serif);
-        weight: font.weight(light); //regular
+        weight: font.weight(light);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -94,20 +94,12 @@
 
 %x9-text {
     font: {
-        size: font.size(xxs); //sm
+        size: font.size(xxs);
         family: font.family(sans-serif);
         weight: font.weight(light);
     }
     line-height: 1.27;
     letter-spacing: size.rem(.18);
-}
-
-%x10-mini {
-    font: {
-        size: font.size(xxs);
-        family: font.family(sans-serif);
-        weight: font.weight(light);
-    }
 }
 
 
@@ -120,27 +112,28 @@
         size: font.size(xxl);
         weight: font.weight(normal);
     }
+    line-height: 1.2;
+    letter-spacing: size.rem(.6);
 }
 
 %x2-text-serif {
     font: {
         family: font.family(serif);
-        size: size.rem(56);
+        size: size.rem(xl);
         weight: font.weight(normal);
     }
-    line-height: 1.18;
-    letter-spacing: size.rem(.53);
+    line-height: 1.3;
+    letter-spacing: size.rem(.4);
 }
 
 %x3-text-serif {
     font: {
         family: font.family(serif);
-        size: size.rem(56);
+        size: size.rem(lg);
         weight: font.weight(normal);
-        style: font.style(italic);
     }
-    line-height: 1.18;
-    letter-spacing: size.rem(.53);
+    line-height: 1.38;
+    letter-spacing: size.rem(.3);
 }
 
 %x4-text-serif {
@@ -151,6 +144,16 @@
     }
     line-height: 1.36;
     letter-spacing: size.rem(.4);
+}
+
+%x5-text-serif {
+    font: {
+        family: font.family(serif);
+        size: font.size(sm);
+        weight: font.weight(normal);
+    }
+    line-height: 1.44;
+    letter-spacing: size.rem(.3);
 }
 
 
@@ -225,22 +228,41 @@
     letter-spacing: size.rem(.28);
 }
 
+%body-italic-text-serif {
+    font: {
+        size: font.size(xs);
+        family: font.family(serif);
+        weight: font.weight(regular);
+        style: font.style(italic);
+
+    };
+    line-height: 1.6;
+    letter-spacing: size.rem(.28);
+}
 
 // Color
 
 %body-eren-text {
-    color: colors.primary(eren);
+    @include themed.properties {
+        color: $c-eren;
+    }
 }
 
-%body-warning-text {
-    color: colors.primary(orange);
+%body-annie-text {
+     @include themed.properties {
+         color: $c-annie--500;
+     }
 }
 
-%body-danger-text {
-    color: colors.primary(red),;
+%body-levi-text {
+     @include themed.properties {
+         color: $c-levi--500;
+     }
 
 }
 
 %body-armin-text {
-    color: colors.primary(armin);
+     @include themed.properties {
+         color: $c-armin--500;
+     }
 }
