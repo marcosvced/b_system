@@ -23,6 +23,6 @@ module.exports = {
     MICROILLUSTRATIONS: '/components/microillustrations',
     ILLUSTRATIONS: '/components/illustrations',
     SCENES: '/components/scenes',
-    ICONS_DESCRIPTION: '/components/iconsDescription'
+    ICON_DESCRIPTION_COMPONENT: '/components/iconsDescription'
   },
 }

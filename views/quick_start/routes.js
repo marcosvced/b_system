@@ -130,7 +130,7 @@ route.get(QUICK_START.SCENES, (request, response) => {
 })
 
 /* Scenes page. */
-route.get(QUICK_START.ICONS_DESCRIPTION, (request, response) => {
+route.get(QUICK_START.ICON_DESCRIPTION_COMPONENT, (request, response) => {
   render(response, path('components', ['iconsDescription']), {}, { navigation })
 })
 

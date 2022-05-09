@@ -25,105 +25,365 @@ const headerConfig = {
 <!--ICON DESCRIPTION -->
 
     <!--SECTION LIGHT-->
-    <section class="section">
-        <div class="container">
+    <%- include(`${module}/iconDescription/basic`, {
+        columns: [
+            {
+                microillustration: {
+                    src: 'system',
+                    alt: 'system microillustration'
+                },
+                title: 'An organic design system',
+                text: 'Create your digital brand in a natural and fluid way. Do we start?'
+            },
+            {
+                microillustration: {
+                    src: 'efficiency',
+                    alt: 'efficiency microillustration'
+                },
+                title: 'Maximized efficiency',
+                text: 'With fully scalable and reusable components.'
+            },
+            {
+                microillustration: {
+                    src: 'consistency',
+                    alt: 'consistency microillustration'
+                },
+                title: 'Consistency made easy',
+                text: 'You can change every element of your system from one place.'
+            },
+        ],
+        isDarkened: false,
+        isDark: false
+        })
+    %>
 
-            <div class="d-grid grid-4 grid-md-8 grid-xl-12">
+    <%- include(`${module}/iconDescription/basic`, {
+        columns: [
+            {
+                microillustration: {
+                    src: 'system',
+                    alt: 'system microillustration'
+                },
+                title: 'An organic design system',
+                text: 'Create your digital brand in a natural and fluid way. Do we start?'
+            },
+            {
+                microillustration: {
+                    src: 'efficiency',
+                    alt: 'efficiency microillustration'
+                },
+                title: 'Maximized efficiency',
+                text: 'With fully scalable and reusable components.'
+            },
+            {
+                microillustration: {
+                    src: 'consistency',
+                    alt: 'consistency microillustration'
+                },
+                title: 'Consistency made easy',
+                text: 'You can change every element of your system from one place.'
+            },
+        ],
+        isDarkened: true,
+        isDark: false
+        })
+    %>
 
-                <div class="col-span-4 col-span-md-8 col-xl-1-to-5">
-                    <%- include(`${component}/iconDescription/content`, { 
-                        microillustration: {
-                            src: 'system',
-                            size: 'microillustration',
-                            alt: 'system'
-                        },
-                        title: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
-                        } )
-                    %>
-                </div>
+    <%- include(`${module}/iconDescription/iconDescription`, {
+        head: 'Our work methodology',
+        columns: [
+            {
+                microillustration: {
+                    src: 'system',
+                    alt: 'system microillustration'
+                },
+                title: '1. Exploration phase',
+                text: 'Explore new concepts, products, services, ventures, brands, and systems.'
+            },
+            {
+                microillustration: {
+                    src: 'efficiency',
+                    alt: 'efficiency microillustration'
+                },
+                title: '2. Empathy phase',
+                text: 'A deep understanding of the needs of the users involved in the solution.'
+            },
+            {
+                microillustration: {
+                    src: 'choose-template',
+                    alt: 'choose template microillustration'
+                },
+                title: '3. Definition phase',
+                text: 'Staying with what really adds value and brings us to new interesting perspectives.'
+            },
+            {
+                microillustration: {
+                    src: 'fonts',
+                    alt: 'fonts microillustration'
+                },
+                title: '4. Ideation phase',
+                text: 'In this phase, activities favor expansive thinking and we eliminate value judgments.'
+            },
+            {
+                microillustration: {
+                    src: 'image',
+                    alt: 'image microillustration'
+                },
+                title: '5. Prototyping',
+                text: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.'
+            },
+            {
+                microillustration: {
+                    src: 'template',
+                    alt: 'template microillustration'
+                },
+                title: '6. Testing phase',
+                text: 'This phase helps us to identify significant improvements and faults to be solved.'
+            },
+        ],
+        isDarkened: false,
+        isDark: false
+        })
+    %>
 
-                <div class="col-span-4 col-span-md-8 col-xl-5-to-9">
-                    <%- include(`${component}/iconDescription/content`, { 
-                        microillustration: {
-                            src: 'efficiency',
-                            size: 'microillustration',
-                            alt: 'efficiency'
-                        },
-                        title: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
-                        } )
-                    %>
-                </div>
-
-                <div class="col-span-4 col-span-md-8 col-xl-9-to-13">
-                    <%- include(`${component}/iconDescription/content`, { 
-                        microillustration: {
-                            src: 'consistency',
-                            size: 'microillustration',
-                            alt: 'consistency'
-                        },
-                        title: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
-                        } )
-                    %>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="section darkened">
-        <div class="container">
-
-            <div class="d-grid grid-4 grid-md-8 grid-xl-12">
-
-                <div class="col-span-4 col-span-md-8 col-xl-1-to-5">
-                    <%- include(`${component}/iconDescription/content`, { 
-                        microillustration: {
-                            src: 'system',
-                            size: 'microillustration',
-                            alt: 'system'
-                        },
-                        title: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
-                        } )
-                    %>
-                </div>
-
-                <div class="col-span-4 col-span-md-8 col-xl-5-to-9">
-                    <%- include(`${component}/iconDescription/content`, { 
-                        microillustration: {
-                            src: 'efficiency',
-                            size: 'microillustration',
-                            alt: 'efficiency'
-                        },
-                        title: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
-                        } )
-                    %>
-                </div>
-
-                <div class="col-span-4 col-span-md-8 col-xl-9-to-13">
-                    <%- include(`${component}/iconDescription/content`, { 
-                        microillustration: {
-                            src: 'consistency',
-                            size: 'microillustration',
-                            alt: 'consistency'
-                        },
-                        title: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way. Do we start?'
-                        } )
-                    %>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    <%- include(`${module}/iconDescription/iconDescription`, {
+        head: 'Our work methodology',
+        icon: 'check-circle',
+        columns: [
+            {
+                microillustration: {
+                    src: 'system',
+                    alt: 'system microillustration'
+                },
+                title: '1. Exploration phase',
+                text: 'Explore new concepts, products, services, ventures, brands, and systems.'
+            },
+            {
+                microillustration: {
+                    src: 'efficiency',
+                    alt: 'efficiency microillustration'
+                },
+                title: '2. Empathy phase',
+                text: 'A deep understanding of the needs of the users involved in the solution.'
+            },
+            {
+                microillustration: {
+                    src: 'choose-template',
+                    alt: 'choose template microillustration'
+                },
+                title: '3. Definition phase',
+                text: 'Staying with what really adds value and brings us to new interesting perspectives.'
+            },
+            {
+                microillustration: {
+                    src: 'fonts',
+                    alt: 'fonts microillustration'
+                },
+                title: '4. Ideation phase',
+                text: 'In this phase, activities favor expansive thinking and we eliminate value judgments.'
+            },
+            {
+                microillustration: {
+                    src: 'image',
+                    alt: 'image microillustration'
+                },
+                title: '5. Prototyping',
+                text: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.'
+            },
+            {
+                microillustration: {
+                    src: 'template',
+                    alt: 'template microillustration'
+                },
+                title: '6. Testing phase',
+                text: 'This phase helps us to identify significant improvements and faults to be solved.'
+            },
+        ],
+        isDarkened: true,
+        isDark: false
+        })
+    %>
 <!--END: SECTION LIGHT-->
 
 
 <!--SECTION DARK-->
+    <%- include(`${module}/iconDescription/basic`, {
+        columns: [
+            {
+                microillustration: {
+                    src: 'system',
+                    alt: 'system microillustration'
+                },
+                title: 'An organic design system',
+                text: 'Create your digital brand in a natural and fluid way. Do we start?'
+            },
+            {
+                microillustration: {
+                    src: 'efficiency',
+                    alt: 'efficiency microillustration'
+                },
+                title: 'Maximized efficiency',
+                text: 'With fully scalable and reusable components.'
+            },
+            {
+                microillustration: {
+                    src: 'consistency',
+                    alt: 'consistency microillustration'
+                },
+                title: 'Consistency made easy',
+                text: 'You can change every element of your system from one place.'
+            },
+        ],
+        isDarkened: false,
+        isDark: true
+        })
+    %>
 
+    <%- include(`${module}/iconDescription/basic`, {
+        columns: [
+            {
+                microillustration: {
+                    src: 'system',
+                    alt: 'system microillustration'
+                },
+                title: 'An organic design system',
+                text: 'Create your digital brand in a natural and fluid way. Do we start?'
+            },
+            {
+                microillustration: {
+                    src: 'efficiency',
+                    alt: 'efficiency microillustration'
+                },
+                title: 'Maximized efficiency',
+                text: 'With fully scalable and reusable components.'
+            },
+            {
+                microillustration: {
+                    src: 'consistency',
+                    alt: 'consistency microillustration'
+                },
+                title: 'Consistency made easy',
+                text: 'You can change every element of your system from one place.'
+            },
+        ],
+        isDarkened: true,
+        isDark: true
+        })
+    %>
+
+<%- include(`${module}/iconDescription/iconDescription`, {
+    head: 'Our work methodology',
+    columns: [
+        {
+            microillustration: {
+                src: 'system',
+                alt: 'system microillustration'
+            },
+            title: '1. Exploration phase',
+            text: 'Explore new concepts, products, services, ventures, brands, and systems.'
+        },
+        {
+            microillustration: {
+                src: 'efficiency',
+                alt: 'efficiency microillustration'
+            },
+            title: '2. Empathy phase',
+            text: 'A deep understanding of the needs of the users involved in the solution.'
+        },
+        {
+            microillustration: {
+                src: 'choose-template',
+                alt: 'choose template microillustration'
+            },
+            title: '3. Definition phase',
+            text: 'Staying with what really adds value and brings us to new interesting perspectives.'
+        },
+        {
+            microillustration: {
+                src: 'fonts',
+                alt: 'fonts microillustration'
+            },
+            title: '4. Ideation phase',
+            text: 'In this phase, activities favor expansive thinking and we eliminate value judgments.'
+        },
+        {
+            microillustration: {
+                src: 'image',
+                alt: 'image microillustration'
+            },
+            title: '5. Prototyping',
+            text: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.'
+        },
+        {
+            microillustration: {
+                src: 'template',
+                alt: 'template microillustration'
+            },
+            title: '6. Testing phase',
+            text: 'This phase helps us to identify significant improvements and faults to be solved.'
+        },
+    ],
+    isDarkened: false,
+    isDark: true
+    })
+%>
+
+<%- include(`${module}/iconDescription/iconDescription`, {
+    head: 'Our work methodology',
+    icon: 'check-circle',
+    columns: [
+        {
+            microillustration: {
+                src: 'system',
+                alt: 'system microillustration'
+            },
+            title: '1. Exploration phase',
+            text: 'Explore new concepts, products, services, ventures, brands, and systems.'
+        },
+        {
+            microillustration: {
+                src: 'efficiency',
+                alt: 'efficiency microillustration'
+            },
+            title: '2. Empathy phase',
+            text: 'A deep understanding of the needs of the users involved in the solution.'
+        },
+        {
+            microillustration: {
+                src: 'choose-template',
+                alt: 'choose template microillustration'
+            },
+            title: '3. Definition phase',
+            text: 'Staying with what really adds value and brings us to new interesting perspectives.'
+        },
+        {
+            microillustration: {
+                src: 'fonts',
+                alt: 'fonts microillustration'
+            },
+            title: '4. Ideation phase',
+            text: 'In this phase, activities favor expansive thinking and we eliminate value judgments.'
+        },
+        {
+            microillustration: {
+                src: 'image',
+                alt: 'image microillustration'
+            },
+            title: '5. Prototyping',
+            text: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.'
+        },
+        {
+            microillustration: {
+                src: 'template',
+                alt: 'template microillustration'
+            },
+            title: '6. Testing phase',
+            text: 'This phase helps us to identify significant improvements and faults to be solved.'
+        },
+    ],
+    isDarkened: true,
+    isDark: true
+    })
+%>
 <!--END: SECTION DARK-->
 </main>

@@ -51,6 +51,10 @@
         .illustration {
             width: helper.rem(88);
         }
+
+        #{$parent}-text {
+            padding-inline: helper.space(32);
+        }
     }
 
     &-masked {
