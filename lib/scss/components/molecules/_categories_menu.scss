@@ -1,19 +1,57 @@
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
+@use '../../mixins' as mixin;
 
-.nav-tabs.bs-menu {
+.bs-categories-menu-wrapper {
+    position: relative;
+
+    &::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 96px;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        @include mixin.slow-transition('opacity');
+
+      @include themed.light {
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+      }
+      @include themed.dark {
+          background-image: linear-gradient(to right, rgba(43, 43, 43, 0), rgba(43, 43, 43, 1));
+      }
+    }
+
+    &.offset::before {
+        opacity: 1;
+    }
+}
+
+.nav-tabs.bs-categories-menu {
+    position: relative;
     border-bottom: 0;
     overflow-x: auto;
     overflow-y: hidden;
     margin-left: 16px;
     margin-right: 16px;
 
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     @include themed.properties {
         background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
         box-shadow: 0 1px 0 0 themed.values(helper.grayscale(300), helper.grayscale(900));
     }
 
-    &.--centered {
+    &.justify-content-center-safe {
         li:first-child {
             margin-left: auto;
         }
@@ -23,13 +61,13 @@
         }
     }
 
-    &.--right {
+    &.justify-content-right-safe {
         li:first-child {
             margin-left: auto;
         }
     }
 
-    &.--left {
+    &.justify-content-left-safe {
         li:last-child {
             margin-right: auto;
         }
