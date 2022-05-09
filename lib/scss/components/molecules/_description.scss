@@ -51,14 +51,18 @@
         .illustration {
             width: helper.rem(88);
         }
-        /*
-        #{$parent}-title {
-            padding-inline: helper.space(16);
-        }
+    }
 
-        #{$parent}-text {
-            padding-inline: helper.space(32);
+    &-masked {
+        .masked {
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            position: relative;
+
+            .masked-img {
+                height: 100%;
+                position: absolute;
+            }
         }
-        */
     }
 }
