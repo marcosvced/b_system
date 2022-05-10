@@ -30,7 +30,7 @@
 @mixin border-white($width: 1px, $borders: ('left','top','right','bottom', 'inline', 'block')) {
 
   @each $border in $borders {
-    @if (map-has-key(('left','top','right','bottom', 'inline', 'block'), $border)) {
+    @if (map-has-key(('left', 'top', 'right', 'bottom', 'inline', 'block'), $border)) {
       border-#{$border}: $width solid $c-grayscale--light;
     } @else {
       @error "#{$border} isn't a valid value.";
@@ -41,15 +41,15 @@
 @mixin border-grey($hue, $borders: ('left','top','right','bottom')) {
 
   $gray-hue: (
-          100: $c-grayscale--300,
-          200: $c-grayscale--400,
-          300: $c-grayscale--500,
-          400: $c-grayscale--600,
-          500: $c-grayscale--700
+    100: $c-grayscale--300,
+    200: $c-grayscale--400,
+    300: $c-grayscale--500,
+    400: $c-grayscale--600,
+    500: $c-grayscale--700
   );
   @if (map.has-key($gray-hue, $hue)) {
     @each $border in $borders {
-      @if f.contains(('left','top','right','bottom', 'inline', 'block'), $border) {
+      @if f.contains(('left', 'top', 'right', 'bottom', 'inline', 'block'), $border) {
         border-#{$border}: 1px solid map.get($gray-hue, $hue);
       } @else {
         @error "#{$border} isn't a valid value.";
@@ -91,6 +91,61 @@
   box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.14);
 }
 
+
+// Input borders
+@mixin input-unfilled {
+  @include themed.properties {
+    border-color: themed.values($c-grayscale--500, $c-grayscale--800);
+  }
+  box-shadow: none;
+}
+
+@mixin input-filled {
+  &:not(:placeholder-shown) {
+    @include themed.properties {
+      border-color: themed.values($c-grayscale--600, $c-grayscale--700);
+    }
+    box-shadow: none;
+  }
+}
+
+@mixin input-tap {
+  &:focus {
+    @include themed.properties {
+      border-color: themed.values($c-eren--600, $c-eren);
+      box-shadow: themed.values(inset 0 0 0 1px $c-eren--600, inset 0 0 0 1px $c-eren);
+    }
+  }
+}
+
+@mixin input-error {
+  background-image: none;
+  &.is-invalid {
+    @include themed.properties {
+      border-color: themed.values($c-levi--500, $c-levi--500);
+      box-shadow: themed.values(inset 0 0 0 1px $c-levi--500, inset 0 0 0 1px $c-levi--500);
+      background-color: themed.values($c-levi--100, transparent);
+    }
+
+    > i {
+      color: $c-levi;
+    }
+  }
+}
+
+@mixin input-inactive {
+  &:disabled {
+    @include themed.properties {
+      border-color: themed.values($c-grayscale--300, $c-grayscale--1000);
+    }
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .03);
+    cursor: not-allowed;
+  }
+  &:disabled + label {
+    color: $c-grayscale--700;
+  }
+}
+
 // Transitions
 
 @mixin slow-transition($properties, $time: 0.35s) {
@@ -105,6 +160,14 @@
   @include slow-transition($properties);
   transition: {
     duration: 0.25s;
+    timing-function: ease;
+  };
+}
+
+@mixin quick-transition($properties) {
+  @include slow-transition($properties);
+  transition: {
+    duration: 0.15s;
     timing-function: ease;
   };
 }
