@@ -19,6 +19,10 @@
         background-color: helper.opacity(gray-300);
         position: absolute;
     }
+
+    .img-basic {
+        object-fit: cover;
+    }
 }
 
 .card {

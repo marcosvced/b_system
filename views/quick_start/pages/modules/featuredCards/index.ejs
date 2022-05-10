@@ -1,0 +1,55 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('styles') %>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<main class="main">
+    <%- include( `${module}/featureCard/featureCard`, {
+        title: 'Featured works',
+        cards: [
+            {
+                img: 'feature-card_module-1.jpg',
+                alt: 'featured card image 1',
+                title: '.US',
+                text: 'Product design'
+            },
+            {
+                img: 'feature-card_module-2.jpg',
+                alt: 'featured card image 2',
+                title: 'Dream',
+                text: 'Editorial'
+            },
+            {
+                img: 'feature-card_module-3.jpg',
+                alt: 'featured card image 3',
+                title: 'Amazon toy',
+                text: 'Packaging'
+            },
+        ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: false,
+        isDark: false
+    } ) %>
+</main>

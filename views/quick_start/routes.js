@@ -38,6 +38,11 @@ route.get(QUICK_START.HEADERS, (request, response) => {
   render(response, path('modules', ['headers']), {}, { navigation })
 })
 
+/* Featured Cards */
+route.get(QUICK_START.FEATURED_CARDS, (request, response) => {
+  render(response, path('modules', ['featuredCards']), {}, { navigation })
+})
+
 /* Footers. */
 route.get(QUICK_START.FOOTERS.BASIC, (request, response) => {
   render(response, path('modules', ['footers', 'basic']), {}, { navigation })
