@@ -38,6 +38,11 @@ route.get(QUICK_START.HEADERS, (request, response) => {
   render(response, path('modules', ['headers']), {}, { navigation })
 })
 
+/* Statistics */
+route.get(QUICK_START.STATISTICS, (request, response) => {
+  render(response, path('modules', ['statistics']), {}, { navigation })
+})
+
 /* Footers. */
 route.get(QUICK_START.FOOTERS.BASIC, (request, response) => {
   render(response, path('modules', ['footers', 'basic']), {}, { navigation })

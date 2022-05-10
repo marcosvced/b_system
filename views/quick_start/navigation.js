@@ -34,6 +34,10 @@ const navigation = [
         label: 'Forms',
       },
       {
+        href: QUICK_START.STATISTICS,
+        label: 'Statistics',
+      },
+      {
         href: QUICK_START.FOOTERS.BASIC,
         label: 'Footers',
       },
