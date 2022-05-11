@@ -1,3 +1,4 @@
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
@@ -25,14 +26,14 @@
 
             &:not(:checked) + .form-switch-wrapper {
                 @include themed.properties {
-                    background-color: themed.values(helper.grayscale(500), helper.grayscale(800));
+                    background-color: themed.values(helper.grayscale(500), $c-grayscale--800);
                 }
             }
         }
 
         &:checked {
             & + .form-switch-wrapper {
-                background-color: helper.primary(blue);
+                background-color: $c-eren;
 
                 .form-switch-dot {
                     transform: translateX(helper.rem(25));
@@ -52,7 +53,7 @@
         @include mixin.fast-transition(background-color);
 
         @include themed.properties {
-            background-color: themed.values(helper.grayscale(400), helper.grayscale(900));
+            background-color: themed.values($c-grayscale--400, $c-grayscale--900);
         }
 
         .form-switch-dot {
@@ -60,7 +61,7 @@
             display: block;
 
             @include themed.properties {
-                background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+                background-color: themed.values($c-grayscale--light, helper.grayscale(1100));
             }
 
             @include mixin.circle(20);

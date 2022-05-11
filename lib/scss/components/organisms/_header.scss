@@ -1,3 +1,4 @@
+@use '../../variables/colors' as *;
 @use "../../variables/palette";
 @use "../../helpers/font";
 @use "../../helpers/colors";
@@ -92,13 +93,11 @@ header.header {
 
     &.header-fixed {
         z-index: 100;
-        position: sticky;
+        position: fixed;
         width: 100%;
         top: 0;
-        &.header-transparent {
-            position: fixed;
-        }
     }
+
 
     nav.navbar {
         padding: 0;
