@@ -12,7 +12,7 @@
 }
 
 .basic-card {
-    &::before {
+    &-darkened:before {
         content: '';
         width: 100%;
         height: 100%;
@@ -21,6 +21,7 @@
     }
 
     .img-basic {
+        max-height: helper.rem(285);
         object-fit: cover;
     }
 }
@@ -123,7 +124,7 @@
     }
 }
 
-.feature-card {
+.featured-card {
     & .img-container {
         border:{
             top-left-radius: helper.rem(6);
@@ -134,7 +135,7 @@
     }
 
     & .img-basic {
-        max-height: 14rem;
+        max-height: helper.rem(224);
     }
 }
 
