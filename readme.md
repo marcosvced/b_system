@@ -73,7 +73,6 @@ background-color: helper.button(primary--hover);
 @extend %x7-text;
 @extend %x8-text;
 @extend %x9-text;
-@extend %x10-mini;
 @extend %body-bold-text;
 @extend %body-medium-text;
 @extend %body-regular-text;

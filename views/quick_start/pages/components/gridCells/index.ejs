@@ -14,7 +14,7 @@
 <section class="section">
     <div class="container">
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Grid Cells</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Grid cells' }) %>
 
         <div class="d-grid grid-1 grid-lg-3 column-gap-24 space-bottom-48">
             <div class="space-y-24">
@@ -33,7 +33,7 @@
                     Grid cell basic
                 </span>
             </div>
-            <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
+            <div class="col-span-lg-2 space-y-24">
                 <%- include(`${component}/gridCell/basic`, {
                 name:'Marza Jolie',
                 job:'UI Designer',
@@ -68,7 +68,7 @@
                     Grid cell basic vertical
                 </span>
             </div>
-            <div class="col-1-to-2 col-lg-2-to-4 space-y-24">
+            <div class="col-span-lg-2 space-y-24">
                 <%- include(`${component}/gridCell/component`, {
                 title:'An organic design system',
                 text:'With fully scalable and reusable components.',
@@ -81,7 +81,7 @@
         </div>
 
         <div class="d-grid grid-1 grid-lg-2 column-gap-24 space-bottom-48">
-            <div class="col-1-to-2 space-y-24">
+            <div class=" space-y-24">
                 <%- include(`${component}/gridCell/content`, {
                 img: {src: 'gridcells_portfolio-01', alt: 'Grid basic portfolios cell'},
                 }) %>
@@ -90,7 +90,7 @@
                 </span>
             </div>
 
-            <div class="col-1-to-2 col-lg-2-to-4 space-y-24 size-fixed">
+            <div class=" space-y-24 size-fixed">
                 <%- include(`${component}/gridCell/content`, {
                 color: 'transparent',
                 border: true,
@@ -105,7 +105,7 @@
                 </span>
             </div>
 
-            <div class="col-1-to-2 space-y-24">
+            <div class="space-y-24">
                 <%- include(`${component}/gridCell/content`, {
                 img: {src: 'gridcells_portfolio-02', alt: 'Grid basic portfolios cell'},
                 }) %>
@@ -114,7 +114,7 @@
                 </span>
             </div>
 
-            <div class="col-1-to-2 col-lg-2-to-4 space-y-24 size-fixed">
+            <div class="space-y-24 size-fixed">
                 <%- include(`${component}/gridCell/content`, {
                 color: 'dark',
                 border: false,

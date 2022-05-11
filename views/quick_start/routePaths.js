@@ -20,5 +20,8 @@ module.exports = {
     INTERACTION: '/components/interaction',
     GRID_CELLS: '/components/gridCells',
     FORMS: '/components/forms',
+    MICROILLUSTRATIONS: '/components/microillustrations',
+    ILLUSTRATIONS: '/components/illustrations',
+    SCENES: '/components/scenes',
   },
 }

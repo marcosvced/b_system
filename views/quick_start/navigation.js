@@ -31,10 +31,6 @@ const navigation = [
       },
       {
         href: '#',
-        label: 'Cards',
-      },
-      {
-        href: '#',
         label: 'Forms',
       },
       {
@@ -42,8 +38,8 @@ const navigation = [
         label: 'Footers',
       },
       {
-        href: QUICK_START.FOOTERS.ESTANDAR,
-        label: 'Footers Estandar',
+        href: QUICK_START.FOOTERS.STANDARD,
+        label: 'Footers Standard',
       },
       {
         href: QUICK_START.FOOTERS.CORPORATE,
@@ -89,7 +85,7 @@ const navigation = [
         label: 'Links',
       },
       {
-        href: QUICK_START.GRIDCELLS,
+        href: QUICK_START.GRID_CELLS,
         label: 'Grid cells',
       },
       {
@@ -116,6 +112,19 @@ const navigation = [
         href: QUICK_START.TEXTS,
         label: 'Texts',
       },
+      {
+        href: QUICK_START.ILLUSTRATIONS,
+        label: 'Illustrations',
+      },
+      {
+        href: QUICK_START.MICROILLUSTRATIONS,
+        label: 'Microillustrations',
+      },
+      {
+        href: QUICK_START.SCENES,
+        label: 'Scenes',
+      },
+
     ],
   },
   {

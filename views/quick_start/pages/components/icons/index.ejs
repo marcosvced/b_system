@@ -1,4 +1,5 @@
 <%- include(`${view}/quick_start/layout`) %>
+<%- include(`${view}/quick_start/darkened-layout`) %>
 
 <%- contentFor('body') %>
 
@@ -6,7 +7,7 @@
 
     <div class="container">
 
-        <h3 class="space-block-48 space-block-md-56 space-block-lg-88">Concept icons</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Concept icons' }) %>
         <div class="d-grid grid-2 grid-md-4 grid-lg-6 row-gap-32 row-gap-lg-40 row-gap-lg-48 space-bottom-88">
 
             <div class="space-y-24">
@@ -551,7 +552,7 @@
 
         </div>
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Concept icons filled</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Concept icons filled' }) %>
         <div class="d-grid grid-2 grid-md-4 grid-lg-6 row-gap-32 row-gap-lg-40 row-gap-lg-48 space-bottom-88">
             <div class="space-y-24">
                 <div class="demo-card" style="font-size: 2rem">
@@ -747,7 +748,7 @@
             </div>
         </div>
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Numbers</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Numbers' }) %>
         <div class="d-grid grid-2 grid-md-4 grid-lg-6 row-gap-32 row-gap-lg-40 row-gap-lg-48 space-bottom-88">
 
             <div class="space-y-24">
@@ -860,7 +861,8 @@
 
         </div>
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Social</h3>
+
+        <%- include(`${component}/text/head-x3`, { text: 'Social' }) %>
         <div class="d-grid grid-2 grid-md-4 grid-lg-6 row-gap-32 row-gap-lg-40 row-gap-lg-48 space-bottom-88">
 
             <div class="space-y-24">
@@ -937,7 +939,7 @@
 
         </div>
 
-        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Circle icons</h3>
+        <%- include(`${component}/text/head-x3`, { text: 'Circle icons' }) %>
         <div class="d-grid grid-2 grid-md-4 grid-lg-6 justify-content-between row-gap-48 space-bottom-88">
             <div class="space-y-24">
                 <div class="demo-card" style="font-size: 6rem">
