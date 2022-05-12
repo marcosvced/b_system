@@ -3,11 +3,12 @@
 @mixin square($size) {
   width: size.rem($size);
   height: size.rem($size);
+  min-width: size.rem($size);
+  min-height: size.rem($size);
 }
 
 @mixin circle($size) {
-  width: size.rem($size);
-  height: size.rem($size);
+  @include square($size);
   border-radius: 50%;
 }
 

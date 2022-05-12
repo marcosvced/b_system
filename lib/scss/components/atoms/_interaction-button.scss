@@ -1,4 +1,5 @@
 @use "sass:map";
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../variables/palette';
 @use '../../helpers/themed';
@@ -8,61 +9,63 @@
 @use '../../mixins/text-color';
 
 .btn-interactive {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: helper.rem(24);
-    padding: 0;
-    border: 0;
-    width: helper.rem(56);
-    height: helper.rem(48);
-    border-radius: helper.rem(4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: helper.rem(24);
+  padding: 0;
+  border: 0;
+  width: helper.rem(56);
+  height: helper.rem(48);
+  border-radius: helper.rem(4);
 
-    @include text-color.can-use(palette.$grayscale);
+  @include text-color.can-use(palette.$grayscale);
 
+
+  @include themed.properties {
+    @include backgounds.can-use((exclude:(map.keys(palette.$secondary))));
+    background-color: themed.values($c-grayscale--100, $c-grayscale--1000);
+  }
+
+  &:hover,
+  &:active {
+    @include themed.properties {
+      background-color: themed.values($c-grayscale--200, $c-grayscale--900);
+    }
+  }
+
+  @include backgounds.can-use((eren, mikasa, armin), true);
+
+  &-darkened {
 
     @include themed.properties {
-        @include backgounds.can-use((exclude:(map.keys(palette.$secondary))));
-        background-color: themed.values(helper.grayscale(100), helper.grayscale(1000));
+      background-color: themed.values(helper.opacity(gray-300), $c-opacity__light--0);
+    }
+
+    > i {
+      color: $c-grayscale--light;
     }
 
     &:hover,
     &:active {
-        @include themed.properties {
-            background-color: themed.values(helper.grayscale(200), helper.grayscale(900));
-        }
+      @include themed.properties {
+        background-color: themed.values(helper.opacity(gray-300), $c-opacity__light--100);
+      }
     }
+  }
 
-    &-darkened {
+  &-rounded {
+    @include mixin.circle(48);
+  }
 
-        @include themed.properties {
-            background-color: themed.values(helper.opacity(gray-300), helper.opacity(light-0));
-        }
+  &-tight {
+    padding: 0;
+    width: helper.rem(32);
+    height: helper.rem(56);
+    border-radius: helper.rem(16);
 
-        > i {
-            color: helper.grayscale(light);
-        }
-
-        &:hover,
-        &:active {
-            @include themed.properties {
-                background-color: themed.values(helper.opacity(gray-300), helper.opacity(light-100));
-            }
-        }
+    > * {
+      transform: rotate(90deg);
     }
-
-    &-rounded {
-        @include mixin.circle(48);
-    }
-
-    &-tight {
-        padding: 0;
-        width: helper.rem(32);
-        height: helper.rem(56);
-        border-radius: helper.rem(16);
-
-        > * {
-            transform: rotate(90deg);
-        }
-    }
+  }
 }

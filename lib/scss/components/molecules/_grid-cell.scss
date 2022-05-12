@@ -1,3 +1,4 @@
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
@@ -37,7 +38,7 @@
         padding: helper.space(24);
 
         .action-link {
-            color: helper.grayscale(light);
+            color: $c-grayscale--light;
             position: absolute;
             right: helper.space(24);
             transform: translateX(-10%);
@@ -57,7 +58,7 @@
 
         > .btn-only-icon {
             [class^=icon-] {
-                color: helper.grayscale(light);
+                color: $c-grayscale--light;
                 font-size: helper.rem(24);
             }
         }
@@ -133,12 +134,12 @@
         }
 
         &:not(.bg-transparent) .text, &:not(.bg-transparent) .action-link {
-            color: helper.grayscale(light);
+            color: $c-grayscale--light;
         }
 
 
         &:not(.bg-transparent):hover {
-            background-color: helper.secondary(blue-500) !important;
+            background-color: helper.secondary(eren-500) !important;
         }
 
     }
