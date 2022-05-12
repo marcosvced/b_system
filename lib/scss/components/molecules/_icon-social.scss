@@ -27,7 +27,7 @@
             position: absolute;
             z-index: -1;
             opacity: 0;
-            @include mixin.slow-transition(background-color);
+            @include mixin.slow-transition(opacity);
         }
 
         &:hover:before {
@@ -40,7 +40,7 @@
     .icons-social .btn-only-icon {
         &:before {
             @include themed.properties {
-                background-color: themed.values($c-grayscale--100, $c-grayscale--1300);
+                background-color: themed.values($c-grayscale--200, $c-grayscale--1300);
             }
         }
     }
