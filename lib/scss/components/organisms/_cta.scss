@@ -5,6 +5,10 @@
 
 .cta {
     $parent: &;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     padding: {
         inline: helper.space(16);
     }
@@ -14,8 +18,4 @@
             inline: helper.space(80);
         }
     }
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
