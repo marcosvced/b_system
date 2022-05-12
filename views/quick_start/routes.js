@@ -60,6 +60,11 @@ route.get(QUICK_START.CTA, (request, response) => {
   render(response, path('modules', ['cta']), {}, { navigation })
 })
 
+/* Headers */
+route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
+  render(response, path('modules', ['basicContents']), {}, { navigation })
+})
+
 /**
  * 5 Components
  */
@@ -112,6 +117,21 @@ route.get(QUICK_START.FORMS, (request, response) => {
 /* Interaction */
 route.get(QUICK_START.INTERACTION, (request, response) => {
   render(response, path('components', ['interaction']), {}, { navigation })
+})
+
+/* Illustrations page. */
+route.get(QUICK_START.ILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['illustrations']), {}, { navigation })
+})
+
+/* Microillustrations page. */
+route.get(QUICK_START.MICROILLUSTRATIONS, (request, response) => {
+  render(response, path('components', ['microillustrations']), {}, { navigation })
+})
+
+/* Scenes page. */
+route.get(QUICK_START.SCENES, (request, response) => {
+  render(response, path('components', ['scenes']), {}, { navigation })
 })
 
 // TODO: remove

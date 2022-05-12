@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>B_system</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap + reset styles-->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
+
+    <!--B_system styles-->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' />
+    <style lang="css">
+      body {
+        background-color: var(--c-grayscale__100);
+      }
+    </style>
+  </head>
+  <body>
+
+    <!--MAIN HEADER-->
+    <header class="header header-fixed header-light " data-bsystem="sticky">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
+          <div class="d-flex d-xl-none order-0">
+            <button type="button" class="btn btn-only-icon">
+              <i class="icon-cart"></i>
+            </button>
+          </div>
+          <div class="d-none d-xl-block order-1">
+            <button type="button" class="btn btn-primary    btn-fit">
+              Purchase B_system
+            </button>
+          </div>
+        </div>
+        <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min ">
+          <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
+        </a>
+        <div class="nav-wrapper order-2 order-xl-1 col">
+          <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
+            <nav class="navbar navbar-expand-lg">
+              <ul class="navbar-nav">
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Demos
+                  </a>
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Pages
+                  </a>
+                </li>
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Modules
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="modules_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="#">Menus</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/headers">Headers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Contents</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Grids</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/standard">Footers Standard</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/corporate">Footers Corporate</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/newsletter">Footers Newsletter</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/basicContents">Basic Contents</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link active  dropdown-toggle " href="#" id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Components
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="components_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../components/buttons">Buttons</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/forms">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/interaction">Interaction</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/cards">Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/productCards">Product Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/links">Links</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/gridCells">Grid cells</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Icon + description</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Accordions</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Alerts</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/icons">Icons</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/texts">Texts</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item active" href="../../components/illustrations">Illustrations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/microillustrations">Microillustrations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/scenes">Scenes</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Transitions
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
+            <button type="button" class="btn btn-only-icon">
+              <i class="icon-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--END: MAIN HEADER-->
+
+    <!--MAIN CONTENT-->
+    <main class="main">
+
+      <!--MICROILLUSTRATIONS-->
+      <section class="section darkened">
+        <div class="container">
+          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Illustrations</h3>
+          <div class="d-grid grid-1 grid-sm-2 grid-xl-3 column-gap-24 row-gap-48 space-bottom-48">
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/man.svg" alt="man">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Man
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/woman.svg" alt="woman">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Woman
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/boy.svg" alt="boy">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Boy
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/girl.svg" alt="girl">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Girl
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/classic-house.svg" alt="classic house">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Classic house
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/modern-house.svg" alt="modern house">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Modern house
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/edifice.svg" alt="edifice">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Edifice
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/scenary.svg" alt="scenary">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Scenary
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/work-table.svg" alt="work table">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Work table
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/man-resting.svg" alt="man resting">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Man resting
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/leaf_1.svg" alt="leaf 1">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Leaf 1
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/leaf_2.svg" alt="leaf 2">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Leaf 2
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/leaf_3.svg" alt="leaf 3">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Leaf 3
+                </span>
+            </div>
+            <div class="space-y-24">
+              <div class="demo-card">
+                <picture class="illustration">
+                  <img class="illustration-img" src="../../assets/img/illustration/leaf_4.svg" alt="leaf 4">
+                </picture>
+              </div>
+              <span class="body-light-gray-text">
+                    Leaf 4
+                </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--END: MAIN CONTENT-->
+
+    <!--MAIN FOOTER-->
+    <footer class="footer footer-basic  inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88 inner-space-block-xxl-120">
+      <div class="footer-wrapper container">
+        <div class="footer-content d-flex gap-32">
+          <a class="footer-logo" href="../../home">
+            <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="B_system logo" />
+          </a>
+          <p class="copy body-light-text">
+            .Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--END: MAIN FOOTER-->
+
+    <!--SCRIPTS-->
+
+    <!--Bootstrap JS Bundle-->
+    <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!--B_system JS-->
+    <script src="../../assets/js/bsystem.min.js"></script>
+
+    <!--END: SCRIPTS-->
+  </body>
+</html>

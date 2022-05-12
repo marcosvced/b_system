@@ -10,6 +10,7 @@ module.exports = {
       NEWSLETTER: '/modules/footers/newsletter',
     },
     CTA: '/modules/cta',
+    BASIC_CONTENTS: '/modules/basicContents',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',
@@ -20,5 +21,8 @@ module.exports = {
     INTERACTION: '/components/interaction',
     GRID_CELLS: '/components/gridCells',
     FORMS: '/components/forms',
+    MICROILLUSTRATIONS: '/components/microillustrations',
+    ILLUSTRATIONS: '/components/illustrations',
+    SCENES: '/components/scenes',
   },
 }

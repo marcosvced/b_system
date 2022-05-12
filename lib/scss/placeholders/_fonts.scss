@@ -1,3 +1,4 @@
+@use '../variables/colors' as *;
 @use '../helpers/font';
 @use '../helpers/colors';
 @use "../helpers/size";
@@ -9,7 +10,7 @@
 %x1-text {
     font: {
         size: font.size(xxl);
-        family: font.family(roboto);
+        family: font.family(sans-serif);
         weight: font.weight(bold);
     }
     line-height: 1.19;
@@ -19,7 +20,7 @@
 %x2-text {
     font: {
         size: font.size(xl);
-        family: font.family(roboto);
+        family: font.family(sans-serif);
         weight: font.weight(bold);
     }
     line-height: 1.3;
@@ -29,7 +30,7 @@
 %x3-text {
     font: {
         size: font.size(lg);
-        family: font.family(roboto);
+        family: font.family(sans-serif);
         weight: font.weight(bold);
     }
     line-height: 1.38;
@@ -39,7 +40,7 @@
 %x4-text {
     font: {
         size: font.size(md);
-        family: font.family(roboto);
+        family: font.family(sans-serif);
         weight: font.weight(bold);
     }
     line-height: 1.27;
@@ -49,9 +50,9 @@
 
 %x5-text {
     font: {
-        size: font.size(sm); //md
-        family: font.family(roboto);
-        weight: font.weight(bold); //light
+        size: font.size(sm);
+        family: font.family(sans-serif);
+        weight: font.weight(bold);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -61,8 +62,8 @@
 %x6-text {
     font: {
         size: font.size(sm);
-        family: font.family(roboto);
-        weight: font.weight(medium); //bold
+        family: font.family(sans-serif);
+        weight: font.weight(medium);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -72,8 +73,8 @@
 %x7-text {
     font: {
         size: font.size(sm);
-        family: font.family(roboto);
-        weight: font.weight(regular); //medium
+        family: font.family(sans-serif);
+        weight: font.weight(regular);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -83,8 +84,8 @@
 %x8-text {
     font: {
         size: font.size(sm);
-        family: font.family(roboto);
-        weight: font.weight(light); //regular
+        family: font.family(sans-serif);
+        weight: font.weight(light);
     }
     line-height: 1.44;
     letter-spacing: size.rem(.2);
@@ -93,20 +94,12 @@
 
 %x9-text {
     font: {
-        size: font.size(xxs); //sm
-        family: font.family(roboto);
+        size: font.size(xxs);
+        family: font.family(sans-serif);
         weight: font.weight(light);
     }
     line-height: 1.27;
     letter-spacing: size.rem(.18);
-}
-
-%x10-mini {
-    font: {
-        size: font.size(xxs);
-        family: font.family(roboto);
-        weight: font.weight(light);
-    }
 }
 
 
@@ -115,41 +108,52 @@
 %x1-text-serif {
     @extend %x1-text;
     font: {
-        family: font.family(playfair);
+        family: font.family(serif);
         size: font.size(xxl);
         weight: font.weight(normal);
     }
+    line-height: 1.2;
+    letter-spacing: size.rem(.6);
 }
 
 %x2-text-serif {
     font: {
-        family: font.family(playfair);
-        size: size.rem(56);
+        family: font.family(serif);
+        size: size.rem(xl);
         weight: font.weight(normal);
     }
-    line-height: 1.18;
-    letter-spacing: size.rem(.53);
+    line-height: 1.3;
+    letter-spacing: size.rem(.4);
 }
 
 %x3-text-serif {
     font: {
-        family: font.family(playfair);
-        size: size.rem(56);
+        family: font.family(serif);
+        size: size.rem(lg);
         weight: font.weight(normal);
-        style: font.style(italic);
     }
-    line-height: 1.18;
-    letter-spacing: size.rem(.53);
+    line-height: 1.38;
+    letter-spacing: size.rem(.3);
 }
 
 %x4-text-serif {
     font: {
-        family: font.family(playfair);
+        family: font.family(serif);
         size: font.size(md);
         weight: font.weight(normal);
     }
     line-height: 1.36;
     letter-spacing: size.rem(.4);
+}
+
+%x5-text-serif {
+    font: {
+        family: font.family(serif);
+        size: font.size(sm);
+        weight: font.weight(normal);
+    }
+    line-height: 1.44;
+    letter-spacing: size.rem(.3);
 }
 
 
@@ -158,7 +162,7 @@
 %body-bold-text {
     font: {
         size: font.size(xs);
-        family: font.family(roboto);
+        family: font.family(sans-serif);
         weight: font.weight(bold);
     };
     line-height: 1.6;
@@ -168,7 +172,7 @@
 %body-medium-text {
     font: {
         size: font.size(xs);
-        family: font.family(roboto);
+        family: font.family(sans-serif);
         weight: font.weight(medium);
     };
     line-height: 1.6;
@@ -178,7 +182,7 @@
 %body-regular-text {
     font: {
         size: font.size(xs);
-        family: font.family(roboto);
+        family: font.family(sans-serif);
         weight: font.weight(regular);
     };
     line-height: 1.6;
@@ -188,7 +192,7 @@
 %body-light-text {
     font: {
         size: font.size(xs);
-        family: font.family(roboto);
+        family: font.family(sans-serif);
         weight: font.weight(light);
     };
     line-height: 1.6;
@@ -207,7 +211,7 @@
 %body-bold-text-serif {
     font: {
         size: font.size(xs);
-        family: font.family(playfair);
+        family: font.family(serif);
         weight: font.weight(bold);
     };
     line-height: 1.6;
@@ -217,29 +221,48 @@
 %body-regular-text-serif {
     font: {
         size: font.size(xs);
-        family: font.family(playfair);
+        family: font.family(serif);
         weight: font.weight(regular);
     };
     line-height: 1.6;
     letter-spacing: size.rem(.28);
 }
 
+%body-italic-text-serif {
+    font: {
+        size: font.size(xs);
+        family: font.family(serif);
+        weight: font.weight(regular);
+        style: font.style(italic);
+
+    };
+    line-height: 1.6;
+    letter-spacing: size.rem(.28);
+}
 
 // Color
 
-%body-blue-text {
-    color: colors.primary(blue);
+%body-eren-text {
+    @include themed.properties {
+        color: $c-eren;
+    }
 }
 
-%body-orange-text {
-    color: colors.primary(orange);
+%body-annie-text {
+     @include themed.properties {
+         color: $c-annie--500;
+     }
 }
 
-%body-red-text {
-    color: colors.primary(red),;
+%body-levi-text {
+     @include themed.properties {
+         color: $c-levi--500;
+     }
 
 }
 
-%body-turquoise-text {
-    color: colors.primary(turquoise);
+%body-armin-text {
+     @include themed.properties {
+         color: $c-armin--500;
+     }
 }
