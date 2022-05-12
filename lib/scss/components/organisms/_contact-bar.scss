@@ -7,8 +7,17 @@
 .contact-bar {
     $parent: &;
     background-color: helper.primary(blue);
+    padding: helper.space(16);
     display: flex;
     justify-content: space-between;
+
+    @include mixin.screen(sm) {
+        padding-inline: helper.space(24);
+    }
+
+    @include mixin.screen(xl) {
+        padding-inline: helper.space(32);
+    }
 
     &-social {
         width: 100%;

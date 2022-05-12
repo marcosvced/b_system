@@ -23,7 +23,7 @@ const headerConfig = {
 <main class="main">
     <section class="section darkened" style="padding-inline: 0;">
         <div class="container">
-            <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Contact bar</h3>
+            <%- include(`${component}/text/head-x3`, { text: 'Contact bar' }) %>
         </div>
         <div class="space-y-24 space-y-xl-32">
             <%- include(`${module}/contactBar/contactBar`, {
@@ -47,9 +47,11 @@ const headerConfig = {
                 },
                 socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin']
             }) %>
-            <span class="body-light-gray-text inner-space-inline-16 inner-space-inline-md-80">
-                Contact bar
-            </span>
+            <div class="container">
+                <span class="body-light-gray-text">
+                    Contact bar
+                </span>
+            </div>
         </div>
     </section>
 </main>
