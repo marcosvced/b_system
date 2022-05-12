@@ -10,6 +10,7 @@ module.exports = {
       NEWSLETTER: '/modules/footers/newsletter',
     },
     ICONS_SOCIAL: '/modules/iconSocial',
+    BASIC_CONTENTS: '/modules/basicContents',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

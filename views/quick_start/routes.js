@@ -60,6 +60,11 @@ route.get(QUICK_START.ICONS_SOCIAL, (request, response) => {
   render(response, path('modules', ['iconsSocial']), {}, { navigation })
 })
 
+/* basicContents */
+route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
+  render(response, path('modules', ['basicContents']), {}, { navigation })
+})
+
 /**
  * 5 Components
  */

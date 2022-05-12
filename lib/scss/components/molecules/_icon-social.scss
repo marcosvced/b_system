@@ -1,0 +1,47 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.icons-social {
+    display: flex;
+    justify-content: center;
+    @include mixin.x(24);
+
+    .btn-only-icon {
+        position: relative;
+        z-index: 0;
+
+        [class^=icon-] {
+            font-size: helper.rem(24);
+        }
+
+        &:before {
+            content: '';
+            @include mixin.circle(40);
+            @include themed.properties {
+                background-color: themed.values($c-grayscale--100, $c-grayscale--1200);
+            }
+
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            @include mixin.slow-transition(background-color);
+        }
+
+        &:hover:before {
+            opacity: 1;
+        }
+    }
+}
+
+.darkened {
+    .icons-social .btn-only-icon {
+        &:before {
+            @include themed.properties {
+                background-color: themed.values($c-grayscale--100, $c-grayscale--1300);
+            }
+        }
+    }
+}

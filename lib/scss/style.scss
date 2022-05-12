@@ -31,9 +31,12 @@
 //@use "components/atoms/interactions";
 @use "components/atoms/switch";
 @use "components/atoms/interaction-button";
-@use "components/atoms/form";
 @use "components/atoms/illustration";
-
+@use "components/atoms/input";
+@use "components/atoms/select";
+@use "components/atoms/checkbox";
+@use "components/atoms/radiobutton";
+@use "components/atoms/hint";
 
 /*
  * 3º Molecules
@@ -42,6 +45,7 @@
 @use "components/molecules/navdrawer";
 @use "components/molecules/product-card";
 @use "components/molecules/grid-cell";
+@use "components/molecules/icon-social";
 
 /*
  * 4º Organisms
@@ -49,4 +53,6 @@
 @use "components/organisms/header";
 @use "components/organisms/marquee";
 @use "components/organisms/footer";
-@use "components/organisms/icon-social";
+@use "components/organisms/basic-content";
+
+

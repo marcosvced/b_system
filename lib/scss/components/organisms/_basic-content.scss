@@ -1,0 +1,12 @@
+@use '../../helpers/size';
+
+.basic-content {
+  $parent: &;
+
+  &:not(#{$parent}-simple) {
+    h1, h2 {
+      margin-inline: auto;
+    }
+  }
+
+}
