@@ -21,55 +21,51 @@ const headerConfig = {
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <main class="main">
-    <section class="section section-divider">
-        <%- include(`${module}/cta/cta`, {
-            title: 'Do you want to start with B_system today?',
-            btn: {
-                label: 'Purchase B_system',
-                isCTA: true,
-                icon: 'links',
-                iconPosition: 'after'
-            },
-            isDarkened: false
-        }) %>
-    </section>
+    <%- include(`${module}/cta/cta`, {
+        title: 'Do you want to start with B_system today?',
+        btn: {
+            label: 'Purchase B_system',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: false,
+        isDark: false
+    }) %>
 
-    <section class="section section-divider darkened">
-        <%- include(`${module}/cta/cta`, {
-            title: 'Do you want to start with B_system today?',
-            btn: {
-                label: 'Purchase B_system',
-                isCTA: true,
-                icon: 'links',
-                iconPosition: 'after'
-            },
-            isDarkened: true
-        }) %>
-    </section>
+    <%- include(`${module}/cta/cta`, {
+        title: 'Do you want to start with B_system today?',
+        btn: {
+            label: 'Purchase B_system',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: true,
+        isDark: false
+    }) %>
 
-    <section class="section section-divider" data-bsystem="dark">
-        <%- include(`${module}/cta/cta`, {
-            title: 'Do you want to start with B_system today?',
-            btn: {
-                label: 'Purchase B_system',
-                isCTA: true,
-                icon: 'links',
-                iconPosition: 'after'
-            },
-            isDarkened: false
-        }) %>
-    </section>
+    <%- include(`${module}/cta/cta`, {
+        title: 'Do you want to start with B_system today?',
+        btn: {
+            label: 'Purchase B_system',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: false,
+        isDark: true
+    }) %>
 
-    <section class="section section-divider darkened" data-bsystem="dark">
-        <%- include(`${module}/cta/cta`, {
-            title: 'Do you want to start with B_system today?',
-            btn: {
-                label: 'Purchase B_system',
-                isCTA: true,
-                icon: 'links',
-                iconPosition: 'after'
-            },
-            isDarkened: true
-        }) %>
-    </section>
+    <%- include(`${module}/cta/cta`, {
+        title: 'Do you want to start with B_system today?',
+        btn: {
+            label: 'Purchase B_system',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: true,
+        isDark: true
+    }) %>
 </main>
