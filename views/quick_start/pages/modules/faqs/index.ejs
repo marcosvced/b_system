@@ -1,0 +1,156 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<!--SECTION LIGHT-->
+<% ['', 'darkened'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section section-divider 
+    <% if(section === 'darkened') { %>
+    darkened
+    <% } %>
+    ">
+
+        <%- include(`${module}/faq/faq`, {
+            title: 'Frequently asked questions',
+            links: [
+                {
+                    href: '#',
+                    label: 'Brand System'
+                },
+                {
+                    href: '#',
+                    label: 'Product contracting'
+                },
+                {
+                    href: '#',
+                    label: 'Customer Support'
+                },
+                {
+                    href: '#',
+                    label: 'Our commitment'
+                },
+            ],
+            accordion: [
+                {
+                    idAccordion: 'accordion1',
+                    idItem: 'item1',
+                    label: 'What is B_system?',
+                    content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                },
+                {
+                    idAccordion: 'accordion2',
+                    idItem: 'item2',
+                    label: 'In what kind of projects can I use it?',
+                    content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                },
+                {
+                    idAccordion: 'accordion3',
+                    idItem: 'item3',
+                    label: 'What frameworks does the system use?',
+                    content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                },
+                {
+                    idAccordion: 'accordion4',
+                    idItem: 'item4',
+                    label: 'How many demos does it have?',
+                    content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                },
+                {
+                    idAccordion: 'accordion5',
+                    idItem: 'item5',
+                    label: 'Is there any discount or promotion if I use it several times?',
+                    content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                },
+                {
+                    idAccordion: 'accordion6',
+                    idItem: 'item6',
+                    label: 'What programming languages ​​does it use?',
+                    content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                },
+            ],
+            isDarkened: false,
+            isDark: false
+        }) %>
+
+    </section>
+    <!-- END:Section <%- section -%> -->
+<% }) %>
+    <!--END: SECTION LIGHT-->
+
+    
+    <!--SECTION DARK-->
+    <% ['', 'darkened'].forEach((section) => { %>
+        <!-- Section <%- section -%> -->
+        <section class="section section-divider 
+        <% if(section === 'darkened') { %>
+        darkened
+        <% } %>
+        " data-bsystem="dark">
+    
+            <%- include(`${module}/faq/faq`, {
+                title: 'Frequently asked questions',
+                links: [
+                    {
+                        href: '#',
+                        label: 'Brand System'
+                    },
+                    {
+                        href: '#',
+                        label: 'Product contracting'
+                    },
+                    {
+                        href: '#',
+                        label: 'Customer Support'
+                    },
+                    {
+                        href: '#',
+                        label: 'Our commitment'
+                    },
+                ],
+                accordion: [
+                    {
+                        idAccordion: 'accordion1',
+                        idItem: 'item1',
+                        label: 'What is B_system?',
+                        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                    },
+                    {
+                        idAccordion: 'accordion2',
+                        idItem: 'item2',
+                        label: 'In what kind of projects can I use it?',
+                        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                    },
+                    {
+                        idAccordion: 'accordion3',
+                        idItem: 'item3',
+                        label: 'What frameworks does the system use?',
+                        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                    },
+                    {
+                        idAccordion: 'accordion4',
+                        idItem: 'item4',
+                        label: 'How many demos does it have?',
+                        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                    },
+                    {
+                        idAccordion: 'accordion5',
+                        idItem: 'item5',
+                        label: 'Is there any discount or promotion if I use it several times?',
+                        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                    },
+                    {
+                        idAccordion: 'accordion6',
+                        idItem: 'item6',
+                        label: 'What programming languages ​​does it use?',
+                        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                    },
+                ],
+                isDarkened: false,
+                isDark: false
+            }) %>
+    
+        </section>
+        <!-- END:Section <%- section -%> -->
+    <% }) %>
+<!--END: SECTION DARK-->
