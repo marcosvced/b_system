@@ -1,5 +1,5 @@
 <%- include(`${view}/quick_start/layout`) %>
-
+<%- include(`${view}/quick_start/darkened-layout`) %>
 
 <%- contentFor('body') %>
 
@@ -81,6 +81,20 @@
         </div>
         <%- include(`${module}/basicContent/description`, { title:'Create your digital brand in an agile and fluid way', text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.' }) %>
         <!--END:Description module-->
+
+        <!--Header 2 columns-->
+        <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
+            <%- include(`${component}/text/head-x3`, { text: 'Header 2 columns' }) %>
+        </div>
+        <%- include(`${module}/basicContent/half-content`, {
+        title: 'Meet the team that has won so many awards',
+        text:  'Example of how to make your team members known in a creative way. You have a multitude of design combinations.',
+        icon:  'awards-circle',
+        link: { label:'Get to know our awards',
+                href:'#'
+        }}) %>
+        <!--END:Header 2 columns-->
+
     </section>
     <!-- END:Section <%- section -%> -->
 <% }) %>
