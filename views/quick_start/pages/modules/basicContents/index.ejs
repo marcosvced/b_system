@@ -4,6 +4,7 @@
 <%- contentFor('body') %>
 
 <% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
     <section class="section section-divider darkened px-0"
     <% if(section === 'dark') { %>
         data-bsystem="dark"
@@ -45,4 +46,5 @@
         <%- include(`${module}/basicContent/simple`, { variant:'start-fit', title:'Visit our gallery', text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.' }) %>
         <!--END:Simple left fit-->
     </section>
+    <!-- END:Section <%- section -%> -->
 <% }) %>
