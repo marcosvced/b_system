@@ -60,6 +60,11 @@ route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
   render(response, path('modules', ['basicContents']), {}, { navigation })
 })
 
+/* Featured Contents */
+route.get(QUICK_START.FEATURED_CONTENTS, (request, response) => {
+  render(response, path('modules', ['featuredContents']), {}, { navigation })
+})
+
 /**
  * 5 Components
  */

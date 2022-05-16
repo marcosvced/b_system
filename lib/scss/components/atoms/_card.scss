@@ -121,6 +121,7 @@
 
 .feature-card {
     & .img-container {
+        max-height: helper.rem(256);
         border:{
             top-left-radius: helper.rem(6);
             top-right-radius: helper.rem(6);

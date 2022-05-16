@@ -1,0 +1,75 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+    <!--SECTION LIGHT-->
+    <%- include(`${module}/featuredContent/featuredContent`, {
+        title: 'Know B_system Features',
+        cards: [
+            {
+                feature: {
+                    src: 'organized',
+                    size: 'microillustration',
+                    alt: 'feature'
+                },
+                background:{
+                    type: 'primary',
+                    color: 'eren'
+                },
+                title: 'Well organized and layered',
+                text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                link:{
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                innerShadow: true,
+            },
+            {
+                feature: {
+                    src: 'fonts',
+                    size: 'microillustration',
+                    alt: 'feature'
+                },
+                background:{
+                    type: 'secondary',
+                    color: 'eren-600'
+                },
+                title: 'Well organized and layered',
+                text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                link:{
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                innerShadow: true,
+            },
+            {
+                feature: {
+                    src: 'responsive',
+                    size: 'microillustration',
+                    alt: 'feature'
+                },
+                background:{
+                    type: 'primary',
+                    color: 'armin'
+                },
+                title: 'Well organized and layered',
+                text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
+                link:{
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                innerShadow: true,
+            },
+        ],
+        isDarkened: false,
+        isDark: false
+    }) %>
+    <!--END: SECTION LIGHT-->
+
+    
+    <!--SECTION DARK-->
+
+    <!--END: SECTION DARK-->
