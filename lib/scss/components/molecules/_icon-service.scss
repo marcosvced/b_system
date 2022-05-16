@@ -1,0 +1,33 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.icon-service {
+    $parent: &;
+    display: flex;
+
+    #{$parent}-title, #{$parent}-text {
+        text-align: center;
+
+        @include mixin.screen(md) {
+            text-align: left;
+        }
+    }
+
+    #{$parent}-head {
+        padding-bottom: helper.space(40);
+    }
+
+    #{$parent}-link {
+        padding-top: helper.space(48);
+        display: flex;
+        justify-content: center;
+
+        @include mixin.screen(md) {
+            padding-top: helper.space(8);
+            justify-content: flex-start;
+        }
+    }
+}

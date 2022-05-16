@@ -65,6 +65,11 @@ route.get(QUICK_START.FAQS, (request, response) => {
   render(response, path('modules', ['faqs']), {}, { navigation })
 })
 
+/* Icon Services */
+route.get(QUICK_START.ICON_SERVICES, (request, response) => {
+  render(response, path('modules', ['iconServices']), {}, { navigation })
+})
+
 /**
  * 5 Components
  */

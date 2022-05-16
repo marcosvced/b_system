@@ -11,6 +11,7 @@ module.exports = {
     },
     BASIC_CONTENTS: '/modules/basicContents',
     FAQS: '/modules/faqs',
+    ICON_SERVICES: '/modules/iconServices',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

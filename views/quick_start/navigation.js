@@ -38,6 +38,10 @@ const navigation = [
         label: 'FAQs',
       },
       {
+        href: QUICK_START.ICON_SERVICES,
+        label: 'Icon Services',
+      },
+      {
         href: QUICK_START.FOOTERS.BASIC,
         label: 'Footers',
       },
