@@ -1,29 +1,21 @@
-
 <%- include(`${view}/quick_start/layout`) %>
 
-<%- contentFor('styles') %>
+<%- contentFor('body') %>
 
-<%- contentFor('header') %>
-<%
-const headerConfig = {
-    items: navigation,
-    justify: 'right',
-    size: 'full',
-    isSticky: true,
-    hasBackground: true,
-    buttons: [
-        {
-            label: 'Purchase B_system',
-            mobileIcon: 'cart'
+    <%- include( `${module}/businessCase/businessCase`, {
+        title: 'Business cases',
+        text: 'Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.',
+        link: {
+            href: '#',
+            label: 'See all',
+            icon: 'links',
+        },
+        img: {
+            src: 'img_business-case',
+            alt: 'business case module background'
+        },
+        background: {
+            type: 'secondary',
+            color: 'eren-500'
         }
-    ]
-}
-%>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
-
-<main class="main">
-    <section class="section" style="padding-inline: 0;">
-        <div class="container">
-        </div>
-    </section>
-</main>
+    } ) %>

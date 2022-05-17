@@ -1,0 +1,44 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.section-business-case {
+    z-index: 0;
+}
+
+.business-case {
+    $parent: &;
+
+    &-img-container {
+        align-items: flex-end;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        #{$parent}-img {
+            height: 65%;
+            opacity: .16;
+
+            @include mixin.screen(md) {
+                height: 115%;
+            }
+
+            @include mixin.screen(xl) {
+                height: 150%;
+            }
+        }
+    }
+
+    #{$parent}-head {
+        .action-link {
+            display: none;
+
+            @include mixin.screen(xl) {
+                display: flex;
+                color: $c-grayscale--light;
+            }
+        }
+    }
+}
