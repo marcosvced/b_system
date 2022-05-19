@@ -9,6 +9,7 @@ module.exports = {
       CORPORATE: '/modules/footers/corporate',
       NEWSLETTER: '/modules/footers/newsletter',
     },
+    BASIC_GRIDS: '/modules/basicGrids',
     BASIC_CONTENTS: '/modules/basicContents',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',

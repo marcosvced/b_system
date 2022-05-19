@@ -1,0 +1,34 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.section-basic-grid {
+    padding-block: 0;
+}
+
+.basic-grid {
+    $parent: &;
+
+    @include mixin.screen(xl) {
+        padding-inline: 0 !important;
+    }
+
+    &-img-container {
+        @include mixin.screen(xl) {
+            margin-bottom: 0 !important;
+        }
+
+        #{$parent}-img {
+            object-fit: cover;
+            top: 0;
+        }
+    }
+
+    #{$parent}-category {
+        @include themed.properties {
+            color: themed.values($c-grayscale--800, $c-grayscale--light);
+        }
+    }
+}

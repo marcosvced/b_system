@@ -30,6 +30,10 @@ const navigation = [
         label: 'Grids',
       },
       {
+        href: QUICK_START.BASIC_GRIDS,
+        label: 'Basic Grid',
+      },
+      {
         href: '#',
         label: 'Forms',
       },
