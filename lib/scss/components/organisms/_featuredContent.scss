@@ -1,0 +1,29 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.featured-content {
+    $parent: &;
+
+    #{$parent}-title {
+        font-family: helper.family(serif);
+        font-weight: helper.weight(regular);
+    }
+
+    .masked {
+        height: helper.rem(124);
+        width: helper.rem(124);
+
+        @include mixin.screen(md) {
+            height: helper.rem(311);
+            width: helper.rem(311);
+        }
+
+        @include mixin.screen(xl) {
+            height: helper.rem(486);
+            width: helper.rem(486);
+        }
+    }
+}

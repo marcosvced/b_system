@@ -45,7 +45,7 @@
 @use "components/molecules/navdrawer";
 @use "components/molecules/product-card";
 @use "components/molecules/grid-cell";
-@use "components/molecules/icon-description";
+@use "components/molecules/description";
 
 /*
  * 4º Organisms
@@ -54,4 +54,4 @@
 @use "components/organisms/marquee";
 @use "components/organisms/footer";
 @use "components/organisms/icon-description";
-@use "components/organisms/featured-content";
+@use "components/organisms/featuredContent";
