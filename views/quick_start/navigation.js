@@ -34,6 +34,10 @@ const navigation = [
         label: 'Forms',
       },
       {
+        href: QUICK_START.MASKED_CONTENT,
+        label: 'Masked Content',
+      },
+      {
         href: QUICK_START.FOOTERS.BASIC,
         label: 'Footers',
       },
