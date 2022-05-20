@@ -60,9 +60,9 @@ route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
   render(response, path('modules', ['basicContents']), {}, { navigation })
 })
 
-/* Masked Content */
-route.get(QUICK_START.MASKED_CONTENT, (request, response) => {
-  render(response, path('modules', ['maskedContents']), {}, { navigation })
+/* featured Content */
+route.get(QUICK_START.FEATURED_CONTENT, (request, response) => {
+  render(response, path('modules', ['featuredContents']), {}, { navigation })
 })
 
 /* Icon Description */

@@ -1,0 +1,30 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+<!--SECTION LIGHT-->
+    <%- include( `${module}/featuredContent/featuredContent`, {
+        masked: {
+            img: {
+                src: 'icon-description_masked.jpg',
+                alt: 'masked content image',
+                height: '50%',
+                width: '50%'
+            },
+            shape: 'module'
+        },
+        subtitle: '1. Exploration phase',
+        title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+        link: {
+            href: '#',
+            label: 'Learn more',
+            icon: 'links'
+        },
+        isDarkened: false,
+        isDark: false,
+    } ) %>
+<!--END: SECTION LIGHT-->
+
+
+<!--SECTION DARK-->
+
+<!--END: SECTION DARK-->

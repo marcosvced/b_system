@@ -38,8 +38,8 @@ const navigation = [
         label: 'Icon + description'
       },
       {
-        href: QUICK_START.MASKED_CONTENT,
-        label: 'Masked Content',
+        href: QUICK_START.FEATURED_CONTENT,
+        label: 'Featured Content',
       },
       {
         href: QUICK_START.FOOTERS.BASIC,
