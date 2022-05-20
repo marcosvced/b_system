@@ -59,6 +59,8 @@
 
     &-masked {
         .masked {
+            height: helper.rem(88);
+            width: helper.rem(88);
             mask-repeat: no-repeat;
             -webkit-mask-repeat: no-repeat;
             position: relative;
