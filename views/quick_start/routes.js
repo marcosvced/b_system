@@ -65,6 +65,11 @@ route.get(QUICK_START.MASKED_CONTENT, (request, response) => {
   render(response, path('modules', ['maskedContents']), {}, { navigation })
 })
 
+/* Icon Description */
+route.get(QUICK_START.ICON_DESCRIPTION, (request, response) => {
+  render(response, path('modules', ['iconsDescription']), {}, { navigation })
+})
+
 /**
  * 5 Components
  */
@@ -132,6 +137,11 @@ route.get(QUICK_START.MICROILLUSTRATIONS, (request, response) => {
 /* Scenes page. */
 route.get(QUICK_START.SCENES, (request, response) => {
   render(response, path('components', ['scenes']), {}, { navigation })
+})
+
+/* Scenes page. */
+route.get(QUICK_START.ICON_DESCRIPTION_COMPONENT, (request, response) => {
+  render(response, path('components', ['iconsDescription']), {}, { navigation })
 })
 
 // TODO: remove

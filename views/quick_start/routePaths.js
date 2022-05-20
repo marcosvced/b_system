@@ -11,6 +11,7 @@ module.exports = {
       NEWSLETTER: '/modules/footers/newsletter',
     },
     BASIC_CONTENTS: '/modules/basicContents',
+    ICON_DESCRIPTION: '/modules/iconsDescription',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',
@@ -24,5 +25,6 @@ module.exports = {
     MICROILLUSTRATIONS: '/components/microillustrations',
     ILLUSTRATIONS: '/components/illustrations',
     SCENES: '/components/scenes',
+    ICON_DESCRIPTION_COMPONENT: '/components/iconsDescription'
   },
 }

@@ -34,6 +34,10 @@ const navigation = [
         label: 'Forms',
       },
       {
+        href: QUICK_START.ICON_DESCRIPTION,
+        label: 'Icon + description'
+      },
+      {
         href: QUICK_START.MASKED_CONTENT,
         label: 'Masked Content',
       },
@@ -93,7 +97,7 @@ const navigation = [
         label: 'Grid cells',
       },
       {
-        href: '#',
+        href: QUICK_START.ICON_DESCRIPTION_COMPONENT,
         label: 'Icon + description',
       },
       {

@@ -1,0 +1,29 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.section-icon-description {
+    z-index: 0;
+
+    h3+[class^=icon-] {
+        height: 100%;
+        width: 100%;
+        font-size: helper.rem(600);
+        @include themed.properties {
+            color: themed.values($c-grayscale--200, $c-grayscale--1100);
+        }
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        @include mixin.screen(xl) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

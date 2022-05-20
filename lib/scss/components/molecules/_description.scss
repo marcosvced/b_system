@@ -1,0 +1,72 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.icon-description-wrapper {
+    row-gap: helper.space(56);
+}
+
+.icon-description {
+    $parent: &;
+
+    #{$parent}-text, #{$parent}-title {
+        text-align: center;
+    }
+
+    i[class^=icon-] {
+        font-size: helper.rem(48);
+        @include themed.properties {
+            color: themed.values($c-grayscale--800, $c-grayscale--600);
+        }
+    }
+
+    &-left {
+        #{$parent}-text {
+            text-align: left;
+        }
+    }
+
+    &-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-left, &-center {
+        margin-bottom: helper.space(48);
+
+        @include mixin.screen(xl) {
+            margin-bottom: 0;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: helper.space(24);
+
+        .illustration {
+            width: helper.rem(88);
+        }
+
+        #{$parent}-text {
+            padding-inline: helper.space(32);
+        }
+    }
+
+    &-masked {
+        .masked {
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            position: relative;
+
+            .masked-img {
+                height: 100%;
+                position: absolute;
+            }
+        }
+    }
+}
