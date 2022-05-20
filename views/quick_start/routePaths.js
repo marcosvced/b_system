@@ -3,7 +3,7 @@ module.exports = {
     ROUTE_NAME: 'quick_start',
     HOME: '/home',
     HEADERS: '/modules/headers',
-    FEATURED_CONTENTS: '/modules/featureContents',
+    FEATURED_CARDS: '/modules/featureCards',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
       STANDARD: '/modules/footers/standard',

@@ -55,14 +55,14 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
-/* Headers */
+/* Basic Contents */
 route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
   render(response, path('modules', ['basicContents']), {}, { navigation })
 })
 
-/* Featured Contents */
-route.get(QUICK_START.FEATURED_CONTENTS, (request, response) => {
-  render(response, path('modules', ['featuredContents']), {}, { navigation })
+/* Featured Cards */
+route.get(QUICK_START.FEATURED_CARDS, (request, response) => {
+  render(response, path('modules', ['featuredCards']), {}, { navigation })
 })
 
 /**
