@@ -5,8 +5,8 @@
     <%- include( `${module}/featuredContent/featuredContent`, {
         masked: {
             img: {
-                src: 'icon-description_masked.jpg',
-                alt: 'masked content image',
+                src: 'featured-content_01.jpg',
+                alt: 'featured content image',
             },
             shape: 'module'
         },
@@ -20,9 +20,66 @@
         isDarkened: false,
         isDark: false,
     } ) %>
+
+
+    <%- include( `${module}/featuredContent/featuredContent`, {
+        masked: {
+            img: {
+                src: 'featured-content_02.jpg',
+                alt: 'featured content image 2',
+            },
+            shape: 'system'
+        },
+        subtitle: '1. Exploration phase',
+        title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+        link: {
+            href: '#',
+            label: 'Learn more',
+            icon: 'links'
+        },
+        isDarkened: true,
+        isDark: false,
+    } ) %>
 <!--END: SECTION LIGHT-->
 
 
 <!--SECTION DARK-->
+    <%- include( `${module}/featuredContent/featuredContent`, {
+        masked: {
+            img: {
+                src: 'featured-content_03.jpg',
+                alt: 'featured content image 3',
+            },
+            shape: 'template'
+        },
+        subtitle: '1. Exploration phase',
+        title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+        link: {
+            href: '#',
+            label: 'Learn more',
+            icon: 'links'
+        },
+        isDarkened: false,
+        isDark: true,
+    } ) %>
 
+
+    <%- include( `${module}/featuredContent/featuredContent`, {
+        masked: {
+            img: {
+                src: 'featured-content_04.jpg',
+                alt: 'featured content image 4',
+            },
+            shape: 'consistency'
+        },
+        subtitle: '1. Exploration phase',
+        title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+        link: {
+            href: '#',
+            label: 'Learn more',
+            icon: 'links'
+        },
+        isDarkened: true,
+        isDark: true,
+    } ) %>
 <!--END: SECTION DARK-->

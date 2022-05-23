@@ -7,9 +7,29 @@
 .featured-content {
     $parent: &;
 
+    padding-inline: 0;
+
+    @include mixin.screen(md) {
+        padding-inline: helper.space(80);
+    }
+
+    #{$parent}-subtitle {
+        @extend %x5-text;
+
+        @include mixin.screen(xl) {
+            font-size: helper.rem(26);
+        }
+    }
+
     #{$parent}-title {
         font-family: helper.family(serif);
         font-weight: helper.weight(regular);
+    }
+
+    #{$parent}-masked {
+        @include mixin.screen(xl) {
+            margin-bottom: 0 !important;
+        }
     }
 
     .masked {
