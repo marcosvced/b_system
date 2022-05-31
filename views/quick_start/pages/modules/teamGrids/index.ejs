@@ -1,0 +1,21 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<%- include(`${module}/teamGrid/teamGrid`, {
+    [
+        {
+            name: 'Danielle Jolie',
+            job: 'UX/UI',
+            img: {
+                src: '800x800_33',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            }
+        }
+    ]
+}) %>

@@ -26,8 +26,8 @@ const navigation = [
         label: 'Contents',
       },
       {
-        href: '#',
-        label: 'Grids',
+        href: QUICK_START.TEAM_GRIDS,
+        label: 'Team grids',
       },
       {
         href: '#',

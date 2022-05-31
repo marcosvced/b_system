@@ -55,9 +55,14 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
-/* Headers */
+/* Basic Contents */
 route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
   render(response, path('modules', ['basicContents']), {}, { navigation })
+})
+
+/* Team Grids */
+route.get(QUICK_START.TEAM_GRIDS, (request, response) => {
+  render(response, path('modules', ['teamGrids']), {}, { navigation })
 })
 
 /**
