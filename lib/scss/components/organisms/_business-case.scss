@@ -1,55 +1,53 @@
+@use 'sass:map';
+@use '../../variables/palette';
 @use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
+@use '../../mixins/backgounds';
 
 .section-business-case {
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
+  $bg-keys: map.keys(map.merge(palette.$primary, palette.$secondary));
+  @include backgounds.can-use($bg-keys);
+  background-color: $c-eren--500;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
 }
 
 .business-case {
-    $parent: &;
+  $parent: &;
 
-    &-img-container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
+  &-img-container {
+    width: helper.rem(466);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 
-        @include mixin.screen(md) {
-            align-items: center;
-        }
-
-        #{$parent}-img {
-            height: 65%;
-            opacity: .16;
-
-            @include mixin.screen(md) {
-                height: 115%;
-            }
-
-            @include mixin.screen(xl) {
-                height: 150%;
-            }
-        }
+    @include mixin.screen(xl) {
+      width: auto;
+      height: 163%;
     }
 
-    #{$parent}-head {
-        .action-link {
-            display: none;
-
-            @include mixin.screen(xl) {
-                display: flex;
-                color: $c-grayscale--light;
-            }
-        }
+    #{$parent}-img {
+      width: 100%;
+      height: 100%;
+      opacity: .16;
     }
+  }
+
+  #{$parent}-head {
+    .action-link {
+      color: $c-grayscale--light;
+    }
+  }
+
+  .slider {
+      width: 100%;
+      height: 100%;
+      background-color: $c-grayscale--light;
+  }
 }

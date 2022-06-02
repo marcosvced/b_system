@@ -1,8 +1,9 @@
+
 <%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('body') %>
 
-    <%- include( `${module}/businessCase/businessCase`, {
+<%- include( `${module}/businessCase/businessCase`, {
         title: 'Business cases',
         text: 'Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.',
         link: {
@@ -14,8 +15,6 @@
             src: 'img_business-case',
             alt: 'business case module background'
         },
-        background: {
-            type: 'secondary',
-            color: 'eren-500'
-        }
-    } ) %>
+        background: 'eren_500'
+    }
+) %>
