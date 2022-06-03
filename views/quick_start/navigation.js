@@ -22,8 +22,8 @@ const navigation = [
         label: 'Headers',
       },
       {
-        href: '#',
-        label: 'Contents',
+        href: QUICK_START.SERVICE_GRIDS,
+        label: 'Service grid',
       },
       {
         href: '#',
