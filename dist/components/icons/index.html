@@ -7,8 +7,48 @@
     <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
+
+    <!-- Demo styles -->
+    <style>
+      .wrapper {
+        background: #0059c4;
+        padding: 56px;
+        overflow: hidden;
+      }
+      .swiper {
+        width: 532px;
+        height: 358px;
+      }
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #000;
+        background: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
+        opacity: 0;
+      }
+      .swiper-slide-visible,
+      .swiper-slide-prev,
+      .swiper-slide-next {
+        opacity: 1;
+      }
+      .swiper-slide-shadow {
+        display: none;
+      }
+      .swiper-slide-prev,
+      .swiper-slide-next {
+        opacity: 0.9;
+      }
+    </style>
     <style lang="css">
       body {
         background-color: var(--c-grayscale__100);
@@ -70,6 +110,9 @@
                       <a class="dropdown-item " href="#">Forms</a>
                     </li>
                     <li>
+                      <a class="dropdown-item " href="../../modules/businessCases">Business Cases</a>
+                    </li>
+                    <li>
                       <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
                     </li>
                     <li>
@@ -126,6 +169,15 @@
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../components/texts">Texts</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/illustrations">Illustrations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/microillustrations">Microillustrations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/scenes">Scenes</a>
                     </li>
                   </ul>
                 </li>
@@ -1169,6 +1221,9 @@
 
     <!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper bundle CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>

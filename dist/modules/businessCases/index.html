@@ -7,8 +7,48 @@
     <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
+
+    <!-- Demo styles -->
+    <style>
+      .wrapper {
+        background: #0059c4;
+        padding: 56px;
+        overflow: hidden;
+      }
+      .swiper {
+        width: 532px;
+        height: 358px;
+      }
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #000;
+        background: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
+        opacity: 0;
+      }
+      .swiper-slide-visible,
+      .swiper-slide-prev,
+      .swiper-slide-next {
+        opacity: 1;
+      }
+      .swiper-slide-shadow {
+        display: none;
+      }
+      .swiper-slide-prev,
+      .swiper-slide-next {
+        opacity: 0.9;
+      }
+    </style>
     <style lang="css">
     </style>
   </head>
@@ -164,7 +204,7 @@
           <img class="business-case-img" src="../../assets/img/img_business-case.svg" alt="business case module background">
         </picture>
         <div class="business-case container mx-auto">
-          <div class="row">
+          <div class="row align-items-center">
             <div class="business-case-head col-12 col-md-8 col-xl-4 mx-auto space-y-24 space-y-xl-32">
               <h3 class="business-case-title text-white text-center text-xl-start">Business cases</h3>
               <p class="business-case-text text-white text-center text-xl-start">Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.</p>
@@ -175,9 +215,37 @@
                 </a>
               </div>
             </div>
-            <div class="col-12 col-md-8 col-xl-6 mx-auto">
+            <div class="col-12 col-md-8 col-xl-6 mx-auto position-relative">
               <div class="slider">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At debitis deleniti id illo impedit mollitia nisi, nobis nulla porro quis rerum, sint soluta voluptates. Officia, officiis, voluptate. Dolorem, et quae!
+                <div class="swiper mySwiper" data-bsystem="swiper" data-swiper-target="cards" data-swiper-effect="cards">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                  </div>
+                </div>
+
+                <!--                    <div class="swiper-button-next">-->
+
+                <!--                        
+<i class="icon-dart-next"></i>
+-->
+
+                <!--                    </div>-->
+
+                <!--                    <div class="swiper-button-prev">-->
+
+                <!--                        
+<i class="icon-dart-back"></i>
+-->
+
+                <!--                    </div>-->
               </div>
             </div>
           </div>
@@ -207,6 +275,9 @@
 
     <!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper bundle CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>

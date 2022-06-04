@@ -7,8 +7,48 @@
     <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../assets/css/style.min.css' />
+
+    <!-- Demo styles -->
+    <style>
+      .wrapper {
+        background: #0059c4;
+        padding: 56px;
+        overflow: hidden;
+      }
+      .swiper {
+        width: 532px;
+        height: 358px;
+      }
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #000;
+        background: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
+        opacity: 0;
+      }
+      .swiper-slide-visible,
+      .swiper-slide-prev,
+      .swiper-slide-next {
+        opacity: 1;
+      }
+      .swiper-slide-shadow {
+        display: none;
+      }
+      .swiper-slide-prev,
+      .swiper-slide-next {
+        opacity: 0.9;
+      }
+    </style>
     <style lang="css">
     </style>
   </head>
@@ -159,6 +199,25 @@
 
     <!--MAIN CONTENT-->
     <main class="main">
+
+      <!-- Slider main container -->
+      <div class="wrapper">
+        <div class="swiper mySwiper" data-bsystem="swiper" data-swiper-target="cards" data-swiper-effect="cards">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
     </main>
 
     <!--END: MAIN CONTENT-->
@@ -183,6 +242,9 @@
 
     <!--Bootstrap JS Bundle-->
     <script src="../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper bundle CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!--B_system JS-->
     <script src="../assets/js/bsystem.min.js"></script>
