@@ -31,9 +31,12 @@
 //@use "components/atoms/interactions";
 @use "components/atoms/switch";
 @use "components/atoms/interaction-button";
-@use "components/atoms/form";
 @use "components/atoms/illustration";
-
+@use "components/atoms/input";
+@use "components/atoms/select";
+@use "components/atoms/checkbox";
+@use "components/atoms/radiobutton";
+@use "components/atoms/hint";
 
 /*
  * 3º Molecules
@@ -50,3 +53,5 @@
 @use "components/organisms/marquee";
 @use "components/organisms/business-case";
 @use "components/organisms/footer";
+
+

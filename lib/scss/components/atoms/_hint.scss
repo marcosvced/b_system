@@ -1,0 +1,25 @@
+@use '../../variables/colors' as *;
+@use '../../variables/font' as *;
+@use '../../helpers/size';
+@use '../../helpers/themed';
+@use '../../mixins/space';
+
+.form-hint {
+  display: flex;
+  align-items: center;
+  @include space.x(8);
+
+  @include themed.properties {
+    color: themed.values($c-grayscale--800, $c-grayscale--600);
+  }
+
+  > p {
+    font-weight: $f-w-light;
+    color: inherit;
+  }
+
+  [class^='icon-'] {
+    font-size: size.rem(24);
+    color: inherit;
+  }
+}
