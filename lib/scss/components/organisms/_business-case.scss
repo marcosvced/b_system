@@ -1,9 +1,11 @@
 @use 'sass:map';
 @use '../../variables/palette';
 @use '../../variables/colors' as *;
+@use '../../variables/font' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
+@use '../../mixins/styles';
 @use '../../mixins' as mixin;
 @use '../../mixins/backgounds';
 
@@ -46,7 +48,66 @@
   }
 
   .slider {
-      width: 100%;
-      height: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .button-next,
+    .button-prev {
+      position: absolute;
+      color: $c-grayscale--light;
+      font-size: helper.rem(24);
+      top: 50%;
+      transform: translateY(-50%);
+
+      &.swiper-button-disabled {
+        color: $c-opacity__light--200;
+        cursor: not-allowed;
+      }
+    }
+
+    .button-next {
+      right: 0;
+    }
+  }
+
+  .swiper {
+    //@include mixin.screen(md) {
+    width: 100%;
+    max-width: helper.rem(544);
+    height: helper.rem(340);
+    //}
+    @include mixin.screen(xl) {
+      max-width: helper.rem(532);
+      height: helper.rem(358);
+    }
+
+    &-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      font-size: $f-s-md;
+      font-weight: bold;
+      color: $c-grayscale--ash;
+      background: $c-grayscale--light;
+      opacity: 0;
+      @include styles.shadow-500;
+
+      &-visible,
+      &-prev,
+      &-next {
+        opacity: 1;
+      }
+
+      &-prev,
+      &-next {
+        opacity: 0.9;
+      }
+
+      &-shadow {
+        display: none;
+      }
+    }
   }
 }
