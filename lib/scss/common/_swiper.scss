@@ -3,10 +3,12 @@
 @use "../variables/colors" as *;
 
 .swiper{
+  overflow: visible;
   &-pagination{
     padding-top: 56px;
     width: min-content;
     margin: auto;
+    position: relative;
     &-bullet {
       width: size.rem(32);
       height: size.rem(2);
