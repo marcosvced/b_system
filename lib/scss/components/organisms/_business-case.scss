@@ -29,6 +29,10 @@
     transform: translate(-50%, -50%);
     z-index: -1;
 
+    @include mixin.screen(md) {
+      width: 100%;
+    }
+
     @include mixin.screen(xl) {
       width: auto;
       height: 163%;
@@ -83,9 +87,11 @@
     }
 
     &-slide {
+      padding: helper.space(24);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       border-radius: 4px;
       font-size: $f-s-md;
       font-weight: bold;
@@ -107,6 +113,21 @@
 
       &-shadow {
         display: none;
+      }
+
+      .slide-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .slide-text {
+          width: 100%;
+        }
+      }
+
+      .slide-header [class^=icon-] {
+        color: $c-grayscale--300;
       }
     }
   }
