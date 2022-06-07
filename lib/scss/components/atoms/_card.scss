@@ -163,6 +163,11 @@
 }
 
 .service-card {
+    .img-basic {
+        height: 100%;
+        object-fit: cover;
+    }
+
     & .img-basic {
         border:{
             top-left-radius: helper.rem(6);
