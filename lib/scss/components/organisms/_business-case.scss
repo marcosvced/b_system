@@ -76,11 +76,13 @@
   }
 
   .swiper {
-    //@include mixin.screen(md) {
-    width: 100%;
-    max-width: helper.rem(544);
-    height: helper.rem(340);
-    //}
+    display: grid;
+    grid-auto-rows: helper.rem(340) min-content;
+    @include mixin.screen(sm) {
+      width: 100%;
+      max-width: helper.rem(544);
+      height: helper.rem(340);
+    }
     @include mixin.screen(xl) {
       max-width: helper.rem(532);
       height: helper.rem(358);
@@ -97,19 +99,18 @@
       font-weight: bold;
       color: $c-grayscale--ash;
       background: $c-grayscale--light;
-      opacity: 0;
+      opacity: 1;
       @include styles.shadow-500;
 
-      &-visible,
-      &-prev,
-      &-next {
+      @include mixin.screen(sm) {
+        opacity: 0.9;
+      }
+
+
+      &-visible {
         opacity: 1;
       }
 
-      &-prev,
-      &-next {
-        opacity: 0.9;
-      }
 
       &-shadow {
         display: none;
