@@ -109,15 +109,15 @@
     }
 
     &-slide {
-      padding: helper.space(24);
-      justify-content: space-between;
-      border-radius: 4px;
-      font-size: $f-s-md;
-      font-weight: bold;
-      color: $c-grayscale--ash;
-      background: $c-grayscale--light;
+      //padding: helper.space(24);
+      //justify-content: space-between;
+      //border-radius: 4px;
+      //font-size: $f-s-md;
+      //font-weight: bold;
+      //color: $c-grayscale--ash;
+      //background: $c-grayscale--light;
       opacity: 1;
-      @include styles.shadow-500;
+      //@include styles.shadow-500;
 
       @include mixin.screen(sm) {
         opacity: 0.9;
