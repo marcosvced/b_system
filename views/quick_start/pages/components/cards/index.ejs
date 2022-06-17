@@ -15,10 +15,12 @@
 
            <div class="col-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card.jpg',
-                    imgAlt: 'Card image',
-                    titleBasic: '.US',
-                    textBasic: 'Product design'
+                    img: {
+                        src:'img_basic-card',
+                        alt: 'Card image'
+                    },
+                    title: '.US',
+                    text: 'Product design'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic card
@@ -27,10 +29,12 @@
 
            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card-2.jpg',
-                    imgAlt: 'Card image',
-                    avatar: '800x800_33.jpg',
-                    avatarAlt: 'This is a description text'
+                    img: {
+                        src:'img_basic-card-2',
+                        alt: 'Card image'
+                    },
+                    avatar: '800x800_33',
+                    avatarAlt: 'avatar image'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic image + Avatar
@@ -39,9 +43,11 @@
 
            <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card-3.jpg',
-                    imgAlt: 'Card image',
-                    textOverImg: 'B_system'
+                    img: {
+                        src:'img_basic-card-2',
+                        alt: 'Card image'
+                    },
+                    textImg: 'B_system'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic image + text
@@ -108,17 +114,21 @@
                 </span>
             </div>
 
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24  d-flex flex-column">
                 <%- include( `${component}/card/business`, {
-                    titleBusiness: 'Business case 1: Brandemic',
+                    title: 'Business case 1: Brandemic',
                     icon: 'star',
                     subtitle: 'New brand',
-                    logo: 'logo-brandemic.svg',
-                    logoAlt: 'Brandemic logo',
+                    img: {
+                        src: 'logo-brandemic',
+                        alt: 'Brandemic logo',
+                    },
                     date: '23/03/2019',
-                    hrefCard: '#',
-                    labelLink: 'More info',
-                    iconLink: 'info'
+                    link: {
+                        href: '#',
+                        label: 'More info',
+                        icon: 'info'
+                    }
                 } ) %>
                 <span class="body-light-gray-text">
                     Business case card
@@ -237,10 +247,12 @@
 
            <div class="col-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card.jpg',
-                    imgAlt: 'Card image',
-                    titleBasic: '.US',
-                    textBasic: 'Product design'
+                    img: {
+                        src:'img_basic-card',
+                        alt: 'Card image'
+                    },
+                    title: '.US',
+                    text: 'Product design'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic card
@@ -249,10 +261,12 @@
 
            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card-2.jpg',
-                    imgAlt: 'Card image',
-                    avatar: '800x800_33.jpg',
-                    avatarAlt: 'This is a description text'
+                    img: {
+                        src:'img_basic-card-2',
+                        alt: 'Card image'
+                    },
+                    avatar: '800x800_33',
+                    avatarAlt: 'avatar image'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic image + Avatar
@@ -261,9 +275,11 @@
 
            <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card-3.jpg',
-                    imgAlt: 'Card image',
-                    textOverImg: 'B_system'
+                    img: {
+                        src:'img_basic-card-2',
+                        alt: 'Card image'
+                    },
+                    textImg: 'B_system'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic image + text
@@ -330,17 +346,21 @@
                 </span>
             </div>
 
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24  d-flex flex-column">
                 <%- include( `${component}/card/business`, {
-                    titleBusiness: 'Business case 1: Brandemic',
+                    title: 'Business case 1: Brandemic',
                     icon: 'star',
                     subtitle: 'New brand',
-                    logo: 'logo-brandemic.svg',
-                    logoAlt: 'Brandemic logo',
+                    img: {
+                        src: 'logo-brandemic',
+                        alt: 'Brandemic logo',
+                    },
                     date: '23/03/2019',
-                    hrefCard: '#',
-                    labelLink: 'More info',
-                    iconLink: 'info'
+                    link: {
+                        href: '#',
+                        label: 'More info',
+                        icon: 'info'
+                    }
                 } ) %>
                 <span class="body-light-gray-text">
                     Business case card
@@ -459,10 +479,12 @@
 
            <div class="col-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card.jpg',
-                    imgAlt: 'Card image',
-                    titleBasic: '.US',
-                    textBasic: 'Product design'
+                    img: {
+                        src:'img_basic-card',
+                        alt: 'Card image'
+                    },
+                    title: '.US',
+                    text: 'Product design'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic card
@@ -471,10 +493,12 @@
 
            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card-2.jpg',
-                    imgAlt: 'Card image',
-                    avatar: '800x800_33.jpg',
-                    avatarAlt: 'This is a description text'
+                    img: {
+                        src:'img_basic-card-2',
+                        alt: 'Card image'
+                    },
+                    avatar: '800x800_33',
+                    avatarAlt: 'avatar image'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic image + Avatar
@@ -483,9 +507,11 @@
 
            <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card-3.jpg',
-                    imgAlt: 'Card image',
-                    textOverImg: 'B_system'
+                    img: {
+                        src:'img_basic-card-2',
+                        alt: 'Card image'
+                    },
+                    textImg: 'B_system'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic image + text
@@ -552,17 +578,21 @@
                 </span>
             </div>
 
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24 d-flex flex-column">
                 <%- include( `${component}/card/business`, {
-                    titleBusiness: 'Business case 1: Brandemic',
+                    title: 'Business case 1: Brandemic',
                     icon: 'star',
                     subtitle: 'New brand',
-                    logo: 'logo-brandemic-light.svg',
-                    logoAlt: 'Brandemic logo',
+                    img: {
+                        src: 'logo-brandemic',
+                        alt: 'Brandemic logo',
+                    },
                     date: '23/03/2019',
-                    hrefCard: '#',
-                    labelLink: 'More info',
-                    iconLink: 'info'
+                    link: {
+                        href: '#',
+                        label: 'More info',
+                        icon: 'info'
+                    }
                 } ) %>
                 <span class="body-light-gray-text">
                     Business case card
@@ -681,10 +711,12 @@
 
            <div class="col-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card.jpg',
-                    imgAlt: 'Card image',
-                    titleBasic: '.US',
-                    textBasic: 'Product design'
+                    img: {
+                        src:'img_basic-card',
+                        alt: 'Card image'
+                    },
+                    title: '.US',
+                    text: 'Product design'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic card
@@ -693,10 +725,12 @@
 
            <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card-2.jpg',
-                    imgAlt: 'Card image',
-                    avatar: '800x800_33.jpg',
-                    avatarAlt: 'This is a description text'
+                    img: {
+                        src:'img_basic-card-2',
+                        alt: 'Card image'
+                    },
+                    avatar: '800x800_33',
+                    avatarAlt: 'avatar image'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic image + Avatar
@@ -705,9 +739,11 @@
 
            <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
                 <%- include( `${component}/card/basic`, {
-                    img: 'img_basic-card-3.jpg',
-                    imgAlt: 'Card image',
-                    textOverImg: 'B_system'
+                    img: {
+                        src:'img_basic-card-2',
+                        alt: 'Card image'
+                    },
+                    textImg: 'B_system'
                 } ) %>
                 <span class="body-light-gray-text">
                     Basic image + text
@@ -774,17 +810,21 @@
                 </span>
             </div>
 
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24 d-flex flex-column">
                 <%- include( `${component}/card/business`, {
-                    titleBusiness: 'Business case 1: Brandemic',
+                    title: 'Business case 1: Brandemic',
                     icon: 'star',
                     subtitle: 'New brand',
-                    logo: 'logo-brandemic-light.svg',
-                    logoAlt: 'Brandemic logo',
+                    img: {
+                        src: 'logo-brandemic',
+                        alt: 'Brandemic logo',
+                    },
                     date: '23/03/2019',
-                    hrefCard: '#',
-                    labelLink: 'More info',
-                    iconLink: 'info'
+                    link: {
+                        href: '#',
+                        label: 'More info',
+                        icon: 'info'
+                    }
                 } ) %>
                 <span class="body-light-gray-text">
                     Business case card
