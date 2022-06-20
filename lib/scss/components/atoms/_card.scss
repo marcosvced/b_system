@@ -1,3 +1,4 @@
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
@@ -5,7 +6,7 @@
 
 .darkened .bg-card {
     @include themed.properties {
-        background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+        background-color: themed.values($c-grayscale--light, helper.grayscale(1100));
         box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100), none);
     }
 }
@@ -45,7 +46,7 @@
     border-radius: helper.rem(6);
 
     @include themed.properties {
-        background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
+        background-color: themed.values($c-grayscale--100, helper.grayscale(1200));
     }
 
     & .service-text {
@@ -60,7 +61,7 @@
         & [class^='icon-'] {
             font-size: helper.rem(23);
             @include themed.properties {
-                color: themed.values(helper.grayscale(400), helper.grayscale(800));
+                color: themed.values($c-grayscale--400, $c-grayscale--800);
             }
         }
     }
@@ -72,7 +73,7 @@
     & .list-card {
         & [class^='icon-'] {
             font-size: helper.rem(20);
-            color: helper.grayscale(800);
+            color: $c-grayscale--800;
             display: inline-grid;
             align-items: center;
             justify-content: center;
@@ -80,13 +81,13 @@
         }
 
         & .icon-check {
-            color: helper.primary(green);
+            color: helper.primary(mikasa);
         }
     }
 
     & .tag-card {
-        background-color: helper.primary(blue);
-        color: helper.grayscale(light);
+        background-color: $c-eren;
+        color: $c-grayscale--light;
         width: helper.rem(48);
         height: helper.rem(72);
         padding-bottom: helper.rem(8);
@@ -100,7 +101,7 @@
 
     & .border-bottom {
         @include themed.properties {
-            border-color: themed.values(helper.grayscale(300) !important, helper.grayscale(1000) !important);
+            border-color: themed.values(helper.grayscale(300) !important, $c-grayscale--1000 !important);
         }
     }
 
@@ -134,7 +135,7 @@
 }
 
 .full-card {
-    min-height: 32rem;
+    height: 100%;
 }
 
 .contact-card {
@@ -176,19 +177,19 @@
 .value-card {
     & .star-off {
         @include themed.properties {
-            color: themed.values(helper.grayscale(400), helper.grayscale(900));
+            color: themed.values($c-grayscale--400, $c-grayscale--900);
         }
     }
 
     & .star-on {
-        color: helper.secondary(orange-400);
+        color: helper.secondary(annie-400);
     }
 }
 
 .icon-description-card {
     & [class^='icon-'] {
         font-size: helper.rem(48);
-        color: helper.grayscale(800);
+        color: $c-grayscale--800;
     }
 }
 
@@ -204,13 +205,13 @@
 
     &:hover {
         @include themed.properties {
-            outline-color: themed.values(helper.secondary(blue-500), helper.primary(blue));
+            outline-color: themed.values(helper.secondary(eren-500), $c-eren);
         }
-        outline-color: helper.primary(blue);
+        outline-color: $c-eren;
 
         & .action-link {
             @include themed.properties {
-                color: themed.values(helper.secondary(blue-500), helper.primary(blue));
+                color: themed.values(helper.secondary(eren-500), $c-eren);
             }
         }
     }
@@ -262,10 +263,10 @@
         padding: 0 !important;
 
         & .header-card {
-            background-color: helper.primary(blue);
+            background-color: $c-eren;
         }
             & .header-text {
-                color: helper.grayscale(light);
+                color: $c-grayscale--light;
             }
     }
 }

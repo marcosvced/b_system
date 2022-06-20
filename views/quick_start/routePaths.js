@@ -18,6 +18,8 @@ module.exports = {
       STANDAR: '/modules/marquees/standar',
       TEXTIMAGE: '/modules/marquees/textImage',
     },
+    BASIC_CONTENTS: '/modules/basicContents',
+    BUSINESS_CASES: '/modules/businessCases',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

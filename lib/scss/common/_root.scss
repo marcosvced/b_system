@@ -48,8 +48,8 @@
     #{enum.find(BODY)}#{$_name}: #{$_color};
   }
 
-  @each $_name, $_color in palette.$button {
-    #{enum.find(BUTTON)}#{$_name}: #{$_color};
+  @each $_name, $_color in palette.$hover {
+    #{enum.find(HOVER)}#{$_name}__hover: #{$_color};
   }
 
   /*

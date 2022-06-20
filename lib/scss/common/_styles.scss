@@ -1,3 +1,4 @@
+@use '../variables/colors' as *;
 @use "../placeholders/fonts";
 @use "../helpers/size";
 @use "../helpers/colors";
@@ -7,155 +8,144 @@
 @use '../helpers/font';
 
 * {
-    @include themed.properties {
-        color: themed.values(colors.grayscale('dark'), colors.grayscale('light'));
-    }
+  @include themed.properties {
+    color: themed.values(colors.grayscale('dark'), colors.grayscale('light'));
+  }
 }
 
 h1 {
-    @extend %x3-text;
-    @include media.screen(md) {
-        font: {
-            size: font.size(xl);
-            family: font.family(roboto);
-            weight: font.weight(bold);
-        }
-        line-height: 1.3;
-        letter-spacing: size.rem(.5);
+  @extend %x3-text;
+  @include media.screen(md) {
+    font: {
+      size: font.size(xl);
+      family: font.family(sans-serif);
+      weight: font.weight(bold);
     }
-    @include media.screen(xl) {
-        font: {
-            size: font.size(xxl);
-            family: font.family(roboto);
-            weight: font.weight(bold);
-        }
-        line-height: 1.19;
-        letter-spacing: size.rem(.6);
+    line-height: 1.3;
+    letter-spacing: size.rem(.5);
+  }
+  @include media.screen(xl) {
+    font: {
+      size: font.size(xxl);
+      family: font.family(sans-serif);
+      weight: font.weight(bold);
     }
+    line-height: 1.19;
+    letter-spacing: size.rem(.6);
+  }
 }
 
 h2 {
-    @extend %x4-text;
-    @include media.screen(md) {
-        font: {
-            size: font.size(lg);
-            family: font.family(roboto);
-            weight: font.weight(bold);
-        }
-        line-height: 1.38;
-        letter-spacing: size.rem(.37);
+  @extend %x4-text;
+  @include media.screen(md) {
+    font: {
+      size: font.size(lg);
+      family: font.family(sans-serif);
+      weight: font.weight(bold);
     }
-    @include media.screen(xl) {
-        font: {
-            size: font.size(xl);
-            family: font.family(roboto);
-            weight: font.weight(bold);
-        }
-        line-height: 1.3;
-        letter-spacing: size.rem(.5);
+    line-height: 1.38;
+    letter-spacing: size.rem(.37);
+  }
+  @include media.screen(xl) {
+    font: {
+      size: font.size(xl);
+      family: font.family(sans-serif);
+      weight: font.weight(bold);
     }
+    line-height: 1.3;
+    letter-spacing: size.rem(.5);
+  }
 }
 
 h3 {
-    @extend %x4-text;
-    @include media.screen(md) {
-        font: {
-            size: font.size(lg);
-            family: font.family(roboto);
-            weight: font.weight(bold);
-        }
-        line-height: 1.38;
-        letter-spacing: size.rem(.37);
+  @extend %x4-text;
+  @include media.screen(md) {
+    font: {
+      size: font.size(lg);
+      family: font.family(sans-serif);
+      weight: font.weight(bold);
     }
+    line-height: 1.38;
+    letter-spacing: size.rem(.37);
+  }
 }
 
 h4 {
-    @extend %x4-text;
+  @extend %x4-text;
 }
 
 h5 {
-    @extend %x5-text;
+  @extend %x5-text;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    @extend %body-regular-text;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  @extend %body-regular-text;
 }
 
 p,
 span {
-    @extend %body-regular-text;
-    margin: 0;
-    padding: 0;
+  @extend %body-regular-text;
+  margin: 0;
+  padding: 0;
 }
 
 b {
-    @extend %body-bold-text;
+  @extend %body-bold-text;
 }
 
 label,
 span.label {
-    @extend %body-light-text;
-    color: colors.body(38);
+  @extend %body-light-text;
+  color: colors.body(38);
 
-    &.--small {
-        @extend %x10-mini;
-    }
+  &.--small {
+    @extend %x9-text;
+  }
 }
 
 svg {
-    width: inherit;
-    height: inherit;
-    display: block;
+  width: inherit;
+  height: inherit;
+  display: block;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
-
-.header-fixed {
-    + .main {
-        // padding-top: size.rem(48);
-        @include media.screen(xl) {
-            // padding-top: size.rem(92);
-        }
-
-        > .section.darkened:first-of-type {
-            padding-top: size.rem(48);
-            margin-top: size.rem(-48);
-            @include media.screen(xl) {
-                // padding-top: size.rem(92);
-                margin-top: size.rem(-92);
-            }
-        }
-    }
-}
-
 
 .demo-card {
-    $parent: &;
-    width: 100%;
-    padding-bottom: 100%;
-    position: relative;
-    border-radius: size.rem(8);
+  $parent: &;
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  border-radius: size.rem(8);
 
-    @include themed.light {
-        @include styles.shadow-600;
-        background-color: colors.grayscale(light);
-    }
+  &#{$parent}-scene {
+    padding-bottom: 120%;
+  }
 
-    @include themed.dark {
-        background-color: colors.grayscale(1100);
-        @include styles.shadow-gray;
-    }
+  &#{$parent}-micro-illustration > *{
+    max-width: size.rem(104);
+  }
 
-    > * {
-        position: absolute !important;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
+  @include themed.light {
+    @include styles.shadow-600;
+    background-color: $c-grayscale--light;
+  }
+
+  @include themed.dark {
+    background-color: $c-grayscale--1100;
+    @include styles.shadow-gray;
+  }
+
+  > * {
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

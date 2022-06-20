@@ -31,11 +31,11 @@ const navigation = [
       },
       {
         href: '#',
-        label: 'Cards',
+        label: 'Forms',
       },
       {
-        href: '#',
-        label: 'Forms',
+        href: QUICK_START.BUSINESS_CASES,
+        label: 'Business Cases',
       },
       {
         href: QUICK_START.FOOTERS.BASIC,
@@ -43,7 +43,7 @@ const navigation = [
       },
       {
         href: QUICK_START.FOOTERS.STANDARD,
-        label: 'Footers Estandar',
+        label: 'Footers Standard',
       },
       {
         href: QUICK_START.FOOTERS.CORPORATE,
@@ -52,6 +52,10 @@ const navigation = [
       {
         href: QUICK_START.FOOTERS.NEWSLETTER,
         label: 'Footers Newsletter',
+      },
+      {
+        href: QUICK_START.BASIC_CONTENTS,
+        label: 'Basic Contents',
       },
       {
         href: QUICK_START.MARQUEES.BASIC,
@@ -113,7 +117,7 @@ const navigation = [
         label: 'Links',
       },
       {
-        href: QUICK_START.GRIDCELLS,
+        href: QUICK_START.GRID_CELLS,
         label: 'Grid cells',
       },
       {
@@ -141,17 +145,18 @@ const navigation = [
         label: 'Texts',
       },
       {
-        href: QUICK_START.MICROILLUSTRATIONS,
-        label: 'Microillustration',
+        href: QUICK_START.ILLUSTRATIONS,
+        label: 'Illustrations',
       },
       {
-        href: QUICK_START.ILLUSTRATIONS,
-        label: 'Illustration',
+        href: QUICK_START.MICROILLUSTRATIONS,
+        label: 'Microillustrations',
       },
       {
         href: QUICK_START.SCENES,
         label: 'Scenes',
       },
+
     ],
   },
   {

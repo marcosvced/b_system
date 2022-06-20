@@ -19,12 +19,12 @@
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
           <div class="d-flex d-xl-none order-0">
-            <button href="#" class="btn btn-only-icon">
+            <button type="button" class="btn btn-only-icon">
               <i class="icon-cart"></i>
             </button>
           </div>
           <div class="d-none d-xl-block order-1">
-            <button href="#" class="btn btn-primary     btn-fit">
+            <button type="button" class="btn btn-primary    btn-fit">
               Purchase B_system
             </button>
           </div>
@@ -64,22 +64,22 @@
                       <a class="dropdown-item " href="#">Grids</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Cards</a>
-                    </li>
-                    <li>
                       <a class="dropdown-item " href="#">Forms</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="../../modules/footers/estandar">Footers Estandar</a>
+                      <a class="dropdown-item " href="../../modules/footers/standard">Footers Standard</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/footers/corporate">Footers Corporate</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/footers/newsletter">Footers Newsletter</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/basicContents">Basic Contents</a>
                     </li>
                   </ul>
                 </li>
@@ -127,6 +127,15 @@
                     <li>
                       <a class="dropdown-item " href="../../components/texts">Texts</a>
                     </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/illustrations">Illustrations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/microillustrations">Microillustrations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/scenes">Scenes</a>
+                    </li>
                   </ul>
                 </li>
                 <li class="nav-item  ">
@@ -138,7 +147,7 @@
             </nav>
           </div>
           <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-            <button href="#" class="btn btn-only-icon">
+            <button type="button" class="btn btn-only-icon">
               <i class="icon-menu"></i>
             </button>
           </div>
@@ -154,135 +163,249 @@
       <!--SECTION LIGHT-->
       <section class="section">
         <div class="container">
-          <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Form elements</h3>
-          <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
-            <div class="h-100 space-y-24">
-              <div class="form-group position-relative">
-                <input type="text" class="input-basic form-control input" placeholder=" ">
-                <label class="form-placeholder">Name</label>
+          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Form elements</h3>
+          <form class="space-bottom-48 space-y-48">
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 ">
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <input id="name" type="text" class="form-control " placeholder="Name" aria-invalid="false" aria-required="true">
+                  <label for="name" class="form-placeholder">Name</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Input text
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Input states
-                </span>
-            </div>
-            <div class="h-100 space-y-24">
-              <div class="form-group position-relative">
-                <input type="password" class="input-hideable form-control input" placeholder=" ">
-                <button href="#" class="btn btn-only-icon">
-                  <i class="icon-eye"></i>
-                </button>
-                <label class="form-placeholder">Password</label>
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <input id="invalid" type="text" class="form-control is-invalid" placeholder="Email address" aria-invalid="true" aria-required="true" value='helena.com'>
+                  <label for="invalid" class="form-placeholder">Email address</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Input invalid
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Input hideable states 
-                </span>
-            </div>
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-              <div class="form-group position-relative">
-                <input type="checkbox" class="input-check form-check-input input space-right-8" id="check-states">
-                <i class="icon-done"></i>
-                <label class="form-check-label" for="check-states">I accept the treatment of my data.</label>
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <input id="pass" type="password" class="form-control " placeholder="Password" aria-invalid="false" aria-required="true">
+                  <button type="button" class="btn btn-only-icon">
+                    <i class="icon-eye"></i>
+                  </button>
+                  <label for="pass" class="form-placeholder">Password</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Input password
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Check states 
-                </span>
             </div>
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-              <div class="form-group position-relative">
-                <input type="radio" class="input-radio form-check-input input space-right-8" id="radio-states">
-                <label class="label-radio form-check-label" for="radio-states">I choose the premium level.</label>
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 row-gap-48 ">
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <input id="email" type="email" class="form-control " placeholder="Email address" aria-invalid="false" aria-required="true" data-bsystem="validate-email">
+                  <label for="email" class="form-placeholder">Email address</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Validation email
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Radio states
-                </span>
-            </div>
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-              <div class="form-info d-flex align-items-center space-x-8">
-                <i class="icon-info"></i>
-                <p class="body-light-gray-text">Gift cards cannot be used to pay cash.</p>
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <select id="select" type="text" class="form-select " aria-invalid="false" aria-required="true">
+                    <option value="Admin"> Admin </option>
+                    <option value="Member"> Member </option>
+                    <option value="Guest"> Guest </option>
+                  </select>
+                  <div class="chevron">
+                    <i class="icon-open"></i>
+                  </div>
+                  <label for="select" class="form-placeholder">User rol</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Select
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Info
-                </span>
             </div>
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-              <a href="#" class="action-link ">
-                <i class="icon-info"></i>
-                <span>Gift cards cannot be used to pay cash.</span>
-              </a>
-              <span class="body-light-gray-text">
-                    Info and link
-                </span>
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 row-gap-48 ">
+              <div class="col-span-4 space-y-24">
+                <div class="d-flex flex-column space-y-16">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox-light">
+                    <i class="icon-done"></i>
+                    <label class="form-check-label" for="checkbox-light">
+                      I accept the treatment of my data. </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox-light-two">
+                    <i class="icon-done"></i>
+                    <label class="form-check-label" for="checkbox-light-two">
+                      I want to receive information about new offers. </label>
+                  </div>
+                </div>
+                <span class="body-light-gray-text">
+                        Check states
+                    </span>
+              </div>
+              <div class="col-span-4 space-y-24">
+                <div class="d-flex flex-column space-y-16">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="" id="radio-premium-light" name="radio-group" checked>
+                    <span class="dot"></span>
+                    <label class="form-check-label" for="radio-premium-light">
+                      I choose the premium level. </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="" id="radio-standard-light" name="radio-group">
+                    <span class="dot"></span>
+                    <label class="form-check-label" for="radio-standard-light">
+                      I choose the standard level. </label>
+                  </div>
+                </div>
+                <span class="body-light-gray-text">
+                        Radio states
+                    </span>
+              </div>
+              <div class="col-span-4 space-y-24">
+                <div class="d-flex flex-column space-y-16">
+                  <div class="form-hint">
+                    <i class="icon-info"></i>
+                    <p>Gift cards cannot be used to pay cash.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <i class="icon-info"></i>
+                    <span>Gift cards cannot be used to pay cash.</span>
+                  </a>
+                </div>
+                <span class="body-light-gray-text">
+                        Info & Link
+                    </span>
+              </div>
             </div>
           </form>
+        </div>
       </section>
 
       <!--END: SECTION LIGHT-->
 
       <!--SECTION DARK-->
-      <section class="section" data-bsystem="dark">
+      <section data-bsystem="dark" class="section">
         <div class="container">
-          <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Form elements dark</h3>
-          <form class="d-grid grid-1 grid-sm-3 column-gap-24 row-gap-48 space-bottom-48">
-            <div class="h-100 space-y-24">
-              <div class="form-group position-relative">
-                <input type="text" class="input-basic form-control input" placeholder=" ">
-                <label class="form-placeholder">Name</label>
+          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Form elements</h3>
+          <form class="space-bottom-48 space-y-48">
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 ">
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <input id="name-dark" type="text" class="form-control " placeholder="Name" aria-invalid="false" aria-required="true">
+                  <label for="name-dark" class="form-placeholder">Name</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Input text
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Input states
-                </span>
-            </div>
-            <div class="h-100 space-y-24">
-              <div class="form-group position-relative">
-                <input type="password" class="input-hideable form-control input" placeholder=" ">
-                <button href="#" class="btn btn-only-icon">
-                  <i class="icon-eye"></i>
-                </button>
-                <label class="form-placeholder">Password</label>
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <input id="invalid-dark" type="text" class="form-control is-invalid" placeholder="Email address" aria-invalid="true" aria-required="true" value='helena.com'>
+                  <label for="invalid-dark" class="form-placeholder">Email address</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Input invalid
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Input hideable states 
-                </span>
-            </div>
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-              <div class="form-group position-relative">
-                <input type="checkbox" class="input-check form-check-input input space-right-8" id="check-states-dark">
-                <i class="icon-done"></i>
-                <label class="form-check-label" for="check-states-dark">I accept the treatment of my data.</label>
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <input id="pass-dark" type="password" class="form-control " placeholder="Password" aria-invalid="false" aria-required="true">
+                  <button type="button" class="btn btn-only-icon">
+                    <i class="icon-eye"></i>
+                  </button>
+                  <label for="pass-dark" class="form-placeholder">Password</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Input password
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Check states 
-                </span>
             </div>
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-              <div class="form-group position-relative">
-                <input type="radio" class="input-radio form-check-input input space-right-8" id="radio-states-dark">
-                <label class="label-radio form-check-label" for="radio-states-dark">I choose the premium level.</label>
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 row-gap-48 ">
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <input id="email-dark" type="email" class="form-control " placeholder="Email address" aria-invalid="false" aria-required="true" data-bsystem="validate-email">
+                  <label for="email-dark" class="form-placeholder">Email address</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Validation email
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Radio states
-                </span>
-            </div>
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-              <div class="form-info d-flex align-items-center space-x-8">
-                <i class="icon-info"></i>
-                <p class="body-light-gray-text">Gift cards cannot be used to pay cash.</p>
+              <div class="col-span-4 space-y-24">
+                <div class="form-floating">
+                  <select id="select-dark" type="text" class="form-select " aria-invalid="false" aria-required="true">
+                    <option value="Admin"> Admin </option>
+                    <option value="Member"> Member </option>
+                    <option value="Guest"> Guest </option>
+                  </select>
+                  <div class="chevron">
+                    <i class="icon-open"></i>
+                  </div>
+                  <label for="select-dark" class="form-placeholder">User rol</label>
+                </div>
+                <span class="body-light-gray-text">
+                        Select
+                    </span>
               </div>
-              <span class="body-light-gray-text">
-                    Info
-                </span>
             </div>
-            <div class="d-flex flex-column justify-content-end h-100 space-y-24">
-              <a href="#" class="action-link ">
-                <i class="icon-info"></i>
-                <span>Gift cards cannot be used to pay cash.</span>
-              </a>
-              <span class="body-light-gray-text">
-                    Info and link
-                </span>
+            <div class="d-grid grid-4 grid-md-8 grid-xl-12 row-gap-48 ">
+              <div class="col-span-4 space-y-24">
+                <div class="d-flex flex-column space-y-16">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox-dark">
+                    <i class="icon-done"></i>
+                    <label class="form-check-label" for="checkbox-dark">
+                      I accept the treatment of my data. </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox-dark-two">
+                    <i class="icon-done"></i>
+                    <label class="form-check-label" for="checkbox-dark-two">
+                      I want to receive information about new offers. </label>
+                  </div>
+                </div>
+                <span class="body-light-gray-text">
+                        Check states
+                    </span>
+              </div>
+              <div class="col-span-4 space-y-24">
+                <div class="d-flex flex-column space-y-16">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="" id="radio-premium-dark" name="radio-group" checked>
+                    <span class="dot"></span>
+                    <label class="form-check-label" for="radio-premium-dark">
+                      I choose the premium level. </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="" id="radio-standard-dark" name="radio-group">
+                    <span class="dot"></span>
+                    <label class="form-check-label" for="radio-standard-dark">
+                      I choose the standard level. </label>
+                  </div>
+                </div>
+                <span class="body-light-gray-text">
+                        Radio states
+                    </span>
+              </div>
+              <div class="col-span-4 space-y-24">
+                <div class="d-flex flex-column space-y-16">
+                  <div class="form-hint">
+                    <i class="icon-info"></i>
+                    <p>Gift cards cannot be used to pay cash.</p>
+                  </div>
+                  <a href="#" class="action-link ">
+                    <i class="icon-info"></i>
+                    <span>Gift cards cannot be used to pay cash.</span>
+                  </a>
+                </div>
+                <span class="body-light-gray-text">
+                        Info & Link
+                    </span>
+              </div>
             </div>
           </form>
+        </div>
       </section>
 
       <!--END: SECTION DARK-->
@@ -291,13 +414,13 @@
     <!--END: MAIN CONTENT-->
 
     <!--MAIN FOOTER-->
-    <footer class="footer footer-basic  inner-space-inline-16 inner-space-inline-sm-24">
+    <footer class="footer footer-basic  inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88 inner-space-block-xxl-120">
       <div class="footer-wrapper container">
-        <div class="footer-content d-flex gap-32 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-72">
+        <div class="footer-content d-flex gap-32">
           <a class="footer-logo" href="../../home">
             <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="B_system logo" />
           </a>
-          <p class="copy">
+          <p class="copy body-light-text">
             .Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio
           </p>
         </div>

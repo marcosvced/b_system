@@ -55,6 +55,16 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
+/* Headers */
+route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
+  render(response, path('modules', ['basicContents']), {}, { navigation })
+})
+
+/* Busness Cases */
+route.get(QUICK_START.BUSINESS_CASES, (request, response) => {
+  render(response, path('modules', ['businessCases']), {}, { navigation })
+})
+
 /* Marquees. */
 route.get(QUICK_START.MARQUEES.BASIC, (request, response) => {
   render(response, path('modules', ['marquees', 'basic']), {}, { navigation })
@@ -138,17 +148,17 @@ route.get(QUICK_START.INTERACTION, (request, response) => {
   render(response, path('components', ['interaction']), {}, { navigation })
 })
 
-/* Illustrations */
+/* Illustrations page. */
 route.get(QUICK_START.ILLUSTRATIONS, (request, response) => {
   render(response, path('components', ['illustrations']), {}, { navigation })
 })
 
-/* Microillustrations */
+/* Microillustrations page. */
 route.get(QUICK_START.MICROILLUSTRATIONS, (request, response) => {
   render(response, path('components', ['microillustrations']), {}, { navigation })
 })
 
-/* Scenes */
+/* Scenes page. */
 route.get(QUICK_START.SCENES, (request, response) => {
   render(response, path('components', ['scenes']), {}, { navigation })
 })

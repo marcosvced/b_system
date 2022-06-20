@@ -1,0 +1,57 @@
+@use "sass:map";
+@use '../helpers/misc' as f;
+@use "../helpers/colors";
+@use "../variables/palette";
+
+$PAYLOAD_ENUM: (
+        ALL: 'all',
+        EXCLUDE: 'exclude'
+);
+
+$merged-palette: f.map-collect(
+                palette.$primary,
+                palette.$secondary,
+                palette.$grayscale,
+                palette.$opacity
+);
+
+@mixin can-use($payload: map.get($PAYLOAD_ENUM, ALL), $hover: false) {
+  $colors: $merged-palette;
+
+  @if (type-of($payload) == 'map' and map.has-key($payload, map.get($PAYLOAD_ENUM, EXCLUDE))) {
+    @each $key in map.get($payload, map.get($PAYLOAD_ENUM, EXCLUDE)) {
+      $colors: map.remove($colors, $key);
+    }
+  }
+  @if (type-of($payload) == 'list') {
+    $colors: $payload;
+  }
+  @if (type-of($payload) == 'map') {
+    $colors: map.keys($colors);
+  }
+  @each $key in $colors {
+    &.bg-#{$key} {
+      $color: undefined;
+      @if (map.get(palette.$primary, $key)) {
+        $color: colors.primary($key);
+      } @else if (map.get(palette.$secondary, $key)) {
+        $color: colors.secondary($key);
+      } @else if (map.get(palette.$grayscale, $key)) {
+        $color: colors.grayscale($key);
+      } @else if (map.get(palette.$opacity, $key)) {
+        $color: colors.grayscale($key);
+      } @else {
+        @error "Key #{$key} doesn't exist.";
+      }
+      background-color: $color;
+
+      @if ($hover) {
+        &:active:not(:disabled),
+        &:hover:not(:disabled) {
+          background-color: colors.hover($key);
+        }
+      }
+    }
+  }
+
+}

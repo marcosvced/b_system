@@ -1,3 +1,4 @@
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
@@ -31,7 +32,7 @@
 
         .product-info {
             @include themed.properties {
-                background-color: themed.values(helper.grayscale(100), helper.grayscale(1200));
+                background-color: themed.values($c-grayscale--100, helper.grayscale(1200));
             }
         }
     }
@@ -52,7 +53,7 @@
         }
 
         .overlay {
-            background-color: helper.opacity(blue-500);
+            background-color: helper.opacity(eren-500);
             position: absolute;
             top: 0;
             width: 100%;
@@ -64,7 +65,7 @@
 
 
             .action-link {
-                color: helper.grayscale(light);
+                color: $c-grayscale--light;
                 position: absolute;
                 top: 50%;
                 transform: translate(-4px, -50%);
@@ -91,7 +92,7 @@
         border-bottom-right-radius: $product-card-cr-standard;
         padding: helper.space(24);
         @include themed.properties {
-            background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+            background-color: themed.values($c-grayscale--light, helper.grayscale(1100));
         }
     }
 
@@ -129,7 +130,7 @@
 
 
                 & > * > i {
-                    color: helper.grayscale(light);
+                    color: $c-grayscale--light;
                 }
             }
 
@@ -143,7 +144,7 @@
             .product-colors-wrapper {
                 padding-inline: helper.space(8);
                 padding-block: helper.space(4);
-                background-color: helper.opacity(light-200);
+                background-color:$c-opacity__light--200;
                 border-radius: helper.rem(8);
                 position: absolute;
                 right: helper.space(24);

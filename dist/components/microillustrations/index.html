@@ -7,9 +7,17 @@
     <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
+
+    <!-- Demo styles -->
     <style lang="css">
+      body {
+        background-color: var(--c-grayscale__100);
+      }
     </style>
   </head>
   <body>
@@ -19,12 +27,12 @@
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
           <div class="d-flex d-xl-none order-0">
-            <button href="#" class="btn btn-only-icon">
+            <button type="button" class="btn btn-only-icon">
               <i class="icon-cart"></i>
             </button>
           </div>
           <div class="d-none d-xl-block order-1">
-            <button href="#" class="btn btn-primary     btn-fit">
+            <button type="button" class="btn btn-primary    btn-fit">
               Purchase B_system
             </button>
           </div>
@@ -64,34 +72,25 @@
                       <a class="dropdown-item " href="#">Grids</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Cards</a>
+                      <a class="dropdown-item " href="#">Forms</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Forms</a>
+                      <a class="dropdown-item " href="../../modules/businessCases">Business Cases</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="../../modules/marquees/basic">Marquees Basic</a>
+                      <a class="dropdown-item " href="../../modules/footers/standard">Footers Standard</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="../../modules/marquees/cta">Marquees CTA</a>
+                      <a class="dropdown-item " href="../../modules/footers/corporate">Footers Corporate</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="../../modules/marquees/extended">Marquees Extended</a>
+                      <a class="dropdown-item " href="../../modules/footers/newsletter">Footers Newsletter</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="../../modules/marquees/illustration">Marquees Illustration</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../modules/marquees/image">Marquees Image</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../modules/marquees/standar">Marquees Standar</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../modules/marquees/textImage">Marquees Text Image</a>
+                      <a class="dropdown-item " href="../../modules/basicContents">Basic Contents</a>
                     </li>
                   </ul>
                 </li>
@@ -104,7 +103,7 @@
                       <a class="dropdown-item " href="../../components/buttons">Buttons</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="">Forms</a>
+                      <a class="dropdown-item " href="../../components/forms">Forms</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../components/interaction">Interaction</a>
@@ -137,7 +136,7 @@
                       <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="">Texts</a>
+                      <a class="dropdown-item " href="../../components/texts">Texts</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../components/illustrations">Illustrations</a>
@@ -159,7 +158,7 @@
             </nav>
           </div>
           <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-            <button href="#" class="btn btn-only-icon">
+            <button type="button" class="btn btn-only-icon">
               <i class="icon-menu"></i>
             </button>
           </div>
@@ -173,12 +172,12 @@
     <main class="main">
 
       <!--MICROILLUSTRATIONS-->
-      <section class="section illustration microillustration darkener">
+      <section class="section darkened">
         <div class="container">
-          <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Microillustrations</h3>
-          <div class="d-grid grid-1 grid-sm-4 grid-md-3 grid-xl-6 column-gap-24 row-gap-48 space-bottom-48">
+          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Microillustrations</h3>
+          <div class="d-grid grid-2 grid-sm-3 grid-md-4 grid-lg-6 column-gap-24 row-gap-48 space-bottom-48">
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/dangerous.svg" alt="dangerous">
                 </picture>
@@ -188,7 +187,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/alert.svg" alt="alert">
                 </picture>
@@ -198,7 +197,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/error.svg" alt="error">
                 </picture>
@@ -208,7 +207,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/info.svg" alt="info">
                 </picture>
@@ -218,7 +217,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/avatar.svg" alt="avatar">
                 </picture>
@@ -228,7 +227,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/success.svg" alt="success">
                 </picture>
@@ -238,7 +237,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/secure.svg" alt="secure">
                 </picture>
@@ -248,7 +247,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/idea.svg" alt="idea">
                 </picture>
@@ -258,7 +257,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/ideation.svg" alt="ideation">
                 </picture>
@@ -268,7 +267,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/learn.svg" alt="learn">
                 </picture>
@@ -278,7 +277,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/tools.svg" alt="tools">
                 </picture>
@@ -288,7 +287,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/man.svg" alt="man">
                 </picture>
@@ -298,7 +297,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/woman.svg" alt="woman">
                 </picture>
@@ -308,7 +307,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/leaf.svg" alt="leaf">
                 </picture>
@@ -318,9 +317,9 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
-                  <img class="illustration-img" src="../../assets/img/microillustration/leaf-2.svg" alt="leaf 2">
+                  <img class="illustration-img" src="../../assets/img/microillustration/leaf_2.svg" alt="leaf 2">
                 </picture>
               </div>
               <span class="body-light-gray-text">
@@ -328,7 +327,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/boy.svg" alt="boy">
                 </picture>
@@ -338,7 +337,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/girl.svg" alt="girl">
                 </picture>
@@ -348,7 +347,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/bottle.svg" alt="bottle">
                 </picture>
@@ -358,7 +357,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/home-classic.svg" alt="home classic">
                 </picture>
@@ -368,7 +367,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/home-modern.svg" alt="home modern">
                 </picture>
@@ -378,7 +377,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/consistency.svg" alt="consistency">
                 </picture>
@@ -388,7 +387,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/efficiency.svg" alt="efficiency">
                 </picture>
@@ -398,7 +397,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/organized.svg" alt="organized">
                 </picture>
@@ -408,7 +407,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/process.svg" alt="process">
                 </picture>
@@ -418,7 +417,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/system.svg" alt="system">
                 </picture>
@@ -428,7 +427,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/modules.svg" alt="modules">
                 </picture>
@@ -438,7 +437,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/fonts.svg" alt="fonts">
                 </picture>
@@ -448,7 +447,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/image.svg" alt="image">
                 </picture>
@@ -458,7 +457,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/responsive.svg" alt="responsive">
                 </picture>
@@ -468,7 +467,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/testimonial.svg" alt="testimonial">
                 </picture>
@@ -478,7 +477,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/b_system.svg" alt="b_system">
                 </picture>
@@ -488,9 +487,9 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
-                  <img class="illustration-img" src="../../assets/img/microillustration/flower.svg" alt="flower">
+                  <img class="illustration-img" src="../../assets/img/microillustration/template.svg" alt="template">
                 </picture>
               </div>
               <span class="body-light-gray-text">
@@ -498,7 +497,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/choose-template.svg" alt="choose template">
                 </picture>
@@ -508,7 +507,7 @@
                 </span>
             </div>
             <div class="space-y-24">
-              <div class="demo-card microillustration shadow">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/sales.svg" alt="sales">
                 </picture>
@@ -517,8 +516,8 @@
                     Sales
                 </span>
             </div>
-            <div class="col-1-to-2 col-sm-1-to-3 col-md-2-to-3 col-xl-5-to-6 space-y-24">
-              <div class="demo-card microillustration shadow">
+            <div class="space-y-24">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/sales-green.svg" alt="sales green">
                 </picture>
@@ -527,8 +526,8 @@
                     Sales green
                 </span>
             </div>
-            <div class="col-1-to-2 col-sm-3-to-5 col-md-3-to-4 col-xl-6-to-7 space-y-24">
-              <div class="demo-card microillustration shadow">
+            <div class="space-y-24">
+              <div class="demo-card demo-card-micro-illustration">
                 <picture class="illustration">
                   <img class="illustration-img" src="../../assets/img/microillustration/sales-turquoise.svg" alt="sales turquoise">
                 </picture>
@@ -545,13 +544,13 @@
     <!--END: MAIN CONTENT-->
 
     <!--MAIN FOOTER-->
-    <footer class="footer footer-basic footer-darkener">
+    <footer class="footer footer-basic  inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88 inner-space-block-xxl-120">
       <div class="footer-wrapper container">
-        <div class="row">
-          <a class="footer-logo col-12 col-lg-3" href="../../home">
-            <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
+        <div class="footer-content d-flex gap-32">
+          <a class="footer-logo" href="../../home">
+            <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="B_system logo" />
           </a>
-          <p class="copy col-12 col-lg-8 offset-lg-1">
+          <p class="copy body-light-text">
             .Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio
           </p>
         </div>
@@ -564,6 +563,9 @@
 
     <!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper bundle CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>

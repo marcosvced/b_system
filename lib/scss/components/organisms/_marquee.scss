@@ -1,3 +1,4 @@
+@use '../../variables/colors' as *;
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
@@ -145,11 +146,11 @@
 
         #{$parent}-title-emphasis {
           font-size: helper.size(lg);
-    
+
           @include mixin.screen(md) {
             font-size: helper.size(xl);
           }
-    
+
           @include mixin.screen(xl) {
             font-size: helper.size(xxl);
           }

@@ -1,0 +1,65 @@
+@use 'sass:math';
+@use '../../variables/colors' as *;
+@use '../../variables/font' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers/size';
+@use '../../mixins/space';
+@use '../../mixins/styles';
+
+
+.form-floating {
+  $input-height: 48;
+  $font-base: 15;
+  $font-scale-down: 11;
+  $padding-inline: 12;
+  $padding-block: 16;
+  position: relative;
+
+  > i {
+    position: absolute;
+    font-size: size.rem(24);
+    color: $c-eren;
+    top: size.rem(math.div(24,2));
+    right: size.rem($padding-inline);
+  }
+
+  .chevron {
+    position: absolute;
+    right: size.rem($padding-inline);
+    top: 50%;
+    transform: translateY(-50%) scaleY(1);
+    @include styles.fast-transition(transform);
+  }
+
+  select.form-select {
+    height: size.em($input-height, $font-base);
+    padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base) 0;
+    font-size: $f-s-xs;
+    font-weight: $f-w-light;
+    background-color: transparent;
+    @include styles.input-unfilled;
+    @include styles.input-filled;
+    @include styles.input-tap;
+    @include styles.input-error;
+    @include styles.input-inactive;
+
+    &:focus-within ~ .chevron  {
+      transform: translateY(-50%) scaleY(-1);
+    }
+  }
+
+  label {
+    color: $c-grayscale--700;
+    padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base);
+  }
+
+  & > .form-select:focus ~ label,
+  & > .form-select:not(:placeholder-shown) ~ label,
+  & > .form-select ~ label {
+    $calc: $font-scale-down * 100;
+    $scale: math.div($calc, $font-base);
+    transform: scale(math.div($scale, 100)) translateY(-.5em) translateX(.5em);
+  }
+}
+

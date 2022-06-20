@@ -1,0 +1,6 @@
+@mixin root-push($params...) {
+  @debug $params;
+  :root {
+    @content;
+  }
+}
