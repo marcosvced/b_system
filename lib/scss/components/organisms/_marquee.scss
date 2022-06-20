@@ -11,6 +11,7 @@
   justify-content: center;
   position: relative;
   z-index: 0;
+  overflow: hidden;
 
   #{$parent}-bg {
     width: 100%;
@@ -30,7 +31,7 @@
     padding-inline: helper.space(24);
     display: none;
     top: 45%;
-    left: 0%;
+    left: 0;
 
     @include mixin.screen(xl) {
       display: flex;
@@ -271,10 +272,6 @@
 
     #{$parent}-content {
       text-align: center;
-
-      @include mixin.screen(xl) {
-        width: 80%;
-      }
     }
   }
 

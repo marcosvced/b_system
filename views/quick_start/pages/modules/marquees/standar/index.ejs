@@ -8,6 +8,7 @@ const headerConfig = {
     size: 'full',
     isSticky: true,
     hasBackground: false,
+    logo: 'light',
     buttons: [
         {
             label: 'Purchase B_system',
@@ -16,7 +17,9 @@ const headerConfig = {
     ]
 }
 %>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
+<div data-bsystem="dark">
+<%- include(`${component}/header/header`, { ...headerConfig}) %>
+</div>
 
 <div class="main-content main-content-space-top">
     <section>
