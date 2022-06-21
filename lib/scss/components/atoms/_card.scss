@@ -129,6 +129,10 @@
         }
     }
 
+    .illustration {
+        max-width: helper.rem(104);
+    }
+
     & .img-basic {
         max-height: 14rem;
     }
@@ -215,6 +219,10 @@
             }
         }
     }
+}
+
+.business-card-wrapper {
+    min-height: helper.rem(512);
 }
 
 @media (min-width: 1200px) {
