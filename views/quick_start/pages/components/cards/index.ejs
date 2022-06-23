@@ -175,27 +175,28 @@
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
                 <%- include( `${component}/card/testimonial`, {
-                    img: 'quote.svg',
-                    imgAlt: 'quote icon',
                     text: '"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”',
-                    avatar: 'avatar_testimonial-1.jpg',
-                    userName: 'Sandra Golpe',
-                    userJob: 'Marketing manager',
-                    typesStars: [
+                    avatar: {
+                        src: 'avatar_testimonial-1',
+                        alt: 'avatar image',
+                        name: 'Sandra Golpe',
+                        job: 'Marketing manager',
+                    },
+                    stars: [
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "off",
+                        state: 'off',
                     },
                     ],
                 } ) %>
@@ -206,14 +207,23 @@
 
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
                 <%- include( `${component}/card/sticky`, {
-                    titleContact: 'Contact us',
-                    iconClose: 'blade',
-                    hrefChat: '#',
-                    labelChat: 'Consult in our chat',
-                    iconChat: 'whatsapp',
-                    hrefPhone: '#',
-                    labelPhone: 'Shall we call you?',
-                    iconPhone: 'contact',
+                    title: 'Contact us',
+                    contacts: [
+                        {
+                            link: {
+                                href: '#',
+                                label: 'Consult in our chat',
+                                icon: 'whatsapp'
+                            }
+                        },
+                        {
+                            link: {
+                                href: '#',
+                                label: 'Shall we call you?',
+                                icon: 'contact'
+                            }
+                        },
+                    ]
                 } ) %>
                 <span class="body-light-gray-text">
                     Sticky banner
@@ -224,9 +234,11 @@
                 <%- include( `${component}/card/icon`, {
                     icon: 'awards-circle',
                     text: 'B_system is a sketch.',
-                    hrefCard: '#',
-                    labelLink: 'Learn more',
-                    iconLink: 'links',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links'
+                    },
                 } ) %>
                 <span class="body-light-gray-text">
                     Icon description card
@@ -238,11 +250,13 @@
             <div class="project-container space-y-24">
                 <div class="position-relative h-100">
                     <%- include( `${component}/card/project`, {
-                        textHeader: '01',
-                        titleProject: 'Calgary museum',
-                        hrefCard: '#',
-                        labelLink: 'Learn more',
-                        iconLink: 'links',
+                        header: 01,
+                        title: 'Calgary museum',
+                        link: {
+                            href: '#',
+                            label: 'Learn more',
+                            icon: 'links',
+                        }
                     } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -407,7 +421,7 @@
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
                     tag: '1',
                     img: {
-                        src: 'img_service-1.jpg',
+                        src: 'img_service-1',
                         alt: 'This is a description text',
                     },
                     link: {
@@ -426,27 +440,28 @@
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
                 <%- include( `${component}/card/testimonial`, {
-                    img: 'quote.svg',
-                    imgAlt: 'quote icon',
                     text: '"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”',
-                    avatar: 'avatar_testimonial-1.jpg',
-                    userName: 'Sandra Golpe',
-                    userJob: 'Marketing manager',
-                    typesStars: [
+                    avatar: {
+                        src: 'avatar_testimonial-1',
+                        alt: 'avatar image',
+                        name: 'Sandra Golpe',
+                        job: 'Marketing manager',
+                    },
+                    stars: [
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "off",
+                        state: 'off',
                     },
                     ],
                 } ) %>
@@ -457,14 +472,23 @@
 
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
                 <%- include( `${component}/card/sticky`, {
-                    titleContact: 'Contact us',
-                    iconClose: 'blade',
-                    hrefChat: '#',
-                    labelChat: 'Consult in our chat',
-                    iconChat: 'whatsapp',
-                    hrefPhone: '#',
-                    labelPhone: 'Shall we call you?',
-                    iconPhone: 'contact',
+                    title: 'Contact us',
+                    contacts: [
+                        {
+                            link: {
+                                href: '#',
+                                label: 'Consult in our chat',
+                                icon: 'whatsapp'
+                            }
+                        },
+                        {
+                            link: {
+                                href: '#',
+                                label: 'Shall we call you?',
+                                icon: 'contact'
+                            }
+                        },
+                    ]
                 } ) %>
                 <span class="body-light-gray-text">
                     Sticky banner
@@ -475,9 +499,11 @@
                 <%- include( `${component}/card/icon`, {
                     icon: 'awards-circle',
                     text: 'B_system is a sketch.',
-                    hrefCard: '#',
-                    labelLink: 'Learn more',
-                    iconLink: 'links',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links'
+                    },
                 } ) %>
                 <span class="body-light-gray-text">
                     Icon description card
@@ -489,11 +515,13 @@
             <div class="project-container space-y-24">
                 <div class="position-relative h-100">
                     <%- include( `${component}/card/project`, {
-                        textHeader: '01',
-                        titleProject: 'Calgary museum',
-                        hrefCard: '#',
-                        labelLink: 'Learn more',
-                        iconLink: 'links',
+                        header: 01,
+                        title: 'Calgary museum',
+                        link: {
+                            href: '#',
+                            label: 'Learn more',
+                            icon: 'links',
+                        }
                     } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -658,7 +686,7 @@
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
                     tag: '1',
                     img: {
-                        src: 'img_service-1.jpg',
+                        src: 'img_service-1',
                         alt: 'This is a description text',
                     },
                     link: {
@@ -677,27 +705,28 @@
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
                 <%- include( `${component}/card/testimonial`, {
-                    img: 'quote.svg',
-                    imgAlt: 'quote icon',
                     text: '"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”',
-                    avatar: 'avatar_testimonial-1.jpg',
-                    userName: 'Sandra Golpe',
-                    userJob: 'Marketing manager',
-                    typesStars: [
+                    avatar: {
+                        src: 'avatar_testimonial-1',
+                        alt: 'avatar image',
+                        name: 'Sandra Golpe',
+                        job: 'Marketing manager',
+                    },
+                    stars: [
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "off",
+                        state: 'off',
                     },
                     ],
                 } ) %>
@@ -708,14 +737,23 @@
 
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
                 <%- include( `${component}/card/sticky`, {
-                    titleContact: 'Contact us',
-                    iconClose: 'blade',
-                    hrefChat: '#',
-                    labelChat: 'Consult in our chat',
-                    iconChat: 'whatsapp',
-                    hrefPhone: '#',
-                    labelPhone: 'Shall we call you?',
-                    iconPhone: 'contact',
+                    title: 'Contact us',
+                    contacts: [
+                        {
+                            link: {
+                                href: '#',
+                                label: 'Consult in our chat',
+                                icon: 'whatsapp'
+                            }
+                        },
+                        {
+                            link: {
+                                href: '#',
+                                label: 'Shall we call you?',
+                                icon: 'contact'
+                            }
+                        },
+                    ]
                 } ) %>
                 <span class="body-light-gray-text">
                     Sticky banner
@@ -726,9 +764,11 @@
                 <%- include( `${component}/card/icon`, {
                     icon: 'awards-circle',
                     text: 'B_system is a sketch.',
-                    hrefCard: '#',
-                    labelLink: 'Learn more',
-                    iconLink: 'links',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links'
+                    },
                 } ) %>
                 <span class="body-light-gray-text">
                     Icon description card
@@ -740,11 +780,13 @@
             <div class="project-container space-y-24">
                 <div class="position-relative h-100">
                     <%- include( `${component}/card/project`, {
-                        textHeader: '01',
-                        titleProject: 'Calgary museum',
-                        hrefCard: '#',
-                        labelLink: 'Learn more',
-                        iconLink: 'links',
+                        header: 01,
+                        title: 'Calgary museum',
+                        link: {
+                            href: '#',
+                            label: 'Learn more',
+                            icon: 'links',
+                        }
                     } ) %>
                 </div>
                 <span class="body-light-gray-text">
@@ -909,7 +951,7 @@
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
                     tag: '1',
                     img: {
-                        src: 'img_service-1.jpg',
+                        src: 'img_service-1',
                         alt: 'This is a description text',
                     },
                     link: {
@@ -928,27 +970,28 @@
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
                 <%- include( `${component}/card/testimonial`, {
-                    img: 'quote.svg',
-                    imgAlt: 'quote icon',
                     text: '"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”',
-                    avatar: 'avatar_testimonial-1.jpg',
-                    userName: 'Sandra Golpe',
-                    userJob: 'Marketing manager',
-                    typesStars: [
+                    avatar: {
+                        src: 'avatar_testimonial-1',
+                        alt: 'avatar image',
+                        name: 'Sandra Golpe',
+                        job: 'Marketing manager',
+                    },
+                    stars: [
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "on",
+                        state: 'on',
                     },
                     {
-                        starState: "off",
+                        state: 'off',
                     },
                     ],
                 } ) %>
@@ -959,14 +1002,23 @@
 
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
                 <%- include( `${component}/card/sticky`, {
-                    titleContact: 'Contact us',
-                    iconClose: 'blade',
-                    hrefChat: '#',
-                    labelChat: 'Consult in our chat',
-                    iconChat: 'whatsapp',
-                    hrefPhone: '#',
-                    labelPhone: 'Shall we call you?',
-                    iconPhone: 'contact',
+                    title: 'Contact us',
+                    contacts: [
+                        {
+                            link: {
+                                href: '#',
+                                label: 'Consult in our chat',
+                                icon: 'whatsapp'
+                            }
+                        },
+                        {
+                            link: {
+                                href: '#',
+                                label: 'Shall we call you?',
+                                icon: 'contact'
+                            }
+                        },
+                    ]
                 } ) %>
                 <span class="body-light-gray-text">
                     Sticky banner
@@ -977,9 +1029,11 @@
                 <%- include( `${component}/card/icon`, {
                     icon: 'awards-circle',
                     text: 'B_system is a sketch.',
-                    hrefCard: '#',
-                    labelLink: 'Learn more',
-                    iconLink: 'links',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links'
+                    },
                 } ) %>
                 <span class="body-light-gray-text">
                     Icon description card
@@ -991,11 +1045,13 @@
             <div class="project-container space-y-24">
                 <div class="position-relative h-100">
                     <%- include( `${component}/card/project`, {
-                        textHeader: '01',
-                        titleProject: 'Calgary museum',
-                        hrefCard: '#',
-                        labelLink: 'Learn more',
-                        iconLink: 'links',
+                        header: 01,
+                        title: 'Calgary museum',
+                        link: {
+                            href: '#',
+                            label: 'Learn more',
+                            icon: 'links',
+                        }
                     } ) %>
                 </div>
                 <span class="body-light-gray-text">
