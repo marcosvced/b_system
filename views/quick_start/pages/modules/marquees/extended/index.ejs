@@ -20,21 +20,57 @@ const headerConfig = {
 
 <div class="main-content main-content-space-top">
     <section>
-        <%- include(`${module}/marquee/extended`, { 
-            img: {
-                src: 'marquee_extended-01',
-                alt: 'Marquee image'
-            },
-            title: "Let's do it different",
-            text: 'Promote your business with B_system. The web design tool with the most complete design system.',
-            btn: {
-                label: 'Start with B System', 
-                isCTA: true, 
-                icon: 'links',
-                iconPosition: 'after'
-            },
-            quote: 'People ignore design that ignores people',
-            isDarkened: true
+        <%- include(`${module}/marquee/extended/extended`, {
+            slides: [
+                {
+                    img: {
+                        src: 'marquee_extended-01',
+                        alt: 'Marquee image'
+                    },
+                    title: "Let's do it different",
+                    text: 'Promote your business with B_system. The web design tool with the most complete design system.',
+                    btn: {
+                        label: 'Start with B System', 
+                        isCTA: true, 
+                        icon: 'links',
+                        iconPosition: 'after'
+                    },
+                    quote: 'People ignore design that ignores people',
+                    isDarkened: true
+                },
+                {
+                    img: {
+                        src: 'marquee_extended-02',
+                        alt: 'Marquee image 2'
+                    },
+                    title: "Work in an agile way",
+                    text: 'B_system will help you create responsive web pages with very little effort.',
+                    btn: {
+                        label: 'Start with B System', 
+                        isCTA: true, 
+                        icon: 'links',
+                        iconPosition: 'after'
+                    },
+                    quote: 'People ignore design that ignores people',
+                    isDarkened: true
+                },
+                {
+                    img: {
+                        src: 'marquee_extended-03',
+                        alt: 'Marquee image 3'
+                    },
+                    title: "Enjoy the great result",
+                    text: 'It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+                    btn: {
+                        label: 'Start with B System', 
+                        isCTA: true, 
+                        icon: 'links',
+                        iconPosition: 'after'
+                    },
+                    quote: 'People ignore design that ignores people',
+                    isDarkened: true
+                },
+            ]
         }) %>
     </section>
 </div>

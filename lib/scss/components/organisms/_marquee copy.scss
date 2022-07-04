@@ -6,15 +6,10 @@
 
 .marquee {
   &-wrapper {
-    overflow-x: hidden;
     z-index: 0;
 
-    .swiper {
+    .swiper-slide {
       z-index: -1;
-
-      .swiper-pagination {
-        display: none;
-      }
     }
   }
 
@@ -40,24 +35,19 @@
     }
   }
 
-  &-slider-control {
-    width: 100%;
-    padding-inline: helper.space(24);
-    display: none;
-    position: absolute;
-    top: 42%;
-
-    @include mixin.screen(xl) {
-      display: flex;
-      justify-content: space-between;
-    }
+  .marquee-slider-control {
+    color: red;
   }
 
-  &-content-bottom {
+  #{$parent}-content-bottom {
     width: 100%;
-    padding-bottom: helper.space(24);
-    position: absolute;
+    padding: {
+      bottom: helper.space(32);
+      inline: helper.space(24);
+    }
+    align-items: flex-end;
     bottom: 0;
+    left: 0;
 
     .btn-interactive {
       margin: 0 auto;
@@ -153,11 +143,10 @@
       }
 
       #{$parent}-title {
-        color: $c-grayscale--600;
+        color: helper.grayscale(600);
         text-align: left;
 
         #{$parent}-title-emphasis {
-          color: $c-grayscale--ash;
           font-size: helper.size(lg);
 
           @include mixin.screen(md) {
@@ -178,7 +167,7 @@
       display: none;
       filter: grayscale(1) opacity(.1);
       position: absolute;
-      top: 19%;
+      top: 9%;
       right: 7%;
       z-index: -1;
 
