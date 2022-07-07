@@ -3,6 +3,7 @@
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
+@use '../../mixins/backgounds';
 
 .marquee {
   &-wrapper {
@@ -212,65 +213,8 @@
     }
   }
 
-  &#{&}-illustration {
-    justify-content: center;
-    align-items: center;
-
-    #{$parent}-illustration-container {
-      max-height: 90%;
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-
-      @include mixin.screen(md) {
-        flex-direction: row;
-        gap: helper.space(32);
-      }
-
-      #{$parent}-content {
-        @include mixin.screen(xl) {
-          width: 70%;
-          margin-left: 7%;
-        }
-      }
-
-      .illustration {
-        width: 70%;
-
-        @include mixin.screen(md) {
-          width: 100%;
-        }
-
-        @include mixin.screen(xl) {
-          width: 70%;
-          margin-right: 7%;
-        }
-
-        .illustration-img {
-
-          @include mixin.screen(xl) {
-            max-height: helper.rem(400);
-            object-fit: cover;
-          }
-        }
-      }
-    }
-
-    #{$parent}-content-bottom {
-      padding: 0;
-      margin-top: helper.space(48);
-
-      @include mixin.screen(md) {
-        margin: 0;
-        padding: {
-          top: 0;
-          bottom: helper.space(32);
-          inline: helper.space(32);
-        }
-        position: absolute;
-      }
-    }
+  &-illustration {
+    @include backgounds.can-use((eren, mikasa, armin));
   }
 
   &#{&}-extended {
