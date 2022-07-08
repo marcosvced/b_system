@@ -1,4 +1,6 @@
+@use "sass:map";
 @use '../../variables/colors' as *;
+@use '../../variables/palette';
 @use '../../placeholders';
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
@@ -215,6 +217,8 @@
 
   &-illustration {
     @include backgounds.can-use((eren, mikasa, armin));
+    @include backgounds.can-use(map.keys(palette.$secondary));
+
   }
 
   &#{&}-extended {
