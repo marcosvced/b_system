@@ -185,30 +185,74 @@
     </header>
     <div class="main-content main-content-space-top">
       <section>
-        <div class="marquee marquee-image marquee-space marquee-size">
-          <picture>
-            <img class="marquee-bg " src="../../../assets/img/marquee/marquee_image-01.jpg" alt="Marquee image">
-          </picture>
-          <div class="marquee-content space-y-32 space-y-xl-64">
-            <h1 class="marquee-title">Enhance your competitive agility</h1>
-            <p class="marquee-text body-light-text text-black">Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.</p>
-            <button type="button" class="btn btn-primary">
-              Discover B_system
-            </button>
+        <div class="marquee-wrapper position-relative">
+          <div class="swiper" data-bsystem="swiper" data-swiper-target="marquee-image" data-swiper-next=".button-next" data-swiper-prev=".button-prev">
+            <div class="swiper-wrapper">
+
+              <!-- swiper slide -->
+              <div class="swiper-slide">
+                <div class="marquee marquee-image marquee-space marquee-size position-relative">
+                  <picture>
+                    <img class="marquee-bg" src="../../../assets/img/marquee/marquee_image-01.jpg" alt="marquee image 01">
+                  </picture>
+                  <div class="marquee-content space-y-32 space-y-xl-64">
+                    <h1 class="marquee-title">Enhance your competitive agility</h1>
+                    <p class="marquee-text body-light-text text-black">Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.</p>
+                    <button type="button" class="btn btn-primary">
+                      Discover B_system
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="marquee marquee-image marquee-space marquee-size position-relative">
+                  <picture>
+                    <img class="marquee-bg" src="../../../assets/img/marquee/marquee_image-02.jpg" alt="marquee image 02">
+                  </picture>
+                  <div class="marquee-content space-y-32 space-y-xl-64">
+                    <h1 class="marquee-title">We are the interactive radar</h1>
+                    <p class="marquee-text body-light-text text-black">From idea to action, the path to generating 360 ° value starts here.</p>
+                    <button type="button" class="btn btn-primary">
+                      Discover B_system
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="marquee marquee-image marquee-space marquee-size position-relative">
+                  <picture>
+                    <img class="marquee-bg" src="../../../assets/img/marquee/marquee_image-03.jpg" alt="marquee image 03">
+                  </picture>
+                  <div class="marquee-content space-y-32 space-y-xl-64">
+                    <h1 class="marquee-title">Our values ​​shape our culture</h1>
+                    <p class="marquee-text body-light-text text-black">We make them happen through our individual behaviors and they serve as a guide for us to act and make decisions.</p>
+                    <button type="button" class="btn btn-primary">
+                      Discover B_system
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- end: swiper slide -->
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="marquee-slider-control justify-content-between w-100 position-absolute">
-            <button class="btn-interactive btn-interactive-rounded  ">
-              <i class="icon-back"></i>
-            </button>
-            <button class="btn-interactive btn-interactive-rounded  ">
-              <i class="icon-next"></i>
-            </button>
-          </div>
-          <div class="marquee-content-bottom d-grid grid-1 grid-xl-3 position-absolute">
-            <span></span>
+          <div class="marquee-content-bottom">
             <button class="btn-interactive btn-interactive-rounded  btn-interactive-tight">
               <i class="icon-links"></i>
             </button>
+          </div>
+          <div class="marquee-slider-control">
+            <div class="button-prev">
+              <button class="btn-interactive btn-interactive-rounded  ">
+                <i class="icon-back"></i>
+              </button>
+            </div>
+            <div class="button-next">
+              <button class="btn-interactive btn-interactive-rounded  ">
+                <i class="icon-next"></i>
+              </button>
+            </div>
           </div>
         </div>
       </section>

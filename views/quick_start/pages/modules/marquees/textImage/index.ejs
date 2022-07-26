@@ -20,20 +20,51 @@ const headerConfig = {
 
 <div class="main-content main-content-space-top">
     <section >
-        <%- include(`${module}/marquee/textImage`, { 
-            img: {
-                src: 'marquee_textimage-01',
-                alt: 'Marquee image'
-            },
-            title: 'We are a new concept of digital studio, we create disruptive',
-            btn: {
-                label: 'Start with B System', 
-                isCTA: true, 
-                icon: 'links', 
-                iconPosition: 'after' 
-            },
-            quote: '“People ignore design that ignores people”',
-            isDarkened: true
+        <%- include(`${module}/marquee/textImage/textImage`, {
+            slides: [
+                {
+                    img: {
+                        src: 'marquee_textimage-01',
+                        alt: 'Marquee text image'
+                    },
+                    title: 'We are a new concept of digital studio, we create disruptive',
+                    btn: {
+                        label: 'Start with B System', 
+                        isCTA: true, 
+                        icon: 'links', 
+                        iconPosition: 'after' 
+                    },
+                    quote: '“People ignore design that ignores people”',
+                },
+                {
+                    img: {
+                        src: 'marquee_textimage-02',
+                        alt: 'Marquee text image 02'
+                    },
+                    title: 'We are a new concept of digital studio, we create disruptive',
+                    btn: {
+                        label: 'Start with B System', 
+                        isCTA: true, 
+                        icon: 'links', 
+                        iconPosition: 'after' 
+                    },
+                    quote: '“People ignore design that ignores people”',
+                },
+                {
+                    img: {
+                        src: 'marquee_textimage-03',
+                        alt: 'Marquee text image 03'
+                    },
+                    title: 'We are a new concept of digital studio, we create disruptive',
+                    btn: {
+                        label: 'Start with B System', 
+                        isCTA: true, 
+                        icon: 'links', 
+                        iconPosition: 'after' 
+                    },
+                    quote: '“People ignore design that ignores people”',
+                }
+            ]
         }) %>
     </section>
 </div>
