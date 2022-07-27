@@ -224,6 +224,11 @@
   &#{&}-extended {
     @include mixin.screen(xl) {
       align-items: center;
+
+      #{$parent}-title {
+        max-width: helper.rem(968);
+        margin-inline: auto;
+      }
     }
 
     &#{$parent}-space {

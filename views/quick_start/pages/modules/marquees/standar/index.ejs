@@ -8,7 +8,6 @@ const headerConfig = {
     size: 'full',
     isSticky: true,
     hasBackground: false,
-    logo: 'light',
     buttons: [
         {
             label: 'Purchase B_system',
@@ -17,26 +16,58 @@ const headerConfig = {
     ]
 }
 %>
-<div data-bsystem="dark">
-<%- include(`${component}/header/header`, { ...headerConfig}) %>
-</div>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <div class="main-content main-content-space-top">
     <section>
-        <%- include(`${module}/marquee/extended`, { 
-            img: {
-                src: 'marquee-02',
-                alt: 'Marquee image'
-            },
-            title: "Let's do it different",
-            btn: {
-                label: 'Start with B System', 
-                isCTA: true, 
-                icon: 'links', 
-                iconPosition: 'after'
-            },
-            quote: 'People ignore design that ignores people',
-            isDarkened: true
+        <%- include(`${module}/marquee/extended/extended`, {
+            slides: [
+                {
+                    img: {
+                        src: 'marquee_standar-01',
+                        alt: 'Marquee image'
+                    },
+                    title: "Let's do it different",
+                    btn: {
+                        label: 'Start with B System', 
+                        isCTA: true, 
+                        icon: 'links',
+                        iconPosition: 'after'
+                    },
+                    quote: 'People ignore design that ignores people',
+                    isDarkened: true
+                },
+                {
+                    img: {
+                        src: 'marquee_standar-02',
+                        alt: 'Marquee image 2'
+                    },
+                    title: "Now more than ever, it's time to make things count",
+                    btn: {
+                        label: 'Start with B System', 
+                        isCTA: true, 
+                        icon: 'links',
+                        iconPosition: 'after'
+                    },
+                    quote: 'People ignore design that ignores people',
+                    isDarkened: true
+                },
+                {
+                    img: {
+                        src: 'marquee_standar-03',
+                        alt: 'Marquee image 3'
+                    },
+                    title: "Use your sensitivity, movement and courage",
+                    btn: {
+                        label: 'Start with B System', 
+                        isCTA: true, 
+                        icon: 'links',
+                        iconPosition: 'after'
+                    },
+                    quote: 'People ignore design that ignores people',
+                    isDarkened: true
+                },
+            ]
         }) %>
     </section>
 </div>
