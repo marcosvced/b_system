@@ -1,9 +1,16 @@
-const { QUICK_START } = require('./routePaths')
+const { QUICK_START } = require('./quick_start/routePaths')
+const { DEMOS } = require('./demos/routePaths')
 
 const navigation = [
   {
     label: 'Demos',
     key: 'demos',
+    entries: [
+      {
+        label: 'Home',
+        href: DEMOS.HOME,
+      },
+    ],
   },
   {
     label: 'Pages',

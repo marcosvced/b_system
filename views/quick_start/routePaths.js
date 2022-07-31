@@ -34,4 +34,5 @@ module.exports = {
     ILLUSTRATIONS: '/components/illustrations',
     SCENES: '/components/scenes',
   },
+
 }
