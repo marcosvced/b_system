@@ -1,258 +1,171 @@
 <%- include(`${view}/quick_start/layout`) %>
 
-<%- contentFor('body') %>
+<%- contentFor('styles') %>
 
-    <!--SECTION LIGHT-->
-    <%- include(`${module}/featuredCard/featuredCard`, {
-        title: 'Know B_system Features',
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<main class="main">
+<!--CARDS-->
+
+<!--SECTION LIGHT-->
+
+    <%- include( `${module}/featureCard/featureCard`, {
+        title: 'Featured works',
         cards: [
             {
-                feature: {
-                    src: 'organized_2',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'primary',
-                    color: 'eren'
-                },
-                title: 'Well organized and layered',
-                text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
+                img: 'feature-card_module-1.jpg',
+                alt: 'featured card image 1',
+                title: '.US',
+                text: 'Product design',
+                isDarkened: false
             },
             {
-                feature: {
-                    src: 'fonts_2',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'secondary',
-                    color: 'eren-600'
-                },
-                title: 'Google fonts',
-                text: 'The fonts used by Brand System are free and easy to find on Google fonts.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
+                img: 'feature-card_module-2.jpg',
+                alt: 'featured card image 2',
+                title: 'Dream',
+                text: 'Editorial',
+                isDarkened: false
             },
             {
-                feature: {
-                    src: 'responsive_2',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'primary',
-                    color: 'armin'
-                },
-                title: 'Responsive components',
-                text: 'Each of the components is built so that it can be resized depending on the device.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
+                img: 'feature-card_module-3.jpg',
+                alt: 'featured card image 3',
+                title: 'Amazon toy',
+                text: 'Packaging',
+                isDarkened: false
             },
         ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
         isDarkened: false,
         isDark: false
-    }) %>
+    } ) %>
 
-    
-    <%- include(`${module}/featuredCard/featuredCard`, {
-        title: 'Know B_system Features',
+    <%- include( `${module}/featureCard/featureCard`, {
+        title: 'Featured works',
         cards: [
             {
-                feature: {
-                    src: 'organized_2',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'primary',
-                    color: 'eren'
-                },
-                title: 'Well organized and layered',
-                text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
+                img: 'feature-card_module-1.jpg',
+                alt: 'featured card image 1',
+                title: '.US',
+                text: 'Product design',
+                isDarkened: false
             },
             {
-                feature: {
-                    src: 'fonts_2',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'secondary',
-                    color: 'eren-600'
-                },
-                title: 'Google fonts',
-                text: 'The fonts used by Brand System are free and easy to find on Google fonts.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
+                img: 'feature-card_module-2.jpg',
+                alt: 'featured card image 2',
+                title: 'Dream',
+                text: 'Editorial',
+                isDarkened: false
             },
             {
-                feature: {
-                    src: 'responsive_2',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'primary',
-                    color: 'armin'
-                },
-                title: 'Responsive components',
-                text: 'Each of the components is built so that it can be resized depending on the device.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
+                img: 'feature-card_module-3.jpg',
+                alt: 'featured card image 3',
+                title: 'Amazon toy',
+                text: 'Packaging',
+                isDarkened: false
             },
         ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
         isDarkened: true,
         isDark: false
-    }) %>
-    <!--END: SECTION LIGHT-->
+    } ) %>
+<!--END: SECTION LIGHT-->
 
-    
-    <!--SECTION DARK-->
-    <%- include(`${module}/featuredCard/featuredCard`, {
-        title: 'Know B_system Features',
+
+<!--SECTION DARK-->
+    <%- include( `${module}/featureCard/featureCard`, {
+        title: 'Featured works',
         cards: [
             {
-                feature: {
-                    src: 'organized_3',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'grayscale',
-                    color: '1000'
-                },
-                title: 'Well organized and layered',
-                text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
+                img: 'feature-card_module-dark-1.jpg',
+                alt: 'featured card image 1 dark mode',
+                title: 'Culture',
+                text: 'Editorial',
+                isDarkened: false
             },
             {
-                feature: {
-                    src: 'fonts_3',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'grayscale',
-                    color: '1000'
-                },
-                title: 'Google fonts',
-                text: 'The fonts used by Brand System are free and easy to find on Google fonts.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
+                img: 'feature-card_module-dark-2.jpg',
+                alt: 'featured card image 2 dark mode',
+                title: 'Beach Vibes',
+                text: 'Editorial',
+                isDarkened: false
             },
             {
-                feature: {
-                    src: 'responsive_3',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'grayscale',
-                    color: '1000'
-                },
-                title: 'Responsive components',
-                text: 'Each of the components is built so that it can be resized depending on the device.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
+                img: 'feature-card_module-dark-3.jpg',
+                alt: 'featured card image 3 dark mode',
+                title: 'Suite',
+                text: 'Editorial',
+                isDarkened: false
             },
         ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
         isDarkened: false,
         isDark: true
-    }) %>
+    } ) %>
 
-
-    <%- include(`${module}/featuredCard/featuredCard`, {
-        title: 'Know B_system Features',
-        cards: [
-            {
-                feature: {
-                    src: 'organized_3',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'grayscale',
-                    color: '1000'
-                },
-                title: 'Well organized and layered',
-                text: 'Elements are intuitively organized and well named, so you can quickly customize your design.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
-            },
-            {
-                feature: {
-                    src: 'fonts_3',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'grayscale',
-                    color: '1000'
-                },
-                title: 'Google fonts',
-                text: 'The fonts used by Brand System are free and easy to find on Google fonts.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
-            },
-            {
-                feature: {
-                    src: 'responsive_3',
-                    size: 'microillustration',
-                    alt: 'feature'
-                },
-                background:{
-                    type: 'grayscale',
-                    color: '1000'
-                },
-                title: 'Responsive components',
-                text: 'Each of the components is built so that it can be resized depending on the device.',
-                link:{
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
-            },
-        ],
-        isDarkened: true,
-        isDark: true
-    }) %>
-    <!--END: SECTION DARK-->
+    <%- include( `${module}/featureCard/featureCard`, {
+    title: 'Featured works',
+    cards: [
+        {
+            img: 'feature-card_module-dark-1.jpg',
+            alt: 'featured card image 1 dark mode',
+            title: 'Culture',
+            text: 'Editorial',
+            isDarkened: false
+        },
+        {
+            img: 'feature-card_module-dark-2.jpg',
+            alt: 'featured card image 2 dark mode',
+            title: 'Beach Vibes',
+            text: 'Editorial',
+            isDarkened: false
+        },
+        {
+            img: 'feature-card_module-dark-3.jpg',
+            alt: 'featured card image 3 dark mode',
+            title: 'Suite',
+            text: 'Editorial',
+            isDarkened: false
+        },
+    ],
+    link:{
+        href: '#',
+        label: 'See all articles',
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: true,
+    isDark: true
+    } ) %>
+<!--END: SECTION DARK-->
+</main>

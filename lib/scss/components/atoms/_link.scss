@@ -51,5 +51,11 @@ a {
                 color: themed.values(helper.secondary(eren-500), helper.primary('eren'));
             }
         }
+
+        &:active {
+            @include themed.properties {
+                color: themed.values($c-grayscale--ash, $c-grayscale--light);
+            }
+        }
     }
 }

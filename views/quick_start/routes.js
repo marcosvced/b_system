@@ -1,41 +1,46 @@
 const express = require('express')
 const { render, dir } = require('../../router/routeRender')
 const { QUICK_START } = require('./routePaths')
-const navigation = require('./navigation')
+const navigation = require('../navigation')
 
 const route = express.Router()
 
 function path(page = 'home', children = []) { return (dir(QUICK_START.ROUTE_NAME, page, children)) }
 
 /**
- * 1 Home
- * 2 Demos
- * 3 Pages
- * 4 Modules
- * 5 Components
- * 6 Transitions
+ * 1 Pages
+ * 2 Modules
+ * 3 Components
+ * 4 Transitions
  */
 
 /* the default path "/" should redirect to Home */
 route.get('/', (request, response) => {
-  response.redirect(QUICK_START.HOME)
+  response.redirect(QUICK_START.BUTTONS)
 })
 
 /**
- * 1 Home
+ * 2 Modules
  */
 
-route.get(QUICK_START.HOME, (request, response) => {
-  render(response, path(), {}, { navigation })
+/* Headers */
+route.get(QUICK_START.CATEGORIES_MENU, (request, response) => {
+  render(response, path('modules', ['categoriesMenu']), {}, { navigation })
 })
-
-/**
- * 4 Modules
- */
 
 /* Headers */
 route.get(QUICK_START.HEADERS, (request, response) => {
   render(response, path('modules', ['headers']), {}, { navigation })
+})
+
+/* Featured Cards */
+route.get(QUICK_START.FEATURED_CARDS, (request, response) => {
+  render(response, path('modules', ['featuredCards']), {}, { navigation })
+})
+
+/* Statistics */
+route.get(QUICK_START.STATISTICS, (request, response) => {
+  render(response, path('modules', ['statistics']), {}, { navigation })
 })
 
 /* Footers. */
@@ -55,6 +60,26 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
+/* Icons Social */
+route.get(QUICK_START.ICONS_SOCIAL, (request, response) => {
+  render(response, path('modules', ['iconsSocial']), {}, { navigation })
+})
+
+/* CTAs */
+route.get(QUICK_START.CTA, (request, response) => {
+  render(response, path('modules', ['cta']), {}, { navigation })
+})
+
+/* Contact bar */
+route.get(QUICK_START.CONTACT_BAR, (request, response) => {
+  render(response, path('modules', ['contactBar']), {}, { navigation })
+})
+
+/* Service grids. */
+route.get(QUICK_START.SERVICE_GRIDS, (request, response) => {
+  render(response, path('modules', ['serviceGrids']), {}, { navigation })
+})
+
 /* Basic Contents */
 route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
   render(response, path('modules', ['basicContents']), {}, { navigation })
@@ -65,8 +90,57 @@ route.get(QUICK_START.FEATURED_CARDS, (request, response) => {
   render(response, path('modules', ['featuredCards']), {}, { navigation })
 })
 
+/* FAQs */
+route.get(QUICK_START.FAQS, (request, response) => {
+  render(response, path('modules', ['faqs']), {}, { navigation })
+})
+
+/* Icon Services */
+route.get(QUICK_START.ICON_SERVICES, (request, response) => {
+  render(response, path('modules', ['iconServices']), {}, { navigation })
+})
+
+/* Team Grids */
+route.get(QUICK_START.TEAM_GRIDS, (request, response) => {
+  render(response, path('modules', ['teamGrids']), {}, { navigation })
+})
+
+/* Busness Cases */
+route.get(QUICK_START.BUSINESS_CASES, (request, response) => {
+  render(response, path('modules', ['businessCases']), {}, { navigation })
+})
+
+/* Marquees. */
+route.get(QUICK_START.MARQUEES.BASIC, (request, response) => {
+  render(response, path('modules', ['marquees', 'basic']), {}, { navigation })
+})
+
+route.get(QUICK_START.MARQUEES.CTA, (request, response) => {
+  render(response, path('modules', ['marquees', 'cta']), {}, { navigation })
+})
+
+route.get(QUICK_START.MARQUEES.EXTENDED, (request, response) => {
+  render(response, path('modules', ['marquees', 'extended']), {}, { navigation })
+})
+
+route.get(QUICK_START.MARQUEES.ILLUSTRATION, (request, response) => {
+  render(response, path('modules', ['marquees', 'illustration']), {}, { navigation })
+})
+
+route.get(QUICK_START.MARQUEES.IMAGE, (request, response) => {
+  render(response, path('modules', ['marquees', 'image']), {}, { navigation })
+})
+
+route.get(QUICK_START.MARQUEES.STANDAR, (request, response) => {
+  render(response, path('modules', ['marquees', 'standar']), {}, { navigation })
+})
+
+route.get(QUICK_START.MARQUEES.TEXTIMAGE, (request, response) => {
+  render(response, path('modules', ['marquees', 'textImage']), {}, { navigation })
+})
+
 /**
- * 5 Components
+ * 3 Components
  */
 
 /* Buttons */
@@ -132,11 +206,6 @@ route.get(QUICK_START.MICROILLUSTRATIONS, (request, response) => {
 /* Scenes page. */
 route.get(QUICK_START.SCENES, (request, response) => {
   render(response, path('components', ['scenes']), {}, { navigation })
-})
-
-// TODO: remove
-route.get('/example', (request, response) => {
-  render(response, path('example', []), {}, { navigation })
 })
 
 module.exports = route

@@ -2,11 +2,13 @@ const srcDirs = require('./dirs')
 const build = require('./routeBuild')
 
 const quickStartPaths = require('../views/quick_start/routePaths')
+const demosPaths = require('../views/demos/routePaths')
 
 const defaultOptions = {
   title: 'B_system',
   ...srcDirs,
   ...quickStartPaths,
+  ...demosPaths,
   layout: `${srcDirs.layout}/default`,
 }
 
