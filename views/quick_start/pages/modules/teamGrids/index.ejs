@@ -1,0 +1,94 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<%- include(`${module}/teamGrid/teamGrid`, {
+    teamGrid: [
+        {
+            name: 'Danielle Jolie',
+            job: 'UX/UI',
+            img: {
+                src: 'gridcells_basic-01',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            onGrid: 'basic'
+        },
+        {
+            name: 'Martha Nielsen',
+            job: 'UX Writer',
+            img: {
+                src: 'gridcells_basic-03',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            shape: 'vertical',
+            onGrid: 'vertical'
+        },
+        {
+            name: 'Marcos Pascual',
+            job: 'UX/UI',
+            img: {
+                src: 'gridcells_basic-02',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            onGrid: 'basic'
+        },
+        {
+            name: 'Marcos Pascual',
+            job: 'UX/UI',
+            img: {
+                src: 'gridcells_basic-02',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            onGrid: 'basic'
+        },
+        {
+            name: 'Marcos Pascual',
+            job: 'UX/UI',
+            img: {
+                src: 'gridcells_basic-02',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            onGrid: 'basic'
+        },
+        {
+            name: 'Marcos Pascual',
+            job: 'UX/UI',
+            img: {
+                src: 'gridcells_basic-02',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            shape: 'horizontal',
+            onGrid: 'horizontal'
+        },
+    ]
+}) %>

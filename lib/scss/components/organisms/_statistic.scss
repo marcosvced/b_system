@@ -1,0 +1,39 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.section-statistic {
+    z-index: 0;
+}
+
+.statistic {
+    $parent: &;
+    row-gap: helper.space(48);
+
+    @include mixin.screen(md) {
+        row-gap: helper.space(56);
+    }
+
+    #{$parent}-data {
+        font-size: helper.rem(64);
+    }
+
+    #{$parent}-text:not(.statistic-background-text) {
+        @include themed.properties {
+            color: themed.values($c-grayscale--800, $c-grayscale--600);
+         }
+    }
+
+    &-background {
+        height: 100%;
+        width: 100%;
+        object-fit: none;
+        filter: brightness(.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}

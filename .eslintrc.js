@@ -1,4 +1,5 @@
 module.exports = {
+  plugins: ['ejs'],
   extends: ['airbnb'],
   rules: {
     semi: ['error', 'never'],

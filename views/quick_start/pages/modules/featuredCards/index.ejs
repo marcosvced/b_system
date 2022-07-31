@@ -1,0 +1,171 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('styles') %>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<main class="main">
+<!--CARDS-->
+
+<!--SECTION LIGHT-->
+
+    <%- include( `${module}/featureCard/featureCard`, {
+        title: 'Featured works',
+        cards: [
+            {
+                img: 'feature-card_module-1.jpg',
+                alt: 'featured card image 1',
+                title: '.US',
+                text: 'Product design',
+                isDarkened: false
+            },
+            {
+                img: 'feature-card_module-2.jpg',
+                alt: 'featured card image 2',
+                title: 'Dream',
+                text: 'Editorial',
+                isDarkened: false
+            },
+            {
+                img: 'feature-card_module-3.jpg',
+                alt: 'featured card image 3',
+                title: 'Amazon toy',
+                text: 'Packaging',
+                isDarkened: false
+            },
+        ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: false,
+        isDark: false
+    } ) %>
+
+    <%- include( `${module}/featureCard/featureCard`, {
+        title: 'Featured works',
+        cards: [
+            {
+                img: 'feature-card_module-1.jpg',
+                alt: 'featured card image 1',
+                title: '.US',
+                text: 'Product design',
+                isDarkened: false
+            },
+            {
+                img: 'feature-card_module-2.jpg',
+                alt: 'featured card image 2',
+                title: 'Dream',
+                text: 'Editorial',
+                isDarkened: false
+            },
+            {
+                img: 'feature-card_module-3.jpg',
+                alt: 'featured card image 3',
+                title: 'Amazon toy',
+                text: 'Packaging',
+                isDarkened: false
+            },
+        ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: true,
+        isDark: false
+    } ) %>
+<!--END: SECTION LIGHT-->
+
+
+<!--SECTION DARK-->
+    <%- include( `${module}/featureCard/featureCard`, {
+        title: 'Featured works',
+        cards: [
+            {
+                img: 'feature-card_module-dark-1.jpg',
+                alt: 'featured card image 1 dark mode',
+                title: 'Culture',
+                text: 'Editorial',
+                isDarkened: false
+            },
+            {
+                img: 'feature-card_module-dark-2.jpg',
+                alt: 'featured card image 2 dark mode',
+                title: 'Beach Vibes',
+                text: 'Editorial',
+                isDarkened: false
+            },
+            {
+                img: 'feature-card_module-dark-3.jpg',
+                alt: 'featured card image 3 dark mode',
+                title: 'Suite',
+                text: 'Editorial',
+                isDarkened: false
+            },
+        ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: false,
+        isDark: true
+    } ) %>
+
+    <%- include( `${module}/featureCard/featureCard`, {
+    title: 'Featured works',
+    cards: [
+        {
+            img: 'feature-card_module-dark-1.jpg',
+            alt: 'featured card image 1 dark mode',
+            title: 'Culture',
+            text: 'Editorial',
+            isDarkened: false
+        },
+        {
+            img: 'feature-card_module-dark-2.jpg',
+            alt: 'featured card image 2 dark mode',
+            title: 'Beach Vibes',
+            text: 'Editorial',
+            isDarkened: false
+        },
+        {
+            img: 'feature-card_module-dark-3.jpg',
+            alt: 'featured card image 3 dark mode',
+            title: 'Suite',
+            text: 'Editorial',
+            isDarkened: false
+        },
+    ],
+    link:{
+        href: '#',
+        label: 'See all articles',
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: true,
+    isDark: true
+    } ) %>
+<!--END: SECTION DARK-->
+</main>
