@@ -1,0 +1,71 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('styles') %>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<main class="main">
+    <%- include(`${module}/cta/cta`, {
+        title: 'Do you want to start with B_system today?',
+        btn: {
+            label: 'Purchase B_system',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: false,
+        isDark: false
+    }) %>
+
+    <%- include(`${module}/cta/cta`, {
+        title: 'Do you want to start with B_system today?',
+        btn: {
+            label: 'Purchase B_system',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: true,
+        isDark: false
+    }) %>
+
+    <%- include(`${module}/cta/cta`, {
+        title: 'Do you want to start with B_system today?',
+        btn: {
+            label: 'Purchase B_system',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: false,
+        isDark: true
+    }) %>
+
+    <%- include(`${module}/cta/cta`, {
+        title: 'Do you want to start with B_system today?',
+        btn: {
+            label: 'Purchase B_system',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: true,
+        isDark: true
+    }) %>
+</main>
