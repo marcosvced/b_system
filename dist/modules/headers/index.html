@@ -7,8 +7,13 @@
     <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
+
+    <!-- Demo styles -->
     <style lang="css">
       body {
         background-color: var(--c-grayscale__100);
@@ -22,12 +27,12 @@
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
           <div class="d-flex d-xl-none order-0">
-            <button href="#" class="btn btn-only-icon">
+            <button type="button" class="btn btn-only-icon">
               <i class="icon-cart"></i>
             </button>
           </div>
           <div class="d-none d-xl-block order-1">
-            <button href="#" class="btn btn-primary    btn-fit">
+            <button type="button" class="btn btn-primary    btn-fit">
               Purchase B_system
             </button>
           </div>
@@ -39,10 +44,15 @@
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
             <nav class="navbar navbar-expand-lg">
               <ul class="navbar-nav">
-                <li class="nav-item  ">
-                  <a class="nav-link  " href="#">
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Demos
                   </a>
+                  <ul class="dropdown-menu" aria-labelledby="demos_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../demos/home">Home</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item  ">
                   <a class="nav-link  " href="#">
@@ -70,6 +80,9 @@
                       <a class="dropdown-item " href="#">Forms</a>
                     </li>
                     <li>
+                      <a class="dropdown-item " href="../../modules/businessCases">Business Cases</a>
+                    </li>
+                    <li>
                       <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
                     </li>
                     <li>
@@ -80,6 +93,30 @@
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/footers/newsletter">Footers Newsletter</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/basicContents">Basic Contents</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/basic">Marquee</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/cta">Marquee cta</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/extended">Marquee extended</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/illustration">Marquee illustration</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/image">Marquee image</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/standar">Marquee standar</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/textImage">Marquee textimage</a>
                     </li>
                   </ul>
                 </li>
@@ -147,7 +184,7 @@
             </nav>
           </div>
           <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-            <button href="#" class="btn btn-only-icon">
+            <button type="button" class="btn btn-only-icon">
               <i class="icon-menu"></i>
             </button>
           </div>
@@ -169,17 +206,17 @@
               <div class="d-flex justify-content-between align-items-center container-xl">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -221,7 +258,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -237,12 +274,12 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-cart"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-primary    btn-fit">
+                    <button type="button" class="btn btn-primary    btn-fit">
                       Purchase B_system
                     </button>
                   </div>
@@ -283,7 +320,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -299,17 +336,17 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -351,7 +388,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -367,23 +404,23 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-3 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-2">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Cart</span>
                       <i class="icon-shopping"></i>
                     </button>
@@ -425,10 +462,10 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-shopping"></i>
                     </button>
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -451,12 +488,12 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-cart"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-primary   btn-narrow btn-fit">
+                    <button type="button" class="btn btn-primary   btn-narrow btn-fit">
                       Purchase B_system
                     </button>
                   </div>
@@ -497,7 +534,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -513,17 +550,17 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle   btn-narrow btn-fit">
+                    <button type="button" class="btn btn-subtle   btn-narrow btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -565,7 +602,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -588,17 +625,17 @@
               <div class="d-flex justify-content-between align-items-center container-xl">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -640,7 +677,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -656,12 +693,12 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-cart"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-primary    btn-fit">
+                    <button type="button" class="btn btn-primary    btn-fit">
                       Purchase B_system
                     </button>
                   </div>
@@ -702,7 +739,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -718,17 +755,17 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -770,7 +807,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -786,23 +823,23 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-3 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-2">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Cart</span>
                       <i class="icon-shopping"></i>
                     </button>
@@ -844,10 +881,10 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-shopping"></i>
                     </button>
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -870,17 +907,17 @@
               <div class="d-flex justify-content-between align-items-center container-xl">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -922,7 +959,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -938,12 +975,12 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-cart"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-primary    btn-fit">
+                    <button type="button" class="btn btn-primary    btn-fit">
                       Purchase B_system
                     </button>
                   </div>
@@ -984,7 +1021,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -1000,17 +1037,17 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -1052,7 +1089,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -1068,23 +1105,23 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-3 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-2">
-                    <button href="#" class="btn btn-subtle    btn-fit">
+                    <button type="button" class="btn btn-subtle    btn-fit">
                       <span>Cart</span>
                       <i class="icon-shopping"></i>
                     </button>
@@ -1126,10 +1163,10 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-shopping"></i>
                     </button>
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -1152,12 +1189,12 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-cart"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-primary   btn-narrow btn-fit">
+                    <button type="button" class="btn btn-primary   btn-narrow btn-fit">
                       Purchase B_system
                     </button>
                   </div>
@@ -1198,7 +1235,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -1214,17 +1251,17 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-subtle   btn-narrow btn-fit">
+                    <button type="button" class="btn btn-subtle   btn-narrow btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -1266,7 +1303,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -1289,17 +1326,17 @@
               <div class="d-flex justify-content-between align-items-center container-xl">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-tertiary    btn-fit">
+                    <button type="button" class="btn btn-tertiary    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -1341,7 +1378,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -1357,12 +1394,12 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-cart"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-primary    btn-fit">
+                    <button type="button" class="btn btn-primary    btn-fit">
                       Purchase B_system
                     </button>
                   </div>
@@ -1403,7 +1440,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -1419,17 +1456,17 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-2 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-tertiary    btn-fit">
+                    <button type="button" class="btn btn-tertiary    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
@@ -1471,7 +1508,7 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -1487,23 +1524,23 @@
               <div class="d-flex justify-content-between align-items-center ">
                 <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
                   <div class="order-3 order-xl-0 space-right-xl-32">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-m-glass"></i>
                     </button>
                   </div>
                   <div class="d-flex d-xl-none order-0">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-1">
-                    <button href="#" class="btn btn-tertiary    btn-fit">
+                    <button type="button" class="btn btn-tertiary    btn-fit">
                       <span>Access</span>
                       <i class="icon-avatar"></i>
                     </button>
                   </div>
                   <div class="d-none d-xl-block order-2">
-                    <button href="#" class="btn btn-tertiary    btn-fit">
+                    <button type="button" class="btn btn-tertiary    btn-fit">
                       <span>Cart</span>
                       <i class="icon-shopping"></i>
                     </button>
@@ -1545,10 +1582,10 @@
                     </nav>
                   </div>
                   <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-shopping"></i>
                     </button>
-                    <button href="#" class="btn btn-only-icon">
+                    <button type="button" class="btn btn-only-icon">
                       <i class="icon-menu"></i>
                     </button>
                   </div>
@@ -1585,6 +1622,9 @@
 
     <!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper bundle CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>

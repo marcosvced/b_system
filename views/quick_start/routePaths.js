@@ -4,12 +4,24 @@ module.exports = {
     HOME: '/home',
     HEADERS: '/modules/headers',
     CATEGORIES_MENU: '/modules/categories-menu',
+    TEAM_GRIDS: '/modules/teamGrids',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
       STANDARD: '/modules/footers/standard',
       CORPORATE: '/modules/footers/corporate',
       NEWSLETTER: '/modules/footers/newsletter',
     },
+    MARQUEES: {
+      BASIC: '/modules/marquees/basic',
+      CTA: '/modules/marquees/cta',
+      EXTENDED: '/modules/marquees/extended',
+      ILLUSTRATION: '/modules/marquees/illustration',
+      IMAGE: '/modules/marquees/image',
+      STANDAR: '/modules/marquees/standar',
+      TEXTIMAGE: '/modules/marquees/textImage',
+    },
+    BASIC_CONTENTS: '/modules/basicContents',
+    BUSINESS_CASES: '/modules/businessCases',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',
@@ -24,4 +36,5 @@ module.exports = {
     ILLUSTRATIONS: '/components/illustrations',
     SCENES: '/components/scenes',
   },
+
 }

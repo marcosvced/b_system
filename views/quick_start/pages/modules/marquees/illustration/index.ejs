@@ -1,0 +1,72 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<div class="main-content main-content-space-top">
+    <section>
+        <%- include(`${module}/marquee/illustration/illustration`, {
+        slides: [
+        {
+            bg:'armin',
+            img: {
+            src: 'skyscraper',
+            size: 'scenes',
+            alt: 'Marquee image'
+            },
+            title: 'Design brings prosperity',
+            text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
+            btn: {
+            label: 'Know more'
+            },
+            quote: 'People ignore design that ignores people',
+            backgroundColor: 'success'
+        },
+        {
+            bg:'mikasa',
+            img: {
+            src: 'skyscraper',
+            size: 'scenes',
+            alt: 'Marquee image'
+            },
+            title: 'Design brings prosperity',
+            text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
+            btn: {
+            label: 'Know more'
+            },
+            quote: 'People ignore design that ignores people',
+            backgroundColor: 'success'
+        },
+        {
+            bg:'eren',
+            img: {
+            src: 'skyscraper',
+            size: 'scenes',
+            alt: 'Marquee image'
+            },
+            title: 'Design brings prosperity',
+            text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
+            btn: {
+            label: 'Know more'
+            },
+            quote: 'People ignore design that ignores people',
+            backgroundColor: 'success'
+        }
+        ]}) %>
+    </section>
+</div>

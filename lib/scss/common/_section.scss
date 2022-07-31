@@ -3,6 +3,7 @@
 @use '../mixins' as mixin;
 @use '../placeholders';
 
+.module,
 .section {
     @extend %bg-darkened;
 
