@@ -1,0 +1,135 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+    <%- include( `${module}/serviceGrid/serviceGrid`, {
+        cards: [
+            {
+                title: 'Digital strategy',
+                text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business.',
+                tag: '1',
+                img: {
+                    src: 'light_service-grid',
+                    alt: 'service grid image',
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                contentPosition: 'right'
+            },
+            {
+                title: 'Digital Marketing',
+                text: 'In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.',
+                tag: '2',
+                img: {
+                    src: 'light_service-grid-2',
+                    alt: 'service grid image',
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                contentPosition: 'right'
+            },
+            {
+                title: 'Social media',
+                text: 'A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.',
+                tag: '3',
+                img: {
+                    src: 'light_service-grid-3',
+                    alt: 'service grid image',
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                contentPosition: 'left'
+            },
+            {
+                title: 'Digital strategy',
+                text: 'We optimize all the means to help you sell. Our extensive Know How in performance supports our experience.',
+                tag: '4',
+                img: {
+                    src: 'light_service-grid-4',
+                    alt: 'service grid image',
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                contentPosition: 'left'
+            },
+        ],
+        isDark: false
+    } ) %>
+
+    <%- include( `${module}/serviceGrid/serviceGrid`, {
+        cards: [
+            {
+                title: 'Digital strategy',
+                text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business.',
+                tag: '1',
+                img: {
+                    src: 'dark_service-grid',
+                    alt: 'service grid image',
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                contentPosition: 'right'
+            },
+            {
+                title: 'Digital Marketing',
+                text: 'In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.',
+                tag: '2',
+                img: {
+                    src: 'dark_service-grid-2',
+                    alt: 'service grid image',
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                contentPosition: 'right'
+            },
+            {
+                title: 'Social media',
+                text: 'A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.',
+                tag: '3',
+                img: {
+                    src: 'dark_service-grid-3',
+                    alt: 'service grid image',
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                contentPosition: 'left'
+            },
+            {
+                title: 'Digital strategy',
+                text: 'We optimize all the means to help you sell. Our extensive Know How in performance supports our experience.',
+                tag: '4',
+                img: {
+                    src: 'dark_service-grid-4',
+                    alt: 'service grid image',
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                contentPosition: 'left'
+            },
+        ],
+        isDark: true
+    } ) %>

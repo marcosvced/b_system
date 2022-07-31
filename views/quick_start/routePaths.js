@@ -3,6 +3,10 @@ module.exports = {
     ROUTE_NAME: 'quick_start',
     HOME: '/home',
     HEADERS: '/modules/headers',
+    STATISTICS: '/modules/statistics',
+    CATEGORIES_MENU: '/modules/categories-menu',
+    SERVICE_GRIDS: '/modules/serviceGrids',
+    TEAM_GRIDS: '/modules/teamGrids',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
       STANDARD: '/modules/footers/standard',
@@ -10,7 +14,19 @@ module.exports = {
       NEWSLETTER: '/modules/footers/newsletter',
     },
     ICONS_SOCIAL: '/modules/iconSocial',
+    CTA: '/modules/cta',
+    CONTACT_BAR: '/modules/contactBar',
+    MARQUEES: {
+      BASIC: '/modules/marquees/basic',
+      CTA: '/modules/marquees/cta',
+      EXTENDED: '/modules/marquees/extended',
+      ILLUSTRATION: '/modules/marquees/illustration',
+      IMAGE: '/modules/marquees/image',
+      STANDAR: '/modules/marquees/standar',
+      TEXTIMAGE: '/modules/marquees/textImage',
+    },
     BASIC_CONTENTS: '/modules/basicContents',
+    BUSINESS_CASES: '/modules/businessCases',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',
@@ -25,4 +41,5 @@ module.exports = {
     ILLUSTRATIONS: '/components/illustrations',
     SCENES: '/components/scenes',
   },
+
 }
