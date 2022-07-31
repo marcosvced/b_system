@@ -12,6 +12,7 @@ module.exports = {
       CORPORATE: '/modules/footers/corporate',
       NEWSLETTER: '/modules/footers/newsletter',
     },
+    CTA: '/modules/cta',
     CONTACT_BAR: '/modules/contactBar',
     MARQUEES: {
       BASIC: '/modules/marquees/basic',

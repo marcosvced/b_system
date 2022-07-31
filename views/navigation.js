@@ -61,6 +61,10 @@ const navigation = [
         label: 'Footers Newsletter',
       },
       {
+        href: QUICK_START.CTA,
+        label: 'CTA',
+      },
+      {
         href: QUICK_START.CONTACT_BAR,
         label: 'Contact Bar',
       },

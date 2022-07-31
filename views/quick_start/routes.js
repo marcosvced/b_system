@@ -50,6 +50,12 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
+/* CTAs */
+route.get(QUICK_START.CTA, (request, response) => {
+  render(response, path('modules', ['cta']), {}, { navigation })
+})
+
+/* Headers */
 /* Contact bar */
 route.get(QUICK_START.CONTACT_BAR, (request, response) => {
   render(response, path('modules', ['contactBar']), {}, { navigation })
