@@ -60,6 +60,7 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
+/* Basic Contents */
 /* Icons Social */
 route.get(QUICK_START.ICONS_SOCIAL, (request, response) => {
   render(response, path('modules', ['iconsSocial']), {}, { navigation })
@@ -86,6 +87,16 @@ route.get(QUICK_START.SERVICE_GRIDS, (request, response) => {
 /* Basic Contents */
 route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
   render(response, path('modules', ['basicContents']), {}, { navigation })
+})
+
+/* FAQs */
+route.get(QUICK_START.FAQS, (request, response) => {
+  render(response, path('modules', ['faqs']), {}, { navigation })
+})
+
+/* Icon Services */
+route.get(QUICK_START.ICON_SERVICES, (request, response) => {
+  render(response, path('modules', ['iconServices']), {}, { navigation })
 })
 
 /* Team Grids */

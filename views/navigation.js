@@ -45,6 +45,14 @@ const navigation = [
         label: 'Forms',
       },
       {
+        href: QUICK_START.FAQS,
+        label: 'FAQs',
+      },
+      {
+        href: QUICK_START.ICON_SERVICES,
+        label: 'Icon Services',
+      },
+      {
         href: QUICK_START.FEATURED_CARDS,
         label: 'Featured Cards',
       },

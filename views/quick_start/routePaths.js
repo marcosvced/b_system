@@ -27,6 +27,8 @@ module.exports = {
       TEXTIMAGE: '/modules/marquees/textImage',
     },
     BASIC_CONTENTS: '/modules/basicContents',
+    FAQS: '/modules/faqs',
+    ICON_SERVICES: '/modules/iconServices',
     BUSINESS_CASES: '/modules/businessCases',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
