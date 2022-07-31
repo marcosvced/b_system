@@ -1,4 +1,5 @@
 @use '../../placeholders';
+@use '../../variables/colors' as *;
 @use '../../helpers/themed';
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;

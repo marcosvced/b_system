@@ -60,19 +60,16 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
-/* Basic Contents */
 /* Icons Social */
 route.get(QUICK_START.ICONS_SOCIAL, (request, response) => {
   render(response, path('modules', ['iconsSocial']), {}, { navigation })
 })
 
-/* basicContents */
 /* CTAs */
 route.get(QUICK_START.CTA, (request, response) => {
   render(response, path('modules', ['cta']), {}, { navigation })
 })
 
-/* Headers */
 /* Contact bar */
 route.get(QUICK_START.CONTACT_BAR, (request, response) => {
   render(response, path('modules', ['contactBar']), {}, { navigation })
@@ -83,10 +80,14 @@ route.get(QUICK_START.SERVICE_GRIDS, (request, response) => {
   render(response, path('modules', ['serviceGrids']), {}, { navigation })
 })
 
-/* Basic contents. */
 /* Basic Contents */
 route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
   render(response, path('modules', ['basicContents']), {}, { navigation })
+})
+
+/* Featured Cards */
+route.get(QUICK_START.FEATURED_CARDS, (request, response) => {
+  render(response, path('modules', ['featuredCards']), {}, { navigation })
 })
 
 /* FAQs */
