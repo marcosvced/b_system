@@ -7,8 +7,13 @@
     <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
+
+    <!-- Demo styles -->
     <style lang="css">
     </style>
   </head>
@@ -36,10 +41,15 @@
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
             <nav class="navbar navbar-expand-lg">
               <ul class="navbar-nav">
-                <li class="nav-item  ">
-                  <a class="nav-link  " href="#">
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Demos
                   </a>
+                  <ul class="dropdown-menu" aria-labelledby="demos_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../demos/home">Home</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item  ">
                   <a class="nav-link  " href="#">
@@ -52,19 +62,37 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="modules_dropdown_menu">
                     <li>
-                      <a class="dropdown-item " href="#">Menus</a>
+                      <a class="dropdown-item " href="../../modules/categories-menu">Menus</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/headers">Headers</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Contents</a>
+                      <a class="dropdown-item " href="../../modules/serviceGrids">Service grid</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Grids</a>
+                      <a class="dropdown-item " href="../../modules/teamGrids">Team grids</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/iconSocial">Icons Social</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="#">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/faqs">FAQs</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/iconServices">Icon Services</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/featuredCards">Featured Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/statistics">Statistics</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/businessCases">Business Cases</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
@@ -79,7 +107,34 @@
                       <a class="dropdown-item " href="../../modules/footers/newsletter">Footers Newsletter</a>
                     </li>
                     <li>
+                      <a class="dropdown-item " href="../../modules/cta">CTA</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/contactBar">Contact Bar</a>
+                    </li>
+                    <li>
                       <a class="dropdown-item " href="../../modules/basicContents">Basic Contents</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/basic">Marquee</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/cta">Marquee cta</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/extended">Marquee extended</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/illustration">Marquee illustration</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/image">Marquee image</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/standar">Marquee standar</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/textImage">Marquee textimage</a>
                     </li>
                   </ul>
                 </li>
@@ -116,7 +171,7 @@
                       <a class="dropdown-item " href="#">Accordions</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Alerts</a>
+                      <a class="dropdown-item " href="../../components/alerts">Alerts</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../components/icons">Icons</a>
@@ -332,6 +387,9 @@
 
     <!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper bundle CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
