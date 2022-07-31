@@ -34,7 +34,8 @@
     }
   }
 
-  @include backgounds.can-use((eren, mikasa, armin), true);
+  $bg-keys: map.keys(map.merge(palette.$primary, palette.$opacity));
+  @include backgounds.can-use($bg-keys, true);
 
   &-darkened {
 
@@ -60,6 +61,7 @@
 
   &-tight {
     padding: 0;
+    min-width: helper.rem(32);
     width: helper.rem(32);
     height: helper.rem(56);
     border-radius: helper.rem(16);

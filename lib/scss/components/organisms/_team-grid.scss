@@ -1,0 +1,47 @@
+@use '../../mixins' as mixin;
+
+
+.team-grid {
+    grid-gap: 0;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include mixin.screen(md) {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include mixin.screen(xl) {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    &-basic {
+        grid-column: span 4;
+
+        @include mixin.screen(xl) {
+            grid-column: span 3;
+        }
+    }
+
+    &-vertical {
+        grid-column: span 4;
+
+        @include mixin.screen(md) {
+            grid-row: span 2;
+        }
+
+        @include mixin.screen(xl) {
+            grid-column: span 3;
+        }
+    }
+
+    &-horizontal {
+        grid-column: span 4;
+
+        @include mixin.screen(md) {
+            grid-column: span 8;
+        }
+
+        @include mixin.screen(xl) {
+            grid-column: span 6;
+        }
+    }
+}

@@ -1,9 +1,16 @@
-const { QUICK_START } = require('./routePaths')
+const { QUICK_START } = require('./quick_start/routePaths')
+const { DEMOS } = require('./demos/routePaths')
 
 const navigation = [
   {
     label: 'Demos',
     key: 'demos',
+    entries: [
+      {
+        label: 'Home',
+        href: DEMOS.HOME,
+      },
+    ],
   },
   {
     label: 'Pages',
@@ -26,12 +33,16 @@ const navigation = [
         label: 'Service grid',
       },
       {
-        href: '#',
-        label: 'Grids',
+        href: QUICK_START.TEAM_GRIDS,
+        label: 'Team grids',
       },
       {
         href: '#',
         label: 'Forms',
+      },
+      {
+        href: QUICK_START.BUSINESS_CASES,
+        label: 'Business Cases',
       },
       {
         href: QUICK_START.FOOTERS.BASIC,
@@ -52,6 +63,34 @@ const navigation = [
       {
         href: QUICK_START.BASIC_CONTENTS,
         label: 'Basic Contents',
+      },
+      {
+        href: QUICK_START.MARQUEES.BASIC,
+        label: 'Marquee',
+      },
+      {
+        href: QUICK_START.MARQUEES.CTA,
+        label: 'Marquee cta',
+      },
+      {
+        href: QUICK_START.MARQUEES.EXTENDED,
+        label: 'Marquee extended',
+      },
+      {
+        href: QUICK_START.MARQUEES.ILLUSTRATION,
+        label: 'Marquee illustration',
+      },
+      {
+        href: QUICK_START.MARQUEES.IMAGE,
+        label: 'Marquee image',
+      },
+      {
+        href: QUICK_START.MARQUEES.STANDAR,
+        label: 'Marquee standar',
+      },
+      {
+        href: QUICK_START.MARQUEES.TEXTIMAGE,
+        label: 'Marquee textimage',
       },
     ],
 

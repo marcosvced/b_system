@@ -19,6 +19,7 @@
 @use "common/styles";
 @use "common/section";
 @use "common/texts";
+@use "common/swiper";
 
 /*
  * 2º Atoms
@@ -52,6 +53,8 @@
  */
 @use "components/organisms/header";
 @use "components/organisms/marquee";
+@use "components/organisms/team-grid";
+@use "components/organisms/business-case";
 @use "components/organisms/footer";
 
 
