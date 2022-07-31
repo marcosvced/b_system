@@ -45,6 +45,10 @@ const navigation = [
         label: 'Forms',
       },
       {
+        href: QUICK_START.FEATURED_CARDS,
+        label: 'Featured Cards',
+      },
+      {
         href: QUICK_START.STATISTICS,
         label: 'Statistics',
       },
