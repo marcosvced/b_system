@@ -55,6 +55,12 @@ route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
 })
 
+/* Icons Social */
+route.get(QUICK_START.ICONS_SOCIAL, (request, response) => {
+  render(response, path('modules', ['iconsSocial']), {}, { navigation })
+})
+
+/* basicContents */
 /* CTAs */
 route.get(QUICK_START.CTA, (request, response) => {
   render(response, path('modules', ['cta']), {}, { navigation })

@@ -13,6 +13,7 @@ module.exports = {
       CORPORATE: '/modules/footers/corporate',
       NEWSLETTER: '/modules/footers/newsletter',
     },
+    ICONS_SOCIAL: '/modules/iconSocial',
     CTA: '/modules/cta',
     CONTACT_BAR: '/modules/contactBar',
     MARQUEES: {

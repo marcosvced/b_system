@@ -37,6 +37,10 @@ const navigation = [
         label: 'Team grids',
       },
       {
+        href: QUICK_START.ICONS_SOCIAL,
+        label: 'Icons Social',
+      },
+      {
         href: '#',
         label: 'Forms',
       },
