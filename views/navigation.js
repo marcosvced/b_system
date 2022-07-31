@@ -41,6 +41,10 @@ const navigation = [
         label: 'Forms',
       },
       {
+        href: QUICK_START.STATISTICS,
+        label: 'Statistics',
+      },
+      {
         href: QUICK_START.BUSINESS_CASES,
         label: 'Business Cases',
       },
