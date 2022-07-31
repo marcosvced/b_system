@@ -4,6 +4,7 @@ module.exports = {
     HOME: '/home',
     HEADERS: '/modules/headers',
     CATEGORIES_MENU: '/modules/categories-menu',
+    SERVICE_GRIDS: '/modules/serviceGrids',
     TEAM_GRIDS: '/modules/teamGrids',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
