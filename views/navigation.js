@@ -21,7 +21,7 @@ const navigation = [
     key: 'modules',
     entries: [
       {
-        href: '#',
+        href: QUICK_START.CATEGORIES_MENU,
         label: 'Menus',
       },
       {
