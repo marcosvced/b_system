@@ -49,7 +49,7 @@ exports.default = () => {
 
   browserSync.init({
     proxy: 'localhost:3000',
-    port: 3001,
+    port: 3004,
   })
   gulp.watch(['./**/*.ejs', 'lib/scss/**/*.scss', 'lib/js/**/*.js']).on('change', browserSync.reload)
 }
