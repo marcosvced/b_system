@@ -1,0 +1,74 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+
+.contact-bar {
+    $parent: &;
+    background-color: $c-eren;
+    padding: helper.space(16);
+    display: flex;
+    justify-content: space-between;
+
+    @include mixin.screen(sm) {
+        padding-inline: helper.space(24);
+    }
+
+    @include mixin.screen(xl) {
+        padding-inline: helper.space(32);
+    }
+
+    &-social {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        @include mixin.x(24);
+
+        @include mixin.screen(md) {
+            width: auto;
+        }
+    }
+
+    &-contact, #{$parent}-text:not(.contact-bar-social-text) {
+        display: none;
+    }
+
+    &-contact {
+        @include mixin.screen(md) {
+            display: flex;
+        }
+    }
+
+    #{$parent}-text:not(.contact-bar-social-text) {
+        @include mixin.screen(xl) {
+            display: block;
+        }
+    }
+
+    .action-link,
+    .btn [class^=icon-],
+    .action-link:hover {
+        color: $c-grayscale--light;
+    }
+
+    .btn.btn-only-icon {
+        position: relative;
+        z-index: 0;
+
+        &:before {
+            content: '';
+            @include mixin.circle(32);
+            background-color: $c-eren--500;
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            @include mixin.slow-transition(opacity);
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+}
