@@ -19,6 +19,7 @@
 @use "common/styles";
 @use "common/section";
 @use "common/texts";
+@use "common/swiper";
 
 /*
  * 2º Atoms
@@ -45,14 +46,18 @@
 @use "components/molecules/navdrawer";
 @use "components/molecules/product-card";
 @use "components/molecules/grid-cell";
+@use "components/molecules/categories_menu";
+@use "components/molecules/service-grid";
 
 /*
  * 4º Organisms
  */
 @use "components/organisms/header";
 @use "components/organisms/marquee";
+@use "components/organisms/team-grid";
+@use "components/organisms/business-case";
 @use "components/organisms/footer";
 @use "components/organisms/cta";
-@use "components/organisms/basic-content";
+@use "components/organisms/contact-bar";
 
 
