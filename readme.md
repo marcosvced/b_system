@@ -1,9 +1,16 @@
 # B·System
 
+## Puesta en marcha
+
+```shell
+yarn install
+yarn dev
+```
+
 ## Sass y funciones
 
 ### Variables y utilidades
-Tienes que incluir el codigo según las utilidades que necesites en tu componente o modulo de sass
+Tienes que incluir el código según las utilidades que necesites en tu componente o módulo de sass
 ```scss
 @use '~variables' as variable;
 @use '~helpers' as helper;
@@ -87,12 +94,12 @@ background-color: helper.button(primary--hover);
 <div class="space-y-{breakpoint}-{n}"></div>
 <div class="space-xy-{breakpoint}-{n}"></div>
 ```
-· Siendo _breackpoint_ una key de los valores definidos en el map `$breakpoints` del fichero `/lib/scss/variables/_spacing.scss`.
-· Estas clases se pueden definir sin el uso de un _breackpoint_.
-· Siendo _position_ uno de los siguientes valores: _top, bottom, left, right, inline, block_.
-· Siendo _n_ una de las keys definidas en la variable `$space` del fichero `/lib/scss/variables/_spacing.scss`.
+- Siendo _breackpoint_ una key de los valores definidos en el map `$breakpoints` del fichero `/lib/scss/variables/_spacing.scss`.
+- Estas clases se pueden definir sin el uso de un _breackpoint_.
+- Siendo _position_ uno de los siguientes valores: _top, bottom, left, right, inline, block_.
+- Siendo _n_ una de las keys definidas en la variable `$space` del fichero `/lib/scss/variables/_spacing.scss`.
 
-Para crear un grid de n columnas podemos usar las clases `d-grid` y `grid-{n}`. (Deben usarse junstas)
+Para crear un grid de n columnas podemos usar las clases `d-grid` y `grid-{n}`. (Deben usarse juntas)
 Para determinar el tamaño de cada elemento hijo, están las clase `col-span-{n}` y `col-{start}-to-{end}`
 ```html
 <div class="d-grid grid-{breakpoint}-{n}">
