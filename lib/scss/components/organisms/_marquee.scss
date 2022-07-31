@@ -16,8 +16,26 @@
       z-index: -1;
 
       .swiper-pagination {
-        display: none;
+        position: absolute;
+        left: helper.rem(32);
+        bottom: helper.rem(32);
       }
+    }
+
+    .button {
+      &-prev,
+      &-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &-prev {
+        left: helper.rem(32);
+      }
+      &-next {
+        right: helper.rem(32);
+      }
+
     }
   }
 
@@ -56,11 +74,14 @@
     }
   }
 
+
   &-content-bottom {
-    width: 100%;
+    width: min-content;
     padding-bottom: helper.space(24);
     position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     .btn-interactive {
       margin: 0 auto;

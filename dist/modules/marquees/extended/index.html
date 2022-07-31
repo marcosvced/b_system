@@ -41,10 +41,15 @@
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
             <nav class="navbar navbar-expand-lg">
               <ul class="navbar-nav">
-                <li class="nav-item  ">
-                  <a class="nav-link  " href="#">
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Demos
                   </a>
+                  <ul class="dropdown-menu" aria-labelledby="demos_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../../demos/home">Home</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item  ">
                   <a class="nav-link  " href="#">
@@ -191,74 +196,72 @@
 
               <!-- swiper slide -->
               <div class="swiper-slide">
-                <div class="marquee marquee-extended marquee-space marquee-size" style="display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(3,1fr);">
+                <div class="marquee marquee-space marquee-size  align-items-center" style="display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(3,1fr);">
                   <picture>
                     <img class="marquee-bg marquee-bg-darkened" src="../../../assets/img/marquee/marquee_extended-01.jpg" alt="Marquee image">
                   </picture>
-                  <div class="marquee-content space-y-24 space-y-md-32">
-                    <h1 class="marquee-title text-white">Let&#39;s do it different</h1>
+                  <div class="text-center space-y-24 space-y-md-32 container">
+                    <h1 class="text-white">Start your digital business</h1>
                     <p class="marquee-text text-white">Promote your business with B_system. The web design tool with the most complete design system.</p>
                     <button type="button" class="btn btn-primary btn-primary-cta">
                       <span>Start with B System</span>
                       <i class="icon-links"></i>
                     </button>
                   </div>
-                  <p class="text-end align-self-end text-white body-italic-text body-light-text">"People ignore design that ignores people"</p>
+                  <p class="text-end align-self-end text-white body-italic-text body-light-text d-none d-xl-block">"People ignore design that ignores people"</p>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="marquee marquee-extended marquee-space marquee-size" style="display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(3,1fr);">
+                <div class="marquee marquee-space marquee-size  align-items-center" style="display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(3,1fr);">
                   <picture>
                     <img class="marquee-bg marquee-bg-darkened" src="../../../assets/img/marquee/marquee_extended-02.jpg" alt="Marquee image 2">
                   </picture>
-                  <div class="marquee-content space-y-24 space-y-md-32">
-                    <h1 class="marquee-title text-white">Work in an agile way</h1>
+                  <div class="text-center space-y-24 space-y-md-32 container">
+                    <h1 class="text-white">Work in an agile way</h1>
                     <p class="marquee-text text-white">B_system will help you create responsive web pages with very little effort.</p>
                     <button type="button" class="btn btn-primary btn-primary-cta">
                       <span>Start with B System</span>
                       <i class="icon-links"></i>
                     </button>
                   </div>
-                  <p class="text-end align-self-end text-white body-italic-text body-light-text">"People ignore design that ignores people"</p>
+                  <p class="text-end align-self-end text-white body-italic-text body-light-text d-none d-xl-block">"People ignore design that ignores people"</p>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="marquee marquee-extended marquee-space marquee-size" style="display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(3,1fr);">
+                <div class="marquee marquee-space marquee-size  align-items-center" style="display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(3,1fr);">
                   <picture>
                     <img class="marquee-bg marquee-bg-darkened" src="../../../assets/img/marquee/marquee_extended-03.jpg" alt="Marquee image 3">
                   </picture>
-                  <div class="marquee-content space-y-24 space-y-md-32">
-                    <h1 class="marquee-title text-white">Enjoy the great result</h1>
+                  <div class="text-center space-y-24 space-y-md-32 container">
+                    <h1 class="text-white">Enjoy the great result</h1>
                     <p class="marquee-text text-white">It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
                     <button type="button" class="btn btn-primary btn-primary-cta">
                       <span>Start with B System</span>
                       <i class="icon-links"></i>
                     </button>
                   </div>
-                  <p class="text-end align-self-end text-white body-italic-text body-light-text">"People ignore design that ignores people"</p>
+                  <p class="text-end align-self-end text-white body-italic-text body-light-text d-none d-xl-block">"People ignore design that ignores people"</p>
                 </div>
               </div>
 
               <!-- end: swiper slide -->
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination "></div>
           </div>
           <div class="marquee-content-bottom">
             <button class="btn-interactive btn-interactive-rounded  btn-interactive-tight">
               <i class="icon-links"></i>
             </button>
           </div>
-          <div class="marquee-slider-control">
-            <div class="button-prev">
-              <button class="btn-interactive btn-interactive-rounded  ">
-                <i class="icon-back"></i>
-              </button>
-            </div>
-            <div class="button-next">
-              <button class="btn-interactive btn-interactive-rounded  ">
-                <i class="icon-next"></i>
-              </button>
-            </div>
+          <div class="button-prev">
+            <button class="btn-interactive btn-interactive-rounded  ">
+              <i class="icon-back"></i>
+            </button>
+          </div>
+          <div class="button-next">
+            <button class="btn-interactive btn-interactive-rounded  ">
+              <i class="icon-next"></i>
+            </button>
           </div>
         </div>
       </section>
