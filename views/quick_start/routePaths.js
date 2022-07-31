@@ -3,6 +3,7 @@ module.exports = {
     ROUTE_NAME: 'quick_start',
     HOME: '/home',
     HEADERS: '/modules/headers',
+    SERVICE_GRIDS: '/modules/serviceGrids',
     TEAM_GRIDS: '/modules/teamGrids',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
