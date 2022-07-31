@@ -1,0 +1,55 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<div class="main-content main-content-space-top">
+    <section>
+        <%- include(`${module}/marquee/image/image`, { 
+            slides: [
+                {
+                    img: {
+                        src: 'marquee_image-01',
+                        alt: 'marquee image 01'
+                    },
+                    title: 'Enhance your competitive agility',
+                    text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
+                    btn: 'Discover B_system'
+                },
+                {
+                    img: {
+                        src: 'marquee_image-02',
+                        alt: 'marquee image 02'
+                    },
+                    title: 'We are the interactive radar',
+                    text: 'From idea to action, the path to generating 360 ° value starts here.',
+                    btn: 'Discover B_system'
+                },
+                {
+                    img: {
+                        src: 'marquee_image-03',
+                        alt: 'marquee image 03'
+                    },
+                    title: 'Our values ​​shape our culture',
+                    text: 'We make them happen through our individual behaviors and they serve as a guide for us to act and make decisions.',
+                    btn: 'Discover B_system'
+                },
+            ]
+        }) %>
+    </section>
+</div>
