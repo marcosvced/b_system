@@ -9,6 +9,10 @@
 
     .service-card {
         $parent: &;
+
+        @include themed.properties {
+            border: themed.values(helper.rem(.1) solid $c-grayscale--light, none);
+        }
     
         &-content, .img-container .img-basic {
             border-radius: 0;
