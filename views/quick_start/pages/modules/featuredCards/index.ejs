@@ -29,22 +29,28 @@ const headerConfig = {
         title: 'Featured works',
         cards: [
             {
-                img: 'feature-card_module-1.jpg',
-                alt: 'featured card image 1',
+                img: {
+                    src: 'feature-card_module-1',
+                    alt: 'featured card image 1',
+                },
                 title: '.US',
                 text: 'Product design',
                 isDarkened: false
             },
             {
-                img: 'feature-card_module-2.jpg',
-                alt: 'featured card image 2',
+                img: {
+                    src: 'feature-card_module-2',
+                    alt: 'featured card image 2',
+                },
                 title: 'Dream',
                 text: 'Editorial',
                 isDarkened: false
             },
             {
-                img: 'feature-card_module-3.jpg',
-                alt: 'featured card image 3',
+                img: {
+                    src: 'feature-card_module-3',
+                    alt: 'featured card image 3',
+                },
                 title: 'Amazon toy',
                 text: 'Packaging',
                 isDarkened: false
@@ -64,22 +70,28 @@ const headerConfig = {
         title: 'Featured works',
         cards: [
             {
-                img: 'feature-card_module-1.jpg',
-                alt: 'featured card image 1',
+                img: {
+                    src: 'feature-card_module-1',
+                    alt: 'featured card image 1',
+                },
                 title: '.US',
                 text: 'Product design',
                 isDarkened: false
             },
             {
-                img: 'feature-card_module-2.jpg',
-                alt: 'featured card image 2',
+                img: {
+                    src: 'feature-card_module-2',
+                    alt: 'featured card image 2',
+                },
                 title: 'Dream',
                 text: 'Editorial',
                 isDarkened: false
             },
             {
-                img: 'feature-card_module-3.jpg',
-                alt: 'featured card image 3',
+                img: {
+                    src: 'feature-card_module-3',
+                    alt: 'featured card image 3',
+                },
                 title: 'Amazon toy',
                 text: 'Packaging',
                 isDarkened: false
@@ -102,24 +114,30 @@ const headerConfig = {
         title: 'Featured works',
         cards: [
             {
-                img: 'feature-card_module-dark-1.jpg',
-                alt: 'featured card image 1 dark mode',
-                title: 'Culture',
+                img: {
+                    src: 'feature-card_module-dark-1',
+                    alt: 'featured card dark image 1',
+                },
+                title: '.US',
+                text: 'Product design',
+                isDarkened: false
+            },
+            {
+                img: {
+                    src: 'feature-card_module-dark-2',
+                    alt: 'featured card dark image 2',
+                },
+                title: 'Dream',
                 text: 'Editorial',
                 isDarkened: false
             },
             {
-                img: 'feature-card_module-dark-2.jpg',
-                alt: 'featured card image 2 dark mode',
-                title: 'Beach Vibes',
-                text: 'Editorial',
-                isDarkened: false
-            },
-            {
-                img: 'feature-card_module-dark-3.jpg',
-                alt: 'featured card image 3 dark mode',
-                title: 'Suite',
-                text: 'Editorial',
+                img: {
+                    src: 'feature-card_module-dark-3',
+                    alt: 'featured card dark image 3',
+                },
+                title: 'Amazon toy',
+                text: 'Packaging',
                 isDarkened: false
             },
         ],
@@ -136,28 +154,34 @@ const headerConfig = {
     <%- include( `${module}/featureCard/featureCard`, {
     title: 'Featured works',
     cards: [
-        {
-            img: 'feature-card_module-dark-1.jpg',
-            alt: 'featured card image 1 dark mode',
-            title: 'Culture',
-            text: 'Editorial',
-            isDarkened: false
-        },
-        {
-            img: 'feature-card_module-dark-2.jpg',
-            alt: 'featured card image 2 dark mode',
-            title: 'Beach Vibes',
-            text: 'Editorial',
-            isDarkened: false
-        },
-        {
-            img: 'feature-card_module-dark-3.jpg',
-            alt: 'featured card image 3 dark mode',
-            title: 'Suite',
-            text: 'Editorial',
-            isDarkened: false
-        },
-    ],
+            {
+                img: {
+                    src: 'feature-card_module-dark-1',
+                    alt: 'featured card dark image 1',
+                },
+                title: '.US',
+                text: 'Product design',
+                isDarkened: false
+            },
+            {
+                img: {
+                    src: 'feature-card_module-dark-2',
+                    alt: 'featured card dark image 2',
+                },
+                title: 'Dream',
+                text: 'Editorial',
+                isDarkened: false
+            },
+            {
+                img: {
+                    src: 'feature-card_module-dark-3',
+                    alt: 'featured card dark image 3',
+                },
+                titleBasic: 'Amazon toy',
+                text: 'Packaging',
+                isDarkened: false
+            },
+        ],
     link:{
         href: '#',
         label: 'See all articles',
