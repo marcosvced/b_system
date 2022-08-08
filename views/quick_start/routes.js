@@ -85,11 +85,6 @@ route.get(QUICK_START.BASIC_CONTENTS, (request, response) => {
   render(response, path('modules', ['basicContents']), {}, { navigation })
 })
 
-/* Featured Cards */
-route.get(QUICK_START.FEATURED_CARDS, (request, response) => {
-  render(response, path('modules', ['featuredCards']), {}, { navigation })
-})
-
 /* FAQs */
 route.get(QUICK_START.FAQS, (request, response) => {
   render(response, path('modules', ['faqs']), {}, { navigation })
