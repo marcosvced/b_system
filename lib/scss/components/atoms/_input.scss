@@ -32,7 +32,7 @@
     }
   }
 
-  input.form-control {
+  input.form-control, textarea.form-control {
     color: inherit;
     height: size.em($input-height, $font-base);
     padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base);
@@ -65,6 +65,10 @@
     $calc: $font-scale-down * 100;
     $scale: math.div($calc, $font-base);
     transform: scale(math.div($scale, 100)) translateY(-.5em) translateX(.5em);
+  }
+
+  textarea {
+    min-height: helper.rem(160);
   }
 }
 
