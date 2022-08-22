@@ -8,6 +8,7 @@ module.exports = {
     CATEGORIES_MENU: '/modules/categories-menu',
     SERVICE_GRIDS: '/modules/serviceGrids',
     TEAM_GRIDS: '/modules/teamGrids',
+    CONTACTS: '/modules/contacts',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
       STANDARD: '/modules/footers/standard',

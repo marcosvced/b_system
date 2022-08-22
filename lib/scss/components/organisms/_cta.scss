@@ -4,6 +4,7 @@
 @use '../../mixins' as mixin;
 
 .cta {
+    background-color: red;
     $parent: &;
     display: flex;
     flex-direction: column;

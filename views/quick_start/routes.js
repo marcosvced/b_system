@@ -134,6 +134,11 @@ route.get(QUICK_START.MARQUEES.TEXTIMAGE, (request, response) => {
   render(response, path('modules', ['marquees', 'textImage']), {}, { navigation })
 })
 
+/* Contact */
+route.get(QUICK_START.CONTACTS, (request, response) => {
+  render(response, path('modules', ['contacts']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */
