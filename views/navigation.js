@@ -69,6 +69,10 @@ const navigation = [
         label: 'Business Cases',
       },
       {
+        href: QUICK_START.CONTACTS,
+        label: 'Contact',
+      },
+      {
         href: QUICK_START.FOOTERS.BASIC,
         label: 'Footers',
       },
