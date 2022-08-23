@@ -139,6 +139,11 @@ route.get(QUICK_START.CONTACTS, (request, response) => {
   render(response, path('modules', ['contacts']), {}, { navigation })
 })
 
+/* Service */
+route.get(QUICK_START.SERVICES, (request, response) => {
+  render(response, path('modules', ['services']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */

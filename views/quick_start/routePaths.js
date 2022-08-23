@@ -9,6 +9,7 @@ module.exports = {
     SERVICE_GRIDS: '/modules/serviceGrids',
     TEAM_GRIDS: '/modules/teamGrids',
     CONTACTS: '/modules/contacts',
+    SERVICES: '/modules/services',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
       STANDARD: '/modules/footers/standard',

@@ -73,6 +73,10 @@ const navigation = [
         label: 'Contact',
       },
       {
+        href: QUICK_START.SERVICES,
+        label: 'Service',
+      },
+      {
         href: QUICK_START.FOOTERS.BASIC,
         label: 'Footers',
       },
