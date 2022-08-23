@@ -11,14 +11,19 @@
   &-wrapper {
     overflow-x: hidden;
     z-index: 0;
-
     .swiper {
       z-index: -1;
 
       .swiper-pagination {
         position: absolute;
-        left: helper.rem(32);
+        left: 50%;
+        transform: translateX(-50%);
         bottom: helper.rem(32);
+        @include mixin.screen(xl) {
+          left: helper.rem(32);
+          transform: translateX(0);
+
+        }
       }
     }
 
@@ -28,10 +33,16 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        display: none;
+        @include mixin.screen(xl) {
+          display: block;
+        }
       }
+
       &-prev {
         left: helper.rem(32);
       }
+
       &-next {
         right: helper.rem(32);
       }
@@ -101,13 +112,10 @@
   }
 
   &#{$parent}-size {
-    min-height: helper.rem(400);
-
+    height: helper.rem(400);
     @include mixin.screen(md) {
-      min-height: helper.rem(600);
-
+      height: helper.rem(600);
     }
-
     @include mixin.screen(xl) {
       height: 100vh;
     }
