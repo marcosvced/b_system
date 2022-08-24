@@ -1,0 +1,74 @@
+@use 'sass:math';
+@use '../../variables/colors' as *;
+@use '../../variables/font' as *;
+@use '../../helpers/themed';
+@use '../../helpers/size';
+@use '../../mixins/space';
+@use '../../mixins/styles';
+
+
+.form-floating {
+  $input-height: 48;
+  $font-base: 15;
+  $font-scale-down: 11;
+  $padding-inline: 12;
+  $padding-block: 16;
+  position: relative;
+
+  > .btn.btn-only-icon {
+    position: absolute;
+    font-size: size.rem(24);
+    top: size.rem(math.div(24, 2));
+    right: size.rem($padding-inline);
+    cursor: pointer;
+    color: $c-eren;
+    &:hover {
+      color: $c-eren--500;
+    }
+
+    > i {
+      color: inherit;
+      font-size: size.rem(24);
+    }
+  }
+
+  input.form-control, textarea.form-control {
+    color: inherit;
+    height: size.em($input-height, $font-base);
+    padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base);
+    font-size: $f-s-xs;
+    font-weight: $f-w-light;
+    background-color: transparent;
+    @include themed.properties {
+      caret-color: themed.values($c-grayscale--ash, $c-grayscale--light);
+    }
+    @include styles.input-unfilled;
+    @include styles.input-filled;
+    @include styles.input-tap;
+    @include styles.input-error;
+    @include styles.input-inactive;
+
+    &[type='password'] {
+      font-family: Verdana, serif;
+      letter-spacing: 0.25em;
+    }
+
+  }
+
+  label {
+    color: $c-grayscale--700;
+    padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base);
+  }
+
+  & > .form-control:focus ~ label,
+  & > .form-control:not(:placeholder-shown) ~ label {
+    $calc: $font-scale-down * 100;
+    $scale: math.div($calc, $font-base);
+    transform: scale(math.div($scale, 100)) translateY(-.5em) translateX(.5em);
+  }
+
+  textarea {
+    min-height: size.rem(160);
+  }
+}
+

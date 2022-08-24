@@ -1,0 +1,22 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.cta {
+    background-color: red;
+    $parent: &;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: {
+        inline: helper.space(16);
+    }
+
+    @include mixin.screen(md) {
+        padding: {
+            inline: helper.space(80);
+        }
+    }
+}

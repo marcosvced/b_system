@@ -1,1 +1,10 @@
-<svg viewBox="0 0 106 106" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect fill="#009BBD" x="6" y="20" width="94" height="67" rx="12"/><path d="M88 39.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0M36 36l20 41H16z" fill="#ACEDFB"/><path fill="#ACEDFB" d="m62 48 14 29H48z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="106px" viewBox="0 0 106 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>4. Elements_Microillustrations/Image</title>
+    <g id="4.-Elements_Microillustrations/Image" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#0096B2" x="6" y="20" width="94" height="67" rx="12"></rect>
+        <path d="M88,39.5 C88,43.6421282 84.6420527,47 80.4998314,47 C76.3576101,47 73,43.6421282 73,39.5 C73,35.3578718 76.3576101,32 80.4998314,32 C84.6420527,32 88,35.3578718 88,39.5" id="Fill-15" fill="#ACEDFB"></path>
+        <polygon id="Triangle" fill="#ACEDFB" points="36 36 56 77 16 77"></polygon>
+        <polygon id="Triangle" fill="#ACEDFB" points="62 48 76 77 48 77"></polygon>
+    </g>
+</svg>

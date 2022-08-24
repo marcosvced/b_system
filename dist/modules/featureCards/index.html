@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>B_system</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap + reset styles-->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!--B_system styles-->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' />
+
+    <!-- Demo styles -->
+    <style lang="css">
+    </style>
+  </head>
+  <body>
+
+    <!--MAIN HEADER-->
+    <header class="header header-fixed header-light " data-bsystem="sticky">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
+          <div class="d-flex d-xl-none order-0">
+            <button type="button" class="btn btn-only-icon">
+              <i class="icon-cart"></i>
+            </button>
+          </div>
+          <div class="d-none d-xl-block order-1">
+            <button type="button" class="btn btn-primary    btn-fit">
+              Purchase B_system
+            </button>
+          </div>
+        </div>
+        <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min ">
+          <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
+        </a>
+        <div class="nav-wrapper order-2 order-xl-1 col">
+          <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
+            <nav class="navbar navbar-expand-lg">
+              <ul class="navbar-nav">
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Demos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="demos_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../demos/home">Home</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Pages
+                  </a>
+                </li>
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link active  dropdown-toggle " href="#" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Modules
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="modules_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../modules/categories-menu">Menus</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/headers">Headers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/serviceGrids">Service grid</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/teamGrids">Team grids</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/iconSocial">Icons Social</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item active" href="../../modules/featureCards">Featured Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/faqs">FAQs</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/iconServices">Icon Services</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item active" href="../../modules/featureCards">Featured Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/statistics">Statistics</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/businessCases">Business Cases</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/standard">Footers Standard</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/corporate">Footers Corporate</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/newsletter">Footers Newsletter</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/cta">CTA</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/contactBar">Contact Bar</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/basicContents">Basic Contents</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/basic">Marquee</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/cta">Marquee cta</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/extended">Marquee extended</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/illustration">Marquee illustration</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/image">Marquee image</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/standar">Marquee standar</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/textImage">Marquee textimage</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Components
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="components_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../components/buttons">Buttons</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/forms">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/interaction">Interaction</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/cards">Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/productCards">Product Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/links">Links</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/gridCells">Grid cells</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Icon + description</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="#">Accordions</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/alerts">Alerts</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/icons">Icons</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/texts">Texts</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/illustrations">Illustrations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/microillustrations">Microillustrations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/scenes">Scenes</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link  " href="#">
+                    Transitions
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
+            <button type="button" class="btn btn-only-icon">
+              <i class="icon-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+
+      <!--CARDS-->
+
+      <!--SECTION LIGHT-->
+      <section class="section section-divider ">
+        <div class="container feature-card d-flex flex-column align-items-center space-y-48 space-y-md-56 space-y-xl-72">
+          <h3 class="feature-card-title text-center">Featured works</h3>
+          <div class="feature-card-content d-grid grid-4 grid-md-8 grid-xl-12 w-100">
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-1.jpg" alt="featured card image 1">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">.US</p>
+                  <p class="body-light-gray-text">Product design</p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-2.jpg" alt="featured card image 2">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">Dream</p>
+                  <p class="body-light-gray-text">Editorial</p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-3.jpg" alt="featured card image 3">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">Amazon toy</p>
+                  <p class="body-light-gray-text">Packaging</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="action-link ">
+            <span>See all articles</span>
+            <i class="icon-links"></i>
+          </a>
+        </div>
+      </section>
+      <section class="section section-divider darkened">
+        <div class="container feature-card d-flex flex-column align-items-center space-y-48 space-y-md-56 space-y-xl-72">
+          <h3 class="feature-card-title text-center">Featured works</h3>
+          <div class="feature-card-content d-grid grid-4 grid-md-8 grid-xl-12 w-100">
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-1.jpg" alt="featured card image 1">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">.US</p>
+                  <p class="body-light-gray-text">Product design</p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-2.jpg" alt="featured card image 2">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">Dream</p>
+                  <p class="body-light-gray-text">Editorial</p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-3.jpg" alt="featured card image 3">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">Amazon toy</p>
+                  <p class="body-light-gray-text">Packaging</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="action-link ">
+            <span>See all articles</span>
+            <i class="icon-links"></i>
+          </a>
+        </div>
+      </section>
+
+      <!--END: SECTION LIGHT-->
+
+      <!--SECTION DARK-->
+      <section class="section section-divider " data-bsystem="dark">
+        <div class="container feature-card d-flex flex-column align-items-center space-y-48 space-y-md-56 space-y-xl-72">
+          <h3 class="feature-card-title text-center">Featured works</h3>
+          <div class="feature-card-content d-grid grid-4 grid-md-8 grid-xl-12 w-100">
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-dark-1.jpg" alt="featured card dark image 1">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">.US</p>
+                  <p class="body-light-gray-text">Product design</p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-dark-2.jpg" alt="featured card dark image 2">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">Dream</p>
+                  <p class="body-light-gray-text">Editorial</p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-dark-3.jpg" alt="featured card dark image 3">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">Amazon toy</p>
+                  <p class="body-light-gray-text">Packaging</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="action-link ">
+            <span>See all articles</span>
+            <i class="icon-links"></i>
+          </a>
+        </div>
+      </section>
+      <section class="section section-divider darkened" data-bsystem="dark">
+        <div class="container feature-card d-flex flex-column align-items-center space-y-48 space-y-md-56 space-y-xl-72">
+          <h3 class="feature-card-title text-center">Featured works</h3>
+          <div class="feature-card-content d-grid grid-4 grid-md-8 grid-xl-12 w-100">
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-dark-1.jpg" alt="featured card dark image 1">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">.US</p>
+                  <p class="body-light-gray-text">Product design</p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-dark-2.jpg" alt="featured card dark image 2">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">Dream</p>
+                  <p class="body-light-gray-text">Editorial</p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card-wrapper col-span-4">
+              <div class="card space-y-24">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/feature-card_module-dark-3.jpg" alt="featured card dark image 3">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text"></p>
+                  <p class="body-light-gray-text">Packaging</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="action-link ">
+            <span>See all articles</span>
+            <i class="icon-links"></i>
+          </a>
+        </div>
+      </section>
+
+      <!--END: SECTION DARK-->
+    </main>
+
+    <!--END: MAIN HEADER-->
+
+    <!--MAIN CONTENT-->
+    <main class="main">
+    </main>
+
+    <!--END: MAIN CONTENT-->
+
+    <!--MAIN FOOTER-->
+    <footer class="footer footer-basic  inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88 inner-space-block-xxl-120">
+      <div class="footer-wrapper container">
+        <div class="footer-content d-flex gap-32">
+          <a class="footer-logo" href="../../home">
+            <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="B_system logo" />
+          </a>
+          <p class="copy body-light-text">
+            .Multipurpose HTML5 template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--END: MAIN FOOTER-->
+
+    <!--SCRIPTS-->
+
+    <!--Bootstrap JS Bundle-->
+    <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper bundle CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--B_system JS-->
+    <script src="../../assets/js/bsystem.min.js"></script>
+
+    <!--END: SCRIPTS-->
+  </body>
+</html>

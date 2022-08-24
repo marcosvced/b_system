@@ -3,6 +3,13 @@ module.exports = {
     ROUTE_NAME: 'quick_start',
     HOME: '/home',
     HEADERS: '/modules/headers',
+    FEATURED_CARDS: '/modules/featureCards',
+    STATISTICS: '/modules/statistics',
+    CATEGORIES_MENU: '/modules/categories-menu',
+    SERVICE_GRIDS: '/modules/serviceGrids',
+    TEAM_GRIDS: '/modules/teamGrids',
+    CONTACTS: '/modules/contacts',
+    SERVICES: '/modules/services',
     FOOTERS: {
       BASIC: '/modules/footers/basic',
       STANDARD: '/modules/footers/standard',
@@ -10,6 +17,22 @@ module.exports = {
       NEWSLETTER: '/modules/footers/newsletter',
     },
     ICON_DESCRIPTION: '/modules/iconsDescription',
+    ICONS_SOCIAL: '/modules/iconSocial',
+    CTA: '/modules/cta',
+    CONTACT_BAR: '/modules/contactBar',
+    MARQUEES: {
+      BASIC: '/modules/marquees/basic',
+      CTA: '/modules/marquees/cta',
+      EXTENDED: '/modules/marquees/extended',
+      ILLUSTRATION: '/modules/marquees/illustration',
+      IMAGE: '/modules/marquees/image',
+      STANDAR: '/modules/marquees/standar',
+      TEXTIMAGE: '/modules/marquees/textImage',
+    },
+    BASIC_CONTENTS: '/modules/basicContents',
+    FAQS: '/modules/faqs',
+    ICON_SERVICES: '/modules/iconServices',
+    BUSINESS_CASES: '/modules/businessCases',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',
@@ -25,4 +48,5 @@ module.exports = {
     SCENES: '/components/scenes',
     ICON_DESCRIPTION_COMPONENT: '/components/iconsDescription'
   },
+
 }

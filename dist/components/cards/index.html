@@ -7,8 +7,13 @@
     <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
+
+    <!-- Demo styles -->
     <style lang="css">
     </style>
   </head>
@@ -19,12 +24,12 @@
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
           <div class="d-flex d-xl-none order-0">
-            <button href="#" class="btn btn-only-icon">
+            <button type="button" class="btn btn-only-icon">
               <i class="icon-cart"></i>
             </button>
           </div>
           <div class="d-none d-xl-block order-1">
-            <button href="#" class="btn btn-primary    btn-fit">
+            <button type="button" class="btn btn-primary    btn-fit">
               Purchase B_system
             </button>
           </div>
@@ -36,10 +41,15 @@
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
             <nav class="navbar navbar-expand-lg">
               <ul class="navbar-nav">
-                <li class="nav-item  ">
-                  <a class="nav-link  " href="#">
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Demos
                   </a>
+                  <ul class="dropdown-menu" aria-labelledby="demos_dropdown_menu">
+                    <li>
+                      <a class="dropdown-item " href="../../demos/home">Home</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item  ">
                   <a class="nav-link  " href="#">
@@ -52,19 +62,37 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="modules_dropdown_menu">
                     <li>
-                      <a class="dropdown-item " href="#">Menus</a>
+                      <a class="dropdown-item " href="../../modules/categories-menu">Menus</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/headers">Headers</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Contents</a>
+                      <a class="dropdown-item " href="../../modules/serviceGrids">Service grid</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Grids</a>
+                      <a class="dropdown-item " href="../../modules/teamGrids">Team grids</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/iconSocial">Icons Social</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="#">Forms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/faqs">FAQs</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/iconServices">Icon Services</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/featuredCards">Featured Cards</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/statistics">Statistics</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/businessCases">Business Cases</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
@@ -77,6 +105,36 @@
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/footers/newsletter">Footers Newsletter</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/cta">CTA</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/contactBar">Contact Bar</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/basicContents">Basic Contents</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/basic">Marquee</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/cta">Marquee cta</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/extended">Marquee extended</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/illustration">Marquee illustration</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/image">Marquee image</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/standar">Marquee standar</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/marquees/textImage">Marquee textimage</a>
                     </li>
                   </ul>
                 </li>
@@ -113,7 +171,7 @@
                       <a class="dropdown-item " href="#">Accordions</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="#">Alerts</a>
+                      <a class="dropdown-item " href="../../components/alerts">Alerts</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../components/icons">Icons</a>
@@ -125,7 +183,13 @@
                       <a class="dropdown-item " href="../../components/texts">Texts</a>
                     </li>
                     <li>
+                      <a class="dropdown-item " href="../../components/illustrations">Illustrations</a>
+                    </li>
+                    <li>
                       <a class="dropdown-item " href="../../components/microillustrations">Microillustrations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../components/scenes">Scenes</a>
                     </li>
                   </ul>
                 </li>
@@ -138,7 +202,7 @@
             </nav>
           </div>
           <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-            <button href="#" class="btn btn-only-icon">
+            <button type="button" class="btn btn-only-icon">
               <i class="icon-menu"></i>
             </button>
           </div>
@@ -160,8 +224,10 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                  </picture>
                 </div>
                 <div class="text-card">
                   <p class="body-dark-gray-text body-bold-text">.US</p>
@@ -174,9 +240,17 @@
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
-                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
+                  <picture>
+                    <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="avatar image">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -185,9 +259,15 @@
             </div>
             <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
                   <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -213,9 +293,11 @@
                </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
-              <div class="card feature-card comparative-card bg-card interaction-card h-100">
-                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
-                  <img class="img-basic" src="../../assets/img/img_featudanger-card.svg" alt="Card image">
+              <div class="card featured-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container demo-card-micro-illustration d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: var(--c-primary__eren);">
+                  <picture class="illustration">
+                    <img class="illustration-img" src="../../assets/img/microillustration/organized.svg" alt="feature">
+                  </picture>
                 </div>
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
@@ -268,16 +350,16 @@
                     Comparative card
                 </span>
             </div>
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24  d-flex flex-column">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
                   <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
                   <i class="icon-star"></i>
                   <p class="body-light-gray-text w-100">New brand</p>
                 </div>
-                <div class="d-flex justify-content-center">
+                <picture class="d-flex justify-content-center">
                   <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
-                </div>
+                </picture>
                 <div class="d-flex justify-content-between">
                   <p class="body-light-gray-text">23/03/2019</p>
                   <a href="#" class="action-link ">
@@ -291,11 +373,11 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
-                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+              <div class="card row p-0 mx-0 gap-0 service-card interaction-card flex-md-row">
+                <picture class="col-12 col-md-6 px-0 img-container">
                   <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
-                </div>
-                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                </picture>
+                <div class="service-card-content col-12 col-md-6 px-0 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
                   <span class="tag-card d-flex justify-content-center align-items-end">
             1        </span>
                   <div class="space-y-24">
@@ -316,9 +398,9 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
               <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
-                <div class="header-card d-flex justify-content-center">
-                  <img class="avatar" src="../../assets/img/quote.svg" alt="quote icon">
-                </div>
+                <picture class="header-card d-flex justify-content-center">
+                  <img class="testimonial-quote" src="../../assets/img/quote.svg" alt="quote image">
+                </picture>
                 <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
                 <div class="value-card d-flex space-x-4">
                   <i class="icon-star star-on"></i>
@@ -328,10 +410,12 @@
                   <i class="icon-star star-off"></i>
                 </div>
                 <div class="user-card d-flex align-items-center space-x-16">
-                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <picture class="avatar-wrapper">
+                    <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="avatar image">
+                  </picture>
                   <div class="body-light-gray-text">
                     <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
-                    Marketing manager
+                    <p class="body-dark-gray-text">Marketing manager</p>
                   </div>
                 </div>
               </div>
@@ -340,7 +424,7 @@
                 </span>
             </div>
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
-              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+              <div class="bg-card contact-card d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="body-dark-gray-text fw-bold">Contact us</p>
                   <i class="icon-blade"></i>
@@ -350,7 +434,18 @@
                   <span>Consult in our chat</span>
                   <i class="icon-whatsapp"></i>
                 </a>
-                <span class="border-bottom d-block"></span>
+                <span class="border-bottom"></span>
+                <a href="#" class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+                <span class="border-bottom"></span>
+              </div>
+              <div class="contact-card-mobile d-flex d-md-none">
+                <a href="#" class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
                 <a href="#" class="action-link ">
                   <span>Shall we call you?</span>
                   <i class="icon-contact"></i>
@@ -379,7 +474,7 @@
               <div class="position-relative h-100">
                 <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
                   <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
-                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                    <p class="header-text fw-bold text-md-center w-100">1</p>
                   </div>
                   <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
                     <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
@@ -409,8 +504,10 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                  </picture>
                 </div>
                 <div class="text-card">
                   <p class="body-dark-gray-text body-bold-text">.US</p>
@@ -423,9 +520,17 @@
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
-                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
+                  <picture>
+                    <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="avatar image">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -434,9 +539,15 @@
             </div>
             <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
                   <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -462,9 +573,11 @@
                </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
-              <div class="card feature-card comparative-card bg-card interaction-card h-100">
-                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
-                  <img class="img-basic" src="../../assets/img/img_featudanger-card.svg" alt="Card image">
+              <div class="card featured-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container demo-card-micro-illustration d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: var(--c-primary__eren);">
+                  <picture class="illustration">
+                    <img class="illustration-img" src="../../assets/img/microillustration/organized.svg" alt="feature">
+                  </picture>
                 </div>
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
@@ -517,16 +630,16 @@
                     Comparative card
                 </span>
             </div>
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24  d-flex flex-column">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
                   <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
                   <i class="icon-star"></i>
                   <p class="body-light-gray-text w-100">New brand</p>
                 </div>
-                <div class="d-flex justify-content-center">
+                <picture class="d-flex justify-content-center">
                   <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
-                </div>
+                </picture>
                 <div class="d-flex justify-content-between">
                   <p class="body-light-gray-text">23/03/2019</p>
                   <a href="#" class="action-link ">
@@ -540,11 +653,11 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
-                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+              <div class="card row p-0 mx-0 gap-0 service-card interaction-card flex-md-row">
+                <picture class="col-12 col-md-6 px-0 img-container">
                   <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
-                </div>
-                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                </picture>
+                <div class="service-card-content col-12 col-md-6 px-0 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
                   <span class="tag-card d-flex justify-content-center align-items-end">
             1        </span>
                   <div class="space-y-24">
@@ -565,9 +678,9 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
               <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
-                <div class="header-card d-flex justify-content-center">
-                  <img class="avatar" src="../../assets/img/quote.svg" alt="quote icon">
-                </div>
+                <picture class="header-card d-flex justify-content-center">
+                  <img class="testimonial-quote" src="../../assets/img/quote.svg" alt="quote image">
+                </picture>
                 <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
                 <div class="value-card d-flex space-x-4">
                   <i class="icon-star star-on"></i>
@@ -577,10 +690,12 @@
                   <i class="icon-star star-off"></i>
                 </div>
                 <div class="user-card d-flex align-items-center space-x-16">
-                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <picture class="avatar-wrapper">
+                    <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="avatar image">
+                  </picture>
                   <div class="body-light-gray-text">
                     <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
-                    Marketing manager
+                    <p class="body-dark-gray-text">Marketing manager</p>
                   </div>
                 </div>
               </div>
@@ -589,7 +704,7 @@
                 </span>
             </div>
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
-              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+              <div class="bg-card contact-card d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="body-dark-gray-text fw-bold">Contact us</p>
                   <i class="icon-blade"></i>
@@ -599,7 +714,18 @@
                   <span>Consult in our chat</span>
                   <i class="icon-whatsapp"></i>
                 </a>
-                <span class="border-bottom d-block"></span>
+                <span class="border-bottom"></span>
+                <a href="#" class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+                <span class="border-bottom"></span>
+              </div>
+              <div class="contact-card-mobile d-flex d-md-none">
+                <a href="#" class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
                 <a href="#" class="action-link ">
                   <span>Shall we call you?</span>
                   <i class="icon-contact"></i>
@@ -628,7 +754,7 @@
               <div class="position-relative h-100">
                 <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
                   <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
-                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                    <p class="header-text fw-bold text-md-center w-100">1</p>
                   </div>
                   <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
                     <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
@@ -658,8 +784,10 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                  </picture>
                 </div>
                 <div class="text-card">
                   <p class="body-dark-gray-text body-bold-text">.US</p>
@@ -672,9 +800,17 @@
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
-                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
+                  <picture>
+                    <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="avatar image">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -683,9 +819,15 @@
             </div>
             <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
                   <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -711,9 +853,11 @@
                </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
-              <div class="card feature-card comparative-card bg-card interaction-card h-100">
-                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
-                  <img class="img-basic" src="../../assets/img/img_featudanger-card.svg" alt="Card image">
+              <div class="card featured-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container demo-card-micro-illustration d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: var(--c-primary__eren);">
+                  <picture class="illustration">
+                    <img class="illustration-img" src="../../assets/img/microillustration/organized.svg" alt="feature">
+                  </picture>
                 </div>
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
@@ -766,16 +910,16 @@
                     Comparative card
                 </span>
             </div>
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24 d-flex flex-column">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
                   <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
                   <i class="icon-star"></i>
                   <p class="body-light-gray-text w-100">New brand</p>
                 </div>
-                <div class="d-flex justify-content-center">
-                  <img class="img-basic" src="../../assets/img/logo-brandemic-light.svg" alt="Brandemic logo">
-                </div>
+                <picture class="d-flex justify-content-center">
+                  <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
+                </picture>
                 <div class="d-flex justify-content-between">
                   <p class="body-light-gray-text">23/03/2019</p>
                   <a href="#" class="action-link ">
@@ -789,11 +933,11 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
-                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+              <div class="card row p-0 mx-0 gap-0 service-card interaction-card flex-md-row">
+                <picture class="col-12 col-md-6 px-0 img-container">
                   <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
-                </div>
-                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                </picture>
+                <div class="service-card-content col-12 col-md-6 px-0 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
                   <span class="tag-card d-flex justify-content-center align-items-end">
             1        </span>
                   <div class="space-y-24">
@@ -814,9 +958,9 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
               <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
-                <div class="header-card d-flex justify-content-center">
-                  <img class="avatar" src="../../assets/img/quote-light.svg" alt="quote icon">
-                </div>
+                <picture class="header-card d-flex justify-content-center">
+                  <img class="testimonial-quote" src="../../assets/img/quote.svg" alt="quote image">
+                </picture>
                 <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
                 <div class="value-card d-flex space-x-4">
                   <i class="icon-star star-on"></i>
@@ -826,10 +970,12 @@
                   <i class="icon-star star-off"></i>
                 </div>
                 <div class="user-card d-flex align-items-center space-x-16">
-                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <picture class="avatar-wrapper">
+                    <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="avatar image">
+                  </picture>
                   <div class="body-light-gray-text">
                     <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
-                    Marketing manager
+                    <p class="body-dark-gray-text">Marketing manager</p>
                   </div>
                 </div>
               </div>
@@ -838,7 +984,7 @@
                 </span>
             </div>
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
-              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+              <div class="bg-card contact-card d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="body-dark-gray-text fw-bold">Contact us</p>
                   <i class="icon-blade"></i>
@@ -848,7 +994,18 @@
                   <span>Consult in our chat</span>
                   <i class="icon-whatsapp"></i>
                 </a>
-                <span class="border-bottom d-block"></span>
+                <span class="border-bottom"></span>
+                <a href="#" class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+                <span class="border-bottom"></span>
+              </div>
+              <div class="contact-card-mobile d-flex d-md-none">
+                <a href="#" class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
                 <a href="#" class="action-link ">
                   <span>Shall we call you?</span>
                   <i class="icon-contact"></i>
@@ -877,7 +1034,7 @@
               <div class="position-relative h-100">
                 <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
                   <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
-                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                    <p class="header-text fw-bold text-md-center w-100">1</p>
                   </div>
                   <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
                     <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
@@ -907,8 +1064,10 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                  </picture>
                 </div>
                 <div class="text-card">
                   <p class="body-dark-gray-text body-bold-text">.US</p>
@@ -921,9 +1080,17 @@
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
-                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
+                  <picture>
+                    <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="avatar image">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -932,9 +1099,15 @@
             </div>
             <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                <div class="basic-card position-relative ">
+                  <picture>
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
                   <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -960,9 +1133,11 @@
                </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
-              <div class="card feature-card comparative-card bg-card interaction-card h-100">
-                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
-                  <img class="img-basic" src="../../assets/img/img_featudanger-card.svg" alt="Card image">
+              <div class="card featured-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container demo-card-micro-illustration d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: var(--c-primary__eren);">
+                  <picture class="illustration">
+                    <img class="illustration-img" src="../../assets/img/microillustration/organized.svg" alt="feature">
+                  </picture>
                 </div>
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
@@ -984,7 +1159,7 @@
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
                     <div class="header-card d-flex align-items-center justify-content-between space-top-6 space-bottom-8">
-                      <h4 class="mb-0">$ 15</h4>
+                      <h4 class="mb-0">$ 12</h4>
                       <i class="icon-saving-filled"></i>
                     </div>
                     <h5 class="h5">Basic product</h5>
@@ -1015,16 +1190,16 @@
                     Comparative card
                 </span>
             </div>
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24 d-flex flex-column">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
                   <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
                   <i class="icon-star"></i>
                   <p class="body-light-gray-text w-100">New brand</p>
                 </div>
-                <div class="d-flex justify-content-center">
-                  <img class="img-basic" src="../../assets/img/logo-brandemic-light.svg" alt="Brandemic logo">
-                </div>
+                <picture class="d-flex justify-content-center">
+                  <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
+                </picture>
                 <div class="d-flex justify-content-between">
                   <p class="body-light-gray-text">23/03/2019</p>
                   <a href="#" class="action-link ">
@@ -1038,11 +1213,11 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
-                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+              <div class="card row p-0 mx-0 gap-0 service-card interaction-card flex-md-row">
+                <picture class="col-12 col-md-6 px-0 img-container">
                   <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
-                </div>
-                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                </picture>
+                <div class="service-card-content col-12 col-md-6 px-0 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
                   <span class="tag-card d-flex justify-content-center align-items-end">
             1        </span>
                   <div class="space-y-24">
@@ -1063,9 +1238,9 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
               <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
-                <div class="header-card d-flex justify-content-center">
-                  <img class="avatar" src="../../assets/img/quote-light.svg" alt="quote icon">
-                </div>
+                <picture class="header-card d-flex justify-content-center">
+                  <img class="testimonial-quote" src="../../assets/img/quote.svg" alt="quote image">
+                </picture>
                 <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
                 <div class="value-card d-flex space-x-4">
                   <i class="icon-star star-on"></i>
@@ -1075,10 +1250,12 @@
                   <i class="icon-star star-off"></i>
                 </div>
                 <div class="user-card d-flex align-items-center space-x-16">
-                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <picture class="avatar-wrapper">
+                    <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="avatar image">
+                  </picture>
                   <div class="body-light-gray-text">
                     <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
-                    Marketing manager
+                    <p class="body-dark-gray-text">Marketing manager</p>
                   </div>
                 </div>
               </div>
@@ -1087,7 +1264,7 @@
                 </span>
             </div>
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
-              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+              <div class="bg-card contact-card d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="body-dark-gray-text fw-bold">Contact us</p>
                   <i class="icon-blade"></i>
@@ -1097,7 +1274,18 @@
                   <span>Consult in our chat</span>
                   <i class="icon-whatsapp"></i>
                 </a>
-                <span class="border-bottom d-block"></span>
+                <span class="border-bottom"></span>
+                <a href="#" class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+                <span class="border-bottom"></span>
+              </div>
+              <div class="contact-card-mobile d-flex d-md-none">
+                <a href="#" class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
                 <a href="#" class="action-link ">
                   <span>Shall we call you?</span>
                   <i class="icon-contact"></i>
@@ -1126,7 +1314,7 @@
               <div class="position-relative h-100">
                 <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
                   <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
-                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                    <p class="header-text fw-bold text-md-center w-100">1</p>
                   </div>
                   <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
                     <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
@@ -1172,6 +1360,9 @@
 
     <!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper bundle CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>

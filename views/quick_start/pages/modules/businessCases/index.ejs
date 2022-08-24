@@ -1,0 +1,67 @@
+
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<%- include( `${module}/businessCase/businessCase`, {
+        title: 'Business cases',
+        text: 'Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.',
+        link: {
+            href: '#',
+            label: 'See all',
+            icon: 'links',
+        },
+        img: {
+            src: 'img_business-case',
+            alt: 'business case module background'
+        },
+        background: 'eren_500',
+        slides: [
+            {
+                title: 'Business case 1: Brandemic',
+                icon: 'blade',
+                text: 'New brand',
+                img: {
+                    src: 'logo-brandemic',
+                    alt: 'slide logo'
+                },
+                date: '23/03/2019',
+                link: {
+                    href: '#',
+                    label: 'More info',
+                    icon: 'info'
+                }
+            },
+            {
+                title: 'Business case 2: Brandemic',
+                icon: 'blade',
+                text: 'New brand',
+                img: {
+                    src: 'logo-brandemic',
+                    alt: 'slide logo'
+                },
+                date: '23/03/2019',
+                link: {
+                    href: '#',
+                    label: 'More info',
+                    icon: 'info'
+                }
+            },
+            {
+                title: 'Business case 3: Brandemic',
+                icon: 'blade',
+                text: 'New brand',
+                img: {
+                    src: 'logo-brandemic',
+                    alt: 'slide logo'
+                },
+                date: '23/03/2019',
+                link: {
+                    href: '#',
+                    label: 'More info',
+                    icon: 'info'
+                }
+            }
+        ]
+    }
+) %>

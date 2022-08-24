@@ -1,0 +1,44 @@
+@use '../../variables/colors' as *;
+@use '../../variables/palette';
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.contact {
+    $parent: &;
+
+    #{&}-form-container {
+        margin-bottom: helper.rem(40);
+
+        @include mixin.screen(md) {
+            margin-bottom: 0;
+        }
+
+        #{$parent}-header {
+            #{$parent}-title, #{$parent}-text {
+                text-align: center;
+
+                @include mixin.screen(md) {
+                    text-align: left;
+                }
+            }
+        }
+
+        .form-floating {
+            margin-bottom: helper.rem(16);
+        }
+
+        .form-check {
+            margin-block: helper.rem(32) helper.rem(40);
+
+            @include mixin.screen(md) {
+                margin-bottom: helper.rem(48);
+            }
+
+            @include mixin.screen(xl) {
+                margin-bottom: helper.rem(56);
+            }
+        }
+    }
+}

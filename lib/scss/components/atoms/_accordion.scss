@@ -1,0 +1,12 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.accordion-item {
+    border: {
+        top: none;
+        inline: none;
+        bottom: 1px solid $c-grayscale--800;
+    }
+}
