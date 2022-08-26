@@ -56,21 +56,25 @@
     height: 100%;
     position: relative;
 
-    .button-next,
-    .button-prev {
+    .business-next,
+    .business-prev {
       position: absolute;
       color: $c-grayscale--light;
       font-size: helper.rem(24);
       top: 50%;
       transform: translateY(-50%);
 
-      &.swiper-button-disabled {
+      > * {
+        color: $c-grayscale--light;
+      }
+
+      &.swiper-button-disabled > * {
         color: $c-opacity__light--200;
         cursor: not-allowed;
       }
     }
 
-    .button-next {
+    .business-next {
       right: 0;
     }
   }

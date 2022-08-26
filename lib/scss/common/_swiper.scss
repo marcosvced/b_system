@@ -1,5 +1,6 @@
 @use "../helpers/size";
 @use "../mixins/styles";
+@use "../helpers/themed";
 @use "../variables/colors" as *;
 
 .swiper {
@@ -26,9 +27,13 @@
     &.pagination-dark {
       .swiper-pagination {
         &-bullet {
-            background-color: $c-opacity__gray--300;
+          @include themed.properties {
+            background-color: themed.values($c-opacity__gray--300,$c-opacity__light--200 );
+          }
           &-active {
-            background-color: $c-grayscale--ash;
+            @include themed.properties {
+            background-color: themed.values($c-grayscale--ash, $c-grayscale--light );
+            }
           }
         }
       }
