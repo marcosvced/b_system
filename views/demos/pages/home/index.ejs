@@ -91,7 +91,7 @@
         {
             title: "Digital strategy",
             text: "We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ",
-            tag: "1",
+            tag: "2",
             img: {
                 src: "services_module-02",
                 alt: "Service image"
@@ -105,7 +105,7 @@
         {
             title: "Digital strategy",
             text: "We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ",
-            tag: "1",
+            tag: "3",
             img: {
                 src: "services_module-03",
                 alt: "Service image"
@@ -123,7 +123,62 @@
 <!-- END: CARROUSELS SERVICE -->
 
 <!-- ICON DESCRIPTION -->
-<!-- Módulo por añadir a rama DEV -->
+<%- include(`${module}/iconDescription/iconDescription`, {
+    head: 'Our work methodology',
+    columns: [
+        {
+            microillustration: {
+                src: 'system',
+                alt: 'system microillustration'
+            },
+            title: '1. Exploration phase',
+            text: 'Explore new concepts, products, services, ventures, brands, and systems.'
+        },
+        {
+            microillustration: {
+                src: 'efficiency',
+                alt: 'efficiency microillustration'
+            },
+            title: '2. Empathy phase',
+            text: 'A deep understanding of the needs of the users involved in the solution.'
+        },
+        {
+            microillustration: {
+                src: 'choose-template',
+                alt: 'choose template microillustration'
+            },
+            title: '3. Definition phase',
+            text: 'Staying with what really adds value and brings us to new interesting perspectives.'
+        },
+        {
+            microillustration: {
+                src: 'fonts',
+                alt: 'fonts microillustration'
+            },
+            title: '4. Ideation phase',
+            text: 'In this phase, activities favor expansive thinking and we eliminate value judgments.'
+        },
+        {
+            microillustration: {
+                src: 'image',
+                alt: 'image microillustration'
+            },
+            title: '5. Prototyping',
+            text: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.'
+        },
+        {
+            microillustration: {
+                src: 'template',
+                alt: 'template microillustration'
+            },
+            title: '6. Testing phase',
+            text: 'This phase helps us to identify significant improvements and faults to be solved.'
+        },
+    ],
+    isDarkened: false,
+    isDark: false
+    })
+%>
 <!-- END: ICON DESCRIPTION -->
 
 <!-- BUSINESS CASES -->
