@@ -1,0 +1,18 @@
+
+.services {
+    $parent: &;
+
+    #{&}-wrapper-md {
+        width: 70%;
+
+        .card {
+            .img-container, .service-card-content {
+                width: 100%;
+            }
+        }
+
+        .swiper-pagination {
+            width: 100vw !important;
+        }
+    }
+}
