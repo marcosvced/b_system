@@ -10,6 +10,10 @@ const navigation = [
         label: 'Home',
         href: DEMOS.HOME,
       },
+      {
+        label: 'Home 2',
+        href: DEMOS.HOME2,
+      },
     ],
   },
   {

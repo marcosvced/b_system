@@ -21,27 +21,11 @@ const headerConfig = {
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <main class="main">
-    <section class="section section-divider">
-        <div class="container">
-            <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
-        </div>
-    </section>
+    <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
 
-    <section class="section section-divider darkened">
-        <div class="container">
-            <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
-        </div>
-    </section>
+    <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'], isDarkened: true, isDark: false }) -%>
 
-    <section class="section section-divider" data-bsystem="dark">
-        <div class="container">
-            <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
-        </div>
-    </section>
+    <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'], isDarkened: false, isDark: true }) -%>
 
-    <section class="section section-divider darkened" data-bsystem="dark">
-        <div class="container">
-            <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
-        </div>
-    </section>
+    <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'], isDarkened: true, isDark: true }) -%>
 </main>
