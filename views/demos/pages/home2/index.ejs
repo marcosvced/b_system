@@ -3,53 +3,56 @@
 <%- contentFor('body') %>
 
 <!-- MARQUEE HERO -->
-<%- include(`${module}/marquee/cta/cta`, {
-    slides: [
-        {
-            title: {
-                emphasis: 'We are a new concept of digital studio.',
-                normal: 'We work with startups and large companies to activate and consolidate their brands.'
+<section class="section section-divider p-0">
+    <%- include(`${module}/marquee/cta/cta`, {
+        slides: [
+            {
+                title: {
+                    emphasis: 'We are a new concept of digital studio.',
+                    normal: 'We work with startups and large companies to activate and consolidate their brands.'
+                },
+                btn: {
+                    label: 'Start with B System', 
+                    isCTA: true, 
+                    icon: 'links', 
+                    iconPosition: 'after' 
+                },
+                quote: '“People ignore design that ignores people”'
             },
-            btn: {
-                label: 'Start with B System', 
-                isCTA: true, 
-                icon: 'links', 
-                iconPosition: 'after' 
+            {
+                img: {
+                    src: 'consistency',
+                    alt: 'consistency'
+                },
+                title: {
+                    emphasis: 'We are 100% customer-oriented and offer tailor-made solutions.',
+                    normal: 'Always thinking about the specific needs of each of our clients.'
+                },
+                btn: {
+                    label: 'Start with B System', 
+                    isCTA: true, 
+                    icon: 'links', 
+                    iconPosition: 'after' 
+                },
+                quote: '“People ignore design that ignores people”'
             },
-            quote: '“People ignore design that ignores people”'
-        },
-        {
-            img: {
-                src: 'consistency',
-                alt: 'consistency'
+            {
+                title: {
+                    emphasis: 'We combine creative talent, strategic vision, technical specialization.',
+                    normal: 'And above all, the desire to feel pride in each job.'
+                },
+                btn: {
+                    label: 'Start with B System', 
+                    isCTA: true, 
+                    icon: 'links', 
+                    iconPosition: 'after' 
+                },
+                quote: '“People ignore design that ignores people”'
             },
-            title: {
-                emphasis: 'We are 100% customer-oriented and offer tailor-made solutions.',
-                normal: 'Always thinking about the specific needs of each of our clients.'
-            },
-            btn: {
-                label: 'Start with B System', 
-                isCTA: true, 
-                icon: 'links', 
-                iconPosition: 'after' 
-            },
-            quote: '“People ignore design that ignores people”'
-        },
-        {
-            title: {
-                emphasis: 'We combine creative talent, strategic vision, technical specialization.',
-                normal: 'And above all, the desire to feel pride in each job.'
-            },
-            btn: {
-                label: 'Start with B System', 
-                isCTA: true, 
-                icon: 'links', 
-                iconPosition: 'after' 
-            },
-            quote: '“People ignore design that ignores people”'
-        },
-    ]
-}) %>
+        ]
+    }) %>
+</section>
+
 <!-- END: MARQUEE HERO -->
 
 <!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
@@ -95,7 +98,9 @@
 <!-- END: FEATURED CONTENT -->
 
 <!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
-<%- include(`${module}/basicContent/simple`, { variant:'2-columns', title:'Our portfolio', text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.' }) %>
+<section class="section section-divider p-0">
+    <%- include(`${module}/basicContent/simple`, { variant:'2-columns', title:'Our portfolio', text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.' }) %>
+</section>
 <!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
 
 <!-- PORTFOLIO GRID DECOMPOSED -->
@@ -103,15 +108,17 @@
 <!-- END: PORTFOLIO GRID DECOMPOSED -->
 
 <!-- CTA -->
-<%- include(`${module}/cta/cta`, {
-    title: 'Do you want to start with B_system today?',
-    btn: {
-        label: 'Purchase B_system',
-        isCTA: true,
-        icon: 'links',
-        iconPosition: 'after'
-    }
-}) %>
+<section class="section section-divider p-0">
+    <%- include(`${module}/cta/cta`, {
+        title: 'Do you want to start with B_system today?',
+        btn: {
+            label: 'Purchase B_system',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        }
+    }) %>
+</section>
 <!-- END: CTA -->
 
 <!-- ICONS SOCIAL -->
