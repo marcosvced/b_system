@@ -21,19 +21,31 @@ const headerConfig = {
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <main class="main">
-    <section class="section serction-divider p-0">
-        <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
-    </section>
+    <%- include(`${module}/iconSocial/iconSocial`, { 
+        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+        isDarkened: false,
+        isDark: false,
+        haveBorder: false
+    }) -%>
 
-    <section class="section serction-divider darkened p-0">
-        <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
-    </section>
+    <%- include(`${module}/iconSocial/iconSocial`, { 
+        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+        isDarkened: true,
+        isDark: false,
+        haveBorder: false
+    }) -%>
 
-    <section class="section serction-divider p-0" data-bsystem="dark">
-        <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
-    </section>
+    <%- include(`${module}/iconSocial/iconSocial`, { 
+        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+        isDarkened: false,
+        isDark: true,
+        haveBorder: false
+    }) -%>
 
-    <section class="section serction-divider darkened p-0" data-bsystem="dark">
-        <%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
-    </section>
+    <%- include(`${module}/iconSocial/iconSocial`, { 
+        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+        isDarkened: true,
+        isDark: true,
+        haveBorder: false
+    }) -%>
 </main>

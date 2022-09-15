@@ -66,9 +66,5 @@
     $scale: math.div($calc, $font-base);
     transform: scale(math.div($scale, 100)) translateY(-.5em) translateX(.5em);
   }
-
-  textarea {
-    min-height: size.rem(160);
-  }
 }
 

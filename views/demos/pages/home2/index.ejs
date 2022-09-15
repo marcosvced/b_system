@@ -56,7 +56,12 @@
 <!-- END: MARQUEE HERO -->
 
 <!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
-<%- include(`${module}/basicContent/simple`, { variant:'2-columns', title:'Our work methodology', text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.' }) %>
+<%- include(`${module}/basicContent/simple`, { 
+    variant:'2-columns', 
+    title:'Our work methodology', 
+    text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    haveBorder: false 
+}) %>
 <!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
 
 <!-- CATEGORY MENU -->
@@ -98,9 +103,12 @@
 <!-- END: FEATURED CONTENT -->
 
 <!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
-<section class="section section-divider p-0">
-    <%- include(`${module}/basicContent/simple`, { variant:'2-columns', title:'Our portfolio', text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.' }) %>
-</section>
+<%- include(`${module}/basicContent/simple`, { 
+    variant:'2-columns', 
+    title:'Our portfolio', 
+    text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    haveBorder: true 
+}) %>
 <!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
 
 <!-- PORTFOLIO GRID DECOMPOSED -->
@@ -108,19 +116,25 @@
 <!-- END: PORTFOLIO GRID DECOMPOSED -->
 
 <!-- CTA -->
-<section class="section section-divider p-0">
-    <%- include(`${module}/cta/cta`, {
-        title: 'Do you want to start with B_system today?',
-        btn: {
-            label: 'Purchase B_system',
-            isCTA: true,
-            icon: 'links',
-            iconPosition: 'after'
-        }
-    }) %>
-</section>
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    haveBorder: true
+}) %>
 <!-- END: CTA -->
 
 <!-- ICONS SOCIAL -->
-<%- include(`${module}/iconSocial/iconSocial`, { socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'] }) -%>
+<%- include(`${module}/iconSocial/iconSocial`, { 
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    haveBorder: false
+}) -%>
 <!-- END: ICONS SOCIAL -->

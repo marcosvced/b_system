@@ -1,0 +1,14 @@
+@use 'sass:math';
+@use '../../variables/colors' as *;
+@use '../../variables/font' as *;
+@use '../../helpers/themed';
+@use '../../helpers/size';
+@use '../../mixins/space';
+@use '../../mixins/styles';
+
+.form-floating {
+    .form-textarea {
+        min-height: size.rem(160);
+        border-color: $c-grayscale--500 !important;
+    }
+}

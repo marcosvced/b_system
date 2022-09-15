@@ -15,9 +15,9 @@
     @include mixin.screen(xl) {
         padding-block: helper.rem(88);
     }
-    @include mixin.screen(xxl) {
-        padding-block: helper.rem(120);
-    }
+    // @include mixin.screen(xxl) {
+    //     padding-block: helper.rem(120);
+    // }
 
     &.section-divider {
        @include themed.light {
