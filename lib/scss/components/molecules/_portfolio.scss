@@ -1,0 +1,27 @@
+@use '../../helpers/size';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.portfolio {
+    $parent: &;
+
+    &-basic {
+        padding-bottom: 100%;
+    }
+
+    &-horizontal {
+        padding-bottom: 100%;
+
+        @include mixin.screen(xl) {
+            padding-bottom: 50%;
+        }
+    }
+
+    &-vertical {
+        padding-bottom: 100%;
+
+        @include mixin.screen(md) {
+            padding-bottom: 200%;
+        }
+    }
+}
