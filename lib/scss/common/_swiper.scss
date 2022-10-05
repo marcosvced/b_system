@@ -6,6 +6,10 @@
 .swiper {
   overflow: visible;
 
+  &-slide {
+    height: auto;
+  }
+
   &-pagination {
     padding-top: 56px;
     width: max-content !important;
