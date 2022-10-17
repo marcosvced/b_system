@@ -34,35 +34,76 @@
         }
     }
 
-    &-decomposed {
-        &-basic {
-            padding-bottom: 100%;
+    &-basic, &-vertical {
+        flex-direction: column;
+
+        @include mixin.screen(md) {
+            flex-direction: row;
         }
-    
-        &-horizontal {
-            padding-bottom: 100%;
-    
-            @include mixin.screen(xl) {
-                padding-bottom: 50%;
-            }
-        }
-    
-        &-vertical {
-            padding-bottom: 100%;
-    
+
+        #{$parent}-container-img, #{$parent}-content {
+            width: 100%;
+            min-height: helper.rem(380);
+
             @include mixin.screen(md) {
-                padding-bottom: 200%;
+                width: 50%;
             }
-        }
-    
-        &-container-img {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-    
-        &-img {
-            width: 100%;
         }
     }
+
+    &-vertical {
+        @include mixin.screen(md) {
+            grid-row: span 2;
+        }
+    }
+
+    &-horizontal {
+        flex-direction: column;
+
+        @include mixin.screen(xl) {
+            flex-direction: row;
+            grid-column: span 2;
+        }
+
+        #{$parent}-container-img, #{$parent}-content {
+            width: 100%;
+            min-height: helper.rem(380);
+
+            @include mixin.screen(xl) {
+                width: 50%;
+            }
+        }
+    }
+
+    // &-decomposed {
+    //     &-basic {
+    //         padding-bottom: 100%;
+    //     }
+    
+    //     &-horizontal {
+    //         padding-bottom: 100%;
+    
+    //         @include mixin.screen(xl) {
+    //             padding-bottom: 50%;
+    //         }
+    //     }
+    
+    //     &-vertical {
+    //         padding-bottom: 100%;
+    
+    //         @include mixin.screen(md) {
+    //             padding-bottom: 200%;
+    //         }
+    //     }
+    
+    //     &-container-img {
+    //         width: 100%;
+    //         height: 100%;
+    //         display: block;
+    //     }
+    
+    //     &-img {
+    //         width: 100%;
+    //     }
+    // }
 }
