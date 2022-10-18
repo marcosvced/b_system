@@ -105,7 +105,7 @@ route.get(QUICK_START.TEAM_GRIDS, (request, response) => {
   render(response, path('modules', ['teamGrids']), {}, { navigation })
 })
 
-/* Busness Cases */
+/* Business Cases */
 route.get(QUICK_START.BUSINESS_CASES, (request, response) => {
   render(response, path('modules', ['businessCases']), {}, { navigation })
 })
@@ -147,6 +147,15 @@ route.get(QUICK_START.CONTACTS, (request, response) => {
 /* Service */
 route.get(QUICK_START.SERVICES, (request, response) => {
   render(response, path('modules', ['services']), {}, { navigation })
+})
+
+/* Portfolios */
+route.get(QUICK_START.PORTFOLIOS.BASIC, (request, response) => {
+  render(response, path('modules', ['portfolios', 'basic']), {}, { navigation })
+})
+
+route.get(QUICK_START.PORTFOLIOS.DECOMPOSED, (request, response) => {
+  render(response, path('modules', ['portfolios', 'decomposed']), {}, { navigation })
 })
 
 /**

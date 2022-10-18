@@ -33,6 +33,10 @@ module.exports = {
     FAQS: '/modules/faqs',
     ICON_SERVICES: '/modules/iconServices',
     BUSINESS_CASES: '/modules/businessCases',
+    PORTFOLIOS:{
+      BASIC: '/modules/portfolios/basic',
+      DECOMPOSED: '/modules/portfolio/decomposed'
+    },
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

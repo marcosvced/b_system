@@ -85,6 +85,14 @@ const navigation = [
         label: 'Service',
       },
       {
+        href: QUICK_START.PORTFOLIOS.BASIC,
+        label: 'Portfolio Basic',
+      },
+      {
+        href: QUICK_START.PORTFOLIOS.DECOMPOSED,
+        label: 'Portfolio Decomposed',
+      },
+      {
         href: QUICK_START.FOOTERS.BASIC,
         label: 'Footers',
       },
