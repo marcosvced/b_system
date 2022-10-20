@@ -37,6 +37,7 @@ module.exports = {
       BASIC: '/modules/portfolios/basic',
       DECOMPOSED: '/modules/portfolio/decomposed'
     },
+    PRICES: '/modules/prices',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

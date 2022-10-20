@@ -158,6 +158,11 @@ route.get(QUICK_START.PORTFOLIOS.DECOMPOSED, (request, response) => {
   render(response, path('modules', ['portfolios', 'decomposed']), {}, { navigation })
 })
 
+/* Prices carousel */
+route.get(QUICK_START.PRICES, (request, response) => {
+  render(response, path('modules', ['prices']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */
