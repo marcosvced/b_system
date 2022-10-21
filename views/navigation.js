@@ -113,6 +113,10 @@ const navigation = [
         label: 'CTA',
       },
       {
+        href: QUICK_START.LOGINS,
+        label: 'Login',
+      },
+      {
         href: QUICK_START.CONTACT_BAR,
         label: 'Contact Bar',
       },

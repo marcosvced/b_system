@@ -158,6 +158,11 @@ route.get(QUICK_START.PORTFOLIOS.DECOMPOSED, (request, response) => {
   render(response, path('modules', ['portfolios', 'decomposed']), {}, { navigation })
 })
 
+/* Login */
+route.get(QUICK_START.LOGINS, (request, response) => {
+  render(response, path('modules', ['logins']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */

@@ -1,0 +1,36 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.login {
+    $parent: &;
+
+    @include mixin.screen(md) {
+        max-width: helper.rem(368);
+        margin: 0 auto;
+    }
+
+    &-form {
+        .form-floating:not(:last-of-type) {
+            margin-bottom: helper.space(16);
+        }
+
+        .form-floating:last-of-type {
+            margin-bottom: helper.space(32);
+
+            @include mixin.screen(md) {
+                margin-bottom: helper.space(40);
+            }
+        }
+
+        .btn {
+            align-self: center;
+            margin-bottom: helper.space(24);
+        }
+
+        .action-link {
+            margin: 0 auto;
+        }
+    }
+}
