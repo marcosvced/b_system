@@ -7,7 +7,7 @@
     $parent: &;
 
     @include mixin.screen(md) {
-        max-width: helper.rem(368);
+        max-width: helper.rem(400);
         margin: 0 auto;
     }
 
