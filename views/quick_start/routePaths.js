@@ -38,6 +38,7 @@ module.exports = {
       DECOMPOSED: '/modules/portfolio/decomposed'
     },
     LOGINS: '/modules/login',
+    BRANDS: '/modules/brands',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

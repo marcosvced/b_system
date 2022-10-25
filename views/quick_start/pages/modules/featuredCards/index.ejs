@@ -25,7 +25,7 @@ const headerConfig = {
 
 <!--SECTION LIGHT-->
 
-    <%- include( `${module}/featureCard/featureCard`, {
+    <%- include( `${module}/featuredCard/featuredCard`, {
         title: 'Featured works',
         cards: [
             {
@@ -61,10 +61,10 @@ const headerConfig = {
         },
         isDarkened: false,
         isDark: false,
-        haveBorder: true
+        hasBorder: true
     } ) %>
 
-    <%- include( `${module}/featureCard/featureCard`, {
+    <%- include( `${module}/featuredCard/featuredCard`, {
         title: 'Featured works',
         cards: [
             {
@@ -100,13 +100,13 @@ const headerConfig = {
         },
         isDarkened: true,
         isDark: false,
-        haveBorder: true
+        hasBorder: true
     } ) %>
 <!--END: SECTION LIGHT-->
 
 
 <!--SECTION DARK-->
-    <%- include( `${module}/featureCard/featureCard`, {
+    <%- include( `${module}/featuredCard/featuredCard`, {
         title: 'Featured works',
         cards: [
             {
@@ -142,46 +142,85 @@ const headerConfig = {
         },
         isDarkened: false,
         isDark: true,
-        haveBorder: true
+        hasBorder: true
     } ) %>
 
-    <%- include( `${module}/featureCard/featureCard`, {
-    title: 'Featured works',
-    cards: [
-            {
-                img: {
-                    src: 'feature-card_module-dark-1',
-                    alt: 'featured card dark image 1',
+    <%- include( `${module}/featuredCard/featuredCard`, {
+        title: 'Featured works',
+        cards: [
+                {
+                    img: {
+                        src: 'feature-card_module-dark-1',
+                        alt: 'featured card dark image 1',
+                    },
+                    title: '.US',
+                    text: 'Product design'
                 },
-                title: '.US',
-                text: 'Product design'
-            },
-            {
-                img: {
-                    src: 'feature-card_module-dark-2',
-                    alt: 'featured card dark image 2',
+                {
+                    img: {
+                        src: 'feature-card_module-dark-2',
+                        alt: 'featured card dark image 2',
+                    },
+                    title: 'Dream',
+                    text: 'Editorial'
                 },
-                title: 'Dream',
-                text: 'Editorial'
-            },
-            {
-                img: {
-                    src: 'feature-card_module-dark-3',
-                    alt: 'featured card dark image 3',
+                {
+                    img: {
+                        src: 'feature-card_module-dark-3',
+                        alt: 'featured card dark image 3',
+                    },
+                    titleBasic: 'Amazon toy',
+                    text: 'Packaging'
                 },
-                titleBasic: 'Amazon toy',
-                text: 'Packaging'
-            },
-        ],
-    link:{
-        href: '#',
-        label: 'See all articles',
-        icon: 'links',
-        iconPosition: 'after'
-    },
-    isDarkened: true,
-    isDark: true,
-    haveBorder: true
+            ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: true,
+        isDark: true,
+        hasBorder: true
     } ) %>
 <!--END: SECTION DARK-->
+
+    <%- include( `${module}/featuredCard/featuredCard`, {
+        title: 'Featured works',
+        cards: [
+                {
+                    img: {
+                        src: 'feature-card_module-dark-1',
+                        alt: 'featured card dark image 1',
+                    },
+                    title: '.US',
+                    text: 'Product design'
+                },
+                {
+                    img: {
+                        src: 'feature-card_module-dark-2',
+                        alt: 'featured card dark image 2',
+                    },
+                    title: 'Dream',
+                    text: 'Editorial'
+                },
+                {
+                    img: {
+                        src: 'feature-card_module-dark-3',
+                        alt: 'featured card dark image 3',
+                    },
+                    titleBasic: 'Amazon toy',
+                    text: 'Packaging'
+                },
+            ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: true,
+        isDark: true,
+        hasBorder: true
+    } ) %>
 </main>

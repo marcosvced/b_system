@@ -1,0 +1,90 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('styles') %>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<main class="main">
+<!-- Section Light -->
+    <%- include( `${module}/brand/brand`, {
+        title: 'Awards and honours',
+        brands: [
+                {
+                    img: {
+                        src: 'light_brand-01',
+                        alt: 'light brand 01',
+                    }
+                },
+                {
+                    img: {
+                        src: 'light_brand-02',
+                        alt: 'light brand 02',
+                    }
+                },
+                {
+                    img: {
+                        src: 'light_brand-03',
+                        alt: 'light brand 03',
+                    }
+                },
+                {
+                    img: {
+                        src: 'light_brand-04',
+                        alt: 'light brand 04',
+                    }
+                },
+            ],
+        isDark: false,
+        hasBorder: true
+    } ) %>
+<!-- END: Section Light -->
+<!-- Section Dark -->
+    <%- include( `${module}/brand/brand`, {
+        title: 'Awards and honours',
+        brands: [
+                {
+                    img: {
+                        src: 'dark_brand-01',
+                        alt: 'dark brand 01',
+                    }
+                },
+                {
+                    img: {
+                        src: 'dark_brand-02',
+                        alt: 'dark brand 02',
+                    }
+                },
+                {
+                    img: {
+                        src: 'dark_brand-03',
+                        alt: 'dark brand 03',
+                    }
+                },
+                {
+                    img: {
+                        src: 'dark_brand-04',
+                        alt: 'dark brand 04',
+                    }
+                },
+            ],
+        isDark: true,
+        hasBorder: true
+    } ) %>
+<!-- END: Section Dark -->
+</main>

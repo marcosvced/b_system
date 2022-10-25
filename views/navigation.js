@@ -113,6 +113,10 @@ const navigation = [
         label: 'Login',
       },
       {
+        href: QUICK_START.BRANDS,
+        label: 'Brands',
+      },
+      {
         href: QUICK_START.CONTACT_BAR,
         label: 'Contact Bar',
       },

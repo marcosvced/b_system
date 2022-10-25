@@ -1,0 +1,40 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.brands {
+    $parent: &;
+
+    &-logo-container {
+        #{$parent}-logo {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-content-desktop {
+        .swiper {
+            overflow: hidden;
+            width: 90%;
+        }
+
+        .swiper-pagination {
+            display: none;
+        }
+
+        .button-prev, .button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .btn-interactive {
+                background-color: transparent;
+            }
+        }
+
+        .button-next {
+            right: 0;
+        }
+    }
+}

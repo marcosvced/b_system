@@ -163,6 +163,11 @@ route.get(QUICK_START.LOGINS, (request, response) => {
   render(response, path('modules', ['logins']), {}, { navigation })
 })
 
+/* Brand */
+route.get(QUICK_START.BRANDS, (request, response) => {
+  render(response, path('modules', ['brands']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */
