@@ -168,6 +168,11 @@ route.get(QUICK_START.BRANDS, (request, response) => {
   render(response, path('modules', ['brands']), {}, { navigation })
 })
 
+/* Basic Grid */
+route.get(QUICK_START.BASIC_GRID, (request, response) => {
+  render(response, path('modules', ['basicGrids']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */

@@ -117,6 +117,10 @@ const navigation = [
         label: 'Brands',
       },
       {
+        href: QUICK_START.BASIC_GRID,
+        label: 'Basic Grid',
+      },
+      {
         href: QUICK_START.CONTACT_BAR,
         label: 'Contact Bar',
       },

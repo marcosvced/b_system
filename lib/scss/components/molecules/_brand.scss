@@ -3,7 +3,7 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-.brands {
+.module .brands {
     $parent: &;
 
     &-logo-container {
