@@ -173,6 +173,11 @@ route.get(QUICK_START.BASIC_GRID, (request, response) => {
   render(response, path('modules', ['basicGrids']), {}, { navigation })
 })
 
+/* Testimonial */
+route.get(QUICK_START.TESTIMONIALS, (request, response) => {
+  render(response, path('modules', ['testimonials']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */

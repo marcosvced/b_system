@@ -121,6 +121,10 @@ const navigation = [
         label: 'Basic Grid',
       },
       {
+        href: QUICK_START.TESTIMONIALS,
+        label: 'Testimonials',
+      },
+      {
         href: QUICK_START.CONTACT_BAR,
         label: 'Contact Bar',
       },

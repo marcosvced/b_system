@@ -40,6 +40,7 @@ module.exports = {
     LOGINS: '/modules/login',
     BRANDS: '/modules/brands',
     BASIC_GRID: '/modules/basicGrids',
+    TESTIMONIALS: '/modules/testimonials',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',
