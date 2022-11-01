@@ -41,6 +41,7 @@ module.exports = {
     BRANDS: '/modules/brands',
     BASIC_GRID: '/modules/basicGrids',
     TESTIMONIALS: '/modules/testimonials',
+    PRODUCT_GRIDS: '/modules/productCards',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

@@ -125,6 +125,10 @@ const navigation = [
         label: 'Testimonials',
       },
       {
+        href: QUICK_START.PRODUCT_GRIDS,
+        label: 'Product Cards',
+      },
+      {
         href: QUICK_START.CONTACT_BAR,
         label: 'Contact Bar',
       },

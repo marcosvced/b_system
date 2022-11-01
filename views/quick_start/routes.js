@@ -178,6 +178,11 @@ route.get(QUICK_START.TESTIMONIALS, (request, response) => {
   render(response, path('modules', ['testimonials']), {}, { navigation })
 })
 
+/* Product Cards */
+route.get(QUICK_START.PRODUCT_GRIDS, (request, response) => {
+  render(response, path('modules', ['productCards']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */

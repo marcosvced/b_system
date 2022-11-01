@@ -1,0 +1,302 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+<!-- SECTION LIGHT -->
+<%- include(`${module}/productCard/productCard`, {
+    title: 'Party Collection. Spring / Summer 2022',
+    cards: [
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-basic',
+                alt: 'Product 1'
+            },
+            name: 'White print dress',
+            price: '$ 60.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-basic-02',
+                alt: 'Product 2'
+            },
+            name: 'Flowery dress',
+            price: '$ 70.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-basic-03',
+                alt: 'Product 3'
+            },
+            name: 'Blue dress',
+            price: '$ 106.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-basic-04',
+                alt: 'Product 4'
+            },
+            name: 'Combined dress',
+            price: '$ 78.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+    ],
+    btn: {
+        href: '#',
+        label: 'See complete collection',
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: SECTION LIGHT -->
+
+<!-- SECTION LIGHT (DARKENED) -->
+<%- include(`${module}/productCard/productCard`, {
+    title: 'Party Collection. Spring / Summer 2022',
+    cards: [
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-basic',
+                alt: 'Product 1'
+            },
+            name: 'White print dress',
+            price: '$ 60.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-basic-02',
+                alt: 'Product 2'
+            },
+            name: 'Flowery dress',
+            price: '$ 70.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-basic-03',
+                alt: 'Product 3'
+            },
+            name: 'Blue dress',
+            price: '$ 106.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-basic-04',
+                alt: 'Product 4'
+            },
+            name: 'Combined dress',
+            price: '$ 78.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+    ],
+    btn: {
+        href: '#',
+        label: 'See complete collection',
+    },
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: SECTION LIGHT (DARKENED) -->
+
+<!-- SECTION DARK -->
+<%- include(`${module}/productCard/productCard`, {
+    title: 'Party Collection. Spring / Summer 2022',
+    cards: [
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'dark_product-basic-01',
+                alt: 'Product 1'
+            },
+            name: 'White print dress',
+            price: '$ 60.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'dark_product-basic-02',
+                alt: 'Product 2'
+            },
+            name: 'Flowery dress',
+            price: '$ 70.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'dark_product-basic-03',
+                alt: 'Product 3'
+            },
+            name: 'Blue dress',
+            price: '$ 106.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'dark_product-basic-04',
+                alt: 'Product 4'
+            },
+            name: 'Combined dress',
+            price: '$ 78.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+    ],
+    btn: {
+        href: '#',
+        label: 'See complete collection',
+    },
+    isDarkened: false,
+    isDark: true,
+    hasBorder: false
+}) %>
+<!-- END: SECTION DARK -->
+
+<!-- SECTION DARK (DARKENED) -->
+<%- include(`${module}/productCard/productCard`, {
+    title: 'Party Collection. Spring / Summer 2022',
+    cards: [
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'dark_product-basic-01',
+                alt: 'Product 1'
+            },
+            name: 'White print dress',
+            price: '$ 60.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'dark_product-basic-02',
+                alt: 'Product 2'
+            },
+            name: 'Flowery dress',
+            price: '$ 70.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'dark_product-basic-03',
+                alt: 'Product 3'
+            },
+            name: 'Blue dress',
+            price: '$ 106.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'dark_product-basic-04',
+                alt: 'Product 4'
+            },
+            name: 'Combined dress',
+            price: '$ 78.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+    ],
+    btn: {
+        href: '#',
+        label: 'See complete collection',
+    },
+    isDarkened: true,
+    isDark: true,
+    hasBorder: false
+}) %>
+<!-- END: SECTION DARK (DARKENED) -->
