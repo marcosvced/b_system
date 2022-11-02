@@ -29,7 +29,9 @@ const headerConfig = {
                     <div class="col-span-4 d-flex flex-column space-y-24">
                         <%- include(`${component}/alert/alert`, {
                             icon: 'lock',
-                            text: 'You must include at least one letter.',
+                            text: {
+                                content: 'You must include at least one letter.'
+                            },
                             variant: 'info'
                         }) %>
                         <span class="body-light-gray-text">
@@ -40,7 +42,9 @@ const headerConfig = {
                     <div class="col-span-4 d-flex flex-column space-y-24">
                         <%- include(`${component}/alert/alert`, {
                             icon: 'error',
-                            text: 'The data you have entered is already in our system.',
+                            text: {
+                                content: 'The data you have entered is already in our system.',
+                            },
                             variant: 'error'
                         }) %>
                         <span class="body-light-gray-text">
@@ -51,7 +55,9 @@ const headerConfig = {
                     <div class="col-span-4 d-flex flex-column space-y-24">
                         <%- include(`${component}/alert/alert`, {
                             icon: 'avatar',
-                            text: 'Your data is safe with B System. In no case may they be published.',
+                            text: {
+                                content: 'Your data is safe with B System. In no case may they be published.',
+                            },
                             variant: 'advice'
                         }) %>
                         <span class="body-light-gray-text">
@@ -62,7 +68,9 @@ const headerConfig = {
                     <div class="col-span-4 d-flex flex-column space-y-24">
                         <%- include(`${component}/alert/alert`, {
                             icon: 'message',
-                            text: 'You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com',
+                            text: {
+                                content: 'You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com',
+                            },
                             variant: 'basic'
                         }) %>
                         <span class="body-light-gray-text">
@@ -95,7 +103,9 @@ const headerConfig = {
                     <div class="col-span-4 d-flex flex-column space-y-24">
                         <%- include(`${component}/alert/alert`, {
                             icon: 'lock',
-                            text: 'You must include at least one letter.',
+                            text: {
+                                content: 'You must include at least one letter.',
+                            },
                             variant: 'info'
                         }) %>
                         <span class="body-light-gray-text">
@@ -106,7 +116,9 @@ const headerConfig = {
                     <div class="col-span-4 d-flex flex-column space-y-24">
                         <%- include(`${component}/alert/alert`, {
                             icon: 'error',
-                            text: 'The data you have entered is already in our system.',
+                            text: {
+                                content: 'The data you have entered is already in our system.',
+                            },
                             variant: 'error'
                         }) %>
                         <span class="body-light-gray-text">
@@ -117,7 +129,9 @@ const headerConfig = {
                     <div class="col-span-4 d-flex flex-column space-y-24">
                         <%- include(`${component}/alert/alert`, {
                             icon: 'avatar',
-                            text: 'Your data is safe with B System. In no case may they be published.',
+                            text: {
+                                content: 'Your data is safe with B System. In no case may they be published.',
+                            },
                             variant: 'advice'
                         }) %>
                         <span class="body-light-gray-text">
@@ -128,7 +142,9 @@ const headerConfig = {
                     <div class="col-span-4 d-flex flex-column space-y-24">
                         <%- include(`${component}/alert/alert`, {
                             icon: 'message',
-                            text: 'You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com',
+                            text: {
+                                content: 'You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com',
+                            },
                             variant: 'basic'
                         }) %>
                         <span class="body-light-gray-text">

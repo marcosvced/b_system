@@ -414,17 +414,23 @@
     alerts: [
         {
             icon: 'call',
-            text: `If you have an urgent query you can call us :
-
-            T. (+34) 915 805 007
-            F. (+34) 915 806 082`,
+            text: {
+                content: 'If you have an urgent query you can call us :',
+                contact: [
+                    { contact: 'T. (+34) 915 805 007' },
+                    { contact: 'F. (+34) 915 806 082' }
+                ]
+            },
             variant: 'info'
         },
         {
             icon: 'message',
-            text: `You can also write an email to these departments and we will get back to you as soon as possible:
-
-            bsystem@company.com`,
+            text: {
+                content: 'You can also write an email to these departments and we will get back to you as soon as possible:',
+                contact: [
+                    { contact: 'bsystem@company.com' }
+                ]
+            },
             variant: 'info'
         },
         {
