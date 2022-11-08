@@ -42,6 +42,7 @@ module.exports = {
     BASIC_GRID: '/modules/basicGrids',
     TESTIMONIALS: '/modules/testimonials',
     PRODUCT_GRIDS: '/modules/productCards',
+    SEARCHERS: '/modules/searchers',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

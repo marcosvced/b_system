@@ -60,7 +60,7 @@
                   </a>
                 </li>
                 <li class="nav-item  dropdown  ">
-                  <a class="nav-link   dropdown-toggle " href="#" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link active  dropdown-toggle " href="#" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Modules
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="modules_dropdown_menu">
@@ -143,7 +143,7 @@
                       <a class="dropdown-item " href="../../modules/productCards">Product Cards</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="../../modules/searchers">Searchers</a>
+                      <a class="dropdown-item active" href="../../modules/searchers">Searchers</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/contactBar">Contact Bar</a>
@@ -175,12 +175,12 @@
                   </ul>
                 </li>
                 <li class="nav-item  dropdown  ">
-                  <a class="nav-link active  dropdown-toggle " href="#" id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link   dropdown-toggle " href="#" id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Components
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="components_dropdown_menu">
                     <li>
-                      <a class="dropdown-item active" href="../../components/buttons">Buttons</a>
+                      <a class="dropdown-item " href="../../components/buttons">Buttons</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../components/forms">Forms</a>
@@ -250,174 +250,20 @@
 
     <!--MAIN CONTENT-->
     <main class="main">
-
-      <!--BUTTONS-->
-
-      <!--SECTION LIGHT-->
-      <section class="section">
-        <div class="container">
-          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Buttons</h3>
-          <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary btn-primary-cta">
-                <span>Purchase</span>
-                <i class="icon-links"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Primary CTA
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary">
-                Continue
-              </button>
-              <span class="body-light-gray-text">
-                    Primary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-secondary">
-                Send
-              </button>
-              <span class="body-light-gray-text">
-                    Secondary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary">
-                Access
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-subtle">
-                <span>Access</span>
-                <i class="icon-avatar"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Subtle
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary  btn-action-next">
-                <span>Next</span>
-                <i class="icon-next"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Next
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary  btn-action-previous">
-                <i class="icon-back"></i>
-                <span>Previous</span>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Previous
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary" disabled>
-                Start with B_system
-              </button>
-              <span class="body-light-gray-text">
-                    Disabled
-                </span>
-            </div>
+      <div class="searcher module  ">
+        <div class="container d-grid grid-4 grid-md-8 grid-xl-12 px-0">
+          <div class="form-floating">
+            <input id="searcher" type="text" class="form-control " placeholder="Search..." aria-invalid="false" aria-required="true">
+            <button type="button" class="btn btn-only-icon">
+              <i class="icon-m-glass"></i>
+            </button>
+            <label for="searcher" class="form-placeholder">Search...</label>
           </div>
+          <button type="button" class="btn btn-only-icon">
+            <i class="icon-blade"></i>
+          </button>
         </div>
-      </section>
-
-      <!--END: SECTION LIGHT-->
-
-      <!--SECTION DARK-->
-      <section class="section" data-bsystem="dark">
-        <div class="container">
-          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Buttons dark mode</h3>
-          <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary btn-primary-cta">
-                <span>Purchase</span>
-                <i class="icon-links"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Primary CTA
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary">
-                Continue
-              </button>
-              <span class="body-light-gray-text">
-                    Primary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-secondary">
-                Send
-              </button>
-              <span class="body-light-gray-text">
-                    Secondary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary">
-                Access
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-subtle">
-                <span>Access</span>
-                <i class="icon-avatar"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Subtle
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary  btn-action-next">
-                <span>Next</span>
-                <i class="icon-next"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Next
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary  btn-action-previous">
-                <i class="icon-back"></i>
-                <span>Previous</span>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Previous
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary" disabled>
-                Start with B_system
-              </button>
-              <span class="body-light-gray-text">
-                    Disabled
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-glass">
-                Access
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary transparent
-                </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--END: SECTION DARK-->
+      </div>
     </main>
 
     <!--END: MAIN CONTENT-->

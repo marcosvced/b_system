@@ -183,6 +183,11 @@ route.get(QUICK_START.PRODUCT_GRIDS, (request, response) => {
   render(response, path('modules', ['productCards']), {}, { navigation })
 })
 
+/* Searcher */
+route.get(QUICK_START.SEARCHERS, (request, response) => {
+  render(response, path('modules', ['searchers']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */

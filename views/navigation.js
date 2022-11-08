@@ -129,6 +129,10 @@ const navigation = [
         label: 'Product Cards',
       },
       {
+        href: QUICK_START.SEARCHERS,
+        label: 'Searchers',
+      },
+      {
         href: QUICK_START.CONTACT_BAR,
         label: 'Contact Bar',
       },
