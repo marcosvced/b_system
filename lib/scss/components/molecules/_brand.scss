@@ -14,10 +14,6 @@
     }
 
     &-content-desktop {
-        .swiper {
-            overflow: hidden;
-            width: 90%;
-        }
 
         .swiper-pagination {
             display: none;
@@ -27,6 +23,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            z-index: 1;
 
             .btn-interactive {
                 background-color: transparent;
