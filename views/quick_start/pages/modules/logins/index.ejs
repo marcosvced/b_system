@@ -1,0 +1,30 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+<%- include(`${module}/login/login`, {
+    title: 'Access B_system',
+    text: 'Hello! Enter your username and password to access the private area:',
+    inputs: [
+        {
+            id: 'login-user',
+            label: 'User',
+        },
+        {
+            id: 'login-password',
+            label: 'Password',
+            icon: 'eye',
+            type: 'password'
+        },
+    ],
+    button: {
+        label: 'Enter',
+        variant: 'primary'
+    },
+    link: {
+        href: '#',
+        label: 'Forgot your password?'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>

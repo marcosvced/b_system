@@ -98,9 +98,6 @@
                       <a class="dropdown-item " href="../../modules/iconServices">Icon Services</a>
                     </li>
                     <li>
-                      <a class="dropdown-item " href="../../modules/featureCards">Featured Cards</a>
-                    </li>
-                    <li>
                       <a class="dropdown-item " href="../../modules/statistics">Statistics</a>
                     </li>
                     <li>
@@ -111,6 +108,12 @@
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/services">Service</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/portfolios/basic">Portfolio Basic</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/portfolio/decomposed">Portfolio Decomposed</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
@@ -126,6 +129,21 @@
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/cta">CTA</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/login">Login</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/brands">Brands</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/basicGrids">Basic Grid</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/testimonials">Testimonials</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item " href="../../modules/productCards">Product Cards</a>
                     </li>
                     <li>
                       <a class="dropdown-item " href="../../modules/contactBar">Contact Bar</a>
@@ -232,7 +250,7 @@
 
     <!--MAIN CONTENT-->
     <main class="main">
-      <section class="contact section">
+      <div class="contact module ">
         <div class="container row flex-nowrap flex-column flex-md-row align-items-start mx-auto px-0">
           <div class="contact-form-container col-md-8 col-xl-6">
             <div class="contact-header space-y-24 space-y-md-32 space-y-xl-24 space-bottom-32">
@@ -258,7 +276,7 @@
               </div>
               <div class="form-floating">
                 <label for="contact-message" class="form-placeholder">Message</label>
-                <textarea id="contact-message" class="form-control"></textarea>
+                <textarea id="contact-message" class="form-control form-textarea"></textarea>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="checkbox-one">
@@ -274,25 +292,29 @@
           <div class="contact-alerts-container col-md-4 col-xl-6 d-flex flex-column">
             <div class="alert alert-info space-y-24">
               <i class="icon-call"></i>
-              <p class="alert-text body-light-gray-text">If you have an urgent query you can call us :
-                T. (+34) 915 805 007
-                F. (+34) 915 806 082</p>
+              <p class="alert-text body-light-gray-text">If you have an urgent query you can call us :</p>
+              <div class="alert-contact">
+                <p class="alert-text body-light-gray-text">T. (+34) 915 805 007</p>
+                <p class="alert-text body-light-gray-text">F. (+34) 915 806 082</p>
+              </div>
             </div>
             <div class="alert alert-info space-y-24">
               <i class="icon-message"></i>
-              <p class="alert-text body-light-gray-text">You can also write an email to these departments and we will get back to you as soon as possible:
-                bsystem@company.com</p>
+              <p class="alert-text body-light-gray-text">You can also write an email to these departments and we will get back to you as soon as possible:</p>
+              <div class="alert-contact">
+                <p class="alert-text body-light-gray-text">bsystem@company.com</p>
+              </div>
             </div>
             <div class="alert alert-link space-y-24">
-              <a href="#" class="action-link ">
+              <a href='#' class="action-link ">
                 <i class="icon-place"></i>
                 <span>Find our offices easily in our search engine</span>
               </a>
             </div>
           </div>
         </div>
-      </section>
-      <section class="contact section" data-bsystem="dark">
+      </div>
+      <div class="contact module section-divider" data-bsystem="dark">
         <div class="container row flex-nowrap flex-column flex-md-row align-items-start mx-auto px-0">
           <div class="contact-form-container col-md-8 col-xl-6">
             <div class="contact-header space-y-24 space-y-md-32 space-y-xl-24 space-bottom-32">
@@ -318,7 +340,7 @@
               </div>
               <div class="form-floating">
                 <label for="contact-message" class="form-placeholder">Message</label>
-                <textarea id="contact-message" class="form-control"></textarea>
+                <textarea id="contact-message" class="form-control form-textarea"></textarea>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="checkbox-one">
@@ -334,24 +356,28 @@
           <div class="contact-alerts-container col-md-4 col-xl-6 d-flex flex-column">
             <div class="alert alert-info space-y-24">
               <i class="icon-call"></i>
-              <p class="alert-text body-light-gray-text">If you have an urgent query you can call us :
-                T. (+34) 915 805 007
-                F. (+34) 915 806 082</p>
+              <p class="alert-text body-light-gray-text">If you have an urgent query you can call us :</p>
+              <div class="alert-contact">
+                <p class="alert-text body-light-gray-text">T. (+34) 915 805 007</p>
+                <p class="alert-text body-light-gray-text">F. (+34) 915 806 082</p>
+              </div>
             </div>
             <div class="alert alert-info space-y-24">
               <i class="icon-message"></i>
-              <p class="alert-text body-light-gray-text">You can also write an email to these departments and we will get back to you as soon as possible:
-                bsystem@company.com</p>
+              <p class="alert-text body-light-gray-text">You can also write an email to these departments and we will get back to you as soon as possible:</p>
+              <div class="alert-contact">
+                <p class="alert-text body-light-gray-text">bsystem@company.com</p>
+              </div>
             </div>
             <div class="alert alert-link space-y-24">
-              <a href="#" class="action-link ">
+              <a href='#' class="action-link ">
                 <i class="icon-place"></i>
                 <span>Find our offices easily in our search engine</span>
               </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <!--END: MAIN CONTENT-->

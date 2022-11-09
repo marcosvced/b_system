@@ -58,6 +58,9 @@
 @use "components/molecules/contact";
 @use "components/molecules/basic-content";
 @use "components/molecules/portfolio";
+@use "components/molecules/brand";
+@use "components/molecules/basic-grid";
+@use "components/molecules/searcher";
 
 /*
  * 4º Organisms
@@ -71,6 +74,7 @@
 @use "components/organisms/iconDescription";
 @use "components/organisms/cta";
 @use "components/organisms/contact-bar";
+@use "components/organisms/login";
 @use "components/organisms/price";
 
 

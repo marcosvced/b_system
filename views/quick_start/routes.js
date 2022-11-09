@@ -158,6 +158,36 @@ route.get(QUICK_START.PORTFOLIOS.DECOMPOSED, (request, response) => {
   render(response, path('modules', ['portfolios', 'decomposed']), {}, { navigation })
 })
 
+/* Login */
+route.get(QUICK_START.LOGINS, (request, response) => {
+  render(response, path('modules', ['logins']), {}, { navigation })
+})
+
+/* Brand */
+route.get(QUICK_START.BRANDS, (request, response) => {
+  render(response, path('modules', ['brands']), {}, { navigation })
+})
+
+/* Basic Grid */
+route.get(QUICK_START.BASIC_GRID, (request, response) => {
+  render(response, path('modules', ['basicGrids']), {}, { navigation })
+})
+
+/* Testimonial */
+route.get(QUICK_START.TESTIMONIALS, (request, response) => {
+  render(response, path('modules', ['testimonials']), {}, { navigation })
+})
+
+/* Product Cards */
+route.get(QUICK_START.PRODUCT_GRIDS, (request, response) => {
+  render(response, path('modules', ['productCards']), {}, { navigation })
+})
+
+/* Searcher */
+route.get(QUICK_START.SEARCHERS, (request, response) => {
+  render(response, path('modules', ['searchers']), {}, { navigation })
+})
+
 /* Prices carousel */
 route.get(QUICK_START.PRICES, (request, response) => {
   render(response, path('modules', ['prices']), {}, { navigation })

@@ -37,6 +37,12 @@ module.exports = {
       BASIC: '/modules/portfolios/basic',
       DECOMPOSED: '/modules/portfolio/decomposed'
     },
+    LOGINS: '/modules/login',
+    BRANDS: '/modules/brands',
+    BASIC_GRID: '/modules/basicGrids',
+    TESTIMONIALS: '/modules/testimonials',
+    PRODUCT_GRIDS: '/modules/productCards',
+    SEARCHERS: '/modules/searchers',
     PRICES: '/modules/prices',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',

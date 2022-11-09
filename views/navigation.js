@@ -65,10 +65,6 @@ const navigation = [
         label: 'Icon Services',
       },
       {
-        href: QUICK_START.FEATURED_CARDS,
-        label: 'Featured Cards',
-      },
-      {
         href: QUICK_START.STATISTICS,
         label: 'Statistics',
       },
@@ -115,6 +111,30 @@ const navigation = [
       {
         href: QUICK_START.CTA,
         label: 'CTA',
+      },
+      {
+        href: QUICK_START.LOGINS,
+        label: 'Login',
+      },
+      {
+        href: QUICK_START.BRANDS,
+        label: 'Brands',
+      },
+      {
+        href: QUICK_START.BASIC_GRID,
+        label: 'Basic Grid',
+      },
+      {
+        href: QUICK_START.TESTIMONIALS,
+        label: 'Testimonials',
+      },
+      {
+        href: QUICK_START.PRODUCT_GRIDS,
+        label: 'Product Cards',
+      },
+      {
+        href: QUICK_START.SEARCHERS,
+        label: 'Searchers',
       },
       {
         href: QUICK_START.CONTACT_BAR,

@@ -1,0 +1,15 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<%- include(`${module}/searcher/searcher`, {
+    input: {
+        id: 'searcher',
+        label: 'Search...',
+        icon: 'm-glass'
+    },
+    button: 'blade',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
