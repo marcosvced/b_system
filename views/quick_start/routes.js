@@ -188,6 +188,11 @@ route.get(QUICK_START.SEARCHERS, (request, response) => {
   render(response, path('modules', ['searchers']), {}, { navigation })
 })
 
+/* Prices carousel */
+route.get(QUICK_START.PRICES, (request, response) => {
+  render(response, path('modules', ['prices']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */

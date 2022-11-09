@@ -89,6 +89,10 @@ const navigation = [
         label: 'Portfolio Decomposed',
       },
       {
+        href: QUICK_START.PRICES,
+        label: 'Prices Carousel',
+      },
+      {
         href: QUICK_START.FOOTERS.BASIC,
         label: 'Footers',
       },

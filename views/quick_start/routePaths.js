@@ -43,6 +43,7 @@ module.exports = {
     TESTIMONIALS: '/modules/testimonials',
     PRODUCT_GRIDS: '/modules/productCards',
     SEARCHERS: '/modules/searchers',
+    PRICES: '/modules/prices',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',
