@@ -15,6 +15,14 @@
 
     <!-- Demo styles -->
     <style lang="css">
+      .modules_dropdown_menu.show {
+        display: grid;
+        grid-template-columns: repeat(4, 225px);
+        gap: 24px;
+      }
+      .modules_dropdown_menu .group>*:not(:last-child) {
+        margin-bottom: 16px;
+      }
     </style>
   </head>
   <body>
@@ -45,11 +53,11 @@
                   <a class="nav-link   dropdown-toggle " href="#" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Demos
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="demos_dropdown_menu">
-                    <li>
+                  <ul class="dropdown-menu demos_dropdown_menu" aria-labelledby="demos_dropdown_menu">
+                    <li class="item-home">
                       <a class="dropdown-item " href="../../../demos/home">Home</a>
                     </li>
-                    <li>
+                    <li class="item-home 2">
                       <a class="dropdown-item " href="../../../demos/home2">Home 2</a>
                     </li>
                   </ul>
@@ -63,185 +71,232 @@
                   <a class="nav-link active  dropdown-toggle " href="#" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Modules
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="modules_dropdown_menu">
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/categories-menu">Menus</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/headers">Headers</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/serviceGrids">Service grid</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/teamGrids">Team grids</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/iconSocial">Icons Social</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="#">Forms</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/iconsDescription">Icon + description</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/featureCards">Featured Cards</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/faqs">FAQs</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/iconServices">Icon Services</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/statistics">Statistics</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/businessCases">Business Cases</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/contacts">Contact</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/services">Service</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item active" href="../../../modules/portfolios/basic">Portfolio Basic</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/portfolio/decomposed">Portfolio Decomposed</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/prices">Prices Carousel</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/cta">CTA</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/login">Login</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/brands">Brands</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/basicGrids">Basic Grid</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/testimonials">Testimonials</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/productCards">Product Cards</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/searchers">Searchers</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/contactBar">Contact Bar</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../../modules/basicContents">Basic Contents</a>
-                    </li>
-                    <li>
-                      <ul class="dropdown-submenu">
-                        <span class="dropdown-item">
-                                <strong>Footers</strong>
-                            </span>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/footers/basic">Basic</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/footers/standard">Standard</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/footers/corporate">Corporate</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/footers/newsletter">Newsletter</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <ul class="dropdown-submenu">
-                        <span class="dropdown-item">
-                                <strong>Marquees</strong>
-                            </span>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/marquees/basic">Basic</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/marquees/standar">Standard</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/marquees/cta">With CTA</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/marquees/image">Image</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/marquees/textImage">Text and image</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/marquees/illustration">Illustration</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item " href="../../../modules/marquees/extended">Extended</a>
-                        </li>
-                      </ul>
-                    </li>
+                  <ul class="dropdown-menu modules_dropdown_menu" aria-labelledby="modules_dropdown_menu">
+                    <div class="group">
+                      <li class="item-basics">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Basics</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/headers">Headers</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/basicContents">Basic Contents</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/cta">CTA</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/searchers">Searchers</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/categories-menu">Menus</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/iconSocial">Icons Social</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/iconsDescription">Icon + description</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/iconServices">Icon Services</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/statistics">Statistics</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/faqs">FAQs</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/contactBar">Contact Bar</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="group">
+                      <li class="item-marquees">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Marquees</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/marquees/basic">Basic</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/marquees/standar">Standard</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/marquees/cta">With CTA</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/marquees/image">Image</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/marquees/textImage">Text and image</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/marquees/illustration">Illustration</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/marquees/extended">Extended</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="item-cards">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Cards</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/featureCards">Featured</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/productCards">Product</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="group">
+                      <li class="item-grids">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Grids</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/basicGrids">Basic</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/serviceGrids">Service</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/teamGrids">Team</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="item-carrousels">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Carrousels</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/businessCases">Business Cases</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/services">Service</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/brands">Brands</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/testimonials">Testimonials</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/prices">Prices Carousel</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="group">
+                      <li class="item-portfolio">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Portfolio</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item active" href="../../../modules/portfolios/basic">Portfolio Basic</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/portfolio/decomposed">Portfolio Decomposed</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="item-forms">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Forms</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/login">Login</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/contacts">Contact</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="item-footers">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Footers</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/footers/basic">Basic</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/footers/standard">Standard</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/footers/corporate">Corporate</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/footers/newsletter">Newsletter</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
                   </ul>
                 </li>
                 <li class="nav-item  dropdown  ">
                   <a class="nav-link   dropdown-toggle " href="#" id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Components
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="components_dropdown_menu">
-                    <li>
+                  <ul class="dropdown-menu components_dropdown_menu" aria-labelledby="components_dropdown_menu">
+                    <li class="item-buttons">
                       <a class="dropdown-item " href="../../../components/buttons">Buttons</a>
                     </li>
-                    <li>
+                    <li class="item-forms">
                       <a class="dropdown-item " href="../../../components/forms">Forms</a>
                     </li>
-                    <li>
+                    <li class="item-interaction">
                       <a class="dropdown-item " href="../../../components/interaction">Interaction</a>
                     </li>
-                    <li>
+                    <li class="item-cards">
                       <a class="dropdown-item " href="../../../components/cards">Cards</a>
                     </li>
-                    <li>
+                    <li class="item-product cards">
                       <a class="dropdown-item " href="../../../components/productCards">Product Cards</a>
                     </li>
-                    <li>
+                    <li class="item-links">
                       <a class="dropdown-item " href="../../../components/links">Links</a>
                     </li>
-                    <li>
+                    <li class="item-grid cells">
                       <a class="dropdown-item " href="../../../components/gridCells">Grid cells</a>
                     </li>
-                    <li>
+                    <li class="item-icon + description">
                       <a class="dropdown-item " href="../../../components/iconsDescription">Icon + description</a>
                     </li>
-                    <li>
+                    <li class="item-accordions">
                       <a class="dropdown-item " href="#">Accordions</a>
                     </li>
-                    <li>
+                    <li class="item-alerts">
                       <a class="dropdown-item " href="../../../components/alerts">Alerts</a>
                     </li>
-                    <li>
+                    <li class="item-icons">
                       <a class="dropdown-item " href="../../../components/icons">Icons</a>
                     </li>
-                    <li>
+                    <li class="item-footers">
                       <a class="dropdown-item " href="../../../modules/footers/basic">Footers</a>
                     </li>
-                    <li>
+                    <li class="item-texts">
                       <a class="dropdown-item " href="../../../components/texts">Texts</a>
                     </li>
-                    <li>
+                    <li class="item-illustrations">
                       <a class="dropdown-item " href="../../../components/illustrations">Illustrations</a>
                     </li>
-                    <li>
+                    <li class="item-microillustrations">
                       <a class="dropdown-item " href="../../../components/microillustrations">Microillustrations</a>
                     </li>
-                    <li>
+                    <li class="item-scenes">
                       <a class="dropdown-item " href="../../../components/scenes">Scenes</a>
                     </li>
                   </ul>

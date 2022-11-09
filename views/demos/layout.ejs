@@ -1,3 +1,13 @@
+<%- contentFor('styles') %>
+.modules_dropdown_menu.show {
+    display: grid;
+    grid-template-columns: repeat(4, 225px);
+    gap: 24px;
+}
+.modules_dropdown_menu .group > *:not(:last-child) {
+    margin-bottom: 16px;
+}
+
 <%- contentFor('header') %>
 <%
 const headerConfig = {
