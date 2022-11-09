@@ -1,51 +1,31 @@
 <%- include(`${view}/quick_start/layout`) %>
 
-<%- contentFor('styles') %>
+<%- contentFor('body') %>
 
-<%- contentFor('header') %>
-<%
-const headerConfig = {
-    items: navigation,
-    justify: 'right',
-    size: 'full',
-    isSticky: true,
-    hasBackground: true,
-    buttons: [
-        {
-            label: 'Purchase B_system',
-            mobileIcon: 'cart'
-        }
-    ]
-}
-%>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
+<%- include(`${module}/iconSocial/iconSocial`, {
+socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+isDarkened: false,
+isDark: false,
+hasBorder: false
+}) -%>
 
-<main class="main">
-    <%- include(`${module}/iconSocial/iconSocial`, { 
-        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-        isDarkened: false,
-        isDark: false,
-        hasBorder: false
-    }) -%>
+<%- include(`${module}/iconSocial/iconSocial`, {
+socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+isDarkened: true,
+isDark: false,
+hasBorder: false
+}) -%>
 
-    <%- include(`${module}/iconSocial/iconSocial`, { 
-        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-        isDarkened: true,
-        isDark: false,
-        hasBorder: false
-    }) -%>
+<%- include(`${module}/iconSocial/iconSocial`, {
+socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+isDarkened: false,
+isDark: true,
+hasBorder: false
+}) -%>
 
-    <%- include(`${module}/iconSocial/iconSocial`, { 
-        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-        isDarkened: false,
-        isDark: true,
-        hasBorder: false
-    }) -%>
-
-    <%- include(`${module}/iconSocial/iconSocial`, { 
-        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-        isDarkened: true,
-        isDark: true,
-        hasBorder: false
-    }) -%>
-</main>
+<%- include(`${module}/iconSocial/iconSocial`, {
+socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+isDarkened: true,
+isDark: true,
+hasBorder: false
+}) -%>

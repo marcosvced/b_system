@@ -1,26 +1,7 @@
 <%- include(`${view}/quick_start/layout`) %>
 
-<%- contentFor('styles') %>
+<%- contentFor('body') %>
 
-<%- contentFor('header') %>
-<%
-const headerConfig = {
-    items: navigation,
-    justify: 'right',
-    size: 'full',
-    isSticky: true,
-    hasBackground: true,
-    buttons: [
-        {
-            label: 'Purchase B_system',
-            mobileIcon: 'cart'
-        }
-    ]
-}
-%>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
-
-<main class="main">
 <!-- Section Light -->
     <%- include( `${module}/brand/brand`, {
         title: 'Awards and honours',
@@ -87,4 +68,3 @@ const headerConfig = {
         hasBorder: true
     } ) %>
 <!-- END: Section Dark -->
-</main>

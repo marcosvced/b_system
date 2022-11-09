@@ -98,34 +98,17 @@ header.header {
         top: 0;
     }
 
-
     nav.navbar {
         padding: 0;
-    }
-
-    .dropdown-menu.header-menu {
-        max-width: size.rem(500);
-
-        .header-menu-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            width: max-content;
-            max-width: 35vw;
-
-            .menu-list {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                min-width: size.rem(150);
-                @include space.y(4);
-
-                .list-title {
-                    padding-block: size.space(8);
-                    padding-inline: size.space(16);
-                    margin-bottom: size.space(16);
-                    font-size: font.size(sm);
-                }
+        ul.dropdown-submenu{
+            padding: 0;
+            span.dropdown-item {
+                pointer-events: none;
             }
+        }
+        li {
+            padding: 0;
+            list-style: none;
         }
     }
 
