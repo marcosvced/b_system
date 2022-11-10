@@ -167,7 +167,7 @@ const navigation = [
               },
               {
                 href: QUICK_START.PRICES,
-                label: 'Prices Carousel',
+                label: 'Prices',
               },
             ]
           },
