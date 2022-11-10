@@ -11,4 +11,25 @@
         inline: none;
         bottom: 1px solid $c-grayscale--400;
     }
+
+    .accordion-button:not(.collapsed) {
+        background-color: inherit;
+        color: inherit;
+    }
+
+    .accordion-button::after {
+        content: '6';
+        position: absolute;
+        right: 0;
+        font-family: "b-system" !important;
+        font-weight: helper.weight(bold);
+        font-size: helper.rem(15);
+        color: $c-eren;
+        background-image: none;
+        transform: none;
+    }
+
+    .accordion-button.collapsed::after {
+        content: '3';    
+    }
 }
