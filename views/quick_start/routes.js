@@ -267,5 +267,10 @@ route.get(QUICK_START.ICON_DESCRIPTION_COMPONENT, (request, response) => {
   render(response, path('components', ['iconsDescription']), {}, { navigation })
 })
 
+/* Accordions page. */
+route.get(QUICK_START.ACCORDIONS, (request, response) => {
+  render(response, path('components', ['accordions']), {}, { navigation })
+})
+
 
 module.exports = route

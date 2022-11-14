@@ -252,7 +252,7 @@
                   </a>
                   <ul class="dropdown-menu components_dropdown_menu" aria-labelledby="components_dropdown_menu">
                     <li class="item-buttons">
-                      <a class="dropdown-item active" href="../../components/buttons">Buttons</a>
+                      <a class="dropdown-item " href="../../components/buttons">Buttons</a>
                     </li>
                     <li class="item-forms">
                       <a class="dropdown-item " href="../../components/forms">Forms</a>
@@ -276,7 +276,7 @@
                       <a class="dropdown-item " href="../../components/iconsDescription">Icon + description</a>
                     </li>
                     <li class="item-accordions">
-                      <a class="dropdown-item " href="../../components/accordions">Accordions</a>
+                      <a class="dropdown-item active" href="../../components/accordions">Accordions</a>
                     </li>
                     <li class="item-alerts">
                       <a class="dropdown-item " href="../../components/alerts">Alerts</a>
@@ -323,173 +323,91 @@
     <!--MAIN CONTENT-->
     <main class="main">
 
-      <!--BUTTONS-->
-
-      <!--SECTION LIGHT-->
+      <!-- SECTION LIGHT -->
       <section class="section">
         <div class="container">
-          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Buttons</h3>
-          <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary btn-primary-cta">
-                <span>Purchase</span>
-                <i class="icon-links"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Primary CTA
-                </span>
+          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Accordions</h3>
+          <div class="space-bottom-48 space-y-32">
+            <div class="accordion-item">
+              <h2 id="heading-accordion-item1" class="accordion-header">
+                <button class="accordion-button position-relative body-regular-gray-text px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-accordion-item1" aria-expanded="false" aria-controls="collapse-accordion-item1">
+                  What is B_system?
+                </button>
+              </h2>
+              <div id="collapse-accordion-item1" class="accordion-collapse collapse " aria-labelledby="heading-accordion-item1" data-bs-parent="#accordion1">
+                <div class="accordion-body px-0">
+                  <p class="body-light-gray-text">B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
+                </div>
+              </div>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary">
-                Continue
-              </button>
-              <span class="body-light-gray-text">
-                    Primary
-                </span>
+            <span class="body-light-gray-text">
+                Accordion
+            </span>
+          </div>
+          <div class="space-y-32">
+            <div class="accordion-item darkened">
+              <h2 id="heading-accordion-content-item1" class="accordion-header">
+                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-accordion-content-item1" aria-expanded="false" aria-controls="collapse-accordion-content-item1">
+                  View example&#39;s code
+                </button>
+              </h2>
+              <div id="collapse-accordion-content-item1" class="accordion-collapse collapse " aria-labelledby="heading-accordion-content-item1" data-bs-parent="#accordion-content1">
+                <div class="accordion-body">
+                  <p class="body-light-gray-text">&lt;section class=&#34;wrapper image-wrapper bg-auto no-overlay bg-image text-center py-14 py-md-16 bg-map&#34; data-image-src=&#34;.../../assets/img/map.png&#34;&gt; &lt;div class=&#34;container py-0 py-md-18&#34;&gt; &lt;div class=&#34;row&#34;&gt; &lt;div class=&#34;col-lg-6 col-xl-5 mx-auto&#34;&gt; &lt;h2 class=&#34;display-4 mb-3 text-center&#34;&gt;Join Our Community&lt;/h2&gt; &lt;p class=&#34;lead mb-5 px-md-16 px-lg-3&#34;&gt;We are trusted by over 5000+ clients. Join them by using our services and grow your business.&lt;/p&gt; &lt;a href=&#34;#&#34; class=&#34;btn btn-primary rounded-pill&#34;&gt;Join Us&lt;/a&gt; &lt;/div&gt; &lt;!-- /column --&gt; &lt;/div&gt; &lt;!-- /.row --&gt; &lt;/div&gt; &lt;!-- /.container --&gt; &lt;/section&gt; &lt;!-- /section --&gt;</p>
+                </div>
+              </div>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-secondary">
-                Send
-              </button>
-              <span class="body-light-gray-text">
-                    Secondary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary">
-                Access
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-subtle">
-                <span>Access</span>
-                <i class="icon-avatar"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Subtle
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary  btn-action-next">
-                <span>Next</span>
-                <i class="icon-next"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Next
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary  btn-action-previous">
-                <i class="icon-back"></i>
-                <span>Previous</span>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Previous
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary" disabled>
-                Start with B_system
-              </button>
-              <span class="body-light-gray-text">
-                    Disabled
-                </span>
-            </div>
+            <span class="body-light-gray-text">
+                Content accordion
+            </span>
           </div>
         </div>
       </section>
 
-      <!--END: SECTION LIGHT-->
+      <!-- END: SECTION LIGHT -->
 
-      <!--SECTION DARK-->
+      <!-- SECTION DARK -->
       <section class="section" data-bsystem="dark">
         <div class="container">
-          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Buttons dark mode</h3>
-          <div class="d-grid grid-1 grid-sm-2 grid-lg-3 grid-xl-5 row-xl-gap-48">
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary btn-primary-cta">
-                <span>Purchase</span>
-                <i class="icon-links"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Primary CTA
-                </span>
+          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Accordions</h3>
+          <div class="space-bottom-48 space-y-32">
+            <div class="accordion-item">
+              <h2 id="heading-accordion-item1-dark" class="accordion-header">
+                <button class="accordion-button position-relative body-regular-gray-text px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-accordion-item1-dark" aria-expanded="false" aria-controls="collapse-accordion-item1-dark">
+                  What is B_system?
+                </button>
+              </h2>
+              <div id="collapse-accordion-item1-dark" class="accordion-collapse collapse " aria-labelledby="heading-accordion-item1-dark" data-bs-parent="#accordion1-dark">
+                <div class="accordion-body px-0">
+                  <p class="body-light-gray-text">B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
+                </div>
+              </div>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary">
-                Continue
-              </button>
-              <span class="body-light-gray-text">
-                    Primary
-                </span>
+            <span class="body-light-gray-text">
+                Accordion
+            </span>
+          </div>
+          <div class="space-y-32">
+            <div class="accordion-item darkened">
+              <h2 id="heading-accordion-content-item1-dark" class="accordion-header">
+                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-accordion-content-item1-dark" aria-expanded="false" aria-controls="collapse-accordion-content-item1-dark">
+                  View example&#39;s code
+                </button>
+              </h2>
+              <div id="collapse-accordion-content-item1-dark" class="accordion-collapse collapse " aria-labelledby="heading-accordion-content-item1-dark" data-bs-parent="#accordion-content1-dark">
+                <div class="accordion-body">
+                  <p class="body-light-gray-text">&lt;section class=&#34;wrapper image-wrapper bg-auto no-overlay bg-image text-center py-14 py-md-16 bg-map&#34; data-image-src=&#34;.../../assets/img/map.png&#34;&gt; &lt;div class=&#34;container py-0 py-md-18&#34;&gt; &lt;div class=&#34;row&#34;&gt; &lt;div class=&#34;col-lg-6 col-xl-5 mx-auto&#34;&gt; &lt;h2 class=&#34;display-4 mb-3 text-center&#34;&gt;Join Our Community&lt;/h2&gt; &lt;p class=&#34;lead mb-5 px-md-16 px-lg-3&#34;&gt;We are trusted by over 5000+ clients. Join them by using our services and grow your business.&lt;/p&gt; &lt;a href=&#34;#&#34; class=&#34;btn btn-primary rounded-pill&#34;&gt;Join Us&lt;/a&gt; &lt;/div&gt; &lt;!-- /column --&gt; &lt;/div&gt; &lt;!-- /.row --&gt; &lt;/div&gt; &lt;!-- /.container --&gt; &lt;/section&gt; &lt;!-- /section --&gt;</p>
+                </div>
+              </div>
             </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-secondary">
-                Send
-              </button>
-              <span class="body-light-gray-text">
-                    Secondary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary">
-                Access
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-subtle">
-                <span>Access</span>
-                <i class="icon-avatar"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Subtle
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary  btn-action-next">
-                <span>Next</span>
-                <i class="icon-next"></i>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Next
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-tertiary  btn-action-previous">
-                <i class="icon-back"></i>
-                <span>Previous</span>
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary Previous
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-primary" disabled>
-                Start with B_system
-              </button>
-              <span class="body-light-gray-text">
-                    Disabled
-                </span>
-            </div>
-            <div class="d-flex flex-column space-y-24">
-              <button type="button" class="btn btn-glass">
-                Access
-              </button>
-              <span class="body-light-gray-text">
-                    Tertiary transparent
-                </span>
-            </div>
+            <span class="body-light-gray-text">
+                Content accordion
+            </span>
           </div>
         </div>
       </section>
 
-      <!--END: SECTION DARK-->
+      <!-- END: SECTION DARK -->
     </main>
 
     <!--END: MAIN CONTENT-->

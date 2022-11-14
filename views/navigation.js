@@ -263,7 +263,7 @@ const navigation = [
         label: 'Icon + description',
       },
       {
-        href: '#',
+        href: QUICK_START.ACCORDIONS,
         label: 'Accordions',
       },
       {

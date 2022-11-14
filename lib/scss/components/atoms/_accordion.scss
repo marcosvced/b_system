@@ -6,10 +6,35 @@
 @use '../../mixins' as mixin;
 
 .accordion-item {
-    border: {
-        top: none;
-        inline: none;
-        bottom: 1px solid $c-grayscale--400;
+    border: none;
+    background-color: transparent;
+
+    &.darkened {
+        @include themed.properties {
+            background-color: themed.values($c-grayscale--100, $c-grayscale--1200);
+          }
+
+          .accordion-button {
+            @include themed.properties {
+                border: themed.values(none, 1px solid $c-grayscale--900);
+              }
+
+              &::after {
+                position: relative;
+                text-align: right;
+              }
+          }
+    }
+
+    .accordion-button {
+        background-color: transparent !important;
+        border-top: none;
+        border-inline: none;
+
+        @include themed.properties {
+            border-bottom: 1px solid themed.values($c-grayscale--400, $c-grayscale--900);
+            background-color: themed.values($c-grayscale--light, $c-grayscale--1100);
+          }
     }
 
     .accordion-button:not(.collapsed) {

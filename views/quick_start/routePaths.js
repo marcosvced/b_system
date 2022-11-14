@@ -57,7 +57,8 @@ module.exports = {
     MICROILLUSTRATIONS: '/components/microillustrations',
     ILLUSTRATIONS: '/components/illustrations',
     SCENES: '/components/scenes',
-    ICON_DESCRIPTION_COMPONENT: '/components/iconsDescription'
+    ICON_DESCRIPTION_COMPONENT: '/components/iconsDescription',
+    ACCORDIONS: '/components/accordions'
   },
 
 }
