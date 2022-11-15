@@ -1,0 +1,109 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.portfolio {
+    $parent: &;
+
+    &-img {
+        object-fit: cover;
+    }
+
+    &-tag {
+        background-color: $c-eren--100;
+        width: helper.rem(48);
+        height: helper.rem(72);
+        padding-bottom: helper.rem(8);
+        border:{
+            bottom-left-radius: helper.rem(32);
+            bottom-right-radius: helper.rem(32);
+        }
+    }
+
+    &-img-container, &-content {
+        border: themed.values(helper.rem(.1) solid $c-grayscale--200, none);
+    }
+
+    &-content {
+        padding: {
+            top: 0;
+            bottom: helper.rem(48);
+            inline: helper.rem(48);
+        }
+    }
+
+    &-basic, &-vertical {
+        flex-direction: column;
+
+        @include mixin.screen(md) {
+            flex-direction: row;
+        }
+
+        #{$parent}-container-img, #{$parent}-content {
+            width: 100%;
+            min-height: helper.rem(380);
+
+            @include mixin.screen(md) {
+                width: 50%;
+            }
+        }
+    }
+
+    &-vertical {
+        @include mixin.screen(md) {
+            grid-row: span 2;
+        }
+    }
+
+    &-horizontal {
+        flex-direction: column;
+
+        @include mixin.screen(xl) {
+            flex-direction: row;
+            grid-column: span 2;
+        }
+
+        #{$parent}-container-img, #{$parent}-content {
+            width: 100%;
+            min-height: helper.rem(380);
+
+            @include mixin.screen(xl) {
+                width: 50%;
+            }
+        }
+    }
+
+    // &-decomposed {
+    //     &-basic {
+    //         padding-bottom: 100%;
+    //     }
+    
+    //     &-horizontal {
+    //         padding-bottom: 100%;
+    
+    //         @include mixin.screen(xl) {
+    //             padding-bottom: 50%;
+    //         }
+    //     }
+    
+    //     &-vertical {
+    //         padding-bottom: 100%;
+    
+    //         @include mixin.screen(md) {
+    //             padding-bottom: 200%;
+    //         }
+    //     }
+    
+    //     &-container-img {
+    //         width: 100%;
+    //         height: 100%;
+    //         display: block;
+    //     }
+    
+    //     &-img {
+    //         width: 100%;
+    //     }
+    // }
+}

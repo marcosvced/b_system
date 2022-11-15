@@ -8,6 +8,7 @@ a {
     &.action-link {
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         @include themed.properties {
             color: themed.values(helper.primary('eren'), helper.secondary(eren-400));
@@ -49,6 +50,12 @@ a {
 
             @include themed.properties {
                 color: themed.values(helper.secondary(eren-500), helper.primary('eren'));
+            }
+        }
+
+        &:active {
+            @include themed.properties {
+                color: themed.values($c-grayscale--ash, $c-grayscale--light);
             }
         }
     }

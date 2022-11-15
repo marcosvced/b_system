@@ -1,5 +1,5 @@
 <%- include(`${view}/quick_start/layout`) %>
-
+<%- include(`${view}/quick_start/darkened-layout`) %>
 
 <%- contentFor('body') %>
 
@@ -15,42 +15,67 @@
         <div class="container">
             <%- include(`${component}/text/head-x3`, { text: 'Header basic' }) %>
         </div>
-        <%- include(`${module}/basicContent/basic`, { title:'Welcome to B_system' }) %>
+        <%- include(`${module}/basicContent/basic`, { 
+            title:'Welcome to B_system', 
+            hasBorder: false 
+        }) %>
         <!--END:Basic-->
 
         <!--Basic Plus-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
             <%- include(`${component}/text/head-x3`, { text: 'Header basic plus' }) %>
         </div>
-        <%- include(`${module}/basicContent/basic`, { title:"Hi, I'm Matias Eriksson, photographer and designer", isPlus:true }) %>
+        <%- include(`${module}/basicContent/basic`, { 
+            title:"Hi, I'm Matias Eriksson, photographer and designer", 
+            isPlus:true, 
+            hasBorder: false 
+        }) %>
         <!--END:Basic plus-->
 
         <!--Simple-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
             <%- include(`${component}/text/head-x3`, { text: 'Header simple ' }) %>
         </div>
-        <%- include(`${module}/basicContent/simple`, { variant:'center', title:'To get started', text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand. Create your digital brand in a natural and fluid way.' }) %>
+        <%- include(`${module}/basicContent/simple`, { 
+            variant:'center', title:'To get started', 
+            text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand. Create your digital brand in a natural and fluid way.', 
+            hasBorder: false 
+        }) %>
         <!--END:Simple-->
 
         <!--Simple 2 columns-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
-            <%- include(`${component}/text/head-x3`, { text: 'Header simple 2 columns' }) %>
+            <%- include(`${component}/text/head-x3`, { text: 'Header simple 2 columns', hasBorder: false }) %>
         </div>
-        <%- include(`${module}/basicContent/simple`, { variant:'2-columns', title:'To get started', text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.' }) %>
+        <%- include(`${module}/basicContent/simple`, { 
+            variant:'2-columns', 
+            title:'To get started', 
+            text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.', 
+            hasBorder: false 
+        }) %>
         <!--END:Simple 2 columns-->
 
         <!--Simple left-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
             <%- include(`${component}/text/head-x3`, { text: 'Header simple left aligned' }) %>
         </div>
-        <%- include(`${module}/basicContent/simple`, { title:'Visit our gallery', text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.' }) %>
+        <%- include(`${module}/basicContent/simple`, { 
+            title:'Visit our gallery', 
+            text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.', 
+            hasBorder: false 
+        }) %>
         <!--END:Simple left-->
 
         <!--Simple left fit-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
             <%- include(`${component}/text/head-x3`, { text: 'Header simple left aligned fit' }) %>
         </div>
-        <%- include(`${module}/basicContent/simple`, { variant:'start-fit', title:'Visit our gallery', text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.' }) %>
+        <%- include(`${module}/basicContent/simple`, { 
+            variant:'start-fit', 
+            title:'Visit our gallery', 
+            text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.', 
+            hasBorder: false 
+        }) %>
         <!--END:Simple left fit-->
 
         <!--Argument-->
@@ -71,7 +96,8 @@
                     title: 'Disruption',
                     text: 'Is a competition demanded from the outside and driven from the inside. Leaders turn disruption into an opportunity.'
                 }
-            ]
+            ],
+            hasBorder: false
         }) %>
         <!--END:Argument-->
 
@@ -79,8 +105,46 @@
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
             <%- include(`${component}/text/head-x3`, { text: 'Description module' }) %>
         </div>
-        <%- include(`${module}/basicContent/description`, { title:'Create your digital brand in an agile and fluid way', text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.' }) %>
+        <%- include(`${module}/basicContent/description`, { 
+            title:'Create your digital brand in an agile and fluid way', 
+            text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+            hasBorder: false 
+        }) %>
         <!--END:Description module-->
+
+        <!--Header 2 columns-->
+        <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
+            <%- include(`${component}/text/head-x3`, { text: 'Header 2 columns' }) %>
+        </div>
+        <%- include(`${module}/basicContent/half-content`, {
+            title: 'Meet the team that has won so many awards',
+            text:  'Example of how to make your team members known in a creative way. You have a multitude of design combinations.',
+            icon:  'awards-circle',
+            link: { label:'Get to know our awards',
+                    href:'#'
+            },
+            hasBorder: false
+        }) %>
+        <!--END:Header 2 columns-->
+
+        <!--Header image-->
+        <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
+            <%- include(`${component}/text/head-x3`, { text: 'Header image' }) %>
+        </div>
+        <%- include(`${module}/basicContent/image`, {
+            img: {
+                src: 'basic-content_image.png',
+                alt: 'Header image'
+            },
+            text:  'B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
+            link: { 
+                href:'#',
+                label:'Learn more'
+            },
+            hasBorder: false
+        }) %>
+        <!--END:Header image-->
+
     </section>
     <!-- END:Section <%- section -%> -->
 <% }) %>

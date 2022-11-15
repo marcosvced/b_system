@@ -1,0 +1,18 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.prices {
+    $parent: &;
+
+    &-bg-container {
+        top: 0;
+        left: 0;
+
+        #{$parent}-bg {
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+<%- include(`${view}/quick_start/layout`) %>
+<%- include(`${view}/quick_start/darkened-layout`) %>
+
+<%- contentFor('body') %>
+
+<%- include(`${module}/contact/contact`, {
+    title: 'Contact us!',
+    text: 'Please fill out this form to send your message:',
+    contact: [
+        {
+            id: 'contact-name',
+            label: 'Name'
+        },
+        {
+            id: 'contact-surnames',
+            label: 'Surnames'
+        },
+        {
+            id: 'contact-email',
+            label: 'Email'
+        },
+        {
+            id: 'contact-subject',
+            label: 'Subject'
+        },
+    ],
+    textarea: {
+        id: 'contact-message',
+        label: 'Message'
+    },
+    checkboxes: [
+        {
+            id: 'checkbox-one',
+            label: 'I authorize the treatment of my data.'
+        },
+    ],
+    button: {
+        label: 'Send',
+        variant: 'tertiary'
+    },
+    alerts: [
+        {
+            icon: 'call',
+            text: {
+                content: 'If you have an urgent query you can call us :',
+                contact: [
+                    { contact: 'T. (+34) 915 805 007' },
+                    { contact: 'F. (+34) 915 806 082' }
+                ]
+            }, 
+            variant: 'info'
+        },
+        {
+            icon: 'message',
+            text: {
+                content: 'You can also write an email to these departments and we will get back to you as soon as possible:',
+                contact: [
+                    { contact: 'bsystem@company.com' }
+                ]
+            },
+            variant: 'info'
+        },
+        {
+            link: {
+                href: '#',
+                label: 'Find our offices easily in our search engine',
+                icon: 'place'
+            },
+            variant: 'link'
+        }
+    ],
+    isDark: false,
+    hasBorder: false
+}) %>
+
+<%- include(`${module}/contact/contact`, {
+    title: 'Contact us!',
+    text: 'Please fill out this form to send your message:',
+    contact: [
+        {
+            id: 'contact-name',
+            label: 'Name'
+        },
+        {
+            id: 'contact-surnames',
+            label: 'Surnames'
+        },
+        {
+            id: 'contact-email',
+            label: 'Email'
+        },
+        {
+            id: 'contact-subject',
+            label: 'Subject'
+        },
+    ],
+    textarea: {
+        id: 'contact-message',
+        label: 'Message'
+    },
+    checkboxes: [
+        {
+            id: 'checkbox-one',
+            label: 'I authorize the treatment of my data.'
+        },
+    ],
+    button: {
+        label: 'Send',
+        variant: 'tertiary'
+    },
+    alerts: [
+        {
+            icon: 'call',
+            text: {
+                content: 'If you have an urgent query you can call us :',
+                contact: [
+                    { contact: 'T. (+34) 915 805 007' },
+                    { contact: 'F. (+34) 915 806 082' }
+                ]
+            },
+            variant: 'info'
+        },
+        {
+            icon: 'message',
+            text: {
+                content: 'You can also write an email to these departments and we will get back to you as soon as possible:',
+                contact: [
+                    { contact: 'bsystem@company.com' }
+                ]
+            },
+            variant: 'info'
+        },
+        {
+            link: {
+                href: '#',
+                label: 'Find our offices easily in our search engine',
+                icon: 'place'
+            },
+            variant: 'link'
+        }
+    ],
+    isDark: true,
+    hasBorder: false
+}) %>

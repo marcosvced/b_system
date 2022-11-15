@@ -1,4 +1,6 @@
 @use '../../helpers/size';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
 
 .basic-content {
   $parent: &;
@@ -9,4 +11,15 @@
     }
   }
 
+  .basic-content-img {
+    margin-bottom: helper.rem(40);
+
+    @include mixin.screen(md) {
+      margin-bottom: helper.rem(56);
+    }
+
+    @include mixin.screen(xl) {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -79,11 +79,19 @@
         padding-bottom: 100%;
 
         &-horizontal {
-            padding-bottom: 50%;
+            padding-bottom: 100%;
+
+            @include mixin.screen(md) {
+                padding-bottom: 50%;
+            }
         }
 
         &-vertical {
-            padding-bottom: 200%;
+            padding-bottom: 100%;
+
+            @include mixin.screen(md) {
+                padding-bottom: 200%;
+            }
         }
     }
 

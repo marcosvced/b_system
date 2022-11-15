@@ -1,162 +1,140 @@
-
 <%- include(`${view}/quick_start/layout`) %>
 
-<%- contentFor('styles') %>
+<%- contentFor('body') %>
 
-<%- contentFor('header') %>
-<%
-const headerConfig = {
-    items: navigation,
-    justify: 'right',
-    size: 'full',
-    isSticky: true,
-    hasBackground: true,
-    buttons: [
-        {
-            label: 'Purchase B_system',
-            mobileIcon: 'cart'
-        }
-    ]
-}
-%>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
-
-<main class="main">
 <!--ICON DESCRIPTION -->
+<!--SECTION LIGHT-->
+<section class="section">
+    <div class="container">
+        <%- include(`${component}/text/head-x3`, { text: 'Icon description' }) %>
 
-    <!--SECTION LIGHT-->
-    <section class="section">
-        <div class="container">
-            <%- include(`${component}/text/head-x3`, { text: 'Icon description' }) %>
+        <div class="icon-description-wrapper d-grid grid-4 grid-md-8 grid-xl-12">
 
-            <div class="icon-description-wrapper d-grid grid-4 grid-md-8 grid-xl-12">
-                
-                <div class="col-1-to-5 col-md-1-to-5 col-xl-1-to-4 d-flex flex-column justify-content-between h-100">
-                    <%- include(`${component}/iconDescription/iconDescription`, { 
-                        icon: 'awards-circle', 
-                        text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions.',
-                        variant: 'left'
-                        } )
-                    %>
-                    <span class="body-light-gray-text">
+            <div class="col-1-to-5 col-md-1-to-5 col-xl-1-to-4 d-flex flex-column justify-content-between h-100">
+                <%- include(`${component}/iconDescription/iconDescription`, {
+                icon: 'awards-circle',
+                text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions.',
+                variant: 'left'
+                } )
+                %>
+                <span class="body-light-gray-text">
                         Icon description
                     </span>
-                </div>
+            </div>
 
-                <div class="col-1-to-5 col-md-5-to-9 col-xl-4-to-7 d-flex flex-column justify-content-between h-100">
-                    <%- include(`${component}/iconDescription/iconDescription`, { 
-                        icon: 'awards-circle', 
-                        text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions.',
-                        variant: 'center'
-                        } )
-                    %>
-                    <span class="body-light-gray-text">
+            <div class="col-1-to-5 col-md-5-to-9 col-xl-4-to-7 d-flex flex-column justify-content-between h-100">
+                <%- include(`${component}/iconDescription/iconDescription`, {
+                icon: 'awards-circle',
+                text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions.',
+                variant: 'center'
+                } )
+                %>
+                <span class="body-light-gray-text">
                         Icon description center
                     </span>
-                </div>
+            </div>
 
-                <div class="col-1-to-5 col-md-1-to-5 col-xl-7-to-10 d-flex flex-column justify-content-between h-100 space-y-48">
-                    <%- include(`${component}/iconDescription/content`, { 
-                        microillustration: {
-                            src: 'system',
-                            alt: 'system'
-                        },
-                        title: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way.'
-                        } )
-                    %>
-                    <span class="body-light-gray-text">
+            <div class="col-1-to-5 col-md-1-to-5 col-xl-7-to-10 d-flex flex-column justify-content-between h-100 space-y-48">
+                <%- include(`${component}/iconDescription/content`, {
+                microillustration: {
+                src: 'system',
+                alt: 'system'
+                },
+                title: 'An organic design system',
+                text: 'Create your digital brand in a natural and fluid way.'
+                } )
+                %>
+                <span class="body-light-gray-text">
                         Content Icon description
                     </span>
-                </div>
+            </div>
 
-                <div class="col-1-to-5 col-md-5-to-9 col-xl-10-to-13 d-flex flex-column justify-content-between h-100 space-y-48">
-                    <%- include(`${component}/iconDescription/masked`, { 
-                        img: {
-                            src: 'icon-description_masked.jpg',
-                            alt: 'icon description masked image',
-                        },
-                        shape: 'template',
-                        head: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way.',
-                        } )
-                    %>
-                    <span class="body-light-gray-text">
+            <div class="col-1-to-5 col-md-5-to-9 col-xl-10-to-13 d-flex flex-column justify-content-between h-100 space-y-48">
+                <%- include(`${component}/iconDescription/masked`, {
+                img: {
+                src: 'icon-description_masked.jpg',
+                alt: 'icon description masked image',
+                },
+                shape: 'template',
+                head: 'An organic design system',
+                text: 'Create your digital brand in a natural and fluid way.',
+                } )
+                %>
+                <span class="body-light-gray-text">
                         Content Icon description masked
                     </span>
-                </div>
-
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 <!--END: SECTION LIGHT-->
 
 <!--SECTION DARK-->
-    <section class="section" data-bsystem="dark">
-        <div class="container">
-            <%- include(`${component}/text/head-x3`, { text: 'Icon description' }) %>
+<section class="section" data-bsystem="dark">
+    <div class="container">
+        <%- include(`${component}/text/head-x3`, { text: 'Icon description' }) %>
 
-            <div class="icon-description-wrapper d-grid grid-4 grid-md-8 grid-xl-12">
-                
-                <div class="col-1-to-5 col-md-1-to-5 col-xl-1-to-4 d-flex flex-column justify-content-between h-100">
-                    <%- include(`${component}/iconDescription/iconDescription`, { 
-                        icon: 'awards-circle', 
-                        text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions.',
-                        variant: 'left'
-                        } )
-                    %>
-                    <span class="body-light-gray-text">
+        <div class="icon-description-wrapper d-grid grid-4 grid-md-8 grid-xl-12">
+
+            <div class="col-1-to-5 col-md-1-to-5 col-xl-1-to-4 d-flex flex-column justify-content-between h-100">
+                <%- include(`${component}/iconDescription/iconDescription`, {
+                icon: 'awards-circle',
+                text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions.',
+                variant: 'left'
+                } )
+                %>
+                <span class="body-light-gray-text">
                         Icon description
                     </span>
-                </div>
+            </div>
 
-                <div class="col-1-to-5 col-md-5-to-9 col-xl-4-to-7 d-flex flex-column justify-content-between h-100">
-                    <%- include(`${component}/iconDescription/iconDescription`, { 
-                        icon: 'awards-circle', 
-                        text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions.',
-                        variant: 'center'
-                        } )
-                    %>
-                    <span class="body-light-gray-text">
+            <div class="col-1-to-5 col-md-5-to-9 col-xl-4-to-7 d-flex flex-column justify-content-between h-100">
+                <%- include(`${component}/iconDescription/iconDescription`, {
+                icon: 'awards-circle',
+                text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions.',
+                variant: 'center'
+                } )
+                %>
+                <span class="body-light-gray-text">
                         Icon description center
                     </span>
-                </div>
+            </div>
 
-                <div class="col-1-to-5 col-md-1-to-5 col-xl-7-to-10 d-flex flex-column justify-content-between h-100 space-y-48">
-                    <%- include(`${component}/iconDescription/content`, { 
-                        microillustration: {
-                            src: 'system',
-                            alt: 'system'
-                        },
-                        title: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way.'
-                        } )
-                    %>
-                    <span class="body-light-gray-text">
+            <div class="col-1-to-5 col-md-1-to-5 col-xl-7-to-10 d-flex flex-column justify-content-between h-100 space-y-48">
+                <%- include(`${component}/iconDescription/content`, {
+                microillustration: {
+                src: 'system',
+                alt: 'system'
+                },
+                title: 'An organic design system',
+                text: 'Create your digital brand in a natural and fluid way.'
+                } )
+                %>
+                <span class="body-light-gray-text">
                         Content Icon description
                     </span>
-                </div>
+            </div>
 
-                <div class="col-1-to-5 col-md-5-to-9 col-xl-10-to-13 d-flex flex-column justify-content-between h-100 space-y-48">
-                    <%- include(`${component}/iconDescription/masked`, { 
-                        img: {
-                            src: 'icon-description_masked.jpg',
-                            alt: 'icon description masked image',
-                            height: '88px',
-                            width: '88px'
-                        },
-                        shape: 'template',
-                        title: 'An organic design system',
-                        text: 'Create your digital brand in a natural and fluid way.',
-                        } )
-                    %>
-                    <span class="body-light-gray-text">
+            <div class="col-1-to-5 col-md-5-to-9 col-xl-10-to-13 d-flex flex-column justify-content-between h-100 space-y-48">
+                <%- include(`${component}/iconDescription/masked`, {
+                img: {
+                src: 'icon-description_masked.jpg',
+                alt: 'icon description masked image',
+                height: '88px',
+                width: '88px'
+                },
+                shape: 'template',
+                title: 'An organic design system',
+                text: 'Create your digital brand in a natural and fluid way.',
+                } )
+                %>
+                <span class="body-light-gray-text">
                         Content Icon description masked
                     </span>
-                </div>
-
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 <!--END: SECTION DARK-->
-</main>

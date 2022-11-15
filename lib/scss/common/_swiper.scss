@@ -1,0 +1,46 @@
+@use "../helpers/size";
+@use "../mixins/styles";
+@use "../helpers/themed";
+@use "../variables/colors" as *;
+
+.swiper {
+  overflow: visible;
+
+  &-slide {
+    height: auto;
+  }
+
+  &-pagination {
+    padding-top: 56px;
+    width: max-content !important;
+    margin: auto;
+    position: relative;
+
+    &-bullet {
+      width: size.rem(32);
+      height: size.rem(2);
+      background: $c-opacity__light--200;
+      border-radius: size.rem(9);
+      opacity: 1;
+
+      &-active {
+        background: $c-grayscale--light;
+      }
+    }
+
+    &.pagination-dark {
+      .swiper-pagination {
+        &-bullet {
+          @include themed.properties {
+            background-color: themed.values($c-opacity__gray--300,$c-opacity__light--200 );
+          }
+          &-active {
+            @include themed.properties {
+            background-color: themed.values($c-grayscale--ash, $c-grayscale--light );
+            }
+          }
+        }
+      }
+    }
+  }
+}

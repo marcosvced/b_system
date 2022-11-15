@@ -1,0 +1,239 @@
+<%- include(`${view}/demos/layout`)%>
+
+<%- contentFor('body') %>
+
+<!-- MARQUEE HERO -->
+<section class="section section-divider p-0">
+    <%- include(`${module}/marquee/cta/cta`, {
+        slides: [
+            {
+                title: {
+                    emphasis: 'We are a new concept of digital studio.',
+                    normal: 'We work with startups and large companies to activate and consolidate their brands.'
+                },
+                btn: {
+                    label: 'Start with B System', 
+                    isCTA: true, 
+                    icon: 'links', 
+                    iconPosition: 'after' 
+                },
+                quote: '“People ignore design that ignores people”'
+            },
+            {
+                img: {
+                    src: 'consistency',
+                    alt: 'consistency'
+                },
+                title: {
+                    emphasis: 'We are 100% customer-oriented and offer tailor-made solutions.',
+                    normal: 'Always thinking about the specific needs of each of our clients.'
+                },
+                btn: {
+                    label: 'Start with B System', 
+                    isCTA: true, 
+                    icon: 'links', 
+                    iconPosition: 'after' 
+                },
+                quote: '“People ignore design that ignores people”'
+            },
+            {
+                title: {
+                    emphasis: 'We combine creative talent, strategic vision, technical specialization.',
+                    normal: 'And above all, the desire to feel pride in each job.'
+                },
+                btn: {
+                    label: 'Start with B System', 
+                    isCTA: true, 
+                    icon: 'links', 
+                    iconPosition: 'after' 
+                },
+                quote: '“People ignore design that ignores people”'
+            },
+        ]
+    }) %>
+</section>
+
+<!-- END: MARQUEE HERO -->
+
+<!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
+<%- include(`${module}/basicContent/simple`, { 
+    variant:'2-columns', 
+    title:'Our work methodology', 
+    text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
+
+<!-- CATEGORY MENU -->
+<%- include(`${module}/categoriesMenu/categoriesMenu`, {
+    align: 'center',
+    items: [
+        {
+            label: '1. Explration',
+            href: '#exploration',
+            id: 'menu-exploration',
+            active: true
+        },
+        {
+            label: '2. Empathy',
+            href: '#empathy',
+            id: 'menu-empathy'
+        },
+        {
+            label: '3. Definition',
+            href: '#definition',
+            id: 'menu-definition'
+        },
+        {
+            label: '4. Ideation',
+            href: '#ideation',
+            id: 'menu-ideation'
+        },
+        {
+            label: '5. Prototyping',
+            href: '#prototyping',
+            id: 'menu-propotyping'
+        }
+    ]
+}) %>
+<!-- END: CATEGORY MENU -->
+
+<!-- FEATURED CONTENT -->
+<!-- Módulo pendiente para hacer PR -->
+<!-- END: FEATURED CONTENT -->
+
+<!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
+<%- include(`${module}/basicContent/simple`, { 
+    variant:'2-columns', 
+    title:'Our portfolio', 
+    text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
+
+<!-- PORTFOLIO GRID DECOMPOSED -->
+<%- include(`${module}/portfolioGrid/basic`, { 
+    grid: [
+        {
+            img: {
+                src: 'portfolio-basic-01',
+                alt: 'Portfolio example'
+            },
+            tag: '1',
+            title: 'Signage design',
+            text: 'We create signage of spaces, exterior signage, signs, signs, corporeal.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+        },
+        {
+            img: {
+                src: 'portfolio-basic-02',
+                alt: 'Portfolio example'
+            },
+            tag: '2',
+            title: 'Corporate design',
+            text: 'Logos, company presentations, manuals, cards, corporate stationery.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+        },
+        {
+            img: {
+                src: 'portfolio-horizontal-01',
+                alt: 'Portfolio horizontal example'
+            },
+            tag: '3',
+            title: 'Editorial design',
+            text: 'Design and layout of reports, catalogs, brochures, technical reports, publications, manuals, cards, corporate stationery.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'horizontal',
+        },
+        {
+            img: {
+                src: 'portfolio-vertical-01',
+                srcMobile: 'portfolio-vertical-mobile-01',
+                alt: 'Portfolio vertical example'
+            },
+            tag: '3',
+            title: 'Editorial design',
+            text: 'Design and layout of reports, catalogs, brochures, technical reports, publications, manuals, cards, corporate stationery.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'vertical',
+        },
+        {
+            img: {
+                src: 'portfolio-basic-03',
+                alt: 'Portfolio example'
+            },
+            tag: '5',
+            title: 'Advertising design',
+            text: 'Advertising graphics, posters, billboards, flyers, brochures.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+        },
+        {
+            img: {
+                src: 'portfolio-basic-04',
+                alt: 'Portfolio example'
+            },
+            tag: '6',
+            title: 'Web design',
+            text: 'Online stores, corporate pages, interfaces, microsites, intranets, landing pages, banners, mobile device applications.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'left'
+        },
+    ],
+    hasBorder: false
+}) %>
+<!-- END: PORTFOLIO GRID DECOMPOSED -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: CTA -->
+
+<!-- ICONS SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, { 
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICONS SOCIAL -->

@@ -1,0 +1,41 @@
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.basic-grid {
+    $parent: &;
+
+    &-content {
+        padding: {
+            block: helper.space(48);
+            inline: helper.space(16);
+        }
+
+        @include mixin.screen(md) {
+            padding: {
+                block: helper.space(88);
+                inline: helper.space(80);
+            }
+        }
+
+        @include mixin.screen(xl) {
+            padding: {
+                block: helper.space(112);
+                inline: 20%;
+            }
+        }
+
+        @include mixin.screen(xxl) {
+            padding: {
+                inline: 26%;
+            }
+        }
+    }
+
+    &-img-container {
+        #{$parent}-img {
+            object-fit: cover;
+        }
+    }
+}

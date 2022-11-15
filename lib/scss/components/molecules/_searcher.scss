@@ -1,0 +1,36 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.searcher {
+    .container {
+        align-items: center;
+
+        .form-floating {
+            grid-column: 1/4;
+
+            @include mixin.screen(md) {
+                grid-column: 2/7;
+            }
+
+            @include mixin.screen(xl) {
+                grid-column: 4/10;
+            }
+        }
+    
+        .btn {
+            justify-self: flex-end;
+            grid-column: 4/5;
+
+            @include mixin.screen(md) {
+                grid-column: 8/9;
+            }
+    
+            @include mixin.screen(xl) {
+                grid-column: 12/13;
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<%- include(`${module}/teamGrid/teamGrid`, {
+    teamGrid: [
+        {
+            name: 'Danielle Jolie',
+            job: 'UX/UI',
+            img: {
+                src: 'gridcells_basic-01',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            onGrid: 'basic'
+        },
+        {
+            name: 'Martha Nielsen',
+            job: 'UX Writer',
+            img: {
+                src: 'gridcells_basic-03',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            shape: 'vertical',
+            onGrid: 'vertical'
+        },
+        {
+            name: 'Martha Jolie',
+            job: 'UX/UI',
+            img: {
+                src: 'gridcells_basic-04',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            onGrid: 'basic'
+        },
+        {
+            name: 'Anna Jolie',
+            job: 'UX/UI',
+            img: {
+                src: 'gridcells_basic-05',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            onGrid: 'basic'
+        },
+        {
+            name: 'Marcos Pascual',
+            job: 'UX/UI',
+            img: {
+                src: 'gridcells_basic-06',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            onGrid: 'basic'
+        },
+        {
+            name: 'Sara Jolie',
+            job: 'UI Designer',
+            img: {
+                src: 'gridcells_basic-02',
+                alt: 'grilCell image'
+            },
+            link: {
+                href: '#',
+                label: 'Profile',
+                icon: 'links'
+            },
+            shape: 'horizontal',
+            onGrid: 'horizontal'
+        },
+    ]
+}) %>

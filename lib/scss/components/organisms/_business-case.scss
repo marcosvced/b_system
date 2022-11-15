@@ -1,0 +1,141 @@
+@use 'sass:map';
+@use '../../variables/palette';
+@use '../../variables/colors' as *;
+@use '../../variables/font' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins/styles';
+@use '../../mixins' as mixin;
+@use '../../mixins/backgounds';
+
+.section-business-case {
+  $bg-keys: map.keys(map.merge(palette.$primary, palette.$secondary));
+  @include backgounds.can-use($bg-keys);
+  background-color: $c-eren--500;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.business-case {
+  $parent: &;
+
+  &-img-container {
+    width: helper.rem(466);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    @include mixin.screen(md) {
+      width: 100%;
+    }
+
+    @include mixin.screen(xl) {
+      width: auto;
+      height: 163%;
+    }
+
+    #{$parent}-img {
+      width: 100%;
+      height: 100%;
+      opacity: .16;
+    }
+  }
+
+  #{$parent}-head {
+    .action-link {
+      color: $c-grayscale--light;
+    }
+  }
+
+  .slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .business-next,
+    .business-prev {
+      position: absolute;
+      color: $c-grayscale--light;
+      font-size: helper.rem(24);
+      top: 50%;
+      transform: translateY(-50%);
+
+      > * {
+        color: $c-grayscale--light;
+      }
+
+      &.swiper-button-disabled > * {
+        color: $c-opacity__light--200;
+        cursor: not-allowed;
+      }
+    }
+
+    .business-next {
+      right: 0;
+    }
+  }
+
+  .slide-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slide-header,
+  .slide-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+
+  .swiper {
+    display: grid;
+    grid-template-rows: helper.rem(340) min-content;
+    grid-template-columns: 100%;
+
+    @include mixin.screen(sm) {
+      width: 100%;
+      max-width: helper.rem(544);
+      height: helper.rem(340);
+    }
+    @include mixin.screen(xl) {
+      max-width: helper.rem(532);
+      height: helper.rem(358);
+    }
+
+    &-slide {
+      //padding: helper.space(24);
+      //justify-content: space-between;
+      //border-radius: 4px;
+      //font-size: $f-s-md;
+      //font-weight: bold;
+      //color: $c-grayscale--ash;
+      //background: $c-grayscale--light;
+      opacity: 1;
+      //@include styles.shadow-500;
+
+      @include mixin.screen(sm) {
+        opacity: 0.9;
+      }
+
+
+      &-visible {
+        opacity: 1;
+      }
+
+
+      &-shadow {
+        display: none;
+      }
+    }
+  }
+}

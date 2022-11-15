@@ -32,7 +32,7 @@
     }
   }
 
-  input.form-control {
+  input.form-control, textarea.form-control {
     color: inherit;
     height: size.em($input-height, $font-base);
     padding: size.em($padding-inline, $font-base) size.em($padding-block, $font-base);

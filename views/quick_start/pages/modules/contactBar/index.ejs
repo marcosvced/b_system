@@ -1,0 +1,38 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<section class="section darkened" style="padding-inline: 0;">
+    <div class="container">
+        <%- include(`${component}/text/head-x3`, { text: 'Contact bar' }) %>
+    </div>
+    <div class="space-y-24 space-y-xl-32">
+        <%- include(`${module}/contactBar/contactBar`, {
+        links: [
+        {
+        href: 'tel:91 604 05 81',
+        label: '91 604 05 81',
+        icon: 'call',
+        iconPosition: 'before'
+        },
+        {
+        href: 'mailto:info@iteratika.studio',
+        label: 'info@iteratika.studio',
+        icon: 'message',
+        iconPosition: 'before'
+        },
+        ],
+        texts: {
+        name: 'Taylor & Evans Law Firm',
+        contact: 'Follow us:'
+        },
+        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin']
+        }) %>
+        <div class="container">
+                <span class="body-light-gray-text">
+                    Contact bar
+                </span>
+        </div>
+    </div>
+</section>
+

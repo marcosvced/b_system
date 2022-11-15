@@ -19,6 +19,7 @@
 @use "common/styles";
 @use "common/section";
 @use "common/texts";
+@use "common/swiper";
 
 /*
  * 2º Atoms
@@ -32,11 +33,15 @@
 @use "components/atoms/switch";
 @use "components/atoms/interaction-button";
 @use "components/atoms/illustration";
+@use "components/atoms/alert";
+@use "components/atoms/accordion";
+
 @use "components/atoms/input";
 @use "components/atoms/select";
 @use "components/atoms/checkbox";
 @use "components/atoms/radiobutton";
 @use "components/atoms/hint";
+@use "components/atoms/textarea";
 
 /*
  * 3º Molecules
@@ -46,12 +51,29 @@
 @use "components/molecules/product-card";
 @use "components/molecules/grid-cell";
 @use "components/molecules/description";
+@use "components/molecules/icon-service";
+@use "components/molecules/icon-social";
+@use "components/molecules/categories_menu";
+@use "components/molecules/service-grid";
+@use "components/molecules/contact";
+@use "components/molecules/basic-content";
+@use "components/molecules/portfolio";
+@use "components/molecules/brand";
+@use "components/molecules/basic-grid";
+@use "components/molecules/searcher";
 
 /*
  * 4º Organisms
  */
 @use "components/organisms/header";
 @use "components/organisms/marquee";
+@use "components/organisms/statistic";
+@use "components/organisms/team-grid";
+@use "components/organisms/business-case";
 @use "components/organisms/footer";
-@use "components/organisms/icon-description";
+@use "components/organisms/iconDescription";
+@use "components/organisms/cta";
+@use "components/organisms/contact-bar";
+@use "components/organisms/login";
+@use "components/organisms/price";
 @use "components/organisms/featuredContent";

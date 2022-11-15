@@ -7,9 +7,22 @@
     <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
+
+    <!-- Demo styles -->
     <style lang="css">
+      .modules_dropdown_menu.show {
+        display: grid;
+        grid-template-columns: repeat(4, 225px);
+        gap: 24px;
+      }
+      .modules_dropdown_menu .group>*:not(:last-child) {
+        margin-bottom: 16px;
+      }
     </style>
   </head>
   <body>
@@ -36,10 +49,18 @@
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
             <nav class="navbar navbar-expand-lg">
               <ul class="navbar-nav">
-                <li class="nav-item  ">
-                  <a class="nav-link  " href="#">
+                <li class="nav-item  dropdown  ">
+                  <a class="nav-link   dropdown-toggle " href="#" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Demos
                   </a>
+                  <ul class="dropdown-menu demos_dropdown_menu" aria-labelledby="demos_dropdown_menu">
+                    <li class="item-home">
+                      <a class="dropdown-item " href="../../demos/home">Home</a>
+                    </li>
+                    <li class="item-home 2">
+                      <a class="dropdown-item " href="../../demos/home2">Home 2</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item  ">
                   <a class="nav-link  " href="#">
@@ -50,90 +71,232 @@
                   <a class="nav-link   dropdown-toggle " href="#" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Modules
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="modules_dropdown_menu">
-                    <li>
-                      <a class="dropdown-item " href="#">Menus</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../modules/headers">Headers</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="#">Contents</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="#">Grids</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="#">Forms</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../modules/footers/standard">Footers Standard</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../modules/footers/corporate">Footers Corporate</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../modules/footers/newsletter">Footers Newsletter</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item " href="../../modules/basicContents">Basic Contents</a>
-                    </li>
+                  <ul class="dropdown-menu modules_dropdown_menu" aria-labelledby="modules_dropdown_menu">
+                    <div class="group">
+                      <li class="item-basics">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Basics</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/headers">Headers</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/basicContents">Basic Contents</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/cta">CTA</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/searchers">Searchers</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/categories-menu">Menus</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/iconSocial">Icons Social</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/iconsDescription">Icon + description</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/iconServices">Icon Services</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/statistics">Statistics</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/faqs">FAQs</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/contactBar">Contact Bar</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="group">
+                      <li class="item-marquees">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Marquees</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/marquees/basic">Basic</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/marquees/standar">Standard</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/marquees/cta">With CTA</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/marquees/image">Image</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/marquees/textImage">Text and image</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/marquees/illustration">Illustration</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/marquees/extended">Extended</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="item-cards">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Cards</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/featureCards">Featured</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/productCards">Product</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="group">
+                      <li class="item-grids">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Grids</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/basicGrids">Basic</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/serviceGrids">Service</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/teamGrids">Team</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="item-carrousels">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Carrousels</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/businessCases">Business Cases</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/services">Service</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/brands">Brands</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/testimonials">Testimonials</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/prices">Prices Carousel</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="group">
+                      <li class="item-portfolio">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Portfolio</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/portfolios/basic">Portfolio Basic</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/portfolio/decomposed">Portfolio Decomposed</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="item-forms">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Forms</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/login">Login</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/contacts">Contact</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="item-footers">
+                        <ul class="dropdown-submenu">
+                          <span class="dropdown-item">
+                  <strong>Footers</strong>
+              </span>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/footers/basic">Basic</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/footers/standard">Standard</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/footers/corporate">Corporate</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/footers/newsletter">Newsletter</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
                   </ul>
                 </li>
                 <li class="nav-item  dropdown  ">
                   <a class="nav-link active  dropdown-toggle " href="#" id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Components
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="components_dropdown_menu">
-                    <li>
+                  <ul class="dropdown-menu components_dropdown_menu" aria-labelledby="components_dropdown_menu">
+                    <li class="item-buttons">
                       <a class="dropdown-item " href="../../components/buttons">Buttons</a>
                     </li>
-                    <li>
+                    <li class="item-forms">
                       <a class="dropdown-item " href="../../components/forms">Forms</a>
                     </li>
-                    <li>
+                    <li class="item-interaction">
                       <a class="dropdown-item " href="../../components/interaction">Interaction</a>
                     </li>
-                    <li>
+                    <li class="item-cards">
                       <a class="dropdown-item active" href="../../components/cards">Cards</a>
                     </li>
-                    <li>
+                    <li class="item-product cards">
                       <a class="dropdown-item " href="../../components/productCards">Product Cards</a>
                     </li>
-                    <li>
+                    <li class="item-links">
                       <a class="dropdown-item " href="../../components/links">Links</a>
                     </li>
-                    <li>
+                    <li class="item-grid cells">
                       <a class="dropdown-item " href="../../components/gridCells">Grid cells</a>
                     </li>
-                    <li>
-                      <a class="dropdown-item " href="#">Icon + description</a>
+                    <li class="item-icon + description">
+                      <a class="dropdown-item " href="../../components/iconsDescription">Icon + description</a>
                     </li>
-                    <li>
+                    <li class="item-accordions">
                       <a class="dropdown-item " href="#">Accordions</a>
                     </li>
-                    <li>
-                      <a class="dropdown-item " href="#">Alerts</a>
+                    <li class="item-alerts">
+                      <a class="dropdown-item " href="../../components/alerts">Alerts</a>
                     </li>
-                    <li>
+                    <li class="item-icons">
                       <a class="dropdown-item " href="../../components/icons">Icons</a>
                     </li>
-                    <li>
+                    <li class="item-footers">
                       <a class="dropdown-item " href="../../modules/footers/basic">Footers</a>
                     </li>
-                    <li>
+                    <li class="item-texts">
                       <a class="dropdown-item " href="../../components/texts">Texts</a>
                     </li>
-                    <li>
+                    <li class="item-illustrations">
                       <a class="dropdown-item " href="../../components/illustrations">Illustrations</a>
                     </li>
-                    <li>
+                    <li class="item-microillustrations">
                       <a class="dropdown-item " href="../../components/microillustrations">Microillustrations</a>
                     </li>
-                    <li>
+                    <li class="item-scenes">
                       <a class="dropdown-item " href="../../components/scenes">Scenes</a>
                     </li>
                   </ul>
@@ -169,8 +332,10 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                  </picture>
                 </div>
                 <div class="text-card">
                   <p class="body-dark-gray-text body-bold-text">.US</p>
@@ -183,9 +348,17 @@
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
-                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
+                  <picture>
+                    <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="avatar image">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -194,9 +367,15 @@
             </div>
             <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
                   <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -211,7 +390,7 @@
                     <h5 class="space-bottom-24">Well organized and layered</h5>
                     <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -222,16 +401,18 @@
                </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
-              <div class="card feature-card comparative-card bg-card interaction-card h-100">
-                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
-                  <img class="img-basic" src="../../assets/img/img_featudanger-card.svg" alt="Card image">
+              <div class="card featured-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container demo-card-micro-illustration d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: var(--c-primary__eren);">
+                  <picture class="illustration">
+                    <img class="illustration-img" src="../../assets/img/microillustration/organized.svg" alt="feature">
+                  </picture>
                 </div>
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
                     <h5 class="space-bottom-24">Well organized and layered</h5>
                     <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -267,7 +448,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Choose</span>
                     <i class="icon-links"></i>
                   </a>
@@ -277,19 +458,19 @@
                     Comparative card
                 </span>
             </div>
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24  d-flex flex-column">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
                   <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
                   <i class="icon-star"></i>
                   <p class="body-light-gray-text w-100">New brand</p>
                 </div>
-                <div class="d-flex justify-content-center">
+                <picture class="d-flex justify-content-center">
                   <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
-                </div>
+                </picture>
                 <div class="d-flex justify-content-between">
                   <p class="body-light-gray-text">23/03/2019</p>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>More info</span>
                     <i class="icon-info"></i>
                   </a>
@@ -300,18 +481,18 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
-                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+              <div class="card row p-0 mx-0 gap-0 service-card interaction-card flex-xl-row h-100">
+                <picture class="col-12 col-xxl-6 px-0 img-container">
                   <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
-                </div>
-                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                </picture>
+                <div class="service-card-content col-12 col-xxl-6 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
                   <span class="tag-card d-flex justify-content-center align-items-end">
             1        </span>
                   <div class="space-y-24">
                     <h4>Digital strategy</h4>
                     <p class="body-light-gray-text">We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. </p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -324,23 +505,25 @@
           </div>
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
-              <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
-                <div class="header-card d-flex justify-content-center">
-                  <img class="avatar" src="../../assets/img/quote.svg" alt="quote icon">
-                </div>
-                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
+              <div class="testimonial-card bg-card h-100 space-y-24 inner-space-block-32 inner-space-inline-24">
+                <picture class="header-card d-flex justify-content-center">
+                  <img class="testimonial-quote" src="../../assets/img/quote.svg" alt="quote image">
+                </picture>
+                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true."</p>
                 <div class="value-card d-flex space-x-4">
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
-                  <i class="icon-star star-off"></i>
+                  <i class="icon-star"></i>
                 </div>
                 <div class="user-card d-flex align-items-center space-x-16">
-                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <picture class="avatar-wrapper">
+                    <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="avatar image">
+                  </picture>
                   <div class="body-light-gray-text">
                     <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
-                    Marketing manager
+                    <p class="body-dark-gray-text">Marketing manager</p>
                   </div>
                 </div>
               </div>
@@ -349,18 +532,29 @@
                 </span>
             </div>
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
-              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+              <div class="bg-card contact-card d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="body-dark-gray-text fw-bold">Contact us</p>
                   <i class="icon-blade"></i>
                 </div>
                 <span class="border-bottom d-block"></span>
-                <a href="#" class="action-link ">
+                <a href='#' class="action-link ">
                   <span>Consult in our chat</span>
                   <i class="icon-whatsapp"></i>
                 </a>
-                <span class="border-bottom d-block"></span>
-                <a href="#" class="action-link ">
+                <span class="border-bottom"></span>
+                <a href='#' class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+                <span class="border-bottom"></span>
+              </div>
+              <div class="contact-card-mobile d-flex d-md-none">
+                <a href='#' class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
+                <a href='#' class="action-link ">
                   <span>Shall we call you?</span>
                   <i class="icon-contact"></i>
                 </a>
@@ -373,7 +567,7 @@
               <div class="bg-card icon-description-card interaction-card space-y-16 inner-space-block-24  inner-space-inline-24">
                 <i class="icon-awards-circle"></i>
                 <p class="body-light-gray-text">B_system is a sketch.</p>
-                <a href="#" class="action-link ">
+                <a href='#' class="action-link ">
                   <span>Learn more</span>
                   <i class="icon-links"></i>
                 </a>
@@ -388,12 +582,12 @@
               <div class="position-relative h-100">
                 <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
                   <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
-                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                    <p class="header-text fw-bold text-md-center w-100">1</p>
                   </div>
                   <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
                     <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
                       <h3>Calgary museum</h3>
-                      <a href="#" class="action-link ">
+                      <a href='#' class="action-link ">
                         <span>Learn more</span>
                         <i class="icon-links"></i>
                       </a>
@@ -418,8 +612,10 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                  </picture>
                 </div>
                 <div class="text-card">
                   <p class="body-dark-gray-text body-bold-text">.US</p>
@@ -432,9 +628,17 @@
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
-                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
+                  <picture>
+                    <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="avatar image">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -443,9 +647,15 @@
             </div>
             <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
                   <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -460,7 +670,7 @@
                     <h5 class="space-bottom-24">Well organized and layered</h5>
                     <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -471,16 +681,18 @@
                </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
-              <div class="card feature-card comparative-card bg-card interaction-card h-100">
-                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
-                  <img class="img-basic" src="../../assets/img/img_featudanger-card.svg" alt="Card image">
+              <div class="card featured-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container demo-card-micro-illustration d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: var(--c-primary__eren);">
+                  <picture class="illustration">
+                    <img class="illustration-img" src="../../assets/img/microillustration/organized.svg" alt="feature">
+                  </picture>
                 </div>
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
                     <h5 class="space-bottom-24">Well organized and layered</h5>
                     <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -516,7 +728,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Choose</span>
                     <i class="icon-links"></i>
                   </a>
@@ -526,19 +738,19 @@
                     Comparative card
                 </span>
             </div>
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24  d-flex flex-column">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
                   <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
                   <i class="icon-star"></i>
                   <p class="body-light-gray-text w-100">New brand</p>
                 </div>
-                <div class="d-flex justify-content-center">
+                <picture class="d-flex justify-content-center">
                   <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
-                </div>
+                </picture>
                 <div class="d-flex justify-content-between">
                   <p class="body-light-gray-text">23/03/2019</p>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>More info</span>
                     <i class="icon-info"></i>
                   </a>
@@ -549,18 +761,18 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
-                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+              <div class="card row p-0 mx-0 gap-0 service-card interaction-card flex-xl-row h-100">
+                <picture class="col-12 col-xxl-6 px-0 img-container">
                   <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
-                </div>
-                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                </picture>
+                <div class="service-card-content col-12 col-xxl-6 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
                   <span class="tag-card d-flex justify-content-center align-items-end">
             1        </span>
                   <div class="space-y-24">
                     <h4>Digital strategy</h4>
                     <p class="body-light-gray-text">We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. </p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -573,23 +785,25 @@
           </div>
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
-              <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
-                <div class="header-card d-flex justify-content-center">
-                  <img class="avatar" src="../../assets/img/quote.svg" alt="quote icon">
-                </div>
-                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
+              <div class="testimonial-card bg-card h-100 space-y-24 inner-space-block-32 inner-space-inline-24">
+                <picture class="header-card d-flex justify-content-center">
+                  <img class="testimonial-quote" src="../../assets/img/quote.svg" alt="quote image">
+                </picture>
+                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true."</p>
                 <div class="value-card d-flex space-x-4">
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
-                  <i class="icon-star star-off"></i>
+                  <i class="icon-star"></i>
                 </div>
                 <div class="user-card d-flex align-items-center space-x-16">
-                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <picture class="avatar-wrapper">
+                    <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="avatar image">
+                  </picture>
                   <div class="body-light-gray-text">
                     <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
-                    Marketing manager
+                    <p class="body-dark-gray-text">Marketing manager</p>
                   </div>
                 </div>
               </div>
@@ -598,18 +812,29 @@
                 </span>
             </div>
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
-              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+              <div class="bg-card contact-card d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="body-dark-gray-text fw-bold">Contact us</p>
                   <i class="icon-blade"></i>
                 </div>
                 <span class="border-bottom d-block"></span>
-                <a href="#" class="action-link ">
+                <a href='#' class="action-link ">
                   <span>Consult in our chat</span>
                   <i class="icon-whatsapp"></i>
                 </a>
-                <span class="border-bottom d-block"></span>
-                <a href="#" class="action-link ">
+                <span class="border-bottom"></span>
+                <a href='#' class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+                <span class="border-bottom"></span>
+              </div>
+              <div class="contact-card-mobile d-flex d-md-none">
+                <a href='#' class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
+                <a href='#' class="action-link ">
                   <span>Shall we call you?</span>
                   <i class="icon-contact"></i>
                 </a>
@@ -622,7 +847,7 @@
               <div class="bg-card icon-description-card interaction-card space-y-16 inner-space-block-24  inner-space-inline-24">
                 <i class="icon-awards-circle"></i>
                 <p class="body-light-gray-text">B_system is a sketch.</p>
-                <a href="#" class="action-link ">
+                <a href='#' class="action-link ">
                   <span>Learn more</span>
                   <i class="icon-links"></i>
                 </a>
@@ -637,12 +862,12 @@
               <div class="position-relative h-100">
                 <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
                   <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
-                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                    <p class="header-text fw-bold text-md-center w-100">1</p>
                   </div>
                   <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
                     <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
                       <h3>Calgary museum</h3>
-                      <a href="#" class="action-link ">
+                      <a href='#' class="action-link ">
                         <span>Learn more</span>
                         <i class="icon-links"></i>
                       </a>
@@ -667,8 +892,10 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                  </picture>
                 </div>
                 <div class="text-card">
                   <p class="body-dark-gray-text body-bold-text">.US</p>
@@ -681,9 +908,17 @@
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
-                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
+                  <picture>
+                    <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="avatar image">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -692,9 +927,15 @@
             </div>
             <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
                   <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -709,7 +950,7 @@
                     <h5 class="space-bottom-24">Well organized and layered</h5>
                     <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -720,16 +961,18 @@
                </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
-              <div class="card feature-card comparative-card bg-card interaction-card h-100">
-                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
-                  <img class="img-basic" src="../../assets/img/img_featudanger-card.svg" alt="Card image">
+              <div class="card featured-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container demo-card-micro-illustration d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: var(--c-primary__eren);">
+                  <picture class="illustration">
+                    <img class="illustration-img" src="../../assets/img/microillustration/organized.svg" alt="feature">
+                  </picture>
                 </div>
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
                     <h5 class="space-bottom-24">Well organized and layered</h5>
                     <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -765,7 +1008,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Choose</span>
                     <i class="icon-links"></i>
                   </a>
@@ -775,19 +1018,19 @@
                     Comparative card
                 </span>
             </div>
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24 d-flex flex-column">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
                   <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
                   <i class="icon-star"></i>
                   <p class="body-light-gray-text w-100">New brand</p>
                 </div>
-                <div class="d-flex justify-content-center">
-                  <img class="img-basic" src="../../assets/img/logo-brandemic-light.svg" alt="Brandemic logo">
-                </div>
+                <picture class="d-flex justify-content-center">
+                  <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
+                </picture>
                 <div class="d-flex justify-content-between">
                   <p class="body-light-gray-text">23/03/2019</p>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>More info</span>
                     <i class="icon-info"></i>
                   </a>
@@ -798,18 +1041,18 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
-                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+              <div class="card row p-0 mx-0 gap-0 service-card interaction-card flex-xl-row h-100">
+                <picture class="col-12 col-xxl-6 px-0 img-container">
                   <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
-                </div>
-                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                </picture>
+                <div class="service-card-content col-12 col-xxl-6 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
                   <span class="tag-card d-flex justify-content-center align-items-end">
             1        </span>
                   <div class="space-y-24">
                     <h4>Digital strategy</h4>
                     <p class="body-light-gray-text">We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. </p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -822,23 +1065,25 @@
           </div>
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
-              <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
-                <div class="header-card d-flex justify-content-center">
-                  <img class="avatar" src="../../assets/img/quote-light.svg" alt="quote icon">
-                </div>
-                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
+              <div class="testimonial-card bg-card h-100 space-y-24 inner-space-block-32 inner-space-inline-24">
+                <picture class="header-card d-flex justify-content-center">
+                  <img class="testimonial-quote" src="../../assets/img/quote.svg" alt="quote image">
+                </picture>
+                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true."</p>
                 <div class="value-card d-flex space-x-4">
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
-                  <i class="icon-star star-off"></i>
+                  <i class="icon-star"></i>
                 </div>
                 <div class="user-card d-flex align-items-center space-x-16">
-                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <picture class="avatar-wrapper">
+                    <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="avatar image">
+                  </picture>
                   <div class="body-light-gray-text">
                     <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
-                    Marketing manager
+                    <p class="body-dark-gray-text">Marketing manager</p>
                   </div>
                 </div>
               </div>
@@ -847,18 +1092,29 @@
                 </span>
             </div>
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
-              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+              <div class="bg-card contact-card d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="body-dark-gray-text fw-bold">Contact us</p>
                   <i class="icon-blade"></i>
                 </div>
                 <span class="border-bottom d-block"></span>
-                <a href="#" class="action-link ">
+                <a href='#' class="action-link ">
                   <span>Consult in our chat</span>
                   <i class="icon-whatsapp"></i>
                 </a>
-                <span class="border-bottom d-block"></span>
-                <a href="#" class="action-link ">
+                <span class="border-bottom"></span>
+                <a href='#' class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+                <span class="border-bottom"></span>
+              </div>
+              <div class="contact-card-mobile d-flex d-md-none">
+                <a href='#' class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
+                <a href='#' class="action-link ">
                   <span>Shall we call you?</span>
                   <i class="icon-contact"></i>
                 </a>
@@ -871,7 +1127,7 @@
               <div class="bg-card icon-description-card interaction-card space-y-16 inner-space-block-24  inner-space-inline-24">
                 <i class="icon-awards-circle"></i>
                 <p class="body-light-gray-text">B_system is a sketch.</p>
-                <a href="#" class="action-link ">
+                <a href='#' class="action-link ">
                   <span>Learn more</span>
                   <i class="icon-links"></i>
                 </a>
@@ -886,12 +1142,12 @@
               <div class="position-relative h-100">
                 <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
                   <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
-                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                    <p class="header-text fw-bold text-md-center w-100">1</p>
                   </div>
                   <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
                     <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
                       <h3>Calgary museum</h3>
-                      <a href="#" class="action-link ">
+                      <a href='#' class="action-link ">
                         <span>Learn more</span>
                         <i class="icon-links"></i>
                       </a>
@@ -916,8 +1172,10 @@
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 d-flex flex-column space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card.jpg" alt="Card image">
+                  </picture>
                 </div>
                 <div class="text-card">
                   <p class="body-dark-gray-text body-bold-text">.US</p>
@@ -930,9 +1188,17 @@
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
-                  <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="This is a description text">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
+                  <picture>
+                    <img class="avatar" src="../../assets/img/800x800_33.jpg" alt="avatar image">
+                  </picture>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -941,9 +1207,15 @@
             </div>
             <div class="col-1-to-5 col-xl-9-to-13 space-y-24">
               <div class="card space-y-24">
-                <div class="basic-card position-relative">
-                  <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-3.jpg" alt="Card image">
+                <div class="img-container position-relative">
+                  <picture class="basic-card">
+                    <img class="img-basic card-img-top" src="../../assets/img/img_basic-card-2.jpg" alt="Card image">
+                  </picture>
                   <p class="simple-text text-white body-medium-text">B_system</p>
+                </div>
+                <div class="text-card">
+                  <p class="body-dark-gray-text body-bold-text">B_system</p>
+                  <p class="body-light-gray-text"></p>
                 </div>
               </div>
               <span class="body-light-gray-text">
@@ -958,7 +1230,7 @@
                     <h5 class="space-bottom-24">Well organized and layered</h5>
                     <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -969,16 +1241,18 @@
                </span>
             </div>
             <div class="col-1-to-5 col-sm-5-to-9 d-flex flex-column justify-content-between space-y-24">
-              <div class="card feature-card comparative-card bg-card interaction-card h-100">
-                <div class="img-container d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: #0077e6;">
-                  <img class="img-basic" src="../../assets/img/img_featudanger-card.svg" alt="Card image">
+              <div class="card featured-card comparative-card bg-card interaction-card h-100">
+                <div class="img-container demo-card-micro-illustration d-flex justify-content-center inner-space-block-72 inner-space-block-sm-24 inner-space-block-md-56 inner-space-block-lg-72" style="background-color: var(--c-primary__eren);">
+                  <picture class="illustration">
+                    <img class="illustration-img" src="../../assets/img/microillustration/organized.svg" alt="feature">
+                  </picture>
                 </div>
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
                     <h5 class="space-bottom-24">Well organized and layered</h5>
                     <p class="body-light-gray-text space-bottom-24">Elements are intuitively organized and well named, so you can quickly customize your design.</p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -993,7 +1267,7 @@
                 <div class="d-flex flex-column justify-content-between h-100 inner-space-block-32 inner-space-right-32 inner-space-left-24">
                   <div class="comparative-info space-y-16">
                     <div class="header-card d-flex align-items-center justify-content-between space-top-6 space-bottom-8">
-                      <h4 class="mb-0">$ 15</h4>
+                      <h4 class="mb-0">$ 12</h4>
                       <i class="icon-saving-filled"></i>
                     </div>
                     <h5 class="h5">Basic product</h5>
@@ -1014,7 +1288,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Choose</span>
                     <i class="icon-links"></i>
                   </a>
@@ -1024,19 +1298,19 @@
                     Comparative card
                 </span>
             </div>
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between inner-space-block-24 inner-space-inline-24">
+            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24 d-flex flex-column">
+              <div class="business-card bg-card full-card interaction-card d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
                   <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p>
                   <i class="icon-star"></i>
                   <p class="body-light-gray-text w-100">New brand</p>
                 </div>
-                <div class="d-flex justify-content-center">
-                  <img class="img-basic" src="../../assets/img/logo-brandemic-light.svg" alt="Brandemic logo">
-                </div>
+                <picture class="d-flex justify-content-center">
+                  <img class="img-basic" src="../../assets/img/logo-brandemic.svg" alt="Brandemic logo">
+                </picture>
                 <div class="d-flex justify-content-between">
                   <p class="body-light-gray-text">23/03/2019</p>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>More info</span>
                     <i class="icon-info"></i>
                   </a>
@@ -1047,18 +1321,18 @@
                 </span>
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
-              <div class="card d-grid grid-2 gap-0 service-card interaction-card">
-                <div class="col-1-to-4 col-xl-1-to-2 img-container">
+              <div class="card row p-0 mx-0 gap-0 service-card interaction-card flex-xl-row h-100">
+                <picture class="col-12 col-xxl-6 px-0 img-container">
                   <img class="img-basic card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
-                </div>
-                <div class="col-1-to-4 col-xl-2-to-3 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24">
+                </picture>
+                <div class="service-card-content col-12 col-xxl-6 bg-card service-text d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
                   <span class="tag-card d-flex justify-content-center align-items-end">
             1        </span>
                   <div class="space-y-24">
                     <h4>Digital strategy</h4>
                     <p class="body-light-gray-text">We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. </p>
                   </div>
-                  <a href="#" class="action-link ">
+                  <a href='#' class="action-link ">
                     <span>Learn more</span>
                     <i class="icon-links"></i>
                   </a>
@@ -1071,23 +1345,25 @@
           </div>
           <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
             <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
-              <div class="testimonial-card bg-card space-y-24 inner-space-block-32 inner-space-inline-24">
-                <div class="header-card d-flex justify-content-center">
-                  <img class="avatar" src="../../assets/img/quote-light.svg" alt="quote icon">
-                </div>
-                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.”</p>
+              <div class="testimonial-card bg-card h-100 space-y-24 inner-space-block-32 inner-space-inline-24">
+                <picture class="header-card d-flex justify-content-center">
+                  <img class="testimonial-quote" src="../../assets/img/quote.svg" alt="quote image">
+                </picture>
+                <p class="body-light-gray-text">"Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true."</p>
                 <div class="value-card d-flex space-x-4">
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
                   <i class="icon-star star-on"></i>
-                  <i class="icon-star star-off"></i>
+                  <i class="icon-star"></i>
                 </div>
                 <div class="user-card d-flex align-items-center space-x-16">
-                  <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="user testimonial">
+                  <picture class="avatar-wrapper">
+                    <img class="avatar" src="../../assets/img/avatar_testimonial-1.jpg" alt="avatar image">
+                  </picture>
                   <div class="body-light-gray-text">
                     <p class="body-dark-gray-text fw-bold">Sandra Golpe</p>
-                    Marketing manager
+                    <p class="body-dark-gray-text">Marketing manager</p>
                   </div>
                 </div>
               </div>
@@ -1096,18 +1372,29 @@
                 </span>
             </div>
             <div class="col-1-to-4 col-xl-5-to-8 space-y-24">
-              <div class="bg-card contact-card space-y-24 inner-space-block-24 inner-space-inline-24">
+              <div class="bg-card contact-card d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="body-dark-gray-text fw-bold">Contact us</p>
                   <i class="icon-blade"></i>
                 </div>
                 <span class="border-bottom d-block"></span>
-                <a href="#" class="action-link ">
+                <a href='#' class="action-link ">
                   <span>Consult in our chat</span>
                   <i class="icon-whatsapp"></i>
                 </a>
-                <span class="border-bottom d-block"></span>
-                <a href="#" class="action-link ">
+                <span class="border-bottom"></span>
+                <a href='#' class="action-link ">
+                  <span>Shall we call you?</span>
+                  <i class="icon-contact"></i>
+                </a>
+                <span class="border-bottom"></span>
+              </div>
+              <div class="contact-card-mobile d-flex d-md-none">
+                <a href='#' class="action-link ">
+                  <span>Consult in our chat</span>
+                  <i class="icon-whatsapp"></i>
+                </a>
+                <a href='#' class="action-link ">
                   <span>Shall we call you?</span>
                   <i class="icon-contact"></i>
                 </a>
@@ -1120,7 +1407,7 @@
               <div class="bg-card icon-description-card interaction-card space-y-16 inner-space-block-24  inner-space-inline-24">
                 <i class="icon-awards-circle"></i>
                 <p class="body-light-gray-text">B_system is a sketch.</p>
-                <a href="#" class="action-link ">
+                <a href='#' class="action-link ">
                   <span>Learn more</span>
                   <i class="icon-links"></i>
                 </a>
@@ -1135,12 +1422,12 @@
               <div class="position-relative h-100">
                 <div class="bg-card d-grid grid-3 gap-0 project-card w-100 h-100 inner-space-inline-24">
                   <div class="col-1-to-4 col-md-1-to-2 header-card d-flex align-items-center justify-content-center">
-                    <p class="header-text fw-bold text-md-center w-100">01</p>
+                    <p class="header-text fw-bold text-md-center w-100">1</p>
                   </div>
                   <div class="col-1-to-4 col-md-2-to-4 project-info d-flex align-items-center inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
                     <div class="space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
                       <h3>Calgary museum</h3>
-                      <a href="#" class="action-link ">
+                      <a href='#' class="action-link ">
                         <span>Learn more</span>
                         <i class="icon-links"></i>
                       </a>
@@ -1181,6 +1468,9 @@
 
     <!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper bundle CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>

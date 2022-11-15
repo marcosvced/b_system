@@ -1,0 +1,28 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.service-grid {
+    display: flex;
+
+    .service-card {
+        $parent: &;
+
+        @include themed.properties {
+            border: themed.values(helper.rem(.1) solid $c-grayscale--light, none);
+        }
+    
+        &-content, .img-container .img-basic {
+            border-radius: 0;
+            color: inherit;
+        }
+
+        .action-link {
+            @include themed.properties {
+                color: themed.values($c-eren, $c-grayscale--light);
+            }
+        }
+    }
+}

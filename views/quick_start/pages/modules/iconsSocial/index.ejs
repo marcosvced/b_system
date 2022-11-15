@@ -1,0 +1,31 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<%- include(`${module}/iconSocial/iconSocial`, {
+socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+isDarkened: false,
+isDark: false,
+hasBorder: false
+}) -%>
+
+<%- include(`${module}/iconSocial/iconSocial`, {
+socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+isDarkened: true,
+isDark: false,
+hasBorder: false
+}) -%>
+
+<%- include(`${module}/iconSocial/iconSocial`, {
+socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+isDarkened: false,
+isDark: true,
+hasBorder: false
+}) -%>
+
+<%- include(`${module}/iconSocial/iconSocial`, {
+socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+isDarkened: true,
+isDark: true,
+hasBorder: false
+}) -%>

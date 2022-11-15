@@ -1,0 +1,50 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<%
+const menu = {
+    align: 'center',
+    items: [{
+        label: 'All categories',
+        href: '#categories',
+        id: 'categories',
+        active: true
+    }, {
+        label: 'Product design',
+        href: '#product_design',
+        id: 'product_design'
+    }, {
+        label: 'Packaging',
+        href: '#packaging',
+        id: 'packaging'
+    }, {
+        label: 'Editorial',
+        href: '#editorial',
+        id: 'editorial'
+    }, {
+        label: 'Web design',
+        href: '#web_design',
+        id: 'web_design'
+    }]
+}
+%>
+
+<section class="section px-0" style="background-color: #f5f5f5;">
+    <div class="container">
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Categories menu</h3>
+    </div>
+    <div class="section p-0">
+        <%- include(`${module}/categoriesMenu/categoriesMenu`, { ...menu }) %>
+    </div>
+</section>
+
+<section class="section px-0" style="background-color: #1e1e1e;" data-bsystem="dark">
+    <div class="container">
+        <h3 class="space-bottom-48 space-bottom-md-56 space-bottom-lg-88">Categories menu dark</h3>
+    </div>
+
+    <div class="section p-0">
+        <%- include(`${module}/categoriesMenu/categoriesMenu`, { ...menu }) %>
+    </div>
+</section>

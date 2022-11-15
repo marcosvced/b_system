@@ -1,0 +1,67 @@
+<%- include(`${view}/quick_start/layout`) %>
+
+<%- contentFor('body') %>
+
+<!-- SECTION LIGHT -->
+<section class="section">
+    <div class="container">
+        <%- include(`${component}/text/head-x3`, { text: 'Accordions' }) %>
+
+        <div class="space-bottom-48 space-y-32">
+            <%- include( `${component}/accordion/accordion`, {
+                idAccordion: 'accordion1',
+                idItem: 'accordion-item1',
+                label: "What is B_system?",
+                content: "B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project."
+            } ) %>
+            <span class="body-light-gray-text">
+                Accordion
+            </span>
+        </div>
+        <div class="space-y-32">
+            <%- include( `${component}/accordion/content`, {
+                idAccordion: 'accordion-content1',
+                idItem: 'accordion-content-item1',
+                label: "View example's code",
+                content: `<section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center py-14 py-md-16 bg-map" data-image-src="./assets/img/map.png"> <div class="container py-0 py-md-18"> <div class="row"> <div class="col-lg-6 col-xl-5 mx-auto"> <h2 class="display-4 mb-3 text-center">Join Our Community</h2> <p class="lead mb-5 px-md-16 px-lg-3">We are trusted by over 5000+ clients. Join them by using our services and grow your business.</p> <a href="#" class="btn btn-primary rounded-pill">Join Us</a> </div> <!-- /column --> </div> <!-- /.row --> </div> <!-- /.container --> </section> <!-- /section -->`,
+                isDarkened: true
+            } ) %>
+            <span class="body-light-gray-text">
+                Content accordion
+            </span>
+        </div>
+    </div>
+</section>
+<!-- END: SECTION LIGHT -->
+
+<!-- SECTION DARK -->
+<section class="section" data-bsystem="dark">
+    <div class="container">
+        <%- include(`${component}/text/head-x3`, { text: 'Accordions' }) %>
+
+        <div class="space-bottom-48 space-y-32">
+            <%- include( `${component}/accordion/accordion`, {
+                idAccordion: 'accordion1-dark',
+                idItem: 'accordion-item1-dark',
+                label: "What is B_system?",
+                content: "B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project."
+            } ) %>
+            <span class="body-light-gray-text">
+                Accordion
+            </span>
+        </div>
+        <div class="space-y-32">
+            <%- include( `${component}/accordion/content`, {
+                idAccordion: 'accordion-content1-dark',
+                idItem: 'accordion-content-item1-dark',
+                label: "View example's code",
+                content: `<section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center py-14 py-md-16 bg-map" data-image-src="./assets/img/map.png"> <div class="container py-0 py-md-18"> <div class="row"> <div class="col-lg-6 col-xl-5 mx-auto"> <h2 class="display-4 mb-3 text-center">Join Our Community</h2> <p class="lead mb-5 px-md-16 px-lg-3">We are trusted by over 5000+ clients. Join them by using our services and grow your business.</p> <a href="#" class="btn btn-primary rounded-pill">Join Us</a> </div> <!-- /column --> </div> <!-- /.row --> </div> <!-- /.container --> </section> <!-- /section -->`,
+                isDarkened: true
+            } ) %>
+            <span class="body-light-gray-text">
+                Content accordion
+            </span>
+        </div>
+    </div>
+</section>
+<!-- END: SECTION DARK -->

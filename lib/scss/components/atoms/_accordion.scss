@@ -1,0 +1,60 @@
+@use '../../variables/colors' as *;
+
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.accordion-item {
+    border: none;
+    background-color: transparent;
+
+    &.darkened {
+        @include themed.properties {
+            background-color: themed.values($c-grayscale--100, $c-grayscale--1200);
+          }
+
+          .accordion-button {
+            @include themed.properties {
+                border: themed.values(none, 1px solid $c-grayscale--900);
+              }
+
+              &::after {
+                position: relative;
+                text-align: right;
+              }
+          }
+    }
+
+    .accordion-button {
+        background-color: transparent !important;
+        border-top: none;
+        border-inline: none;
+
+        @include themed.properties {
+            border-bottom: 1px solid themed.values($c-grayscale--400, $c-grayscale--900);
+            background-color: themed.values($c-grayscale--light, $c-grayscale--1100);
+          }
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: inherit;
+        color: inherit;
+    }
+
+    .accordion-button::after {
+        content: '6';
+        position: absolute;
+        right: 0;
+        font-family: "b-system" !important;
+        font-weight: helper.weight(bold);
+        font-size: helper.rem(15);
+        color: $c-eren;
+        background-image: none;
+        transform: none;
+    }
+
+    .accordion-button.collapsed::after {
+        content: '3';    
+    }
+}

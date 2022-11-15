@@ -1,13 +1,150 @@
-<%- include(`${view}/quick_start/layout`)%>
+<%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('body') %>
-
 <section class="section">
-    <div class="container d-flex flex-wrap gap-5">
+    <div class="container">
+        <%- include(`${component}/text/head-x3`, { text: 'Alerts' }) %>
 
-        <div class="d-flex flex-column gap-2">
-            <%- include(`${component}/alert/alert`, { } ) %>
+        <div class="d-grid grid-4 grid-md-8 grid-xl-12">
+            <div class="col-span-4 d-flex flex-column space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                icon: 'lock',
+                text: {
+                content: 'You must include at least one letter.'
+                },
+                variant: 'info'
+                }) %>
+                <span class="body-light-gray-text">
+                            Info alert
+                        </span>
+            </div>
+
+            <div class="col-span-4 d-flex flex-column space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                icon: 'error',
+                text: {
+                content: 'The data you have entered is already in our system.',
+                },
+                variant: 'error'
+                }) %>
+                <span class="body-light-gray-text">
+                            Error alert
+                        </span>
+            </div>
+
+            <div class="col-span-4 d-flex flex-column space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                icon: 'avatar',
+                text: {
+                content: 'Your data is safe with B System. In no case may they be published.',
+                },
+                variant: 'advice'
+                }) %>
+                <span class="body-light-gray-text">
+                            Advice alert
+                        </span>
+            </div>
+
+            <div class="col-span-4 d-flex flex-column space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                icon: 'message',
+                text: {
+                content: 'You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com',
+                },
+                variant: 'basic'
+                }) %>
+                <span class="body-light-gray-text">
+                            Alert
+                        </span>
+            </div>
+
+            <div class="col-span-4 space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                link: {
+                href: '#',
+                label: 'Find our offices easily in our search engine',
+                icon: 'place'
+                },
+                variant: 'link'
+                }) %>
+                <span class="body-light-gray-text">
+                            Link alert
+                        </span>
+            </div>
         </div>
+    </div>
+</section>
 
+<section class="section" data-bsystem="dark">
+    <div class="container">
+        <%- include(`${component}/text/head-x3`, { text: 'Alerts' }) %>
+
+        <div class="d-grid grid-4 grid-md-8 grid-xl-12">
+            <div class="col-span-4 d-flex flex-column space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                icon: 'lock',
+                text: {
+                content: 'You must include at least one letter.',
+                },
+                variant: 'info'
+                }) %>
+                <span class="body-light-gray-text">
+                            Info alert
+                        </span>
+            </div>
+
+            <div class="col-span-4 d-flex flex-column space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                icon: 'error',
+                text: {
+                content: 'The data you have entered is already in our system.',
+                },
+                variant: 'error'
+                }) %>
+                <span class="body-light-gray-text">
+                            Error alert
+                        </span>
+            </div>
+
+            <div class="col-span-4 d-flex flex-column space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                icon: 'avatar',
+                text: {
+                content: 'Your data is safe with B System. In no case may they be published.',
+                },
+                variant: 'advice'
+                }) %>
+                <span class="body-light-gray-text">
+                            Advice alert
+                        </span>
+            </div>
+
+            <div class="col-span-4 d-flex flex-column space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                icon: 'message',
+                text: {
+                content: 'You can also write an email to these departments and we will get back to you as soon as possible: bsystem@company.com',
+                },
+                variant: 'basic'
+                }) %>
+                <span class="body-light-gray-text">
+                            Alert
+                        </span>
+            </div>
+
+            <div class="col-span-4 space-y-24">
+                <%- include(`${component}/alert/alert`, {
+                link: {
+                href: '#',
+                label: 'Find our offices easily in our search engine',
+                icon: 'place'
+                },
+                variant: 'link'
+                }) %>
+                <span class="body-light-gray-text">
+                            Link alert
+                        </span>
+            </div>
+        </div>
     </div>
 </section>
