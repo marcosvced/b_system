@@ -4,113 +4,121 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-.darkened .bg-card {
-    @include themed.properties {
-        background-color: themed.values($c-grayscale--light, helper.grayscale(1100));
-        box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100), none);
-    }
-}
-
-.basic-card {
-    &-darkened:before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-color: helper.opacity(gray-300);
-        position: absolute;
-    }
-
-    .img-basic {
-        max-height: helper.rem(285);
-        object-fit: cover;
-    }
-}
-
 .card {
+    $parent: &;
     border: 0;
     background-color: transparent;
 
-    & .simple-text {
-        position: absolute;
-        left: helper.space(16);
-        bottom: helper.space(16);
-    }
-
-    & .avatar {
-        position: absolute;
-        left: helper.space(24);
-        bottom: helper.space(24);
-    }
-}
-
-.card .avatar, .bg-card .avatar {
-    @include mixin.circle(64);
-}
-
-.bg-card {
-    border-radius: helper.rem(6);
-
-    @include themed.properties {
-        background-color: themed.values($c-grayscale--100, helper.grayscale(1200));
-    }
-
-    & .service-text {
-        border:{
-            top-left-radius: 0;
-            top-right-radius: 0;
-        }
-
-    }
-
-    .header-card {
-        & [class^='icon-'] {
-            font-size: helper.rem(23);
-            @include themed.properties {
-                color: themed.values($c-grayscale--400, $c-grayscale--800);
+    .img-container {
+        #{$parent}-basic {
+            #{&}-img {
+                max-height: helper.rem(285);
+                object-fit: cover;
             }
         }
-    }
 
-    & .h5 {
-        font-weight: helper.weight(medium);
-    }
-
-    & .list-card {
-        & [class^='icon-'] {
-            font-size: helper.rem(20);
-            color: $c-grayscale--800;
-            display: inline-grid;
-            align-items: center;
-            justify-content: center;
-            margin-right: helper.rem(8);
+        .simple-text {
+            position: absolute;
+            left: helper.space(16);
+            bottom: helper.space(16);
         }
+    }
+    
+    .avatar {
+        @include mixin.circle(64);
 
-        & .icon-check {
-            color: helper.primary(mikasa);
+        &:not(.card-testimonial .avatar)  {
+            position: absolute;
+            left: helper.space(24);
+            bottom: helper.space(24);
         }
     }
 
-    & .tag-card {
-        background-color: $c-eren;
-        color: $c-grayscale--light;
-        width: helper.rem(48);
-        height: helper.rem(72);
-        padding-bottom: helper.rem(8);
-        border:{
-            bottom-left-radius: helper.rem(32);
-            bottom-right-radius: helper.rem(32);
-        }
+    &#{$parent}-bg {
+        border-radius: helper.rem(6);
 
-        transform: translateY(- helper.rem(32));
-    }
-
-    & .border-bottom {
         @include themed.properties {
-            border-color: themed.values(helper.grayscale(300) !important, $c-grayscale--1000 !important);
+            background-color: themed.values($c-grayscale--100, $c-grayscale--1200);
         }
-    }
 
+        .service-text {
+            border:{
+                top-left-radius: 0;
+                top-right-radius: 0;
+            }
+        }
+
+        #{$parent}-head {
+            [class^='icon-'] {
+                font-size: helper.rem(23);
+
+                @include themed.properties {
+                    color: themed.values($c-grayscale--400, $c-grayscale--800);
+                }
+            }
+        }
+        
+        .h5 {
+            font-weight: helper.weight(medium);
+        }
+
+        .card-list {
+            [class^='icon-'] {
+                font-size: helper.rem(20);
+                color: $c-grayscale--800;
+                display: inline-grid;
+                align-items: center;
+                justify-content: center;
+                margin-right: helper.space(8);
+            }
+    
+            .icon-check {
+                color: $c-mikasa;
+            }
+        }
+
+        &#{$parent}-service {
+            #{$parent}-tag {
+                background-color: $c-eren;
+                color: $c-grayscale--light;
+                width: helper.rem(48);
+                height: helper.rem(72);
+                padding-bottom: helper.space(8);
+                border:{
+                    bottom-left-radius: helper.rem(32);
+                    bottom-right-radius: helper.rem(32);
+                }
+        
+                transform: translateY(- helper.rem(32));
+            }
+        }
+
+        .border-bottom {
+            @include themed.properties {
+                border-color: themed.values($c-grayscale--300, $c-grayscale--1000);
+            }
+        }  
+    }
 }
+
+// .darkened .bg-card {   <---------------------- COMPROBAR ESTO
+//     @include themed.properties {
+//         background-color: themed.values($c-grayscale--light, helper.grayscale(1100));
+//         box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100), none);
+//     }
+// }
+
+// .basic-card {
+//      &-darkened:before { <---------------------- COMPROBAR ESTO
+//          content: '';
+//          width: 100%;
+//          height: 100%;
+//          background-color: helper.opacity(gray-300);
+//         position: absolute;
+//     }
+// }
+
+// A PARTIR DE AQUI, AÚN POR CORREGIR
 
 .comparative-card {
     & .img-basic {
