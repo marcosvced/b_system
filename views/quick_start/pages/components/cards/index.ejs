@@ -131,7 +131,7 @@
                 </span>
             </div>
 
-            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24  d-flex flex-column">
+            <div class="card-business-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/business`, {
                     title: 'Business case 1: Brandemic',
                     icon: 'star',
@@ -152,7 +152,7 @@
                 </span>
             </div>
 
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/service`, {
                     titleService: 'Digital strategy',
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
@@ -175,7 +175,7 @@
         </div>
 
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
-            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/testimonial`, {
                     text: 'Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.',
                     avatar: {
@@ -248,25 +248,20 @@
             </div>
         </div>
 
-        <div class="inner-space-block-24">
-            <div class="project-container space-y-24">
-                <div class="position-relative h-100">
-                    <%- include( `${component}/card/project`, {
-                        header: 01,
-                        title: 'Calgary museum',
-                        link: {
-                            href: '#',
-                            label: 'Learn more',
-                            icon: 'links',
-                        }
-                    } ) %>
-                </div>
-                <span class="body-light-gray-text">
-                    Project card
-                </span>
-            </div>
+        <div class="inner-space-block-24 space-y-24">
+            <%- include( `${component}/card/project`, {
+                header: '01',
+                title: 'Calgary museum',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links',
+                }
+            } ) %>
+            <span class="body-light-gray-text">
+                Project card
+            </span>
         </div>
-
     </div>
 </section>
 <!--END: SECTION LIGHT-->
@@ -397,7 +392,7 @@
                 </span>
             </div>
 
-            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24  d-flex flex-column">
+            <div class="card-business-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/business`, {
                     title: 'Business case 1: Brandemic',
                     icon: 'star',
@@ -418,7 +413,7 @@
                 </span>
             </div>
 
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/service`, {
                     titleService: 'Digital strategy',
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
@@ -441,7 +436,7 @@
         </div>
 
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
-            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/testimonial`, {
                     text: 'Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.',
                     avatar: {
@@ -514,23 +509,19 @@
             </div>
         </div>
 
-        <div class="inner-space-block-24">
-            <div class="project-container space-y-24">
-                <div class="position-relative h-100">
-                    <%- include( `${component}/card/project`, {
-                        header: 01,
-                        title: 'Calgary museum',
-                        link: {
-                            href: '#',
-                            label: 'Learn more',
-                            icon: 'links',
-                        }
-                    } ) %>
-                </div>
-                <span class="body-light-gray-text">
-                    Project card
-                </span>
-            </div>
+        <div class="inner-space-block-24 space-y-24">
+            <%- include( `${component}/card/project`, {
+                header: '01',
+                title: 'Calgary museum',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links',
+                }
+            } ) %>
+            <span class="body-light-gray-text">
+                Project card
+            </span>
         </div>
 
     </div>
@@ -664,7 +655,7 @@
                 </span>
             </div>
 
-            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24 d-flex flex-column">
+            <div class="card-business-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/business`, {
                     title: 'Business case 1: Brandemic',
                     icon: 'star',
@@ -685,7 +676,7 @@
                 </span>
             </div>
 
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/service`, {
                     titleService: 'Digital strategy',
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
@@ -708,7 +699,7 @@
         </div>
 
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
-            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/testimonial`, {
                     text: 'Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.',
                     avatar: {
@@ -781,23 +772,19 @@
             </div>
         </div>
 
-        <div class="inner-space-block-24">
-            <div class="project-container space-y-24">
-                <div class="position-relative h-100">
-                    <%- include( `${component}/card/project`, {
-                        header: 01,
-                        title: 'Calgary museum',
-                        link: {
-                            href: '#',
-                            label: 'Learn more',
-                            icon: 'links',
-                        }
-                    } ) %>
-                </div>
-                <span class="body-light-gray-text">
-                    Project card
-                </span>
-            </div>
+        <div class="inner-space-block-24 space-y-24">
+            <%- include( `${component}/card/project`, {
+                header: '01',
+                title: 'Calgary museum',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links',
+                }
+            } ) %>
+            <span class="body-light-gray-text">
+                Project card
+            </span>
         </div>
 
     </div>
@@ -931,7 +918,7 @@
                 </span>
             </div>
 
-            <div class="business-card-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24 d-flex flex-column">
+            <div class="card-business-wrapper col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/business`, {
                     title: 'Business case 1: Brandemic',
                     icon: 'star',
@@ -952,7 +939,7 @@
                 </span>
             </div>
 
-            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/service`, {
                     titleService: 'Digital strategy',
                     text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ',
@@ -975,7 +962,7 @@
         </div>
 
         <div class="d-grid grid-4 grid-sm-8 grid-xl-12 column-gap-24 row-gap-48 space-bottom-48">
-            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 space-y-24">
+            <div class="col-1-to-5 col-sm-1-to-6 col-md-1-to-5 d-flex flex-column space-y-24">
                 <%- include( `${component}/card/testimonial`, {
                     text: 'Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.',
                     avatar: {
@@ -1048,23 +1035,19 @@
             </div>
         </div>
 
-        <div class="inner-space-block-24">
-            <div class="project-container space-y-24">
-                <div class="position-relative h-100">
-                    <%- include( `${component}/card/project`, {
-                        header: 01,
-                        title: 'Calgary museum',
-                        link: {
-                            href: '#',
-                            label: 'Learn more',
-                            icon: 'links',
-                        }
-                    } ) %>
-                </div>
-                <span class="body-light-gray-text">
-                    Project card
-                </span>
-            </div>
+        <div class="inner-space-block-24 space-y-24">
+            <%- include( `${component}/card/project`, {
+                header: '01',
+                title: 'Calgary museum',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links',
+                }
+            } ) %>
+            <span class="body-light-gray-text">
+                Project card
+            </span>
         </div>
 
     </div>
