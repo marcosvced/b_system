@@ -50,7 +50,7 @@
 @use "components/molecules/navdrawer";
 @use "components/molecules/product-card";
 @use "components/molecules/grid-cell";
-@use "components/molecules/icon-description";
+@use "components/molecules/description";
 @use "components/molecules/icon-service";
 @use "components/molecules/icon-social";
 @use "components/molecules/categories_menu";
@@ -76,4 +76,4 @@
 @use "components/organisms/contact-bar";
 @use "components/organisms/login";
 @use "components/organisms/price";
-
+@use "components/organisms/featuredContent";
