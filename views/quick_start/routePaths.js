@@ -44,6 +44,7 @@ module.exports = {
     PRODUCT_GRIDS: '/modules/productCards',
     SEARCHERS: '/modules/searchers',
     PRICES: '/modules/prices',
+    FEATURED_CONTENTS: '/modules/featuredContents',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

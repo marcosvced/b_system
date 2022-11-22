@@ -13,6 +13,16 @@
         padding-inline: helper.space(80);
     }
 
+    @include mixin.screen(xl) {
+        column-gap: helper.space(104);
+    }
+
+    #{$parent}-title {
+        @include mixin.screen(md) {
+            font-size: helper.rem(56);
+        }
+    }
+
     #{$parent}-subtitle {
         @extend %x5-text;
 

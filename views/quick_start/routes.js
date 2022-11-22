@@ -193,6 +193,11 @@ route.get(QUICK_START.PRICES, (request, response) => {
   render(response, path('modules', ['prices']), {}, { navigation })
 })
 
+/* Featured Contents */
+route.get(QUICK_START.FEATURED_CONTENTS, (request, response) => {
+  render(response, path('modules', ['featuredContents']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */

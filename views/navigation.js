@@ -73,6 +73,10 @@ const navigation = [
                 href: QUICK_START.CONTACT_BAR,
                 label: 'Contact Bar',
               },
+              {
+                href: QUICK_START.FEATURED_CONTENTS,
+                label: 'Featured Contents',
+              },
             ]
           },
         ]

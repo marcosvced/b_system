@@ -99,7 +99,115 @@
 <!-- END: CATEGORY MENU -->
 
 <!-- FEATURED CONTENT -->
-<!-- Módulo pendiente para hacer PR -->
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'exploration',
+    masked: {
+        img: {
+            src: 'featured-content_01',
+            alt: 'featured content image',
+        },
+        shape: 'module'
+    },
+    subtitle: '1. Exploration phase',
+    title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'left',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'empathy',
+    masked: {
+        img: {
+            src: 'featured-content_02',
+            alt: 'featured content image 2',
+        },
+        shape: 'consistency'
+    },
+    subtitle: '2. Empathy phase',
+    title: 'A deep understanding of the needs of the users involved in the solution.',
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'right',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'definition',
+    masked: {
+        img: {
+            src: 'featured-content_05',
+            alt: 'featured content image 3',
+        },
+        shape: 'system'
+    },
+    subtitle: '3. Definition phase',
+    title: 'Staying with what really adds value and brings us to new interesting perspectives.',
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'left',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'ideation',
+    masked: {
+        img: {
+            src: 'featured-content_03',
+            alt: 'featured content image 4',
+        },
+        shape: 'process'
+    },
+    subtitle: '4. Ideation phase',
+    title: 'In this phase, activities favor expansive thinking and we eliminate value judgments.',
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'right',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'prototyping',
+    masked: {
+        img: {
+            src: 'featured-content_04',
+            alt: 'featured content image 5',
+        },
+        shape: 'system'
+    },
+    subtitle: '5. Prototyping phase',
+    title: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.',
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'left',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
 <!-- END: FEATURED CONTENT -->
 
 <!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
@@ -112,106 +220,7 @@
 <!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
 
 <!-- PORTFOLIO GRID DECOMPOSED -->
-<%- include(`${module}/portfolioGrid/basic`, { 
-    grid: [
-        {
-            img: {
-                src: 'portfolio-basic-01',
-                alt: 'Portfolio example'
-            },
-            tag: '1',
-            title: 'Signage design',
-            text: 'We create signage of spaces, exterior signage, signs, signs, corporeal.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links'
-            },
-            shape: 'basic',
-            contentPosition: 'right'
-        },
-        {
-            img: {
-                src: 'portfolio-basic-02',
-                alt: 'Portfolio example'
-            },
-            tag: '2',
-            title: 'Corporate design',
-            text: 'Logos, company presentations, manuals, cards, corporate stationery.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links'
-            },
-            shape: 'basic',
-            contentPosition: 'right'
-        },
-        {
-            img: {
-                src: 'portfolio-horizontal-01',
-                alt: 'Portfolio horizontal example'
-            },
-            tag: '3',
-            title: 'Editorial design',
-            text: 'Design and layout of reports, catalogs, brochures, technical reports, publications, manuals, cards, corporate stationery.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links'
-            },
-            shape: 'horizontal',
-        },
-        {
-            img: {
-                src: 'portfolio-vertical-01',
-                srcMobile: 'portfolio-vertical-mobile-01',
-                alt: 'Portfolio vertical example'
-            },
-            tag: '3',
-            title: 'Editorial design',
-            text: 'Design and layout of reports, catalogs, brochures, technical reports, publications, manuals, cards, corporate stationery.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links'
-            },
-            shape: 'vertical',
-        },
-        {
-            img: {
-                src: 'portfolio-basic-03',
-                alt: 'Portfolio example'
-            },
-            tag: '5',
-            title: 'Advertising design',
-            text: 'Advertising graphics, posters, billboards, flyers, brochures.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links'
-            },
-            shape: 'basic',
-            contentPosition: 'right'
-        },
-        {
-            img: {
-                src: 'portfolio-basic-04',
-                alt: 'Portfolio example'
-            },
-            tag: '6',
-            title: 'Web design',
-            text: 'Online stores, corporate pages, interfaces, microsites, intranets, landing pages, banners, mobile device applications.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links'
-            },
-            shape: 'basic',
-            contentPosition: 'left'
-        },
-    ],
-    hasBorder: false
-}) %>
+
 <!-- END: PORTFOLIO GRID DECOMPOSED -->
 
 <!-- CTA -->
