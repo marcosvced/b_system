@@ -279,4 +279,10 @@
     text-align: center;
     align-items: center;
   }
+
+  .text-end {
+    position: absolute;
+    bottom: helper.rem(32);
+    right: helper.rem(32);
+  }
 }
