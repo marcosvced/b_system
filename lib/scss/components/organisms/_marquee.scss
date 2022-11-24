@@ -164,7 +164,7 @@
   &#{&}-cta {
 
     #{$parent}-content {
-      height: 100%;
+      // height: 100%;
       padding-block: helper.space(48);
       display: flex;
       flex-direction: column;
@@ -244,7 +244,12 @@
     }
   }
 
-  &-illustration {
+  &#{&}-illustration {
+    height: 100%;
+
+    @include mixin.screen(md) {
+      height: auto;
+    }
     @include backgounds.can-use((eren, mikasa, armin));
     @include backgounds.can-use(map.keys(palette.$secondary));
 
@@ -284,5 +289,22 @@
     position: absolute;
     bottom: helper.rem(32);
     right: helper.rem(32);
+  }
+}
+
+.marquee-wrapper {
+  .swiper[data-swiper-target="marquee-cta"] {
+    .swiper-pagination {
+      position: relative;
+      left: 0;
+      transform: translateX(0);
+      padding-top: helper.space(40);
+
+      @include mixin.screen(md) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 }
