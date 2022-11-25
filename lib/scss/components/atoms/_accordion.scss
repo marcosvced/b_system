@@ -35,6 +35,10 @@
             border-bottom: 1px solid themed.values($c-grayscale--400, $c-grayscale--900);
             background-color: themed.values($c-grayscale--light, $c-grayscale--1100);
           }
+
+          &:focus {
+            box-shadow: none;
+          }
     }
 
     .accordion-button:not(.collapsed) {

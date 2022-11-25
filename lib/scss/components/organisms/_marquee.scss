@@ -305,6 +305,11 @@
         left: 50%;
         transform: translateX(-50%);
       }
+
+      @include mixin.screen(xl) {
+        left: helper.rem(32);
+        transform: translateX(0);
+      }
     }
   }
 }
