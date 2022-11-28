@@ -1,0 +1,438 @@
+<%- include(`${view}/demos/layout`)%>
+
+<%- contentFor('body') %>
+
+<!-- MARQUEE HERO -->
+<%- include(`${module}/marquee/extended/extended`, {
+    slides: [
+        {
+            img: {
+                src: 'marquee_standar-01',
+                alt: 'Marquee image'
+            },
+            title: "Let's do it different",
+            text: 'The web design tool with the most complete design system.',
+            btn: {
+                label: 'Start with B_system',
+                isCTA: true,
+                icon: 'links',
+            },
+            quote: 'People ignore design that ignores people',
+            isDarkened: true
+        },
+        {
+            img: {
+                src: 'marquee_standar-02',
+                alt: 'Marquee image 2'
+            },
+            title: "Work in an agile way",
+            text: 'B_system will help you create responsive web pages with very little effort.',
+            btn: {
+                label: 'Start with B_system',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            quote: 'People ignore design that ignores people',
+            isDarkened: true
+        },
+        {
+            img: {
+                src: 'marquee_standar-03',
+                alt: 'Marquee image 3'
+            },
+            title: "Enjoy the great result",
+            text: 'It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+            btn: {
+                label: 'Start with B_system',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            quote: 'People ignore design that ignores people',
+            isDarkened: true
+        },
+    ]
+}) %>
+<!-- END: MARQUEE HERO -->
+
+<!-- BASIC CONTENT HEADER SIMPLE -->
+<%- include(`${module}/basicContent/simple`, {
+    variant:'center', title:'Our work',
+    text:'B_system is a multipurpose HTML5 template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT HEADER SIMPLE -->
+
+<!-- PORTFOLIO BASIC -->
+<%- include(`${module}/portfolioGrid/basic`, {
+    grid: [
+        {
+        img: {
+            src: 'portfolio-basic-05',
+            alt: 'Portfolio example'
+        },
+        tag: '1',
+        title: 'Bandemic',
+        text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business.',
+        link: {
+            href: '#',
+            label: 'View case study',
+            icon: 'links'
+        },
+        shape: 'basic',
+        contentPosition: 'right'
+        },
+        {
+        img: {
+            src: 'portfolio-basic-06',
+            alt: 'Portfolio example'
+        },
+        tag: '2',
+        title: 'Iterátika',
+        text: 'B_system is a multipurpose HTML5 template created with the proposal of maximizing efficiency.',
+        link: {
+            href: '#',
+            label: 'View case study',
+            icon: 'links'
+        },
+        shape: 'basic',
+        contentPosition: 'right'
+        },
+        {
+        img: {
+            src: 'portfolio-horizontal-01',
+            alt: 'Portfolio horizontal example'
+        },
+        tag: '3',
+        title: 'Miram Agency',
+        text: 'B_system is a multipurpose HTML5 template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand.',
+        link: {
+            href: '#',
+            label: 'View case study',
+            icon: 'links'
+        },
+        shape: 'horizontal',
+        },
+        {
+        img: {
+            src: 'portfolio-vertical-02',
+            srcMobile: 'portfolio-vertical-mobile-02',
+            alt: 'Portfolio vertical example'
+        },
+        tag: '4',
+        title: 'Koowan',
+        text: 'B_system is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
+        link: {
+            href: '#',
+            label: 'View case study',
+            icon: 'links'
+        },
+        shape: 'vertical',
+        },
+        {
+        img: {
+            src: 'portfolio-basic-07',
+            alt: 'Portfolio example'
+        },
+        tag: '5',
+        title: 'Auriga Group',
+        text: 'B_system is a multipurpose HTML5 template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand.',
+        link: {
+            href: '#',
+            label: 'View case study',
+            icon: 'links'
+        },
+        shape: 'basic',
+        contentPosition: 'right'
+        },
+        {
+        img: {
+            src: 'portfolio-basic-08',
+            alt: 'Portfolio example'
+        },
+        tag: '6',
+        title: 'Wave',
+        text: 'B_system is a multipurpose HTML5 template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand.',
+        link: {
+            href: '#',
+            label: 'View case study',
+            icon: 'links'
+        },
+        shape: 'basic',
+        contentPosition: 'left'
+        },
+    ],
+    hasBorder: false
+}) %>
+<!-- END: PORTFOLIO BASIC -->
+
+<!-- ICON SERVICES -->
+<%- include(`${module}/iconService/iconService`, {
+    title: 'Know all our services',
+    text: 'Learn about all the services we can offer you to help you build your brand.',
+    link: {
+        href: '#',
+        label: 'More info',
+        icon: 'info',
+        iconPosition: 'before'
+    },
+    accordion: [
+        {
+            idAccordion: 'light-accordion1',
+            idItem: 'light-item1',
+            label: 'Branding',
+            content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
+        },
+        {
+            idAccordion: 'light-accordion2',
+            idItem: 'light-item2',
+            label: 'Digital estrategic',
+            content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
+        },
+        {
+            idAccordion: 'light-accordion3',
+            idItem: 'light-item3',
+            label: 'UX / UI design',
+            content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
+        },
+    ],
+    isDarkened: true,
+    isDark: false
+}) %>
+<!-- END: ICON SERVICES -->
+
+<!-- STATISTICS -->
+<%- include(`${module}/statistic/statistic`, {
+    img: {
+        src: 'statistic-1.png',
+        alt: 'statistic image'
+    },
+    columns: [
+        {
+            data: '24_',
+            title: 'Successful projects',
+            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links',
+                iconPosition: 'after'
+            }
+        },
+        {
+            data: '16_',
+            title: 'Big trademark',
+            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links',
+                iconPosition: 'after'
+            }
+        },
+        {
+            data: '10_',
+            title: 'Countries',
+            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links',
+                iconPosition: 'after'
+            }
+        },
+        {
+            data: '26_',
+            title: 'Collaborators',
+            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links',
+                iconPosition: 'after'
+            }
+        },
+    ],
+    isDarkened: false,
+    isDark: false
+    })
+%>
+<!-- END: STATISTICS -->
+
+<!-- PRICES -->
+<%- include(`${module}/price/price`, {
+    title: {
+        extended: 'Know our prices and choose your ideal pack',
+        shortened: 'Choose your ideal pack'
+    },
+    background: {
+        src: 'prices_background',
+        alt: 'background image'
+    },
+    cards: [
+        {
+            price: '$ 12',
+            icon: 'saving-filled',
+            title: 'Basic product',
+            text: 'Sample text for basic product. Basic resources for starter brands.',
+            link: {
+                href: '#',
+                label: 'Choose',
+                icon: 'links'
+            },
+            typesListElements: [
+                {
+                    icon: 'check',
+                    text: 'Basic resource example.'
+                },
+                {
+                    icon: 'close-blade',
+                    text: 'Unlimited websites.'
+                },
+                {
+                    icon: 'close-blade',
+                    text: 'Unmetered storage.'
+                },
+            ]
+        },
+        {
+            price: '$ 22',
+            icon: 'heart-filled',
+            title: 'Standard product',
+            text: 'Sample text for standard product. More resources and flexibility for multiple sites.',
+            link: {
+                href: '#',
+                label: 'Choose',
+                icon: 'links'
+            },
+            typesListElements: [
+                {
+                    icon: 'check',
+                    text: 'Basic resource example.'
+                },
+                {
+                    icon: 'check',
+                    text: 'Unlimited websites.'
+                },
+                {
+                    icon: 'close-blade',
+                    text: 'Unmetered storage.'
+                },
+            ]
+        },
+        {
+            price: '$ 32',
+            icon: 'secure-filled',
+            title: 'Premium product',
+            text: 'Sample text for deluxe product. More power for complex sites.',
+            link: {
+                href: '#',
+                label: 'Choose',
+                icon: 'links'
+            },
+            typesListElements: [
+                {
+                    icon: 'check',
+                    text: 'Basic resource example.'
+                },
+                {
+                    icon: 'check',
+                    text: 'Unlimited websites.'
+                },
+                {
+                    icon: 'check',
+                    text: 'Unmetered storage.'
+                },
+            ]
+        },
+    ],
+    isDarkened: true,
+    isDark: false,
+    haveBorder: false
+}) %>
+<!-- END: PRICES -->
+
+<!-- TESTIMONIAL -->
+<%- include(`${module}/testimonial/testimonial`, {
+    title: 'The opinion of our clients',
+    testimonials: [
+        {
+            text: "Many of the failures in people's lives occurred when they did not realize what was close to success.",
+            avatar: {
+                src: 'avatar_testimonial-1',
+                alt: 'Melissa Edgar',
+                name: 'Melissa Edgar',
+                job: 'UX designer'
+            },
+            stars: [
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+            ]
+        },
+        {
+            text: "Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.",
+            avatar: {
+                src: 'avatar_testimonial-1',
+                alt: 'Sandra Golpe',
+                name: 'Sandra Golpe',
+                job: 'Marketing manager'
+            },
+            stars: [
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: false},
+            ]
+        },
+        {
+            text: "Always keep in mind that your own will to succeed is much more important than anything else.",
+            avatar: {
+                src: 'avatar_testimonial-1',
+                alt: 'Mario Golpe',
+                name: 'Mario Golpe',
+                job: 'Marketing manager'
+            },
+            stars: [
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: false},
+            ]
+        },
+        
+    ],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: TESTIMONIAL -->
+
+<!-- ICON SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, {
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICON SOCIAL -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->

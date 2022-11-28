@@ -12,7 +12,7 @@
         left: 0;
 
         #{$parent}-bg {
-            object-fit: cover;
+            object-fit: none;
         }
     }
 }
