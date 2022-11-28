@@ -38,15 +38,17 @@ isDarkened: true,
 
 <%- contentFor('script') %>
     const header = document.querySelector('header.header')
-    header.setAttribute('data-bsystem','dark')
-    header.addEventListener(b_system.$EVENTS.ON_HEADER_BECOMES_NARROWER, (e) => {
+    header.setAttribute('data-bsystem', 'dark')
+    header.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (e) => {
         const isBodyDark = !!document.querySelector('body[data-bsystem="dark"]')
         const img = document.querySelector('header img.logo')
-        if (e.detail.isNarrow && !isBodyDark) {
+
+        if (e.detail.isTransparent && !isBodyDark) {
+            img.src = '/assets/img/logo-light.svg'
+            header.setAttribute('data-bsystem', 'dark')
+        } else {
             img.src = '/assets/img/logo-dark.svg'
             header.removeAttribute('data-bsystem')
-        } else {
-            img.src = '/assets/img/logo-light.svg'
-            header.setAttribute('data-bsystem','dark')
+
         }
     })
