@@ -14,6 +14,10 @@ const navigation = [
         label: 'Home 2',
         href: DEMOS.HOME2,
       },
+      {
+        label: 'Branding',
+        href: DEMOS.BRANDING,
+      },
     ],
   },
   {

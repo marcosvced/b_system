@@ -21,4 +21,9 @@ route.get(DEMOS.HOME2, (request, response) => {
   render(response, path('home2'), {}, { navigation })
 })
 
+/* Branding */
+route.get(DEMOS.BRANDING, (request, response) => {
+  render(response, path('branding'), {}, { navigation })
+})
+
 module.exports = route

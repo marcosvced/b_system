@@ -3,5 +3,6 @@ module.exports = {
     ROUTE_NAME: 'demos',
     HOME: '/demos/home',
     HOME2: '/demos/home2',
+    BRANDING: '/demos/branding',
   },
 }
