@@ -3,7 +3,10 @@
 <%- contentFor('body') %>
 
 <!-- MARQUEE HERO -->
+
 <%- include(`${module}/marquee/extended/extended`, {
+    isDark:true,
+    interactiveButtonCssClass: 'bg-light-100',
     slides: [
         {
             img: {
@@ -18,7 +21,6 @@
                 icon: 'links',
             },
             quote: 'People ignore design that ignores people',
-            isDarkened: true
         },
         {
             img: {
@@ -34,7 +36,6 @@
                 iconPosition: 'after'
             },
             quote: 'People ignore design that ignores people',
-            isDarkened: true
         },
         {
             img: {
@@ -50,7 +51,6 @@
                 iconPosition: 'after'
             },
             quote: 'People ignore design that ignores people',
-            isDarkened: true
         },
     ]
 }) %>

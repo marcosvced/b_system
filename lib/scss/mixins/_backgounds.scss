@@ -39,7 +39,8 @@ $merged-palette: f.map-collect(
       } @else if (map.get(palette.$grayscale, $key)) {
         $color: colors.grayscale($key);
       } @else if (map.get(palette.$opacity, $key)) {
-        $color: colors.grayscale($key);
+        @debug $key;
+        $color: colors.opacity($key);
       } @else {
         @error "Key #{$key} doesn't exist.";
       }
@@ -53,5 +54,4 @@ $merged-palette: f.map-collect(
       }
     }
   }
-
 }

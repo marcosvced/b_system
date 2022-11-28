@@ -10,7 +10,8 @@
     width: min-content;
     z-index: 0;
 
-    .form-check-input {
+    .form-switch-input {
+        position: absolute;
         width: 100%;
         height: helper.rem(24);
         cursor: pointer;
@@ -19,6 +20,7 @@
         transition: none;
         background: transparent !important;
         box-shadow: none !important;
+        opacity: 0;
 
         &:hover,
         &:active {
