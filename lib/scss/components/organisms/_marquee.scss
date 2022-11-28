@@ -11,6 +11,17 @@
   &-wrapper {
     overflow-x: hidden;
     z-index: 0;
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: $c-opacity__gray--300;
+      display: block;
+    }
+
     .swiper {
       z-index: -1;
 
@@ -253,25 +264,6 @@
     @include backgounds.can-use((eren, mikasa, armin));
     @include backgounds.can-use(map.keys(palette.$secondary));
 
-  }
-
-  &#{&}-extended {
-    @include mixin.screen(xl) {
-      align-items: center;
-
-      #{$parent}-title {
-        max-width: helper.rem(968);
-        margin-inline: auto;
-      }
-    }
-
-    &#{$parent}-space {
-      padding-inline: helper.space(16) !important;
-    }
-
-    #{$parent}-content {
-      text-align: center;
-    }
   }
 
   &#{&}-basic {

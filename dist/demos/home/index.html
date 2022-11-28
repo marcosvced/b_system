@@ -43,7 +43,7 @@
           </div>
         </div>
         <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min ">
-          <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
+          <img src="../../assets/img/logo-light.svg" class="logo" alt="b system logo" />
         </a>
         <div class="nav-wrapper order-2 order-xl-1 col">
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
@@ -337,15 +337,19 @@
                 <picture>
                   <img class="marquee-bg " src="../../assets/img/marquee/marquee_extended-01.jpg" alt="Marquee image">
                 </picture>
-                <div class="text-center space-y-24 space-y-md-32 container">
-                  <h1 class="text-white">Start your digital business</h1>
-                  <p class="marquee-text text-white">Promote your business with B_system. The web design tool with the most complete design system.</p>
-                  <button type="button" class="btn btn-primary btn-primary-cta">
-                    <span>Start with B System</span>
-                    <i class="icon-links"></i>
-                  </button>
+                <div class="overlay"></div>
+                <div style="z-index: 1">
+                  <div class="text-center space-y-24 space-y-md-32 container">
+                    <h1 class="text-white">Start your digital business</h1>
+                    <p class="marquee-text text-white">Promote your business with B_system. The web design tool with the most complete design system.</p>
+                    <button type="button" class="btn btn-primary btn-primary-cta">
+                      <span>Start with B System</span>
+                      <i class="icon-links"></i>
+                    </button>
+                  </div>
+                  <p class="text-end align-self-end text-white body-italic-text body-light-text d-none d-xl-block">
+                    "People ignore design that ignores people"</p>
                 </div>
-                <p class="text-end align-self-end text-white body-italic-text body-light-text d-none d-xl-block">"People ignore design that ignores people"</p>
               </div>
             </div>
             <div class="swiper-slide">
@@ -353,15 +357,19 @@
                 <picture>
                   <img class="marquee-bg " src="../../assets/img/marquee/marquee_extended-02.jpg" alt="Marquee image 2">
                 </picture>
-                <div class="text-center space-y-24 space-y-md-32 container">
-                  <h1 class="text-white">Work in an agile way</h1>
-                  <p class="marquee-text text-white">B_system will help you create responsive web pages with very little effort.</p>
-                  <button type="button" class="btn btn-primary btn-primary-cta">
-                    <span>Start with B System</span>
-                    <i class="icon-links"></i>
-                  </button>
+                <div class="overlay"></div>
+                <div style="z-index: 1">
+                  <div class="text-center space-y-24 space-y-md-32 container">
+                    <h1 class="text-white">Work in an agile way</h1>
+                    <p class="marquee-text text-white">B_system will help you create responsive web pages with very little effort.</p>
+                    <button type="button" class="btn btn-primary btn-primary-cta">
+                      <span>Start with B System</span>
+                      <i class="icon-links"></i>
+                    </button>
+                  </div>
+                  <p class="text-end align-self-end text-white body-italic-text body-light-text d-none d-xl-block">
+                    "People ignore design that ignores people"</p>
                 </div>
-                <p class="text-end align-self-end text-white body-italic-text body-light-text d-none d-xl-block">"People ignore design that ignores people"</p>
               </div>
             </div>
             <div class="swiper-slide">
@@ -369,15 +377,19 @@
                 <picture>
                   <img class="marquee-bg " src="../../assets/img/marquee/marquee_extended-03.jpg" alt="Marquee image 3">
                 </picture>
-                <div class="text-center space-y-24 space-y-md-32 container">
-                  <h1 class="text-white">Enjoy the great result</h1>
-                  <p class="marquee-text text-white">It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
-                  <button type="button" class="btn btn-primary btn-primary-cta">
-                    <span>Start with B System</span>
-                    <i class="icon-links"></i>
-                  </button>
+                <div class="overlay"></div>
+                <div style="z-index: 1">
+                  <div class="text-center space-y-24 space-y-md-32 container">
+                    <h1 class="text-white">Enjoy the great result</h1>
+                    <p class="marquee-text text-white">It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
+                    <button type="button" class="btn btn-primary btn-primary-cta">
+                      <span>Start with B System</span>
+                      <i class="icon-links"></i>
+                    </button>
+                  </div>
+                  <p class="text-end align-self-end text-white body-italic-text body-light-text d-none d-xl-block">
+                    "People ignore design that ignores people"</p>
                 </div>
-                <p class="text-end align-self-end text-white body-italic-text body-light-text d-none d-xl-block">"People ignore design that ignores people"</p>
               </div>
             </div>
 
@@ -1236,6 +1248,21 @@
 
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
+    <script>
+      const header = document.querySelector('header.header')
+      header.setAttribute('data-bsystem', 'dark')
+      header.addEventListener(b_system.$EVENTS.ON_HEADER_BECOMES_NARROWER, (e) => {
+        const isBodyDark = !!document.querySelector('body[data-bsystem="dark"]')
+        const img = document.querySelector('header img.logo')
+        if (e.detail.isNarrow && !isBodyDark) {
+          img.src = '../../assets/img/logo-dark.svg'
+          header.removeAttribute('data-bsystem')
+        } else {
+          img.src = '../../assets/img/logo-light.svg'
+          header.setAttribute('data-bsystem', 'dark')
+        }
+      })
+    </script>
 
     <!--END: SCRIPTS-->
   </body>
