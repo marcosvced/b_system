@@ -11,7 +11,7 @@ const navigation = [
         href: DEMOS.HOME,
       },
       {
-        label: 'Home 2',
+        label: 'Home CTA',
         href: DEMOS.HOME2,
       },
       {
