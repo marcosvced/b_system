@@ -6,33 +6,8 @@
 
 .portfolio {
     $parent: &;
-
-    &-img {
-        object-fit: cover;
-    }
-
-    &-tag {
-        background-color: $c-eren--100;
-        width: helper.rem(48);
-        height: helper.rem(72);
-        padding-bottom: helper.rem(8);
-        border:{
-            bottom-left-radius: helper.rem(32);
-            bottom-right-radius: helper.rem(32);
-        }
-    }
-
-    &-img-container, &-content {
-        border: themed.values(helper.rem(.1) solid $c-grayscale--200, none);
-    }
-
-    &-content {
-        padding: {
-            top: 0;
-            bottom: helper.rem(48);
-            inline: helper.rem(48);
-        }
-    }
+    $border-portfolio: themed.values(helper.rem(.1) solid $c-grayscale--200, none);
+    border-block: $border-portfolio;
 
     &-basic, &-vertical {
         flex-direction: column;
@@ -50,7 +25,7 @@
             }
         }
     }
-
+    
     &-vertical {
         @include mixin.screen(md) {
             grid-row: span 2;
@@ -75,35 +50,81 @@
         }
     }
 
-    // &-decomposed {
-    //     &-basic {
-    //         padding-bottom: 100%;
-    //     }
-    
-    //     &-horizontal {
-    //         padding-bottom: 100%;
-    
-    //         @include mixin.screen(xl) {
-    //             padding-bottom: 50%;
-    //         }
-    //     }
-    
-    //     &-vertical {
-    //         padding-bottom: 100%;
-    
-    //         @include mixin.screen(md) {
-    //             padding-bottom: 200%;
-    //         }
-    //     }
-    
-    //     &-container-img {
-    //         width: 100%;
-    //         height: 100%;
-    //         display: block;
-    //     }
-    
-    //     &-img {
-    //         width: 100%;
-    //     }
-    // }
+    &-card {
+        &:not(:first-of-type) {
+            border-top: $border-portfolio;
+        }
+
+        #{$parent}-container-img {
+            border-bottom: $border-portfolio;
+
+            &:not(#{$parent}-horizontal #{$parent}-container-img) {
+                @include mixin.screen(md) {
+                    border-bottom: none;
+                    border-right: $border-portfolio;
+                }
+            }
+
+            @include mixin.screen(xl) {
+                border-bottom: none;
+                border-inline: $border-portfolio;
+            }
+
+            #{$parent}-img {
+                object-fit: cover;
+            }
+        }
+
+        #{$parent}-content {
+            padding: {
+                top: 0;
+                bottom: helper.rem(48);
+                inline: helper.rem(48);
+            }
+
+            #{$parent}-tag {
+                background-color: $c-eren--100;
+                width: helper.rem(48);
+                height: helper.rem(72);
+                padding-bottom: helper.rem(8);
+                border:{
+                    bottom-left-radius: helper.rem(32);
+                    bottom-right-radius: helper.rem(32);
+                }
+            }
+        }
+
+        &.flex-xl-row-reverse {
+            #{$parent}-content {
+                @include mixin.screen(xl) {
+                    border-left: $border-portfolio;
+                }
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            $transition-hover: .35s ease-in-out;
+
+            #{$parent}-container-img {
+                filter: brightness(.96);
+                transition: $transition-hover;
+            }
+
+            #{$parent}-content {
+                background-color: themed.values($c-eren--600, $c-eren);
+                transition: $transition-hover;
+
+                #{$parent}-title, #{$parent}-text, #{$parent}-tag, .action-link {
+                    color: $c-grayscale--light;
+                }
+
+                #{$parent}-tag {
+                    background-color: $c-opacity__light--100;
+                    transition: $transition-hover;
+                }
+            }
+        }
+
+    }
 }
