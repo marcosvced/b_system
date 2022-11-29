@@ -54,6 +54,9 @@
     }
 
   }
+  textarea.form-control {
+    height: size.rem(160);
+  }
 
   label {
     color: $c-grayscale--700;
