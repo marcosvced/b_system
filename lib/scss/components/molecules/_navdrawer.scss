@@ -79,7 +79,7 @@ $_header-height: size.rem(48);
               transition: padding-left 0.25s ease;
 
               &.active {
-                background-color: colors.grayscale(100);
+                background-color: $c-grayscale--100;
                 padding-left: size.space(16);
               }
 

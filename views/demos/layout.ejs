@@ -16,10 +16,12 @@ const headerConfig = {
     size: 'full',
     isSticky: true,
     hasBackground: false,
+    hasLightNav: true,
     buttons: [
         {
             label: 'Purchase B_system',
-            mobileIcon: 'cart'
+            mobileIcon: 'cart',
+            variant: 'glass'
         }
     ]
 }
@@ -38,17 +40,26 @@ isDarkened: true,
 
 <%- contentFor('script') %>
     const header = document.querySelector('header.header')
-    header.setAttribute('data-bsystem', 'dark')
     header.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (e) => {
         const isBodyDark = !!document.querySelector('body[data-bsystem="dark"]')
         const img = document.querySelector('header img.logo')
-
-        if (e.detail.isTransparent && !isBodyDark) {
-            img.src = '/assets/img/logo-light.svg'
-            header.setAttribute('data-bsystem', 'dark')
+        const purchaseButton = document.querySelector('header button.btn.btn-fit')
+        const nav = document.querySelector('header nav.navbar > ul')
+        if (e.detail.isTransparent) {
+            if (!isBodyDark) {
+                img.src = '/assets/img/logo-light.svg'
+                nav.classList.add('light-nav')
+            }
+            purchaseButton.classList.remove('btn-primary')
+            purchaseButton.classList.add('btn-glass')
         } else {
-            img.src = '/assets/img/logo-dark.svg'
-            header.removeAttribute('data-bsystem')
+            if (!isBodyDark) {
+                img.src = '/assets/img/logo-dark.svg'
+                header.removeAttribute('data-bsystem')
+                nav.classList.remove('light-nav')
+            }
+            purchaseButton.classList.remove('btn-glass')
+            purchaseButton.classList.add('btn-primary')
 
         }
     })
