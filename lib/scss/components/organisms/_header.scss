@@ -13,146 +13,165 @@
 @use '../../mixins' as mixin;
 
 header.header {
-    padding-block: size.rem(14);
-    padding-inline: size.space(16);
-    min-height: size.rem(48);
-    transition: all .35s ease-in-out, width 0s;
-    position: relative;
+  padding-block: size.rem(14);
+  padding-inline: size.space(16);
+  min-height: size.rem(48);
+  transition: all .35s ease-in-out, width 0s;
+  position: relative;
+
+  @include media.screen(xl) {
+    min-height: size.rem(92);
+    padding-block: size.rem(22);
+    padding-inline: size.space(32);
+
+    &.header-narrow {
+      padding-block: size.rem(16);
+      min-height: size.rem(72);
+    }
+  }
+
+  .navbar-brand {
+    padding: 0;
+    margin: 0;
+    height: size.rem(20);
+
+    > img {
+      height: 100%;
+      display: block;
+    }
 
     @include media.screen(xl) {
-        min-height: size.rem(92);
-        padding-block: size.rem(22);
-        padding-inline: size.space(32);
-
-        &.header-narrow {
-            padding-block: size.rem(16);
-            min-height: size.rem(72);
-        }
+      height: size.rem(30);
     }
+  }
 
-    .navbar-brand {
-        padding: 0;
-        margin: 0;
-        height: size.rem(20);
-
-        > img {
-            height: 100%;
-            display: block;
-        }
-
-        @include media.screen(xl) {
-            height: size.rem(30);
-        }
+  // fixes bootstrap container padding
+  > .container-xl {
+    padding: 0;
+    @include media.screen(xl) {
+      padding-left: .75rem;
+      padding-right: .75rem;
     }
+  }
 
-    // fixes bootstrap container padding
-    > .container-xl {
-        padding: 0;
-        @include media.screen(xl) {
-            padding-left: .75rem;
-            padding-right: .75rem;
-        }
-    }
-
-    &.header-transparent {
-        @include themed.properties {
-            background-color: transparent;
-            box-shadow: none;
-        }
-
-        nav.navbar {
-            .navbar-nav {
-                .nav-item {
-                    > a {
-                        //color: colors.grayscale(light);
-                        @extend %body-regular-text;
-                        text-align: center;
-
-                        &.active {
-                            //color: colors.grayscale(light);
-                            @extend %body-bold-text;
-                        }
-                    }
-
-                    &:hover {
-                        a:not(.active):not(.disabled) {
-                            //color: colors.body(30);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.header-light {
-        @include themed.properties {
-            background-color: themed.values(colors.grayscale(light), colors.grayscale(1100));
-            box-shadow: themed.values(0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 0 0 hsl(0, 0%, 27%));
-        }
-    }
-
-    &.header-fixed {
-        z-index: 100;
-        position: fixed;
-        width: 100%;
-        top: 0;
+  &.header-transparent {
+    @include themed.properties {
+      background-color: transparent;
+      box-shadow: none;
     }
 
     nav.navbar {
-        padding: 0;
-        ul.dropdown-submenu{
-            padding: 0;
-            span.dropdown-item {
-                pointer-events: none;
+      .navbar-nav {
+        .nav-item {
+          > a {
+            //color: colors.grayscale(light);
+            @extend %body-regular-text;
+            text-align: center;
+
+            &.active {
+              //color: colors.grayscale(light);
+              @extend %body-bold-text;
             }
+          }
+
+          &:hover {
+            a:not(.active):not(.disabled) {
+              //color: colors.body(30);
+            }
+          }
         }
-        li {
-            padding: 0;
-            list-style: none;
-        }
+      }
     }
+  }
+
+  &.header-light {
+    @include themed.properties {
+      background-color: themed.values(colors.grayscale(light), colors.grayscale(1100));
+      box-shadow: themed.values(0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 0 0 hsl(0, 0%, 27%));
+    }
+  }
+
+  &.header-fixed {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  nav.navbar {
+    padding: 0;
+
+    ul.dropdown-submenu {
+      padding: 0;
+
+      span.dropdown-item {
+        pointer-events: none;
+      }
+    }
+
+    li {
+      padding: 0;
+      list-style: none;
+    }
+  }
 
 }
 
 nav {
-    &.navbar {
-        .navbar-nav {
-            display: none;
-            padding-block: size.rem(32);
-            @include media.screen(lg) {
-                order: 3;
-                display: inline-flex;
-                flex-direction: row;
-                flex-grow: 1;
-                padding-block: 0;
-                @include space.x(32)
+  &.navbar {
+    .navbar-nav {
+      display: none;
+      padding-block: size.rem(32);
+      @include media.screen(lg) {
+        order: 3;
+        display: inline-flex;
+        flex-direction: row;
+        flex-grow: 1;
+        padding-block: 0;
+        @include space.x(32)
+      }
+
+      &.light-nav {
+        .nav-item {
+          > a {
+            color: $c-grayscale--600;
+            &.active {
+              color: $c-grayscale--light;
             }
-
-            .nav-item {
-                > a {
-                    padding: 0;
-                    @extend %body-regular-text;
-                    text-align: center;
-                    @include themed.properties {
-                        color: themed.values(colors.grayscale(800), colors.grayscale(600));
-                    }
-
-                    &.active {
-                        @extend %body-bold-text;
-                        @include themed.properties {
-                            color: themed.values(colors.body(off), colors.body(light));
-                        }
-                    }
-                }
-
-                &:hover {
-                    a:not(.active):not(.disabled) {
-                        @include themed.properties {
-                            color: themed.values(colors.body(off), colors.body(light));
-                        }
-                    }
-                }
+          }
+          &:hover {
+            > a:not(.active):not(.disabled) {
+              color: $c-grayscale--light;
             }
+          }
         }
+      }
+
+      .nav-item {
+        > a {
+          padding: 0;
+          @extend %body-regular-text;
+          text-align: center;
+          @include themed.properties {
+            color: themed.values(colors.grayscale(800), colors.grayscale(600));
+          }
+
+          &.active {
+            @extend %body-bold-text;
+            @include themed.properties {
+              color: themed.values(colors.body(off), colors.body(light));
+            }
+          }
+        }
+
+        &:hover {
+          a:not(.active):not(.disabled) {
+            @include themed.properties {
+              color: themed.values(colors.body(off), colors.body(light));
+            }
+          }
+        }
+      }
     }
+  }
 }

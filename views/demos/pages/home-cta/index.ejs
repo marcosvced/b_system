@@ -1,23 +1,24 @@
-<%- include(`${view}/quick_start/layout`) %>
-
+<%- include(`${view}/demos/layout`)%>
 <%- contentFor('header') %>
 <%
 const headerConfig = {
     items: navigation,
-    justify: 'right',
-    size: 'full',
     isSticky: true,
-    hasBackground: true,
+    canSearch: true,
+    size: 'full',
+    hasBackground: false,
     buttons: [
         {
-            label: 'Purchase B_system',
-            mobileIcon: 'cart'
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'subtle'
         }
     ]
 }
 %>
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
+<%- contentFor('body') %>
 <!-- MARQUEE HERO -->
 <section class="section section-divider p-0">
     <%- include(`${module}/marquee/cta/cta`, {
@@ -262,3 +263,18 @@ const headerConfig = {
     hasBorder: false
 }) -%>
 <!-- END: ICONS SOCIAL -->
+<%- contentFor('script') %>
+
+    const header = document.querySelector('header.header')
+    header.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (e) => {
+        const isBodyDark = !!document.querySelector('body[data-bsystem="dark"]')
+        const accessButton = document.querySelector('header button.btn.btn-fit')
+        if (e.detail.isTransparent) {
+            accessButton.classList.remove('btn-tertiary')
+            accessButton.classList.add('btn-subtle')
+        } else {
+            accessButton.classList.remove('btn-subtle')
+            accessButton.classList.add('btn-tertiary')
+
+        }
+    })

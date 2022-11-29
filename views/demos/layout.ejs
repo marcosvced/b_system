@@ -15,18 +15,18 @@ const headerConfig = {
     justify: 'right',
     size: 'full',
     isSticky: true,
-    hasBackground: false,
+    hasBackground: true,
     buttons: [
         {
             label: 'Purchase B_system',
-            mobileIcon: 'cart'
+            mobileIcon: 'cart',
         }
     ]
 }
 %>
 
 
-<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 
 <%- contentFor('footer') %>
@@ -36,19 +36,3 @@ text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_sys
 isDarkened: true,
 }) %>
 
-<%- contentFor('script') %>
-    const header = document.querySelector('header.header')
-    header.setAttribute('data-bsystem', 'dark')
-    header.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (e) => {
-        const isBodyDark = !!document.querySelector('body[data-bsystem="dark"]')
-        const img = document.querySelector('header img.logo')
-
-        if (e.detail.isTransparent && !isBodyDark) {
-            img.src = '/assets/img/logo-light.svg'
-            header.setAttribute('data-bsystem', 'dark')
-        } else {
-            img.src = '/assets/img/logo-dark.svg'
-            header.removeAttribute('data-bsystem')
-
-        }
-    })
