@@ -63,6 +63,9 @@
                     <li class="item-branding">
                       <a class="dropdown-item active" href="../../demos/branding">Branding</a>
                     </li>
+                    <li class="item-financial">
+                      <a class="dropdown-item " href="../../demos/financial">Financial</a>
+                    </li>
                   </ul>
                 </li>
                 <li class="nav-item  ">
@@ -1197,6 +1200,29 @@
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
     <script>
+      const header = document.querySelector('header.header')
+      header.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (e) => {
+        const isBodyDark = !!document.querySelector('body[data-bsystem="dark"]')
+        const img = document.querySelector('header img.logo')
+        const purchaseButton = document.querySelector('header button.btn.btn-fit')
+        const nav = document.querySelector('header nav.navbar > ul')
+        if (e.detail.isTransparent) {
+          if (!isBodyDark) {
+            img.src = '../../assets/img/logo-light.svg'
+            nav.classList.add('light-nav')
+          }
+          purchaseButton.classList.remove('btn-primary')
+          purchaseButton.classList.add('btn-glass')
+        } else {
+          if (!isBodyDark) {
+            img.src = '../../assets/img/logo-dark.svg'
+            header.removeAttribute('data-bsystem')
+            nav.classList.remove('light-nav')
+          }
+          purchaseButton.classList.remove('btn-glass')
+          purchaseButton.classList.add('btn-primary')
+        }
+      })
     </script>
 
     <!--END: SCRIPTS-->
