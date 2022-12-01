@@ -112,7 +112,7 @@
             }
 
             #{$parent}-content {
-                background-color: themed.values($c-eren--600, $c-eren);
+                background-color: $c-eren--600;
                 transition: $transition-hover;
 
                 #{$parent}-title, #{$parent}-text, #{$parent}-tag, .action-link {

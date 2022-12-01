@@ -18,6 +18,10 @@ const navigation = [
         label: 'Branding',
         href: DEMOS.BRANDING,
       },
+      {
+        label: 'Financial',
+        href: DEMOS.FINANCIAL,
+      },
     ],
   },
   {

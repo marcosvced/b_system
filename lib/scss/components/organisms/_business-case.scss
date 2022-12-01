@@ -9,7 +9,7 @@
 @use '../../mixins' as mixin;
 @use '../../mixins/backgounds';
 
-.section-business-case {
+.section-bg-color {
   $bg-keys: map.keys(map.merge(palette.$primary, palette.$secondary));
   @include backgounds.can-use($bg-keys);
   background-color: $c-eren--500;

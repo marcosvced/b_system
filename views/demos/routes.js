@@ -26,4 +26,9 @@ route.get(DEMOS.BRANDING, (request, response) => {
   render(response, path('branding'), {}, { navigation })
 })
 
+/* Financial */
+route.get(DEMOS.FINANCIAL, (request, response) => {
+  render(response, path('financial'), {}, { navigation })
+})
+
 module.exports = route

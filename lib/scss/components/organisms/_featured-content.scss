@@ -32,8 +32,10 @@
     }
 
     #{$parent}-title {
-        font-family: helper.family(serif);
-        font-weight: helper.weight(regular);
+        &.title-serif {
+            font-family: helper.family(serif);
+            font-weight: helper.weight(regular);
+        }
     }
 
     #{$parent}-masked {

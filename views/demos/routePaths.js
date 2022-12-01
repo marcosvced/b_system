@@ -4,5 +4,6 @@ module.exports = {
     HOME: '/demos/home',
     HOME2: '/demos/home-cta',
     BRANDING: '/demos/branding',
+    FINANCIAL: '/demos/financial',
   },
 }

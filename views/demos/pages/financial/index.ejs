@@ -1,0 +1,359 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    size: 'full',
+    hasBackground: false,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'subtle'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('body') %>
+
+<!-- HEAD -->
+<!-- END: HEAD -->
+
+<!-- BASIC CONTENT ARGUMENTS MODULE -->
+<%- include(`${module}/basicContent/argument`, {
+    columns: [
+        {
+            title: 'No complexity',
+            text: 'Everything is easy, and you will decide how and when to move your money. No paperwork or fine print.'
+        },
+        {
+            title: 'A human bank',
+            text: 'We personally attend all our service channels. We always seek the best solution for our clients.'
+        },
+        {
+            title: 'A digital bank',
+            text: 'We create a simple and intuitive application using our own technology. Goodbye paperwork and branches.'
+        }
+    ],
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT ARGUMENTS MODULE -->
+
+<!-- FEATURED CONTENT -->
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: '100-digital',
+    background: 'annie-200',
+    masked: {
+        img: {
+            src: 'featured-content_06',
+            alt: 'featured content image',
+        },
+        shape: 'template'
+    },
+    subtitle: '100% digital',
+    title: 'The Account and Credit Card made for you',
+    isSerif: false,
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'right',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+<!-- END: FEATURED CONTENT -->
+
+<!-- ICON DESCRIPTION -->
+<!-- END: ICON DESCRIPTION -->
+
+<!-- FEATURED CONTENT -->
+<!-- END: FEATURED CONTENT -->
+
+<!-- BASIC CONTENT DESCRIPTION MODULE -->
+<%- include(`${module}/basicContent/description`, { 
+    title:'Your money under control', 
+    text: 'All your accounts in one place. All your income and expenses analyzed and under control. We notify you with exclusive alerts: commissions, duplicate charges, insurance expiration, etc.',
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT DESCRIPTION MODULE -->
+
+<!-- FEATURED CONTENT -->
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: '100-digital',
+    background: 'eren-200',
+    masked: {
+        img: {
+            src: 'featured-content_07',
+            alt: 'featured content image',
+        },
+        shape: 'system'
+    },
+    subtitle: '100% digital',
+    title: 'The Account and Credit Card made for you',
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'right',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: FEATURED CONTENT -->
+
+<!-- ICON DESCRIPTION -->
+<!-- END: ICON DESCRIPTION -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Become a customer',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: CTA -->
+
+<!-- FAQ -->
+<%- include(`${module}/faq/faq`, {
+    title: 'Frequently asked questions',
+    links: [
+        {
+            tab: 'tab-system',
+            label: 'Brand System'
+        },
+        {
+            tab: 'tab-product',
+            label: 'Product contracting'
+        },
+        {
+            tab: 'tab-customer',
+            label: 'Customer Support'
+        },
+        {
+            tab: 'tab-commitment',
+            label: 'Our commitment'
+        },
+    ],
+    sections: [
+        [
+            {
+                idAccordion: 'accordion1',
+                idItem: 'item1',
+                label: 'What is B_system?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion2',
+                idItem: 'item2',
+                label: 'In what kind of projects can I use it?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion3',
+                idItem: 'item3',
+                label: 'What frameworks does the system use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion4',
+                idItem: 'item4',
+                label: 'How many demos does it have?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion5',
+                idItem: 'item5',
+                label: 'Is there any discount or promotion if I use it several times?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion6',
+                idItem: 'item6',
+                label: 'What programming languages ​​does it use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+        [
+            {
+                idAccordion: 'accordion1',
+                idItem: 'item1',
+                label: 'What is B_system?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion2',
+                idItem: 'item2',
+                label: 'In what kind of projects can I use it?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+        [
+
+            {
+                idAccordion: 'accordion4',
+                idItem: 'item4',
+                label: 'How many demos does it have?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion5',
+                idItem: 'item5',
+                label: 'Is there any discount or promotion if I use it several times?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion6',
+                idItem: 'item6',
+                label: 'What programming languages ​​does it use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+        [
+
+            {
+                idAccordion: 'accordion3',
+                idItem: 'item3',
+                label: 'What frameworks does the system use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+    ],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: FAQ -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+<%- contentFor('script') %>
+    const header = document.querySelector('header.header')
+    header.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (e) => {
+        const isBodyDark = !!document.querySelector('body[data-bsystem="dark"]')
+        const img = document.querySelector('header img.logo')
+        const purchaseButton = document.querySelector('header button.btn.btn-fit')
+        const nav = document.querySelector('header nav.navbar > ul')
+        if (e.detail.isTransparent) {
+            if (!isBodyDark) {
+                img.src = '/assets/img/logo-light.svg'
+                nav.classList.add('light-nav')
+            }
+            purchaseButton.classList.remove('btn-primary')
+            purchaseButton.classList.add('btn-glass')
+        } else {
+            if (!isBodyDark) {
+                img.src = '/assets/img/logo-dark.svg'
+                header.removeAttribute('data-bsystem')
+                nav.classList.remove('light-nav')
+            }
+            purchaseButton.classList.remove('btn-glass')
+            purchaseButton.classList.add('btn-primary')
+
+        }
+    })
