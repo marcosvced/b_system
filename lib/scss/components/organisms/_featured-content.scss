@@ -14,7 +14,7 @@
     }
 
     @include mixin.screen(xl) {
-        column-gap: helper.space(104);
+        column-gap: helper.space(96);
     }
 
     #{$parent}-title {

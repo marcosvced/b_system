@@ -52,6 +52,11 @@
             width: helper.rem(88);
         }
 
+        i[class^=icon-] {
+            font-size: helper.rem(88);
+            color: themed.values($c-grayscale--ash, $c-grayscale--600);
+        }
+
         #{$parent}-text {
             padding-inline: helper.space(32);
         }

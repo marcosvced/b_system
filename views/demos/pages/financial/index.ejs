@@ -20,21 +20,24 @@ const headerConfig = {
 
 <%- contentFor('body') %>
 
-<!-- HEAD -->
-<!-- END: HEAD -->
+<!-- DIGITAL PRODUCT -->
+<!-- END: DIGITAL PRODUCT -->
 
 <!-- BASIC CONTENT ARGUMENTS MODULE -->
 <%- include(`${module}/basicContent/argument`, {
     columns: [
         {
+            alignCenter: true,
             title: 'No complexity',
             text: 'Everything is easy, and you will decide how and when to move your money. No paperwork or fine print.'
         },
         {
+            alignCenter: true,
             title: 'A human bank',
             text: 'We personally attend all our service channels. We always seek the best solution for our clients.'
         },
         {
+            alignCenter: true,
             title: 'A digital bank',
             text: 'We create a simple and intuitive application using our own technology. Goodbye paperwork and branches.'
         }
@@ -70,9 +73,71 @@ const headerConfig = {
 <!-- END: FEATURED CONTENT -->
 
 <!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/icon/iconDescription`, {
+    head: 'Say goodbye to all the red tape',
+    columns: [
+        {
+            icon: 'check-circle',
+            title: '100% Digital',
+            text: 'We create simple and intuitive products with the purpose of removing complexity.'
+        },
+        {
+            icon: 'people-circle',
+            title: 'Personalized digital card',
+            text: 'We create simple and intuitive products with the purpose of removing complexity.'
+        },
+        {
+            icon: 'awards-circle',
+            title: 'The way you want to pay',
+            text: 'We create simple and intuitive products with the purpose of removing complexity.'
+        },
+        {
+            icon: 'saving-circle',
+            title: 'Check your expenses',
+            text: 'We create simple and intuitive products with the purpose of removing complexity.'
+        },
+        {
+            icon: 'purse-circle',
+            title: 'Cards without annuity',
+            text: 'We create simple and intuitive products with the purpose of removing complexity.'
+        },
+        {
+            icon: 'secure-circle',
+            title: 'Virtual debit card',
+            text: 'We create simple and intuitive products with the purpose of removing complexity.'
+        },
+    ],
+    background: 'annie-200',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+    })
+%>
 <!-- END: ICON DESCRIPTION -->
 
 <!-- FEATURED CONTENT -->
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: '100-digital',
+    masked: {
+        img: {
+            src: 'featured-content-unmasked_01',
+            alt: 'featured content image',
+        },
+        shape: null
+    },
+    subtitle: 'Financial health',
+    title: 'Track your financial health and automate your movements',
+    isSerif: false,
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'left',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
 <!-- END: FEATURED CONTENT -->
 
 <!-- BASIC CONTENT DESCRIPTION MODULE -->
@@ -85,7 +150,7 @@ const headerConfig = {
 
 <!-- FEATURED CONTENT -->
 <%- include( `${module}/featuredContent/featuredContent`, {
-    id: '100-digital',
+    id: '100-digital-2',
     background: 'eren-200',
     masked: {
         img: {
@@ -104,11 +169,35 @@ const headerConfig = {
     contentPosition: 'right',
     isDarkened: false,
     isDark: false,
-    hasBorder: false
+    hasBorder: true
 } ) %>
 <!-- END: FEATURED CONTENT -->
 
 <!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/icon/basic`, {
+    columns: [
+        {
+            icon: 'pencil-circle',
+            title: 'Design',
+            text: 'We create simple and intuitive products with the purpose of removing complexity.'
+        },
+        {
+            icon: 'people-circle',
+            title: 'People first',
+            text: 'We were born with the obsession to make your life simpler.'
+        },
+        {
+            icon: 'component-circle',
+            title: 'Data Science',
+            text: 'We test our ideas, learn quickly, and make decisions based on data.'
+        },
+    ],
+    background: 'eren-200',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+    })
+%>
 <!-- END: ICON DESCRIPTION -->
 
 <!-- CTA -->
@@ -243,7 +332,7 @@ const headerConfig = {
     img: {src: 'logo-dark-gray.svg', alt: 'logo'},
     text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
     link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
-    isDarkened: true,
+    isDarkened: false,
     columns: [
         [
             {
