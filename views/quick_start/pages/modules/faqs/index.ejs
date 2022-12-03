@@ -73,7 +73,7 @@ const sections = [
         isDark: true,
         hasBorder: true,
         accordion_ids
-    },    {
+    }, {
         key: 'dark-darkened',
         tab_1: 'tab-system',
         tab_2: 'tab-product',
@@ -112,11 +112,11 @@ const sections = [
                     label: 'Our commitment'
                 }
             ],
-            sections: section.accordion_ids.map((sectionAccordions) => {
+            sections: section.accordion_ids.map((sectionAccordions, sectionIndex) => {
                 return sectionAccordions.map((idAccordion, index) => ({
                     ...accordions[index],
                     idAccordion: `${section.key}-${idAccordion}`,
-                    idItem: `${section.key}-${accordions[index].idItem}`
+                    idItem: `${section.key}-${accordions[index].idItem}-${sectionIndex}`
                 }))
             })
         }

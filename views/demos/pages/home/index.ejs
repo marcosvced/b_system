@@ -1,4 +1,4 @@
-<%- include(`${view}/demos/layout`)%>
+<%- include(`${view}/demos/layout`) %>
 <%- contentFor('header') %>
 <%
 const headerConfig = {
@@ -17,15 +17,14 @@ const headerConfig = {
     ]
 }
 %>
-
-
 <%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
 <%- contentFor('body') %>
 
 <!-- MARQUEE HERO -->
-
-<%- include(`${module}/marquee/extended/extended`, {
-    isDark:true,
+<%
+const demoHomeMarqueeHeroParams = {
+    isDark: true,
     interactiveButtonCssClass: 'bg-light-100',
     slides: [
         {
@@ -73,26 +72,32 @@ const headerConfig = {
             quote: 'People ignore design that ignores people',
         },
     ]
-}) %>
+}
+%>
+<%- include(`${module}/marquee/extended/extended`, demoHomeMarqueeHeroParams) %>
 <!-- END: MARQUEE HERO -->
 
 <!-- BASIC CONTENT HEADER IMAGE -->
-<%- include(`${module}/basicContent/image`, {
+<%
+const demoHomeBasicContentHeaderImageParams = {
     img: {
         src: 'basic-content_image.png',
         alt: 'Header image'
     },
-    text:  'B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    text: 'B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
     link: {
-        href:'#',
-        label:'Learn more'
+        href: '#',
+        label: 'Learn more'
     },
     hasBorder: false
-}) %>
+}
+%>
+<%- include(`${module}/basicContent/image`, demoHomeBasicContentHeaderImageParams) %>
 <!-- END: BASIC CONTENT HEADER IMAGE -->
 
 <!-- CARROUSELS SERVICE -->
-<%- include(`${module}/service/service`, {
+<%
+const demoHomeCarrouselsServiceParams = {
     title: "What disciplines do our business integrate?",
     services: [
         {
@@ -141,11 +146,14 @@ const headerConfig = {
     isDarkened: true,
     isDark: false,
     hasBorder: false
-}) %>
+}
+%>
+<%- include(`${module}/service/service`, demoHomeCarrouselsServiceParams) %>
 <!-- END: CARROUSELS SERVICE -->
 
 <!-- ICON DESCRIPTION -->
-<%- include(`${module}/iconDescription/microillustration/microillustrationDescription`, {
+<%
+const demoHomeIconDescriptionParams = {
     head: 'Our work methodology',
     columns: [
         {
@@ -200,12 +208,14 @@ const headerConfig = {
     isDarkened: false,
     isDark: false,
     hasBorder: false
-    })
+}
 %>
+<%- include(`${module}/iconDescription/microillustration/microillustrationDescription`, demoHomeIconDescriptionParams) %>
 <!-- END: ICON DESCRIPTION -->
 
 <!-- BUSINESS CASES -->
-<%- include( `${module}/businessCase/businessCase`, {
+<%
+const demoHomeBusinessCaseParams = {
     title: 'Business cases',
     text: 'Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.',
     link: {
@@ -266,122 +276,103 @@ const headerConfig = {
         }
     ]
 }
-) %>
+%>
+<%- include( `${module}/businessCase/businessCase`, demoHomeBusinessCaseParams) %>
 <!-- END: BUSINESS CASES -->
 
 <!-- FAQ -->
-<%- include(`${module}/faq/faq`, {
-    title: 'Frequently asked questions',
-    links: [
-        {
-            tab: 'tab-system',
-            label: 'Brand System'
-        },
-        {
-            tab: 'tab-product',
-            label: 'Product contracting'
-        },
-        {
-            tab: 'tab-customer',
-            label: 'Customer Support'
-        },
-        {
-            tab: 'tab-commitment',
-            label: 'Our commitment'
-        },
-    ],
-    sections: [
-        [
+<%
+const accordions = [
+    {
+        idItem: 'item1',
+        label: 'What is B_system?',
+        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+    },
+    {
+        idItem: 'item2',
+        label: 'In what kind of projects can I use it?',
+        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+    },
+    {
+        idItem: 'item3',
+        label: 'What frameworks does the system use?',
+        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+    },
+    {
+        idItem: 'item4',
+        label: 'How many demos does it have?',
+        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+    },
+    {
+        idItem: 'item5',
+        label: 'Is there any discount or promotion if I use it several times?',
+        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+    },
+    {
+        idItem: 'item6',
+        label: 'What programming languages ​​does it use?',
+        content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+    },
+]
+const accordion_ids = [
+    ['accordion-1', 'accordion-2', 'accordion-3', 'accordion-4', 'accordion-5', 'accordion-6'],
+    ['accordion-1', 'accordion-2', 'accordion-3'],
+    ['accordion-1', 'accordion-2', 'accordion-3', 'accordion-4'],
+    ['accordion-1', 'accordion-2']
+]
+const sections = [
+    {
+        key: 'default',
+        tab_1: 'tab-system',
+        tab_2: 'tab-product',
+        tab_3: 'tab-customer',
+        tab_4: 'tab-commitment',
+        isDarkened: false,
+        isDark: false,
+        hasBorder: false,
+        accordion_ids
+    }
+]
+%>
+<% sections.forEach((section, index) => { %>
+    <% const includeParams = {
+        isDarkened: section.isDarkened,
+        isDark: section.isDark,
+        hasBorder: section.hasBorder,
+        title: 'Frequently asked questions',
+        links: [
             {
-                idAccordion: 'accordion1',
-                idItem: 'item1',
-                label: 'What is B_system?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                tab: section.tab_1,
+                label: 'Brand System'
             },
             {
-                idAccordion: 'accordion2',
-                idItem: 'item2',
-                label: 'In what kind of projects can I use it?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                tab: section.tab_2,
+                label: 'Product contracting'
             },
             {
-                idAccordion: 'accordion3',
-                idItem: 'item3',
-                label: 'What frameworks does the system use?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+                tab: section.tab_3,
+                label: 'Customer Support'
             },
             {
-                idAccordion: 'accordion4',
-                idItem: 'item4',
-                label: 'How many demos does it have?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
-            },
-            {
-                idAccordion: 'accordion5',
-                idItem: 'item5',
-                label: 'Is there any discount or promotion if I use it several times?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
-            },
-            {
-                idAccordion: 'accordion6',
-                idItem: 'item6',
-                label: 'What programming languages ​​does it use?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
-            },
+                tab: section.tab_4,
+                label: 'Our commitment'
+            }
         ],
-        [
-            {
-                idAccordion: 'accordion1',
-                idItem: 'item1',
-                label: 'What is B_system?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
-            },
-            {
-                idAccordion: 'accordion2',
-                idItem: 'item2',
-                label: 'In what kind of projects can I use it?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
-            },
-        ],
-        [
+        sections: section.accordion_ids.map((sectionAccordions) => {
+            return sectionAccordions.map((idAccordion, index) => ({
+                ...accordions[index],
+                idAccordion: `${section.key}-${idAccordion}`,
+                idItem: `${section.key}-${accordions[index].idItem}`
+            }))
+        })
+    } %>
+    <%- include(`${module}/faq/faq`, includeParams) %>
+<% }) %>
 
-            {
-                idAccordion: 'accordion4',
-                idItem: 'item4',
-                label: 'How many demos does it have?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
-            },
-            {
-                idAccordion: 'accordion5',
-                idItem: 'item5',
-                label: 'Is there any discount or promotion if I use it several times?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
-            },
-            {
-                idAccordion: 'accordion6',
-                idItem: 'item6',
-                label: 'What programming languages ​​does it use?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
-            },
-        ],
-        [
-
-            {
-                idAccordion: 'accordion3',
-                idItem: 'item3',
-                label: 'What frameworks does the system use?',
-                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
-            },
-        ],
-    ],
-    isDarkened: false,
-    isDark: false,
-    hasBorder: false
-}) %>
 <!-- END: FAQ -->
 
 <!-- CTA -->
-<%- include(`${module}/cta/cta`, {
+<% const demoHomeCTAParams = {
     title: 'Do you want to start with B_system today?',
     btn: {
         label: 'Purchase B_system',
@@ -392,11 +383,12 @@ const headerConfig = {
     isDarkened: true,
     isDark: false,
     hasBorder: false
-}) %>
+} %>
+<%- include(`${module}/cta/cta`, demoHomeCTAParams ) %>
 <!-- END: CTA -->
 
 <!-- CONTACT-->
-<%- include(`${module}/contact/contact`, {
+<% const demoHomeContactParams = {
     title: 'Contact us!',
     text: 'Please fill out this form to send your message:',
     contact: [
@@ -437,8 +429,8 @@ const headerConfig = {
             text: {
                 content: 'If you have an urgent query you can call us :',
                 contact: [
-                    { contact: 'T. (+34) 915 805 007' },
-                    { contact: 'F. (+34) 915 806 082' }
+                    {contact: 'T. (+34) 915 805 007'},
+                    {contact: 'F. (+34) 915 806 082'}
                 ]
             },
             variant: 'info'
@@ -448,7 +440,7 @@ const headerConfig = {
             text: {
                 content: 'You can also write an email to these departments and we will get back to you as soon as possible:',
                 contact: [
-                    { contact: 'bsystem@company.com' }
+                    {contact: 'bsystem@company.com'}
                 ]
             },
             variant: 'info'
@@ -464,14 +456,16 @@ const headerConfig = {
     ],
     isDark: false,
     hasBorder: false
-}) %>
+}
+%>
+<%- include(`${module}/contact/contact`, demoHomeContactParams) %>
 <!-- END: CONTACT -->
 
 <!-- FOOTER -->
 <%- contentFor('footer') %>
-<%- include(`${component}/footer/corporate`, {
+<% const demoHomeFooterParams = {
     img: {src: 'logo-dark-gray.svg', alt: 'logo'},
-    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    text: 'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
     link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
     isDarkened: true,
     columns: [
@@ -560,8 +554,10 @@ const headerConfig = {
             },
         ]
     ]
-}) %>
+} %>
+<%- include(`${component}/footer/corporate`, demoHomeFooterParams) %>
 <!-- END: FOOTER -->
+
 <%- contentFor('script') %>
     const header = document.querySelector('header.header')
     header.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (e) => {
