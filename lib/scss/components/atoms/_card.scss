@@ -41,6 +41,22 @@
             background-color: themed.values($c-grayscale--100, $c-grayscale--1200);
         }
 
+        &-transparent {
+            background-color: transparent !important00;
+        }
+
+        &#{$parent}-border {
+            @include themed.properties {
+                border: themed.values(1px solid $c-grayscale--300, $c-grayscale--1100);
+            }
+        }
+
+        &#{$parent}-shadow {
+            @include themed.properties {
+                box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100), none);
+            }
+        }
+
         #{$parent}-head {
             [class^='icon-'] {
                 font-size: helper.rem(23);
@@ -282,7 +298,6 @@
     .card.card-bg {
         @include themed.properties {
             background-color: themed.values($c-grayscale--light, $c-grayscale--1100);
-            box-shadow: themed.values(0 helper.rem(4) helper.rem(8) 0 helper.opacity(gray-100), none);
         }
     }
 }
