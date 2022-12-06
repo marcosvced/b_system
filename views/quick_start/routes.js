@@ -198,6 +198,11 @@ route.get(QUICK_START.FEATURED_CONTENTS, (request, response) => {
   render(response, path('modules', ['featuredContents']), {}, { navigation })
 })
 
+/* Digital Products */
+route.get(QUICK_START.DIGITAL_PRODUCTS, (request, response) => {
+  render(response, path('modules', ['digitalProducts']), {}, { navigation })
+})
+
 /**
  * 3 Components
  */

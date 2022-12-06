@@ -4,7 +4,7 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-.featured-content {
+.digital-product {
     $parent: &;
 
     padding-inline: 0;
@@ -26,10 +26,6 @@
     }
 
     #{$parent}-title {
-        @include mixin.screen(md) {
-            font-size: helper.rem(56);
-        }
-        
         &.title-serif {
             font-family: helper.family(serif);
             font-weight: helper.weight(regular);
@@ -54,6 +50,22 @@
         @include mixin.screen(xl) {
             height: helper.rem(486);
             width: helper.rem(486);
+        }
+    }
+
+    #{$parent}-links {
+        #{$parent}-link {
+            &-icon {
+                width: auto;
+                height: 32px;
+            }
+
+            .action-link {
+                span {
+                    font-weight: 300;
+                    color: $c-grayscale--900;
+                }
+            }
         }
     }
 }

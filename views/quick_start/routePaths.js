@@ -45,6 +45,7 @@ module.exports = {
     SEARCHERS: '/modules/searchers',
     PRICES: '/modules/prices',
     FEATURED_CONTENTS: '/modules/featuredContents',
+    DIGITAL_PRODUCTS: '/modules/digitalProducts',
     BUTTONS: '/components/buttons',
     ALERTS: '/components/alerts',
     ICONS: '/components/icons',

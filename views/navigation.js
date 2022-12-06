@@ -85,6 +85,10 @@ const navigation = [
                 href: QUICK_START.FEATURED_CONTENTS,
                 label: 'Featured Contents',
               },
+              {
+                href: QUICK_START.DIGITAL_PRODUCTS,
+                label: 'Digital Products',
+              },
             ]
           },
         ]

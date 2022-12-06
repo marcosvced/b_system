@@ -6,7 +6,7 @@ const headerConfig = {
     isSticky: true,
     canSearch: true,
     size: 'full',
-    hasBackground: false,
+    hasBackground: true,
     buttons: [
         {
             label: 'Access',
@@ -21,6 +21,41 @@ const headerConfig = {
 <%- contentFor('body') %>
 
 <!-- DIGITAL PRODUCT -->
+<%- include( `${module}/digitalProduct/digitalProduct`, {
+    id: '100-digital',
+    masked: {
+        img: {
+            src: 'featured-content_06',
+            alt: 'featured content image',
+        },
+        shape: 'system'
+    },
+    subtitle: 'B_bank',
+    title: 'Welcome to the total management of your economy',
+    isSerif: false,
+    links: [
+        {
+            href: '#',
+            label: 'APP STORE',
+            icon: 'logo-apple'
+        },
+        {
+            href: '#',
+            label: 'GOOGLE PLAY',
+            icon: 'logo-android'
+        },
+    ],
+    btn: {
+        label: 'Become a customer',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    contentPosition: 'left',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
 <!-- END: DIGITAL PRODUCT -->
 
 <!-- BASIC CONTENT ARGUMENTS MODULE -->
