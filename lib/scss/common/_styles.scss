@@ -1,5 +1,6 @@
 @use '../variables/colors' as *;
 @use '../variables/palette';
+@use '../variables/spacing';
 @use "../placeholders/fonts";
 @use "../helpers/size";
 @use "../helpers/colors";
@@ -14,7 +15,13 @@
     color: themed.values(colors.grayscale('ash'), colors.grayscale('light'));
   }
 
-  @include text-color.can-use( palette.$grayscale)
+  @include text-color.can-use( palette.$grayscale);
+
+  .text-dark-mode {
+    @include themed.properties {
+      color: themed.values(colors.grayscale('ash'), colors.grayscale('light'));
+    }
+  }
 
 }
 
@@ -123,6 +130,10 @@ a {
   color: inherit;
 }
 
+hr {
+  opacity: 1;
+}
+
 .demo-card {
   $parent: &;
   width: 100%;
@@ -154,4 +165,17 @@ a {
     top: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+#sticky-banner {
+  width: size.rem(280);
+  height: min-content;
+  z-index: 100;
+  right: size.space(32);
+  bottom: size.space(88);
+  transition: bottom .35s ease-in-out;
+  @include themed.properties {
+    background-color: themed.values($c-grayscale--light, $c-grayscale--1200);
+  }
+  @include styles.shadow-400;
 }

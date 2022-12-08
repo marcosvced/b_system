@@ -28,6 +28,8 @@ const headerConfig = {
 
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
+<%- contentFor('fixed') %>
+<%- include(`${component}/stickyBannerCompleted/stickyBannerCompleted`) %>
 
 <%- contentFor('footer') %>
 <%- include(`${component}/footer/basic`, {

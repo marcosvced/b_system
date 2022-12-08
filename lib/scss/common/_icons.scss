@@ -38,6 +38,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-icon],
+[class^="icon-"],
+[class*=" icon-"] {
+  font-size: var(--size);
+}
 
 .icon-avatar:before {
   content: "\61";

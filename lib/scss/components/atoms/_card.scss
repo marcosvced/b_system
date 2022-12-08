@@ -129,7 +129,7 @@
 
         .border-bottom {
             @include themed.properties {
-                border-color: themed.values($c-grayscale--300, $c-grayscale--1000);
+                border-color: themed.values(($c-grayscale--300 !important), ($c-grayscale--1000 !important));
             }
         }
     }

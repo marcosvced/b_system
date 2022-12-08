@@ -33,18 +33,18 @@
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
           <div class="order-2 order-xl-0 space-right-xl-32">
             <button type="button" class="btn btn-only-icon">
-              <i class="icon-m-glass"></i>
+              <i class="icon-m-glass" style="--size: NaNrem"></i>
             </button>
           </div>
           <div class="d-flex d-xl-none order-0">
             <button type="button" class="btn btn-only-icon">
-              <i class="icon-avatar"></i>
+              <i class="icon-avatar" style="--size: NaNrem"></i>
             </button>
           </div>
           <div class="d-none d-xl-block order-1">
             <button type="button" class="btn btn-subtle    btn-fit">
               <span>Access</span>
-              <i class="icon-avatar"></i>
+              <i class="icon-avatar" style="--size: NaNrem"></i>
             </button>
           </div>
         </div>
@@ -125,6 +125,9 @@
                           </li>
                           <li>
                             <a class="dropdown-item submenu-item " href="../../modules/featuredContents">Featured Contents</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../modules/digitalProducts">Digital Products</a>
                           </li>
                         </ul>
                       </li>
@@ -326,7 +329,7 @@
           </div>
           <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
             <button type="button" class="btn btn-only-icon">
-              <i class="icon-menu"></i>
+              <i class="icon-menu" style="--size: NaNrem"></i>
             </button>
           </div>
         </div>
@@ -334,6 +337,30 @@
     </header>
 
     <!--END: MAIN HEADER-->
+    <div id="sticky-banner" class="card card-sticky card-bg space-y-24 inner-space-block-24 inner-space-inline-24 position-fixed">
+      <div class="switch d-inline-flex justify-content-between space-x-24">
+        <label class="body-bold-text text-dark-mode" for="dark-mode-switch">Dark mode</label>
+        <div class="form-check form-switch">
+          <input class="form-switch-input bg-transition" type="checkbox" id="dark-mode-switch">
+          <div class="form-switch-wrapper">
+            <span class="form-switch-dot"></span>
+          </div>
+        </div>
+      </div>
+      <hr class="border-bottom d-block m-0 space-bottom-24">
+      <div class="d-inline-flex align-items-center space-x-8 space-bottom-16">
+        <i class="icon-filters" style="--size: 1.25rem"></i>
+        <span>+ 150 pages</span>
+      </div>
+      <div class="d-inline-flex align-items-center space-x-8">
+        <i class="icon-edit" style="--size: 1.25rem"></i>
+        <span>+ 300 components</span>
+      </div>
+      <hr class="border-bottom d-block m-0 space-bottom-24">
+      <a href='#' class="action-link ">
+        <span>Purchase B_system</span>
+      </a>
+    </div>
 
     <!--MAIN CONTENT-->
     <main class="main">
@@ -482,14 +509,14 @@
       <!-- FEATURED CONTENT -->
       <div class="module section-divider  " id="exploration">
         <div class="featured-content container d-flex flex-column flex-xl-row-reverse mx-auto">
-          <div class="featured-content-masked col-2-to-4 space-bottom-48 space-bottom-md-56">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
             <div class="icon-description icon-description-content icon-description-masked">
               <picture class="masked" style="mask-image:url(../../assets/masks/module.svg); -webkit-mask-image:url(../../assets/masks/module.svg);">
                 <img class="masked-img" src="../../assets/img/featured-content/featured-content_01.jpg" alt="featured content image">
               </picture>
             </div>
           </div>
-          <div class="featured-content-wrapper col-1-to-5 space-y-24 space-y-md-40">
+          <div class="featured-content-wrapper space-y-24 space-y-md-40">
             <p class="featured-content-subtitle">1. Exploration phase</p>
             <h2 class="featured-content-title title-serif space-bottom-xl-56">Explore new concepts, products, services, ventures, brands, and systems.</h2>
             <a href='#' class="action-link ">
@@ -501,14 +528,14 @@
       </div>
       <div class="module section-divider  " id="empathy">
         <div class="featured-content container d-flex flex-column flex-xl-row mx-auto">
-          <div class="featured-content-masked col-2-to-4 space-bottom-48 space-bottom-md-56">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
             <div class="icon-description icon-description-content icon-description-masked">
               <picture class="masked" style="mask-image:url(../../assets/masks/consistency.svg); -webkit-mask-image:url(../../assets/masks/consistency.svg);">
                 <img class="masked-img" src="../../assets/img/featured-content/featured-content_02.jpg" alt="featured content image 2">
               </picture>
             </div>
           </div>
-          <div class="featured-content-wrapper col-1-to-5 space-y-24 space-y-md-40">
+          <div class="featured-content-wrapper space-y-24 space-y-md-40">
             <p class="featured-content-subtitle">2. Empathy phase</p>
             <h2 class="featured-content-title title-serif space-bottom-xl-56">A deep understanding of the needs of the users involved in the solution.</h2>
             <a href='#' class="action-link ">
@@ -520,14 +547,14 @@
       </div>
       <div class="module section-divider  " id="definition">
         <div class="featured-content container d-flex flex-column flex-xl-row-reverse mx-auto">
-          <div class="featured-content-masked col-2-to-4 space-bottom-48 space-bottom-md-56">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
             <div class="icon-description icon-description-content icon-description-masked">
               <picture class="masked" style="mask-image:url(../../assets/masks/system.svg); -webkit-mask-image:url(../../assets/masks/system.svg);">
                 <img class="masked-img" src="../../assets/img/featured-content/featured-content_05.jpg" alt="featured content image 3">
               </picture>
             </div>
           </div>
-          <div class="featured-content-wrapper col-1-to-5 space-y-24 space-y-md-40">
+          <div class="featured-content-wrapper space-y-24 space-y-md-40">
             <p class="featured-content-subtitle">3. Definition phase</p>
             <h2 class="featured-content-title title-serif space-bottom-xl-56">Staying with what really adds value and brings us to new interesting perspectives.</h2>
             <a href='#' class="action-link ">
@@ -539,14 +566,14 @@
       </div>
       <div class="module section-divider  " id="ideation">
         <div class="featured-content container d-flex flex-column flex-xl-row mx-auto">
-          <div class="featured-content-masked col-2-to-4 space-bottom-48 space-bottom-md-56">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
             <div class="icon-description icon-description-content icon-description-masked">
               <picture class="masked" style="mask-image:url(../../assets/masks/process.svg); -webkit-mask-image:url(../../assets/masks/process.svg);">
                 <img class="masked-img" src="../../assets/img/featured-content/featured-content_03.jpg" alt="featured content image 4">
               </picture>
             </div>
           </div>
-          <div class="featured-content-wrapper col-1-to-5 space-y-24 space-y-md-40">
+          <div class="featured-content-wrapper space-y-24 space-y-md-40">
             <p class="featured-content-subtitle">4. Ideation phase</p>
             <h2 class="featured-content-title title-serif space-bottom-xl-56">In this phase, activities favor expansive thinking and we eliminate value judgments.</h2>
             <a href='#' class="action-link ">
@@ -558,14 +585,14 @@
       </div>
       <div class="module section-divider  " id="prototyping">
         <div class="featured-content container d-flex flex-column flex-xl-row-reverse mx-auto">
-          <div class="featured-content-masked col-2-to-4 space-bottom-48 space-bottom-md-56">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
             <div class="icon-description icon-description-content icon-description-masked">
               <picture class="masked" style="mask-image:url(../../assets/masks/system.svg); -webkit-mask-image:url(../../assets/masks/system.svg);">
                 <img class="masked-img" src="../../assets/img/featured-content/featured-content_04.jpg" alt="featured content image 5">
               </picture>
             </div>
           </div>
-          <div class="featured-content-wrapper col-1-to-5 space-y-24 space-y-md-40">
+          <div class="featured-content-wrapper space-y-24 space-y-md-40">
             <p class="featured-content-subtitle">5. Prototyping phase</p>
             <h2 class="featured-content-title title-serif space-bottom-xl-56">Building prototypes makes ideas tangible and helps us visualize possible solutions.</h2>
             <a href='#' class="action-link ">

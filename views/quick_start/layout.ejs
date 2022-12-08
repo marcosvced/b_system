@@ -24,6 +24,8 @@ const headerConfig = {
 %>
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
+<%- contentFor('fixed') %>
+
 <%- contentFor('footer') %>
 <%- include(`${component}/footer/basic`, {
     img: {src: 'logo-dark-gray.svg', alt: 'logo'},
