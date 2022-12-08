@@ -15,7 +15,7 @@
     color: themed.values(colors.grayscale('ash'), colors.grayscale('light'));
   }
 
-  @include text-color.can-use( palette.$grayscale);
+  @include text-color.can-use(palette.$grayscale);
 
   .text-dark-mode {
     @include themed.properties {
@@ -94,7 +94,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  // overflow: hidden;
+  overflow-y: auto !important;
+  padding-right: 0 !important;
   @extend %body-regular-text;
 }
 
@@ -145,7 +146,7 @@ hr {
     padding-bottom: 120%;
   }
 
-  &#{$parent}-micro-illustration > *{
+  &#{$parent}-micro-illustration > * {
     max-width: size.rem(104);
   }
 

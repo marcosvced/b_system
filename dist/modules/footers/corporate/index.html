@@ -33,7 +33,7 @@
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
           <div class="d-flex d-xl-none order-0">
             <button type="button" class="btn btn-only-icon">
-              <i class="icon-cart"></i>
+              <i class="icon-cart" style="--size: NaNrem"></i>
             </button>
           </div>
           <div class="d-none d-xl-block order-1">
@@ -119,6 +119,9 @@
                           </li>
                           <li>
                             <a class="dropdown-item submenu-item " href="../../../modules/featuredContents">Featured Contents</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item submenu-item " href="../../../modules/digitalProducts">Digital Products</a>
                           </li>
                         </ul>
                       </li>
@@ -319,13 +322,363 @@
             </nav>
           </div>
           <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-            <button type="button" class="btn btn-only-icon">
-              <i class="icon-menu"></i>
+            <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <i class="icon-menu" style="--size: NaNrem"></i>
             </button>
           </div>
         </div>
       </div>
     </header>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-body">
+        <ul class="navbar-nav" id="accordion-nav">
+          <li class="nav-item accordion-item">
+            <span id="heading-demos"
+                          data-bs-toggle="collapse"
+                          aria-controls="demos"
+                          data-bs-target="#demos"
+                          class="inner-space-bottom-32">
+                            Demos                        </span>
+            <div id="demos" class="accordion-collapse collapse" aria-labelledby="heading-demos" data-bs-parent="#accordion-nav">
+              <div class="accordion-body">
+                <ul class="navbar-nav" id="accordion-demos">
+                  <a class="nav-link" href="../../../demos/home">
+                    Home
+                  </a>
+                  <a class="nav-link" href="../../../demos/home-cta">
+                    Home CTA
+                  </a>
+                  <a class="nav-link" href="../../../demos/branding">
+                    Branding
+                  </a>
+                  <a class="nav-link" href="../../../demos/financial">
+                    Financial
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item accordion-item">
+            <span id="heading-pages"
+                          data-bs-toggle="collapse"
+                          aria-controls="pages"
+                          data-bs-target="#pages"
+                          class="inner-space-bottom-32">
+                            Pages                        </span>
+            <div id="pages" class="accordion-collapse collapse" aria-labelledby="heading-pages" data-bs-parent="#accordion-nav">
+              <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio labore non
+                  possimus
+                  sunt vel. Consequatur cumque cupiditate explicabo quia voluptas voluptatem. Alias
+                  cupiditate eveniet ipsa modi odit officiis quibusdam unde!</p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item accordion-item">
+            <span id="heading-modules"
+                          data-bs-toggle="collapse"
+                          aria-controls="modules"
+                          data-bs-target="#modules"
+                          class="inner-space-bottom-32">
+                            Modules                        </span>
+            <div id="modules" class="accordion-collapse collapse" aria-labelledby="heading-modules" data-bs-parent="#accordion-nav">
+              <div class="accordion-body">
+                <ul class="navbar-nav" id="accordion-modules">
+                  <li class="nav-item accordion-item">
+                    <span id="heading-key_basics"
+                                                          data-bs-toggle="collapse"
+                                                          aria-controls="key_basics"
+                                                          data-bs-target="#key_basics"
+                                                          class="inner-space-bottom-32">
+                                                          Basics                                                     </span>
+                    <div id="key_basics" class="accordion-collapse collapse" aria-labelledby="heading-key_basics" data-bs-parent="#accordion-modules">
+                      <div class="accordion-body">
+                        <a class="nav-link" href="../../../modules/headers">
+                          Headers
+                        </a>
+                        <a class="nav-link" href="../../../modules/basicContents">
+                          Basic Contents
+                        </a>
+                        <a class="nav-link" href="../../../modules/cta">
+                          CTA
+                        </a>
+                        <a class="nav-link" href="../../../modules/searchers">
+                          Searchers
+                        </a>
+                        <a class="nav-link" href="../../../modules/categories-menu">
+                          Menus
+                        </a>
+                        <a class="nav-link" href="../../../modules/iconSocial">
+                          Icons Social
+                        </a>
+                        <a class="nav-link" href="../../../modules/iconsDescription">
+                          Icon + description
+                        </a>
+                        <a class="nav-link" href="../../../modules/iconServices">
+                          Icon Services
+                        </a>
+                        <a class="nav-link" href="../../../modules/statistics">
+                          Statistics
+                        </a>
+                        <a class="nav-link" href="../../../modules/faqs">
+                          FAQs
+                        </a>
+                        <a class="nav-link" href="../../../modules/contactBar">
+                          Contact Bar
+                        </a>
+                        <a class="nav-link" href="../../../modules/featuredContents">
+                          Featured Contents
+                        </a>
+                        <a class="nav-link" href="../../../modules/digitalProducts">
+                          Digital Products
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item accordion-item">
+                    <span id="heading-key_marquees"
+                                                          data-bs-toggle="collapse"
+                                                          aria-controls="key_marquees"
+                                                          data-bs-target="#key_marquees"
+                                                          class="inner-space-bottom-32">
+                                                          Marquees                                                     </span>
+                    <div id="key_marquees" class="accordion-collapse collapse" aria-labelledby="heading-key_marquees" data-bs-parent="#accordion-modules">
+                      <div class="accordion-body">
+                        <a class="nav-link" href="../../../modules/marquees/basic">
+                          Basic
+                        </a>
+                        <a class="nav-link" href="../../../modules/marquees/standar">
+                          Standard
+                        </a>
+                        <a class="nav-link" href="../../../modules/marquees/cta">
+                          With CTA
+                        </a>
+                        <a class="nav-link" href="../../../modules/marquees/image">
+                          Image
+                        </a>
+                        <a class="nav-link" href="../../../modules/marquees/textImage">
+                          Text and image
+                        </a>
+                        <a class="nav-link" href="../../../modules/marquees/illustration">
+                          Illustration
+                        </a>
+                        <a class="nav-link" href="../../../modules/marquees/extended">
+                          Extended
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item accordion-item">
+                    <span id="heading-key_cards"
+                                                          data-bs-toggle="collapse"
+                                                          aria-controls="key_cards"
+                                                          data-bs-target="#key_cards"
+                                                          class="inner-space-bottom-32">
+                                                          Cards                                                     </span>
+                    <div id="key_cards" class="accordion-collapse collapse" aria-labelledby="heading-key_cards" data-bs-parent="#accordion-modules">
+                      <div class="accordion-body">
+                        <a class="nav-link" href="../../../modules/featureCards">
+                          Featured
+                        </a>
+                        <a class="nav-link" href="../../../modules/productCards">
+                          Product
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item accordion-item">
+                    <span id="heading-key_grids"
+                                                          data-bs-toggle="collapse"
+                                                          aria-controls="key_grids"
+                                                          data-bs-target="#key_grids"
+                                                          class="inner-space-bottom-32">
+                                                          Grids                                                     </span>
+                    <div id="key_grids" class="accordion-collapse collapse" aria-labelledby="heading-key_grids" data-bs-parent="#accordion-modules">
+                      <div class="accordion-body">
+                        <a class="nav-link" href="../../../modules/basicGrids">
+                          Basic
+                        </a>
+                        <a class="nav-link" href="../../../modules/serviceGrids">
+                          Service
+                        </a>
+                        <a class="nav-link" href="../../../modules/teamGrids">
+                          Team
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item accordion-item">
+                    <span id="heading-key_carrousels"
+                                                          data-bs-toggle="collapse"
+                                                          aria-controls="key_carrousels"
+                                                          data-bs-target="#key_carrousels"
+                                                          class="inner-space-bottom-32">
+                                                          Carrousels                                                     </span>
+                    <div id="key_carrousels" class="accordion-collapse collapse" aria-labelledby="heading-key_carrousels" data-bs-parent="#accordion-modules">
+                      <div class="accordion-body">
+                        <a class="nav-link" href="../../../modules/businessCases">
+                          Business Cases
+                        </a>
+                        <a class="nav-link" href="../../../modules/services">
+                          Service
+                        </a>
+                        <a class="nav-link" href="../../../modules/brands">
+                          Brands
+                        </a>
+                        <a class="nav-link" href="../../../modules/testimonials">
+                          Testimonials
+                        </a>
+                        <a class="nav-link" href="../../../modules/prices">
+                          Prices
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item accordion-item">
+                    <span id="heading-key_portfolio"
+                                                          data-bs-toggle="collapse"
+                                                          aria-controls="key_portfolio"
+                                                          data-bs-target="#key_portfolio"
+                                                          class="inner-space-bottom-32">
+                                                          Portfolio                                                     </span>
+                    <div id="key_portfolio" class="accordion-collapse collapse" aria-labelledby="heading-key_portfolio" data-bs-parent="#accordion-modules">
+                      <div class="accordion-body">
+                        <a class="nav-link" href="../../../modules/portfolios/basic">
+                          Portfolio Basic
+                        </a>
+                        <a class="nav-link" href="../../../modules/portfolio/decomposed">
+                          Portfolio Decomposed
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item accordion-item">
+                    <span id="heading-key_forms"
+                                                          data-bs-toggle="collapse"
+                                                          aria-controls="key_forms"
+                                                          data-bs-target="#key_forms"
+                                                          class="inner-space-bottom-32">
+                                                          Forms                                                     </span>
+                    <div id="key_forms" class="accordion-collapse collapse" aria-labelledby="heading-key_forms" data-bs-parent="#accordion-modules">
+                      <div class="accordion-body">
+                        <a class="nav-link" href="../../../modules/login">
+                          Login
+                        </a>
+                        <a class="nav-link" href="../../../modules/contacts">
+                          Contact
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item accordion-item">
+                    <span id="heading-key_footers"
+                                                          data-bs-toggle="collapse"
+                                                          aria-controls="key_footers"
+                                                          data-bs-target="#key_footers"
+                                                          class="inner-space-bottom-32">
+                                                          Footers                                                     </span>
+                    <div id="key_footers" class="accordion-collapse collapse" aria-labelledby="heading-key_footers" data-bs-parent="#accordion-modules">
+                      <div class="accordion-body">
+                        <a class="nav-link" href="../../../modules/footers/basic">
+                          Basic
+                        </a>
+                        <a class="nav-link" href="../../../modules/footers/standard">
+                          Standard
+                        </a>
+                        <a class="nav-link" href="../../../modules/footers/corporate">
+                          Corporate
+                        </a>
+                        <a class="nav-link" href="../../../modules/footers/newsletter">
+                          Newsletter
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item accordion-item">
+            <span id="heading-components"
+                          data-bs-toggle="collapse"
+                          aria-controls="components"
+                          data-bs-target="#components"
+                          class="inner-space-bottom-32">
+                            Components                        </span>
+            <div id="components" class="accordion-collapse collapse" aria-labelledby="heading-components" data-bs-parent="#accordion-nav">
+              <div class="accordion-body">
+                <ul class="navbar-nav" id="accordion-components">
+                  <a class="nav-link" href="../../../components/buttons">
+                    Buttons
+                  </a>
+                  <a class="nav-link" href="../../../components/forms">
+                    Forms
+                  </a>
+                  <a class="nav-link" href="../../../components/interaction">
+                    Interaction
+                  </a>
+                  <a class="nav-link" href="../../../components/cards">
+                    Cards
+                  </a>
+                  <a class="nav-link" href="../../../components/productCards">
+                    Product Cards
+                  </a>
+                  <a class="nav-link" href="../../../components/links">
+                    Links
+                  </a>
+                  <a class="nav-link" href="../../../components/gridCells">
+                    Grid cells
+                  </a>
+                  <a class="nav-link" href="../../../components/iconsDescription">
+                    Icon + description
+                  </a>
+                  <a class="nav-link" href="../../../components/accordions">
+                    Accordions
+                  </a>
+                  <a class="nav-link" href="../../../components/alerts">
+                    Alerts
+                  </a>
+                  <a class="nav-link" href="../../../components/icons">
+                    Icons
+                  </a>
+                  <a class="nav-link" href="../../../modules/footers/basic">
+                    Footers
+                  </a>
+                  <a class="nav-link" href="../../../components/texts">
+                    Texts
+                  </a>
+                  <a class="nav-link" href="../../../components/illustrations">
+                    Illustrations
+                  </a>
+                  <a class="nav-link" href="../../../components/microillustrations">
+                    Microillustrations
+                  </a>
+                  <a class="nav-link" href="../../../components/scenes">
+                    Scenes
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item accordion-item">
+            <span id="heading-transitions"
+                          data-bs-toggle="collapse"
+                          aria-controls="transitions"
+                          data-bs-target="#transitions"
+                          class="inner-space-bottom-32">
+                            Transitions                        </span>
+            <div id="transitions" class="accordion-collapse collapse" aria-labelledby="heading-transitions" data-bs-parent="#accordion-nav">
+              <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio labore non
+                  possimus
+                  sunt vel. Consequatur cumque cupiditate explicabo quia voluptas voluptatem. Alias
+                  cupiditate eveniet ipsa modi odit officiis quibusdam unde!</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!--END: MAIN HEADER-->
 

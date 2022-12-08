@@ -7,6 +7,7 @@ const headerConfig = {
     size: 'full',
     isSticky: true,
     hasBackground: false,
+    mainHeader: true,
     hasLightNav: true,
     buttons: [
         {
@@ -19,6 +20,7 @@ const headerConfig = {
 %>
 
 <%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
 <%- contentFor('body') %>
 
 <!-- MARQUEE HERO -->

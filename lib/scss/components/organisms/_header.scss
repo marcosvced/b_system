@@ -15,9 +15,14 @@
 header.header {
   padding-block: size.rem(14);
   padding-inline: size.space(16);
-  min-height: size.rem(48);
+  min-height: size.rem(56);
   transition: all .35s ease-in-out, width 0s;
   position: relative;
+  display: flex;
+  align-items: center;
+  > * {
+    width: 100%;
+  }
 
   @include media.screen(xl) {
     min-height: size.rem(92);

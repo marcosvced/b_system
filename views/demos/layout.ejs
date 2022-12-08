@@ -16,6 +16,7 @@ const headerConfig = {
     size: 'full',
     isSticky: true,
     hasBackground: true,
+    mainHeader: true,
     buttons: [
         {
             label: 'Purchase B_system',
@@ -30,6 +31,8 @@ const headerConfig = {
 
 <%- contentFor('fixed') %>
 <%- include(`${component}/stickyBannerCompleted/stickyBannerCompleted`) %>
+<%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>
+
 
 <%- contentFor('footer') %>
 <%- include(`${component}/footer/basic`, {

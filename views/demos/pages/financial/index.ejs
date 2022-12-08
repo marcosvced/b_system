@@ -5,6 +5,7 @@ const headerConfig = {
     items: navigation,
     isSticky: true,
     canSearch: true,
+    mainHeader: true,
     size: 'full',
     hasBackground: true,
     buttons: [
@@ -17,6 +18,7 @@ const headerConfig = {
 }
 %>
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
+
 
 <%- contentFor('body') %>
 
