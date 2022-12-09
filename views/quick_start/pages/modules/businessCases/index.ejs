@@ -65,3 +65,66 @@
         ]
     }
 ) %>
+
+<%- include( `${module}/businessCase/businessCase`, {
+    title: 'Business cases',
+    text: 'Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.',
+    link: {
+        href: '#',
+        label: 'See all',
+        icon: 'links',
+    },
+    img: {
+        src: 'img_business-case',
+        alt: 'business case module background'
+    },
+    background: 'eren_500',
+    slides: [
+        {
+            title: 'Business case 1: Brandemic',
+            icon: 'award',
+            subtitle: 'New brand',
+            img: {
+                src: 'logo-brandemic',
+                alt: 'case image 1'
+            },
+            date: '23/03/2019',
+            link: {
+                href: '#',
+                label: 'More info',
+                icon: 'info'
+            }
+        },
+        {
+            title: 'Business case 2: B_system',
+            icon: 'view-code',
+            subtitle: 'Web template system',
+            img: {
+                src: 'logo-dark',
+                alt: 'case image 2'
+            },
+            date: '24/03/2019',
+            link: {
+                href: '#',
+                label: 'More info',
+                icon: 'info'
+            }
+        },
+        {
+            title: 'Business case 3: Brandemic',
+            icon: 'award',
+            subtitle: 'New brand',
+            img: {
+                src: 'logo-brandemic',
+                alt: 'case image 3'
+            },
+            date: '25/03/2019',
+            link: {
+                href: '#',
+                label: 'More info',
+                icon: 'info'
+            }
+        }
+    ],
+    isDark: true,
+}) %>

@@ -18,6 +18,11 @@
   z-index: 0;
 }
 
+[data-bsystem=dark] .business-case-wrapper.section-bg-color, 
+[data-bsystem=dark].business-case-wrapper.section-bg-color {
+  background-color: $c-grayscale--1200;
+}
+
 .business-case {
   $parent: &;
 
