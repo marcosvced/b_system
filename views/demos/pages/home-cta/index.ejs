@@ -270,17 +270,4 @@ const headerConfig = {
 }) -%>
 <!-- END: ICONS SOCIAL -->
 <%- contentFor('script') %>
-
-    const header = document.querySelector('header.header')
-    header.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (e) => {
-        const isBodyDark = !!document.querySelector('body[data-bsystem="dark"]')
-        const accessButton = document.querySelector('header button.btn.btn-fit')
-        if (e.detail.isTransparent) {
-            accessButton.classList.remove('btn-tertiary')
-            accessButton.classList.add('btn-subtle')
-        } else {
-            accessButton.classList.remove('btn-subtle')
-            accessButton.classList.add('btn-tertiary')
-
-        }
-    })
+transformHeader()
