@@ -18,6 +18,7 @@ const headerConfig = {
 %>
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
+<%- contentFor('body') %>
 <div class="main-content main-content-space-top">
     <section>
         <%- include(`${module}/marquee/image/image`, { 

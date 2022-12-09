@@ -2,11 +2,12 @@
 
 <%- contentFor('header') %>
 <%
-const headerConfig = {
+const config = {
     items: navigation,
     justify: 'right',
     size: 'full',
     isSticky: true,
+    hasLightNav: false,
     hasBackground: false,
     buttons: [
         {
@@ -16,8 +17,9 @@ const headerConfig = {
     ]
 }
 %>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
+<%- include(`${component}/header/header`, config) %>
 
+<%- contentFor('body') %>
 <div class="main-content main-content-space-top">
     <section>
         <%- include(`${module}/marquee/cta/cta`, {
