@@ -47,7 +47,7 @@
 
         &#{$parent}-border {
             @include themed.properties {
-                border: themed.values(1px solid $c-grayscale--300, $c-grayscale--1100);
+                border: themed.values(1px solid $c-grayscale--300, 1px solid $c-grayscale--900);
             }
         }
 

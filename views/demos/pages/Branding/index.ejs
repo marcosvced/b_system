@@ -225,9 +225,13 @@ const headerConfig = {
 <!-- END: ICON SERVICES -->
 
 <!-- STATISTICS -->
-<%- include(`${module}/statistic/statistic`, {
+<%- include(`${module}/statistic/background`, {
+    background: {
+        srcDark: 'statistic_background-02',
+        alt: 'statistic background'
+    },
     img: {
-        src: 'statistic-1.png',
+        src: 'statistic-1',
         alt: 'statistic image'
     },
     columns: [
@@ -385,7 +389,7 @@ const headerConfig = {
         {
             text: "Many of the failures in people's lives occurred when they did not realize what was close to success.",
             avatar: {
-                src: 'avatar_testimonial-1',
+                src: 'avatar_testimonial-2',
                 alt: 'Melissa Edgar',
                 name: 'Melissa Edgar',
                 job: 'UX designer'
@@ -423,7 +427,7 @@ const headerConfig = {
         {
             text: "Always keep in mind that your own will to succeed is much more important than anything else.",
             avatar: {
-                src: 'avatar_testimonial-1',
+                src: 'avatar_testimonial-3',
                 alt: 'Mario Golpe',
                 name: 'Mario Golpe',
                 job: 'Marketing manager'

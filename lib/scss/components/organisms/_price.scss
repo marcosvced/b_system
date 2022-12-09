@@ -16,3 +16,9 @@
         }
     }
 }
+
+[data-bsystem=dark] {
+    .prices-bg-container {
+        display: none !important;
+    }
+}

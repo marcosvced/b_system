@@ -6,7 +6,7 @@
 
 .portfolio {
     $parent: &;
-    $border-portfolio: themed.values(helper.rem(.1) solid $c-grayscale--200, none);
+    $border-portfolio: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
     border-block: $border-portfolio;
 
     &-basic, &-vertical {
@@ -83,14 +83,12 @@
             }
 
             #{$parent}-tag {
-                background-color: $c-eren--100;
+                background-color: themed.values($c-eren--100, $c-grayscale--1000);
                 width: helper.rem(48);
                 height: helper.rem(72);
                 padding-bottom: helper.rem(8);
-                border:{
-                    bottom-left-radius: helper.rem(32);
-                    bottom-right-radius: helper.rem(32);
-                }
+                border-bottom-left-radius: helper.rem(32);
+                border-bottom-right-radius: helper.rem(32);
             }
         }
 

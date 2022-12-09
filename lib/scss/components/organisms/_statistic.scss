@@ -29,11 +29,17 @@
     &-background {
         height: 100%;
         width: 100%;
-        object-fit: none;
+        object-fit: cover;
         filter: brightness(.5);
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
+    }
+}
+
+body:not([data-bsystem=dark]) {
+    .statistic-background-dark {
+        display: none !important;
     }
 }
