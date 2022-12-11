@@ -28,15 +28,15 @@
   <body>
 
     <!--MAIN HEADER-->
-    <header class="header header-fixed header-transparent " data-bsystem="sticky">
+    <header class="header header-fixed   " data-b-system-header-position="sticky" data-b-system-header="transparent">
       <div class="d-flex justify-content-between align-items-center ">
-        <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-bsystem="buttons-wrapper">
-          <div class="order-2 order-xl-0 space-right-xl-32 ">
+        <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-b-system-wrapper="buttons">
+          <div class="order-2 order-xl-0 space-right-xl-32">
             <button type="button" class="btn btn-only-icon">
               <i class="icon-m-glass" style="--size: NaNrem"></i>
             </button>
           </div>
-          <div class="d-flex d-xl-none order-0 ">
+          <div class="d-flex d-xl-none order-0">
             <button type="button" class="btn btn-only-icon">
               <i class="icon-avatar" style="--size: NaNrem"></i>
             </button>
@@ -54,7 +54,7 @@
         <div class="nav-wrapper order-2 order-xl-1 col-2 col-xl-6">
           <div class="d-none d-xl-flex justify-content-center">
             <nav class="navbar navbar-expand-lg ">
-              <ul class="navbar-nav ">
+              <ul class="navbar-nav">
                 <li class="nav-item  dropdown  ">
                   <a class="nav-link active  dropdown-toggle " href="#" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Demos
@@ -327,7 +327,7 @@
               </ul>
             </nav>
           </div>
-          <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16 ">
+          <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
             <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <i class="icon-menu" style="--size: NaNrem"></i>
             </button>
@@ -718,7 +718,7 @@
       <!-- MARQUEE HERO -->
       <section class="section section-divider p-0">
         <div class="marquee-wrapper position-relative">
-          <div class="swiper" data-bsystem="swiper" data-swiper-target="marquee-cta" data-swiper-next=".button-next" data-swiper-prev=".button-prev" data-swiper-items="1">
+          <div class="swiper" data-b-system="swiper" data-swiper-target="marquee-cta" data-swiper-next=".button-next" data-swiper-prev=".button-prev" data-swiper-items="1">
             <div class="swiper-wrapper">
 
               <!-- swiper slide -->
@@ -1050,18 +1050,13 @@
             detail: nav
           } = evt
           isNavActive = nav.isActive
-          console.log(isNavActive)
           if (isNavActive) {
             if (!isBodyDark) {
               img.src = '../../assets/img/logo-dark.svg'
             }
-            headerElement.classList.remove('header-transparent')
-            headerElement.classList.add('header-light')
           } else {
             if (isHeaderTransparent) {
               img.src = '../../assets/img/logo-light.svg'
-              headerElement.classList.remove('header-light')
-              headerElement.classList.add('header-transparent')
             }
           }
         })
@@ -1069,10 +1064,10 @@
           const {
             detail: header
           } = evt
-          const isDark = !!document.querySelector('body[data-bsystem="dark"]')
+          const isDark = !!document.querySelector('body[data-b-system-theme="dark"]')
           isHeaderTransparent = header.isTransparent
           isBodyDark = isDark
-          if (header.isTransparent) {
+          if (header.isTransparent && !isNavActive) {
             img.src = '../../assets/img/logo-light.svg'
             if (purchaseButtonType !== 'primary') {
               purchaseButton.classList.remove('btn-primary')

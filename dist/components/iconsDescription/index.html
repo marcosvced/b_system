@@ -28,9 +28,9 @@
   <body>
 
     <!--MAIN HEADER-->
-    <header class="header header-fixed header-light " data-bsystem="sticky">
+    <header class="header header-fixed header-light  " data-b-system-header-position="sticky" data-b-system-header="light">
       <div class="d-flex justify-content-between align-items-center ">
-        <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-bsystem="buttons-wrapper">
+        <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-b-system-wrapper="buttons">
           <div class="d-flex d-xl-none order-0">
             <button type="button" class="btn btn-only-icon">
               <i class="icon-cart" style="--size: NaNrem"></i>
@@ -45,10 +45,10 @@
         <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min ">
           <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
         </a>
-        <div class="nav-wrapper order-2 order-xl-1 light-nav col">
+        <div class="nav-wrapper order-2 order-xl-1 col">
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
             <nav class="navbar navbar-expand-lg ">
-              <ul class="navbar-nav ">
+              <ul class="navbar-nav">
                 <li class="nav-item  dropdown  ">
                   <a class="nav-link   dropdown-toggle " href="#" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Demos
@@ -329,6 +329,8 @@
         </div>
       </div>
     </header>
+
+    <!--END: MAIN HEADER-->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-body">
         <ul class="navbar-nav" id="accordion-nav">
@@ -680,8 +682,6 @@
       </div>
     </div>
 
-    <!--END: MAIN HEADER-->
-
     <!--MAIN CONTENT-->
     <main class="main">
 
@@ -724,7 +724,7 @@
             </div>
             <div class="col-1-to-5 col-md-5-to-9 col-xl-10-to-13 d-flex flex-column justify-content-between h-100 space-y-48">
               <div class="icon-description icon-description-content icon-description-masked">
-                <picture class="masked" style="mask-image:url(../../assets/masks/template.svg); -webkit-mask-image:url(../../assets/masks/template.svg);">
+                <picture class="masked d-flex justify-content-center align-items-center" style="mask-image:url(../../assets/masks/template.svg); -webkit-mask-image:url(../../assets/masks/template.svg);">
                   <img class="masked-img" src="../../assets/img/featured-content/featured-content_01.jpg" alt="icon description masked image">
                 </picture>
                 <h5 class="icon-description-title m-0">An organic design system</h5>
@@ -741,7 +741,7 @@
       <!--END: SECTION LIGHT-->
 
       <!--SECTION DARK-->
-      <section class="section" data-bsystem="dark">
+      <section class="section" data-b-system-theme="dark">
         <div class="container">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Icon description</h3>
           <div class="icon-description-wrapper d-grid grid-4 grid-md-8 grid-xl-12">
@@ -777,7 +777,7 @@
             </div>
             <div class="col-1-to-5 col-md-5-to-9 col-xl-10-to-13 d-flex flex-column justify-content-between h-100 space-y-48">
               <div class="icon-description icon-description-content icon-description-masked">
-                <picture class="masked" style="mask-image:url(../../assets/masks/template.svg); -webkit-mask-image:url(../../assets/masks/template.svg);">
+                <picture class="masked d-flex justify-content-center align-items-center" style="mask-image:url(../../assets/masks/template.svg); -webkit-mask-image:url(../../assets/masks/template.svg);">
                   <img class="masked-img" src="../../assets/img/featured-content/featured-content_01.jpg" alt="icon description masked image">
                 </picture>
                 <h5 class="icon-description-title m-0">An organic design system</h5>
@@ -823,6 +823,52 @@
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
     <script>
+      const transformHeader = (purchaseButtonType) => {
+        const headerElement = document.querySelector('header.header')
+        const img = document.querySelector('header img.logo')
+        const purchaseButton = document.querySelector('header button.btn.btn-fit')
+        let isNavActive = false
+        let isHeaderTransparent = true
+        let isBodyDark = false
+        document.addEventListener(b_system.$EVENTS.ON_MOBILE_NAV_TOGGLE, (evt) => {
+          const {
+            detail: nav
+          } = evt
+          isNavActive = nav.isActive
+          if (isNavActive) {
+            if (!isBodyDark) {
+              img.src = '../../assets/img/logo-dark.svg'
+            }
+          } else {
+            if (isHeaderTransparent) {
+              img.src = '../../assets/img/logo-light.svg'
+            }
+          }
+        })
+        document.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (evt) => {
+          const {
+            detail: header
+          } = evt
+          const isDark = !!document.querySelector('body[data-b-system-theme="dark"]')
+          isHeaderTransparent = header.isTransparent
+          isBodyDark = isDark
+          if (header.isTransparent && !isNavActive) {
+            img.src = '../../assets/img/logo-light.svg'
+            if (purchaseButtonType !== 'primary') {
+              purchaseButton.classList.remove('btn-primary')
+              purchaseButton.classList.add('btn-glass')
+            }
+          } else {
+            if (!isBodyDark) {
+              img.src = '../../assets/img/logo-dark.svg'
+            }
+            if (purchaseButtonType !== 'primary') {
+              purchaseButton.classList.remove('btn-glass')
+              purchaseButton.classList.add('btn-primary')
+            }
+          }
+        })
+      }
     </script>
 
     <!--END: SCRIPTS-->

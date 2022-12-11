@@ -38,7 +38,7 @@
     }
 }
 
-body:not([data-bsystem=dark]) {
+body:not([data-b-system-theme=dark]) {
     .statistic-background-dark {
         display: none !important;
     }

@@ -3,7 +3,7 @@
 $current-theme-mode: null;
 
 @mixin dark() {
-    $selector: "[data-bsystem='dark']";
+    $selector: "[data-b-system-theme='dark']";
 
     @at-root #{selector.unify(&, $selector)},
     #{$selector} & {
@@ -12,7 +12,7 @@ $current-theme-mode: null;
 }
 
 @mixin light() {
-    $selector: "[data-bsystem='light']";
+    $selector: "[data-b-system-theme='light']";
 
     @at-root #{selector.unify(&, $selector)},
     #{$selector} &,

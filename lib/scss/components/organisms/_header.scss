@@ -21,6 +21,11 @@ header.header {
   display: flex;
   align-items: center;
 
+  @include themed.properties {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
   > * {
     width: 100%;
   }
@@ -51,6 +56,64 @@ header.header {
     }
   }
 
+  nav {
+    &.navbar {
+      padding: 0;
+
+      ul.dropdown-submenu {
+        padding: 0;
+
+        span.dropdown-item {
+          pointer-events: none;
+        }
+      }
+
+      li {
+        padding: 0;
+        list-style: none;
+      }
+
+      .navbar-nav {
+        display: none;
+        padding-block: size.rem(32);
+        @include media.screen(lg) {
+          order: 3;
+          display: inline-flex;
+          flex-direction: row;
+          flex-grow: 1;
+          padding-block: 0;
+          @include space.x(32)
+        }
+
+        .nav-item {
+          > a {
+            padding: 0;
+            @extend %body-regular-text;
+            text-align: center;
+            @include themed.properties {
+              color: themed.values(colors.grayscale(800), colors.grayscale(600));
+            }
+
+            &.active {
+              @extend %body-bold-text;
+              @include themed.properties {
+                color: themed.values(colors.body(off), colors.body(light));
+              }
+            }
+          }
+
+          &:hover {
+            a:not(.active):not(.disabled) {
+              @include themed.properties {
+                color: themed.values(colors.body(off), colors.body(light));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   // fixes bootstrap container padding
   > .container-xl {
     padding: 0;
@@ -60,18 +123,12 @@ header.header {
     }
   }
 
-  &.header-transparent {
-    @include themed.properties {
-      background-color: transparent;
-      box-shadow: none;
+  &.header-clear:not(.header-light) {
+    .btn.btn-only-icon > i {
+      color: white;
     }
 
-    .light-nav {
-      .btn-only-icon {
-        > * {
-          color: white;
-        }
-      }
+    nav.navbar .navbar-nav {
       .nav-item {
         > a {
           color: $c-grayscale--600;
@@ -84,21 +141,6 @@ header.header {
         &:hover {
           > a:not(.active):not(.disabled) {
             color: $c-grayscale--light;
-          }
-        }
-      }
-    }
-
-    nav.navbar {
-      .navbar-nav {
-        .nav-item {
-          > a {
-            @extend %body-regular-text;
-            text-align: center;
-
-            &.active {
-              @extend %body-bold-text;
-            }
           }
         }
       }
@@ -119,60 +161,4 @@ header.header {
     top: 0;
   }
 
-}
-
-nav {
-  &.navbar {
-    padding: 0;
-    ul.dropdown-submenu {
-      padding: 0;
-
-      span.dropdown-item {
-        pointer-events: none;
-      }
-    }
-
-    li {
-      padding: 0;
-      list-style: none;
-    }
-    .navbar-nav {
-      display: none;
-      padding-block: size.rem(32);
-      @include media.screen(lg) {
-        order: 3;
-        display: inline-flex;
-        flex-direction: row;
-        flex-grow: 1;
-        padding-block: 0;
-        @include space.x(32)
-      }
-
-      .nav-item {
-        > a {
-          padding: 0;
-          @extend %body-regular-text;
-          text-align: center;
-          @include themed.properties {
-            color: themed.values(colors.grayscale(800), colors.grayscale(600));
-          }
-
-          &.active {
-            @extend %body-bold-text;
-            @include themed.properties {
-              color: themed.values(colors.body(off), colors.body(light));
-            }
-          }
-        }
-
-        &:hover {
-          a:not(.active):not(.disabled) {
-            @include themed.properties {
-              color: themed.values(colors.body(off), colors.body(light));
-            }
-          }
-        }
-      }
-    }
-  }
 }
