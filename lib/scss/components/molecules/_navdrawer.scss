@@ -3,6 +3,7 @@
 @use "../../helpers/colors";
 @use "../../mixins/media";
 @use "../../placeholders/fonts";
+@use "../../common/texts";
 
 .offcanvas.offcanvas-start {
   width: 100vw;
@@ -11,12 +12,50 @@
 
   .offcanvas-body {
     height: calc(100vh - #{size.rem(56)});
-    padding: #{size.rem(56 + 32 )} size.space(32) size.space(32);
+    padding: #{size.rem(56 + 32 )} size.space(16) size.space(16);
 
     .navbar-nav {
+      .nav-item {
+        cursor: pointer;
+        > span {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @extend .body-bold-text;
+          > .chevron {
+            @extend .body-bold-text;
+            display: none;
+            &-active {
+              @extend .body-bold-text;
+              display: block;
+            }
+          }
+          &.collapsed {
+            @extend .body-regular-text;
+            > .chevron {
+              display: block;
+              &-active {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .accordion-item {
+      margin-bottom: size.space(16);
+    }
+    .accordion-body {
+      padding-top: size.space(32);
+      padding-right: 0;
+      a {
+        @extend .body-regular-text;
+      }
     }
   }
 }
+
 .offcanvas-backdrop.show {
   display: none;
 }
