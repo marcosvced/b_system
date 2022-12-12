@@ -1,7 +1,7 @@
 module.exports = {
   DEMOS: {
     ROUTE_NAME: 'demos',
-    HOME: '/demos/home',
+    STARTUP: '/demos/startup',
     HOME2: '/demos/home-cta',
     BRANDING: '/demos/branding',
     FINANCIAL: '/demos/financial',

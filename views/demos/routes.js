@@ -12,8 +12,8 @@ function path(page = 'home', children = []) { return (dir(DEMOS.ROUTE_NAME, page
  */
 
 /* Home */
-route.get(DEMOS.HOME, (request, response) => {
-  render(response, path('home'), {}, { navigation })
+route.get(DEMOS.STARTUP, (request, response) => {
+  render(response, path('startup'), {}, { navigation })
 })
 
 /* Home 2 */

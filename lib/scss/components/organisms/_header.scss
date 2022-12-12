@@ -60,14 +60,6 @@ header.header {
     &.navbar {
       padding: 0;
 
-      ul.dropdown-submenu {
-        padding: 0;
-
-        span.dropdown-item {
-          pointer-events: none;
-        }
-      }
-
       li {
         padding: 0;
         list-style: none;
@@ -103,7 +95,9 @@ header.header {
           }
 
           &:hover {
-            a:not(.active):not(.disabled) {
+            > a:not(.active),
+            > a:not(.disabled),
+            > a:not(.dropdown-item) {
               @include themed.properties {
                 color: themed.values(colors.body(off), colors.body(light));
               }
@@ -139,7 +133,9 @@ header.header {
         }
 
         &:hover {
-          > a:not(.active):not(.disabled) {
+          > a:not(.active),
+          > a:not(.disabled),
+          > a:not(.dropdown-item) {
             color: $c-grayscale--light;
           }
         }

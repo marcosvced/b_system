@@ -5,23 +5,99 @@ const navigation = [
     {
         label: 'Demos',
         key: 'demos',
+        display: 'grid',
+        repeat: '2',
         entries: [
             {
-                label: 'Home',
-                href: DEMOS.HOME,
+                group: [
+                    {
+                        label: 'Standar demos',
+                        entries: [
+                            {
+                                label: 'Startup',
+                                href: DEMOS.STARTUP,
+                            },
+                            {
+                                label: 'Design Studio',
+                                href: DEMOS.HOME2,
+                            },
+                            {
+                                label: 'Branding Agency',
+                                href: DEMOS.BRANDING,
+                            },
+                            {
+                                label: 'Marketing Agency',
+                                href: '#',
+                            },
+                            {
+                                label: 'Creative Studio',
+                                href: '#',
+                            },
+                            {
+                                label: 'Freelance',
+                                href: '#',
+                            },
+                            {
+                                label: 'Development Studio',
+                                href: '#',
+                            },
+                            {
+                                label: 'Corporate',
+                                href: DEMOS.FINANCIAL,
+                            },
+                            {
+                                label: 'Creative Agency',
+                                href: '#',
+                            },
+                        ]
+                    }
+                ],
             },
             {
-                label: 'Home CTA',
-                href: DEMOS.HOME2,
-            },
-            {
-                label: 'Branding',
-                href: DEMOS.BRANDING,
-            },
-            {
-                label: 'Financial',
-                href: DEMOS.FINANCIAL,
-            },
+                group: [
+                    {
+                        label: 'Niche demos',
+                        entries: [
+                            {
+                                label: 'Digital Product',
+                                href: '#',
+                            },
+                            {
+                                label: 'Modern Shop',
+                                href: '#',
+                            },
+                            {
+                                label: 'Classic Shop',
+                                href: '#',
+                            },
+                            {
+                                label: 'Legal',
+                                href: '#',
+                            },
+                            {
+                                label: 'Furniture',
+                                href: '#',
+                            },
+                            {
+                                label: 'Architecture',
+                                href: '#',
+                            },
+                            {
+                                label: 'Restaurant',
+                                href: '#',
+                            },
+                            {
+                                label: 'Fitness',
+                                href: '#',
+                            },
+                            {
+                                label: 'Portfolio',
+                                href: '#',
+                            },
+                        ]
+                    }
+                ]
+            }
         ],
     },
     {
@@ -31,6 +107,8 @@ const navigation = [
     {
         label: 'Modules',
         key: 'modules',
+        display: 'grid',
+        repeat: '4',
         entries: [
             {
                 group: [
