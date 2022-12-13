@@ -282,6 +282,7 @@
     position: absolute;
     bottom: helper.rem(32);
     right: helper.rem(32);
+    z-index: 1;
   }
 }
 

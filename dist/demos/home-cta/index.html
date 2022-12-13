@@ -17,18 +17,20 @@
     <style lang="css">
       .modules_dropdown_menu.show {
         display: grid;
-        grid-template-columns: repeat(4, 225px);
+        grid-template-columns: repeat(4, min-content);
         gap: 24px;
       }
-      .modules_dropdown_menu .group>*:not(:last-child) {
-        margin-bottom: 16px;
+      .demos_dropdown_menu.show {
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        gap: 24px;
       }
     </style>
   </head>
   <body>
 
     <!--MAIN HEADER-->
-    <header class="header header-fixed  header-clear " data-b-system-header-position="sticky" data-b-system-header="transparent">
+    <header class="header header-fixed   " data-b-system-header-position="sticky" data-b-system-header="transparent">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-b-system-wrapper="buttons">
           <div class="d-flex d-xl-none order-0">
@@ -37,13 +39,13 @@
             </button>
           </div>
           <div class="d-none d-xl-block order-1">
-            <button type="button" class="btn btn-glass    btn-fit">
+            <button type="button" class="btn btn-primary    btn-fit">
               Purchase B_system
             </button>
           </div>
         </div>
         <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min ">
-          <img src="../../assets/img/logo-light.svg" class="logo" alt="b system logo" />
+          <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
         </a>
         <div class="nav-wrapper order-2 order-xl-1 col">
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
@@ -382,7 +384,7 @@
             </nav>
           </div>
           <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-            <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <button type="button" class="btn btn-only-icon">
               <i class="icon-menu" style="--size: NaNrem"></i>
             </button>
           </div>
@@ -391,30 +393,6 @@
     </header>
 
     <!--END: MAIN HEADER-->
-    <div id="sticky-banner" class="d-none d-xl-block card card-sticky card-bg space-y-24 inner-space-block-24 inner-space-inline-24 position-fixed">
-      <div class="switch d-inline-flex justify-content-between space-x-24 w-100">
-        <label class="body-bold-text text-dark-mode" for="dark-mode-switch">Dark mode</label>
-        <div class="form-check form-switch">
-          <input class="form-switch-input bg-transition" type="checkbox" id="dark-mode-switch">
-          <div class="form-switch-wrapper">
-            <span class="form-switch-dot"></span>
-          </div>
-        </div>
-      </div>
-      <hr class="border-bottom d-block m-0 space-bottom-24">
-      <div class="d-inline-flex align-items-center space-x-8 space-bottom-16">
-        <i class="icon-filters" style="--size: 1.25rem"></i>
-        <span>+ 150 pages</span>
-      </div>
-      <div class="d-inline-flex align-items-center space-x-8">
-        <i class="icon-edit" style="--size: 1.25rem"></i>
-        <span>+ 300 components</span>
-      </div>
-      <hr class="border-bottom d-block m-0 space-bottom-24">
-      <a href='#' class="action-link ">
-        <span>Purchase B_system</span>
-      </a>
-    </div>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-body">
         <ul class="navbar-nav" id="accordion-nav">
@@ -944,9 +922,9 @@
                       <img class="marquee-bg" src="../../assets/img/marquee/marquee_text-01.jpg" alt="marquee text">
                     </picture>
                     <h1 class="marquee-title text-black col-xl-1-to-11">
-                      We are a new concept of digital studio. We work with startups and large companies to activate and consolidate their
+                      We are a new concept of digital studio. We work with startups and large companies to activate and consolidate
                       <a class="action-link marquee-title-link d-inline" href="#">
-                        _brands </a>
+                        their _brands </a>
                     </h1>
                     <div class="col-xl-1-to-13 d-flex justify-content-center justify-content-sm-start w-100">
                       <button type="button" class="btn btn-primary btn-primary-cta">
@@ -962,12 +940,12 @@
                 <div class="marquee marquee-cta marquee-space marquee-size">
                   <div class="marquee-content d-xl-grid grid-xl-12 gap-0 h-auto space-y-32 space-y-xl-64">
                     <picture>
-                      <img class="marquee-bg" src="../../assets/img/marquee/marquee_text-01.jpg" alt="marquee text">
+                      <img class="marquee-bg" src="../../assets/img/marquee/marquee_text-02.jpg" alt="marquee text">
                     </picture>
                     <h1 class="marquee-title text-black col-xl-1-to-11">
-                      We are 100% customer-oriented and offer tailor-made solutions. Always thinking about the specific needs of each of our
+                      We are 100% customer-oriented and offer tailor-made solutions. Always thinking about the specific needs of each of
                       <a class="action-link marquee-title-link d-inline" href="#">
-                        clients. </a>
+                        our _clients. </a>
                     </h1>
                     <div class="col-xl-1-to-13 d-flex justify-content-center justify-content-sm-start w-100">
                       <button type="button" class="btn btn-primary btn-primary-cta">
@@ -983,12 +961,12 @@
                 <div class="marquee marquee-cta marquee-space marquee-size">
                   <div class="marquee-content d-xl-grid grid-xl-12 gap-0 h-auto space-y-32 space-y-xl-64">
                     <picture>
-                      <img class="marquee-bg" src="../../assets/img/marquee/marquee_text-01.jpg" alt="marquee text">
+                      <img class="marquee-bg" src="../../assets/img/marquee/marquee_text-03.jpg" alt="marquee text">
                     </picture>
                     <h1 class="marquee-title text-black col-xl-1-to-11">
                       We combine creative talent, strategic vision, technical specialization. And above all, the desire to feel pride in
                       <a class="action-link marquee-title-link d-inline" href="#">
-                        each job. </a>
+                        each _job. </a>
                     </h1>
                     <div class="col-xl-1-to-13 d-flex justify-content-center justify-content-sm-start w-100">
                       <button type="button" class="btn btn-primary btn-primary-cta">
