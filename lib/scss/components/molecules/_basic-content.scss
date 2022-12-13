@@ -1,4 +1,5 @@
-@use '../../helpers/size';
+@use '../../placeholders';
+@use '../../helpers/themed';
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
@@ -8,6 +9,20 @@
   &:not(#{$parent}-simple) {
     h1, h2 {
       margin-inline: auto;
+    }
+  }
+
+  &#{$parent}-simple {
+    #{$parent}-title {
+      margin-bottom: helper.space(24);
+
+      @include mixin.screen(md) {
+        margin-bottom: helper.rem(32);
+      }
+
+      @include mixin.screen(xl) {
+        margin-bottom: 0;
+      }
     }
   }
 
