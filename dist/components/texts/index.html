@@ -429,10 +429,10 @@
               <div class="accordion-body">
                 <ul class="navbar-nav" id="accordion-demos">
                   <li class="nav-item accordion-item">
-                    <span id="heading-key_standar demos"
+                    <span id="heading-key_standar_demos"
                                                           data-bs-toggle="collapse"
-                                                          aria-controls="key_standar demos"
-                                                          data-bs-target="#key_standar demos"
+                                                          aria-controls="key_standar_demos"
+                                                          data-bs-target="#key_standar_demos"
                                                           class="collapsed">
                                                           Standar demos                                                        <span class="chevron">
 <i class="icon-open" ></i>
@@ -441,7 +441,7 @@
 <i class="icon-close" ></i>
                                                         </span>
                     </span>
-                    <div id="key_standar demos" class="accordion-collapse collapse" aria-labelledby="heading-key_standar demos" data-bs-parent="#accordion-demos">
+                    <div id="key_standar_demos" class="accordion-collapse collapse" aria-labelledby="heading-key_standar_demos" data-bs-parent="#accordion-demos">
                       <div class="accordion-body">
                         <a class="nav-link" href="../../demos/startup">
                           Startup
@@ -474,10 +474,10 @@
                     </div>
                   </li>
                   <li class="nav-item accordion-item">
-                    <span id="heading-key_niche demos"
+                    <span id="heading-key_niche_demos"
                                                           data-bs-toggle="collapse"
-                                                          aria-controls="key_niche demos"
-                                                          data-bs-target="#key_niche demos"
+                                                          aria-controls="key_niche_demos"
+                                                          data-bs-target="#key_niche_demos"
                                                           class="collapsed">
                                                           Niche demos                                                        <span class="chevron">
 <i class="icon-open" ></i>
@@ -486,7 +486,7 @@
 <i class="icon-close" ></i>
                                                         </span>
                     </span>
-                    <div id="key_niche demos" class="accordion-collapse collapse" aria-labelledby="heading-key_niche demos" data-bs-parent="#accordion-demos">
+                    <div id="key_niche_demos" class="accordion-collapse collapse" aria-labelledby="heading-key_niche_demos" data-bs-parent="#accordion-demos">
                       <div class="accordion-body">
                         <a class="nav-link" href="#">
                           Digital Product
@@ -890,10 +890,10 @@
                     </div>
                   </li>
                   <li class="nav-item accordion-item">
-                    <span id="heading-key_brand elements"
+                    <span id="heading-key_brand_elements"
                                                           data-bs-toggle="collapse"
-                                                          aria-controls="key_brand elements"
-                                                          data-bs-target="#key_brand elements"
+                                                          aria-controls="key_brand_elements"
+                                                          data-bs-target="#key_brand_elements"
                                                           class="collapsed">
                                                           Brand elements                                                        <span class="chevron">
 <i class="icon-open" ></i>
@@ -902,7 +902,7 @@
 <i class="icon-close" ></i>
                                                         </span>
                     </span>
-                    <div id="key_brand elements" class="accordion-collapse collapse" aria-labelledby="heading-key_brand elements" data-bs-parent="#accordion-components">
+                    <div id="key_brand_elements" class="accordion-collapse collapse" aria-labelledby="heading-key_brand_elements" data-bs-parent="#accordion-components">
                       <div class="accordion-body">
                         <a class="nav-link" href="../../components/illustrations">
                           Illustrations
@@ -1140,14 +1140,14 @@
         const purchaseButton = document.querySelector('header button.btn.btn-fit')
         let isNavActive = false
         let isHeaderTransparent = true
-        let isBodyDark = false
         document.addEventListener(b_system.$EVENTS.ON_MOBILE_NAV_TOGGLE, (evt) => {
+          const isDark = !!document.querySelector('body[data-b-system-theme="dark"]')
           const {
             detail: nav
           } = evt
           isNavActive = nav.isActive
           if (isNavActive) {
-            if (!isBodyDark) {
+            if (!isDark) {
               img.src = '../../assets/img/logo-dark.svg'
             }
           } else {
@@ -1162,7 +1162,6 @@
           } = evt
           const isDark = !!document.querySelector('body[data-b-system-theme="dark"]')
           isHeaderTransparent = header.isTransparent
-          isBodyDark = isDark
           if (header.isTransparent && !isNavActive) {
             img.src = '../../assets/img/logo-light.svg'
             if (purchaseButtonType !== 'primary') {
@@ -1170,7 +1169,7 @@
               purchaseButton.classList.add('btn-glass')
             }
           } else {
-            if (!isBodyDark) {
+            if (!isDark) {
               img.src = '../../assets/img/logo-dark.svg'
             }
             if (purchaseButtonType !== 'primary') {

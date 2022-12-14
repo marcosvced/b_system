@@ -4,6 +4,8 @@
 @use "../../mixins/media";
 @use "../../placeholders/fonts";
 @use "../../common/texts";
+@use '../../helpers/themed';
+
 
 .offcanvas.offcanvas-start {
   width: 100vw;
@@ -13,6 +15,9 @@
   .offcanvas-body {
     height: calc(100vh - #{size.rem(56)});
     padding: #{size.rem(56 + 32 )} size.space(16) size.space(16);
+    @include themed.properties {
+      background-color: themed.values($c-grayscale--light, $c-grayscale--1100);
+    }
 
     .navbar-nav {
       .nav-item {
@@ -31,7 +36,12 @@
             }
           }
           &.collapsed {
-            @extend .body-regular-text;
+            @include themed.light {
+              @extend .body-regular-text;
+            }
+            @include themed.dark {
+              @extend .body-regular-gray-text;
+            }
             > .chevron {
               display: block;
               &-active {
@@ -50,7 +60,12 @@
       padding-top: size.space(32);
       padding-right: 0;
       a {
-        @extend .body-regular-text;
+        @include themed.light {
+          @extend .body-regular-text;
+        }
+        @include themed.dark {
+          @extend .body-regular-gray-text;
+        }
       }
     }
   }
