@@ -16,7 +16,7 @@ function path(page = 'home', children = []) { return (dir(QUICK_START.ROUTE_NAME
 
 /* the default path "/" should redirect to Home */
 route.get('/', (request, response) => {
-  response.redirect(QUICK_START.BUTTONS)
+  response.redirect(QUICK_START.HEADERS)
 })
 
 /**
@@ -56,9 +56,9 @@ route.get(QUICK_START.FOOTERS.CORPORATE, (request, response) => {
   render(response, path('modules', ['footers', 'corporate']), {}, { navigation })
 })
 
-route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
-  render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
-})
+// route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
+//   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
+// })
 
 /* Icon Description */
 route.get(QUICK_START.ICON_DESCRIPTION, (request, response) => {

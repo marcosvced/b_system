@@ -14,7 +14,7 @@ module.exports = {
       BASIC: '/modules/footers/basic',
       STANDARD: '/modules/footers/standard',
       CORPORATE: '/modules/footers/corporate',
-      NEWSLETTER: '/modules/footers/newsletter',
+      // NEWSLETTER: '/modules/footers/newsletter',
     },
     ICON_DESCRIPTION: '/modules/iconsDescription',
     ICONS_SOCIAL: '/modules/iconSocial',
@@ -62,5 +62,4 @@ module.exports = {
     ICON_DESCRIPTION_COMPONENT: '/components/iconsDescription',
     ACCORDIONS: '/components/accordions'
   },
-
 }

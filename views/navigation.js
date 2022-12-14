@@ -323,72 +323,87 @@ const navigation = [
     {
         label: 'Components',
         key: 'components',
+        display: 'grid',
+        repeat: 2,
         entries: [
             {
-                href: QUICK_START.BUTTONS,
-                label: 'Buttons',
+              group: [
+                  {
+                      label: 'Components',
+                      entries: [
+                          {
+                              href: QUICK_START.BUTTONS,
+                              label: 'Buttons',
+                          },
+                          {
+                              href: QUICK_START.FORMS,
+                              label: 'Forms',
+                          },
+                          {
+                              href: QUICK_START.INTERACTION,
+                              label: 'Interaction',
+                          },
+                          {
+                              href: QUICK_START.CARDS,
+                              label: 'Cards',
+                          },
+                          {
+                              href: QUICK_START.PRODUCT_CARDS,
+                              label: 'Product Cards',
+                          },
+                          {
+                              href: QUICK_START.LINKS,
+                              label: 'Links',
+                          },
+                          {
+                              href: QUICK_START.GRID_CELLS,
+                              label: 'Grid cells',
+                          },
+                          {
+                              href: QUICK_START.ICON_DESCRIPTION_COMPONENT,
+                              label: 'Icon + description',
+                          },
+                          {
+                              href: QUICK_START.ACCORDIONS,
+                              label: 'Accordions',
+                          },
+                          {
+                              href: QUICK_START.ALERTS,
+                              label: 'Alerts',
+                          },
+                      ]
+                  }
+              ]
             },
             {
-                href: QUICK_START.FORMS,
-                label: 'Forms',
-            },
-            {
-                href: QUICK_START.INTERACTION,
-                label: 'Interaction',
-            },
-            {
-                href: QUICK_START.CARDS,
-                label: 'Cards',
-            },
-            {
-                href: QUICK_START.PRODUCT_CARDS,
-                label: 'Product Cards',
-            },
-            {
-                href: QUICK_START.LINKS,
-                label: 'Links',
-            },
-            {
-                href: QUICK_START.GRID_CELLS,
-                label: 'Grid cells',
-            },
-            {
-                href: QUICK_START.ICON_DESCRIPTION_COMPONENT,
-                label: 'Icon + description',
-            },
-            {
-                href: QUICK_START.ACCORDIONS,
-                label: 'Accordions',
-            },
-            {
-                href: QUICK_START.ALERTS,
-                label: 'Alerts',
-            },
-            {
-                href: QUICK_START.ICONS,
-                label: 'Icons',
-            },
-            {
-                href: QUICK_START.FOOTERS.BASIC,
-                label: 'Footers',
-            },
-            {
-                href: QUICK_START.TEXTS,
-                label: 'Texts',
-            },
-            {
-                href: QUICK_START.ILLUSTRATIONS,
-                label: 'Illustrations',
-            },
-            {
-                href: QUICK_START.MICROILLUSTRATIONS,
-                label: 'Microillustrations',
-            },
-            {
-                href: QUICK_START.SCENES,
-                label: 'Scenes',
-            },
-
+                group: [
+                    {
+                        label: 'Brand elements',
+                        entries: [
+                            {
+                                href: QUICK_START.ILLUSTRATIONS,
+                                label: 'Illustrations',
+                            },
+                            {
+                                href: QUICK_START.SCENES,
+                                label: 'Illustrations Scenes',
+                            },
+                            {
+                                href: QUICK_START.MICROILLUSTRATIONS,
+                                label: 'Microillustrations',
+                            },
+                            {
+                                href: QUICK_START.ICONS,
+                                label: 'Icons',
+                            },
+                            {
+                                href: QUICK_START.TEXTS,
+                                label: 'Texts',
+                            },
+                        ]
+                    }
+                ]
+            }
         ],
     },
     {

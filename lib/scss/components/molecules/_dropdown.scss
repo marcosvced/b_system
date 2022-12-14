@@ -43,7 +43,7 @@
     &.show.dropdown-grid {
       display: grid;
       grid-template-columns: repeat(var(--repeat), min-content);
-      gap: 24px;
+      gap: size.space(32);
     }
 
     .dropdown-item {
