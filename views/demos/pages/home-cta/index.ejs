@@ -1,30 +1,27 @@
-<%- include(`${view}/quick_start/layout`) %>
-
+<%- include(`${view}/demos/layout`)%>
 <%- contentFor('header') %>
 <%
-const config = {
+const headerConfig = {
     items: navigation,
-    justify: 'right',
-    size: 'full',
     isSticky: true,
-    hasLightNav: false,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
     hasBackground: false,
     buttons: [
         {
-            label: 'Purchase B_system',
-            mobileIcon: 'cart'
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'primary'
         }
     ]
 }
 %>
-<%- include(`${component}/header/header`, config) %>
-
-
-<%- contentFor('body') %>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <%- contentFor('body') %>
 <!-- MARQUEE HERO -->
-<section class="section section-divider p-0">
+<section class="section section-divider pt-5 p-0">
     <%- include(`${module}/marquee/cta/cta`, {
         slides: [
             {
