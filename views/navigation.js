@@ -1,5 +1,5 @@
 const {QUICK_START} = require('./quick_start/routePaths')
-const {DEMOS} = require('./demos/routePaths')
+const {DEMOS, PAGES} = require('./demos/routePaths')
 
 const navigation = [
     {
@@ -103,6 +103,129 @@ const navigation = [
     {
         label: 'Pages',
         key: 'pages',
+        display: 'multilevel',
+        entries: [
+            {
+                label: 'About',
+                entries: [
+                    {
+                        href: PAGES.ABOUT_US,
+                        label: 'About Us',
+                    },
+                    {
+                        href: PAGES.ABOUT_ME,
+                        label: 'About Me',
+                    },
+                    {
+                        href: PAGES.ABOUT_B_SYSTEM,
+                        label: 'About B_System',
+                    },
+                    {
+                        href: PAGES.HOW_WE_WORK,
+                        label: 'How we work',
+                    },
+                ]
+            },
+            {
+                label: 'Services',
+                entries: [
+                    {
+                        href: PAGES.OUR_SERVICES,
+                        label: 'Our services',
+                    },
+                    {
+                        href: PAGES.WHAT_WE_OFFER,
+                        label: 'What we offer',
+                    }
+                ]
+            },
+            {
+                label: 'Our work',
+                entries: [
+                    {
+                        href: PAGES.PORTFOLIO_CLASSIC_GRID,
+                        label: 'Portfolio classic grid',
+                    },
+                    {
+                        href: PAGES.PORTFOLIO_CLASSIC_WIDE,
+                        label: 'Portfolio classic wide',
+                    },
+                    {
+                        href: PAGES.PORTFOLIO_GALLERY_WIDE,
+                        label: 'Portfolio gallery wide',
+                    },
+                    {
+                        href: PAGES.PORTFOLIO_MASONRY,
+                        label: 'Portfolio masonry',
+                    },
+                    {
+                        href: PAGES.PORTFOLIO_MASONRY_PATH,
+                        label: 'Portfolio masonry path',
+                    },
+                    {
+                        href: PAGES.PORTFOLIO_PATTERN,
+                        label: 'Portfolio pattern',
+                    },
+                    {
+                        href: PAGES.SERVICES_PORTFOLIO,
+                        label: 'Services portfolio',
+                    }
+                ]
+            },
+            {
+                label: 'Our team',
+                entries: [
+                    {
+                        href: PAGES.TEAM_CLASSIC,
+                        label: 'Team classic',
+                    },
+                    {
+                        href: PAGES.TEAM_MODERN,
+                        label: 'Team modern',
+                    }
+                ]
+            },
+            {
+                label: 'Product',
+                entries: [
+                    {
+                        href: PAGES.PRODUCT_CLASSIC,
+                        label: 'Product classic',
+                    },
+                    {
+                        href: PAGES.PRODUCT_MODERN,
+                        label: 'Product modern',
+                    },
+                ]
+            },
+            {
+                label: 'Customer',
+                entries: [
+                    {
+                        href: PAGES.CUSTOMER_SUPPORT,
+                        label: 'Customer Support',
+                    },
+                    {
+                        href: PAGES.TESTIMONIALS,
+                        label: 'Testimonials',
+                    },
+                ]
+            },
+            {
+                label: 'Contact',
+                entries: [
+                    {
+                        href: PAGES.CONTACT_CLASSIC,
+                        label: 'Contact classic',
+                    },
+                    {
+                        href: PAGES.PRODUCT_PACKS,
+                        label: 'Product packs',
+                    },
+                ]
+            },
+
+        ]
     },
     {
         label: 'Modules',
@@ -110,92 +233,124 @@ const navigation = [
         display: 'multilevel',
         entries: [
             {
-                label: 'Basics',
+                label: 'Menus',
                 entries: [
                     {
                         href: QUICK_START.HEADERS,
-                        label: 'Headers',
-                    },
-                    {
-                        href: QUICK_START.BASIC_CONTENTS,
-                        label: 'Basic Contents',
-                    },
-                    {
-                        href: QUICK_START.CTA,
-                        label: 'CTA',
-                    },
-                    {
-                        href: QUICK_START.SEARCHERS,
-                        label: 'Searchers',
+                        label: 'Header menus',
                     },
                     {
                         href: QUICK_START.CATEGORIES_MENU,
-                        label: 'Menus',
+                        label: 'Categories menu',
                     },
                     {
-                        href: QUICK_START.ICONS_SOCIAL,
-                        label: 'Icons Social',
+                        href: QUICK_START.CONTACT_BAR,
+                        label: 'Contact menu',
+                    },
+                ]
+            },
+            {
+                label: 'Headers',
+                entries: [
+                    {
+                        href: QUICK_START.MARQUEES.BASIC,
+                        label: 'Marquee basic',
+                    },
+                    {
+                        href: QUICK_START.MARQUEES.STANDAR,
+                        label: 'Marquee standard',
+                    },
+
+                    {
+                        href: QUICK_START.MARQUEES.EXTENDED,
+                        label: 'Marquee extended',
+                    },
+                    {
+                        href: QUICK_START.MARQUEES.ILLUSTRATION,
+                        label: 'Marquee illustration',
+                    },
+
+                    {
+                        href: QUICK_START.MARQUEES.IMAGE,
+                        label: 'Marquee image',
+                    },
+                    {
+                        href: QUICK_START.MARQUEES.CTA,
+                        label: 'Marquee text',
+                    },
+                    {
+                        href: QUICK_START.MARQUEES.TEXTIMAGE,
+                        label: 'Marquee text + image',
+                    },
+                ]
+            },
+            {
+                label: 'Content',
+                entries: [
+                    {
+                        href: QUICK_START.BASIC_CONTENTS,
+                        label: 'Basic Content',
+                    },
+                    {
+                        href: QUICK_START.BUSINESS_CASES,
+                        label: 'Business Cases',
                     },
                     {
                         href: QUICK_START.ICON_DESCRIPTION,
-                        label: 'Icon + description'
+                        label: 'Icon description'
                     },
                     {
                         href: QUICK_START.ICON_SERVICES,
-                        label: 'Icon Services',
+                        label: 'Services',
                     },
                     {
-                        href: QUICK_START.STATISTICS,
-                        label: 'Statistics',
+                        href: QUICK_START.ICONS_SOCIAL,
+                        label: 'Social module',
+                    },
+                    {
+                        href: QUICK_START.CTA,
+                        label: 'Call to action',
                     },
                     {
                         href: QUICK_START.FAQS,
                         label: 'FAQs',
                     },
                     {
-                        href: QUICK_START.CONTACT_BAR,
-                        label: 'Contact Bar',
+                        href: QUICK_START.STATISTICS,
+                        label: 'Statistics',
                     },
                     {
                         href: QUICK_START.FEATURED_CONTENTS,
-                        label: 'Featured Contents',
+                        label: 'Featured content',
                     },
                     {
-                        href: QUICK_START.DIGITAL_PRODUCTS,
-                        label: 'Digital Products',
+                        href: QUICK_START.BRANDS,
+                        label: 'Brands',
                     },
                 ]
             },
             {
-                label: 'Marquees',
+                label: 'Grids',
                 entries: [
                     {
-                        href: QUICK_START.MARQUEES.BASIC,
-                        label: 'Basic',
+                        href: QUICK_START.BASIC_GRID,
+                        label: 'Basic grid',
                     },
                     {
-                        href: QUICK_START.MARQUEES.STANDAR,
-                        label: 'Standard',
+                        href: QUICK_START.TEAM_GRIDS,
+                        label: 'Team grid',
                     },
                     {
-                        href: QUICK_START.MARQUEES.CTA,
-                        label: 'With CTA',
+                        href: QUICK_START.SERVICE_GRIDS,
+                        label: 'Service grid',
                     },
                     {
-                        href: QUICK_START.MARQUEES.IMAGE,
-                        label: 'Image',
+                        href: QUICK_START.PORTFOLIOS.BASIC,
+                        label: 'Portfolio grid',
                     },
                     {
-                        href: QUICK_START.MARQUEES.TEXTIMAGE,
-                        label: 'Text and image',
-                    },
-                    {
-                        href: QUICK_START.MARQUEES.ILLUSTRATION,
-                        label: 'Illustration',
-                    },
-                    {
-                        href: QUICK_START.MARQUEES.EXTENDED,
-                        label: 'Extended',
+                        href: QUICK_START.PORTFOLIOS.DECOMPOSED,
+                        label: 'Portfolio deconstructed',
                     },
                 ]
             },
@@ -207,42 +362,12 @@ const navigation = [
                         label: 'Featured',
                     },
                     {
+                        href: QUICK_START.SERVICES,
+                        label: 'Services',
+                    },
+                    {
                         href: QUICK_START.PRODUCT_GRIDS,
                         label: 'Product',
-                    },
-                ]
-            },
-            {
-                label: 'Grids',
-                entries: [
-                    {
-                        href: QUICK_START.BASIC_GRID,
-                        label: 'Basic',
-                    },
-                    {
-                        href: QUICK_START.SERVICE_GRIDS,
-                        label: 'Service',
-                    },
-                    {
-                        href: QUICK_START.TEAM_GRIDS,
-                        label: 'Team',
-                    },
-                ]
-            },
-            {
-                label: 'Carrousels',
-                entries: [
-                    {
-                        href: QUICK_START.BUSINESS_CASES,
-                        label: 'Business Cases',
-                    },
-                    {
-                        href: QUICK_START.SERVICES,
-                        label: 'Service',
-                    },
-                    {
-                        href: QUICK_START.BRANDS,
-                        label: 'Brands',
                     },
                     {
                         href: QUICK_START.TESTIMONIALS,
@@ -252,18 +377,9 @@ const navigation = [
                         href: QUICK_START.PRICES,
                         label: 'Prices',
                     },
-                ]
-            },
-            {
-                label: 'Portfolio',
-                entries: [
                     {
-                        href: QUICK_START.PORTFOLIOS.BASIC,
-                        label: 'Portfolio Basic',
-                    },
-                    {
-                        href: QUICK_START.PORTFOLIOS.DECOMPOSED,
-                        label: 'Portfolio Decomposed',
+                        href: QUICK_START.DIGITAL_PRODUCTS,
+                        label: 'Digital Products',
                     },
                 ]
             },
@@ -271,12 +387,16 @@ const navigation = [
                 label: 'Forms',
                 entries: [
                     {
+                        href: QUICK_START.CONTACTS,
+                        label: 'Contact',
+                    },
+                    {
                         href: QUICK_START.LOGINS,
                         label: 'Login',
                     },
                     {
-                        href: QUICK_START.CONTACTS,
-                        label: 'Contact',
+                        href: QUICK_START.SEARCHERS,
+                        label: 'Searchers',
                     },
                 ]
             },
@@ -292,12 +412,12 @@ const navigation = [
                         label: 'Standard',
                     },
                     {
-                        href: QUICK_START.FOOTERS.CORPORATE,
-                        label: 'Corporate',
-                    },
-                    {
                         href: QUICK_START.FOOTERS.NEWSLETTER,
                         label: 'Newsletter',
+                    },
+                    {
+                        href: QUICK_START.FOOTERS.CORPORATE,
+                        label: 'Corporate',
                     },
                 ]
             },

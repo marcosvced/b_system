@@ -79,17 +79,28 @@
     .multilevel {
       top: 0;
       transform: translate(0, 0);
-      left: calc(50% + #{size.rem((34 + 24) * 2)});
+      left: calc(50% + var(--left));
       &.show-left {
         transform: translate(-100%, 0);
-        left: calc(-50% + #{size.rem((34 + 24) * 2)});
+        left: calc(-50% + var(--left));
+      }
+      &:before {
+        height: var(--min-height);
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
       }
     }
 
     .dropdown-item-multilevel {
       margin-inline: size.rem(-40);
       padding-inline: size.space(40);
-      > a {
+      > span {
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: space-between;
