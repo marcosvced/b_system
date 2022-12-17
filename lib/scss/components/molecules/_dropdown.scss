@@ -40,10 +40,6 @@
       margin-bottom: size.rem(12);
     }
 
-    .group > *:not(:last-child) {
-      margin-bottom: size.space(16);
-    }
-
     &.show.dropdown-grid {
       display: grid;
       grid-template-columns: repeat(var(--repeat), min-content);
@@ -126,6 +122,7 @@
       display: block;
       padding-block: 0;
       padding-inline: size.space(8);
+      min-height: 1.5rem;
     }
   }
 }

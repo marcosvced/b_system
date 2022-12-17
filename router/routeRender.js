@@ -15,6 +15,7 @@ const defaultOptions = {
 const routeRender = {
   dir: (view, page, children = []) => `${view}/pages/${page}${children ? `/${children.join('/')}` : ''}/index.ejs`,
   render: (response, path, options = {}, extras = {}) => {
+    console.log(response.req.route)
     response.render(path, {
       ...defaultOptions,
       ...options,

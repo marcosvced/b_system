@@ -6,12 +6,12 @@ const navigation = [
         label: 'Demos',
         key: 'demos',
         display: 'grid',
-        repeat: '2',
+        repeat: '4',
         entries: [
             {
                 group: [
                     {
-                        label: 'Standar demos',
+                        label: 'Light mode demos',
                         entries: [
                             {
                                 label: 'Startup',
@@ -26,7 +26,7 @@ const navigation = [
                                 href: DEMOS.BRANDING,
                             },
                             {
-                                label: 'Marketing Agency',
+                                label: 'Digital Product',
                                 href: '#',
                             },
                             {
@@ -49,17 +49,14 @@ const navigation = [
                                 label: 'Creative Agency',
                                 href: '#',
                             },
+
                         ]
-                    }
-                ],
-            },
-            {
-                group: [
+                    },
                     {
-                        label: 'Niche demos',
+                        label: '',
                         entries: [
                             {
-                                label: 'Digital Product',
+                                label: 'Furniture',
                                 href: '#',
                             },
                             {
@@ -75,7 +72,7 @@ const navigation = [
                                 href: '#',
                             },
                             {
-                                label: 'Furniture',
+                                label: 'Fitness',
                                 href: '#',
                             },
                             {
@@ -83,11 +80,11 @@ const navigation = [
                                 href: '#',
                             },
                             {
-                                label: 'Restaurant',
+                                label: 'Marketplace',
                                 href: '#',
                             },
                             {
-                                label: 'Fitness',
+                                label: 'Restaurant',
                                 href: '#',
                             },
                             {
@@ -96,7 +93,94 @@ const navigation = [
                             },
                         ]
                     }
-                ]
+                ],
+            },
+            {
+                group: [
+                    {
+                        label: 'Dark mode demos',
+                        entries: [
+                            {
+                                label: 'Startup',
+                                href: `${DEMOS.STARTUP}?theme=dark`,
+                            },
+                            {
+                                label: 'Design Studio',
+                                href: `${DEMOS.HOME2}?theme=dark`,
+                            },
+                            {
+                                label: 'Branding Agency',
+                                href: `${DEMOS.BRANDING}?theme=dark`,
+                            },
+                            {
+                                label: 'Digital Product',
+                                href: '#',
+                            },
+                            {
+                                label: 'Creative Studio',
+                                href: '#',
+                            },
+                            {
+                                label: 'Freelance',
+                                href: '#',
+                            },
+                            {
+                                label: 'Development Studio',
+                                href: '#',
+                            },
+                            {
+                                label: 'Corporate',
+                                href: `${DEMOS.FINANCIAL}?theme=dark`,
+                            },
+                            {
+                                label: 'Creative Agency',
+                                href: '#',
+                            },
+
+                        ]
+                    },
+                    {
+                        label: '',
+                        entries: [
+                            {
+                                label: 'Furniture',
+                                href: '#',
+                            },
+                            {
+                                label: 'Modern Shop',
+                                href: '#',
+                            },
+                            {
+                                label: 'Classic Shop',
+                                href: '#',
+                            },
+                            {
+                                label: 'Legal',
+                                href: '#',
+                            },
+                            {
+                                label: 'Fitness',
+                                href: '#',
+                            },
+                            {
+                                label: 'Architecture',
+                                href: '#',
+                            },
+                            {
+                                label: 'Marketplace',
+                                href: '#',
+                            },
+                            {
+                                label: 'Restaurant',
+                                href: '#',
+                            },
+                            {
+                                label: 'Portfolio',
+                                href: '#',
+                            },
+                        ]
+                    }
+                ],
             }
         ],
     },
@@ -224,7 +308,6 @@ const navigation = [
                     },
                 ]
             },
-
         ]
     },
     {
