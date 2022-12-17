@@ -47,12 +47,19 @@
     }
 
     .dropdown-item {
-      @include themed.light {
-        @extend .body-regular-text;
+      &,
+      i,
+      span {
+        @include themed.light {
+          @extend .body-regular-text;
+        }
+        @include themed.dark {
+          @extend .body-regular-gray-text;
+        }
       }
-      @include themed.dark {
-        @extend .body-regular-gray-text;
-      }
+
+      background: none;
+      border: none;
       border-radius: size.rem(4);
       padding-block: size.space(4);
       padding-inline: size.space(8);
@@ -60,15 +67,25 @@
 
       &:active,
       &.active {
-        @include themed.properties {
-          background-color: themed.values($c-grayscale--200, $c-opacity__gray--300);
+        &,
+        i,
+        span {
+          @extend .body-bold-text;
+          @include themed.properties {
+            color: themed.values(colors.grayscale('ash'), colors.grayscale('light'));
+          }
         }
       }
 
       &:hover {
-        @include themed.properties {
-          background-color: themed.values($c-grayscale--100, $c-opacity__gray--200);
+        &,
+        i,
+        span {
+          @include themed.properties {
+            color: themed.values(colors.grayscale('ash'), colors.grayscale('light'));
+          }
         }
+
       }
     }
 
@@ -76,10 +93,12 @@
       top: 0;
       transform: translate(0, 0);
       left: calc(50% + var(--left));
+
       &.show-left {
         transform: translate(-100%, 0);
         left: calc(-50% + var(--left));
       }
+
       &:before {
         height: var(--min-height);
         content: "";
@@ -95,6 +114,7 @@
     .dropdown-item-multilevel {
       margin-inline: size.rem(-40);
       padding-inline: size.space(40);
+
       > span {
         cursor: pointer;
         display: flex;
@@ -103,6 +123,17 @@
 
         .chevron {
           padding-left: size.space(48);
+        }
+      }
+
+      &.active {
+        &,
+        i,
+        span {
+          @extend .body-bold-text;
+          @include themed.properties {
+            color: themed.values(colors.grayscale('ash'), colors.grayscale('light'));
+          }
         }
       }
     }
