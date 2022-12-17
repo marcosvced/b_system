@@ -22,28 +22,37 @@
     .navbar-nav {
       .nav-item {
         cursor: pointer;
+
         > span {
           display: flex;
           align-items: center;
           justify-content: space-between;
           @extend .body-bold-text;
+
           > .chevron {
             @extend .body-bold-text;
             display: none;
+
             &-active {
               @extend .body-bold-text;
               display: block;
             }
           }
+
           &.collapsed {
-            @include themed.light {
-              @extend .body-regular-text;
+            &:not(.active) {
+
+              @include themed.light {
+                @extend .body-regular-text;
+              }
+              @include themed.dark {
+                @extend .body-regular-gray-text;
+              }
             }
-            @include themed.dark {
-              @extend .body-regular-gray-text;
-            }
+
             > .chevron {
               display: block;
+
               &-active {
                 display: none;
               }
@@ -56,15 +65,30 @@
     .accordion-item {
       margin-bottom: size.space(16);
     }
+
     .accordion-body {
       padding-top: size.space(32);
       padding-right: 0;
+
       a {
         @include themed.light {
           @extend .body-regular-text;
         }
         @include themed.dark {
           @extend .body-regular-gray-text;
+        }
+
+        &.active {
+          @include themed.light {
+            @extend .body-bold-text;
+
+            @include themed.dark {
+              @extend .body-bold-text;
+            }
+          }
+          @include themed.properties {
+            color: themed.values(colors.grayscale('ash'), colors.grayscale('light'));
+          }
         }
       }
     }
