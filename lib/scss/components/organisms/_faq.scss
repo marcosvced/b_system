@@ -1,0 +1,32 @@
+@use '../../variables/colors' as *;
+@use '../../placeholders';
+@use '../../helpers/themed';
+@use '../../helpers' as helper;
+@use '../../mixins' as mixin;
+
+.faq {
+    .accordion-collapse {
+        &:first-of-type {
+            padding-top: helper.space(16);
+
+            @include mixin.screen(md) {
+                padding-top: 0;
+            }
+        }
+
+        &:last-of-type {
+            padding-bottom: helper.space(24);
+
+            @include mixin.screen(md) {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .action-link {
+        &:hover {
+            color: $c-eren;
+            cursor: default;
+        }
+    }
+}
