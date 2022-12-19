@@ -24,6 +24,10 @@
   border-bottom: 1px solid $c-grayscale--1000;
 }
 
+@mixin color-line-200 {
+  border-bottom: 1px solid $c-opacity__gray--200;
+}
+
 
 // BORDERS
 

@@ -23,10 +23,12 @@
         }
     }
 
-    .action-link {
-        &:hover {
-            color: $c-eren;
-            cursor: default;
+    .active {
+        .action-link {
+            &:hover {
+                color: inherit;
+                cursor: default;
+            }
         }
     }
 }

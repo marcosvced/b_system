@@ -26,6 +26,10 @@
         @include themed.dark {
             @include mixin.dark-line-1100;
         }
+
+        &.section-bg-color {
+            @include mixin.color-line-200;
+        }
     }
 
 }
