@@ -1,0 +1,60 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('body') %>
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Hi, I'm Matias Eriksson, photographer and designer", 
+    isPlus:true, 
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
+
+<!-- PORTFOLIO DECOMPOSED -->
+<!-- END: PORTFOLIO DECOMPOSED -->
+
+<!-- BASIC CONTENT DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, { 
+    title:'About me', 
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT DESCRIPTION -->
+
+<!-- ICONS SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, { 
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) -%>
+<!-- END: ICONS SOCIAL -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/standard`, {
+    img: {src:'logo-dark-gray.svg', alt:'Logo'},
+    text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader()

@@ -5,6 +5,8 @@ module.exports = {
     HOME2: '/demos/home-cta',
     BRANDING: '/demos/branding',
     FINANCIAL: '/demos/financial',
+    CREATIVE_STUDIO: '/demos/creative-studio',
+    FREELANCE: '/demos/freelance'
   },
   PAGES: {
     ABOUT_US: 'pages/about_us',

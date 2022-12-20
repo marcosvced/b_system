@@ -11,7 +11,7 @@ function path(page = 'home', children = []) { return (dir(DEMOS.ROUTE_NAME, page
  * 1 Home
  */
 
-/* Home */
+/* Startup */
 route.get(DEMOS.STARTUP, (request, response) => {
   render(response, path('startup'), {}, { navigation })
 })
@@ -29,6 +29,16 @@ route.get(DEMOS.BRANDING, (request, response) => {
 /* Financial */
 route.get(DEMOS.FINANCIAL, (request, response) => {
   render(response, path('financial'), {}, { navigation })
+})
+
+/* Creative Studio */
+route.get(DEMOS.CREATIVE_STUDIO, (request, response) => {
+  render(response, path('creative-studio'), {}, { navigation })
+})
+
+/* Freelance */
+route.get(DEMOS.FREELANCE, (request, response) => {
+  render(response, path('freelance'), {}, { navigation })
 })
 
 module.exports = route

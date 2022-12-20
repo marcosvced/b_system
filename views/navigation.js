@@ -31,11 +31,11 @@ const navigation = [
                             },
                             {
                                 label: 'Creative Studio',
-                                href: '#',
+                                href: DEMOS.CREATIVE_STUDIO,
                             },
                             {
                                 label: 'Freelance',
-                                href: '#',
+                                href: DEMOS.FREELANCE,
                             },
                             {
                                 label: 'Development Studio',

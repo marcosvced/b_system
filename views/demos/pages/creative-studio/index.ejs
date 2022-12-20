@@ -1,0 +1,249 @@
+<%- include(`${view}/demos/layout`) %>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    hasLightNav: true,
+    mainHeader: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart',
+            variant: 'glass'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
+
+<%- contentFor('body') %>
+<!-- MARQUEE ILLUSTRATION -->
+<%- include(`${module}/marquee/illustration/illustration`, {
+    slides: [
+        {
+            bg:'eren-500',
+            img: {
+            src: 'man-working',
+            size: 'scenes',
+            alt: 'Marquee image'
+            },
+            title: 'Experimentation and imagination',
+            text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
+            btn: {
+            label: 'Know more'
+            },
+            quote: 'People ignore design that ignores people',
+            backgroundColor: 'success'
+        },
+        {
+            bg:'mikasa',
+            img: {
+            src: 'skyscraper',
+            size: 'scenes',
+            alt: 'Marquee image'
+            },
+            title: 'Design brings prosperity',
+            text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
+            btn: {
+            label: 'Know more'
+            },
+            quote: 'People ignore design that ignores people',
+            backgroundColor: 'success'
+        },
+        {
+            bg:'eren',
+            img: {
+            src: 'skyscraper',
+            size: 'scenes',
+            alt: 'Marquee image'
+            },
+            title: 'Design brings prosperity',
+            text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
+            btn: {
+            label: 'Know more'
+            },
+            quote: 'People ignore design that ignores people',
+            backgroundColor: 'success'
+        }
+    ]}) %>
+<!-- END: MARQUEE ILLUSTRATION -->
+
+<!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
+<%- include(`${module}/basicContent/simple`, { 
+    variant:'2-columns', 
+    title:'Design at the heart', 
+    text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
+
+<!-- BASIC GRID -->
+<%- include( `${module}/basicGrid/basicGrid`, {
+    basicGrid: [
+        {
+            pretitle: 'Design at the heart',
+            title: 'How do we do it?',
+            text: "Putting our clients' users at the center of the conversation, and giving solutions from design to complex problems. No matter the size of the project, we use these principles to create impact.",
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            img: {
+                src: 'basic-grid-03',
+                alt: 'basic grid image'
+            },
+            contentPosition: 'left',
+        },
+        {
+            pretitle: 'Services',
+            title: 'What disciplines do we integrate?',
+            text: "Experience strategy. We work side-by-side with our clients to make sure their experiences will come to life and drive change. Products and service design. We envision, define and design digital and physical products and services that improve people’s lives.",
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            img: {
+                src: 'basic-grid-04',
+                alt: 'basic grid image'
+            },
+            contentPosition: 'right',
+        },
+        {
+            pretitle: 'Our culture',
+            title: 'Culture by design',
+            text: "To help our clients achieve their goals, we deliver insightful and spectacular products and services that redefine the employee experience.",
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            img: {
+                src: 'basic-grid-05',
+                alt: 'basic grid image'
+            },
+            contentPosition: 'left',
+        },
+        {
+            pretitle: 'Work',
+            title: 'Our work',
+            text: "B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.",
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            img: {
+                src: 'basic-grid-06',
+                alt: 'basic grid image'
+            },
+            contentPosition: 'right',
+        },
+    ],
+    isDark: false,
+    hasBorder: true
+} ) %>
+<!-- END: BASIC GRID -->
+
+<!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/microillustration/microillustrationDescription`, {
+    head: 'Our work methodology',
+    icon: 'check-circle',
+    columns: [
+        {
+            microillustration: {
+                src: 'learn',
+                alt: 'system microillustration'
+            },
+            title: '1. Exploration phase',
+            text: 'Explore new concepts, products, services, ventures, brands, and systems.'
+        },
+        {
+            microillustration: {
+                src: 'woman',
+                alt: 'efficiency microillustration'
+            },
+            title: '2. Empathy phase',
+            text: 'A deep understanding of the needs of the users involved in the solution.'
+        },
+        {
+            microillustration: {
+                src: 'ideation',
+                alt: 'choose template microillustration'
+            },
+            title: '3. Definition phase',
+            text: 'Staying with what really adds value and brings us to new interesting perspectives.'
+        },
+        {
+            microillustration: {
+                src: 'idea',
+                alt: 'fonts microillustration'
+            },
+            title: '4. Ideation phase',
+            text: 'In this phase, activities favor expansive thinking and we eliminate value judgments.'
+        },
+        {
+            microillustration: {
+                src: 'tools',
+                alt: 'image microillustration'
+            },
+            title: '5. Prototyping',
+            text: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.'
+        },
+        {
+            microillustration: {
+                src: 'leaf',
+                alt: 'template microillustration'
+            },
+            title: '6. Testing phase',
+            text: 'This phase helps us to identify significant improvements and faults to be solved.'
+        },
+    ],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+    })
+    %>
+<!-- END: ICON DESCRIPTION -->
+
+<!-- ICONS SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, { 
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICONS SOCIAL -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: CTA -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/standard`, {
+    img: {src:'logo-dark-gray.svg', alt:'Logo'},
+    text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+    isDarkened: true
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader()
