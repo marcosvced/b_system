@@ -7,7 +7,7 @@
 
 .contact-bar {
     $parent: &;
-    background-color: $c-eren;
+
     padding: helper.space(16);
     display: flex;
     justify-content: space-between;
@@ -50,7 +50,17 @@
     .action-link,
     .btn [class^=icon-],
     .action-link:hover {
-        color: $c-grayscale--light;
+        color: themed.values($c-grayscale--700, $c-grayscale--light);
+
+    }
+
+    &.section-bg-color {
+        .action-link,
+        .btn [class^=icon-],
+        .action-link:hover,
+        #{$parent}-text {
+            color: $c-grayscale--light;
+        }
     }
 
     .btn.btn-only-icon {
@@ -60,7 +70,7 @@
         &:before {
             content: '';
             @include mixin.circle(32);
-            background-color: $c-eren--500;
+            background-color: $c-opacity__gray--200;
             position: absolute;
             z-index: -1;
             opacity: 0;
