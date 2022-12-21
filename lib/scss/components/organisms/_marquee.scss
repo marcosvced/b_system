@@ -263,9 +263,40 @@
     @include backgounds.can-use((eren, mikasa, armin));
     @include backgounds.can-use(map.keys(palette.$secondary));
 
-    #{$parent}-content-info {
+    #{$parent}-info-wrapper {
+      padding-bottom: helper.space(64);
+
+      @include mixin.screen(md) {
+        padding-block: helper.space(88);
+      }
+
+      @include mixin.screen(lg) {
+        padding-block: 0;
+      }
+
       @include mixin.screen(xl) {
-        width: 45%;
+        padding: {
+          block: helper.rem(88);
+          inline: helper.space(120);
+        }
+
+        @include mixin.screen(xxl) {
+          padding-block: 0;
+        }
+      }
+
+      #{$parent}-info {
+        @include mixin.screen(lg) {
+          width: 40%;
+        }
+
+        @include mixin.screen(xl) {
+          width: 80%;
+        }
+
+        @include mixin.screen(xxl) {
+          width: 58%;
+        }
       }
     }
 

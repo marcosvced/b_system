@@ -24,6 +24,8 @@ const headerConfig = {
 <%- contentFor('body') %>
 <!-- MARQUEE ILLUSTRATION -->
 <%- include(`${module}/marquee/illustration/illustration`, {
+    isDark: true,
+    isDarkened: true,
     slides: [
         {
             bg:'eren-500',
@@ -33,7 +35,7 @@ const headerConfig = {
             alt: 'Marquee image'
             },
             title: 'Experimentation and imagination',
-            text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
+            text: 'We are a freelance design studio passionate about rethinking how things operate every day.',
             btn: {
             label: 'Know more'
             },
@@ -48,7 +50,7 @@ const headerConfig = {
             alt: 'Marquee image'
             },
             title: 'Design brings prosperity',
-            text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
+            text: 'We understand design as a tool that helps us discover the world, understand how it works and improve.',
             btn: {
             label: 'Know more'
             },
@@ -56,13 +58,13 @@ const headerConfig = {
             backgroundColor: 'success'
         },
         {
-            bg:'eren',
+            bg:'armin',
             img: {
-            src: 'skyscraper',
+            src: 'couple',
             size: 'scenes',
             alt: 'Marquee image'
             },
-            title: 'Design brings prosperity',
+            title: 'Designing for humans',
             text: 'We help organizations take their digital product to the maximum poin, based on data and user behavior.',
             btn: {
             label: 'Know more'
@@ -70,7 +72,8 @@ const headerConfig = {
             quote: 'People ignore design that ignores people',
             backgroundColor: 'success'
         }
-    ]}) %>
+    ]
+}) %>
 <!-- END: MARQUEE ILLUSTRATION -->
 
 <!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
