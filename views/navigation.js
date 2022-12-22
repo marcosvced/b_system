@@ -39,7 +39,7 @@ const navigation = [
                             },
                             {
                                 label: 'Development Studio',
-                                href: '#',
+                                href: DEMOS.DEVELOPMENT_STUDIO,
                             },
                             {
                                 label: 'Corporate',

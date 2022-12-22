@@ -41,4 +41,9 @@ route.get(DEMOS.FREELANCE, (request, response) => {
   render(response, path('freelance'), {}, { navigation })
 })
 
+/* Development Studio */
+route.get(DEMOS.DEVELOPMENT_STUDIO, (request, response) => {
+  render(response, path('development-studio'), {}, { navigation })
+})
+
 module.exports = route

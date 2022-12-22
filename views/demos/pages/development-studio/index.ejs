@@ -1,0 +1,485 @@
+<%- include(`${view}/demos/layout`)%>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
+    hasBackground: false,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+
+<%- contentFor('body') %>
+<!-- MARQUEE TEXT + IMAGE -->
+<%- include(`${module}/marquee/textImage/textImage`, {
+    isDark: true,
+    isDarkened: true,
+    slides: [
+        {
+            img: {
+                src: 'marquee_textimage-02',
+                alt: 'Marquee text image'
+            },
+            title: 'Development and optimization studio',
+            btn: {
+                label: 'Start with B System', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            },
+            quote: '“People ignore design that ignores people”',
+        },
+        {
+            img: {
+                src: 'marquee_textimage-01',
+                alt: 'Marquee text image 02'
+            },
+            title: 'Development and optimization studio',
+            btn: {
+                label: 'Start with B System', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            },
+            quote: '“People ignore design that ignores people”',
+        },
+        {
+            img: {
+                src: 'marquee_textimage-03',
+                alt: 'Marquee text image 03'
+            },
+            title: 'Development and optimization studio',
+            btn: {
+                label: 'Start with B System', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            },
+            quote: '“People ignore design that ignores people”',
+        }
+    ]
+}) %>
+<!-- END: MARQUEE TEXT + IMAGE -->
+
+<!-- BASIC CONTENT IMAGE -->
+<%- include(`${module}/basicContent/image`, {
+    img: {
+        src: 'basic-content_image.png',
+        alt: 'Header image'
+    },
+    text:  'B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    link: { 
+        href:'#',
+        label:'Learn more'
+    },
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT IMAGE -->
+
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Meet our studio",
+    alignCenter: true, 
+    isPlus:true,
+    isDarkened: true, 
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
+
+<!-- CATEGORY MENU -->
+<%- include(`${module}/categoriesMenu/categoriesMenu`, {
+    align: 'center',
+    items: [
+        {
+            label: 'Our services',
+            href: '#services',
+            id: 'menu-services',
+            active: true
+        },
+        {
+            label: 'Our work philosophy',
+            href: '#philosophy',
+            id: 'menu-philosophy'
+        },
+        {
+            label: 'Our work methodology',
+            href: '#methodology',
+            id: 'menu-methodology'
+        },
+        {
+            label: 'The opinion of our clients',
+            href: '#opinion',
+            id: 'menu-opinion'
+        },
+        {
+            label: 'Meet our teams',
+            href: '#team',
+            id: 'menu-team'
+        }
+    ],
+    isDarkened: true
+}) %>
+<!-- END: CATEGORY MENU -->
+
+<!-- BASIC CONTENT -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Our services",
+    alignCenter: true, 
+    isDarkened: true, 
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT -->
+
+<!-- SERVICE GRID -->
+<%- include( `${module}/serviceGrid/serviceGrid`, {
+    cards: [
+        {
+            title: 'Digital strategy',
+            text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business.',
+            tag: '1',
+            img: {
+                src: 'light_service-grid',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'right'
+        },
+        {
+            title: 'Digital Marketing',
+            text: 'In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.',
+            tag: '2',
+            img: {
+                src: 'light_service-grid-2',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'right'
+        },
+        {
+            title: 'Social media',
+            text: 'A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.',
+            tag: '3',
+            img: {
+                src: 'light_service-grid-3',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'left'
+        },
+        {
+            title: 'Digital strategy',
+            text: 'We optimize all the means to help you sell. Our extensive Know How in performance supports our experience.',
+            tag: '4',
+            img: {
+                src: 'light_service-grid-4',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'left'
+        },
+    ],
+    isDark: false
+} ) %>
+<!-- END: SERVICE GRID -->
+
+<!-- BASIC CONTENT SIMPLE -->
+<%- include(`${module}/basicContent/simple`, { 
+    variant:'center', title:'To get started', 
+    text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand. Create your digital brand in a natural and fluid way.', 
+    isDarkened: true,
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT SIMPLE -->
+
+<!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/microillustration/microillustrationDescription`, {
+    head: 'Our work methodology',
+    columns: [
+        {
+            microillustration: {
+                src: 'modules',
+                alt: 'modules microillustration'
+            },
+            title: '1. Exploration phase',
+            text: 'Explore new concepts, products, services, ventures, brands, and systems.'
+        },
+        {
+            microillustration: {
+                src: 'consistency',
+                alt: 'consistency microillustration'
+            },
+            title: '2. Empathy phase',
+            text: 'A deep understanding of the needs of the users involved in the solution.'
+        },
+        {
+            microillustration: {
+                src: 'system',
+                alt: 'system microillustration'
+            },
+            title: '3. Definition phase',
+            text: 'Staying with what really adds value and brings us to new interesting perspectives.'
+        },
+        {
+            microillustration: {
+                src: 'process',
+                alt: 'process microillustration'
+            },
+            title: '4. Ideation phase',
+            text: 'In this phase, activities favor expansive thinking and we eliminate value judgments.'
+        },
+        {
+            microillustration: {
+                src: 'consistency',
+                alt: 'consistency microillustration'
+            },
+            title: '5. Prototyping',
+            text: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.'
+        },
+        {
+            microillustration: {
+                src: 'template',
+                alt: 'template microillustration'
+            },
+            title: '6. Testing phase',
+            text: 'This phase helps us to identify significant improvements and faults to be solved.'
+        },
+    ],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: true
+    })
+    %>
+<!-- END: ICON DESCRIPTION -->
+
+<!-- TESTIMONIAL -->
+<%- include(`${module}/testimonial/testimonial`, {
+    title: 'The opinion of our clients',
+    score: '4.6 score',
+    testimonials: [
+        {
+            text: "Many of the failures in people's lives occurred when they did not realize what was close to success.",
+            avatar: {
+                src: 'avatar_testimonial-2',
+                alt: 'Melissa Edgar',
+                name: 'Melissa Edgar',
+                job: 'UX designer'
+            },
+            stars: [
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+            ],
+            hasBackground: true,
+            hasBorder: false,
+            hasShadow: true
+        },
+        {
+            text: "Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.",
+            avatar: {
+                src: 'avatar_testimonial-1',
+                alt: 'Sandra Golpe',
+                name: 'Sandra Golpe',
+                job: 'Marketing manager'
+            },
+            stars: [
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: false},
+            ],
+            hasBackground: true,
+            hasBorder: false,
+            hasShadow: true
+        },
+        {
+            text: "Always keep in mind that your own will to succeed is much more important than anything else.",
+            avatar: {
+                src: 'avatar_testimonial-3',
+                alt: 'Mario Golpe',
+                name: 'Mario Golpe',
+                job: 'Marketing manager'
+            },
+            stars: [
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: false},
+            ],
+            hasBackground: true,
+            hasBorder: false,
+            hasShadow: true
+        },
+        
+    ],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: TESTIMONIAL -->
+
+<!-- FEATURED CARDS -->  
+<%- include( `${module}/featuredCard/featuredCard`, {
+    title: 'Meet our teams',
+    cards: [
+    {
+        img: {
+            src: 'feature-card_module-1',
+            alt: 'featured card image 1',
+        },
+        title: 'Operations team',
+        text: 'CEO and founder'
+    },
+    {
+        img: {
+            src: 'feature-card_module-2',
+            alt: 'featured card image 2',
+        },
+        title: 'Front-end development team',
+        text: 'Head of operations'
+    },
+    {
+        img: {
+            src: 'feature-card_module-3',
+            alt: 'featured card image 3',
+        },
+        title: 'Back-end development team',
+        text: 'Head of human resources'
+    },
+    ],
+    link:{
+        href: '#',
+        label: 'Meet our team',
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: FEATURED CARDS -->
+
+<!-- CONTACT -->
+<%- include(`${module}/contact/contact`, {
+    title: 'Contact us!',
+    text: 'Please fill out this form to send your message:',
+    contact: [
+        {
+            id: 'contact-name',
+            label: 'Name'
+        },
+        {
+            id: 'contact-surnames',
+            label: 'Surnames'
+        },
+        {
+            id: 'contact-email',
+            label: 'Email'
+        },
+        {
+            id: 'contact-subject',
+            label: 'Subject'
+        },
+    ],
+    textarea: {
+        id: 'contact-message',
+        label: 'Message'
+    },
+    checkboxes: [
+        {
+            id: 'checkbox-one',
+            label: 'I authorize the treatment of my data.'
+        },
+    ],
+    button: {
+        label: 'Send',
+        variant: 'tertiary'
+    },
+    alerts: [
+        {
+            icon: 'call',
+            text: {
+                content: 'If you have an urgent query you can call us :',
+                contact: [
+                    { contact: 'T. (+34) 915 805 007' },
+                    { contact: 'F. (+34) 915 806 082' }
+                ]
+            }, 
+            variant: 'info'
+        },
+        {
+            icon: 'message',
+            text: {
+                content: 'You can also write an email to these departments and we will get back to you as soon as possible:',
+                contact: [
+                    { contact: 'bsystem@company.com' }
+                ]
+            },
+            variant: 'info'
+        },
+        {
+            link: {
+                href: '#',
+                label: 'Find our offices easily in our search engine',
+                icon: 'place'
+            },
+            variant: 'link'
+        }
+    ],
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: CONTACT -->
+
+<!-- ICONS SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, { 
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICONS SOCIAL -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/standard`, {
+    img: {src:'logo-dark-gray.svg', alt:'Logo'},
+    text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    isDarkened: true
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader()

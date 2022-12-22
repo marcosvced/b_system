@@ -6,7 +6,8 @@ module.exports = {
     BRANDING: '/demos/branding',
     FINANCIAL: '/demos/financial',
     CREATIVE_STUDIO: '/demos/creative-studio',
-    FREELANCE: '/demos/freelance'
+    FREELANCE: '/demos/freelance',
+    DEVELOPMENT_STUDIO: '/demos/development-studio',
   },
   PAGES: {
     ABOUT_US: 'pages/about_us',
