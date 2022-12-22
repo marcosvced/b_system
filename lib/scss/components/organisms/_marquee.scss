@@ -281,7 +281,10 @@
         }
 
         @include mixin.screen(xxl) {
-          padding-block: 0;
+          padding: {
+            top: 0;
+            bottom: helper.space(88);
+          }
         }
       }
 
