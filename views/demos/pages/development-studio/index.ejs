@@ -149,9 +149,10 @@ const headerConfig = {
         {
             title: 'Digital strategy',
             text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business.',
-            tag: '1',
+            tag: 'settings',
+            iconTag: true,
             img: {
-                src: 'light_service-grid',
+                src: 'light_service-grid-5',
                 alt: 'service grid image',
             },
             link: {
@@ -164,7 +165,8 @@ const headerConfig = {
         {
             title: 'Digital Marketing',
             text: 'In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.',
-            tag: '2',
+            tag: 'charts',
+            iconTag: true,
             img: {
                 src: 'light_service-grid-2',
                 alt: 'service grid image',
@@ -179,7 +181,8 @@ const headerConfig = {
         {
             title: 'Social media',
             text: 'A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.',
-            tag: '3',
+            tag: 'heart',
+            iconTag: true,
             img: {
                 src: 'light_service-grid-3',
                 alt: 'service grid image',
@@ -194,7 +197,8 @@ const headerConfig = {
         {
             title: 'Digital strategy',
             text: 'We optimize all the means to help you sell. Our extensive Know How in performance supports our experience.',
-            tag: '4',
+            tag: 'avatar',
+            iconTag: true,
             img: {
                 src: 'light_service-grid-4',
                 alt: 'service grid image',
@@ -213,7 +217,8 @@ const headerConfig = {
 
 <!-- BASIC CONTENT SIMPLE -->
 <%- include(`${module}/basicContent/simple`, { 
-    variant:'center', title:'To get started', 
+    variant:'center', title:'Our work philosophy',
+    isPlus: false,
     text:'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand. Create your digital brand in a natural and fluid way.', 
     isDarkened: true,
     hasBorder: true 
@@ -222,6 +227,7 @@ const headerConfig = {
 
 <!-- ICON DESCRIPTION -->
 <%- include(`${module}/iconDescription/microillustration/microillustrationDescription`, {
+    img: 'icon-description-2',
     head: 'Our work methodology',
     columns: [
         {
@@ -356,7 +362,7 @@ const headerConfig = {
     cards: [
     {
         img: {
-            src: 'feature-card_module-1',
+            src: 'feature-card_module-4',
             alt: 'featured card image 1',
         },
         title: 'Operations team',
@@ -364,7 +370,7 @@ const headerConfig = {
     },
     {
         img: {
-            src: 'feature-card_module-2',
+            src: 'feature-card_module-5',
             alt: 'featured card image 2',
         },
         title: 'Front-end development team',
@@ -372,7 +378,7 @@ const headerConfig = {
     },
     {
         img: {
-            src: 'feature-card_module-3',
+            src: 'feature-card_module-6',
             alt: 'featured card image 3',
         },
         title: 'Back-end development team',

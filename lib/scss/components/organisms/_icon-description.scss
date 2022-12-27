@@ -7,24 +7,10 @@
 .section-icon-description {
     z-index: 0;
 
-    h3+[class^=icon-] {
-        height: 100%;
-        width: 100%;
-        font-size: helper.rem(600);
-        @include themed.properties {
-            color: themed.values($c-grayscale--100, $c-grayscale--1000);
-        }
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
+    .img-container {
+        top: 12%;
+        left: 34%;
         z-index: -1;
-
-        @include mixin.screen(xl) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
     }
 
     &.darkened {

@@ -123,6 +123,12 @@
                     }
             
                     transform: translateY(- helper.rem(32));
+
+                    [class^='icon-'] {
+                        color: $c-grayscale--light;
+                        font-size: helper.rem(24);
+                        transform: translateY(-4px);
+                    }
                 }
             }
         }
