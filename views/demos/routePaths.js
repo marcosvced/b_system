@@ -4,7 +4,7 @@ module.exports = {
     STARTUP: '/demos/startup',
     HOME2: '/demos/home-cta',
     BRANDING: '/demos/branding',
-    FINANCIAL: '/demos/financial',
+    DIGITAL_PRODUCT: '/demos/digital-product',
     CREATIVE_STUDIO: '/demos/creative-studio',
     FREELANCE: '/demos/freelance',
     DEVELOPMENT_STUDIO: '/demos/development-studio',

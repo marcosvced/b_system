@@ -1,12 +1,27 @@
 <%- include(`${view}/demos/layout`)%>
 
+<%- contentFor('styles') %>
+.contact-bar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+header.header.header-fixed {
+    top: 57px;
+}
+
+header.header.header-fixed.header-narrow {
+    top: 0;
+}
+
 <%- contentFor('header') %>
 <%
 const headerConfig = {
     items: navigation,
     isSticky: true,
     canSearch: true,
-    mainHeader: true,
+    mainHeader: false,
     size: 'full',
     hasBackground: true,
     buttons: [

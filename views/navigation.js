@@ -27,7 +27,7 @@ const navigation = [
                             },
                             {
                                 label: 'Digital Product',
-                                href: '#',
+                                href: DEMOS.DIGITAL_PRODUCT,
                             },
                             {
                                 label: 'Creative Studio',
@@ -43,7 +43,7 @@ const navigation = [
                             },
                             {
                                 label: 'Corporate',
-                                href: DEMOS.FINANCIAL,
+                                href: '#',
                             },
                             {
                                 label: 'Creative Agency',

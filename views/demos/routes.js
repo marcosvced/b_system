@@ -26,9 +26,9 @@ route.get(DEMOS.BRANDING, (request, response) => {
   render(response, path('branding'), {}, { navigation })
 })
 
-/* Financial */
-route.get(DEMOS.FINANCIAL, (request, response) => {
-  render(response, path('financial'), {}, { navigation })
+/* Digital Product */
+route.get(DEMOS.DIGITAL_PRODUCT, (request, response) => {
+  render(response, path('digital-product'), {}, { navigation })
 })
 
 /* Creative Studio */
