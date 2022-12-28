@@ -1,18 +1,18 @@
 <%- include(`${view}/demos/layout`)%>
 
 <%- contentFor('styles') %>
+
+header {
+    top: 57px !important;
+}
 .contact-bar {
-    width: 100%;
-    position: absolute;
+    position: sticky;
     top: 0;
-}
+    z-index: 100;
 
-header.header.header-fixed {
-    top: 57px;
 }
-
-header.header.header-fixed.header-narrow {
-    top: 0;
+.offcanvas-body {
+    padding: calc(5.5rem + 57px) var(--s-space__16) var(--s-space__16) !important;
 }
 
 <%- contentFor('header') %>
@@ -21,7 +21,7 @@ const headerConfig = {
     items: navigation,
     isSticky: true,
     canSearch: true,
-    mainHeader: false,
+    mainHeader: true,
     size: 'full',
     hasBackground: true,
     buttons: [
@@ -33,12 +33,9 @@ const headerConfig = {
     ]
 }
 %>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
 
-
-<%- contentFor('body') %>
 <!-- CONTACT BAR -->
-<%- include(`${module}/contactBar/contactBar`, {
+<% const contactBarConfig = {
     links: [
         {
             href: 'tel:916040581',
@@ -60,8 +57,14 @@ const headerConfig = {
     socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
     isDarkened: false,
     hasBorder: true
-}) %>
+}%>
+<%- include(`${module}/contactBar/contactBar`, contactBarConfig) %>
 <!-- END: CONTACT BAR -->
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+
+<%- contentFor('body') %>
+
 
 <!-- DIGITAL PRODUCT -->
 <%- include( `${module}/digitalProduct/digitalProduct`, {
@@ -499,5 +502,3 @@ const headerConfig = {
     ]
 }) %>
 <!-- END: FOOTER -->
-<%- contentFor('script') %>
-transformHeader()

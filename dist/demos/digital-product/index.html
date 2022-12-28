@@ -15,22 +15,57 @@
 
     <!-- Demo styles -->
     <style lang="css">
+      header {
+        top: 57px !important;
+      }
       .contact-bar {
-        width: 100%;
-        position: absolute;
+        position: sticky;
         top: 0;
+        z-index: 100;
       }
-      header.header.header-fixed {
-        top: 57px;
-      }
-      header.header.header-fixed.header-narrow {
-        top: 0;
+      .offcanvas-body {
+        padding: calc(5.5rem + 57px) var(--s-space__16) var(--s-space__16) !important;
       }
     </style>
   </head>
   <body>
 
     <!--MAIN HEADER-->
+
+    <!-- CONTACT BAR -->
+    <div class="contact-bar module section-divider  " id="">
+      <div class="contact-bar-contact column-gap-24">
+        <a href='tel:916040581' class="action-link ">
+          <i class="icon-call"></i>
+          <span>91 604 05 81</span>
+        </a>
+        <a href='mailto:info@b_bank.com' class="action-link ">
+          <i class="icon-message"></i>
+          <span>info@b_bank.com</span>
+        </a>
+      </div>
+      <p class="contact-bar-text body-italic-text">Say goodbye to all the red tape</p>
+      <div class="contact-bar-social d-flex">
+        <p class="contact-bar-text contact-bar-social-text">Follow us:</p>
+        <button type="button" class="btn btn-only-icon">
+          <i class="icon-behance"></i>
+        </button>
+        <button type="button" class="btn btn-only-icon">
+          <i class="icon-youtube"></i>
+        </button>
+        <button type="button" class="btn btn-only-icon">
+          <i class="icon-pinterest"></i>
+        </button>
+        <button type="button" class="btn btn-only-icon">
+          <i class="icon-twitter"></i>
+        </button>
+        <button type="button" class="btn btn-only-icon">
+          <i class="icon-linkedin"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- END: CONTACT BAR -->
     <header class="header header-fixed header-light  " data-b-system-header-position="sticky" data-b-system-header="light">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-b-system-wrapper="buttons">
@@ -803,7 +838,7 @@
             </nav>
           </div>
           <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-            <button type="button" class="btn btn-only-icon">
+            <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <i class="icon-menu" style="--size: NaNrem"></i>
             </button>
           </div>
@@ -1602,41 +1637,6 @@
 
     <!--MAIN CONTENT-->
     <main class="main">
-
-      <!-- CONTACT BAR -->
-      <div class="contact-bar module section-divider  " id="">
-        <div class="contact-bar-contact column-gap-24">
-          <a href='tel:916040581' class="action-link ">
-            <i class="icon-call"></i>
-            <span>91 604 05 81</span>
-          </a>
-          <a href='mailto:info@b_bank.com' class="action-link ">
-            <i class="icon-message"></i>
-            <span>info@b_bank.com</span>
-          </a>
-        </div>
-        <p class="contact-bar-text body-italic-text">Say goodbye to all the red tape</p>
-        <div class="contact-bar-social d-flex">
-          <p class="contact-bar-text contact-bar-social-text">Follow us:</p>
-          <button type="button" class="btn btn-only-icon">
-            <i class="icon-behance"></i>
-          </button>
-          <button type="button" class="btn btn-only-icon">
-            <i class="icon-youtube"></i>
-          </button>
-          <button type="button" class="btn btn-only-icon">
-            <i class="icon-pinterest"></i>
-          </button>
-          <button type="button" class="btn btn-only-icon">
-            <i class="icon-twitter"></i>
-          </button>
-          <button type="button" class="btn btn-only-icon">
-            <i class="icon-linkedin"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- END: CONTACT BAR -->
 
       <!-- DIGITAL PRODUCT -->
       <div class="module section-divider   inner-space-block-md-64 inner-space-block-xl-120" id="100-digital">
@@ -2602,7 +2602,6 @@
           }
         })
       }
-      transformHeader()
     </script>
 
     <!--END: SCRIPTS-->
