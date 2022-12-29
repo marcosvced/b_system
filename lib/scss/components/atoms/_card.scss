@@ -87,7 +87,12 @@
         }
 
         &#{$parent}-service {
+            flex-direction: unset;
+
             #{$parent}-img {
+                height: 100%;
+                object-fit: cover;
+                
                 border:{
                     top-left-radius: helper.rem(6);
                     top-right-radius: helper.rem(6);
