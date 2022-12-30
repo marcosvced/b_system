@@ -6,8 +6,9 @@
 
 .portfolio {
   $parent: &;
-  $border-portfolio: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
-  border-block: $border-portfolio;
+  @include themed.properties {
+    border-block: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+  }
 
   &-basic, &-vertical {
     flex-direction: column;
@@ -52,22 +53,30 @@
 
   &-card {
     &:not(:first-of-type) {
-      border-top: $border-portfolio;
+        @include themed.properties {
+            border-top: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+          }
     }
 
     #{$parent}-container-img {
-      border-bottom: $border-portfolio;
+        @include themed.properties {
+            border-bottom: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+          }
 
       &:not(#{$parent}-horizontal #{$parent}-container-img) {
         @include mixin.screen(md) {
           border-bottom: none;
-          border-right: $border-portfolio;
+          @include themed.properties {
+            border-right: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+          }
         }
       }
 
       @include mixin.screen(xl) {
         border-bottom: none;
-        border-inline: $border-portfolio;
+        @include themed.properties {
+            border-inline: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+          }
       }
 
       #{$parent}-img {
@@ -97,7 +106,9 @@
     &.flex-xl-row-reverse {
       #{$parent}-content {
         @include mixin.screen(xl) {
-          border-left: $border-portfolio;
+            @include themed.properties {
+                border-left: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+            }
         }
       }
     }
