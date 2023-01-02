@@ -35,6 +35,7 @@
     transform: translateY(#{size.space(24)});
     left: 50%;
     padding: size.space(40);
+    margin-top: 0;
 
     > *:not(:last-child):not(.dropdown-submenu) {
       margin-bottom: size.rem(12);

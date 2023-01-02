@@ -1723,10 +1723,10 @@
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
               <div class="card card-service card-bg    row p-0 mx-0 gap-0 service-card flex-xl-row h-100">
-                <picture class="col-12 col-xxl-6 px-0 img-container">
+                <picture class="col-12 col-md-6 px-0 img-container">
                   <img class="card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
                 </picture>
-                <div class="card-service-content col-12 col-xxl-6 d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
+                <div class="card-service-content col-12 col-md-6 d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
                   <span class="card-tag d-flex justify-content-center align-items-end">
                 1            
         </span>
@@ -2012,10 +2012,10 @@
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
               <div class="card card-service card-bg   card-shadow row p-0 mx-0 gap-0 service-card flex-xl-row h-100">
-                <picture class="col-12 col-xxl-6 px-0 img-container">
+                <picture class="col-12 col-md-6 px-0 img-container">
                   <img class="card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
                 </picture>
-                <div class="card-service-content col-12 col-xxl-6 d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
+                <div class="card-service-content col-12 col-md-6 d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
                   <span class="card-tag d-flex justify-content-center align-items-end">
                 1            
         </span>
@@ -2301,10 +2301,10 @@
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
               <div class="card card-service card-bg    row p-0 mx-0 gap-0 service-card flex-xl-row h-100">
-                <picture class="col-12 col-xxl-6 px-0 img-container">
+                <picture class="col-12 col-md-6 px-0 img-container">
                   <img class="card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
                 </picture>
-                <div class="card-service-content col-12 col-xxl-6 d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
+                <div class="card-service-content col-12 col-md-6 d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
                   <span class="card-tag d-flex justify-content-center align-items-end">
                 1            
         </span>
@@ -2590,10 +2590,10 @@
             </div>
             <div class="col-1-to-5 col-sm-1-to-9 col-xl-1-to-13 d-flex flex-column space-y-24">
               <div class="card card-service card-bg    row p-0 mx-0 gap-0 service-card flex-xl-row h-100">
-                <picture class="col-12 col-xxl-6 px-0 img-container">
+                <picture class="col-12 col-md-6 px-0 img-container">
                   <img class="card-img" src="../../assets/img/img_service-1.jpg" alt="This is a description text">
                 </picture>
-                <div class="card-service-content col-12 col-xxl-6 d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
+                <div class="card-service-content col-12 col-md-6 d-flex flex-column justify-content-between inner-space-block-32 inner-space-inline-16 inner-space-inline-sm-48 space-y-24  flex-grow-1">
                   <span class="card-tag d-flex justify-content-center align-items-end">
                 1            
         </span>
@@ -2750,6 +2750,95 @@
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
     <script>
+      let quickStart = {
+        "ROUTE_NAME": "quick_start",
+        "HOME": "/home",
+        "HEADERS": "/modules/headers",
+        "FEATURED_CARDS": "/modules/featureCards",
+        "STATISTICS": "/modules/statistics",
+        "CATEGORIES_MENU": "/modules/categories-menu",
+        "SERVICE_GRIDS": "/modules/serviceGrids",
+        "TEAM_GRIDS": "/modules/teamGrids",
+        "CONTACTS": "/modules/contacts",
+        "SERVICES": "/modules/services",
+        "FOOTERS": {
+          "BASIC": "/modules/footers/basic",
+          "STANDARD": "/modules/footers/standard",
+          "CORPORATE": "/modules/footers/corporate"
+        },
+        "ICON_DESCRIPTION": "/modules/iconsDescription",
+        "ICONS_SOCIAL": "/modules/iconSocial",
+        "CTA": "/modules/cta",
+        "CONTACT_BAR": "/modules/contactBar",
+        "MARQUEES": {
+          "BASIC": "/modules/marquees/basic",
+          "CTA": "/modules/marquees/cta",
+          "EXTENDED": "/modules/marquees/extended",
+          "ILLUSTRATION": "/modules/marquees/illustration",
+          "IMAGE": "/modules/marquees/image",
+          "STANDAR": "/modules/marquees/standar",
+          "TEXTIMAGE": "/modules/marquees/textImage"
+        },
+        "BASIC_CONTENTS": "/modules/basicContents",
+        "FAQS": "/modules/faqs",
+        "ICON_SERVICES": "/modules/iconServices",
+        "BUSINESS_CASES": "/modules/businessCases",
+        "PORTFOLIOS": {
+          "BASIC": "/modules/portfolios/basic",
+          "DECOMPOSED": "/modules/portfolio/decomposed"
+        },
+        "LOGINS": "/modules/login",
+        "BRANDS": "/modules/brands",
+        "BASIC_GRID": "/modules/basicGrids",
+        "TESTIMONIALS": "/modules/testimonials",
+        "PRODUCT_GRIDS": "/modules/productCards",
+        "SEARCHERS": "/modules/searchers",
+        "PRICES": "/modules/prices",
+        "FEATURED_CONTENTS": "/modules/featuredContents",
+        "DIGITAL_PRODUCTS": "/modules/digitalProducts",
+        "BUTTONS": "/components/buttons",
+        "ALERTS": "/components/alerts",
+        "ICONS": "/components/icons",
+        "LINKS": "/components/links",
+        "TEXTS": "/components/texts",
+        "CARDS": "/components/cards",
+        "PRODUCT_CARDS": "/components/productCards",
+        "INTERACTION": "/components/interaction",
+        "GRID_CELLS": "/components/gridCells",
+        "FORMS": "/components/forms",
+        "MICROILLUSTRATIONS": "/components/microillustrations",
+        "ILLUSTRATIONS": "/components/illustrations",
+        "SCENES": "/components/scenes",
+        "ICON_DESCRIPTION_COMPONENT": "/components/iconsDescription",
+        "ACCORDIONS": "/components/accordions"
+      }
+      delete quickStart.ROUTE_NAME
+      delete quickStart.HOME
+      quickStart = Object.values(quickStart).map((value) => {
+        if (typeof value !== 'string') {
+          return Object.values(value)
+        }
+        return value
+      }).flat(1)
+      window.quickStart = quickStart
+      let demos = {
+        "ROUTE_NAME": "demos",
+        "STARTUP": "/demos/startup",
+        "HOME2": "/demos/home-cta",
+        "BRANDING": "/demos/branding",
+        "DIGITAL_PRODUCT": "/demos/digital-product",
+        "CREATIVE_STUDIO": "/demos/creative-studio",
+        "FREELANCE": "/demos/freelance",
+        "DEVELOPMENT_STUDIO": "/demos/development-studio"
+      }
+      delete demos.ROUTE_NAME
+      demos = Object.values(demos).map((value) => {
+        if (typeof value !== 'string') {
+          return Object.values(value)
+        }
+        return value
+      }).flat(1)
+      window.demos = demos
       const transformHeader = (purchaseButtonType) => {
         const img = document.querySelector('header img.logo')
         const purchaseButton = document.querySelector('header button.btn.btn-fit')

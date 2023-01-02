@@ -20,6 +20,13 @@
         padding-inline: helper.space(32);
     }
 
+    &-top {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
     &-social {
         width: 100%;
         justify-content: center;

@@ -1,22 +1,5 @@
 <%- include(`${view}/demos/layout`)%>
 
-<%- contentFor('styles') %>
-body {
-    padding-top: 0 !important;
-}
-header {
-    top: 57px !important;
-}
-.contact-bar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-}
-.offcanvas-body {
-    padding: calc(5.5rem + 57px) var(--s-space__16) var(--s-space__16) !important;
-}
-
 <%- contentFor('header') %>
 <%
 const headerConfig = {
@@ -58,6 +41,7 @@ const headerConfig = {
     },
     socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
     isDarkened: false,
+    isTop: true,
     hasBorder: true
 }%>
 <%- include(`${module}/contactBar/contactBar`, contactBarConfig) %>
