@@ -8,6 +8,7 @@ module.exports = {
     CREATIVE_STUDIO: '/demos/creative-studio',
     FREELANCE: '/demos/freelance',
     DEVELOPMENT_STUDIO: '/demos/development-studio',
+    CORPORATIVE: '/demos/corporative',
   },
   PAGES: {
     ABOUT_US: 'pages/about_us',

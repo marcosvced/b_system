@@ -1,0 +1,503 @@
+<%- include(`${view}/demos/layout`)%>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+
+<%- contentFor('body') %>
+
+<!-- BASIC CONTENT ARGUMENTS MODULE -->
+<%- include(`${module}/basicContent/argument`, {
+    columns: [
+        {
+            alignCenter: false,
+            title: 'Agility',
+            text: 'Companies that dominate competitive agility achieve their growth, profitability, sustainability and trust objectives. Do you want to start?'
+        },
+        {
+            alignCenter: false,
+            title: 'Innovation',
+            text: 'Companies must manage their business in order to maximize their investments in innovation and restructure their resources.'
+        },
+        {
+            alignCenter: false,
+            title: 'Disruption',
+            text: 'Is a competition demanded from the outside and driven from the inside. Leaders turn disruption into an opportunity. Do you want to start?'
+        }
+    ],
+    hasBorder: true
+}) %>
+<!-- END: BASIC CONTENT ARGUMENTS MODULE -->
+
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Our services",
+    alignCenter: true, 
+    isPlus:true,
+    isDarkened: false, 
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
+
+<!-- CATEGORY MENU -->
+<%- include(`${module}/categoriesMenu/categoriesMenu`, {
+    align: 'center',
+    items: [
+        {
+            label: 'Artificial Intelligence',
+            href: '#ia',
+            id: 'menu-ia',
+            active: true
+        },
+        {
+            label: 'Future Systems',
+            href: '#future-systems',
+            id: 'menu-future'
+        },
+        {
+            label: 'Our work methodology',
+            href: '#methodology',
+            id: 'menu-methodology'
+        },
+        {
+            label: 'Customer experience',
+            href: '#cuestomer',
+            id: 'menu-customer'
+        },
+        {
+            label: 'Strategic',
+            href: '#strategic',
+            id: 'menu-strategic'
+        },
+        {
+            label: 'Consulting',
+            href: '#consulting',
+            id: 'menu-consulting'
+        }
+    ],
+    isDarkened: false
+}) %>
+<!-- END: CATEGORY MENU -->
+
+<!-- FEATURED CONTENT -->
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'ia',
+    masked: {
+        img: {
+            src: 'featured-content_06',
+            alt: 'featured content image',
+        },
+        shape: 'system'
+    },
+    title: 'Artificial Intelligence',
+    text: 'Get up to speed on artificial intelligence and learn how it can help you drive business value. B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    isSerif: false,
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'right',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'future-systems',
+    masked: {
+        img: {
+            src: 'featured-content_06',
+            alt: 'featured content image',
+        },
+        shape: 'template'
+    },
+    title: 'Artificial Intelligence',
+    text: 'Get up to speed on artificial intelligence and learn how it can help you drive business value. B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    isSerif: false,
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'left',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'customer',
+    masked: {
+        img: {
+            src: 'featured-content_06',
+            alt: 'featured content image',
+        },
+        shape: 'process'
+    },
+    title: 'Customer experience',
+    text: 'B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    isSerif: false,
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'right',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'strategic',
+    masked: {
+        img: {
+            src: 'featured-content_06',
+            alt: 'featured content image',
+        },
+        shape: 'consistency'
+    },
+    title: 'Strategic & Reputation Risk',
+    text: 'B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    isSerif: false,
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'left',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+
+<%- include( `${module}/featuredContent/featuredContent`, {
+    id: 'consulting',
+    masked: {
+        img: {
+            src: 'featured-content-unmasked_01',
+            alt: 'featured content image',
+        },
+        shape: null
+    },
+    title: 'Technological consulting',
+    text: 'B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    isSerif: false,
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links'
+    },
+    contentPosition: 'right',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: FEATURED CONTENT -->
+
+<!-- BUSINESS CASES -->
+<%- include( `${module}/businessCase/businessCase`, {
+    title: 'Business cases',
+    text: 'Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.',
+    link: {
+        href: '#',
+        label: 'See all',
+        icon: 'links',
+    },
+    img: {
+        src: 'img_business-case-2',
+        alt: 'business case module background'
+    },
+    slides: [
+        {
+            title: 'Business case 1: Brandemic',
+            icon: 'award',
+            subtitle: 'New brand',
+            img: {
+                src: 'logo-brandemic',
+                alt: 'case image 1'
+            },
+            date: '23/03/2019',
+            link: {
+                href: '#',
+                label: 'More info',
+                icon: 'info'
+            }
+        },
+        {
+            title: 'Business case 2: B_system',
+            icon: 'view-code',
+            subtitle: 'Web template system',
+            img: {
+                src: 'logo-dark',
+                alt: 'case image 2'
+            },
+            date: '24/03/2019',
+            link: {
+                href: '#',
+                label: 'More info',
+                icon: 'info'
+            }
+        },
+        {
+            title: 'Business case 3: Brandemic',
+            icon: 'award',
+            subtitle: 'New brand',
+            img: {
+                src: 'logo-brandemic',
+                alt: 'case image 3'
+            },
+            date: '25/03/2019',
+            link: {
+                href: '#',
+                label: 'More info',
+                icon: 'info'
+            }
+        }
+    ]
+} ) %>
+<!-- END: BUSINESS CASES -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: CTA -->
+
+<!-- CONTACT-->
+<% const demoHomeContactParams = {
+    title: 'Contact us!',
+    text: 'Please fill out this form to send your message:',
+    contact: [
+        {
+            id: 'contact-name',
+            label: 'Name'
+        },
+        {
+            id: 'contact-surnames',
+            label: 'Surnames'
+        },
+        {
+            id: 'contact-email',
+            label: 'Email'
+        },
+        {
+            id: 'contact-subject',
+            label: 'Subject'
+        },
+    ],
+    textarea: {
+        id: 'contact-message',
+        label: 'Message'
+    },
+    checkboxes: [
+        {
+            id: 'checkbox-one',
+            label: 'I authorize the treatment of my data.'
+        },
+    ],
+    button: {
+        label: 'Send',
+        variant: 'tertiary'
+    },
+    alerts: [
+        {
+            icon: 'call',
+            text: {
+                content: 'If you have an urgent query you can call us :',
+                contact: [
+                    {contact: 'T. (+34) 915 805 007'},
+                    {contact: 'F. (+34) 915 806 082'}
+                ]
+            },
+            variant: 'info'
+        },
+        {
+            icon: 'message',
+            text: {
+                content: 'You can also write an email to these departments and we will get back to you as soon as possible:',
+                contact: [
+                    {contact: 'bsystem@company.com'}
+                ]
+            },
+            variant: 'info'
+        },
+        {
+            link: {
+                href: '#',
+                label: 'Find our offices easily in our search engine',
+                icon: 'place'
+            },
+            variant: 'link'
+        },
+    ],
+    isDark: false,
+    hasBorder: true
+}
+%>
+<%- include(`${module}/contact/contact`, demoHomeContactParams) %>
+<!-- END: CONTACT -->
+
+<!-- ICON SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, {
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICON SOCIAL -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    columns: [
+        [
+            {
+                title: 'About',
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'About me',
+                href: '#'
+            },
+            {
+                name: 'About B_system',
+                href: '#'
+            },
+            {
+                name: 'How we work',
+                href: '#'
+            },
+            {
+                name: 'Portfolio classic',
+                href: '#'
+            },
+            {
+                name: 'Portfolio gallery',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Services'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'What we offer',
+                href: '#'
+            },
+            {
+                name: 'Contact classic',
+                href: '#'
+            },
+            {
+                name: 'Contracting',
+                href: '#'
+            },
+            {
+                name: 'Product packs',
+                href: '#'
+            },
+            {
+                name: 'Services portfolio',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Customer'
+            },
+            {
+                name: 'Customer support',
+                href: '#'
+            },
+            {
+                name: "Testimonials",
+                href: '#'
+            },
+            {
+                name: 'Team classic',
+                href: '#'
+            },
+            {
+                name: 'Team modern',
+                href: '#'
+            },
+            {
+                name: 'Product classic',
+                href: '#'
+            },
+            {
+                name: 'Product modern',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Design studio',
+                href: '#'
+            },
+            {
+                name: 'Branding agency',
+                href: '#'
+            },
+            {
+                name: 'Freelance',
+                href: '#'
+            },
+            {
+                name: 'Restaurant',
+                href: '#'
+            },
+            {
+                name: 'Decor',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->

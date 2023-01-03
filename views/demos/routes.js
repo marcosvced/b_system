@@ -46,4 +46,9 @@ route.get(DEMOS.DEVELOPMENT_STUDIO, (request, response) => {
   render(response, path('development-studio'), {}, { navigation })
 })
 
+/* Corporative */
+route.get(DEMOS.CORPORATIVE, (request, response) => {
+  render(response, path('corporative'), {}, { navigation })
+})
+
 module.exports = route
