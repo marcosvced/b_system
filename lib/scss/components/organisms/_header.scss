@@ -13,9 +13,14 @@
 @use '../../mixins' as mixin;
 
 header.header {
+  $min-header-height: size.rem(56);
+  $min-xl-narrow-header-height: size.rem(72);
+  $min-xl-header-height: size.rem(92);
+
+  --header-height: #{$min-xl-header-height};
   padding-block: size.rem(14);
   padding-inline: size.space(16);
-  min-height: size.rem(56);
+  height: $min-header-height;
   transition: all .35s ease-in-out, width 0s;
   position: relative;
   display: flex;
@@ -31,14 +36,15 @@ header.header {
   }
 
   @include media.screen(xl) {
-    min-height: size.rem(92);
-    padding-block: size.rem(22);
+    height: $min-xl-header-height;
+    padding-block: size.rem(0);
     padding-inline: size.space(32);
 
     &.header-narrow {
-      padding-block: size.rem(16);
-      min-height: size.rem(72);
+      --header-height: #{$min-xl-narrow-header-height};
+      height: $min-xl-narrow-header-height;
     }
+
   }
 
   .navbar-brand {
@@ -78,6 +84,11 @@ header.header {
         }
 
         .nav-item {
+            @include media.screen(xl) {
+                min-height: var(--header-height);
+                display: inline-flex;
+                align-items: center;
+            }
           > a {
             padding: 0;
             @extend %body-regular-text;
