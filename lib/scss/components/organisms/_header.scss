@@ -136,11 +136,7 @@ header.header {
     nav.navbar .navbar-nav {
       .nav-item {
         > a {
-          color: $c-grayscale--600;
-
-          &.active {
             color: $c-grayscale--light;
-          }
         }
 
         &:hover {
