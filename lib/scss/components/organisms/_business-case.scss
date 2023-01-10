@@ -52,7 +52,7 @@
 
   #{$parent}-head {
     .action-link {
-      color: $c-grayscale--light;
+      color: $c-eren;
     }
   }
 
@@ -142,5 +142,17 @@
         display: none;
       }
     }
+  }
+
+  #{$parent}-text {
+    color: $c-grayscale--800;
+  }
+}
+
+.section-bg-color:not(.darkened) {
+  .business-case-title,
+  .business-case-text,
+  .action-link {
+    color: $c-grayscale--light;
   }
 }

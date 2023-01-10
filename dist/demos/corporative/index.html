@@ -20,7 +20,7 @@
   <body>
 
     <!--MAIN HEADER-->
-    <header class="header header-fixed header-light  " data-b-system-header-position="sticky" data-b-system-header="light">
+    <header class="header header-fixed   " data-b-system-header-position="sticky" data-b-system-header="transparent">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-b-system-wrapper="buttons">
           <div class="order-2 order-xl-0 space-right-xl-32">
@@ -1592,6 +1592,80 @@
     <!--MAIN CONTENT-->
     <main class="main">
 
+      <!-- MARQUEE IMAGE -->
+      <section class="section section-divider p-0">
+        <div class="marquee-wrapper position-relative" id="">
+          <div class="swiper" data-b-system="swiper" data-swiper-target="marquee-image" data-swiper-next=".button-next" data-swiper-prev=".button-prev" data-swiper-items="1">
+            <div class="swiper-wrapper">
+
+              <!-- swiper slide -->
+              <div class="swiper-slide">
+                <div class="marquee marquee-image marquee-space marquee-size position-relative">
+                  <picture>
+                    <img class="marquee-bg" src="../../assets/img/marquee/marquee_image-04.jpg" alt="marquee image 01">
+                  </picture>
+                  <div class="marquee-content align-items-center align-items-md-start space-y-32 space-y-xl-64">
+                    <h1 class="marquee-title">Competitive agility</h1>
+                    <p class="marquee-text body-light-text text-black">Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.</p>
+                    <button type="button" class="btn btn-primary">
+                      Discover B_system
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="marquee marquee-image marquee-space marquee-size position-relative">
+                  <picture>
+                    <img class="marquee-bg" src="../../assets/img/marquee/marquee_image-02.jpg" alt="marquee image 02">
+                  </picture>
+                  <div class="marquee-content align-items-center align-items-md-start space-y-32 space-y-xl-64">
+                    <h1 class="marquee-title">We are the interactive radar</h1>
+                    <p class="marquee-text body-light-text text-black">From idea to action, the path to generating 360 ° value starts here.</p>
+                    <button type="button" class="btn btn-primary">
+                      Discover B_system
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="marquee marquee-image marquee-space marquee-size position-relative">
+                  <picture>
+                    <img class="marquee-bg" src="../../assets/img/marquee/marquee_image-03.jpg" alt="marquee image 03">
+                  </picture>
+                  <div class="marquee-content align-items-center align-items-md-start space-y-32 space-y-xl-64">
+                    <h1 class="marquee-title">Our values ​​shape our culture</h1>
+                    <p class="marquee-text body-light-text text-black">We make them happen through our individual behaviors and they serve as a guide for us to act and make decisions.</p>
+                    <button type="button" class="btn btn-primary">
+                      Discover B_system
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- end: swiper slide -->
+            </div>
+            <div class="swiper-pagination pagination-dark"></div>
+          </div>
+          <div class="marquee-content-bottom">
+            <button class="btn-interactive btn-interactive-rounded  btn-interactive-tight ">
+              <i class="icon-links"></i>
+            </button>
+          </div>
+          <div class="button-prev">
+            <button class="btn-interactive btn-interactive-rounded   ">
+              <i class="icon-back"></i>
+            </button>
+          </div>
+          <div class="button-next">
+            <button class="btn-interactive btn-interactive-rounded   ">
+              <i class="icon-next"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- END: MARQUEE IMAGE -->
+
       <!-- BASIC CONTENT ARGUMENTS MODULE -->
       <div class="module section-divider  basic-content basic-content-arguments" id="">
         <div class="container">
@@ -1771,15 +1845,15 @@
       <!-- END: FEATURED CONTENT -->
 
       <!-- BUSINESS CASES -->
-      <div class="module section-bg-color business-case-wrapper " id="">
+      <div class="module section-bg-color business-case-wrapper  darkened" id="">
         <picture class="business-case-img-container">
           <img class="business-case-img" src="../../assets/img/img_business-case-2.svg" alt="business case module background">
         </picture>
         <div class="business-case container mx-auto">
           <div class="d-grid grid-8 grid-xl-12 align-items-center">
             <div class="business-case-head space-y-24 space-y-xl-32 col-span-9 col-md-2-to-8 col-lg-3-to-7 col-span-xl-4">
-              <h3 class="business-case-title text-white text-center text-xl-start">Business cases</h3>
-              <p class="business-case-text text-white text-center text-xl-start">Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.</p>
+              <h3 class="business-case-title text-center text-xl-start">Business cases</h3>
+              <p class="business-case-text text-center text-xl-start">Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.</p>
               <div class="d-none d-xl-block">
                 <a href='#' class="action-link ">
                   <span>See all</span>

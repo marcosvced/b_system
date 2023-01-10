@@ -8,7 +8,7 @@ const headerConfig = {
     canSearch: true,
     mainHeader: true,
     size: 'full',
-    hasBackground: true,
+    hasBackground: false,
     buttons: [
         {
             label: 'Access',
@@ -22,6 +22,41 @@ const headerConfig = {
 
 
 <%- contentFor('body') %>
+<!-- MARQUEE IMAGE -->
+<section class="section section-divider p-0">
+    <%- include(`${module}/marquee/image/image`, { 
+        slides: [
+            {
+                img: {
+                    src: 'marquee_image-04',
+                    alt: 'marquee image 01'
+                },
+                title: 'Competitive agility',
+                text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
+                btn: 'Discover B_system'
+            },
+            {
+                img: {
+                    src: 'marquee_image-02',
+                    alt: 'marquee image 02'
+                },
+                title: 'We are the interactive radar',
+                text: 'From idea to action, the path to generating 360 ° value starts here.',
+                btn: 'Discover B_system'
+            },
+            {
+                img: {
+                    src: 'marquee_image-03',
+                    alt: 'marquee image 03'
+                },
+                title: 'Our values ​​shape our culture',
+                text: 'We make them happen through our individual behaviors and they serve as a guide for us to act and make decisions.',
+                btn: 'Discover B_system'
+            },
+        ]
+    }) %>
+</section>
+<!-- END: MARQUEE IMAGE -->
 
 <!-- BASIC CONTENT ARGUMENTS MODULE -->
 <%- include(`${module}/basicContent/argument`, {
@@ -272,7 +307,8 @@ const headerConfig = {
                 icon: 'info'
             }
         }
-    ]
+    ],
+    isDarkened: true
 } ) %>
 <!-- END: BUSINESS CASES -->
 
