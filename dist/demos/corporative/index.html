@@ -15,6 +15,9 @@
 
     <!-- Demo styles -->
     <style lang="css">
+      #sticky-banner {
+        display: none !important;
+      }
     </style>
   </head>
   <body>
@@ -1591,6 +1594,37 @@
 
     <!--MAIN CONTENT-->
     <main class="main">
+
+      <!-- STICKY BANNER CARD -->
+      <div class="card card-sticky card-bg   card-shadow sticky-banner d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="body-dark-gray-text fw-bold">Contact us</p>
+          <i class="icon-blade"></i>
+        </div>
+        <span class="border-bottom d-block"></span>
+        <a href='#' class="action-link ">
+          <span>Consult in our chat</span>
+          <i class="icon-whatsapp"></i>
+        </a>
+        <span class="border-bottom"></span>
+        <a href='#' class="action-link ">
+          <span>Shall we call you?</span>
+          <i class="icon-contact"></i>
+        </a>
+        <span class="border-bottom"></span>
+      </div>
+      <div class="card card-sticky-mobile sticky-banner d-flex flex-row d-md-none">
+        <a href='#' class="action-link ">
+          <span>Consult in our chat</span>
+          <i class="icon-whatsapp"></i>
+        </a>
+        <a href='#' class="action-link ">
+          <span>Shall we call you?</span>
+          <i class="icon-contact"></i>
+        </a>
+      </div>
+
+      <!-- END: STICKY BANNER CARD -->
 
       <!-- MARQUEE IMAGE -->
       <section class="section section-divider p-0">

@@ -176,6 +176,20 @@
             }
         }
 
+        &.sticky-banner,
+        &-mobile.sticky-banner {
+            width: helper.rem(280);
+            height: min-content;
+            position: fixed;
+            z-index: 100;
+            right: helper.space(32);
+            bottom: helper.space(88);
+            transition: bottom .35s ease-in-out;
+            @include themed.properties {
+                background-color: themed.values($c-grayscale--light, $c-grayscale--1200);
+            }
+        }
+
         &-mobile {
             .action-link {
                 display: flex;
@@ -193,6 +207,13 @@
                 span {
                     display: none;
                 }
+            }
+
+            &.sticky-banner {
+                width: auto;
+                background: none;
+                box-shadow: none;
+                bottom: helper.space(32);
             }
         }
     }

@@ -1,5 +1,10 @@
 <%- include(`${view}/demos/layout`)%>
 
+<%- contentFor('styles') %>
+#sticky-banner {
+    display: none !important;
+}
+
 <%- contentFor('header') %>
 <%
 const headerConfig = {
@@ -22,6 +27,30 @@ const headerConfig = {
 
 
 <%- contentFor('body') %>
+<!-- STICKY BANNER CARD -->
+<%- include( `${component}/card/sticky`, {
+    title: 'Contact us',
+    contacts: [
+        {
+            link: {
+                href: '#',
+                label: 'Consult in our chat',
+                icon: 'whatsapp'
+            }
+        },
+        {
+            link: {
+                href: '#',
+                label: 'Shall we call you?',
+                icon: 'contact'
+            }
+        },
+    ],
+    isSticky: true,
+    hasShadow: true
+} ) %>
+<!-- END: STICKY BANNER CARD -->
+
 <!-- MARQUEE IMAGE -->
 <section class="section section-divider p-0">
     <%- include(`${module}/marquee/image/image`, { 
