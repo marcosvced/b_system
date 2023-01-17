@@ -156,3 +156,10 @@
     color: $c-grayscale--light;
   }
 }
+
+.darkened {
+  .business-case .slider .business-next>*, 
+  .business-case .slider .business-prev>* {
+    color: $c-grayscale--ash;
+  }
+}
