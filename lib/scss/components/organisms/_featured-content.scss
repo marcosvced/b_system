@@ -56,4 +56,12 @@
             width: helper.rem(486);
         }
     }
+
+    &-extended {
+        #{$parent}-title {
+            @include mixin.screen(xl) {
+                width: 92%;
+            }
+        }
+    }
 }

@@ -162,4 +162,7 @@
   .business-case .slider .business-prev>* {
     color: $c-grayscale--ash;
   }
+  .business-case .slider .swiper-button-disabled>* {
+    color: $c-opacity__gray--200;
+  }
 }
