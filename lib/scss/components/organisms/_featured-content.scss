@@ -9,9 +9,9 @@
 
     padding-inline: 0;
 
-    @include mixin.screen(md) {
-        padding-inline: helper.space(80);
-    }
+    // @include mixin.screen(md) {
+    //     padding-inline: helper.space(80);
+    // }
 
     @include mixin.screen(xl) {
         column-gap: helper.space(96);
