@@ -180,3 +180,22 @@ hr {
   }
   @include styles.shadow-400;
 }
+
+body {
+  .img-mode {
+    &-dark {
+      display: none;
+    }
+  }
+
+  &[data-b-system-theme=dark] {
+    .img-mode {
+      &-dark {
+        display: block;
+      }
+      &-light {
+        display: none;
+      }
+    }
+  }
+}
