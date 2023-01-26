@@ -1,0 +1,101 @@
+@use "../../mixins/media";
+@use "../../helpers/size";
+
+.portfolio-deconstructed {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: size.space(48);
+  @include media.screen(md) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: size.space(32);
+    row-gap: size.space(56);
+  }
+  @include media.screen(xl) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: size.space(80);
+    row-gap: size.space(88);
+  }
+
+
+  .item-wrapper {
+    width: 100%;
+    height: size.rem(416);
+
+    picture {
+      display: block;
+      margin-bottom: size.space(32);
+    }
+
+    picture > img {
+      width: 100%;
+      height: size.rem(336);
+      background: gray;
+    }
+
+    .item-info > span {
+      display: block;
+    }
+  }
+
+  @include media.screen(md) {
+    .item-3 {
+      height: size.rem(752);
+
+      picture > img {
+        height: size.rem(672);
+      }
+    }
+    .item-5 {
+      grid-column: span 2;
+    }
+  }
+
+  @include media.screen(xl) {
+    .item-1,
+    .item-4,
+    .item-6,
+    .item-9 {
+      grid-column-start: 1;
+    }
+
+    .item-2,
+    .item-5,
+    .item-7 {
+      grid-column-start: 2;
+    }
+
+    .item-3,
+    .item-8 {
+      grid-column-start: 3;
+    }
+
+
+
+    .item-9 {
+      grid-row-start: 4;
+    }
+
+    .item-4,
+    .item-6 {
+      margin-top: -#{size.rem(336)};
+    }
+
+    .item-9 {
+      margin-top: calc(calc(#{size.rem(336)} + #{size.rem(304)}) * -1);
+    }
+
+    .item-2 {
+      margin-top: #{size.rem(168)};
+    }
+
+    .item-7 {
+      margin-top: #{size.rem(304)};
+    }
+
+    .item-5 {
+      grid-column: span 2;
+    }
+
+  }
+
+}

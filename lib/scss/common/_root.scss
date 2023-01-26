@@ -9,19 +9,19 @@
    * FONTS
    */
   @each $_name, $_value in fonts.$size {
-     #{enum.find(FS)}#{$_name}: #{$_value};
+    #{enum.find(FS)}#{$_name}: #{$_value};
   }
 
   @each $_name, $_value in fonts.$weight {
-     #{enum.find(FW)}#{$_name}: #{$_value};
+    #{enum.find(FW)}#{$_name}: #{$_value};
   }
 
   @each $_name, $_value in fonts.$family {
-     #{enum.find(FF)}#{$_name}: #{$_value};
+    #{enum.find(FF)}#{$_name}: #{$_value};
   }
 
   @each $_name, $_value in fonts.$style {
-     #{enum.find(FT)}#{$_name}: #{$_value};
+    #{enum.find(FT)}#{$_name}: #{$_value};
   }
 
 
@@ -59,3 +59,5 @@
     #{enum.find(SPACE)}#{$_name}: #{$_space};
   }
 }
+
+
