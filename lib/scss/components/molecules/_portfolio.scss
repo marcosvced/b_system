@@ -7,7 +7,7 @@
 .portfolio {
   $parent: &;
   @include themed.properties {
-    border-block: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+    border-block: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
   }
 
   &-basic, &-vertical {
@@ -31,6 +31,14 @@
     @include mixin.screen(md) {
       grid-row: span 2;
     }
+
+    #{$parent}-container-img {
+      height: 25%;
+
+      @include mixin.screen(md) {
+        height: auto;
+      }
+    }
   }
 
   &-horizontal {
@@ -49,25 +57,29 @@
         width: 50%;
       }
     }
+
+    #{$parent}-img {
+      height: 100%;
+    }
   }
 
   &-card {
     &:not(:first-of-type) {
         @include themed.properties {
-            border-top: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+            border-top: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
           }
     }
 
     #{$parent}-container-img {
         @include themed.properties {
-            border-bottom: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+            border-bottom: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
           }
 
       &:not(#{$parent}-horizontal #{$parent}-container-img) {
         @include mixin.screen(md) {
           border-bottom: none;
           @include themed.properties {
-            border-right: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+            border-right: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
           }
         }
       }
@@ -75,7 +87,7 @@
       @include mixin.screen(xl) {
         border-bottom: none;
         @include themed.properties {
-            border-inline: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+            border-inline: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
           }
       }
 
@@ -107,7 +119,7 @@
       #{$parent}-content {
         @include mixin.screen(xl) {
             @include themed.properties {
-                border-left: themed.values(1px solid c-grayscale--200, 1px solid $c-grayscale--900);
+                border-left: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
             }
         }
       }
