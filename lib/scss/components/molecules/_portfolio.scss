@@ -6,9 +6,6 @@
 
 .portfolio {
   $parent: &;
-  @include themed.properties {
-    border-block: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
-  }
 
   &-basic, &-vertical {
     flex-direction: column;

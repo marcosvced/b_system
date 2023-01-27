@@ -29,6 +29,81 @@ const headerConfig = {
 <!-- END: BASIC CONTENT PLUS -->
 
 <!-- PORTFOLIO DECOMPOSED -->
+<% const items = [
+    {
+        title: 'Organic',
+        subtitle: 'Tecnology',
+        img: {
+            src: 'portfolio-basic-01',
+            alt: 'This is a image descriptive text'
+        }
+    },
+    {
+        title: '.US',
+        subtitle: 'Product design',
+        img: {
+            src: 'portfolio-basic-02',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Joy',
+        subtitle: 'Editorial',
+        img: {
+            src: 'portfolio-vertical-01',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Amazon toy',
+        subtitle: 'Packaging',
+        img: {
+            src: 'portfolio-basic-03',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Rucksack',
+        subtitle: 'Editorial',
+        img: {
+            src: 'portfolio-horizontal-01',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Hello',
+        subtitle: 'Tecnology',
+        img: {
+            src: 'portfolio-basic-04',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: '30 Paths',
+        subtitle: 'Tecnology',
+        img: {
+            src: 'portfolio-basic-05',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'White',
+        subtitle: 'Editorial',
+        img: {
+            src: 'portfolio-basic-06',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Drop',
+        subtitle: 'Tecnology',
+        img: {
+            src: 'portfolio-basic-07',
+            alt: 'This is a image descriptive text'
+        }
+    }
+] %>
+<%- include(`${module}/portfolioGrid/decomposed`, {items, hasBorder: true}) %>
 <!-- END: PORTFOLIO DECOMPOSED -->
 
 <!-- BASIC CONTENT DESCRIPTION -->

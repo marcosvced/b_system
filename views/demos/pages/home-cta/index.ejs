@@ -254,7 +254,81 @@ const headerConfig = {
 <!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
 
 <!-- PORTFOLIO GRID DECOMPOSED -->
-
+<% const items = [
+    {
+        title: 'US Bank',
+        subtitle: 'Digital product',
+        img: {
+            src: 'portfolio-basic-08',
+            alt: 'This is a image descriptive text'
+        }
+    },
+    {
+        title: 'US Bank',
+        subtitle: 'Branding',
+        img: {
+            src: 'portfolio-basic-13',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Joy',
+        subtitle: 'Editorial',
+        img: {
+            src: 'portfolio-vertical-02',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Breathe',
+        subtitle: 'Digital product',
+        img: {
+            src: 'portfolio-basic-09',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Rucksack',
+        subtitle: 'Editorial',
+        img: {
+            src: 'portfolio-horizontal-02',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Hello',
+        subtitle: 'Tecnology',
+        img: {
+            src: 'portfolio-basic-14',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: '30 Paths',
+        subtitle: 'Tecnology',
+        img: {
+            src: 'portfolio-basic-11',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'White',
+        subtitle: 'Editorial',
+        img: {
+            src: 'portfolio-basic-12',
+            alt: 'This is a image descriptive text'
+        }
+    }, 
+    {
+        title: 'Drop',
+        subtitle: 'Tecnology',
+        img: {
+            src: 'portfolio-basic-10',
+            alt: 'This is a image descriptive text'
+        }
+    }
+] %>
+<%- include(`${module}/portfolioGrid/decomposed`, {items, hasBorder: true}) %>
 <!-- END: PORTFOLIO GRID DECOMPOSED -->
 
 <!-- CTA -->
