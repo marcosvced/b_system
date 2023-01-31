@@ -275,6 +275,12 @@
     }
 
     &#{&}-testimonial {
+        .testimonial-quote {
+            @include themed.properties {
+                filter: themed.values(none, invert(1));
+            }
+        }
+
         #{$parent}-value {
             .icon-star {
                 @include themed.properties {
