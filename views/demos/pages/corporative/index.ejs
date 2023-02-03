@@ -4,20 +4,22 @@
 <%
 const headerConfig = {
     items: navigation,
-    isSticky: true,
-    canSearch: true,
-    mainHeader: true,
+    justify: 'right',
     size: 'full',
+    isSticky: true,
     hasBackground: false,
+    mainHeader: true,
+    hasLightNav: false,
     buttons: [
         {
-            label: 'Access',
-            icon: 'avatar',
-            variant: 'primary'
+            label: 'Purchase B_system',
+            mobileIcon: 'cart',
+            variant: 'subtle'
         }
     ]
 }
 %>
+
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <%- contentFor('fixed') %>
@@ -54,7 +56,7 @@ const headerConfig = {
         slides: [
             {
                 img: {
-                    src: 'marquee_image-04',
+                    src: 'marquee-image-04',
                     alt: 'marquee image 01'
                 },
                 title: 'Competitive agility',
@@ -63,7 +65,7 @@ const headerConfig = {
             },
             {
                 img: {
-                    src: 'marquee_image-02',
+                    src: 'marquee-image-02',
                     alt: 'marquee image 02'
                 },
                 title: 'We are the interactive radar',
@@ -72,7 +74,7 @@ const headerConfig = {
             },
             {
                 img: {
-                    src: 'marquee_image-03',
+                    src: 'marquee-image-03',
                     alt: 'marquee image 03'
                 },
                 title: 'Our values ​​shape our culture',
@@ -162,7 +164,7 @@ const headerConfig = {
     id: 'ia',
     masked: {
         img: {
-            src: 'featured-content_10',
+            src: 'featured-content-10',
             alt: 'featured content image',
         },
         shape: 'system'
@@ -185,7 +187,7 @@ const headerConfig = {
     id: 'future-systems',
     masked: {
         img: {
-            src: 'featured-content_11',
+            src: 'featured-content-11',
             alt: 'featured content image',
         },
         shape: 'template'
@@ -208,7 +210,7 @@ const headerConfig = {
     id: 'customer',
     masked: {
         img: {
-            src: 'featured-content_12',
+            src: 'featured-content-12',
             alt: 'featured content image',
         },
         shape: 'circle'
@@ -231,7 +233,7 @@ const headerConfig = {
     id: 'strategic',
     masked: {
         img: {
-            src: 'featured-content_13',
+            src: 'featured-content-13',
             alt: 'featured content image',
         },
         shape: 'consistency'
