@@ -3,96 +3,91 @@
 @use '../../mixins' as mixin;
 
 .bs-categories-menu-wrapper {
-    position: relative;
+  position: relative;
 
-    &::before {
-        pointer-events: none;
-        content: '';
-        position: absolute;
-        right: 0;
-        width: 96px;
-        height: 100%;
-        z-index: 1;
-        opacity: 0;
-        @include mixin.slow-transition('opacity');
+  &::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 96px;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    @include mixin.slow-transition('opacity');
+    background-image: linear-gradient(to right, transparent, var(--bg-color));
+  }
 
-      @include themed.light {
-          background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-      }
-      @include themed.dark {
-          background-image: linear-gradient(to right, rgba(43, 43, 43, 0), rgba(43, 43, 43, 1));
-      }
-    }
-
-    &.offset::before {
-        opacity: 1;
-    }
+  &.offset::before {
+    opacity: 1;
+  }
 }
 
 .nav-tabs.bs-categories-menu {
-    position: relative;
-    border-bottom: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    margin-left: 16px;
-    margin-right: 16px;
+  position: relative;
+  border-bottom: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-left: 16px;
+  margin-right: 16px;
 
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-        display: none;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include themed.properties {
+    background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
+    box-shadow: 0 1px 0 0 themed.values(helper.grayscale(300), helper.grayscale(900));
+  }
+
+  &.justify-content-center-safe {
+    li:first-child {
+      margin-left: auto;
     }
+
+    li:last-child {
+      margin-right: auto;
+    }
+  }
+
+  &.justify-content-right-safe {
+    li:first-child {
+      margin-left: auto;
+    }
+  }
+
+  &.justify-content-left-safe {
+    li:last-child {
+      margin-right: auto;
+    }
+  }
+
+  .nav-link {
+    border: 0;
+    white-space: nowrap;
 
     @include themed.properties {
-        background-color: themed.values(helper.grayscale(light), helper.grayscale(1100));
-        box-shadow: 0 1px 0 0 themed.values(helper.grayscale(300), helper.grayscale(900));
+      color: themed.values(helper.grayscale(800), helper.grayscale(600));
     }
 
-    &.justify-content-center-safe {
-        li:first-child {
-            margin-left: auto;
-        }
+    &.active {
+      font-weight: 500;
+      background: transparent;
 
-        li:last-child {
-            margin-right: auto;
-        }
+      @include themed.properties {
+        color: themed.values(helper.grayscale(ash), helper.grayscale(light));
+        border-bottom: 2px solid themed.values(helper.grayscale(ash), helper.grayscale(light));
+      }
     }
+  }
 
-    &.justify-content-right-safe {
-        li:first-child {
-            margin-left: auto;
-        }
-    }
-
-    &.justify-content-left-safe {
-        li:last-child {
-            margin-right: auto;
-        }
-    }
-
-    .nav-link {
-        border: 0;
-        white-space: nowrap;
-
-        @include themed.properties {
-            color: themed.values(helper.grayscale(800), helper.grayscale(600));
-        }
-
-        &.active {
-            font-weight: 500;
-            background: transparent;
-
-            @include themed.properties {
-                color: themed.values(helper.grayscale(ash), helper.grayscale(light));
-                border-bottom: 2px solid themed.values(helper.grayscale(ash), helper.grayscale(light));
-            }
-        }
-    }
-    a,
-    a:hover {
-        color: inherit;
-    }
+  a,
+  a:hover {
+    color: inherit;
+  }
 }
