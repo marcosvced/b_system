@@ -7,7 +7,7 @@ const headerConfig = {
     justify: 'right',
     size: 'full',
     isSticky: true,
-    hasBackground: false,
+    hasBackground: true,
     mainHeader: true,
     hasLightNav: false,
     buttons: [
@@ -50,41 +50,28 @@ const headerConfig = {
 } ) %>
 <!-- END: STICKY BANNER CARD -->
 
-<!-- MARQUEE IMAGE -->
-<section class="section section-divider p-0">
-    <%- include(`${module}/marquee/image/image`, { 
-        slides: [
-            {
-                img: {
-                    src: 'marquee-image-04',
-                    alt: 'marquee image 01'
-                },
-                title: 'Competitive agility',
-                text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
-                btn: 'Discover B_system'
-            },
-            {
-                img: {
-                    src: 'marquee-image-02',
-                    alt: 'marquee image 02'
-                },
-                title: 'We are the interactive radar',
-                text: 'From idea to action, the path to generating 360 ° value starts here.',
-                btn: 'Discover B_system'
-            },
-            {
-                img: {
-                    src: 'marquee-image-03',
-                    alt: 'marquee image 03'
-                },
-                title: 'Our values ​​shape our culture',
-                text: 'We make them happen through our individual behaviors and they serve as a guide for us to act and make decisions.',
-                btn: 'Discover B_system'
-            },
-        ]
-    }) %>
-</section>
-<!-- END: MARQUEE IMAGE -->
+<!-- MARQUEE BASIC -->
+<%- include(`${module}/marquee/basic`, {
+    img: {
+        src: 'marquee-02',
+        alt: 'Marquee image'
+    },
+    title: {
+        title: 'Competitive agility',
+        titleWhite: false,
+    },
+    text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
+    btn: {
+        label: 'Discover B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    onLeft: true,
+    isDarkened: false,
+    hasBorder: true
+}) %>
+<!-- END: MARQUEE BASIC -->
 
 <!-- BASIC CONTENT ARGUMENTS MODULE -->
 <%- include(`${module}/basicContent/argument`, {

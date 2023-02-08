@@ -309,10 +309,15 @@
 
     @include mixin.screen(xl) {
       min-height: helper.rem(500);
+
+      #{$parent}-basic-content.text-left {
+        width: 45%;
+      }
     }
 
-    text-align: center;
-    align-items: center;
+    #{$parent}-text {
+      color: themed.values($c-grayscale--700, $c-grayscale--light);
+    }
   }
 
   .text-end {

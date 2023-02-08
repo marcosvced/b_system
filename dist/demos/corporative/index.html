@@ -20,7 +20,7 @@
   <body>
 
     <!--MAIN HEADER-->
-    <header class="header header-fixed   " data-b-system-header-position="sticky" data-b-system-header="transparent">
+    <header class="header header-fixed header-light  " data-b-system-header-position="sticky" data-b-system-header="light">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-b-system-wrapper="buttons">
           <div class="d-flex d-xl-none order-0">
@@ -1593,82 +1593,25 @@
 
       <!-- END: STICKY BANNER CARD -->
 
-      <!-- MARQUEE IMAGE -->
-      <section class="section section-divider p-0">
-        <div class="marquee-wrapper position-relative" id="">
-          <div class="swiper" data-b-system="swiper" data-swiper-target="marquee-image" data-swiper-next=".button-next" data-swiper-prev=".button-prev" data-swiper-items="1">
-            <div class="swiper-wrapper">
-
-              <!-- swiper slide -->
-              <div class="swiper-slide">
-                <div class="marquee marquee-image marquee-space marquee-size position-relative">
-                  <picture>
-                    <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-image-04.jpg" alt="marquee image 01">
-                    <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-image-04_darkmode.jpg" alt="marquee image 01">
-                  </picture>
-                  <div class="marquee-content align-items-center align-items-md-start space-y-32 space-y-xl-64">
-                    <h1 class="marquee-title">Competitive agility</h1>
-                    <p class="marquee-text body-light-text">Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.</p>
-                    <button type="button" class="btn btn-primary">
-                      Discover B_system
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="marquee marquee-image marquee-space marquee-size position-relative">
-                  <picture>
-                    <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-image-02.jpg" alt="marquee image 02">
-                    <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-image-02_darkmode.jpg" alt="marquee image 02">
-                  </picture>
-                  <div class="marquee-content align-items-center align-items-md-start space-y-32 space-y-xl-64">
-                    <h1 class="marquee-title">We are the interactive radar</h1>
-                    <p class="marquee-text body-light-text">From idea to action, the path to generating 360 ° value starts here.</p>
-                    <button type="button" class="btn btn-primary">
-                      Discover B_system
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="marquee marquee-image marquee-space marquee-size position-relative">
-                  <picture>
-                    <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-image-03.jpg" alt="marquee image 03">
-                    <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-image-03_darkmode.jpg" alt="marquee image 03">
-                  </picture>
-                  <div class="marquee-content align-items-center align-items-md-start space-y-32 space-y-xl-64">
-                    <h1 class="marquee-title">Our values ​​shape our culture</h1>
-                    <p class="marquee-text body-light-text">We make them happen through our individual behaviors and they serve as a guide for us to act and make decisions.</p>
-                    <button type="button" class="btn btn-primary">
-                      Discover B_system
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- end: swiper slide -->
-            </div>
-            <div class="swiper-pagination pagination-dark"></div>
-          </div>
-          <div class="marquee-content-bottom">
-            <button class="btn-interactive btn-interactive-rounded  btn-interactive-tight ">
+      <!-- MARQUEE BASIC -->
+      <div class="marquee marquee-basic module p-0 section-divider" id="">
+        <div class="container">
+          <picture>
+            <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-02.jpg" alt="Marquee image">
+            <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-02_darkmode.jpg" alt="Marquee image">
+          </picture>
+          <div class="marquee-basic-content space-y-32 text-left">
+            <h1 class="marquee-title">Competitive agility</h1>
+            <p class="marquee-text">Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.</p>
+            <button type="button" class="btn btn-primary btn-primary-cta">
+              <span>Discover B_system</span>
               <i class="icon-links"></i>
             </button>
           </div>
-          <div class="button-prev">
-            <button class="btn-interactive btn-interactive-rounded   ">
-              <i class="icon-back"></i>
-            </button>
-          </div>
-          <div class="button-next">
-            <button class="btn-interactive btn-interactive-rounded   ">
-              <i class="icon-next"></i>
-            </button>
-          </div>
         </div>
-      </section>
+      </div>
 
-      <!-- END: MARQUEE IMAGE -->
+      <!-- END: MARQUEE BASIC -->
 
       <!-- BASIC CONTENT ARGUMENTS MODULE -->
       <div class="module section-divider  basic-content basic-content-arguments" id="">
@@ -1705,34 +1648,46 @@
       <nav class="bs-categories-menu-wrapper module  p-0" id="">
         <ul class="nav nav-tabs bs-categories-menu bg-transparent flex-nowrap justify-content-center-safe" role="tablist">
           <li class="nav-item py-0" role="presentation">
-            <a href="#ia" class="nav-link py-4 active" id="menu-ia" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="true">
-              Artificial Intelligence
-            </a>
+            <button class="nav-link m-0 p-0 active" id="menu-ia" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="true">
+              <a href="#ia" class="d-block py-4 px-3">
+                Artificial Intelligence
+              </a>
+            </button>
           </li>
           <li class="nav-item py-0" role="presentation">
-            <a href="#future-systems" class="nav-link py-4 " id="menu-future" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-              Future Systems
-            </a>
+            <button class="nav-link m-0 p-0 " id="menu-future" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false">
+              <a href="#future-systems" class="d-block py-4 px-3">
+                Future Systems
+              </a>
+            </button>
           </li>
           <li class="nav-item py-0" role="presentation">
-            <a href="#methodology" class="nav-link py-4 " id="menu-methodology" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-              Our work methodology
-            </a>
+            <button class="nav-link m-0 p-0 " id="menu-methodology" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false">
+              <a href="#methodology" class="d-block py-4 px-3">
+                Our work methodology
+              </a>
+            </button>
           </li>
           <li class="nav-item py-0" role="presentation">
-            <a href="#cuestomer" class="nav-link py-4 " id="menu-customer" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-              Customer experience
-            </a>
+            <button class="nav-link m-0 p-0 " id="menu-customer" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false">
+              <a href="#cuestomer" class="d-block py-4 px-3">
+                Customer experience
+              </a>
+            </button>
           </li>
           <li class="nav-item py-0" role="presentation">
-            <a href="#strategic" class="nav-link py-4 " id="menu-strategic" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-              Strategic
-            </a>
+            <button class="nav-link m-0 p-0 " id="menu-strategic" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false">
+              <a href="#strategic" class="d-block py-4 px-3">
+                Strategic
+              </a>
+            </button>
           </li>
           <li class="nav-item py-0" role="presentation">
-            <a href="#consulting" class="nav-link py-4 " id="menu-consulting" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-              Consulting
-            </a>
+            <button class="nav-link m-0 p-0 " id="menu-consulting" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false">
+              <a href="#consulting" class="d-block py-4 px-3">
+                Consulting
+              </a>
+            </button>
           </li>
         </ul>
       </nav>
