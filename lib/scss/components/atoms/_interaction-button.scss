@@ -66,8 +66,40 @@
     height: helper.rem(56);
     border-radius: helper.rem(16);
 
+  }
+
+  &-effect {
     > * {
-      transform: rotate(90deg);
+      @include mixin.fast-transition(transform);
+    }
+
+    &-right {
+      &:hover {
+        > * {
+          transform: translateX(helper.rem(4));
+        }
+      }
+    }
+    &-left {
+      &:hover {
+        > * {
+          transform: translateX(helper.rem(-4));
+        }
+      }
+    }
+    &-down {
+      &:hover {
+        > * {
+          transform: translateY(helper.rem(4));
+        }
+      }
+    }
+    &-up {
+      &:hover {
+        > * {
+          transform: translateY(helper.rem(-4));
+        }
+      }
     }
   }
 }

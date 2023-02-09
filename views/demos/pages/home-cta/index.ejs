@@ -1,4 +1,4 @@
-<%- include(`${view}/demos/layout`)%>
+<%- include(`${view}/demos/layout`) %>
 <%- contentFor('header') %>
 <%
 const headerConfig = {
@@ -17,239 +17,254 @@ const headerConfig = {
     ]
 }
 %>
+<%
+const searcher = {
+    input: {
+        id: 'searcher',
+        label: 'Search...',
+        icon: 'm-glass'
+    },
+    button: 'blade',
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}
+%>
+<%- include(`${module}/searcher/searcher`, searcher) %>
+
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <%- contentFor('body') %>
 <!-- MARQUEE HERO -->
 <section class="section section-divider p-0">
     <%- include(`${module}/marquee/cta/cta`, {
-        slides: [
-            {
-                img: {
-                    src: 'marquee-text-01',
-                    alt: 'marquee text'
-                },
-                title: {
-                    normal: 'We are a new concept of digital studio. We work with startups and large companies to activate and consolidate ',
-                    linkHref: '#',
-                    linkLabel: 'their _brands',
-                },
-                btn: {
-                    label: 'Start with B System', 
-                    isCTA: true, 
-                    icon: 'links', 
-                    iconPosition: 'after' 
-                },
-                quote: '“People ignore design that ignores people”'
-            },
-            {
-                img: {
-                    src: 'marquee-text-02',
-                    alt: 'marquee text'
-                },
-                title: {
-                    normal: 'We are 100% customer-oriented and offer tailor-made solutions. Always thinking about the specific needs of each of ',
-                    linkHref: '#',
-                    linkLabel: 'our _clients.',
-                },
-                btn: {
-                    label: 'Start with B System', 
-                    isCTA: true, 
-                    icon: 'links', 
-                    iconPosition: 'after' 
-                },
-                quote: '“People ignore design that ignores people”'
-            },
-            {
-                img: {
-                    src: 'marquee-text-03',
-                    alt: 'marquee text'
-                },
-                title: {
-                    normal: 'We combine creative talent, strategic vision, technical specialization. And above all, the desire to feel pride in ',
-                    linkHref: '#',
-                    linkLabel: 'each _job.',
-                },
-                btn: {
-                    label: 'Start with B System', 
-                    isCTA: true, 
-                    icon: 'links', 
-                    iconPosition: 'after' 
-                },
-                quote: '“People ignore design that ignores people”'
-            },
-        ]
+    slides: [
+    {
+    img: {
+    src: 'marquee-text-01',
+    alt: 'marquee text'
+    },
+    title: {
+    normal: 'We are a new concept of digital studio. We work with startups and large companies to activate and consolidate ',
+    linkHref: '#',
+    linkLabel: 'their _brands',
+    },
+    btn: {
+    label: 'Start with B System',
+    isCTA: true,
+    icon: 'links',
+    iconPosition: 'after'
+    },
+    quote: '“People ignore design that ignores people”'
+    },
+    {
+    img: {
+    src: 'marquee-text-02',
+    alt: 'marquee text'
+    },
+    title: {
+    normal: 'We are 100% customer-oriented and offer tailor-made solutions. Always thinking about the specific needs of each of ',
+    linkHref: '#',
+    linkLabel: 'our _clients.',
+    },
+    btn: {
+    label: 'Start with B System',
+    isCTA: true,
+    icon: 'links',
+    iconPosition: 'after'
+    },
+    quote: '“People ignore design that ignores people”'
+    },
+    {
+    img: {
+    src: 'marquee-text-03',
+    alt: 'marquee text'
+    },
+    title: {
+    normal: 'We combine creative talent, strategic vision, technical specialization. And above all, the desire to feel pride in ',
+    linkHref: '#',
+    linkLabel: 'each _job.',
+    },
+    btn: {
+    label: 'Start with B System',
+    isCTA: true,
+    icon: 'links',
+    iconPosition: 'after'
+    },
+    quote: '“People ignore design that ignores people”'
+    },
+    ]
     }) %>
 </section>
 
 <!-- END: MARQUEE HERO -->
 
 <!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
-<%- include(`${module}/basicContent/simple`, { 
-    variant:'2-columns', 
-    title:'Our work methodology', 
-    text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
-    hasBorder: false 
+<%- include(`${module}/basicContent/simple`, {
+variant:'2-columns',
+title:'Our work methodology',
+text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+hasBorder: false
 }) %>
 <!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
 
 <!-- CATEGORY MENU -->
 <%- include(`${module}/categoriesMenu/categoriesMenu`, {
-    align: 'center',
-    items: [
-        {
-            label: '1. Exploration',
-            href: '#exploration',
-            id: 'menu-exploration',
-            active: true
-        },
-        {
-            label: '2. Empathy',
-            href: '#empathy',
-            id: 'menu-empathy'
-        },
-        {
-            label: '3. Definition',
-            href: '#definition',
-            id: 'menu-definition'
-        },
-        {
-            label: '4. Ideation',
-            href: '#ideation',
-            id: 'menu-ideation'
-        },
-        {
-            label: '5. Prototyping',
-            href: '#prototyping',
-            id: 'menu-propotyping'
-        }
-    ]
+align: 'center',
+items: [
+{
+label: '1. Exploration',
+href: '#exploration',
+id: 'menu-exploration',
+active: true
+},
+{
+label: '2. Empathy',
+href: '#empathy',
+id: 'menu-empathy'
+},
+{
+label: '3. Definition',
+href: '#definition',
+id: 'menu-definition'
+},
+{
+label: '4. Ideation',
+href: '#ideation',
+id: 'menu-ideation'
+},
+{
+label: '5. Prototyping',
+href: '#prototyping',
+id: 'menu-propotyping'
+}
+]
 }) %>
 <!-- END: CATEGORY MENU -->
 
 <!-- FEATURED CONTENT -->
 <%- include( `${module}/featuredContent/featuredContent`, {
-    id: 'exploration',
-    masked: {
-        img: {
-            src: 'featured-content-01',
-            alt: 'featured content image',
-        },
-        shape: 'module'
-    },
-    subtitle: '1. Exploration phase',
-    title: 'Explore new concepts, products, services, ventures, brands, and systems.',
-    isSerif: true,
-    link: {
-        href: '#',
-        label: 'Learn more',
-        icon: 'links'
-    },
-    contentPosition: 'left',
-    isDarkened: false,
-    isDark: false,
-    hasBorder: true
+id: 'exploration',
+masked: {
+img: {
+src: 'featured-content-01',
+alt: 'featured content image',
+},
+shape: 'module'
+},
+subtitle: '1. Exploration phase',
+title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+isSerif: true,
+link: {
+href: '#',
+label: 'Learn more',
+icon: 'links'
+},
+contentPosition: 'left',
+isDarkened: false,
+isDark: false,
+hasBorder: true
 } ) %>
 
 <%- include( `${module}/featuredContent/featuredContent`, {
-    id: 'empathy',
-    masked: {
-        img: {
-            src: 'featured-content-02',
-            alt: 'featured content image 2',
-        },
-        shape: 'consistency'
-    },
-    subtitle: '2. Empathy phase',
-    title: 'A deep understanding of the needs of the users involved in the solution.',
-    isSerif: true,
-    link: {
-        href: '#',
-        label: 'Learn more',
-        icon: 'links'
-    },
-    contentPosition: 'right',
-    isDarkened: false,
-    isDark: false,
-    hasBorder: true
+id: 'empathy',
+masked: {
+img: {
+src: 'featured-content-02',
+alt: 'featured content image 2',
+},
+shape: 'consistency'
+},
+subtitle: '2. Empathy phase',
+title: 'A deep understanding of the needs of the users involved in the solution.',
+isSerif: true,
+link: {
+href: '#',
+label: 'Learn more',
+icon: 'links'
+},
+contentPosition: 'right',
+isDarkened: false,
+isDark: false,
+hasBorder: true
 } ) %>
 
 <%- include( `${module}/featuredContent/featuredContent`, {
-    id: 'definition',
-    masked: {
-        img: {
-            src: 'featured-content-05',
-            alt: 'featured content image 3',
-        },
-        shape: 'system'
-    },
-    subtitle: '3. Definition phase',
-    title: 'Staying with what really adds value and brings us to new interesting perspectives.',
-    isSerif: true,
-    link: {
-        href: '#',
-        label: 'Learn more',
-        icon: 'links'
-    },
-    contentPosition: 'left',
-    isDarkened: false,
-    isDark: false,
-    hasBorder: true
+id: 'definition',
+masked: {
+img: {
+src: 'featured-content-05',
+alt: 'featured content image 3',
+},
+shape: 'system'
+},
+subtitle: '3. Definition phase',
+title: 'Staying with what really adds value and brings us to new interesting perspectives.',
+isSerif: true,
+link: {
+href: '#',
+label: 'Learn more',
+icon: 'links'
+},
+contentPosition: 'left',
+isDarkened: false,
+isDark: false,
+hasBorder: true
 } ) %>
 
 <%- include( `${module}/featuredContent/featuredContent`, {
-    id: 'ideation',
-    masked: {
-        img: {
-            src: 'featured-content-03',
-            alt: 'featured content image 4',
-        },
-        shape: 'process'
-    },
-    subtitle: '4. Ideation phase',
-    title: 'In this phase, activities favor expansive thinking and we eliminate value judgments.',
-    isSerif: true,
-    link: {
-        href: '#',
-        label: 'Learn more',
-        icon: 'links'
-    },
-    contentPosition: 'right',
-    isDarkened: false,
-    isDark: false,
-    hasBorder: true
+id: 'ideation',
+masked: {
+img: {
+src: 'featured-content-03',
+alt: 'featured content image 4',
+},
+shape: 'process'
+},
+subtitle: '4. Ideation phase',
+title: 'In this phase, activities favor expansive thinking and we eliminate value judgments.',
+isSerif: true,
+link: {
+href: '#',
+label: 'Learn more',
+icon: 'links'
+},
+contentPosition: 'right',
+isDarkened: false,
+isDark: false,
+hasBorder: true
 } ) %>
 
 <%- include( `${module}/featuredContent/featuredContent`, {
-    id: 'prototyping',
-    masked: {
-        img: {
-            src: 'featured-content-04',
-            alt: 'featured content image 5',
-        },
-        shape: 'system'
-    },
-    subtitle: '5. Prototyping phase',
-    title: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.',
-    isSerif: true,
-    link: {
-        href: '#',
-        label: 'Learn more',
-        icon: 'links'
-    },
-    contentPosition: 'left',
-    isDarkened: false,
-    isDark: false,
-    hasBorder: true
+id: 'prototyping',
+masked: {
+img: {
+src: 'featured-content-04',
+alt: 'featured content image 5',
+},
+shape: 'system'
+},
+subtitle: '5. Prototyping phase',
+title: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.',
+isSerif: true,
+link: {
+href: '#',
+label: 'Learn more',
+icon: 'links'
+},
+contentPosition: 'left',
+isDarkened: false,
+isDark: false,
+hasBorder: true
 } ) %>
 <!-- END: FEATURED CONTENT -->
 
 <!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
-<%- include(`${module}/basicContent/simple`, { 
-    variant:'2-columns', 
-    title:'Our portfolio', 
-    text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
-    hasBorder: true 
+<%- include(`${module}/basicContent/simple`, {
+variant:'2-columns',
+title:'Our portfolio',
+text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+hasBorder: true
 }) %>
 <!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
 
@@ -270,7 +285,7 @@ const headerConfig = {
             src: 'portfolio-basic-13',
             alt: 'This is a image descriptive text'
         }
-    }, 
+    },
     {
         title: 'Joy',
         subtitle: 'Editorial',
@@ -278,7 +293,7 @@ const headerConfig = {
             src: 'portfolio-vertical-02',
             alt: 'This is a image descriptive text'
         }
-    }, 
+    },
     {
         title: 'Breathe',
         subtitle: 'Digital product',
@@ -286,7 +301,7 @@ const headerConfig = {
             src: 'portfolio-basic-09',
             alt: 'This is a image descriptive text'
         }
-    }, 
+    },
     {
         title: 'Rucksack',
         subtitle: 'Editorial',
@@ -294,7 +309,7 @@ const headerConfig = {
             src: 'portfolio-horizontal-02',
             alt: 'This is a image descriptive text'
         }
-    }, 
+    },
     {
         title: 'Hello',
         subtitle: 'Tecnology',
@@ -302,7 +317,7 @@ const headerConfig = {
             src: 'portfolio-basic-14',
             alt: 'This is a image descriptive text'
         }
-    }, 
+    },
     {
         title: '30 Paths',
         subtitle: 'Tecnology',
@@ -310,7 +325,7 @@ const headerConfig = {
             src: 'portfolio-basic-11',
             alt: 'This is a image descriptive text'
         }
-    }, 
+    },
     {
         title: 'White',
         subtitle: 'Editorial',
@@ -318,7 +333,7 @@ const headerConfig = {
             src: 'portfolio-basic-12',
             alt: 'This is a image descriptive text'
         }
-    }, 
+    },
     {
         title: 'Drop',
         subtitle: 'Tecnology',
@@ -333,24 +348,24 @@ const headerConfig = {
 
 <!-- CTA -->
 <%- include(`${module}/cta/cta`, {
-    title: 'Do you want to start with B_system today?',
-    btn: {
-        label: 'Purchase B_system',
-        isCTA: true,
-        icon: 'links',
-        iconPosition: 'after'
-    },
-    isDarkened: false,
-    isDark: false,
-    hasBorder: true
+title: 'Do you want to start with B_system today?',
+btn: {
+label: 'Purchase B_system',
+isCTA: true,
+icon: 'links',
+iconPosition: 'after'
+},
+isDarkened: false,
+isDark: false,
+hasBorder: true
 }) %>
 <!-- END: CTA -->
 
 <!-- ICONS SOCIAL -->
-<%- include(`${module}/iconSocial/iconSocial`, { 
-    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-    isDarkened: false,
-    isDark: false,
-    hasBorder: false
+<%- include(`${module}/iconSocial/iconSocial`, {
+socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+isDarkened: false,
+isDark: false,
+hasBorder: false
 }) -%>
 <!-- END: ICONS SOCIAL -->
