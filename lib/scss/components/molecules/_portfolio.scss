@@ -61,10 +61,8 @@
   }
 
   &-card {
-    &:not(:first-of-type) {
-        @include themed.properties {
-            border-top: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
-          }
+    @include themed.properties {
+      border-top: themed.values(1px solid $c-grayscale--200, 1px solid $c-grayscale--900);
     }
 
     #{$parent}-container-img {

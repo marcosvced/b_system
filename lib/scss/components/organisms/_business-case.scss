@@ -152,7 +152,7 @@
 .section-bg-color:not(.darkened) {
   .business-case-title,
   .business-case-text,
-  .action-link {
+  .action-link:not(.card-business .action-link) {
     color: $c-grayscale--light;
   }
 }
