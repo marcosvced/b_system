@@ -15,3 +15,13 @@
     }
   }
 }
+
+%action-link--hover {
+  > span + [class*='icon-'] {
+    transform: translateX(helper.rem(4));
+  }
+
+  @include themed.properties {
+    color: themed.values($c-eren--500, $c-eren);
+  }
+}

@@ -5,6 +5,7 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
+span,
 a {
   &.action-link {
     display: flex;
@@ -45,13 +46,7 @@ a {
     }
 
     &:hover {
-      > span + [class*='icon-'] {
-        transform: translateX(helper.rem(4));
-      }
-
-      @include themed.properties {
-        color: themed.values(helper.secondary(eren-500), helper.primary('eren'));
-      }
+      @extend %action-link--hover;
     }
 
     &:active {
