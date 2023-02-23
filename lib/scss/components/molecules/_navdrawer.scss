@@ -100,7 +100,7 @@
               @extend .body-bold-text;
             }
           }
-          @.properties {
+          @include themed.properties {
             color: themed.values($c-grayscale--ash, $c-grayscale--light);
           }
         }
