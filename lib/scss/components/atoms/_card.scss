@@ -8,6 +8,7 @@
     $parent: &;
     border: 0;
     background-color: transparent;
+    z-index: 0;
 
     .img-container {
         #{$parent}-basic {
@@ -92,29 +93,22 @@
             #{$parent}-img {
                 height: 100%;
                 object-fit: cover;
-                
-                border:{
-                    top-left-radius: helper.rem(6);
-                    top-right-radius: helper.rem(6);
-                    bottom-left-radius: 0;
-                    bottom-right-radius: 0;
-                }
+                border-top-left-radius: helper.rem(6);
+                border-top-right-radius: helper.rem(6);
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
 
                 @include mixin.screen(xl) {
-                    border:{
-                        top-left-radius: helper.rem(6);
-                        top-right-radius: 0;
-                        bottom-left-radius: helper.rem(6);
-                        bottom-right-radius: 0;
-                    }
+                    border-top-left-radius: helper.rem(6);
+                    border-top-right-radius: 0;
+                    border-bottom-left-radius: helper.rem(6);
+                    border-bottom-right-radius: 0;
                 }
             }
 
             #{$parent}-service-content {
-                border:{
-                    top-left-radius: 0;
-                    top-right-radius: 0;
-                }
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
 
                 #{$parent}-tag {
                     background-color: $c-eren;
@@ -122,11 +116,8 @@
                     width: helper.rem(48);
                     height: helper.rem(72);
                     padding-bottom: helper.space(8);
-                    border:{
-                        bottom-left-radius: helper.rem(32);
-                        bottom-right-radius: helper.rem(32);
-                    }
-            
+                    border-bottom-left-radius: helper.rem(32);
+                    border-bottom-right-radius: helper.rem(32);
                     transform: translateY(- helper.rem(32));
 
                     [class^='icon-'] {
@@ -140,7 +131,7 @@
 
         .border-bottom {
             @include themed.properties {
-                border-color: themed.values(($c-grayscale--300 !important), ($c-grayscale--1000 !important));
+                border-color: themed.values($c-grayscale--300 !important, $c-grayscale--1000 !important);
             }
         }
     }
@@ -149,12 +140,10 @@
         #{$parent}-comparative-img, #{$parent}-feature-img-container {
             max-height: helper.rem(256);
             object-fit: cover;
-            border:{
-                top-left-radius: helper.rem(6);
-                top-right-radius: helper.rem(6);
-                bottom-left-radius: 0;
-                bottom-right-radius: 0;
-            }
+            border-top-left-radius: helper.rem(6);
+            border-top-right-radius: helper.rem(6);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
         }
     }
 
@@ -304,13 +293,8 @@
     }
 
     &#{&}-interaction {
-        outline:{
-            width: helper.rem(2);
-            style: solid;
-            color: transparent;
-            offset: - helper.rem(2);
-        }
-    
+        outline: helper.rem(2) solid transparent;
+        outline-offset: - helper.rem(2);
         transition: .8s ease-in-out;
 
         &:hover {
@@ -326,6 +310,16 @@
             }
         }
     }
+
+    #{$parent}-link-container {
+        top: 0;
+        left: 0;
+    }
+
+    .action-link {
+        z-index: 1;
+    }
+
 }
 
 .card-business-wrapper {
