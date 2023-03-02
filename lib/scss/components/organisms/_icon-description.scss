@@ -14,17 +14,22 @@
 
         [class^=icon-] {
             font-size: 600px;
-            @include themed.properties {
+        }
+    }
+
+    @include themed.properties {
+        .icon-description-background {
+            [class^=icon-] {
                 color: themed.values($c-grayscale--100, $c-grayscale--1000);
             }
         }
     }
 
     &.darkened {
-        .icon-description-background {
-            [class^=icon-] {
-                @include themed.properties {
-                    color: themed.values($c-grayscale--200, $c-grayscale--1200);
+        @include themed.properties {
+            .icon-description-background {
+                [class^=icon-] {
+                    color: themed.values($c-grayscale--200, $c-grayscale--1100);
                 }
             }
         }

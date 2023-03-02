@@ -37,11 +37,9 @@
 }
 
 .darkened {
-    .icons-social .btn-only-icon {
-        &:before {
-            @include themed.properties {
-                background-color: themed.values($c-grayscale--200, $c-grayscale--1300);
-            }
+    @include themed.properties {
+        .icons-social .btn-only-icon:before {
+            background-color: themed.values($c-grayscale--200, $c-grayscale--1100);
         }
     }
 }
