@@ -22,19 +22,21 @@
                 hasBorder: false,
                 id: 'random-id'
             }
+
+            const basicModule = include(`${module}/basicContent/basic`, basic)
+
             const codePreview = {
                 idAccordion: 'basic',
-                idItem: 'basic-item'
-
+                idItem: 'basic-item',
+                isDarkened: true,
+                content: basicModule
             }
         %>
         <div class="section section-divider">
-            <%- include(`${module}/basicContent/basic`, basic) %>
+            <%- basicModule %>
         </div>
 
-        <%- include(`${component}/codePreview/codePreviewStart`, codePreview) %>
-        <%- include(`${module}/basicContent/basic`, basic) %>
-        <%- include(`${component}/codePreview/codePreviewEnd`) %>
+        <%- include(`${component}/codePreview/codePreview`, codePreview) %>
 
 
         <!--END:Basic-->
@@ -43,11 +45,29 @@
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
             <%- include(`${component}/text/head-x3`, { text: 'Header basic plus' }) %>
         </div>
-        <%- include(`${module}/basicContent/basic`, {
-        title:"Hi, I'm Matias Eriksson, photographer and designer",
-        isPlus:true,
-        hasBorder: false
-        }) %>
+
+        <%
+            const basicPlus = {
+                title:"Hi, I'm Matias Eriksson, photographer and designer",
+                isPlus:true,
+                hasBorder: false,
+                id: 'random-id-plus'
+            }
+
+            const basicPlusModule = include(`${module}/basicContent/basic`, basicPlus)
+
+            const codePreviewPlus = {
+                idAccordion: 'basic',
+                idItem: 'basic-item-plus',
+                isDarkened: true,
+                content: basicPlusModule
+            }
+        %>
+        <div class="section section-divider">
+            <%- basicPlusModule %>
+        </div>
+        <%- include(`${component}/codePreview/codePreview`, codePreviewPlus) %>
+
         <!--END:Basic plus-->
 
         <!--Simple-->
