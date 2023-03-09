@@ -6,7 +6,7 @@ const gulpUglify = require('gulp-uglify')
 const browserSync = require('browser-sync').create()
 const { exec } = require('child_process')
 
-const remove = import('del')
+const remove = require('del')
 
 const sass = () => gulp.src('./lib/scss/style.scss')
   .pipe(gulpSass({ outputStyle: 'expanded' }, null)
