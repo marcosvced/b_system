@@ -2,21 +2,36 @@
 
 <%- contentFor('body') %>
 
-    <%- include(`${module}/marquee/basic`, {
-    img: {
-        src: 'marquee-01',
-        alt: 'Marquee image'
-    },
-    title: {
-        title: 'Multi-Purpose HTML5 Template',
-        titleWhite: true,
-    },
-    btn: {
-        label: 'Start with B System',
-        isCTA: true,
-        icon: 'links',
-        iconPosition: 'after'
-    },
-    onLeft: false,
-    isDarkened: true
-}) %>
+<%
+    const marqueeBasic = {
+        img: {
+            src: 'marquee-01',
+            alt: 'Marquee image'
+        },
+        title: {
+            title: 'Multi-Purpose HTML5 Template',
+            titleWhite: true,
+        },
+        btn: {
+            label: 'Start with B System',
+            isCTA: true,
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        onLeft: false,
+        isDarkened: true
+    }
+
+    const marqueeBasicModule = include(`${module}/marquee/basic`, marqueeBasic)
+
+    const codePreview = {
+        idAccordion: 'basic',
+        idItem: 'code-marquee-basic',
+        isDarkened: true,
+        content: marqueeBasicModule
+    }
+%>
+
+<%- marqueeBasicModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>

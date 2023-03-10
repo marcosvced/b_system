@@ -10,6 +10,10 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
+    <!-- Highlight -->
+    <link rel="stylesheet" href="../../..//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/intellij-light.min.css">
+    <link rel='stylesheet' href='../../../assets/css/style.min.css' />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../../assets/css/style.min.css' />
 
@@ -1564,7 +1568,8 @@
       <div class="marquee marquee-basic module p-0" id="">
         <div class="container">
           <picture>
-            <img class="marquee-bg marquee-bg-darkened" src="../../../assets/img/marquee/marquee-01.jpg" alt="Marquee image">
+            <img class="marquee-bg img-mode-light marquee-bg-darkened" src="../../../assets/img/marquee/marquee-01.jpg" alt="Marquee image">
+            <img class="marquee-bg img-mode-dark marquee-bg-darkened" src="../../../assets/img/marquee/marquee-01_darkmode.jpg" alt="Marquee image">
           </picture>
           <div class="marquee-basic-content space-y-32 text-center m-auto">
             <h1 class="marquee-title text-white">Multi-Purpose HTML5 Template</h1>
@@ -1572,6 +1577,40 @@
               <span>Start with B System</span>
               <i class="icon-links"></i>
             </button>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="accordion-item darkened">
+            <h2 id="heading-code-marquee-basic" class="accordion-header">
+              <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-code-marquee-basic" aria-expanded="false" aria-controls="collapse-code-marquee-basic">
+                View example´s code
+              </button>
+            </h2>
+            <div id="collapse-code-marquee-basic" class="accordion-collapse collapse " aria-labelledby="heading-code-marquee-basic" data-bs-parent="#basic">
+              <div class="accordion-body overflow-hidden">
+                <pre>
+                        <code class="language-html">
+  &lt;div class=&#34;marquee marquee-basic module p-0&#34; id=&#34;&#34;&gt;
+        &lt;div class=&#34;container&#34;&gt;
+            &lt;picture&gt;
+                &lt;img class=&#34;marquee-bg img-mode-light marquee-bg-darkened&#34; src=&#34;../../../assets/img/marquee/marquee-01.jpg&#34; alt=&#34;Marquee image&#34;&gt;
+                &lt;img class=&#34;marquee-bg img-mode-dark marquee-bg-darkened&#34; src=&#34;../../../assets/img/marquee/marquee-01_darkmode.jpg&#34; alt=&#34;Marquee image&#34;&gt;
+            &lt;/picture&gt;
+            &lt;div class=&#34;marquee-basic-content space-y-32 text-center m-auto&#34;&gt;
+                &lt;h1 class=&#34;marquee-title text-white&#34;&gt;Multi-Purpose HTML5 Template&lt;/h1&gt;
+    &lt;button type=&#34;button&#34;             class=&#34;btn btn-primary btn-primary-cta&#34;
+                &gt;
+            &lt;span&gt;Start with B System&lt;/span&gt;
+&lt;i class=&#34;icon-links&#34; &gt;&lt;/i&gt;
+    &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;                        </code>
+                    </pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1602,6 +1641,12 @@
 
     <!-- Swiper bundle CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Highlight -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
 
     <!--B_system JS-->
     <script src="../../../assets/js/bsystem.min.js"></script>
