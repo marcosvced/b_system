@@ -89,7 +89,7 @@
     padding-inline: helper.space(24);
     display: none;
     position: absolute;
-    top: 42%;
+    top: 50%;
 
     @include mixin.screen(xl) {
       display: flex;
@@ -329,6 +329,16 @@
 }
 
 .marquee-wrapper {
+  .swiper {
+    .swiper-pagination {
+      bottom: helper.rem(16);
+
+      @include mixin.screen(md) {
+        bottom: helper.rem(32);
+      }
+    }
+  }
+
   .swiper[data-swiper-target="marquee-cta"] {
     .swiper-pagination {
       position: relative;

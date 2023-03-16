@@ -8,19 +8,23 @@ const headerConfig = {
     size: 'full',
     isSticky: true,
     hasBackground: false,
+    hasLightNav: true,
+    mainHeader: true,
     buttons: [
         {
             label: 'Purchase B_system',
-            mobileIcon: 'cart'
+            mobileIcon: 'cart',
         }
     ]
 }
 %>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
 
 <div class="main-content main-content-space-top">
     <section>
         <%- include(`${module}/marquee/illustration/illustration`, {
+        isDark: true,
+        isDarkened: true,
         slides: [
         {
             bg:'armin',

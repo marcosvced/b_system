@@ -10,6 +10,10 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
+    <!-- Highlight -->
+    <link rel="stylesheet" href="../../..//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/intellij-light.min.css">
+    <link rel='stylesheet' href='../../../assets/css/style.min.css' />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../../assets/css/style.min.css' />
 
@@ -1563,7 +1567,7 @@
     <main class="main">
       <div class="main-content main-content-space-top">
         <section>
-          <div class="marquee-wrapper position-relative" id="">
+          <div class="marquee-wrapper position-relative" id="" data-b-system-theme="dark">
             <div class="swiper" data-b-system="swiper" data-swiper-target="marquee-text-image" data-swiper-next=".button-next" data-swiper-prev=".button-prev" data-swiper-items="1">
               <div class="swiper-wrapper">
 
@@ -1574,7 +1578,7 @@
                       <img class="marquee-bg" src="../../../assets/img/marquee/marquee-textimage-01.jpg" alt="Marquee text image">
                     </picture>
                     <div class="overlay"></div>
-                    <div class="marquee-content space-y-24 space-y-md-32 space-y-xl-64">
+                    <div class="marquee-content space-y-24 space-y-md-32 space-y-xl-48">
                       <h1 class="marquee-title text-white">We are a new concept of digital studio, we create disruptive</h1>
                       <button type="button" class="btn btn-primary btn-primary-cta">
                         <span>Start with B System</span>
@@ -1590,7 +1594,7 @@
                       <img class="marquee-bg" src="../../../assets/img/marquee/marquee-textimage-02.jpg" alt="Marquee text image 02">
                     </picture>
                     <div class="overlay"></div>
-                    <div class="marquee-content space-y-24 space-y-md-32 space-y-xl-64">
+                    <div class="marquee-content space-y-24 space-y-md-32 space-y-xl-48">
                       <h1 class="marquee-title text-white">We are a new concept of digital studio, we create disruptive</h1>
                       <button type="button" class="btn btn-primary btn-primary-cta">
                         <span>Start with B System</span>
@@ -1606,7 +1610,7 @@
                       <img class="marquee-bg" src="../../../assets/img/marquee/marquee-textimage-03.jpg" alt="Marquee text image 03">
                     </picture>
                     <div class="overlay"></div>
-                    <div class="marquee-content space-y-24 space-y-md-32 space-y-xl-64">
+                    <div class="marquee-content space-y-24 space-y-md-32 space-y-xl-48">
                       <h1 class="marquee-title text-white">We are a new concept of digital studio, we create disruptive</h1>
                       <button type="button" class="btn btn-primary btn-primary-cta">
                         <span>Start with B System</span>
@@ -1622,18 +1626,18 @@
               <div class="swiper-pagination "></div>
             </div>
             <div class="marquee-content-bottom">
-              <button class="btn-interactive btn-interactive-rounded  btn-interactive-tight ">
-                <i class="icon-links"></i>
+              <button class="btn-interactive btn-interactive-effect btn-interactive-rounded btn-interactive-darkened btn-interactive-tight  btn-interactive-effect-down">
+                <i class="icon-scroll"></i>
               </button>
             </div>
             <div class="marquee-slider-control">
               <div class="button-prev">
-                <button class="btn-interactive btn-interactive-rounded   ">
+                <button class="btn-interactive btn-interactive-effect btn-interactive-rounded btn-interactive-darkened   btn-interactive-effect-left">
                   <i class="icon-back"></i>
                 </button>
               </div>
               <div class="button-next">
-                <button class="btn-interactive btn-interactive-rounded   ">
+                <button class="btn-interactive btn-interactive-effect btn-interactive-rounded btn-interactive-darkened   btn-interactive-effect-right">
                   <i class="icon-next"></i>
                 </button>
               </div>
@@ -1668,6 +1672,12 @@
 
     <!-- Swiper bundle CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Highlight -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
 
     <!--B_system JS-->
     <script src="../../../assets/js/bsystem.min.js"></script>

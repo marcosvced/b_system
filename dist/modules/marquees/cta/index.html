@@ -10,6 +10,10 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
+    <!-- Highlight -->
+    <link rel="stylesheet" href="../../..//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/intellij-light.min.css">
+    <link rel='stylesheet' href='../../../assets/css/style.min.css' />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../../assets/css/style.min.css' />
 
@@ -20,7 +24,7 @@
   <body>
 
     <!--MAIN HEADER-->
-    <header class="header header-fixed   " data-b-system-header-position="sticky" data-b-system-header="transparent">
+    <header class="header    " data-b-system-header="transparent">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-b-system-wrapper="buttons">
           <div class="d-flex d-xl-none order-0">
@@ -1640,17 +1644,17 @@
               <div class="swiper-pagination pagination-dark"></div>
             </div>
             <div class="marquee-content-bottom">
-              <button class="btn-interactive btn-interactive-rounded  btn-interactive-tight ">
-                <i class="icon-links"></i>
+              <button class="btn-interactive btn-interactive-effect btn-interactive-rounded  btn-interactive-tight  btn-interactive-effect-down">
+                <i class="icon-scroll"></i>
               </button>
             </div>
             <div class="button-prev">
-              <button class="btn-interactive btn-interactive-rounded   ">
+              <button class="btn-interactive btn-interactive-effect btn-interactive-rounded    btn-interactive-effect-left">
                 <i class="icon-back"></i>
               </button>
             </div>
             <div class="button-next">
-              <button class="btn-interactive btn-interactive-rounded   ">
+              <button class="btn-interactive btn-interactive-effect btn-interactive-rounded    btn-interactive-effect-right">
                 <i class="icon-next"></i>
               </button>
             </div>
@@ -1684,6 +1688,12 @@
 
     <!-- Swiper bundle CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Highlight -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
 
     <!--B_system JS-->
     <script src="../../../assets/js/bsystem.min.js"></script>
