@@ -10,11 +10,18 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
+    <!-- Highlight -->
+    <link rel="stylesheet" href="../..//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/intellij-light.min.css">
+    <link rel='stylesheet' href='../../assets/css/style.min.css' />
+
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
 
     <!-- Demo styles -->
     <style lang="css">
+      body {
+        background-color: var(--c-grayscale__100);
+      }
     </style>
   </head>
   <body>
@@ -1561,31 +1568,33 @@
 
     <!--MAIN CONTENT-->
     <main class="main">
-      <div class="login module  " id="">
-        <div class="login-head space-y-md-40 space-bottom-24">
-          <h3 class="login-title text-center d-none d-md-block">Access B_system</h3>
-          <p class="login-text body-light-gray-text text-center">Hello! Enter your username and password to access the private area:</p>
-        </div>
-        <form class="login-form d-flex flex-column align-center">
-          <div class="form-floating">
-            <input id="login-user" type="text" class="form-control " placeholder="User" aria-invalid="false" aria-required="true">
-            <label for="login-user" class="form-placeholder">User</label>
+      <section class="section p-0 m-0" data-b-system-theme="light">
+        <div class="login module  " id="">
+          <div class="login-head space-y-md-40 space-bottom-24">
+            <h3 class="login-title text-center d-none d-md-block">Access B_system</h3>
+            <p class="login-text body-light-gray-text text-center">Hello! Enter your username and password to access the private area:</p>
           </div>
-          <div class="form-floating">
-            <input id="login-password" type="password" class="form-control " placeholder="Password" aria-invalid="false" aria-required="true">
-            <button type="button" class="btn btn-only-icon">
-              <i class="icon-eye"></i>
+          <form class="login-form d-flex flex-column align-center">
+            <div class="form-floating">
+              <input id="login-user" type="text" class="form-control " placeholder="User" aria-invalid="false" aria-required="true">
+              <label for="login-user" class="form-placeholder">User</label>
+            </div>
+            <div class="form-floating">
+              <input id="login-password" type="password" class="form-control " placeholder="Password" aria-invalid="false" aria-required="true">
+              <button type="button" class="btn btn-only-icon">
+                <i class="icon-eye"></i>
+              </button>
+              <label for="login-password" class="form-placeholder">Password</label>
+            </div>
+            <button type="button" class="btn btn-primary">
+              Enter
             </button>
-            <label for="login-password" class="form-placeholder">Password</label>
-          </div>
-          <button type="button" class="btn btn-primary">
-            Enter
-          </button>
-          <a href='#' class="action-link ">
-            <span>Forgot your password?</span>
-          </a>
-        </form>
-      </div>
+            <span class="action-link ">
+        <span>Forgot your password?</span>
+            </span>
+          </form>
+        </div>
+      </section>
     </main>
 
     <!--END: MAIN CONTENT-->
@@ -1613,6 +1622,12 @@
 
     <!-- Swiper bundle CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Highlight -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
 
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
