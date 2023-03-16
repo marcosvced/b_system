@@ -8,12 +8,18 @@
     z-index: 0;
 
     .icon-description-background {
+        overflow: hidden;
         top: 0;
         left: 0;
         z-index: -1;
 
         [class^=icon-] {
-            font-size: 600px;
+            display: none;
+
+            @include mixin.screen(xl) {
+                font-size: helper.rem(600);
+                display: inline;
+            }
         }
     }
 
