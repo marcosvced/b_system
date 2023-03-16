@@ -1,6 +1,7 @@
 @use "../helpers/size";
 
 $space: (
+    0: size.rem(0),
     4: size.rem(4),
     8: size.rem(8),
     16: size.rem(16),

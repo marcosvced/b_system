@@ -156,6 +156,36 @@
     letter-spacing: size.rem(.3);
 }
 
+// X Text handwrite
+%x1-text-handwrite {
+    font: {
+        size: size.rem(44);
+        family: font.family(handwrite);
+        weight: font.weight(medium);
+    }
+    line-height: 1.27;
+    letter-spacing: size.rem(.4);
+}
+
+%x2-text-handwrite {
+    font: {
+        size: size.rem(32);
+        family: font.family(handwrite);
+        weight: font.weight(medium);
+    }
+    line-height: 1.25;
+    letter-spacing: size.rem(.4);
+}
+
+%x3-text-handwrite {
+    font: {
+        size: size.rem(22);
+        family: font.family(handwrite);
+        weight: font.weight(medium);
+    }
+    line-height: 1.45;
+    letter-spacing: size.rem(.3);
+}
 
 // Text
 

@@ -1,5 +1,6 @@
 @use '../variables/colors' as *;
-@use '../placeholders';
+@use '../placeholders/fonts' as *;
+@use '../placeholders/styles' as *;
 @use '../helpers/font';
 @use '../helpers/colors';
 @use "../helpers/size";
@@ -67,6 +68,20 @@
     @extend %x5-text-serif;
 }
 
+
+// X text handwrite
+
+.x1-text-handwrite {
+    @extend %x1-text-handwrite;
+}
+
+.x2-text-handwrite {
+    @extend %x2-text-handwrite;
+}
+
+.x3-text-handwrite {
+    @extend %x3-text-handwrite;
+}
 
 // Text
 
