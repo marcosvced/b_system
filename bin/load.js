@@ -1,17 +1,17 @@
 const loadAllPages = (routes) => {
-    console.log(routes)
-    routes.forEach((route) => {
-        console.log(route)
-        window.open(`http://${window.location.host}${route}`, '_blank')
-    })
-}
+  routes.forEach((route) => {
+    window.open(`http://${window.location.host}${route}`, '_blank');
+  });
+};
 
+// eslint-disable-next-line no-unused-vars
 function loadPages() {
-    let quickStart = window.quickStart
-
-    let demos = window.demos
-    loadAllPages([
-        ...quickStart,
-        ...demos
-    ])
+  const {
+    demos,
+    quickStart,
+  } = window;
+  loadAllPages([
+    ...quickStart,
+    ...demos,
+  ]);
 }

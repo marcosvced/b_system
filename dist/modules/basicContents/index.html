@@ -1,1583 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <title>B_system</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--Bootstrap + reset styles-->
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
-    <!-- Highlight -->
-    <link rel="stylesheet" href="../..//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/intellij-light.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css"> <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> <!-- Highlight -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/intellij-light.min.css">
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
-
     <!--B_system styles-->
-    <link rel='stylesheet' href='../../assets/css/style.min.css' />
-
-    <!-- Demo styles -->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!-- Demo styles -->
     <style lang="css">
       body {
         background-color: var(--c-grayscale__100);
       }
     </style>
   </head>
-  <body>
 
+  <body>
     <!--MAIN HEADER-->
-    <header class="header header-fixed header-light  " data-b-system-header-position="sticky" data-b-system-header="light">
+    <header class="header header-fixed header-light " data-b-system-header-position="sticky" data-b-system-header="light">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-b-system-wrapper="buttons">
-          <div class="d-flex d-xl-none order-0">
-            <button type="button" class="btn btn-only-icon">
-              <i class="icon-cart" style="--size: NaNrem"></i>
-            </button>
-          </div>
-          <div class="d-none d-xl-block order-1">
-            <button type="button" class="btn btn-primary    btn-fit">
-              Purchase B_system
-            </button>
-          </div>
-        </div>
-        <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min ">
-          <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" />
-        </a>
+          <div class="d-flex d-xl-none order-0"> <button type="button" class="btn btn-only-icon"> <i class="icon-cart"></i> </button> </div>
+          <div class="d-none d-xl-block order-1"> <button type="button" class="btn btn-primary btn-fit"> Purchase B_system </button> </div>
+        </div> <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min "> <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" /> </a>
         <div class="nav-wrapper order-2 order-xl-1 col">
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
             <nav class="navbar navbar-expand-lg ">
               <ul class="navbar-nav">
-                <li class="nav-item  dropdown dropdown-center  ">
-                  <a class="nav-link " id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Demos
-                  </a>
+                <li class="nav-item dropdown dropdown-center "> <a class="nav-link " id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Demos </a>
                   <div class="dropdown-menu dropdown-grid repeat-4" aria-labelledby="demos_dropdown_menu">
-                    <ul class="dropdown-submenu">
-                      <span class="dropdown-header"><strong>Light mode demos</strong></span>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup">
-                          Startup
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/home-cta">
-                          Design Studio
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/branding">
-                          Branding Agency
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/digital-product">
-                          Digital Product
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-studio">
-                          Creative Studio
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/freelance">
-                          Freelance
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/development-studio">
-                          Development Studio
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/corporative">
-                          Corporate
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Creative Agency
-                        </a>
-                      </li>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Light mode demos</strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup"> Startup </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/home-cta"> Design Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/branding"> Branding Agency </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/digital-product"> Digital Product </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-studio"> Creative Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/freelance"> Freelance </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/development-studio"> Development Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/corporative"> Corporate </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Creative Agency </a> </li>
                     </ul>
-                    <ul class="dropdown-submenu">
-                      <span class="dropdown-header"><strong></strong></span>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Furniture
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Modern Shop
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Classic Shop
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Legal
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Fitness
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Architecture
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Marketplace
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Restaurant
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Portfolio
-                        </a>
-                      </li>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong></strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Furniture </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Modern Shop </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Classic Shop </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Legal </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Fitness </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Architecture </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Marketplace </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Restaurant </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Portfolio </a> </li>
                     </ul>
-                    <ul class="dropdown-submenu">
-                      <span class="dropdown-header"><strong>Dark mode demos</strong></span>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup?theme=dark">
-                          Startup
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/home-cta?theme=dark">
-                          Design Studio
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/branding?theme=dark">
-                          Branding Agency
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Digital Product
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Creative Studio
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Freelance
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Development Studio
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="undefined?theme=dark">
-                          Corporate
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Creative Agency
-                        </a>
-                      </li>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Dark mode demos</strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup?theme=dark"> Startup </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/home-cta?theme=dark"> Design Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/branding?theme=dark"> Branding Agency </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Digital Product </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Creative Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Freelance </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Development Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="undefined?theme=dark"> Corporate </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Creative Agency </a> </li>
                     </ul>
-                    <ul class="dropdown-submenu">
-                      <span class="dropdown-header"><strong></strong></span>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Furniture
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Modern Shop
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Classic Shop
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Legal
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Fitness
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Architecture
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Marketplace
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Restaurant
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="#">
-                          Portfolio
-                        </a>
-                      </li>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong></strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Furniture </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Modern Shop </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Classic Shop </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Legal </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Fitness </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Architecture </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Marketplace </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Restaurant </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Portfolio </a> </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item  dropdown dropdown-center  ">
-                  <a class="nav-link " id="pages_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Pages
-                  </a>
+                <li class="nav-item dropdown dropdown-center "> <a class="nav-link " id="pages_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pages </a>
                   <ul class="dropdown-menu dropdown-multilevel " aria-labelledby="pages_dropdown_menu">
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>About</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>About</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/about_us">
-                            About Us
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/about_me">
-                            About Me
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/about_b_system">
-                            About B_System
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/how_we_work">
-                            How we work
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/about_us"> About Us </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/about_me"> About Me </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/about_b_system"> About B_System </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/how_we_work"> How we work </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Services</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Services</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/our_services">
-                            Our services
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/what_we_offer">
-                            What we offer
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/our_services"> Our services </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/what_we_offer"> What we offer </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Our work</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Our work</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_classic_grid">
-                            Portfolio classic grid
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_classic_wide">
-                            Portfolio classic wide
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_gallery_wide">
-                            Portfolio gallery wide
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_masonry">
-                            Portfolio masonry
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_masonry_path">
-                            Portfolio masonry path
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/product_pattern">
-                            Portfolio pattern
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/services_portfolio">
-                            Services portfolio
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_classic_grid"> Portfolio classic grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_classic_wide"> Portfolio classic wide </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_gallery_wide"> Portfolio gallery wide </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_masonry"> Portfolio masonry </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/portfolio_masonry_path"> Portfolio masonry path </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/product_pattern"> Portfolio pattern </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/services_portfolio"> Services portfolio </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Our team</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Our team</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/team_classic">
-                            Team classic
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/team_modern">
-                            Team modern
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/team_classic"> Team classic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/team_modern"> Team modern </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Product</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Product</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/product_classic">
-                            Product classic
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="pages/product_modern">
-                            Product modern
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/product_classic"> Product classic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="pages/product_modern"> Product modern </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Customer</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Customer</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href=" pages/customer_support">
-                            Customer Support
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href=" pages/testimonials">
-                            Testimonials
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href=" pages/customer_support"> Customer Support </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href=" pages/testimonials"> Testimonials </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Contact</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Contact</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href=" pages/contact_classic">
-                            Contact classic
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href=" pages/product_packs">
-                            Product packs
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href=" pages/contact_classic"> Contact classic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href=" pages/product_packs"> Product packs </a> </li>
                       </ul>
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item  dropdown dropdown-center  ">
-                  <a class="nav-link active" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Modules
-                  </a>
+                <li class="nav-item dropdown dropdown-center "> <a class="nav-link active" id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Modules </a>
                   <ul class="dropdown-menu dropdown-multilevel " aria-labelledby="modules_dropdown_menu">
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Menus</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Menus</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/headers">
-                            Header menus
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/categories-menu">
-                            Categories menu
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/contactBar">
-                            Contact menu
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/headers"> Header menus </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/categories-menu"> Categories menu </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/contactBar"> Contact menu </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Headers</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Headers</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/basic">
-                            Marquee basic
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/standar">
-                            Marquee standard
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/extended">
-                            Marquee extended
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/illustration">
-                            Marquee illustration
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/image">
-                            Marquee image
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/cta">
-                            Marquee text
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/textImage">
-                            Marquee text + image
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/basic"> Marquee basic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/standar"> Marquee standard </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/extended"> Marquee extended </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/illustration"> Marquee illustration </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/image"> Marquee image </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/cta"> Marquee text </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/textImage"> Marquee text + image </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Content</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Content</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/basicContents">
-                            Basic Content
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/businessCases">
-                            Business Cases
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconsDescription">
-                            Icon description
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconServices">
-                            Services
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconSocial">
-                            Social module
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/cta">
-                            Call to action
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/faqs">
-                            FAQs
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/statistics">
-                            Statistics
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/featuredContents">
-                            Featured content
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/brands">
-                            Brands
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/basicContents"> Basic Content </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/businessCases"> Business Cases </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconsDescription"> Icon description </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconServices"> Services </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconSocial"> Social module </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/cta"> Call to action </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/faqs"> FAQs </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/statistics"> Statistics </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/featuredContents"> Featured content </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/brands"> Brands </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Grids</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Grids</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/basicGrids">
-                            Basic grid
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/teamGrids">
-                            Team grid
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/serviceGrids">
-                            Service grid
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/portfolios/basic">
-                            Portfolio grid
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/portfolio/decomposed">
-                            Portfolio deconstructed
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/basicGrids"> Basic grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/teamGrids"> Team grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/serviceGrids"> Service grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/portfolios/basic"> Portfolio grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/portfolio/decomposed"> Portfolio deconstructed </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Cards</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Cards</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/featureCards">
-                            Featured
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/services">
-                            Services
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/productCards">
-                            Product
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/testimonials">
-                            Testimonials
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/prices">
-                            Prices
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/digitalProducts">
-                            Digital Products
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/featureCards"> Featured </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/services"> Services </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/productCards"> Product </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/testimonials"> Testimonials </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/prices"> Prices </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/digitalProducts"> Digital Products </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Forms</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Forms</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/contacts">
-                            Contact
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/login">
-                            Login
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/searchers">
-                            Searchers
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/contacts"> Contact </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/login"> Login </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/searchers"> Searchers </a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown-item-multilevel">
-                      <span class="dropdown-item">
-                <span>Footers</span>
-                      <span class="chevron">
-<i class="icon-next" style="--size: NaNrem"></i>
-                </span>
-                      </span>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Footers</span> <span class="chevron"> <i class="icon-next" ></i> </span> </span>
                       <ul class="multilevel dropdown-menu">
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/basic">
-                            Basic
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/standard">
-                            Standard
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32">
-                            Newsletter
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/corporate">
-                            Corporate
-                          </a>
-                        </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/basic"> Basic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/standard"> Standard </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32"> Newsletter </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/corporate"> Corporate </a> </li>
                       </ul>
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item  dropdown dropdown-center  ">
-                  <a class="nav-link " id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Components
-                  </a>
+                <li class="nav-item dropdown dropdown-center "> <a class="nav-link " id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Components </a>
                   <div class="dropdown-menu dropdown-grid repeat-2" aria-labelledby="components_dropdown_menu">
-                    <ul class="dropdown-submenu">
-                      <span class="dropdown-header"><strong>Components</strong></span>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/buttons">
-                          Buttons
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/forms">
-                          Forms
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/interaction">
-                          Interaction
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/cards">
-                          Cards
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/productCards">
-                          Product Cards
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/links">
-                          Links
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/gridCells">
-                          Grid cells
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/iconsDescription">
-                          Icon + description
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/accordions">
-                          Accordions
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/alerts">
-                          Alerts
-                        </a>
-                      </li>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Components</strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/buttons"> Buttons </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/forms"> Forms </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/interaction"> Interaction </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/cards"> Cards </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/productCards"> Product Cards </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/links"> Links </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/gridCells"> Grid cells </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/iconsDescription"> Icon + description </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/accordions"> Accordions </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/alerts"> Alerts </a> </li>
                     </ul>
-                    <ul class="dropdown-submenu">
-                      <span class="dropdown-header"><strong>Brand elements</strong></span>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/illustrations">
-                          Illustrations
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/scenes">
-                          Illustrations Scenes
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/microillustrations">
-                          Microillustrations
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/icons">
-                          Icons
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/texts">
-                          Texts
-                        </a>
-                      </li>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Brand elements</strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/illustrations"> Illustrations </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/scenes"> Illustrations Scenes </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/microillustrations"> Microillustrations </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/icons"> Icons </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/texts"> Texts </a> </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item  ">
-                  <a class="nav-link ">
-                    Transitions
-                  </a>
-                </li>
+                <li class="nav-item "> <a class="nav-link "> Transitions </a> </li>
               </ul>
             </nav>
           </div>
-          <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16">
-            <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-              <i class="icon-menu" style="--size: NaNrem"></i>
-            </button>
-          </div>
+          <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16"> <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> <i class="icon-menu"></i> </button> </div>
         </div>
       </div>
     </header>
-
     <!--END: MAIN HEADER-->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-body">
         <ul class="navbar-nav" id="accordion-nav">
-          <li class="nav-item accordion-item">
-            <span id="heading-demos"
-                          data-bs-toggle="collapse"
-                          aria-controls="demos"
-                          data-bs-target="#demos"
-                          class="collapsed">
-                            Demos
-                        <span class="chevron">
-<i class="icon-open" ></i>
-                        </span>
-            <span class="chevron-active">
-<i class="icon-close" ></i>
-                        </span>
-            </span>
+          <li class="nav-item accordion-item"> <span id="heading-demos" data-bs-toggle="collapse" aria-controls="demos" data-bs-target="#demos" class="collapsed"> Demos <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
             <div id="demos" class="accordion-collapse collapse" aria-labelledby="heading-demos" data-bs-parent="#accordion-nav">
               <div class="accordion-body">
                 <ul class="navbar-nav" id="accordion-demos">
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_light_mode_demos"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_light_mode_demos"
-                                                          data-bs-target="#key_light_mode_demos"
-                                                          class="collapsed">
-                                                          Light mode demos                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_light_mode_demos" data-bs-toggle="collapse" aria-controls="key_light_mode_demos" data-bs-target="#key_light_mode_demos" class="collapsed"> Light mode demos <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_light_mode_demos" class="accordion-collapse collapse" aria-labelledby="heading-key_light_mode_demos" data-bs-parent="#accordion-demos">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../demos/startup">
-                          Startup
-                        </a>
-                        <a class="nav-link" href="../../demos/home-cta">
-                          Design Studio
-                        </a>
-                        <a class="nav-link" href="../../demos/branding">
-                          Branding Agency
-                        </a>
-                        <a class="nav-link" href="../../demos/digital-product">
-                          Digital Product
-                        </a>
-                        <a class="nav-link" href="../../demos/creative-studio">
-                          Creative Studio
-                        </a>
-                        <a class="nav-link" href="../../demos/freelance">
-                          Freelance
-                        </a>
-                        <a class="nav-link" href="../../demos/development-studio">
-                          Development Studio
-                        </a>
-                        <a class="nav-link" href="../../demos/corporative">
-                          Corporate
-                        </a>
-                        <a class="nav-link" href="#">
-                          Creative Agency
-                        </a>
-                        <a class="nav-link" href="#">
-                          Furniture
-                        </a>
-                        <a class="nav-link" href="#">
-                          Modern Shop
-                        </a>
-                        <a class="nav-link" href="#">
-                          Classic Shop
-                        </a>
-                        <a class="nav-link" href="#">
-                          Legal
-                        </a>
-                        <a class="nav-link" href="#">
-                          Fitness
-                        </a>
-                        <a class="nav-link" href="#">
-                          Architecture
-                        </a>
-                        <a class="nav-link" href="#">
-                          Marketplace
-                        </a>
-                        <a class="nav-link" href="#">
-                          Restaurant
-                        </a>
-                        <a class="nav-link" href="#">
-                          Portfolio
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../demos/startup"> Startup </a> <a class="nav-link" href="../../demos/home-cta"> Design Studio </a> <a class="nav-link" href="../../demos/branding"> Branding Agency </a> <a class="nav-link" href="../../demos/digital-product"> Digital Product </a> <a class="nav-link" href="../../demos/creative-studio"> Creative Studio </a> <a class="nav-link" href="../../demos/freelance"> Freelance </a> <a class="nav-link" href="../../demos/development-studio"> Development Studio </a> <a class="nav-link" href="../../demos/corporative"> Corporate </a> <a class="nav-link" href="#"> Creative Agency </a> <a class="nav-link" href="#"> Furniture </a> <a class="nav-link" href="#"> Modern Shop </a> <a class="nav-link" href="#"> Classic Shop </a> <a class="nav-link" href="#"> Legal </a> <a class="nav-link" href="#"> Fitness </a> <a class="nav-link" href="#"> Architecture </a> <a class="nav-link" href="#"> Marketplace </a> <a class="nav-link" href="#"> Restaurant </a> <a class="nav-link" href="#"> Portfolio </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_dark_mode_demos"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_dark_mode_demos"
-                                                          data-bs-target="#key_dark_mode_demos"
-                                                          class="collapsed">
-                                                          Dark mode demos                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_dark_mode_demos" data-bs-toggle="collapse" aria-controls="key_dark_mode_demos" data-bs-target="#key_dark_mode_demos" class="collapsed"> Dark mode demos <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_dark_mode_demos" class="accordion-collapse collapse" aria-labelledby="heading-key_dark_mode_demos" data-bs-parent="#accordion-demos">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../demos/startup?theme=dark">
-                          Startup
-                        </a>
-                        <a class="nav-link" href="../../demos/home-cta?theme=dark">
-                          Design Studio
-                        </a>
-                        <a class="nav-link" href="../../demos/branding?theme=dark">
-                          Branding Agency
-                        </a>
-                        <a class="nav-link" href="#">
-                          Digital Product
-                        </a>
-                        <a class="nav-link" href="#">
-                          Creative Studio
-                        </a>
-                        <a class="nav-link" href="#">
-                          Freelance
-                        </a>
-                        <a class="nav-link" href="#">
-                          Development Studio
-                        </a>
-                        <a class="nav-link" href="undefined?theme=dark">
-                          Corporate
-                        </a>
-                        <a class="nav-link" href="#">
-                          Creative Agency
-                        </a>
-                        <a class="nav-link" href="#">
-                          Furniture
-                        </a>
-                        <a class="nav-link" href="#">
-                          Modern Shop
-                        </a>
-                        <a class="nav-link" href="#">
-                          Classic Shop
-                        </a>
-                        <a class="nav-link" href="#">
-                          Legal
-                        </a>
-                        <a class="nav-link" href="#">
-                          Fitness
-                        </a>
-                        <a class="nav-link" href="#">
-                          Architecture
-                        </a>
-                        <a class="nav-link" href="#">
-                          Marketplace
-                        </a>
-                        <a class="nav-link" href="#">
-                          Restaurant
-                        </a>
-                        <a class="nav-link" href="#">
-                          Portfolio
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../demos/startup?theme=dark"> Startup </a> <a class="nav-link" href="../../demos/home-cta?theme=dark"> Design Studio </a> <a class="nav-link" href="../../demos/branding?theme=dark"> Branding Agency </a> <a class="nav-link" href="#"> Digital Product </a> <a class="nav-link" href="#"> Creative Studio </a> <a class="nav-link" href="#"> Freelance </a> <a class="nav-link" href="#"> Development Studio </a> <a class="nav-link" href="undefined?theme=dark"> Corporate </a> <a class="nav-link" href="#"> Creative Agency </a> <a class="nav-link" href="#"> Furniture </a> <a class="nav-link" href="#"> Modern Shop </a> <a class="nav-link" href="#"> Classic Shop </a> <a class="nav-link" href="#"> Legal </a> <a class="nav-link" href="#"> Fitness </a> <a class="nav-link" href="#"> Architecture </a> <a class="nav-link" href="#"> Marketplace </a> <a class="nav-link" href="#"> Restaurant </a> <a class="nav-link" href="#"> Portfolio </a> </div>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item accordion-item">
-            <span id="heading-pages"
-                          data-bs-toggle="collapse"
-                          aria-controls="pages"
-                          data-bs-target="#pages"
-                          class="collapsed">
-                            Pages
-                        <span class="chevron">
-<i class="icon-open" ></i>
-                        </span>
-            <span class="chevron-active">
-<i class="icon-close" ></i>
-                        </span>
-            </span>
+          <li class="nav-item accordion-item"> <span id="heading-pages" data-bs-toggle="collapse" aria-controls="pages" data-bs-target="#pages" class="collapsed"> Pages <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
             <div id="pages" class="accordion-collapse collapse" aria-labelledby="heading-pages" data-bs-parent="#accordion-nav">
               <div class="accordion-body">
                 <ul class="navbar-nav" id="accordion-pages">
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_about"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_about"
-                                                          data-bs-target="#key_about"
-                                                          class="collapsed">
-                                                          About                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_about" data-bs-toggle="collapse" aria-controls="key_about" data-bs-target="#key_about" class="collapsed"> About <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_about" class="accordion-collapse collapse" aria-labelledby="heading-key_about" data-bs-parent="#accordion-pages">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="pages/about_us">
-                          About Us
-                        </a>
-                        <a class="nav-link" href="pages/about_me">
-                          About Me
-                        </a>
-                        <a class="nav-link" href="pages/about_b_system">
-                          About B_System
-                        </a>
-                        <a class="nav-link" href="pages/how_we_work">
-                          How we work
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="pages/about_us"> About Us </a> <a class="nav-link" href="pages/about_me"> About Me </a> <a class="nav-link" href="pages/about_b_system"> About B_System </a> <a class="nav-link" href="pages/how_we_work"> How we work </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_services"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_services"
-                                                          data-bs-target="#key_services"
-                                                          class="collapsed">
-                                                          Services                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_services" data-bs-toggle="collapse" aria-controls="key_services" data-bs-target="#key_services" class="collapsed"> Services <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_services" class="accordion-collapse collapse" aria-labelledby="heading-key_services" data-bs-parent="#accordion-pages">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="pages/our_services">
-                          Our services
-                        </a>
-                        <a class="nav-link" href="pages/what_we_offer">
-                          What we offer
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="pages/our_services"> Our services </a> <a class="nav-link" href="pages/what_we_offer"> What we offer </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_our_work"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_our_work"
-                                                          data-bs-target="#key_our_work"
-                                                          class="collapsed">
-                                                          Our work                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_our_work" data-bs-toggle="collapse" aria-controls="key_our_work" data-bs-target="#key_our_work" class="collapsed"> Our work <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_our_work" class="accordion-collapse collapse" aria-labelledby="heading-key_our_work" data-bs-parent="#accordion-pages">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="pages/portfolio_classic_grid">
-                          Portfolio classic grid
-                        </a>
-                        <a class="nav-link" href="pages/portfolio_classic_wide">
-                          Portfolio classic wide
-                        </a>
-                        <a class="nav-link" href="pages/portfolio_gallery_wide">
-                          Portfolio gallery wide
-                        </a>
-                        <a class="nav-link" href="pages/portfolio_masonry">
-                          Portfolio masonry
-                        </a>
-                        <a class="nav-link" href="pages/portfolio_masonry_path">
-                          Portfolio masonry path
-                        </a>
-                        <a class="nav-link" href="pages/product_pattern">
-                          Portfolio pattern
-                        </a>
-                        <a class="nav-link" href="pages/services_portfolio">
-                          Services portfolio
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="pages/portfolio_classic_grid"> Portfolio classic grid </a> <a class="nav-link" href="pages/portfolio_classic_wide"> Portfolio classic wide </a> <a class="nav-link" href="pages/portfolio_gallery_wide"> Portfolio gallery wide </a> <a class="nav-link" href="pages/portfolio_masonry"> Portfolio masonry </a> <a class="nav-link" href="pages/portfolio_masonry_path"> Portfolio masonry path </a> <a class="nav-link" href="pages/product_pattern"> Portfolio pattern </a> <a class="nav-link" href="pages/services_portfolio"> Services portfolio </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_our_team"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_our_team"
-                                                          data-bs-target="#key_our_team"
-                                                          class="collapsed">
-                                                          Our team                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_our_team" data-bs-toggle="collapse" aria-controls="key_our_team" data-bs-target="#key_our_team" class="collapsed"> Our team <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_our_team" class="accordion-collapse collapse" aria-labelledby="heading-key_our_team" data-bs-parent="#accordion-pages">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="pages/team_classic">
-                          Team classic
-                        </a>
-                        <a class="nav-link" href="pages/team_modern">
-                          Team modern
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="pages/team_classic"> Team classic </a> <a class="nav-link" href="pages/team_modern"> Team modern </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_product"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_product"
-                                                          data-bs-target="#key_product"
-                                                          class="collapsed">
-                                                          Product                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_product" data-bs-toggle="collapse" aria-controls="key_product" data-bs-target="#key_product" class="collapsed"> Product <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_product" class="accordion-collapse collapse" aria-labelledby="heading-key_product" data-bs-parent="#accordion-pages">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="pages/product_classic">
-                          Product classic
-                        </a>
-                        <a class="nav-link" href="pages/product_modern">
-                          Product modern
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="pages/product_classic"> Product classic </a> <a class="nav-link" href="pages/product_modern"> Product modern </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_customer"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_customer"
-                                                          data-bs-target="#key_customer"
-                                                          class="collapsed">
-                                                          Customer                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_customer" data-bs-toggle="collapse" aria-controls="key_customer" data-bs-target="#key_customer" class="collapsed"> Customer <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_customer" class="accordion-collapse collapse" aria-labelledby="heading-key_customer" data-bs-parent="#accordion-pages">
-                      <div class="accordion-body">
-                        <a class="nav-link" href=" pages/customer_support">
-                          Customer Support
-                        </a>
-                        <a class="nav-link" href=" pages/testimonials">
-                          Testimonials
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href=" pages/customer_support"> Customer Support </a> <a class="nav-link" href=" pages/testimonials"> Testimonials </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_contact"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_contact"
-                                                          data-bs-target="#key_contact"
-                                                          class="collapsed">
-                                                          Contact                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_contact" data-bs-toggle="collapse" aria-controls="key_contact" data-bs-target="#key_contact" class="collapsed"> Contact <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_contact" class="accordion-collapse collapse" aria-labelledby="heading-key_contact" data-bs-parent="#accordion-pages">
-                      <div class="accordion-body">
-                        <a class="nav-link" href=" pages/contact_classic">
-                          Contact classic
-                        </a>
-                        <a class="nav-link" href=" pages/product_packs">
-                          Product packs
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href=" pages/contact_classic"> Contact classic </a> <a class="nav-link" href=" pages/product_packs"> Product packs </a> </div>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item accordion-item">
-            <span id="heading-modules"
-                          data-bs-toggle="collapse"
-                          aria-controls="modules"
-                          data-bs-target="#modules"
-                          class="collapsed">
-                            Modules
-                        <span class="chevron">
-<i class="icon-open" ></i>
-                        </span>
-            <span class="chevron-active">
-<i class="icon-close" ></i>
-                        </span>
-            </span>
+          <li class="nav-item accordion-item"> <span id="heading-modules" data-bs-toggle="collapse" aria-controls="modules" data-bs-target="#modules" class="collapsed"> Modules <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
             <div id="modules" class="accordion-collapse collapse" aria-labelledby="heading-modules" data-bs-parent="#accordion-nav">
               <div class="accordion-body">
                 <ul class="navbar-nav" id="accordion-modules">
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_menus"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_menus"
-                                                          data-bs-target="#key_menus"
-                                                          class="collapsed">
-                                                          Menus                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_menus" data-bs-toggle="collapse" aria-controls="key_menus" data-bs-target="#key_menus" class="collapsed"> Menus <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_menus" class="accordion-collapse collapse" aria-labelledby="heading-key_menus" data-bs-parent="#accordion-modules">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../modules/headers">
-                          Header menus
-                        </a>
-                        <a class="nav-link" href="../../modules/categories-menu">
-                          Categories menu
-                        </a>
-                        <a class="nav-link" href="../../modules/contactBar">
-                          Contact menu
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../modules/headers"> Header menus </a> <a class="nav-link" href="../../modules/categories-menu"> Categories menu </a> <a class="nav-link" href="../../modules/contactBar"> Contact menu </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_headers"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_headers"
-                                                          data-bs-target="#key_headers"
-                                                          class="collapsed">
-                                                          Headers                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_headers" data-bs-toggle="collapse" aria-controls="key_headers" data-bs-target="#key_headers" class="collapsed"> Headers <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_headers" class="accordion-collapse collapse" aria-labelledby="heading-key_headers" data-bs-parent="#accordion-modules">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../modules/marquees/basic">
-                          Marquee basic
-                        </a>
-                        <a class="nav-link" href="../../modules/marquees/standar">
-                          Marquee standard
-                        </a>
-                        <a class="nav-link" href="../../modules/marquees/extended">
-                          Marquee extended
-                        </a>
-                        <a class="nav-link" href="../../modules/marquees/illustration">
-                          Marquee illustration
-                        </a>
-                        <a class="nav-link" href="../../modules/marquees/image">
-                          Marquee image
-                        </a>
-                        <a class="nav-link" href="../../modules/marquees/cta">
-                          Marquee text
-                        </a>
-                        <a class="nav-link" href="../../modules/marquees/textImage">
-                          Marquee text + image
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../modules/marquees/basic"> Marquee basic </a> <a class="nav-link" href="../../modules/marquees/standar"> Marquee standard </a> <a class="nav-link" href="../../modules/marquees/extended"> Marquee extended </a> <a class="nav-link" href="../../modules/marquees/illustration"> Marquee illustration </a> <a class="nav-link" href="../../modules/marquees/image"> Marquee image </a> <a class="nav-link" href="../../modules/marquees/cta"> Marquee text </a> <a class="nav-link" href="../../modules/marquees/textImage"> Marquee text + image </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_content"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_content"
-                                                          data-bs-target="#key_content"
-                                                          class="collapsed">
-                                                          Content                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_content" data-bs-toggle="collapse" aria-controls="key_content" data-bs-target="#key_content" class="collapsed"> Content <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_content" class="accordion-collapse collapse" aria-labelledby="heading-key_content" data-bs-parent="#accordion-modules">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../modules/basicContents">
-                          Basic Content
-                        </a>
-                        <a class="nav-link" href="../../modules/businessCases">
-                          Business Cases
-                        </a>
-                        <a class="nav-link" href="../../modules/iconsDescription">
-                          Icon description
-                        </a>
-                        <a class="nav-link" href="../../modules/iconServices">
-                          Services
-                        </a>
-                        <a class="nav-link" href="../../modules/iconSocial">
-                          Social module
-                        </a>
-                        <a class="nav-link" href="../../modules/cta">
-                          Call to action
-                        </a>
-                        <a class="nav-link" href="../../modules/faqs">
-                          FAQs
-                        </a>
-                        <a class="nav-link" href="../../modules/statistics">
-                          Statistics
-                        </a>
-                        <a class="nav-link" href="../../modules/featuredContents">
-                          Featured content
-                        </a>
-                        <a class="nav-link" href="../../modules/brands">
-                          Brands
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../modules/basicContents"> Basic Content </a> <a class="nav-link" href="../../modules/businessCases"> Business Cases </a> <a class="nav-link" href="../../modules/iconsDescription"> Icon description </a> <a class="nav-link" href="../../modules/iconServices"> Services </a> <a class="nav-link" href="../../modules/iconSocial"> Social module </a> <a class="nav-link" href="../../modules/cta"> Call to action </a> <a class="nav-link" href="../../modules/faqs"> FAQs </a> <a class="nav-link" href="../../modules/statistics"> Statistics </a> <a class="nav-link" href="../../modules/featuredContents"> Featured content </a> <a class="nav-link" href="../../modules/brands"> Brands </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_grids"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_grids"
-                                                          data-bs-target="#key_grids"
-                                                          class="collapsed">
-                                                          Grids                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_grids" data-bs-toggle="collapse" aria-controls="key_grids" data-bs-target="#key_grids" class="collapsed"> Grids <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_grids" class="accordion-collapse collapse" aria-labelledby="heading-key_grids" data-bs-parent="#accordion-modules">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../modules/basicGrids">
-                          Basic grid
-                        </a>
-                        <a class="nav-link" href="../../modules/teamGrids">
-                          Team grid
-                        </a>
-                        <a class="nav-link" href="../../modules/serviceGrids">
-                          Service grid
-                        </a>
-                        <a class="nav-link" href="../../modules/portfolios/basic">
-                          Portfolio grid
-                        </a>
-                        <a class="nav-link" href="../../modules/portfolio/decomposed">
-                          Portfolio deconstructed
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../modules/basicGrids"> Basic grid </a> <a class="nav-link" href="../../modules/teamGrids"> Team grid </a> <a class="nav-link" href="../../modules/serviceGrids"> Service grid </a> <a class="nav-link" href="../../modules/portfolios/basic"> Portfolio grid </a> <a class="nav-link" href="../../modules/portfolio/decomposed"> Portfolio deconstructed </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_cards"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_cards"
-                                                          data-bs-target="#key_cards"
-                                                          class="collapsed">
-                                                          Cards                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_cards" data-bs-toggle="collapse" aria-controls="key_cards" data-bs-target="#key_cards" class="collapsed"> Cards <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_cards" class="accordion-collapse collapse" aria-labelledby="heading-key_cards" data-bs-parent="#accordion-modules">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../modules/featureCards">
-                          Featured
-                        </a>
-                        <a class="nav-link" href="../../modules/services">
-                          Services
-                        </a>
-                        <a class="nav-link" href="../../modules/productCards">
-                          Product
-                        </a>
-                        <a class="nav-link" href="../../modules/testimonials">
-                          Testimonials
-                        </a>
-                        <a class="nav-link" href="../../modules/prices">
-                          Prices
-                        </a>
-                        <a class="nav-link" href="../../modules/digitalProducts">
-                          Digital Products
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../modules/featureCards"> Featured </a> <a class="nav-link" href="../../modules/services"> Services </a> <a class="nav-link" href="../../modules/productCards"> Product </a> <a class="nav-link" href="../../modules/testimonials"> Testimonials </a> <a class="nav-link" href="../../modules/prices"> Prices </a> <a class="nav-link" href="../../modules/digitalProducts"> Digital Products </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_forms"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_forms"
-                                                          data-bs-target="#key_forms"
-                                                          class="collapsed">
-                                                          Forms                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_forms" data-bs-toggle="collapse" aria-controls="key_forms" data-bs-target="#key_forms" class="collapsed"> Forms <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_forms" class="accordion-collapse collapse" aria-labelledby="heading-key_forms" data-bs-parent="#accordion-modules">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../modules/contacts">
-                          Contact
-                        </a>
-                        <a class="nav-link" href="../../modules/login">
-                          Login
-                        </a>
-                        <a class="nav-link" href="../../modules/searchers">
-                          Searchers
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../modules/contacts"> Contact </a> <a class="nav-link" href="../../modules/login"> Login </a> <a class="nav-link" href="../../modules/searchers"> Searchers </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_footers"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_footers"
-                                                          data-bs-target="#key_footers"
-                                                          class="collapsed">
-                                                          Footers                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_footers" data-bs-toggle="collapse" aria-controls="key_footers" data-bs-target="#key_footers" class="collapsed"> Footers <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_footers" class="accordion-collapse collapse" aria-labelledby="heading-key_footers" data-bs-parent="#accordion-modules">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../modules/footers/basic">
-                          Basic
-                        </a>
-                        <a class="nav-link" href="../../modules/footers/standard">
-                          Standard
-                        </a>
-                        <a class="nav-link">
-                          Newsletter
-                        </a>
-                        <a class="nav-link" href="../../modules/footers/corporate">
-                          Corporate
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../modules/footers/basic"> Basic </a> <a class="nav-link" href="../../modules/footers/standard"> Standard </a> <a class="nav-link"> Newsletter </a> <a class="nav-link" href="../../modules/footers/corporate"> Corporate </a> </div>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item accordion-item">
-            <span id="heading-components"
-                          data-bs-toggle="collapse"
-                          aria-controls="components"
-                          data-bs-target="#components"
-                          class="collapsed">
-                            Components
-                        <span class="chevron">
-<i class="icon-open" ></i>
-                        </span>
-            <span class="chevron-active">
-<i class="icon-close" ></i>
-                        </span>
-            </span>
+          <li class="nav-item accordion-item"> <span id="heading-components" data-bs-toggle="collapse" aria-controls="components" data-bs-target="#components" class="collapsed"> Components <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
             <div id="components" class="accordion-collapse collapse" aria-labelledby="heading-components" data-bs-parent="#accordion-nav">
               <div class="accordion-body">
                 <ul class="navbar-nav" id="accordion-components">
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_components"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_components"
-                                                          data-bs-target="#key_components"
-                                                          class="collapsed">
-                                                          Components                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_components" data-bs-toggle="collapse" aria-controls="key_components" data-bs-target="#key_components" class="collapsed"> Components <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_components" class="accordion-collapse collapse" aria-labelledby="heading-key_components" data-bs-parent="#accordion-components">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../components/buttons">
-                          Buttons
-                        </a>
-                        <a class="nav-link" href="../../components/forms">
-                          Forms
-                        </a>
-                        <a class="nav-link" href="../../components/interaction">
-                          Interaction
-                        </a>
-                        <a class="nav-link" href="../../components/cards">
-                          Cards
-                        </a>
-                        <a class="nav-link" href="../../components/productCards">
-                          Product Cards
-                        </a>
-                        <a class="nav-link" href="../../components/links">
-                          Links
-                        </a>
-                        <a class="nav-link" href="../../components/gridCells">
-                          Grid cells
-                        </a>
-                        <a class="nav-link" href="../../components/iconsDescription">
-                          Icon + description
-                        </a>
-                        <a class="nav-link" href="../../components/accordions">
-                          Accordions
-                        </a>
-                        <a class="nav-link" href="../../components/alerts">
-                          Alerts
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../components/buttons"> Buttons </a> <a class="nav-link" href="../../components/forms"> Forms </a> <a class="nav-link" href="../../components/interaction"> Interaction </a> <a class="nav-link" href="../../components/cards"> Cards </a> <a class="nav-link" href="../../components/productCards"> Product Cards </a> <a class="nav-link" href="../../components/links"> Links </a> <a class="nav-link" href="../../components/gridCells"> Grid cells </a> <a class="nav-link" href="../../components/iconsDescription"> Icon + description </a> <a class="nav-link" href="../../components/accordions"> Accordions </a> <a class="nav-link" href="../../components/alerts"> Alerts </a> </div>
                     </div>
                   </li>
-                  <li class="nav-item accordion-item">
-                    <span id="heading-key_brand_elements"
-                                                          data-bs-toggle="collapse"
-                                                          aria-controls="key_brand_elements"
-                                                          data-bs-target="#key_brand_elements"
-                                                          class="collapsed">
-                                                          Brand elements                                                        <span class="chevron">
-<i class="icon-open" ></i>
-                                                        </span>
-                    <span class="chevron-active">
-<i class="icon-close" ></i>
-                                                        </span>
-                    </span>
+                  <li class="nav-item accordion-item"> <span id="heading-key_brand_elements" data-bs-toggle="collapse" aria-controls="key_brand_elements" data-bs-target="#key_brand_elements" class="collapsed"> Brand elements <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
                     <div id="key_brand_elements" class="accordion-collapse collapse" aria-labelledby="heading-key_brand_elements" data-bs-parent="#accordion-components">
-                      <div class="accordion-body">
-                        <a class="nav-link" href="../../components/illustrations">
-                          Illustrations
-                        </a>
-                        <a class="nav-link" href="../../components/scenes">
-                          Illustrations Scenes
-                        </a>
-                        <a class="nav-link" href="../../components/microillustrations">
-                          Microillustrations
-                        </a>
-                        <a class="nav-link" href="../../components/icons">
-                          Icons
-                        </a>
-                        <a class="nav-link" href="../../components/texts">
-                          Texts
-                        </a>
-                      </div>
+                      <div class="accordion-body"> <a class="nav-link" href="../../components/illustrations"> Illustrations </a> <a class="nav-link" href="../../components/scenes"> Illustrations Scenes </a> <a class="nav-link" href="../../components/microillustrations"> Microillustrations </a> <a class="nav-link" href="../../components/icons"> Icons </a> <a class="nav-link" href="../../components/texts"> Texts </a> </div>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item accordion-item">
-            <span id="heading-transitions"
-                          data-bs-toggle="collapse"
-                          aria-controls="transitions"
-                          data-bs-target="#transitions"
-                          class="collapsed">
-                            Transitions
-                        <span class="chevron">
-<i class="icon-open" ></i>
-                        </span>
-            <span class="chevron-active">
-<i class="icon-close" ></i>
-                        </span>
-            </span>
+          <li class="nav-item accordion-item"> <span id="heading-transitions" data-bs-toggle="collapse" aria-controls="transitions" data-bs-target="#transitions" class="collapsed"> Transitions <span class="chevron"> <i class="icon-open" ></i> </span> <span class="chevron-active"> <i class="icon-close" ></i> </span> </span>
             <div id="transitions" class="accordion-collapse collapse" aria-labelledby="heading-transitions" data-bs-parent="#accordion-nav">
-              <div class="accordion-body">
-              </div>
+              <div class="accordion-body"> </div>
             </div>
           </li>
         </ul>
       </div>
     </div>
-
     <!--MAIN CONTENT-->
     <main class="main">
-
       <!-- Section light -->
       <section class="section section-divider darkened px-0">
-
         <!--Basic-->
         <div class="container">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header basic</h3>
         </div>
         <div class="section section-divider">
-          <div class="module   basic-content" id="random-id">
+          <div class="module basic-content" id="random-id">
             <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120">
               <h2 class="text-center">Welcome to B_system</h2>
             </div>
@@ -1586,36 +384,21 @@
         <div class="section">
           <div class="container">
             <div class="accordion-item darkened">
-              <h2 id="heading-basic-item" class="accordion-header">
-                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item" aria-expanded="false" aria-controls="collapse-basic-item">
-                  View example´s code
-                </button>
-              </h2>
+              <h2 id="heading-basic-item" class="accordion-header"> <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item" aria-expanded="false" aria-controls="collapse-basic-item"> View example´s code </button> </h2>
               <div id="collapse-basic-item" class="accordion-collapse collapse " aria-labelledby="heading-basic-item" data-bs-parent="#basic">
-                <div class="accordion-body overflow-hidden">
-                  <pre>
-                        <code class="language-html">
-&lt;div class=&#34;module basic-content&#34; id=&#34;random-id&#34; &gt;
-    &lt;div class=&#34;container px-0 inner-space-inline-md-80 inner-space-inline-xl-120&#34;&gt;
-            &lt;h2 class=&#34;text-center&#34;&gt;Welcome to B_system&lt;/h2&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                        </code>
-                    </pre>
+                <div class="accordion-body overflow-hidden"> <pre><code class="language-html"><xmp><div class="module basic-content" id="random-id"> <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120"> <h2 class="text-center">Welcome to B_system</h2> </div> </div></xmp></code></pre>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <!--END:Basic-->
-
         <!--Basic Plus-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header basic plus</h3>
         </div>
         <div class="section section-divider">
-          <div class="module   basic-content" id="random-id-plus">
+          <div class="module basic-content" id="random-id-plus">
             <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120">
               <h1 class="text-center">Hi, I'm Matias Eriksson, photographer and designer</h1>
             </div>
@@ -1624,48 +407,31 @@
         <div class="section">
           <div class="container">
             <div class="accordion-item darkened">
-              <h2 id="heading-basic-item-plus" class="accordion-header">
-                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item-plus" aria-expanded="false" aria-controls="collapse-basic-item-plus">
-                  View example´s code
-                </button>
-              </h2>
+              <h2 id="heading-basic-item-plus" class="accordion-header"> <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item-plus" aria-expanded="false" aria-controls="collapse-basic-item-plus"> View example´s code </button> </h2>
               <div id="collapse-basic-item-plus" class="accordion-collapse collapse " aria-labelledby="heading-basic-item-plus" data-bs-parent="#basic">
-                <div class="accordion-body overflow-hidden">
-                  <pre>
-                        <code class="language-html">
-&lt;div class=&#34;module basic-content&#34; id=&#34;random-id-plus&#34; &gt;
-    &lt;div class=&#34;container px-0 inner-space-inline-md-80 inner-space-inline-xl-120&#34;&gt;
-            &lt;h1 class=&#34;text-center&#34;&gt;Hi, I&#39;m Matias Eriksson, photographer and designer&lt;/h1&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                        </code>
-                    </pre>
+                <div class="accordion-body overflow-hidden"> <pre><code class="language-html"><xmp><div class="module basic-content" id="random-id-plus"> <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120"> <h1 class="text-center">Hi, I'm Matias Eriksson, photographer and designer</h1> </div> </div></xmp></code></pre>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <!--END:Basic plus-->
-
         <!--Simple-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple </h3>
         </div>
-        <div class="module   basic-content inner-space-inline-md-88 basic-content-simple center" id="">
+        <div class="module basic-content inner-space-inline-md-88 basic-content-simple center" id="">
           <div class="container">
             <h1 class="space-bottom-24 space-bottom-md-16 space-bottom-xl-32 text-center mx-auto col-md-12 col-xl-10 col-xxl-8">To get started</h1>
             <p class="body-light-gray-text text-center mx-auto col-md-12 col-xl-10 col-xxl-8">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand. Create your digital brand in a natural and fluid way.</p>
           </div>
         </div>
-
         <!--END:Simple-->
-
         <!--Simple 2 columns-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple 2 columns</h3>
         </div>
-        <div class="module   basic-content inner-space-inline-md-88 basic-content-simple 2-columns" id="">
+        <div class="module basic-content inner-space-inline-md-88 basic-content-simple 2-columns" id="">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-12 col-lg-6 text-center text-lg-start">
@@ -1677,40 +443,34 @@
             </div>
           </div>
         </div>
-
         <!--END:Simple 2 columns-->
-
         <!--Simple left-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple left aligned</h3>
         </div>
-        <div class="module   basic-content inner-space-inline-md-88 basic-content-simple" id="">
+        <div class="module basic-content inner-space-inline-md-88 basic-content-simple" id="">
           <div class="container">
             <h1 class="space-bottom-24 space-bottom-md-16 space-bottom-xl-32 col-lg-7">Visit our gallery</h1>
             <p class="body-light-gray-text col-lg-7">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.</p>
           </div>
         </div>
-
         <!--END:Simple left-->
-
         <!--Simple left fit-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple left aligned fit</h3>
         </div>
-        <div class="module   basic-content inner-space-inline-md-88 basic-content-simple start-fit" id="">
+        <div class="module basic-content inner-space-inline-md-88 basic-content-simple start-fit" id="">
           <div class="container">
             <h1 class="space-bottom-24 space-bottom-md-16 space-bottom-xl-32 col-lg-10">Visit our gallery</h1>
             <p class="body-light-gray-text col-lg-10">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.</p>
           </div>
         </div>
-
         <!--END:Simple left fit-->
-
         <!--Argument-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Arguments module</h3>
         </div>
-        <div class="module   basic-content basic-content-arguments" id="">
+        <div class="module basic-content basic-content-arguments" id="">
           <div class="container">
             <div class="row space-y-32 space-y-sm-40 ">
               <div class="d-flex flex-column col-12 col-md-6 col-lg-4 my-lg-0 space-y-24">
@@ -1728,87 +488,63 @@
             </div>
           </div>
         </div>
-
         <!--END:Argument-->
-
         <!--Description module-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Description module</h3>
         </div>
-        <div class="module   basic-content" id="">
+        <div class="module basic-content" id="">
           <div class="container row justify-content-center px-0 mx-auto">
             <h3 class="text-center col-md-12 col-xl-8 space-bottom-24 space-bottom-md-32 space-bottom-lg-40 px-0">Create your digital brand in an agile and fluid way</h3>
             <p class="body-light-gray-text text-center col-md-10 col-xl-8 px-0">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.</p>
           </div>
         </div>
-
         <!--END:Description module-->
-
         <!--Header 2 columns-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header 2 columns</h3>
         </div>
-        <div class="module   basic-content basic-content-half-content" id="">
+        <div class="module basic-content basic-content-half-content" id="">
           <div class="container">
             <div class="row">
               <div class="col-12 col-lg-6">
                 <h1>Meet the team that has won so many awards</h1>
               </div>
               <div class="col-12 col-lg-6 d-flex flex-column justify-content-between">
-                <div class="basic-content-head-wrapper space-y-16">
-                  <span class="space-bottom-16 d-block" style="font-size: 48px;">
-<i class="icon-awards-circle" ></i>
-                    </span>
+                <div class="basic-content-head-wrapper space-y-16"> <span class="space-bottom-16 d-block" style="font-size: 48px;"> <i class="icon-awards-circle" ></i> </span>
                   <p class="body-light-gray-text">Example of how to make your team members known in a creative way. You have a multitude of design combinations.</p>
-                </div>
-                <span class="action-link ">
-        <span>Get to know our awards</span>
-                <i class="icon-links"></i>
-                </span>
+                </div> <span class="action-link "> <span>Get to know our awards</span> <i class="icon-links"></i> </span>
               </div>
             </div>
           </div>
         </div>
-
         <!--END:Header 2 columns-->
-
         <!--Header image-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header image</h3>
         </div>
-        <div class="module   basic-content basic-content-image" id="">
+        <div class="module basic-content basic-content-image" id="">
           <div class="container">
             <div class="row">
-              <picture class="col-12 col-lg-6">
-                <img class="basic-content-img w-75" src="../../assets/img/basic-content/basic-content-01.png" alt="Header image">
-              </picture>
+              <picture class="col-12 col-lg-6"> <img class="basic-content-img w-75" src="../../assets/img/basic-content/basic-content-01.png" alt="Header image"> </picture>
               <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
                 <div class="basic-content-head-wrapper space-y-24">
-                  <p class="body-light-gray-text">B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
-                  <span class="action-link ">
-        <span>Learn more</span>
-                  <i class="icon-links"></i>
-                  </span>
+                  <p class="body-light-gray-text">B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.</p> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <!--END:Header image-->
-      </section>
-
-      <!-- END:Section light -->
-
+      </section> <!-- END:Section light -->
       <!-- Section dark -->
       <section class="section section-divider darkened px-0" data-b-system-theme="dark">
-
         <!--Basic-->
         <div class="container">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header basic</h3>
         </div>
         <div class="section section-divider">
-          <div class="module   basic-content" id="random-id">
+          <div class="module basic-content" id="random-id">
             <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120">
               <h2 class="text-center">Welcome to B_system</h2>
             </div>
@@ -1817,36 +553,21 @@
         <div class="section">
           <div class="container">
             <div class="accordion-item darkened">
-              <h2 id="heading-basic-item" class="accordion-header">
-                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item" aria-expanded="false" aria-controls="collapse-basic-item">
-                  View example´s code
-                </button>
-              </h2>
+              <h2 id="heading-basic-item" class="accordion-header"> <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item" aria-expanded="false" aria-controls="collapse-basic-item"> View example´s code </button> </h2>
               <div id="collapse-basic-item" class="accordion-collapse collapse " aria-labelledby="heading-basic-item" data-bs-parent="#basic">
-                <div class="accordion-body overflow-hidden">
-                  <pre>
-                        <code class="language-html">
-&lt;div class=&#34;module basic-content&#34; id=&#34;random-id&#34; &gt;
-    &lt;div class=&#34;container px-0 inner-space-inline-md-80 inner-space-inline-xl-120&#34;&gt;
-            &lt;h2 class=&#34;text-center&#34;&gt;Welcome to B_system&lt;/h2&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                        </code>
-                    </pre>
+                <div class="accordion-body overflow-hidden"> <pre><code class="language-html"><xmp><div class="module basic-content" id="random-id"> <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120"> <h2 class="text-center">Welcome to B_system</h2> </div> </div></xmp></code></pre>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <!--END:Basic-->
-
         <!--Basic Plus-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header basic plus</h3>
         </div>
         <div class="section section-divider">
-          <div class="module   basic-content" id="random-id-plus">
+          <div class="module basic-content" id="random-id-plus">
             <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120">
               <h1 class="text-center">Hi, I'm Matias Eriksson, photographer and designer</h1>
             </div>
@@ -1855,48 +576,31 @@
         <div class="section">
           <div class="container">
             <div class="accordion-item darkened">
-              <h2 id="heading-basic-item-plus" class="accordion-header">
-                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item-plus" aria-expanded="false" aria-controls="collapse-basic-item-plus">
-                  View example´s code
-                </button>
-              </h2>
+              <h2 id="heading-basic-item-plus" class="accordion-header"> <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item-plus" aria-expanded="false" aria-controls="collapse-basic-item-plus"> View example´s code </button> </h2>
               <div id="collapse-basic-item-plus" class="accordion-collapse collapse " aria-labelledby="heading-basic-item-plus" data-bs-parent="#basic">
-                <div class="accordion-body overflow-hidden">
-                  <pre>
-                        <code class="language-html">
-&lt;div class=&#34;module basic-content&#34; id=&#34;random-id-plus&#34; &gt;
-    &lt;div class=&#34;container px-0 inner-space-inline-md-80 inner-space-inline-xl-120&#34;&gt;
-            &lt;h1 class=&#34;text-center&#34;&gt;Hi, I&#39;m Matias Eriksson, photographer and designer&lt;/h1&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                        </code>
-                    </pre>
+                <div class="accordion-body overflow-hidden"> <pre><code class="language-html"><xmp><div class="module basic-content" id="random-id-plus"> <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120"> <h1 class="text-center">Hi, I'm Matias Eriksson, photographer and designer</h1> </div> </div></xmp></code></pre>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <!--END:Basic plus-->
-
         <!--Simple-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple </h3>
         </div>
-        <div class="module   basic-content inner-space-inline-md-88 basic-content-simple center" id="">
+        <div class="module basic-content inner-space-inline-md-88 basic-content-simple center" id="">
           <div class="container">
             <h1 class="space-bottom-24 space-bottom-md-16 space-bottom-xl-32 text-center mx-auto col-md-12 col-xl-10 col-xxl-8">To get started</h1>
             <p class="body-light-gray-text text-center mx-auto col-md-12 col-xl-10 col-xxl-8">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand. Create your digital brand in a natural and fluid way.</p>
           </div>
         </div>
-
         <!--END:Simple-->
-
         <!--Simple 2 columns-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple 2 columns</h3>
         </div>
-        <div class="module   basic-content inner-space-inline-md-88 basic-content-simple 2-columns" id="">
+        <div class="module basic-content inner-space-inline-md-88 basic-content-simple 2-columns" id="">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-12 col-lg-6 text-center text-lg-start">
@@ -1908,40 +612,34 @@
             </div>
           </div>
         </div>
-
         <!--END:Simple 2 columns-->
-
         <!--Simple left-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple left aligned</h3>
         </div>
-        <div class="module   basic-content inner-space-inline-md-88 basic-content-simple" id="">
+        <div class="module basic-content inner-space-inline-md-88 basic-content-simple" id="">
           <div class="container">
             <h1 class="space-bottom-24 space-bottom-md-16 space-bottom-xl-32 col-lg-7">Visit our gallery</h1>
             <p class="body-light-gray-text col-lg-7">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.</p>
           </div>
         </div>
-
         <!--END:Simple left-->
-
         <!--Simple left fit-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple left aligned fit</h3>
         </div>
-        <div class="module   basic-content inner-space-inline-md-88 basic-content-simple start-fit" id="">
+        <div class="module basic-content inner-space-inline-md-88 basic-content-simple start-fit" id="">
           <div class="container">
             <h1 class="space-bottom-24 space-bottom-md-16 space-bottom-xl-32 col-lg-10">Visit our gallery</h1>
             <p class="body-light-gray-text col-lg-10">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.</p>
           </div>
         </div>
-
         <!--END:Simple left fit-->
-
         <!--Argument-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Arguments module</h3>
         </div>
-        <div class="module   basic-content basic-content-arguments" id="">
+        <div class="module basic-content basic-content-arguments" id="">
           <div class="container">
             <div class="row space-y-32 space-y-sm-40 ">
               <div class="d-flex flex-column col-12 col-md-6 col-lg-4 my-lg-0 space-y-24">
@@ -1959,111 +657,96 @@
             </div>
           </div>
         </div>
-
         <!--END:Argument-->
-
         <!--Description module-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Description module</h3>
         </div>
-        <div class="module   basic-content" id="">
+        <div class="module basic-content" id="">
           <div class="container row justify-content-center px-0 mx-auto">
             <h3 class="text-center col-md-12 col-xl-8 space-bottom-24 space-bottom-md-32 space-bottom-lg-40 px-0">Create your digital brand in an agile and fluid way</h3>
             <p class="body-light-gray-text text-center col-md-10 col-xl-8 px-0">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.</p>
           </div>
         </div>
-
         <!--END:Description module-->
-
         <!--Header 2 columns-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header 2 columns</h3>
         </div>
-        <div class="module   basic-content basic-content-half-content" id="">
+        <div class="module basic-content basic-content-half-content" id="">
           <div class="container">
             <div class="row">
               <div class="col-12 col-lg-6">
                 <h1>Meet the team that has won so many awards</h1>
               </div>
               <div class="col-12 col-lg-6 d-flex flex-column justify-content-between">
-                <div class="basic-content-head-wrapper space-y-16">
-                  <span class="space-bottom-16 d-block" style="font-size: 48px;">
-<i class="icon-awards-circle" ></i>
-                    </span>
+                <div class="basic-content-head-wrapper space-y-16"> <span class="space-bottom-16 d-block" style="font-size: 48px;"> <i class="icon-awards-circle" ></i> </span>
                   <p class="body-light-gray-text">Example of how to make your team members known in a creative way. You have a multitude of design combinations.</p>
-                </div>
-                <span class="action-link ">
-        <span>Get to know our awards</span>
-                <i class="icon-links"></i>
-                </span>
+                </div> <span class="action-link "> <span>Get to know our awards</span> <i class="icon-links"></i> </span>
               </div>
             </div>
           </div>
         </div>
-
         <!--END:Header 2 columns-->
-
         <!--Header image-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header image</h3>
         </div>
-        <div class="module   basic-content basic-content-image" id="">
+        <div class="module basic-content basic-content-image" id="">
           <div class="container">
             <div class="row">
-              <picture class="col-12 col-lg-6">
-                <img class="basic-content-img w-75" src="../../assets/img/basic-content/basic-content-01.png" alt="Header image">
-              </picture>
+              <picture class="col-12 col-lg-6"> <img class="basic-content-img w-75" src="../../assets/img/basic-content/basic-content-01.png" alt="Header image"> </picture>
               <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
                 <div class="basic-content-head-wrapper space-y-24">
-                  <p class="body-light-gray-text">B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
-                  <span class="action-link ">
-        <span>Learn more</span>
-                  <i class="icon-links"></i>
-                  </span>
+                  <p class="body-light-gray-text">B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.</p> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <!--END:Header image-->
-      </section>
-
-      <!-- END:Section dark -->
+      </section> <!-- END:Section dark -->
     </main>
-
     <!--END: MAIN CONTENT-->
-
     <!--MAIN FOOTER-->
     <footer class="footer footer-basic darkened inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88">
       <div class="footer-wrapper container">
-        <div class="footer-content d-flex gap-32">
-          <a class="footer-logo" href="../../home">
-            <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="logo" />
-          </a>
-          <p class="copy body-light-text">
-            Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio
-          </p>
+        <div class="footer-content d-flex gap-32"> <a class="footer-logo" href="../../home"> <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="logo" /> </a>
+          <p class="copy body-light-text"> Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio </p>
         </div>
       </div>
     </footer>
-
     <!--END: MAIN FOOTER-->
-
     <!--SCRIPTS-->
-
     <!--Bootstrap JS Bundle-->
-    <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Swiper bundle CDN -->
+    <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script> <!-- Swiper bundle CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
-    <!-- Highlight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-html.min.js"></script>
+    <script>
+      const options = {
+        'indent_size': '4',
+        'indent_char': ' ',
+        'max_preserve_newlines': '5',
+        'preserve_newlines': true,
+        'keep_array_indentation': false,
+        'break_chained_methods': false,
+        'indent_scripts': 'normal',
+        'brace_style': 'collapse',
+        'space_before_conditional': true,
+        'unescape_strings': false,
+        'jslint_happy': false,
+        'end_with_newline': false,
+        'wrap_line_length': '0',
+        'indent_inner_html': false,
+        'comma_first': false,
+        'e4x': false,
+        'indent_empty_lines': false
+      };
+    </script> <!-- Highlight -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>
-      hljs.highlightAll()
+      hljs.highlightAll();
     </script>
-
     <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
     <script>
@@ -2128,16 +811,16 @@
         "SCENES": "/components/scenes",
         "ICON_DESCRIPTION_COMPONENT": "/components/iconsDescription",
         "ACCORDIONS": "/components/accordions"
-      }
-      delete quickStart.ROUTE_NAME
-      delete quickStart.HOME
+      };
+      delete quickStart.ROUTE_NAME;
+      delete quickStart.HOME;
       quickStart = Object.values(quickStart).map((value) => {
         if (typeof value !== 'string') {
-          return Object.values(value)
+          return Object.values(value);
         }
-        return value
-      }).flat(1)
-      window.quickStart = quickStart
+        return value;
+      }).flat(1);
+      window.quickStart = quickStart;
       let demos = {
         "ROUTE_NAME": "demos",
         "STARTUP": "/demos/startup",
@@ -2149,60 +832,60 @@
         "DEVELOPMENT_STUDIO": "/demos/development-studio",
         "CORPORATIVE": "/demos/corporative"
       }
-      delete demos.ROUTE_NAME
+      delete demos.ROUTE_NAME;
       demos = Object.values(demos).map((value) => {
         if (typeof value !== 'string') {
-          return Object.values(value)
+          return Object.values(value);
         }
-        return value
-      }).flat(1)
-      window.demos = demos
+        return value;
+      }).flat(1);
+      window.demos = demos;
       const transformHeader = (purchaseButtonType) => {
-        const img = document.querySelector('header img.logo')
-        const purchaseButton = document.querySelector('header button.btn.btn-fit')
-        let isNavActive = false
-        let isHeaderTransparent = true
+        const img = document.querySelector('header img.logo');
+        const purchaseButton = document.querySelector('header button.btn.btn-fit');
+        let isNavActive = false;
+        let isHeaderTransparent = true;
         document.addEventListener(b_system.$EVENTS.ON_MOBILE_NAV_TOGGLE, (evt) => {
-          const isDark = !!document.querySelector('body[data-b-system-theme="dark"]')
+          const isDark = !!document.querySelector('body[data-b-system-theme="dark"]');
           const {
             detail: nav
-          } = evt
-          isNavActive = nav.isActive
+          } = evt;
+          isNavActive = nav.isActive;
           if (isNavActive) {
             if (!isDark) {
-              img.src = '../../assets/img/logo-dark.svg'
+              img.src = '../../assets/img/logo-dark.svg';
             }
           } else {
             if (isHeaderTransparent) {
-              img.src = '../../assets/img/logo-light.svg'
+              img.src = '../../assets/img/logo-light.svg';
             }
           }
-        })
+        });
         document.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (evt) => {
           const {
             detail: header
-          } = evt
-          const isDark = !!document.querySelector('body[data-b-system-theme="dark"]')
-          isHeaderTransparent = header.isTransparent
+          } = evt;
+          const isDark = !!document.querySelector('body[data-b-system-theme="dark"]');
+          isHeaderTransparent = header.isTransparent;
           if (header.isTransparent && !isNavActive) {
-            img.src = '../../assets/img/logo-light.svg'
+            img.src = '../../assets/img/logo-light.svg';
             if (purchaseButtonType !== 'primary') {
-              purchaseButton.classList.remove('btn-primary')
-              purchaseButton.classList.add('btn-glass')
+              purchaseButton.classList.remove('btn-primary');
+              purchaseButton.classList.add('btn-glass');
             }
           } else {
             if (!isDark) {
-              img.src = '../../assets/img/logo-dark.svg'
+              img.src = '../../assets/img/logo-dark.svg';
             }
             if (purchaseButtonType !== 'primary') {
-              purchaseButton.classList.remove('btn-glass')
-              purchaseButton.classList.add('btn-primary')
+              purchaseButton.classList.remove('btn-glass');
+              purchaseButton.classList.add('btn-primary');
             }
           }
-        })
-      }
+        });
+      };
     </script>
-
     <!--END: SCRIPTS-->
   </body>
+
 </html>
