@@ -8,7 +8,6 @@
 @use '../../mixins/backgounds';
 
 .marquee {
-  $parent: &;
   &-wrapper {
     overflow-x: hidden;
     z-index: 0;
@@ -325,6 +324,21 @@
     bottom: helper.rem(32);
     right: helper.rem(32);
     z-index: 1;
+  }
+
+  #{$parent}-epigraph {
+    @extend %x3-text-handwrite;
+  
+    @include mixin.screen(md) {
+      font-size: helper.rem(32);
+      line-height: 1.25;
+      letter-spacing: helper.rem(.4);
+    }
+  
+    @include mixin.screen(xl) {
+      font-size: helper.rem(44);
+      line-height: 1.27;
+    }
   }
 }
 
