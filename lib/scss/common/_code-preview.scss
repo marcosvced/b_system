@@ -1,7 +1,16 @@
+@use "../helpers/themed";
 @use "../variables/font";
+
 pre {
   padding: 0 !important;
   margin: 0 !important;
+
+  > *,
+  *,
+  code {
+    font-family: font.$f-f-code !important;
+    font-size: font.$f-s-xs;
+  }
 
   .hljs {
     background-color: transparent !important;
@@ -13,4 +22,115 @@ pre {
     }
 
   }
+}
+
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+
+code.hljs {
+  padding: 3px 5px
+}
+
+.hljs-subst, .hljs-title {
+  font-weight: 400;
+  color: #000
+}
+
+.hljs-title.function_ {
+  color: #7a7a43
+}
+
+.hljs-code, .hljs-comment, .hljs-quote {
+  color: #8c8c8c !important;
+  font-style: italic
+}
+
+.hljs-meta {
+  color: #D5B778
+}
+
+
+.hljs-tag,
+.hljs-built_in,
+.hljs-keyword,
+.hljs-literal,
+.hljs-meta .hljs-keyword,
+.hljs-name,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-selector-pseudo,
+.hljs-selector-tag,
+.hljs-symbol,
+.hljs-template-tag,
+.hljs-type,
+.hljs-variable.language_ {
+  color: #D5B778 !important;
+}
+
+.hljs-section {
+  @include themed.properties {
+    color: themed.values('#000', 'red');
+  }
+}
+
+.hljs-attr,
+.hljs-property {
+  @include themed.properties {
+    color: themed.values('#000', '#BABABA');
+  }
+}
+
+.hljs-attribute {
+  color: #174ad4
+}
+
+.hljs-number {
+  color: #1750eb
+}
+
+.hljs-regexp {
+  color: #264eff
+}
+
+.hljs-link {
+  text-decoration: underline;
+  color: #006dcc
+}
+
+.hljs-meta .hljs-string,
+.hljs-string {
+  color: #6aab73
+}
+
+.hljs-char.escape_ {
+  color: #0037a6
+}
+
+.hljs-doctag {
+  text-decoration: underline
+}
+
+.hljs-template-variable {
+  color: #248f8f
+}
+
+.hljs-addition {
+  background: #bee6be
+}
+
+.hljs-deletion {
+  background: #d6d6d6
+}
+
+.hljs-emphasis {
+  font-style: italic
+}
+
+.hljs-strong {
+  font-weight: 700
 }

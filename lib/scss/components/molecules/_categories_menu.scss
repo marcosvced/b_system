@@ -2,8 +2,13 @@
 @use '../../helpers' as helper;
 @use '../../mixins' as mixin;
 
-.bs-categories-menu-wrapper {
+.categories-menu-wrapper {
   position: relative;
+
+  &.position-sticky {
+    top: var(--header-sticky-height);
+    z-index: 1;
+  }
 
   &::before {
     pointer-events: none;
@@ -21,15 +26,15 @@
   &.offset::before {
     opacity: 1;
   }
+
+
 }
 
-.nav-tabs.bs-categories-menu {
+.nav-tabs.categories-menu {
   position: relative;
   border-bottom: 0;
   overflow-x: auto;
   overflow-y: hidden;
-  margin-left: 16px;
-  margin-right: 16px;
 
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */

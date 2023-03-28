@@ -12,12 +12,17 @@
 @use '../../helpers/themed';
 @use '../../mixins' as mixin;
 
-header.header {
-  $min-header-height: size.rem(56);
-  $min-xl-narrow-header-height: size.rem(72);
-  $min-xl-header-height: size.rem(92);
+$min-header-height: size.rem(56);
+$min-xl-narrow-header-height: size.rem(72);
+$min-xl-header-height: size.rem(92);
 
+:root {
+  --header-sticky-height: #{$min-xl-narrow-header-height};
   --header-height: #{$min-xl-header-height};
+}
+
+header.header {
+
   padding-block: size.rem(14);
   padding-inline: size.space(16);
   height: $min-header-height;
@@ -84,11 +89,12 @@ header.header {
         }
 
         .nav-item {
-            @include media.screen(xl) {
-                min-height: var(--header-height);
-                display: inline-flex;
-                align-items: center;
-            }
+          @include media.screen(xl) {
+            min-height: var(--header-height);
+            display: inline-flex;
+            align-items: center;
+          }
+
           > a {
             padding: 0;
             @extend %body-regular-text;
@@ -136,7 +142,7 @@ header.header {
     nav.navbar .navbar-nav {
       .nav-item {
         > a {
-            color: $c-grayscale--light;
+          color: $c-grayscale--light;
         }
 
         &:hover {

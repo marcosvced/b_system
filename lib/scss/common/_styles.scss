@@ -10,7 +10,7 @@
 @use "../mixins/text-color";
 @use '../helpers/font';
 
-* {
+*, {
   @include themed.properties {
     color: themed.values(colors.grayscale('ash'), colors.grayscale('light'));
   }
