@@ -21,61 +21,73 @@ const headerConfig = {
 <%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
 <%- contentFor('body') %>
 
-<div class="main-content main-content-space-top">
-    <section>
-        <%- include(`${module}/marquee/extended/extended`, {
-            isDark: true,
-            isDarkened: true,
-            slides: [
-                {
-                    img: {
-                        src: 'marquee-standard-01',
-                        alt: 'Marquee image'
-                    },
-                    epigraph: "B_system template",
-                    title: "Let's do it different",
-                    btn: {
-                        label: 'Start with B System', 
-                        isCTA: true, 
-                        icon: 'links',
-                        iconPosition: 'after'
-                    },
-                    quote: 'People ignore design that ignores people',
-                    isDarkened: true
+<%
+    const marqueeStandard = {
+        isDark: true,
+        isDarkened: true,
+        slides: [
+            {
+                img: {
+                    src: 'marquee-standard-01',
+                    alt: 'Marquee image'
                 },
-                {
-                    img: {
-                        src: 'marquee-standard-02',
-                        alt: 'Marquee image 2'
-                    },
-                    title: "Now more than ever, it's time to make things count",
-                    btn: {
-                        label: 'Start with B System', 
-                        isCTA: true, 
-                        icon: 'links',
-                        iconPosition: 'after'
-                    },
-                    quote: 'People ignore design that ignores people',
-                    isDarkened: true
+                epigraph: "B_system template",
+                title: "Let's do it different",
+                btn: {
+                    label: 'Start with B System', 
+                    isCTA: true, 
+                    icon: 'links',
+                    iconPosition: 'after'
                 },
-                {
-                    img: {
-                        src: 'marquee-standard-03',
-                        alt: 'Marquee image 3'
-                    },
-                    title: "Use your sensitivity, movement and courage",
-                    btn: {
-                        label: 'Start with B System', 
-                        isCTA: true, 
-                        icon: 'links',
-                        iconPosition: 'after'
-                    },
-                    quote: 'People ignore design that ignores people',
-                    isDarkened: true
+                quote: 'People ignore design that ignores people',
+                isDarkened: true
+            },
+            {
+                img: {
+                    src: 'marquee-standard-02',
+                    alt: 'Marquee image 2'
                 },
-            ]
-        }) %>
-    </section>
-</div>
+                title: "Now more than ever, it's time to make things count",
+                btn: {
+                    label: 'Start with B System', 
+                    isCTA: true, 
+                    icon: 'links',
+                    iconPosition: 'after'
+                },
+                quote: 'People ignore design that ignores people',
+                isDarkened: true
+            },
+            {
+                img: {
+                    src: 'marquee-standard-03',
+                    alt: 'Marquee image 3'
+                },
+                title: "Use your sensitivity, movement and courage",
+                btn: {
+                    label: 'Start with B System', 
+                    isCTA: true, 
+                    icon: 'links',
+                    iconPosition: 'after'
+                },
+                quote: 'People ignore design that ignores people',
+                isDarkened: true
+            },
+        ]
+    }
+
+    const marqueeStandardModule = include(`${module}/marquee/extended/extended`, marqueeStandard);
+
+    const codePreview = {
+        idAccordion: 'marquee-standard',
+        idItem: 'code-marquee-standard',
+        isDarkened: true,
+        content: marqueeStandardModule
+    }
+%>
+
+<%- marqueeStandardModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>
+
 <%- contentFor('script') %>
 transformHeader('primary')

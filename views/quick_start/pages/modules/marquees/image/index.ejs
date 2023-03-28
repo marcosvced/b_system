@@ -19,40 +19,52 @@ const headerConfig = {
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <%- contentFor('body') %>
-<div class="main-content main-content-space-top">
-    <section>
-        <%- include(`${module}/marquee/image/image`, {
-            isDark: true,
-            isDarkened: false, 
-            slides: [
-                {
-                    img: {
-                        src: 'marquee-image-01',
-                        alt: 'marquee image 01'
-                    },
-                    title: 'Enhance your competitive agility',
-                    text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
-                    btn: 'Discover B_system'
+
+<%
+    const marqueeImage = {
+        isDark: true,
+        isDarkened: false, 
+        slides: [
+            {
+                img: {
+                    src: 'marquee-image-01',
+                    alt: 'marquee image 01'
                 },
-                {
-                    img: {
-                        src: 'marquee-image-02',
-                        alt: 'marquee image 02'
-                    },
-                    title: 'We are the interactive radar',
-                    text: 'From idea to action, the path to generating 360 ° value starts here.',
-                    btn: 'Discover B_system'
+                title: 'Enhance your competitive agility',
+                text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
+                btn: 'Discover B_system'
+            },
+            {
+                img: {
+                    src: 'marquee-image-02',
+                    alt: 'marquee image 02'
                 },
-                {
-                    img: {
-                        src: 'marquee-image-03',
-                        alt: 'marquee image 03'
-                    },
-                    title: 'Our values ​​shape our culture',
-                    text: 'We make them happen through our individual behaviors and they serve as a guide for us to act and make decisions.',
-                    btn: 'Discover B_system'
+                title: 'We are the interactive radar',
+                text: 'From idea to action, the path to generating 360 ° value starts here.',
+                btn: 'Discover B_system'
+            },
+            {
+                img: {
+                    src: 'marquee-image-03',
+                    alt: 'marquee image 03'
                 },
-            ]
-        }) %>
-    </section>
-</div>
+                title: 'Our values ​​shape our culture',
+                text: 'We make them happen through our individual behaviors and they serve as a guide for us to act and make decisions.',
+                btn: 'Discover B_system'
+            },
+        ]
+    }
+
+    const marqueeImageModule = include(`${module}/marquee/image/image`, marqueeImage);
+
+    const codePreview = {
+        idAccordion: 'marquee-image',
+        idItem: 'code-marquee-image',
+        isDarkened: true,
+        content: marqueeImageModule
+    }
+%>
+
+<%- marqueeImageModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>
