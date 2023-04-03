@@ -3,7 +3,8 @@
 
 <%- contentFor('body') %>
 
-<%- include( `${module}/businessCase/businessCase`, {
+<%
+    const business = {
         title: 'Business cases',
         text: 'Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.',
         link: {
@@ -64,67 +65,97 @@
             }
         ]
     }
-) %>
 
-<%- include( `${module}/businessCase/businessCase`, {
-    title: 'Business cases',
-    text: 'Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.',
-    link: {
-        href: '#',
-        label: 'See all',
-        icon: 'links',
-    },
-    img: {
-        src: 'business-case-background-01',
-        alt: 'business case module background'
-    },
-    background: 'eren_500',
-    slides: [
-        {
-            title: 'Business case 1: Brandemic',
-            icon: 'award',
-            subtitle: 'New brand',
-            img: {
-                src: 'card-business-brandemic_darkmode',
-                alt: 'case image 1'
-            },
-            date: '23/03/2019',
-            link: {
-                href: '#',
-                label: 'More info',
-                icon: 'info'
-            }
+    const businessModule = include(`${module}/businessCase/businessCase`, business)
+
+    const codePreview = {
+        idAccordion: 'business-cases',
+        idItem: 'business-cases-item',
+        isDarkened: true,
+        content: businessModule
+    }
+%>
+
+<%- businessModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>
+
+
+<%
+    const businessDark = {
+        title: 'Business cases',
+        text: 'Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.',
+        link: {
+            href: '#',
+            label: 'See all',
+            icon: 'links',
         },
-        {
-            title: 'Business case 2: B_system',
-            icon: 'view-code',
-            subtitle: 'Web template system',
-            img: {
-                src: 'card-business-brandemic_darkmode',
-                alt: 'case image 2'
-            },
-            date: '24/03/2019',
-            link: {
-                href: '#',
-                label: 'More info',
-                icon: 'info'
-            }
+        img: {
+            src: 'business-case-background-01',
+            alt: 'business case module background'
         },
-        {
-            title: 'Business case 3: Brandemic',
-            icon: 'award',
-            subtitle: 'New brand',
-            img: {
-                src: 'card-business-brandemic_darkmode',
-                alt: 'case image 3'
+        background: 'eren_500',
+        slides: [
+            {
+                title: 'Business case 1: Brandemic',
+                icon: 'award',
+                subtitle: 'New brand',
+                img: {
+                    src: 'card-business-brandemic_darkmode',
+                    alt: 'case image 1'
+                },
+                date: '23/03/2019',
+                link: {
+                    href: '#',
+                    label: 'More info',
+                    icon: 'info'
+                }
             },
-            date: '25/03/2019',
-            link: {
-                href: '#',
-                label: 'More info',
-                icon: 'info'
+            {
+                title: 'Business case 2: B_system',
+                icon: 'view-code',
+                subtitle: 'Web template system',
+                img: {
+                    src: 'card-business-brandemic_darkmode',
+                    alt: 'case image 2'
+                },
+                date: '24/03/2019',
+                link: {
+                    href: '#',
+                    label: 'More info',
+                    icon: 'info'
+                }
+            },
+            {
+                title: 'Business case 3: Brandemic',
+                icon: 'award',
+                subtitle: 'New brand',
+                img: {
+                    src: 'card-business-brandemic_darkmode',
+                    alt: 'case image 3'
+                },
+                date: '25/03/2019',
+                link: {
+                    href: '#',
+                    label: 'More info',
+                    icon: 'info'
+                }
             }
-        }
-    ],
-    isDark: true,
-}) %>
+        ],
+        isDark: true,
+    }
+
+    const businessDarkModule = include(`${module}/businessCase/businessCase`, businessDark)
+
+    const codePreviewDark = {
+        idAccordion: 'business-cases',
+        idItem: 'business-cases-item',
+        isDarkened: true,
+        content: businessDarkModule
+    }
+%>
+
+<%- businessDarkModule %>
+<div class="section p-0" data-b-system-theme="dark">
+    <%- include(`${component}/codePreview/codePreview`, codePreviewDark) %>
+</div>
