@@ -75,5 +75,18 @@
             alt: 'This is a image descriptive text'
         }
     }
-] %>
-<%- include(`${module}/portfolioGrid/decomposed`, {items, hasBorder: true}) %>
+]
+
+    const portfolioDecomposedModule = include(`${module}/portfolioGrid/decomposed`, {items, hasBorder: true})
+
+    const codePreview = {
+        idAccordion: 'portfolio',
+        idItem: 'portfolio-item',
+        isDarkened: true,
+        content: portfolioDecomposedModule
+    }
+%>
+
+<%- portfolioDecomposedModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>

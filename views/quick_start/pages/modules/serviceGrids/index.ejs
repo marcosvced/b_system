@@ -2,7 +2,9 @@
 
 <%- contentFor('body') %>
 
-    <%- include( `${module}/serviceGrid/serviceGrid`, {
+<!-- Light -->
+<%
+    const service = {
         cards: [
             {
                 title: 'Digital strategy',
@@ -66,9 +68,26 @@
             },
         ],
         isDark: false
-    } ) %>
+    }
 
-    <%- include( `${module}/serviceGrid/serviceGrid`, {
+    const serviceModule = include(`${module}/serviceGrid/serviceGrid`, service)
+
+    const codePreview = {
+        idAccordion: 'service',
+        idItem: 'service-item',
+        isDarkened: true,
+        content: serviceModule
+    }
+%>
+
+<%- serviceModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>
+<!-- END: Light -->
+
+<!-- Dark -->
+<%
+    const serviceDark = {
         cards: [
             {
                 title: 'Digital strategy',
@@ -132,4 +151,21 @@
             },
         ],
         isDark: true
-    } ) %>
+    }
+
+    const serviceDarkModule = include(`${module}/serviceGrid/serviceGrid`, serviceDark)
+
+    const codePreviewDark = {
+        idAccordion: 'service',
+        idItem: 'service-item',
+        isDarkened: true,
+        content: serviceModule
+    }
+%>
+
+<%- serviceDarkModule %>
+
+<div class="section p-0" data-b-system-theme="dark">
+    <%- include(`${component}/codePreview/codePreview`, codePreviewDark) %>
+</div>
+<!-- END: Dark -->

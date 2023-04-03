@@ -2,105 +2,119 @@
 
 <%- contentFor('body') %>
 
+<%
+    const portfolio = {
+        grid: [
+            {
+            img: {
+                src: 'portfolio-basic-01',
+                alt: 'Portfolio example'
+            },
+            tag: '1',
+            title: 'Signage design',
+            text: 'We create signage of spaces, exterior signage, signs, signs, corporeal.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+            },
+            {
+            img: {
+                src: 'portfolio-basic-02',
+                alt: 'Portfolio example'
+            },
+            tag: '2',
+            title: 'Corporate design',
+            text: 'Logos, company presentations, manuals, cards, corporate stationery.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+            },
+            {
+            img: {
+                src: 'portfolio-horizontal-01',
+                srcMobile: 'portfolio-horizontal-01_mobile',
+                alt: 'Portfolio horizontal example'
+            },
+            tag: '3',
+            title: 'Editorial design',
+            text: 'Design and layout of reports, catalogs, brochures, technical reports, publications, manuals, cards, corporate stationery.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'horizontal',
+            },
+            {
+            img: {
+                src: 'portfolio-vertical-01',
+                srcMobile: 'portfolio-vertical-01_mobile',
+                alt: 'Portfolio vertical example'
+            },
+            tag: '3',
+            title: 'Editorial design',
+            text: 'Design and layout of reports, catalogs, brochures, technical reports, publications, manuals, cards, corporate stationery.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'vertical',
+            },
+            {
+            img: {
+                src: 'portfolio-basic-03',
+                alt: 'Portfolio example'
+            },
+            tag: '5',
+            title: 'Advertising design',
+            text: 'Advertising graphics, posters, billboards, flyers, brochures.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+            },
+            {
+            img: {
+                src: 'portfolio-basic-04',
+                alt: 'Portfolio example'
+            },
+            tag: '6',
+            title: 'Web design',
+            text: 'Online stores, corporate pages, interfaces, microsites, intranets, landing pages, banners, mobile device applications.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'left'
+            },
+        ],
+        hasBorder: true
+    }
 
-<%- include(`${module}/portfolioGrid/basic`, {
-    grid: [
-        {
-        img: {
-            src: 'portfolio-basic-01',
-            alt: 'Portfolio example'
-        },
-        tag: '1',
-        title: 'Signage design',
-        text: 'We create signage of spaces, exterior signage, signs, signs, corporeal.',
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        shape: 'basic',
-        contentPosition: 'right'
-        },
-        {
-        img: {
-            src: 'portfolio-basic-02',
-            alt: 'Portfolio example'
-        },
-        tag: '2',
-        title: 'Corporate design',
-        text: 'Logos, company presentations, manuals, cards, corporate stationery.',
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        shape: 'basic',
-        contentPosition: 'right'
-        },
-        {
-        img: {
-            src: 'portfolio-horizontal-01',
-            srcMobile: 'portfolio-horizontal-01_mobile',
-            alt: 'Portfolio horizontal example'
-        },
-        tag: '3',
-        title: 'Editorial design',
-        text: 'Design and layout of reports, catalogs, brochures, technical reports, publications, manuals, cards, corporate stationery.',
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        shape: 'horizontal',
-        },
-        {
-        img: {
-            src: 'portfolio-vertical-01',
-            srcMobile: 'portfolio-vertical-01_mobile',
-            alt: 'Portfolio vertical example'
-        },
-        tag: '3',
-        title: 'Editorial design',
-        text: 'Design and layout of reports, catalogs, brochures, technical reports, publications, manuals, cards, corporate stationery.',
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        shape: 'vertical',
-        },
-        {
-        img: {
-            src: 'portfolio-basic-03',
-            alt: 'Portfolio example'
-        },
-        tag: '5',
-        title: 'Advertising design',
-        text: 'Advertising graphics, posters, billboards, flyers, brochures.',
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        shape: 'basic',
-        contentPosition: 'right'
-        },
-        {
-        img: {
-            src: 'portfolio-basic-04',
-            alt: 'Portfolio example'
-        },
-        tag: '6',
-        title: 'Web design',
-        text: 'Online stores, corporate pages, interfaces, microsites, intranets, landing pages, banners, mobile device applications.',
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        shape: 'basic',
-        contentPosition: 'left'
-        },
-    ],
-    hasBorder: false
-}) %>
+    const portfolioModule = include(`${module}/portfolioGrid/basic`, portfolio)
+
+    const codePreview = {
+        idAccordion: 'portfolio',
+        idItem: 'portfolio-item',
+        isDarkened: true,
+        content: portfolioModule
+    }
+%>
+
+<%- portfolioModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>

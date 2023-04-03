@@ -1,93 +1,87 @@
 <%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('body') %>
-<!-- Section Light -->
-    <%- include( `${module}/basicGrid/basicGrid`, {
-        basicGrid: [
-            {
-                pretitle: 'Modules',
-                title: 'Basic grid',
-                text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
-                link: {
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
-                img: {
-                    src: 'basic-grid-01',
-                    alt: 'basic grid image 1'
-                },
-                contentPosition: 'left',
-            }
-        ],
-        isDark: false,
-        hasBorder: false
-    } ) %>
 
-    <%- include( `${module}/basicGrid/basicGrid`, {
-        basicGrid: [
-            {
-                pretitle: 'Work areas',
-                title: 'How do we do it?',
-                text: "Putting our clients' users at the center of the conversation, and giving solutions from design to complex problems. No matter the size of the project, we use these principles to create impact.",
-                link: {
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
-                img: {
-                    src: 'basic-grid-02',
-                    alt: 'basic grid image 2'
-                },
-                contentPosition: 'right',
-            }
-        ],
-        isDark: false,
-        hasBorder: false
-    } ) %>
-<!-- END: Section Light -->
-<!-- Section Dark -->
-    <%- include( `${module}/basicGrid/basicGrid`, {
-        basicGrid: [
-            {
-                pretitle: 'Modules',
-                title: 'Basic grid',
-                text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
-                link: {
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
-                img: {
-                    src: 'basic-grid-01',
-                    alt: 'basic grid image 1'
-                },
-                contentPosition: 'left',
-            }
-        ],
-        isDark: true,
-        hasBorder: false
-    } ) %>
+<% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section p-0"
+    <% if(section === 'dark') { %>
+             data-b-system-theme="dark"
+            <% } %>
+    >
 
-    <%- include( `${module}/basicGrid/basicGrid`, {
-        basicGrid: [
-            {
-                pretitle: 'Work areas',
-                title: 'How do we do it?',
-                text: "Putting our clients' users at the center of the conversation, and giving solutions from design to complex problems. No matter the size of the project, we use these principles to create impact.",
-                link: {
-                    href: '#',
-                    label: 'Learn more',
-                    icon: 'links'
-                },
-                img: {
-                    src: 'basic-grid-02',
-                    alt: 'basic grid image 2'
-                },
-                contentPosition: 'right',
-            }
-        ],
-        isDark: true,
-        hasBorder: false
-    } ) %>
-<!-- END: Section Dark -->
+    <%
+        const basic = {
+            basicGrid: [
+                {
+                    pretitle: 'Modules',
+                    title: 'Basic grid',
+                    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links'
+                    },
+                    img: {
+                        src: 'basic-grid-01',
+                        alt: 'basic grid image 1'
+                    },
+                    contentPosition: 'left',
+                }
+            ],
+            hasBorder: true
+        }
+
+        const basicModule = include(`${module}/basicGrid/basicGrid`, basic)
+
+        const codePreview = {
+            idAccordion: 'basic',
+            idItem: 'basic-item',
+            isDarkened: true,
+            content: basicModule
+        }
+    %>
+
+    <%- basicModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+
+    <%
+        const basicReverse = {
+            basicGrid: [
+                {
+                    pretitle: 'Work areas',
+                    title: 'How do we do it?',
+                    text: "Putting our clients' users at the center of the conversation, and giving solutions from design to complex problems. No matter the size of the project, we use these principles to create impact.",
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links'
+                    },
+                    img: {
+                        src: 'basic-grid-02',
+                        alt: 'basic grid image 2'
+                    },
+                    contentPosition: 'right',
+                }
+            ],
+            hasBorder: true
+        }
+
+        const basicReverseModule = include(`${module}/basicGrid/basicGrid`, basicReverse)
+
+        const codePreviewReverse = {
+            idAccordion: 'basic',
+            idItem: 'basic-item',
+            isDarkened: true,
+            content: basicReverseModule
+        }
+    %>
+
+    <%- basicReverseModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreviewReverse) %>
+
+    </section>
+    <!-- END:Section <%- section -%> -->
+    <% }) %>

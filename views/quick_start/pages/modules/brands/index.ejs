@@ -3,41 +3,57 @@
 <%- contentFor('body') %>
 
 <!-- Section Light -->
-    <%- include( `${module}/brand/brand`, {
-        title: 'Awards and honours',
-        target: 'light',
-        brands: [
-                {
-                    img: {
-                        src: 'brand-01',
-                        alt: 'light brand 01',
-                    }
-                },
-                {
-                    img: {
-                        src: 'brand-02',
-                        alt: 'light brand 02',
-                    }
-                },
-                {
-                    img: {
-                        src: 'brand-03',
-                        alt: 'light brand 03',
-                    }
-                },
-                {
-                    img: {
-                        src: 'brand-04',
-                        alt: 'light brand 04',
-                    }
-                },
-            ],
-        isDark: false,
-        hasBorder: true
-    } ) %>
+    <%
+        const brand = {
+            title: 'Awards and honours',
+            target: 'light',
+            brands: [
+                    {
+                        img: {
+                            src: 'brand-01',
+                            alt: 'light brand 01',
+                        }
+                    },
+                    {
+                        img: {
+                            src: 'brand-02',
+                            alt: 'light brand 02',
+                        }
+                    },
+                    {
+                        img: {
+                            src: 'brand-03',
+                            alt: 'light brand 03',
+                        }
+                    },
+                    {
+                        img: {
+                            src: 'brand-04',
+                            alt: 'light brand 04',
+                        }
+                    },
+                ],
+            isDark: false,
+            hasBorder: true
+        }
+
+        const brandModule = include(`${module}/brand/brand`, brand)
+
+        const codePreview = {
+            idAccordion: 'brand',
+            idItem: 'brand-item',
+            isDarkened: true,
+            content: brandModule
+        }
+    %>
+
+    <%- brandModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreview) %>
 <!-- END: Section Light -->
 <!-- Section Dark -->
-    <%- include( `${module}/brand/brand`, {
+    <%
+    const brandDark = {
         title: 'Awards and honours',
         target: 'dark',
         brands: [
@@ -68,5 +84,21 @@
             ],
         isDark: true,
         hasBorder: true
-    } ) %>
+    }
+
+    const brandDarkModule = include(`${module}/brand/brand`, brandDark)
+
+    const codePreviewDark = {
+        idAccordion: 'brand',
+        idItem: 'brand-item',
+        isDarkened: true,
+        content: brandDarkModule
+    }
+    %>
+
+    <%- brandDarkModule %>
+
+    <div class="section p-0" data-b-system-theme="dark">
+        <%- include(`${component}/codePreview/codePreview`, codePreviewDark) %>
+    </div>
 <!-- END: Section Dark -->
