@@ -2,42 +2,57 @@
 
 <%- contentFor('body') %>
 
-<div class="main-content main-content-space-top">
-    <section class="module-wrapper">
-        <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/basic`, {
+<% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section p-0"
+    <% if(section === 'dark') { %>
+             data-b-system-theme="dark"
+            <% } %>
+    >
+        <%
+            const footer = {
                 img: {src: 'logo-dark-gray.svg', alt: 'logo'},
                 text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
-            }) %>
-        </div>
-    </section>
+            }
 
-    <section class="module-wrapper">
-        <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/basic`, {
+            const footerModule = include(`${component}/footer/basic`, footer)
+
+            const codePreview = {
+                idAccordion: 'footer',
+                idItem: 'footer-item',
+                isDarkened: true,
+                content: footerModule
+            }
+        %>
+        <div class="section section-divider p-0">
+            <%- footerModule %>
+        </div>
+
+        <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+
+        <!-- Darkened -->
+        <%
+            const footerDarkened = {
                 img: {src: 'logo-dark-gray.svg', alt: 'logo'},
                 text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
-                isDarkened: true,
-            }) %>
-        </div>
-    </section>
+                isDarkened: true
+            }
 
-    <section class="module-wrapper" data-b-system-theme="dark">
-        <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/basic`, {
-                img: {src: 'logo-light-gray.svg', alt: 'logo'},
-                text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
-            }) %>
-        </div>
-    </section>
+            const footerDarkenedModule = include(`${component}/footer/basic`, footerDarkened)
 
-    <section class="module-wrapper" data-b-system-theme="dark">
-        <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/basic`, {
-                img: {src: 'logo-light-gray.svg', alt: 'logo'},
-                text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+            const codePreviewDarkened = {
+                idAccordion: 'footer',
+                idItem: 'footer-item',
                 isDarkened: true,
-            }) %>
+                content: footerDarkenedModule
+            }
+        %>
+        <div class="section section-divider p-0">
+            <%- footerDarkenedModule %>
         </div>
+
+        <%- include(`${component}/codePreview/codePreview`, codePreviewDarkened) %>
+        <!-- END: Darkened -->
     </section>
-</div>
+    <!-- END:Section <%- section -%> -->
+<% }) %>

@@ -3,14 +3,29 @@
 
 <%- contentFor('body') %>
 
-<%- include(`${module}/searcher/searcher`, {
-    input: {
-        id: 'searcher',
-        label: 'Search...',
-        icon: 'm-glass'
-    },
-    button: 'blade',
-    isDarkened: false,
-    isDark: false,
-    hasBorder: false
-}) %>
+<%
+    const search = {
+        input: {
+            id: 'searcher',
+            label: 'Search...',
+            icon: 'm-glass'
+        },
+        button: 'blade',
+        isDarkened: false,
+        isDark: false,
+        hasBorder: true
+    }
+
+    const basicModule = include(`${module}/searcher/searcher`, search)
+
+    const codePreview = {
+        idAccordion: 'basic',
+        idItem: 'basic-item',
+        isDarkened: true,
+        content: basicModule
+    }
+%>
+
+<%- basicModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>

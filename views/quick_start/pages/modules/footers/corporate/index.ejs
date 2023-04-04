@@ -2,10 +2,15 @@
 
 <%- contentFor('body') %>
 
-<div class="main-content main-content-space-top">
-    <section class="module-wrapper">
-        <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/corporate`, {
+<% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section p-0"
+    <% if(section === 'dark') { %>
+             data-b-system-theme="dark"
+            <% } %>
+    >
+        <%
+            const footer = {
                 img: {src: 'logo-dark-gray.svg', alt: 'logo'},
                 text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
@@ -96,13 +101,26 @@
                         },
                     ]
                 ]
-            }) %>
-        </div>
-    </section>
+            }
 
-    <section class="module-wrapper">
-        <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/corporate`, {
+            const footerModule = include(`${component}/footer/corporate`, footer)
+
+            const codePreview = {
+                idAccordion: 'footer',
+                idItem: 'footer-item',
+                isDarkened: true,
+                content: footerModule
+            }
+        %>
+        <div class="section section-divider p-0">
+            <%- footerModule %>
+        </div>
+
+        <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+
+        <!-- Darkened -->
+        <%
+            const footerDarkened = {
                 img: {src: 'logo-dark-gray.svg', alt: 'logo'},
                 text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
                 link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
@@ -193,201 +211,23 @@
                         },
                     ]
                 ]
-            }) %>
-        </div>
-    </section>
+            }
 
-    <section class="module-wrapper" data-b-system-theme="dark">
-        <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/corporate`, {
-                img: {src: 'logo-light-gray.svg', alt: 'logo'},
-                text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
-                link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
-                isDarkened: false,
-                columns: [
-                    [
-                        {
-                            title: 'About',
-                        },
-                        {
-                            name: 'B_system',
-                            href: '#'
-                        },
-                        {
-                            name: 'About us',
-                            href: '#'
-                        },
-                        {
-                            name: 'Our services',
-                            href: '#'
-                        },
-                        {
-                            name: 'Contact us',
-                            href: '#'
-                        },
-                    ],
-                    [
-                        {
-                            title: 'Services'
-                        },
-                        {
-                            name: 'Our services',
-                            href: '#'
-                        },
-                        {
-                            name: 'What we offer',
-                            href: '#'
-                        },
-                        {
-                            name: 'Contact classic',
-                            href: '#'
-                        },
-                        {
-                            name: 'Contracting',
-                            href: '#'
-                        },
-                    ],
-                    [
-                        {
-                            title: 'Customer'
-                        },
-                        {
-                            name: 'Customer support',
-                            href: '#'
-                        },
-                        {
-                            name: 'Testimonials',
-                            href: '#'
-                        },
-                        {
-                            name: 'Team classic',
-                            href: '#'
-                        },
-                        {
-                            name: 'Team modern',
-                            href: '#'
-                        },
-                    ],
-                    [
-                        {
-                            title: 'Featured demos'
-                        },
-                        {
-                            name: 'Startup',
-                            href: '#'
-                        },
-                        {
-                            name: 'Design studio',
-                            href: '#'
-                        },
-                        {
-                            name: 'Branding agency',
-                            href: '#'
-                        },
-                        {
-                            name: 'Freelance',
-                            href: '#'
-                        },
-                    ]
-                ]
-            }) %>
-        </div>
-    </section>
+            const footerDarkenedModule = include(`${component}/footer/corporate`, footerDarkened)
 
-    <section class="module-wrapper" data-b-system-theme="dark">
-        <div class="module-view-example-wrapper">
-            <%- include(`${component}/footer/corporate`, {
-                img: {src: 'logo-light-gray.svg', alt: 'logo'},
-                text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
-                link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+            const codePreviewDarkened = {
+                idAccordion: 'footer',
+                idItem: 'footer-item',
                 isDarkened: true,
-                columns: [
-                    [
-                        {
-                            title: 'About',
-                        },
-                        {
-                            name: 'B_system',
-                            href: '#'
-                        },
-                        {
-                            name: 'About us',
-                            href: '#'
-                        },
-                        {
-                            name: 'Our services',
-                            href: '#'
-                        },
-                        {
-                            name: 'Contact us',
-                            href: '#'
-                        },
-                    ],
-                    [
-                        {
-                            title: 'Services'
-                        },
-                        {
-                            name: 'Our services',
-                            href: '#'
-                        },
-                        {
-                            name: 'What we offer',
-                            href: '#'
-                        },
-                        {
-                            name: 'Contact classic',
-                            href: '#'
-                        },
-                        {
-                            name: 'Contracting',
-                            href: '#'
-                        },
-                    ],
-                    [
-                        {
-                            title: 'Customer'
-                        },
-                        {
-                            name: 'Customer support',
-                            href: '#'
-                        },
-                        {
-                            name: 'Testimonials',
-                            href: '#'
-                        },
-                        {
-                            name: 'Team classic',
-                            href: '#'
-                        },
-                        {
-                            name: 'Team modern',
-                            href: '#'
-                        },
-                    ],
-                    [
-                        {
-                            title: 'Featured demos'
-                        },
-                        {
-                            name: 'Startup',
-                            href: '#'
-                        },
-                        {
-                            name: 'Design studio',
-                            href: '#'
-                        },
-                        {
-                            name: 'Branding agency',
-                            href: '#'
-                        },
-                        {
-                            name: 'Freelance',
-                            href: '#'
-                        },
-                    ]
-                ]
-            }) %>
+                content: footerDarkenedModule
+            }
+        %>
+        <div class="section section-divider p-0">
+            <%- footerDarkenedModule %>
         </div>
+
+        <%- include(`${component}/codePreview/codePreview`, codePreviewDarkened) %>
+        <!-- END: Darkened -->
     </section>
-</div>
+    <!-- END:Section <%- section -%> -->
+<% }) %>

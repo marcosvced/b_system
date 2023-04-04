@@ -2,32 +2,46 @@
 <%- include(`${view}/quick_start/darkened-layout`) %>
 
 <%- contentFor('body') %>
-<section class="section p-0 m-0" data-b-system-theme="light">
-    <%- include(`${module}/login/login`, {
-        title: 'Access B_system',
-        text: 'Hello! Enter your username and password to access the private area:',
-        inputs: [
-            {
-                id: 'login-user',
-                label: 'User',
+<section class="section section-divider p-0 m-0" data-b-system-theme="light">
+    <%
+        const login = {
+            title: 'Access B_system',
+            text: 'Hello! Enter your username and password to access the private area:',
+            inputs: [
+                {
+                    id: 'login-user',
+                    label: 'User',
+                },
+                {
+                    id: 'login-password',
+                    label: 'Password',
+                    icon: 'eye',
+                    type: 'password'
+                },
+            ],
+            button: {
+                label: 'Enter',
+                variant: 'primary'
             },
-            {
-                id: 'login-password',
-                label: 'Password',
-                icon: 'eye',
-                type: 'password'
+            link: {
+                href: '#',
+                label: 'Forgot your password?'
             },
-        ],
-        button: {
-            label: 'Enter',
-            variant: 'primary'
-        },
-        link: {
-            href: '#',
-            label: 'Forgot your password?'
-        },
-        isDarkened: false,
-        isDark: false,
-        hasBorder: false
-    }) %>
+            isDarkened: false,
+            isDark: false,
+            hasBorder: false
+        }
+
+        const loginModule = include(`${module}/login/login`, login)
+
+        const codePreview = {
+            idAccordion: 'login',
+            idItem: 'login-item',
+            isDarkened: true,
+            content: loginModule
+        }
+    %>
+
+    <%- loginModule %>
 </section>
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>
