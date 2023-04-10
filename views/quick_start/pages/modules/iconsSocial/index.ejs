@@ -2,30 +2,61 @@
 
 <%- contentFor('body') %>
 
-<%- include(`${module}/iconSocial/iconSocial`, {
-socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-isDarkened: false,
-isDark: false,
-hasBorder: false
-}) -%>
+<% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section p-0"
+        <% if(section === 'dark') { %>
+             data-b-system-theme="dark"
+        <% } %>
+    >
+    <!-- Basic -->
+    <%
+        const social = {
+            socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+            isDarkened: false,
+            isDark: false,
+            hasBorder: true
+        }
 
-<%- include(`${module}/iconSocial/iconSocial`, {
-socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-isDarkened: true,
-isDark: false,
-hasBorder: false
-}) -%>
+        const socialModule = include(`${module}/iconSocial/iconSocial`, social)
 
-<%- include(`${module}/iconSocial/iconSocial`, {
-socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-isDarkened: false,
-isDark: true,
-hasBorder: false
-}) -%>
+        const codePreview = {
+            idAccordion: 'social',
+            idItem: 'social-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: socialModule
+        }
+    %>
 
-<%- include(`${module}/iconSocial/iconSocial`, {
-socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-isDarkened: true,
-isDark: true,
-hasBorder: false
-}) -%>
+    <%- socialModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+    <!-- END: Basic -->
+
+    <!-- Basic -->
+    <%
+        const socialDarkened = {
+            socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+            isDarkened: true,
+            hasBorder: false
+        }
+
+        const socialDarkenedModule = include(`${module}/iconSocial/iconSocial`, socialDarkened)
+
+        const codePreviewDarkened = {
+            idAccordion: 'social',
+            idItem: 'social-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: socialDarkenedModule
+        }
+    %>
+
+    <%- socialDarkenedModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreviewDarkened) %>
+    <!-- END: Basic -->
+    </section>
+    <!-- END:Section <%- section -%> -->
+<% }) %>

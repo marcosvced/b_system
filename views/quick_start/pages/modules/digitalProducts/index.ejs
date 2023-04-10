@@ -1,147 +1,119 @@
 <%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('body') %>
+<% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section p-0"
+        <% if(section === 'dark') { %>
+             data-b-system-theme="dark"
+        <% } %>
+    >
+    <!-- Basic -->
+    <%
+        const digital = {
+            id: '100-digital',
+            masked: {
+                img: {
+                    src: 'featured-content-08',
+                    alt: 'featured content image',
+                },
+                shape: 'system'
+            },
+            subtitle: 'B_bank',
+            title: 'Welcome to the total management of your economy',
+            isSerif: false,
+            links: [
+                {
+                    href: '#',
+                    label: 'APP STORE',
+                    icon: 'logo-apple'
+                },
+                {
+                    href: '#',
+                    label: 'GOOGLE PLAY',
+                    icon: 'logo-android'
+                },
+            ],
+            btn: {
+                label: 'Become a customer',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            contentPosition: 'left',
+            isDarkened: false,
+            isDark: false,
+            hasBorder: true
+        }
 
-<%- include( `${module}/digitalProduct/digitalProduct`, {
-    id: '100-digital',
-    masked: {
-        img: {
-            src: 'featured-content-08',
-            alt: 'featured content image',
-        },
-        shape: 'system'
-    },
-    subtitle: 'B_bank',
-    title: 'Welcome to the total management of your economy',
-    isSerif: false,
-    links: [
-        {
-            href: '#',
-            label: 'APP STORE',
-            icon: 'logo-apple'
-        },
-        {
-            href: '#',
-            label: 'GOOGLE PLAY',
-            icon: 'logo-android'
-        },
-    ],
-    btn: {
-        label: 'Become a customer',
-        isCTA: true,
-        icon: 'links',
-        iconPosition: 'after'
-    },
-    contentPosition: 'left',
-    isDarkened: false,
-    isDark: false,
-    hasBorder: true
-} ) %>
+        const digitalModule = include(`${module}/digitalProduct/digitalProduct`, digital)
 
-<%- include( `${module}/digitalProduct/digitalProduct`, {
-    id: '100-digital',
-    masked: {
-        img: {
-            src: 'featured-content-07',
-            alt: 'featured content image',
-        },
-        shape: 'template'
-    },
-    subtitle: 'B_bank',
-    title: 'Welcome to the total management of your economy',
-    isSerif: false,
-    links: [
-        {
-            href: '#',
-            label: 'APP STORE',
-            icon: 'logo-apple'
-        },
-        {
-            href: '#',
-            label: 'GOOGLE PLAY',
-            icon: 'logo-android'
-        },
-    ],
-    btn: {
-        label: 'Become a customer',
-        isCTA: true,
-        icon: 'links',
-        iconPosition: 'after'
-    },
-    contentPosition: 'left',
-    isDarkened: true,
-    isDark: false,
-    hasBorder: true
-} ) %>
+            const codePreview = {
+                idAccordion: 'digital',
+                idItem: 'digital-item',
+                isDarkened: true,
+                hasBorder: true,
+                content: digitalModule
+            }
+    %>
+    <%- digitalModule %>
 
-<%- include( `${module}/digitalProduct/digitalProduct`, {
-    id: '100-digital',
-    masked: {
-        img: {
-            src: 'featured-content-08',
-            alt: 'featured content image',
-        },
-        shape: 'system'
-    },
-    subtitle: 'B_bank',
-    title: 'Welcome to the total management of your economy',
-    isSerif: false,
-    links: [
-        {
-            href: '#',
-            label: 'APP STORE',
-            icon: 'logo-apple'
-        },
-        {
-            href: '#',
-            label: 'GOOGLE PLAY',
-            icon: 'logo-android'
-        },
-    ],
-    btn: {
-        label: 'Become a customer',
-        isCTA: true,
-        icon: 'links',
-        iconPosition: 'after'
-    },
-    contentPosition: 'left',
-    isDarkened: false,
-    isDark: true,
-    hasBorder: true
-} ) %>
+    <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+    <!-- END: Basic -->
 
-<%- include( `${module}/digitalProduct/digitalProduct`, {
-    id: '100-digital',
-    masked: {
-        img: {
-            src: 'featured-content-07',
-            alt: 'featured content image',
-        },
-        shape: 'system'
-    },
-    subtitle: 'B_bank',
-    title: 'Welcome to the total management of your economy',
-    isSerif: false,
-    links: [
-        {
-            href: '#',
-            label: 'APP STORE',
-            icon: 'logo-apple'
-        },
-        {
-            href: '#',
-            label: 'GOOGLE PLAY',
-            icon: 'logo-android'
-        },
-    ],
-    btn: {
-        label: 'Become a customer',
-        isCTA: true,
-        icon: 'links',
-        iconPosition: 'after'
-    },
-    contentPosition: 'left',
-    isDarkened: true,
-    isDark: true,
-    hasBorder: true
-} ) %>
+    <!-- Darkened -->
+    <%
+        const digitalD = {
+            id: '100-digital',
+            masked: {
+                img: {
+                    src: 'featured-content-07',
+                    alt: 'featured content image',
+                },
+                shape: 'template'
+            },
+            subtitle: 'B_bank',
+            title: 'Welcome to the total management of your economy',
+            isSerif: false,
+            links: [
+                {
+                    href: '#',
+                    label: 'APP STORE',
+                    icon: 'logo-apple'
+                },
+                {
+                    href: '#',
+                    label: 'GOOGLE PLAY',
+                    icon: 'logo-android'
+                },
+            ],
+            btn: {
+                label: 'Become a customer',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            contentPosition: 'left',
+            isDarkened: true,
+            isDark: false,
+            hasBorder: false
+        }
+
+        const digitalDModule = include(`${module}/digitalProduct/digitalProduct`, digitalD)
+
+            const codePreviewD = {
+                idAccordion: 'digital',
+                idItem: 'digital-item',
+                isDarkened: true,
+                hasBorder: true,
+                content: digitalDModule
+            }
+    %>
+    <%- digitalDModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreviewD) %>
+    <!-- END: Darkened -->
+
+    </section>
+    <!-- END:Section <%- section -%> -->
+<% }) %>

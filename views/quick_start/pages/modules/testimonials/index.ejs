@@ -2,61 +2,77 @@
 
 <%- contentFor('body') %>
 
-<%- include(`${module}/testimonial/testimonial`, {
-    title: 'The opinion of our clients',
-    score: '4.6 score',
-    testimonials: [
-        {
-            text: "Many of the failures in people's lives occurred when they did not realize what was close to success.",
-            avatar: {
-                src: 'avatar-testimonial-4',
-                alt: 'Melissa Edgar',
-                name: 'Melissa Edgar',
-                job: 'UX designer'
+<%
+    const testimonial = {
+        title: 'The opinion of our clients',
+        score: '4.6 score',
+        testimonials: [
+            {
+                text: "Many of the failures in people's lives occurred when they did not realize what was close to success.",
+                avatar: {
+                    src: 'avatar-testimonial-4',
+                    alt: 'Melissa Edgar',
+                    name: 'Melissa Edgar',
+                    job: 'UX designer'
+                },
+                stars: [
+                    {state: true},
+                    {state: true},
+                    {state: true},
+                    {state: true},
+                    {state: true},
+                ]
             },
-            stars: [
-                {state: true},
-                {state: true},
-                {state: true},
-                {state: true},
-                {state: true},
-            ]
-        },
-        {
-            text: "Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.",
-            avatar: {
-                src: 'avatar-testimonial-5',
-                alt: 'Sandra Golpe',
-                name: 'Sandra Golpe',
-                job: 'Marketing manager'
+            {
+                text: "Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.",
+                avatar: {
+                    src: 'avatar-testimonial-5',
+                    alt: 'Sandra Golpe',
+                    name: 'Sandra Golpe',
+                    job: 'Marketing manager'
+                },
+                stars: [
+                    {state: true},
+                    {state: true},
+                    {state: true},
+                    {state: true},
+                    {state: false},
+                ]
             },
-            stars: [
-                {state: true},
-                {state: true},
-                {state: true},
-                {state: true},
-                {state: false},
-            ]
-        },
-        {
-            text: "Always keep in mind that your own will to succeed is much more important than anything else.",
-            avatar: {
-                src: 'avatar-testimonial-1',
-                alt: 'Sandra Golpe',
-                name: 'Sandra Golpe',
-                job: 'Marketing manager'
+            {
+                text: "Always keep in mind that your own will to succeed is much more important than anything else.",
+                avatar: {
+                    src: 'avatar-testimonial-1',
+                    alt: 'Sandra Golpe',
+                    name: 'Sandra Golpe',
+                    job: 'Marketing manager'
+                },
+                stars: [
+                    {state: true},
+                    {state: true},
+                    {state: true},
+                    {state: true},
+                    {state: false},
+                ]
             },
-            stars: [
-                {state: true},
-                {state: true},
-                {state: true},
-                {state: true},
-                {state: false},
-            ]
-        },
-        
-    ],
-    isDarkened: false,
-    isDark: false,
-    hasBorder: false
-}) %>
+            
+        ],
+        isDarkened: false,
+        isDark: false,
+        hasBorder: true
+    }
+
+    const testimonialModule = include(`${module}/testimonial/testimonial`, testimonial)
+
+    const codePreview = {
+        idAccordion: 'testimonial',
+        idItem: 'testimonial-item',
+        isDarkened: true,
+        hasBorder: true,
+        content: testimonialModule
+    }
+%>
+
+<%- testimonialModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>

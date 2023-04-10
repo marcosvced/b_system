@@ -99,14 +99,15 @@
             idAccordion: 'basic',
             idItem: 'basic-item',
             isDarkened: true,
-            hasBorder: true,
             content: iconBasicDarkenedModule
         }
         %>
 
         <%- iconBasicDarkenedModule %>
 
-        <%- include(`${component}/codePreview/codePreview`, codePreviewBasicDarkened) %>
+        <div class="section section-divider p-0">
+            <%- include(`${component}/codePreview/codePreview`, codePreviewBasicDarkened) %>
+        </div>
         <!-- END: Basic Light Darkened -->
 
         <!-- Plus Light -->
@@ -170,9 +171,9 @@
 
         const iconPlusModule = include(`${module}/iconDescription/microillustration/microillustrationDescription`, iconPlus)
 
-        const codePreviewPlus = {
-            idAccordion: 'plus',
-            idItem: 'plus-item',
+        const codePreview = {
+            idAccordion: 'basic',
+            idItem: 'basic-item',
             isDarkened: true,
             hasBorder: true,
             content: iconPlusModule
@@ -181,7 +182,7 @@
 
         <%- iconPlusModule %>
 
-        <%- include(`${component}/codePreview/codePreview`, codePreviewPlus) %>
+        <%- include(`${component}/codePreview/codePreview`, codePreview) %>
         <!-- END: Plus Light -->
 
         <!-- Plus Light Darkened -->
@@ -245,9 +246,9 @@
 
         const iconPlusDarkenedModule = include(`${module}/iconDescription/microillustration/microillustrationDescription`, iconPlusDarkened)
 
-        const codePreviewPlusDarkened = {
-            idAccordion: 'plus',
-            idItem: 'plus-item',
+        const codePreviewDarkened = {
+            idAccordion: 'basic-darkened',
+            idItem: 'basic-darkened-item',
             isDarkened: true,
             hasBorder: true,
             content: iconPlusDarkenedModule
@@ -256,7 +257,7 @@
 
         <%- iconPlusDarkenedModule %>
 
-        <%- include(`${component}/codePreview/codePreview`, codePreviewPlusDarkened) %>
+        <%- include(`${component}/codePreview/codePreview`, codePreviewDarkened) %>
         <!-- END: Plus Light Darkened -->
 
     </section>

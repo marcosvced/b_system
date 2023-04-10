@@ -2,92 +2,159 @@
 
 <%- contentFor('body') %>
 <!--SECTION LIGHT-->
-    <%- include( `${module}/featuredContent/featuredContent`, {
-        masked: {
-            img: {
-                src: 'featured-content-01',
-                alt: 'featured content image',
+    <!-- Basic Light -->
+    <%
+        const basic = {
+            masked: {
+                img: {
+                    src: 'featured-content-01',
+                    alt: 'featured content image',
+                },
+                shape: 'module'
             },
-            shape: 'module'
-        },
-        subtitle: '1. Exploration phase',
-        title: 'Explore new concepts, products, services, ventures, brands, and systems.',
-        isSerif: true,
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        isDarkened: false,
-        isDark: false,
-        hasBorder: false
-    } ) %>
-
-
-    <%- include( `${module}/featuredContent/featuredContent`, {
-        masked: {
-            img: {
-                src: 'featured-content-02',
-                alt: 'featured content image 2',
+            subtitle: '1. Exploration phase',
+            title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+            isSerif: true,
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
             },
-            shape: 'system'
-        },
-        subtitle: '1. Exploration phase',
-        title: 'Explore new concepts, products, services, ventures, brands, and systems.',
-        isSerif: true,
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        isDarkened: true,
-        isDark: false,
-        hasBorder: false
-    } ) %>
+            isDarkened: false,
+            isDark: false,
+            hasBorder: true
+        }
+
+        const basicModule = include(`${module}/featuredContent/featuredContent`, basic)
+
+        const codePreview = {
+            idAccordion: 'basic',
+            idItem: 'basic-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: basicModule
+        }
+    %>
+    <%- basicModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+    <!-- END: Basic Light -->
+
+    <!-- Darkened Light -->
+    <%
+        const basicD = {
+            masked: {
+                img: {
+                    src: 'featured-content-02',
+                    alt: 'featured content image 2',
+                },
+                shape: 'system'
+            },
+            subtitle: '1. Exploration phase',
+            title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+            isSerif: true,
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            isDarkened: true,
+            isDark: false,
+            hasBorder: false
+        }
+
+        const basicDModule = include(`${module}/featuredContent/featuredContent`, basicD)
+
+        const codePreviewD = {
+            idAccordion: 'basic',
+            idItem: 'basic-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: basicDModule
+        }
+    %>
+    <%- basicDModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreviewD) %>
+    <!-- END: Darkened Light -->
 <!--END: SECTION LIGHT-->
 
-
 <!--SECTION DARK-->
-    <%- include( `${module}/featuredContent/featuredContent`, {
-        masked: {
-            img: {
-                src: 'featured-content-03',
-                alt: 'featured content image 3',
+    <!-- Basic Dark -->
+    <%
+        const basicDark = {
+            masked: {
+                img: {
+                    src: 'featured-content-03',
+                    alt: 'featured content image 3',
+                },
+                shape: 'template'
             },
-            shape: 'template'
-        },
-        subtitle: '1. Exploration phase',
-        title: 'Explore new concepts, products, services, ventures, brands, and systems.',
-        isSerif: true,
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        isDarkened: false,
-        isDark: true,
-        hasBorder: false
-    } ) %>
-
-
-    <%- include( `${module}/featuredContent/featuredContent`, {
-        masked: {
-            img: {
-                src: 'featured-content-04',
-                alt: 'featured content image 4',
+            subtitle: '1. Exploration phase',
+            title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+            isSerif: true,
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
             },
-            shape: 'consistency'
-        },
-        subtitle: '1. Exploration phase',
-        title: 'Explore new concepts, products, services, ventures, brands, and systems.',
-        isSerif: true,
-        link: {
-            href: '#',
-            label: 'Learn more',
-            icon: 'links'
-        },
-        isDarkened: true,
-        isDark: true,
-        hasBorder: false
-    } ) %>
+            isDarkened: false,
+            isDark: true,
+            hasBorder: true
+        }
+
+        const basicDarkModule = include(`${module}/featuredContent/featuredContent`, basicDark)
+
+        const codePreviewDark = {
+            idAccordion: 'basic',
+            idItem: 'basic-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: basicDarkModule
+        }
+    %>
+    <%- basicDarkModule %>
+    <div class="section p-0" data-b-system-theme="dark">
+        <%- include(`${component}/codePreview/codePreview`, codePreviewDark) %>
+    </div>
+    <!-- END: Basic Dark -->
+
+    <!-- Darkened Dark -->
+    <%
+        const basicDarkD = {
+            masked: {
+                img: {
+                    src: 'featured-content-04',
+                    alt: 'featured content image 4',
+                },
+                shape: 'consistency'
+            },
+            subtitle: '1. Exploration phase',
+            title: 'Explore new concepts, products, services, ventures, brands, and systems.',
+            isSerif: true,
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            isDarkened: true,
+            isDark: true,
+            hasBorder: false
+        }
+
+        const basicDarkDModule = include(`${module}/featuredContent/featuredContent`, basicDarkD)
+
+        const codePreviewDarkD = {
+            idAccordion: 'basic',
+            idItem: 'basic-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: basicDarkDModule
+        }
+    %>
+    <%- basicDarkDModule %>
+    <div class="section p-0" data-b-system-theme="dark">
+        <%- include(`${component}/codePreview/codePreview`, codePreviewDarkD) %>
+    </div>
+    <!-- END: Darkened Dark -->
 <!--END: SECTION DARK-->

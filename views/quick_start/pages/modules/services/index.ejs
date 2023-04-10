@@ -3,213 +3,150 @@
 
 <%- contentFor('body') %>
 
-<%- include(`${module}/service/service`, {
-    title: "What disciplines do our business integrate?",
-    services: [
-        {
-            title: "Digital strategy",
-            text: "We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ",
-            tag: "1",
-            img: {
-                src: "card-service-02",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            },
-        },
-        {
-            title: "Digital marketing",
-            text: "In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.",
-            tag: "2",
-            img: {
-                src: "card-service-03",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            },
-        },
-        {
-            title: "Social media",
-            text: "A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.",
-            tag: "3",
-            img: {
-                src: "card-service-04",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
+<% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section p-0"
+        <% if(section === 'dark') { %>
+             data-b-system-theme="dark"
+        <% } %>
+    >
+    <!-- Basic -->
+        <%
+            const service = {
+                title: "What disciplines do our business integrate?",
+                services: [
+                    {
+                        title: "Digital strategy",
+                        text: "We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ",
+                        tag: "1",
+                        img: {
+                            src: "card-service-02",
+                            alt: "Service image"
+                        },
+                        link: {
+                            href: "#",
+                            label: "Learn more",
+                            icon: "links"
+                        },
+                    },
+                    {
+                        title: "Digital marketing",
+                        text: "In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.",
+                        tag: "2",
+                        img: {
+                            src: "card-service-03",
+                            alt: "Service image"
+                        },
+                        link: {
+                            href: "#",
+                            label: "Learn more",
+                            icon: "links"
+                        },
+                    },
+                    {
+                        title: "Social media",
+                        text: "A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.",
+                        tag: "3",
+                        img: {
+                            src: "card-service-04",
+                            alt: "Service image"
+                        },
+                        link: {
+                            href: "#",
+                            label: "Learn more",
+                            icon: "links"
+                        }
+                    },
+                ],
+                isDarkened: false,
+                isDark: false,
+                hasBorder: true,
+                target:'service-1'
             }
-        },
-    ],
-    isDarkened: false,
-    isDark: false,
-    hasBorder: false,
-    target:'service-1'
-}) %>
 
-<%- include(`${module}/service/service`, {
-    title: "What disciplines do our business integrate?",
-    services: [
-        {
-            title: "Digital strategy",
-            text: "We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ",
-            tag: "1",
-            img: {
-                src: "card-service-02",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            }
-        },
-        {
-            title: "Digital marketing",
-            text: "In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.",
-            tag: "2",
-            img: {
-                src: "card-service-03",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            }
-        },
-        {
-            title: "Social media",
-            text: "A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.",
-            tag: "3",
-            img: {
-                src: "card-service-04",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            }
-        },
-    ],
-    isDarkened: true,
-    isDark: false,
-    hasBorder: false,
+            const serviceModule = include(`${module}/service/service`, service)
 
-target:'service-2'
-}) %>
+            const codePreview = {
+                idAccordion: 'service',
+                idItem: 'service-item',
+                isDarkened: true,
+                hasBorder: true,
+                content: serviceModule
+            }
+        %>
+        <%- serviceModule %>
 
-<%- include(`${module}/service/service`, {
-    title: "What disciplines do our business integrate?",
-    services: [
-        {
-            title: "Digital strategy",
-            text: "We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ",
-            tag: "1",
-            img: {
-                src: "card-service-02",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            }
-        },
-        {
-            title: "Digital marketing",
-            text: "In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.",
-            tag: "2",
-            img: {
-                src: "card-service-03",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            }
-        },
-        {
-            title: "Social media",
-            text: "A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.",
-            tag: "3",
-            img: {
-                src: "card-service-04",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            }
-        },
-    ],
-    isDarkened: false,
-    isDark: true,
-    hasBorder: false,
+        <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+    <!-- END: Basic -->
 
-target:'service-3'
-}) %>
+    <!-- Darkened -->
+    <%
+        const serviceD = {
+            title: "What disciplines do our business integrate?",
+            services: [
+                {
+                    title: "Digital strategy",
+                    text: "We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ",
+                    tag: "1",
+                    img: {
+                        src: "card-service-02",
+                        alt: "Service image"
+                    },
+                    link: {
+                        href: "#",
+                        label: "Learn more",
+                        icon: "links"
+                    },
+                },
+                {
+                    title: "Digital marketing",
+                    text: "In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.",
+                    tag: "2",
+                    img: {
+                        src: "card-service-03",
+                        alt: "Service image"
+                    },
+                    link: {
+                        href: "#",
+                        label: "Learn more",
+                        icon: "links"
+                    },
+                },
+                {
+                    title: "Social media",
+                    text: "A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.",
+                    tag: "3",
+                    img: {
+                        src: "card-service-04",
+                        alt: "Service image"
+                    },
+                    link: {
+                        href: "#",
+                        label: "Learn more",
+                        icon: "links"
+                    }
+                },
+            ],
+            isDarkened: true,
+            isDark: false,
+            hasBorder: false,
+            target:'service-2'
+        }
 
-<%- include(`${module}/service/service`, {
-    title: "What disciplines do our business integrate?",
-    services: [
-        {
-            title: "Digital strategy",
-            text: "We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ",
-            tag: "1",
-            img: {
-                src: "card-service-02",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            }
-        },
-        {
-            title: "Digital marketing",
-            text: "In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.",
-            tag: "2",
-            img: {
-                src: "card-service-03",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            }
-        },
-        {
-            title: "Social media",
-            text: "A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.",
-            tag: "3",
-            img: {
-                src: "card-service-04",
-                alt: "Service image"
-            },
-            link: {
-                href: "#",
-                label: "Learn more",
-                icon: "links"
-            }
-        },
-    ],
-    isDarkened: true,
-    isDark: true,
-    hasBorder: false,
+        const serviceDModule = include(`${module}/service/service`, serviceD)
 
-target:'service-4'
-}) %>
+        const codePreviewD = {
+            idAccordion: 'service',
+            idItem: 'service-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: serviceDModule
+        }
+    %>
+    <%- serviceDModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreviewD) %>
+    <!-- END: Darkened -->
+    </section>
+    <!-- END:Section <%- section -%> -->
+<% }) %>

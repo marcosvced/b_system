@@ -1,8 +1,10 @@
 <%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('body') %>
-<!-- SECTION LIGHT -->
-<%- include(`${module}/productCard/productCard`, {
+<!-- LIGHT -->
+<!-- Basic -->
+<%
+const product = {
     title: 'Party Collection. Spring / Summer 2022',
     cards: [
         {
@@ -72,12 +74,27 @@
     },
     isDarkened: false,
     isDark: false,
-    hasBorder: false
-}) %>
-<!-- END: SECTION LIGHT -->
+    hasBorder: true
+}
 
-<!-- SECTION LIGHT (DARKENED) -->
-<%- include(`${module}/productCard/productCard`, {
+const productModule = include(`${module}/productCard/productCard`, product)
+
+const codePreview = {
+    idAccordion: 'product',
+    idItem: 'product-item',
+    isDarkened: true,
+    hasBorder: true,
+    content: productModule
+}
+%>
+<%- productModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>
+<!-- END: Basic -->
+
+<!-- Darkened -->
+<%
+const productD = {
     title: 'Party Collection. Spring / Summer 2022',
     cards: [
         {
@@ -148,11 +165,28 @@
     isDarkened: true,
     isDark: false,
     hasBorder: false
-}) %>
-<!-- END: SECTION LIGHT (DARKENED) -->
+}
 
-<!-- SECTION DARK -->
-<%- include(`${module}/productCard/productCard`, {
+const productDModule = include(`${module}/productCard/productCard`, productD)
+
+const codePreviewD = {
+    idAccordion: 'product-darkened',
+    idItem: 'product-darkened-item',
+    isDarkened: true,
+    hasBorder: true,
+    content: productDModule
+}
+%>
+<%- productDModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreviewD) %>
+<!-- END: Darkened -->
+<!-- END: LIGHT -->
+
+<!-- DARK -->
+<!-- Basic -->
+<%
+const productDark = {
     title: 'Party Collection. Spring / Summer 2022',
     cards: [
         {
@@ -222,12 +256,29 @@
     },
     isDarkened: false,
     isDark: true,
-    hasBorder: false
-}) %>
-<!-- END: SECTION DARK -->
+    hasBorder: true
+}
 
-<!-- SECTION DARK (DARKENED) -->
-<%- include(`${module}/productCard/productCard`, {
+const productDarkModule = include(`${module}/productCard/productCard`, productDark)
+
+const codePreviewDark = {
+    idAccordion: 'product',
+    idItem: 'product-item',
+    isDarkened: true,
+    hasBorder: true,
+    content: productDarkModule
+}
+%>
+<%- productDarkModule %>
+
+<div class="section p-0" data-b-system-theme="dark">
+    <%- include(`${component}/codePreview/codePreview`, codePreviewDark) %>
+</div>
+<!-- END: Basic -->
+
+<!-- Darkened -->
+<%
+const productDarkD = {
     title: 'Party Collection. Spring / Summer 2022',
     cards: [
         {
@@ -298,5 +349,21 @@
     isDarkened: true,
     isDark: true,
     hasBorder: false
-}) %>
-<!-- END: SECTION DARK (DARKENED) -->
+}
+
+const productDarkDModule = include(`${module}/productCard/productCard`, productDarkD)
+
+const codePreviewDarkD = {
+    idAccordion: 'product-darkened',
+    idItem: 'product-darkened-item',
+    isDarkened: true,
+    hasBorder: true,
+    content: productDarkDModule
+}
+%>
+<%- productDarkDModule %>
+<div class="section p-0" data-b-system-theme="dark">
+    <%- include(`${component}/codePreview/codePreview`, codePreviewDarkD) %>
+</div>
+<!-- END: Darkened -->
+<!-- END: DARK -->

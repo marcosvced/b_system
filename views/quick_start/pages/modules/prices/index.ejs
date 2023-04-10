@@ -1,363 +1,220 @@
 <%- include(`${view}/quick_start/layout`) %>
 
 <%- contentFor('body') %>
+<% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section p-0"
+        <% if(section === 'dark') { %>
+             data-b-system-theme="dark"
+        <% } %>
+    >
+    <!-- Basic -->
+    <%
+        const prices = {
+            title: {
+                extended: 'Know our prices and choose your ideal pack',
+                shortened: 'Choose your ideal pack'
+            },
+            cards: [
+                {
+                    price: '$ 12',
+                    icon: 'saving-filled',
+                    title: 'Basic product',
+                    text: 'Sample text for basic product. Basic resources for starter brands.',
+                    link: {
+                        href: '#',
+                        label: 'Choose',
+                        icon: 'links'
+                    },
+                    typesListElements: [
+                        {
+                            icon: 'check',
+                            text: 'Basic resource example.'
+                        },
+                        {
+                            icon: 'close-blade',
+                            text: 'Unlimited websites.'
+                        },
+                        {
+                            icon: 'close-blade',
+                            text: 'Unmetered storage.'
+                        },
+                    ]
+                },
+                {
+                    price: '$ 22',
+                    icon: 'heart-filled',
+                    title: 'Standard product',
+                    text: 'Sample text for standard product. More resources and flexibility for multiple sites.',
+                    link: {
+                        href: '#',
+                        label: 'Choose',
+                        icon: 'links'
+                    },
+                    typesListElements: [
+                        {
+                            icon: 'check',
+                            text: 'Basic resource example.'
+                        },
+                        {
+                            icon: 'check',
+                            text: 'Unlimited websites.'
+                        },
+                        {
+                            icon: 'close-blade',
+                            text: 'Unmetered storage.'
+                        },
+                    ]
+                },
+                {
+                    price: '$ 32',
+                    icon: 'secure-filled',
+                    title: 'Premium product',
+                    text: 'Sample text for deluxe product. More power for complex sites.',
+                    link: {
+                        href: '#',
+                        label: 'Choose',
+                        icon: 'links'
+                    },
+                    typesListElements: [
+                        {
+                            icon: 'check',
+                            text: 'Basic resource example.'
+                        },
+                        {
+                            icon: 'check',
+                            text: 'Unlimited websites.'
+                        },
+                        {
+                            icon: 'check',
+                            text: 'Unmetered storage.'
+                        },
+                    ]
+                },
+            ],
+            isDarkened: false,
+            isDark: false,
+            haveBorder: true
+        }
 
-<!-- Section light -->
-<%- include(`${module}/price/price`, {
-    title: {
-        extended: 'Know our prices and choose your ideal pack',
-        shortened: 'Choose your ideal pack'
-    },
-    cards: [
-        {
-            price: '$ 12',
-            icon: 'saving-filled',
-            title: 'Basic product',
-            text: 'Sample text for basic product. Basic resources for starter brands.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-        {
-            price: '$ 22',
-            icon: 'heart-filled',
-            title: 'Standard product',
-            text: 'Sample text for standard product. More resources and flexibility for multiple sites.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-        {
-            price: '$ 32',
-            icon: 'secure-filled',
-            title: 'Premium product',
-            text: 'Sample text for deluxe product. More power for complex sites.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-    ],
-    isDarkened: false,
-    isDark: false,
-    haveBorder: false
-}) %>
-<!--END: Section light -->
+        const pricesModule = include(`${module}/price/price`, prices)
 
-<!--Section light Darkened -->
-<%- include(`${module}/price/price`, {
-    title: {
-        extended: 'Know our prices and choose your ideal pack',
-        shortened: 'Choose your ideal pack'
-    },
-    background: {
-        src: 'prices-background',
-        alt: 'background image'
-    },
-    cards: [
-        {
-            price: '$ 12',
-            icon: 'saving-filled',
-            title: 'Basic product',
-            text: 'Sample text for basic product. Basic resources for starter brands.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-        {
-            price: '$ 22',
-            icon: 'heart-filled',
-            title: 'Standard product',
-            text: 'Sample text for standard product. More resources and flexibility for multiple sites.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-        {
-            price: '$ 32',
-            icon: 'secure-filled',
-            title: 'Premium product',
-            text: 'Sample text for deluxe product. More power for complex sites.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-    ],
-    isDarkened: true,
-    isDark: false,
-    haveBorder: false
-}) %>
-<!--END: Section light Darkened -->
+            const codePreview = {
+                idAccordion: 'prices',
+                idItem: 'prices-item',
+                isDarkened: true,
+                content: pricesModule
+            }
+    %>
+    <%- pricesModule %>
+    <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+    <!-- END: Basic -->
 
-<!-- Section dark -->
-<%- include(`${module}/price/price`, {
-    title: {
-        extended: 'Know our prices and choose your ideal pack',
-        shortened: 'Choose your ideal pack'
-    },
-    cards: [
-        {
-            price: '$ 12',
-            icon: 'saving-filled',
-            title: 'Basic product',
-            text: 'Sample text for basic product. Basic resources for starter brands.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
+    <!-- Darkened -->
+    <%
+        const pricesD = {
+            title: {
+                extended: 'Know our prices and choose your ideal pack',
+                shortened: 'Choose your ideal pack'
             },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-        {
-            price: '$ 22',
-            icon: 'heart-filled',
-            title: 'Standard product',
-            text: 'Sample text for standard product. More resources and flexibility for multiple sites.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
+            background: {
+                src: 'prices-background',
+                alt: 'background image'
             },
-            typesListElements: [
+            cards: [
                 {
-                    icon: 'check',
-                    text: 'Basic resource example.'
+                    price: '$ 12',
+                    icon: 'saving-filled',
+                    title: 'Basic product',
+                    text: 'Sample text for basic product. Basic resources for starter brands.',
+                    link: {
+                        href: '#',
+                        label: 'Choose',
+                        icon: 'links'
+                    },
+                    typesListElements: [
+                        {
+                            icon: 'check',
+                            text: 'Basic resource example.'
+                        },
+                        {
+                            icon: 'close-blade',
+                            text: 'Unlimited websites.'
+                        },
+                        {
+                            icon: 'close-blade',
+                            text: 'Unmetered storage.'
+                        },
+                    ]
                 },
                 {
-                    icon: 'check',
-                    text: 'Unlimited websites.'
+                    price: '$ 22',
+                    icon: 'heart-filled',
+                    title: 'Standard product',
+                    text: 'Sample text for standard product. More resources and flexibility for multiple sites.',
+                    link: {
+                        href: '#',
+                        label: 'Choose',
+                        icon: 'links'
+                    },
+                    typesListElements: [
+                        {
+                            icon: 'check',
+                            text: 'Basic resource example.'
+                        },
+                        {
+                            icon: 'check',
+                            text: 'Unlimited websites.'
+                        },
+                        {
+                            icon: 'close-blade',
+                            text: 'Unmetered storage.'
+                        },
+                    ]
                 },
                 {
-                    icon: 'close-blade',
-                    text: 'Unmetered storage.'
+                    price: '$ 32',
+                    icon: 'secure-filled',
+                    title: 'Premium product',
+                    text: 'Sample text for deluxe product. More power for complex sites.',
+                    link: {
+                        href: '#',
+                        label: 'Choose',
+                        icon: 'links'
+                    },
+                    typesListElements: [
+                        {
+                            icon: 'check',
+                            text: 'Basic resource example.'
+                        },
+                        {
+                            icon: 'check',
+                            text: 'Unlimited websites.'
+                        },
+                        {
+                            icon: 'check',
+                            text: 'Unmetered storage.'
+                        },
+                    ]
                 },
-            ]
-        },
-        {
-            price: '$ 32',
-            icon: 'secure-filled',
-            title: 'Premium product',
-            text: 'Sample text for deluxe product. More power for complex sites.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-    ],
-    isDarkened: false,
-    isDark: true,
-    haveBorder: false
-}) %>
-<!--END: Section dark -->
+            ],
+            isDarkened: true,
+            isDark: false,
+            haveBorder: false
+        }
 
-<!-- Section dark darkened -->
-<%- include(`${module}/price/price`, {
-    title: {
-        extended: 'Know our prices and choose your ideal pack',
-        shortened: 'Choose your ideal pack'
-    },
-    cards: [
-        {
-            price: '$ 12',
-            icon: 'saving-filled',
-            title: 'Basic product',
-            text: 'Sample text for basic product. Basic resources for starter brands.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-        {
-            price: '$ 22',
-            icon: 'heart-filled',
-            title: 'Standard product',
-            text: 'Sample text for standard product. More resources and flexibility for multiple sites.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'close-blade',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-        {
-            price: '$ 32',
-            icon: 'secure-filled',
-            title: 'Premium product',
-            text: 'Sample text for deluxe product. More power for complex sites.',
-            link: {
-                href: '#',
-                label: 'Choose',
-                icon: 'links'
-            },
-            typesListElements: [
-                {
-                    icon: 'check',
-                    text: 'Basic resource example.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unlimited websites.'
-                },
-                {
-                    icon: 'check',
-                    text: 'Unmetered storage.'
-                },
-            ]
-        },
-    ],
-    isDarkened: true,
-    isDark: true,
-    haveBorder: false
-}) %>
-<!--END: Section dark darkened -->
+        const pricesDModule = include(`${module}/price/price`, pricesD)
+
+            const codePreviewD = {
+                idAccordion: 'prices',
+                idItem: 'prices-item',
+                isDarkened: true,
+                content: pricesModule
+            }
+    %>
+    <%- pricesDModule %>
+    <%- include(`${component}/codePreview/codePreview`, codePreviewD) %>
+    <!-- END: Darkened -->
+    </section>
+    <!-- END:Section <%- section -%> -->
+<% }) %>

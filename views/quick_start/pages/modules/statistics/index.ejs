@@ -4,297 +4,237 @@
 
 
 <!--STATISTICS-->
+<% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section p-0"
+        <% if(section === 'dark') { %>
+             data-b-system-theme="dark"
+        <% } %>
+    >
+    <!-- Basic -->
+    <%
+        const basic = {
+            img: {
+                src: 'statistic-1',
+                alt: 'statistic image'
+            },
+            columns: [
+                {
+                    data: '24_',
+                    title: 'Successful projects',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+                {
+                    data: '16_',
+                    title: 'Big trademark',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+                {
+                    data: '10_',
+                    title: 'Countries',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+                {
+                    data: '26_',
+                    title: 'Collaborators',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+            ],
+            isDarkened: false,
+            isDark: false,
+            hasBorder: true
+        }
 
-<!--SECTION LIGHT-->
-<%- include(`${module}/statistic/statistic`, {
-    img: {
-        src: 'statistic-1',
-        alt: 'statistic image'
-    },
-    columns: [
-        {
-            data: '24_',
-            title: 'Successful projects',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '16_',
-            title: 'Big trademark',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '10_',
-            title: 'Countries',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '26_',
-            title: 'Collaborators',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-    ],
-    isDarkened: false,
-    isDark: false,
-    hasBorder: true
-    })
-%>
+        const basicModule = include(`${module}/statistic/statistic`, basic)
 
-<%- include(`${module}/statistic/statistic`, {
-    img: {
-        src: 'statistic-1',
-        alt: 'statistic image'
-    },
-    columns: [
-        {
-            data: '24_',
-            title: 'Successful projects',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '16_',
-            title: 'Big trademark',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '10_',
-            title: 'Countries',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '26_',
-            title: 'Collaborators',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-    ],
-    isDarkened: true,
-    isDark: false,
-    hasBorder: true
-    })
-%>
-<!--END: SECTION LIGHT-->
+        const codePreview = {
+            idAccordion: 'basic',
+            idItem: 'basic-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: basicModule
+        }
+    %>
+    <%- basicModule %>
 
+    <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+    <!-- END: Basic -->
 
-<!--SECTION DARK-->
-<%- include(`${module}/statistic/statistic`, {
-    img: {
-        src: 'statistic-1',
-        alt: 'statistic image'
-    },
-    columns: [
-        {
-            data: '24_',
-            title: 'Successful projects',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '16_',
-            title: 'Big trademark',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '10_',
-            title: 'Countries',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '26_',
-            title: 'Collaborators',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-    ],
-    isDarkened: false,
-    isDark: true,
-    hasBorder: true
-    })
-%>
+    <!-- Darkened -->
+    <%
+        const basicD = {
+            img: {
+                src: 'statistic-1',
+                alt: 'statistic image'
+            },
+            columns: [
+                {
+                    data: '24_',
+                    title: 'Successful projects',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+                {
+                    data: '16_',
+                    title: 'Big trademark',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+                {
+                    data: '10_',
+                    title: 'Countries',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+                {
+                    data: '26_',
+                    title: 'Collaborators',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+            ],
+            isDarkened: true,
+            isDark: false,
+            hasBorder: false
+        }
 
-<%- include(`${module}/statistic/statistic`, {
-    img: {
-        src: 'statistic-1',
-        alt: 'statistic image'
-    },
-    columns: [
-        {
-            data: '24_',
-            title: 'Successful projects',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '16_',
-            title: 'Big trademark',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '10_',
-            title: 'Countries',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '26_',
-            title: 'Collaborators',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-    ],
-    isDarkened: true,
-    isDark: true,
-    hasBorder: true
-    })
-%>
+        const basicDModule = include(`${module}/statistic/statistic`, basicD)
 
-<%- include(`${module}/statistic/background`, {
-    background: {
-        src: 'statistic-background',
-        alt: 'statistic background'
-    },
-    img: {
-        src: 'statistic-1',
-        alt: 'statistic image'
-    },
-    columns: [
-        {
-            data: '24_',
-            title: 'Successful projects',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '16_',
-            title: 'Big trademark',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '10_',
-            title: 'Countries',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-        {
-            data: '26_',
-            title: 'Collaborators',
-            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
-            link: {
-                href: '#',
-                label: 'Learn more',
-                icon: 'links',
-                iconPosition: 'after'
-            }
-        },
-    ],
-    isDarkened: true,
-    isDark: true,
-    hasBorder: false
-    })
-%>
-<!--END: SECTION DARK-->
+        const codePreviewD = {
+            idAccordion: 'basic-darkened',
+            idItem: 'basic-darkened-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: basicDModule
+        }
+    %>
+    <%- basicDModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreviewD) %>
+    <!-- END: Darkened -->
+    </section>
+    <!-- END:Section <%- section -%> -->
+<% }) %>
+
+<!-- Background variant -->
+<%
+        const background = {
+            background: {
+                src: 'statistic-background',
+                alt: 'statistic background'
+            },
+            img: {
+                src: 'statistic-1',
+                alt: 'statistic image'
+            },
+            columns: [
+                {
+                    data: '24_',
+                    title: 'Successful projects',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+                {
+                    data: '16_',
+                    title: 'Big trademark',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+                {
+                    data: '10_',
+                    title: 'Countries',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+                {
+                    data: '26_',
+                    title: 'Collaborators',
+                    text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+                    link: {
+                        href: '#',
+                        label: 'Learn more',
+                        icon: 'links',
+                        iconPosition: 'after'
+                    }
+                },
+            ],
+            isDarkened: true,
+            isDark: true,
+            hasBorder: false
+        }
+
+        const backgroundModule = include(`${module}/statistic/background`, background)
+
+        const codePreviewBackground = {
+            idAccordion: 'statistic-background',
+            idItem: 'statistic-background-item',
+            isDarkened: true,
+            hasBorder: true,
+            content: backgroundModule
+        }
+    %>
+    <%- backgroundModule %>
+
+    <div class="section p-0" data-b-system-theme="dark">
+        <%- include(`${component}/codePreview/codePreview`, codePreviewBackground) %>
+    </div>
+<!-- END: Background variant -->

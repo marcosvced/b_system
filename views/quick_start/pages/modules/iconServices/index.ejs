@@ -2,8 +2,15 @@
 
 <%- contentFor('body') %>
 
-    <!--SECTION LIGHT-->
-    <%- include(`${module}/iconService/iconService`, {
+<% ['light', 'dark'].forEach((section) => { %>
+    <!-- Section <%- section -%> -->
+    <section class="section p-0"
+        <% if(section === 'dark') { %>
+             data-b-system-theme="dark"
+        <% } %>
+    >
+    <!-- Basic -->
+    <% const iconService = {
         title: 'Know all our services',
         text: 'Learn about all the services we can offer you to help you build your brand.',
         link: {
@@ -33,10 +40,27 @@
             },
         ],
         isDarkened: false,
-        isDark: false
-    }) %>
+        isDark: false,
+        hasBorder: true
+    }
 
-    <%- include(`${module}/iconService/iconService`, {
+    const iconServiceModule = include(`${module}/iconService/iconService`, iconService)
+
+    const codePreview = {
+        idAccordion: 'basic',
+        idItem: 'basic-item',
+        isDarkened: true,
+        content: iconServiceModule
+    }
+    %>
+
+    <%- iconServiceModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreview) %>
+    <!-- END: Basic -->
+
+    <!-- Darkened -->
+    <% const iconServiceDarkened = {
         title: 'Know all our services',
         text: 'Learn about all the services we can offer you to help you build your brand.',
         link: {
@@ -47,94 +71,43 @@
         },
         accordion: [
             {
-                idAccordion: 'light-darkened-accordion1',
-                idItem: 'light-darkened-item1',
+                idAccordion: 'light-accordion1',
+                idItem: 'light-item1',
                 label: 'Branding',
                 content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
             },
             {
-                idAccordion: 'light-darkened-accordion2',
-                idItem: 'light-darkened-item2',
+                idAccordion: 'light-accordion2',
+                idItem: 'light-item2',
                 label: 'Digital estrategic',
                 content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
             },
             {
-                idAccordion: 'light-darkened-accordion3',
-                idItem: 'light-darkened-item3',
+                idAccordion: 'light-accordion3',
+                idItem: 'light-item3',
                 label: 'UX / UI design',
                 content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
             },
         ],
         isDarkened: true,
         isDark: false
-    }) %>
-    <!--END: SECTION LIGHT-->
+    }
 
-    
-    <!--SECTION DARK-->
-    <%- include(`${module}/iconService/iconService`, {
-        title: 'Know all our services',
-        text: 'Learn about all the services we can offer you to help you build your brand.',
-        link: {
-            href: '#',
-            label: 'More info',
-            icon: 'info',
-            iconPosition: 'before'
-        },
-        accordion: [
-            {
-                idAccordion: 'dark-accordion1',
-                idItem: 'dark-item1',
-                label: 'Branding',
-                content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
-            },
-            {
-                idAccordion: 'dark-accordion2',
-                idItem: 'dark-item2',
-                label: 'Digital estrategic',
-                content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
-            },
-            {
-                idAccordion: 'dark-accordion3',
-                idItem: 'dark-item3',
-                label: 'UX / UI design',
-                content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
-            },
-        ],
-        isDarkened: false,
-        isDark: true
-    }) %>
+    const iconServiceDarkenedModule = include(`${module}/iconService/iconService`, iconServiceDarkened)
 
-    <%- include(`${module}/iconService/iconService`, {
-        title: 'Know all our services',
-        text: 'Learn about all the services we can offer you to help you build your brand.',
-        link: {
-            href: '#',
-            label: 'More info',
-            icon: 'info',
-            iconPosition: 'before'
-        },
-        accordion: [
-            {
-                idAccordion: 'dark-darkened-accordion1',
-                idItem: 'dark-darkened-item1',
-                label: 'Branding',
-                content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
-            },
-            {
-                idAccordion: 'dark-darkened-accordion2',
-                idItem: 'dark-darkened-item2',
-                label: 'Digital estrategic',
-                content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
-            },
-            {
-                idAccordion: 'dark-darkened-accordion3',
-                idItem: 'dark-darkened-item3',
-                label: 'UX / UI design',
-                content: 'B_system is the design system that will help you create your digital brand and its application to digital touch points.'
-            },
-        ],
+    const codePreviewDarkened = {
+        idAccordion: 'basic',
+        idItem: 'basic-item',
         isDarkened: true,
-        isDark: true
-    }) %>
-    <!--END: SECTION DARK-->
+        content: iconServiceDarkenedModule
+    }
+    %>
+
+    <%- iconServiceDarkenedModule %>
+
+    <%- include(`${component}/codePreview/codePreview`, codePreviewDarkened) %>
+    <!-- END: Darkened -->
+
+</section>
+<!-- END:Section <%- section -%> -->
+<% }) %>

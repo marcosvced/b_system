@@ -3,163 +3,237 @@
 <%- contentFor('body') %>
 
 <!--SECTION LIGHT-->
+<!-- Basic -->
+<%
+    const card = {
+        title: 'Featured works',
+        cards: [
+            {
+                img: {
+                    src: 'card-basic-03',
+                    alt: 'featured card image 1',
+                },
+                title: '.US',
+                text: 'Product design'
+            },
+            {
+                img: {
+                    src: 'card-basic-04',
+                    alt: 'featured card image 2',
+                },
+                title: 'Dream',
+                text: 'Editorial'
+            },
+            {
+                img: {
+                    src: 'card-basic-05',
+                    alt: 'featured card image 3',
+                },
+                title: 'Amazon toy',
+                text: 'Packaging'
+            },
+        ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: false,
+        isDark: false,
+        hasBorder: true
+    }
 
-<%- include( `${module}/featuredCard/featuredCard`, {
-title: 'Featured works',
-cards: [
-{
-img: {
-src: 'card-basic-03',
-alt: 'featured card image 1',
-},
-title: '.US',
-text: 'Product design'
-},
-{
-img: {
-src: 'card-basic-04',
-alt: 'featured card image 2',
-},
-title: 'Dream',
-text: 'Editorial'
-},
-{
-img: {
-src: 'card-basic-05',
-alt: 'featured card image 3',
-},
-title: 'Amazon toy',
-text: 'Packaging'
-},
-],
-link:{
-href: '#',
-label: 'See all articles',
-icon: 'links',
-iconPosition: 'after'
-},
-isDarkened: false,
-isDark: false,
-hasBorder: true
-} ) %>
+    const cardModule = include(`${module}/featuredCard/featuredCard`, card)
 
-<%- include( `${module}/featuredCard/featuredCard`, {
-title: 'Featured works',
-cards: [
-{
-img: {
-src: 'card-basic-03',
-alt: 'featured card image 1',
-},
-title: '.US',
-text: 'Product design'
-},
-{
-img: {
-src: 'card-basic-04',
-alt: 'featured card image 2',
-},
-title: 'Dream',
-text: 'Editorial'
-},
-{
-img: {
-src: 'card-basic-05',
-alt: 'featured card image 3',
-},
-title: 'Amazon toy',
-text: 'Packaging'
-},
-],
-link:{
-href: '#',
-label: 'See all articles',
-icon: 'links',
-iconPosition: 'after'
-},
-isDarkened: true,
-isDark: false,
-hasBorder: true
-} ) %>
+    const codePreview = {
+        idAccordion: 'card',
+        idItem: 'card-item',
+        isDarkened: true,
+        hasBorder: true,
+        content: cardModule
+    }         
+%>
+
+<%- cardModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreview) %>
+<!-- END: Basic -->
+
+<!-- Darkened -->
+<%
+    const cardD = {
+        title: 'Featured works',
+        cards: [
+            {
+                img: {
+                    src: 'card-basic-03',
+                    alt: 'featured card image 1',
+                },
+                title: '.US',
+                text: 'Product design'
+            },
+            {
+                img: {
+                    src: 'card-basic-04',
+                    alt: 'featured card image 2',
+                },
+                title: 'Dream',
+                text: 'Editorial'
+            },
+            {
+                img: {
+                    src: 'card-basic-05',
+                    alt: 'featured card image 3',
+                },
+                title: 'Amazon toy',
+                text: 'Packaging'
+            },
+        ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: true,
+        isDark: false,
+        hasBorder: false
+    }
+
+    const cardDModule = include(`${module}/featuredCard/featuredCard`, cardD)
+
+    const codePreviewD = {
+        idAccordion: 'card',
+        idItem: 'card-item',
+        isDarkened: true,
+        hasBorder: true,
+        content: cardDModule
+    }         
+%>
+
+<%- cardDModule %>
+
+<%- include(`${component}/codePreview/codePreview`, codePreviewD) %>
+<!-- END: Darkened -->
 <!--END: SECTION LIGHT-->
 
 
 <!--SECTION DARK-->
-<%- include( `${module}/featuredCard/featuredCard`, {
-title: 'Featured works',
-cards: [
-{
-img: {
-src: 'card-basic-03_darkmode',
-alt: 'featured card dark image 1',
-},
-title: '.US',
-text: 'Product design'
-},
-{
-img: {
-src: 'card-basic-04_darkmode',
-alt: 'featured card dark image 2',
-},
-title: 'Dream',
-text: 'Editorial'
-},
-{
-img: {
-src: 'card-basic-05_darkmode',
-alt: 'featured card dark image 3',
-},
-title: 'Amazon toy',
-text: 'Packaging'
-},
-],
-link:{
-href: '#',
-label: 'See all articles',
-icon: 'links',
-iconPosition: 'after'
-},
-isDarkened: false,
-isDark: true,
-hasBorder: true
-} ) %>
+<!-- Basic -->
+<%
+    const cardDark = {
+        title: 'Featured works',
+        cards: [
+            {
+                img: {
+                    src: 'card-basic-03_darkmode',
+                    alt: 'featured card dark image 1',
+                },
+                title: '.US',
+                text: 'Product design'
+            },
+            {
+                img: {
+                    src: 'card-basic-05_darkmode',
+                    alt: 'featured card dark image 2',
+                },
+                title: 'Dream',
+                text: 'Editorial'
+            },
+                {
+                img: {
+                    src: 'card-basic-05_darkmode',
+                    alt: 'featured card dark image 3',
+                },
+                titleBasic: 'Amazon toy',
+                text: 'Packaging'
+            },
+        ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: false,
+        isDark: true,
+        hasBorder: true
+    }
 
-<%- include( `${module}/featuredCard/featuredCard`, {
-title: 'Featured works',
-cards: [
-{
-img: {
-src: 'card-basic-03_darkmode',
-alt: 'featured card dark image 1',
-},
-title: '.US',
-text: 'Product design'
-},
-{
-img: {
-src: 'card-basic-05_darkmode',
-alt: 'featured card dark image 2',
-},
-title: 'Dream',
-text: 'Editorial'
-},
-{
-img: {
-src: 'card-basic-05_darkmode',
-alt: 'featured card dark image 3',
-},
-titleBasic: 'Amazon toy',
-text: 'Packaging'
-},
-],
-link:{
-href: '#',
-label: 'See all articles',
-icon: 'links',
-iconPosition: 'after'
-},
-isDarkened: true,
-isDark: true,
-hasBorder: true
-} ) %>
+    const cardDarkModule = include(`${module}/featuredCard/featuredCard`, cardDark)
+
+    const codePreviewDark = {
+        idAccordion: 'card',
+        idItem: 'card-item',
+        isDarkened: true,
+        hasBorder: true,
+        content: cardDarkModule
+    }         
+%>
+
+<%- cardDarkModule %>
+<div class="section p-0" data-b-system-theme="dark">
+    <%- include(`${component}/codePreview/codePreview`, codePreviewDark) %>
+</div>
+<!-- END: Basic -->
+
+<!-- Darkened -->
+<%
+    const cardDarkD = {
+        title: 'Featured works',
+        cards: [
+            {
+                img: {
+                    src: 'card-basic-03_darkmode',
+                    alt: 'featured card dark image 1',
+                },
+                title: '.US',
+                text: 'Product design'
+            },
+            {
+                img: {
+                    src: 'card-basic-05_darkmode',
+                    alt: 'featured card dark image 2',
+                },
+                title: 'Dream',
+                text: 'Editorial'
+            },
+                {
+                img: {
+                    src: 'card-basic-05_darkmode',
+                    alt: 'featured card dark image 3',
+                },
+                titleBasic: 'Amazon toy',
+                text: 'Packaging'
+            },
+        ],
+        link:{
+            href: '#',
+            label: 'See all articles',
+            icon: 'links',
+            iconPosition: 'after'
+        },
+        isDarkened: true,
+        isDark: true,
+        hasBorder: false
+    }
+
+    const cardDarkDModule = include(`${module}/featuredCard/featuredCard`, cardDarkD)
+
+    const codePreviewDarkD = {
+        idAccordion: 'card',
+        idItem: 'card-item',
+        isDarkened: true,
+        hasBorder: true,
+        content: cardDarkDModule
+    }         
+%>
+
+<%- cardDarkDModule %>
+
+<div class="section p-0" data-b-system-theme="dark">
+    <%- include(`${component}/codePreview/codePreview`, codePreviewDarkD) %>
+</div>
+<!-- END: Darkened -->
 <!--END: SECTION DARK-->
