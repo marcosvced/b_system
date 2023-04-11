@@ -208,10 +208,10 @@ const headerConfig = {
 <!-- END: FEATURED CONTENT -->
 
 <!-- BASIC CONTENT DESCRIPTION MODULE -->
-<%- include(`${module}/basicContent/description`, { 
-    title:'Your money under control', 
+<%- include(`${module}/basicContent/description`, {
+    title:'Your money under control',
     text: 'All your accounts in one place. All your income and expenses analyzed and under control. We notify you with exclusive alerts: commissions, duplicate charges, insurance expiration, etc.',
-    hasBorder: false 
+    hasBorder: false
 }) %>
 <!-- END: BASIC CONTENT DESCRIPTION MODULE -->
 
@@ -488,3 +488,5 @@ const headerConfig = {
     ]
 }) %>
 <!-- END: FOOTER -->
+<%- contentFor('script') %>
+canSearch()
