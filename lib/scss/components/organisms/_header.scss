@@ -18,11 +18,13 @@ $min-xl-header-height: size.rem(92);
 
 :root {
   --header-sticky-height: #{$min-xl-narrow-header-height};
-  --header-height: #{$min-xl-header-height};
+  @include media.screen(xl) {
+    --header-height: #{$min-xl-header-height};
+  }
 }
 
 header.header {
-
+  --header-height: #{$min-header-height};
   padding-block: size.rem(14);
   padding-inline: size.space(16);
   height: $min-header-height;
@@ -170,4 +172,29 @@ header.header {
     top: var(--top, 0);
   }
 
+}
+
+.header-wrapper {
+  //position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  &.header-fixed {
+    position: fixed;
+
+  }
+  .collapsed-content {
+    transition: height .25s ease;
+    height: 0;
+    overflow: hidden;
+    &.show {
+      height: size.rem(224);
+    }
+  }
+
+  header.header-fixed{
+    position: static;
+  }
 }

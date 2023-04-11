@@ -1,5 +1,5 @@
 <%- include(`${view}/demos/layout`) %>
-<%- contentFor('header') %>
+<%- contentFor('header'); %>
 <%
 const headerConfig = {
     items: navigation,
@@ -15,26 +15,16 @@ const headerConfig = {
             variant: 'primary'
         }
     ]
-}
+};
 %>
 <%
-const searcher = {
-    input: {
-        id: 'searcher',
-        label: 'Search...',
-        icon: 'm-glass'
-    },
-    button: 'blade',
-    isDarkened: true,
-    isDark: false,
-    hasBorder: false
-}
+
 %>
-<%- include(`${module}/searcher/searcher`, searcher) %>
 
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
+    <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
-<%- contentFor('body') %>
+
+<%- contentFor('body'); %>
 <!-- MARQUEE HERO -->
 <section class="section section-divider p-0">
     <%- include(`${module}/marquee/cta/cta`, {
@@ -342,7 +332,7 @@ hasBorder: true
             alt: 'This is a image descriptive text'
         }
     }
-] %>
+]; %>
 <%- include(`${module}/portfolioGrid/decomposed`, {items, hasBorder: true}) %>
 <!-- END: PORTFOLIO GRID DECOMPOSED -->
 
@@ -369,3 +359,5 @@ isDark: false,
 hasBorder: false
 }) -%>
 <!-- END: ICONS SOCIAL -->
+<%- contentFor('script') %>
+canSearch()

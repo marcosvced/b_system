@@ -24,6 +24,12 @@ const uglify = () => gulp.src('./lib/js/*.js')
   .pipe(gulpRename('bsystem.min.js'))
   .pipe(gulp.dest('./assets/js/'));
 
+const uglifyDemos = () => gulp.src('./lib/js/demos/*.js')
+  .pipe(gulpUglify())
+  .on('error', () => 'Uglify JS failed')
+  .pipe(gulpRename('script.min.js'))
+  .pipe(gulp.dest('./assets/js/'));
+
 const build = async () => {
   remove('./dist/assets/**', { force: true });
 
@@ -37,14 +43,16 @@ const build = async () => {
 exports.build = build;
 exports.sass = sass;
 exports.uglify = uglify;
+exports.uglifyDemos = uglifyDemos;
 
 exports.default = () => {
   sass();
   gulp.watch('lib/scss/**/*.scss', sass);
 
   uglify();
+  uglifyDemos();
   gulp.watch('lib/js/*.js', uglify);
-  gulp.watch('lib/js/**/*.js', uglify);
+  gulp.watch('lib/js/**/*.js', uglifyDemos);
 
   exec('node ./bin/www.js');
 
