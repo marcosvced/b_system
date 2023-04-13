@@ -3047,12 +3047,12 @@
           <div class="container">
 
             <div class="accordion-item darkened">
-              <h2 id="heading-plus-item" class="accordion-header">
-                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-plus-item" aria-expanded="false" aria-controls="collapse-plus-item">
+              <h2 id="heading-basic-item" class="accordion-header">
+                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item" aria-expanded="false" aria-controls="collapse-basic-item">
                   View example´s code
                 </button>
               </h2>
-              <div id="collapse-plus-item" class="accordion-collapse collapse " aria-labelledby="heading-plus-item" data-bs-parent="#plus">
+              <div id="collapse-basic-item" class="accordion-collapse collapse " aria-labelledby="heading-basic-item" data-bs-parent="#basic">
                 <div class="accordion-body overflow-hidden">
                   <pre><code class="language-html"><xmp><div class="section-icon-description module section-divider text-center position-relative" id="">
     <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Our work methodology</h3>
@@ -3485,12 +3485,12 @@
           <div class="container">
 
             <div class="accordion-item darkened">
-              <h2 id="heading-plus-item" class="accordion-header">
-                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-plus-item" aria-expanded="false" aria-controls="collapse-plus-item">
+              <h2 id="heading-basic-darkened-item" class="accordion-header">
+                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-darkened-item" aria-expanded="false" aria-controls="collapse-basic-darkened-item">
                   View example´s code
                 </button>
               </h2>
-              <div id="collapse-plus-item" class="accordion-collapse collapse " aria-labelledby="heading-plus-item" data-bs-parent="#plus">
+              <div id="collapse-basic-darkened-item" class="accordion-collapse collapse " aria-labelledby="heading-basic-darkened-item" data-bs-parent="#basic-darkened">
                 <div class="accordion-body overflow-hidden">
                   <pre><code class="language-html"><xmp><div class="section-icon-description module section-divider darkened text-center position-relative" id="">
     <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Our work methodology</h3>
@@ -4433,12 +4433,12 @@
           <div class="container">
 
             <div class="accordion-item darkened">
-              <h2 id="heading-plus-item" class="accordion-header">
-                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-plus-item" aria-expanded="false" aria-controls="collapse-plus-item">
+              <h2 id="heading-basic-item" class="accordion-header">
+                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-item" aria-expanded="false" aria-controls="collapse-basic-item">
                   View example´s code
                 </button>
               </h2>
-              <div id="collapse-plus-item" class="accordion-collapse collapse " aria-labelledby="heading-plus-item" data-bs-parent="#plus">
+              <div id="collapse-basic-item" class="accordion-collapse collapse " aria-labelledby="heading-basic-item" data-bs-parent="#basic">
                 <div class="accordion-body overflow-hidden">
                   <pre><code class="language-html"><xmp><div class="section-icon-description module section-divider text-center position-relative" id="">
     <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Our work methodology</h3>
@@ -4871,12 +4871,12 @@
           <div class="container">
 
             <div class="accordion-item darkened">
-              <h2 id="heading-plus-item" class="accordion-header">
-                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-plus-item" aria-expanded="false" aria-controls="collapse-plus-item">
+              <h2 id="heading-basic-darkened-item" class="accordion-header">
+                <button class="accordion-button position-relative body-medium-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-basic-darkened-item" aria-expanded="false" aria-controls="collapse-basic-darkened-item">
                   View example´s code
                 </button>
               </h2>
-              <div id="collapse-plus-item" class="accordion-collapse collapse " aria-labelledby="heading-plus-item" data-bs-parent="#plus">
+              <div id="collapse-basic-darkened-item" class="accordion-collapse collapse " aria-labelledby="heading-basic-darkened-item" data-bs-parent="#basic-darkened">
                 <div class="accordion-body overflow-hidden">
                   <pre><code class="language-html"><xmp><div class="section-icon-description module section-divider darkened text-center position-relative" id="">
     <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Our work methodology</h3>
@@ -5089,6 +5089,9 @@ hljs.highlightAll();
     <script src="../../assets/js/bsystem.min.js"></script>
 
 
+    <script src="../../assets/js/script.min.js"></script>
+
+
     <script>
 let quickStart = {
   "ROUTE_NAME": "quick_start",
@@ -5185,57 +5188,8 @@ demos = Object.values(demos)
   })
   .flat(1);
 window.demos = demos;
-
-const transformHeader = (purchaseButtonType) => {
-  const img = document.querySelector('header img.logo');
-  const purchaseButton = document.querySelector('header button.btn.btn-fit');
-
-  let isNavActive = false;
-  let isHeaderTransparent = true;
-
-  document.addEventListener(b_system.$EVENTS.ON_MOBILE_NAV_TOGGLE, (evt) => {
-    const isDark = !!document.querySelector('body[data-b-system-theme="dark"]');
-    const {
-      detail: nav
-    } = evt;
-    isNavActive = nav.isActive;
-    if (isNavActive) {
-      if (!isDark) {
-        img.src = '../../assets/img/logo-dark.svg';
-      }
-    } else {
-      if (isHeaderTransparent) {
-        img.src = '../../assets/img/logo-light.svg';
-      }
-    }
-  });
-  document.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (evt) => {
-    const {
-      detail: header
-    } = evt;
-    const isDark = !!document.querySelector('body[data-b-system-theme="dark"]');
-
-    isHeaderTransparent = header.isTransparent;
-
-    if (header.isTransparent && !isNavActive) {
-      img.src = '../../assets/img/logo-light.svg';
-      if (purchaseButtonType !== 'primary') {
-        purchaseButton.classList.remove('btn-primary');
-        purchaseButton.classList.add('btn-glass');
-      }
-    } else {
-
-      if (!isDark) {
-        img.src = '../../assets/img/logo-dark.svg';
-      }
-      if (purchaseButtonType !== 'primary') {
-        purchaseButton.classList.remove('btn-glass');
-        purchaseButton.classList.add('btn-primary');
-      }
-    }
-  });
-};
     </script>
+
     <!--END: SCRIPTS-->
   </body>
 

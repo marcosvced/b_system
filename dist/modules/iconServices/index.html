@@ -3039,6 +3039,9 @@ hljs.highlightAll();
     <script src="../../assets/js/bsystem.min.js"></script>
 
 
+    <script src="../../assets/js/script.min.js"></script>
+
+
     <script>
 let quickStart = {
   "ROUTE_NAME": "quick_start",
@@ -3135,57 +3138,8 @@ demos = Object.values(demos)
   })
   .flat(1);
 window.demos = demos;
-
-const transformHeader = (purchaseButtonType) => {
-  const img = document.querySelector('header img.logo');
-  const purchaseButton = document.querySelector('header button.btn.btn-fit');
-
-  let isNavActive = false;
-  let isHeaderTransparent = true;
-
-  document.addEventListener(b_system.$EVENTS.ON_MOBILE_NAV_TOGGLE, (evt) => {
-    const isDark = !!document.querySelector('body[data-b-system-theme="dark"]');
-    const {
-      detail: nav
-    } = evt;
-    isNavActive = nav.isActive;
-    if (isNavActive) {
-      if (!isDark) {
-        img.src = '../../assets/img/logo-dark.svg';
-      }
-    } else {
-      if (isHeaderTransparent) {
-        img.src = '../../assets/img/logo-light.svg';
-      }
-    }
-  });
-  document.addEventListener(b_system.$EVENTS.ON_TRANSPARENT_HEADER_CHANGE_BACKGROUND, (evt) => {
-    const {
-      detail: header
-    } = evt;
-    const isDark = !!document.querySelector('body[data-b-system-theme="dark"]');
-
-    isHeaderTransparent = header.isTransparent;
-
-    if (header.isTransparent && !isNavActive) {
-      img.src = '../../assets/img/logo-light.svg';
-      if (purchaseButtonType !== 'primary') {
-        purchaseButton.classList.remove('btn-primary');
-        purchaseButton.classList.add('btn-glass');
-      }
-    } else {
-
-      if (!isDark) {
-        img.src = '../../assets/img/logo-dark.svg';
-      }
-      if (purchaseButtonType !== 'primary') {
-        purchaseButton.classList.remove('btn-glass');
-        purchaseButton.classList.add('btn-primary');
-      }
-    }
-  });
-};
     </script>
+
     <!--END: SCRIPTS-->
   </body>
 

@@ -51,4 +51,9 @@ route.get(DEMOS.CORPORATIVE, (request, response) => {
   render(response, path('corporative'), {}, { navigation })
 })
 
+/* Creative Agency */
+route.get(DEMOS.CREATIVE_AGENCY, (request, response) => {
+  render(response, path('creative-agency'), {}, { navigation })
+})
+
 module.exports = route

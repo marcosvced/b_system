@@ -9,6 +9,7 @@ module.exports = {
     FREELANCE: '/demos/freelance',
     DEVELOPMENT_STUDIO: '/demos/development-studio',
     CORPORATIVE: '/demos/corporative',
+    CREATIVE_AGENCY: '/demos/creative-agency',
   },
   PAGES: {
     ABOUT_US: 'pages/about_us',
