@@ -38,8 +38,6 @@ const build = async () => {
 
   await gulp.src('./assets/**/*')
     .pipe(gulp.dest('./dist/assets/'));
-  uglify();
-  uglifyDemos();
 };
 
 exports.build = build;
