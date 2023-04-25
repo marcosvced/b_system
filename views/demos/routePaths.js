@@ -10,6 +10,7 @@ module.exports = {
     DEVELOPMENT_STUDIO: '/demos/development-studio',
     CORPORATIVE: '/demos/corporative',
     CREATIVE_AGENCY: '/demos/creative-agency',
+    MODERN_SHOP: '/demos/modern-shop',
   },
   PAGES: {
     ABOUT_US: 'pages/about_us',

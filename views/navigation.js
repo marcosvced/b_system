@@ -61,7 +61,7 @@ const navigation = [
                             },
                             {
                                 label: 'Modern Shop',
-                                href: '#',
+                                href: DEMOS.MODERN_SHOP,
                             },
                             {
                                 label: 'Classic Shop',

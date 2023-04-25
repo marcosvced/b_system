@@ -56,9 +56,9 @@ route.get(QUICK_START.FOOTERS.CORPORATE, (request, response) => {
   render(response, path('modules', ['footers', 'corporate']), {}, { navigation })
 })
 
-// route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
-//   render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
-// })
+route.get(QUICK_START.FOOTERS.NEWSLETTER, (request, response) => {
+  render(response, path('modules', ['footers', 'newsletter']), {}, { navigation })
+})
 
 /* Icon Description */
 route.get(QUICK_START.ICON_DESCRIPTION, (request, response) => {

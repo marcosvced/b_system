@@ -56,4 +56,9 @@ route.get(DEMOS.CREATIVE_AGENCY, (request, response) => {
   render(response, path('creative-agency'), {}, { navigation })
 })
 
+/* Modern Shop */
+route.get(DEMOS.MODERN_SHOP, (request, response) => {
+  render(response, path('modern-shop'), {}, { navigation })
+})
+
 module.exports = route
