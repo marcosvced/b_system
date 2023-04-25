@@ -38,7 +38,9 @@ module.exports = (response, path, html) => {
     .replace(/href="\/\//g, 'href="cdn//')
     .replace(/href="\//g, `href="${dirDepth}/`)
     .replace(/href="\//g, `href="${dirDepth}/`)
-    .replace(/href="cdn/g, 'href="');
+    .replace(/href="cdn/g, 'href="')
+    .replace(/(\r\n|\n|\r)/gm, '')
+    .replace(/(^[ \t]*\n)/gm, '');
 
   fs.writeFileSync(`${distPath}${path}/index.html`, beautify(replacedHtml, options));
   response.send(html);

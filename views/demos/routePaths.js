@@ -30,9 +30,9 @@ module.exports = {
     PORTFOLIO_MASONRY_PATH: 'pages/portfolio_masonry_path',
     PORTFOLIO_PATTERN: 'pages/product_pattern',
     SERVICES_PORTFOLIO: 'pages/services_portfolio',
-    CUSTOMER_SUPPORT:' pages/customer_support',
-    TESTIMONIALS:' pages/testimonials',
-    CONTACT_CLASSIC:' pages/contact_classic',
-    PRODUCT_PACKS:' pages/product_packs',
-  }
-}
+    CUSTOMER_SUPPORT: 'pages/customer_support',
+    TESTIMONIALS: 'pages/testimonials',
+    CONTACT_CLASSIC: 'pages/contact_classic',
+    PRODUCT_PACKS: 'pages/product_packs',
+  },
+};
