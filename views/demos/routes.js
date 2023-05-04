@@ -61,4 +61,14 @@ route.get(DEMOS.MODERN_SHOP, (request, response) => {
   render(response, path('modern-shop'), {}, { navigation })
 })
 
+/* Classic Shop */
+route.get(DEMOS.CLASSIC_SHOP, (request, response) => {
+  render(response, path('classic-shop'), {}, { navigation })
+})
+
+/* Legal */
+route.get(DEMOS.LEGAL, (request, response) => {
+  render(response, path('legal'), {}, { navigation })
+})
+
 module.exports = route

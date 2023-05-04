@@ -11,6 +11,8 @@ module.exports = {
     CORPORATIVE: '/demos/corporative',
     CREATIVE_AGENCY: '/demos/creative-agency',
     MODERN_SHOP: '/demos/modern-shop',
+    CLASSIC_SHOP: '/demos/classic-shop',
+    LEGAL: '/demos/legal',
   },
   PAGES: {
     ABOUT_US: 'pages/about_us',

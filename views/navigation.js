@@ -65,11 +65,11 @@ const navigation = [
                             },
                             {
                                 label: 'Classic Shop',
-                                href: '#',
+                                href: DEMOS.CLASSIC_SHOP,
                             },
                             {
                                 label: 'Legal',
-                                href: '#',
+                                href: DEMOS.LEGAL,
                             },
                             {
                                 label: 'Fitness',

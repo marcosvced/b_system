@@ -1,0 +1,163 @@
+<%- include(`${view}/demos/layout`)%>
+
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
+    hasBackground: false,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('body') %>
+
+<!-- MARQUEE HERO -->
+<%- include(`${module}/marquee/extended/extended`, {
+    interactiveButtonCssClass: 'bg-light-100 text-light',
+    slides: [
+        {
+            img: {
+                src: 'marquee-standard-01',
+                alt: 'Marquee image'
+            },
+            title: "Let's do it different",
+            text: 'The web design tool with the most complete design system.',
+            btn: {
+                label: 'Start with B_system',
+                isCTA: true,
+                icon: 'links',
+            },
+            quote: 'People ignore design that ignores people',
+            isDarkened: true
+        },
+        {
+            img: {
+                src: 'marquee-standard-02',
+                alt: 'Marquee image 2'
+            },
+            title: "Work in an agile way",
+            text: 'B_system will help you create responsive web pages with very little effort.',
+            btn: {
+                label: 'Start with B_system',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            quote: 'People ignore design that ignores people',
+            isDarkened: true
+        },
+        {
+            img: {
+                src: 'marquee-standard-03',
+                alt: 'Marquee image 3'
+            },
+            title: "Enjoy the great result",
+            text: 'It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+            btn: {
+                label: 'Start with B_system',
+                isCTA: true,
+                icon: 'links',
+                iconPosition: 'after'
+            },
+            quote: 'People ignore design that ignores people',
+            isDarkened: true
+        },
+    ]
+}) %>
+<!-- END: MARQUEE HERO -->
+
+<!-- PORTFOLIO DECOMPOSED -->
+<%
+    const items = [
+        {
+            img: {
+                src: 'portfolio-basic-01',
+                alt: 'This is a image descriptive text'
+            }
+        },
+        {
+            img: {
+                src: 'portfolio-basic-02',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            img: {
+                src: 'portfolio-vertical-01',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            img: {
+                src: 'portfolio-basic-03',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            img: {
+                src: 'portfolio-horizontal-01',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            img: {
+                src: 'portfolio-basic-04',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            img: {
+                src: 'portfolio-basic-05',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            img: {
+                src: 'portfolio-basic-06',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            img: {
+                src: 'portfolio-basic-07',
+                alt: 'This is a image descriptive text'
+            }
+        }
+    ]
+%>
+<%- include(`${module}/portfolioGrid/decomposed`, {items, hasBorder: true}) %>
+<!-- END: PORTFOLIO DECOMPOSED -->
+
+<!-- ICON SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, {
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICON SOCIAL -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/standard`, {
+    img: {src:'logo-dark-gray.svg', alt:'Logo'},
+    text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+    isDarkened: true
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader()
+    canSearch()
