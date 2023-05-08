@@ -73,7 +73,7 @@ const navigation = [
                             },
                             {
                                 label: 'Fitness',
-                                href: '#',
+                                href: DEMOS.FITNESS,
                             },
                             {
                                 label: 'Architecture',

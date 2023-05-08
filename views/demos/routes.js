@@ -71,4 +71,9 @@ route.get(DEMOS.LEGAL, (request, response) => {
   render(response, path('legal'), {}, { navigation })
 });
 
+/* Legal */
+route.get(DEMOS.FITNESS, (request, response) => {
+  render(response, path('fitness'), {}, { navigation })
+});
+
 module.exports = route

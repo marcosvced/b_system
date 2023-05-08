@@ -1,0 +1,447 @@
+<%- include(`${view}/demos/layout`)%>
+
+<%- contentFor('header') %>
+
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
+    hasBackground: false,
+    hasLightNav: false,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('fixed') %>
+<%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>
+
+<%- contentFor('body') %>
+
+<!-- MARQUEE IMAGE -->
+<%- include(`${module}/marquee/image/image`, {
+        isDark: true,
+        isDarkened: false, 
+        slides: [
+            {
+                img: {
+                    src: 'marquee-image-01',
+                    alt: 'marquee image 01'
+                },
+                title: 'Meet your new Fitness and Bodybuilding Club ',
+                text: 'You will enjoy the best facilities and high-end equipment.',
+                btn: 'Enroll here'
+            },
+            {
+                img: {
+                    src: 'marquee-image-02',
+                    alt: 'marquee image 02'
+                },
+                title: 'Meet your new Fitness and Bodybuilding Club ',
+                text: 'You will enjoy the best facilities and high-end equipment.',
+                btn: 'Enroll here'
+            },
+            {
+                img: {
+                    src: 'marquee-image-03',
+                    alt: 'marquee image 03'
+                },
+                title: 'Meet your new Fitness and Bodybuilding Club ',
+                text: 'You will enjoy the best facilities and high-end equipment.',
+                btn: 'Enroll here'
+            },
+        ]
+}) %>
+<!-- END: MARQUEE IMAGE -->
+
+<!-- BASIC CONTENT: DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    title:'B_system GYM Madrid, your fitness and bodybuilding space',
+    text: 'B_system Madrid was born in 2018 with the aim of becoming your daily training and health space. You can choose to come and train in our fitness room, train in small groups in our Rebel Studio or if you prefer a more personalized training, we have a team of personal trainers who will help you achieve your health goals effective way. All this accompanied by our nutrition services, towel service, coffee and water and of course, all the care and affection that we put into our work every day.',
+    hasBorder: true
+}) %>
+<!-- END: BASIC CONTENT: DESCRIPTION -->
+
+<!-- BASIC CONTENT: SIMPLE -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Our main services",
+    alignCenter: true, 
+    isPlus:false,
+    isDarkened: false, 
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT: SIMPLE -->
+
+<!-- BASIC CONTENT IMAGE -->
+<%- include(`${module}/basicContent/image`, {
+    img: {
+        src: 'basic-content-01.png',
+        alt: 'Header image'
+    },
+    text:  "You have group classes of all activities during the whole day. More than 60 weekly classes available: Cross Training, Body Pump, Body Combat, Zumba... And if one day your schedule doesn't fit, you can always opt for the LesMills virtual classes on demand on a giant screen: choose the type of training, duration and intensity.",
+    link: { 
+        href:'#',
+        label:'Learn more'
+    },
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT IMAGE -->
+
+<!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/icon/basic`, {
+    columns: [
+        {
+            icon: 'check-circle',
+            title: 'We take care of the details',
+            text: 'We like to make you feel how important you are, we are attentive to each of your needs.'
+        },
+        {
+            icon: 'awards-circle',
+            title: 'Specialized Team',
+            text: 'Training effectively from day one is vital. You will receive all the professional advice.'
+        },
+        {
+            icon: 'premium-circle',
+            title: 'Last trends',
+            text: 'Beauty, physiotherapy and nutrition shape our concept of comprehensive body care.'
+        },
+    ],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+    })
+%>
+<!-- END: ICON DESCRIPTION -->
+
+<!-- FEATURED CARDS -->  
+<%- include( `${module}/featuredCard/featuredCard`, {
+    id: 'team',
+    title: 'Meet our team',
+    cards: [
+    {
+        img: {
+            src: 'card-feature-01',
+            alt: 'featured card image 1',
+        },
+        title: 'Danielle Jolie',
+        text: '"I wake up every morning looking for an adventure"'
+    },
+    {
+        img: {
+            src: 'card-basic-02',
+            alt: 'featured card image 2',
+        },
+        title: 'Martha Nielsen',
+        text: '“Who does not have health, does not have freedom”'
+    },
+    {
+        img: {
+            src: 'card-basic-03',
+            alt: 'featured card image 3',
+        },
+        title: 'Marcos Pascual',
+        text: '“If you have a body, you are an athlete”'
+    },
+    ],
+    link:{
+        href: '#',
+        label: 'Meet our team',
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: FEATURED CARDS -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Choose the session that you like the most and enjoy an effective, fun and safe training.',
+    btn: {
+        label: 'Check our articles',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- PRICES -->
+<%- include(`${module}/price/price`, {
+    title: {
+        extended: 'Choose your ideal plan',
+        shortened: 'Choose your ideal plan'
+    },
+    cards: [
+        {
+            price: '$ 44 per month',
+            icon: 'saving-filled',
+            title: 'Basic plan',
+            text: 'Access at any time range and use of the bodybuilding room.',
+            link: {
+                href: '#',
+                label: 'Choose',
+                icon: 'links'
+            },
+            typesListElements: [
+                {
+                    icon: 'check',
+                    text: 'Basic training.'
+                },
+                {
+                    icon: 'close-blade',
+                    text: 'Spa and hydromassage.'
+                },
+                {
+                    icon: 'close-blade',
+                    text: 'Personal trainer.'
+                },
+            ],
+            hasShadow: true
+        },
+        {
+            price: '$ 60 per month',
+            icon: 'heart-filled',
+            title: 'Standard plan',
+            text: 'Unlimited use of the bodybuilding room, spa and hydromassage.',
+            link: {
+                href: '#',
+                label: 'Choose',
+                icon: 'links'
+            },
+            typesListElements: [
+            {
+                    icon: 'check',
+                    text: 'Basic training.'
+                },
+                {
+                    icon: 'check',
+                    text: 'Spa and hydromassage.'
+                },
+                {
+                    icon: 'close-blade',
+                    text: 'Personal trainer.'
+                },
+            ],
+            hasShadow: true
+        },
+        {
+            price: '$ 68 per month',
+            icon: 'star',
+            title: 'Premium plan. Special offer!',
+            text: 'Unlimited use of all facilities and personal trainer.',
+            link: {
+                href: '#',
+                label: 'Choose',
+                icon: 'links'
+            },
+            typesListElements: [
+            {
+                    icon: 'check',
+                    text: 'Basic training.'
+                },
+                {
+                    icon: 'check',
+                    text: 'Spa and hydromassage.'
+                },
+                {
+                    icon: 'check',
+                    text: 'Personal trainer.'
+                },
+            ],
+            hasShadow: true
+        },
+    ],
+    isDarkened: true,
+    isDark: false,
+    haveBorder: false
+}) %>
+<!-- END: PRICES -->
+
+<!-- CONTACT-->
+<% const demoLegalContactParams = {
+    title: 'Do you need a lawyer in London?',
+    text: 'Please fill out this form to send your message:',
+    contact: [
+        {
+            id: 'contact-name',
+            label: 'Name'
+        },
+        {
+            id: 'contact-surnames',
+            label: 'Surnames'
+        },
+        {
+            id: 'contact-email',
+            label: 'Email'
+        },
+        {
+            id: 'contact-subject',
+            label: 'Subject'
+        },
+    ],
+    textarea: {
+        id: 'contact-message',
+        label: 'Message'
+    },
+    checkboxes: [
+        {
+            id: 'checkbox-one',
+            label: 'I authorize the treatment of my data.'
+        },
+    ],
+    button: {
+        label: 'Send',
+        variant: 'tertiary'
+    },
+    alerts: [
+        {
+            icon: 'call',
+            text: {
+                content: 'If you have an urgent query you can call us :',
+                contact: [
+                    {contact: 'T. (+34) 915 805 007'},
+                    {contact: 'F. (+34) 915 806 082'}
+                ]
+            },
+            variant: 'info'
+        },
+        {
+            icon: 'message',
+            text: {
+                content: 'You can also write an email to these departments and we will get back to you as soon as possible:',
+                contact: [
+                    {contact: 'bsystem@company.com'}
+                ]
+            },
+            variant: 'info'
+        },
+        {
+            link: {
+                href: '#',
+                label: 'Find our offices easily in our search engine',
+                icon: 'place'
+            },
+            variant: 'link'
+        },
+    ],
+    isDark: false,
+    hasBorder: false
+}
+%>
+<%- include(`${module}/contact/contact`, demoLegalContactParams) %>
+<!-- END: CONTACT -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    isDark: true,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader()
+    canSearch()

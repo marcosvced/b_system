@@ -13,6 +13,7 @@ module.exports = {
     MODERN_SHOP: '/demos/modern-shop',
     CLASSIC_SHOP: '/demos/classic-shop',
     LEGAL: '/demos/legal',
+    FITNESS: '/demos/fitness',
   },
   PAGES: {
     ABOUT_US: 'pages/about_us',
