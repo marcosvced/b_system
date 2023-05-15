@@ -74,6 +74,78 @@ const headerConfig = {
 }) %>
 <!-- END: MARQUEE TEXT + IMAGE -->
 
+<!-- PORTFOLIO BASIC -->
+<%- include(`${module}/portfolioGrid/basic`, {
+    grid: [
+        {
+            img: {
+                src: 'portfolio-basic-05',
+                alt: 'Portfolio example'
+            },
+            tag: '1',
+            title: 'Estrategy',
+            text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+        },
+        {
+            img: {
+                src: 'portfolio-basic-06',
+                alt: 'Portfolio example'
+            },
+            tag: '2',
+            title: 'Marketing',
+            text: 'In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+        },
+        {
+            img: {
+                src: 'portfolio-horizontal-02',
+                srcMobile: 'portfolio-horizontal-02_mobile',
+                alt: 'Portfolio horizontal example'
+            },
+            tag: '3',
+            title: 'Experience & loyalty',
+            text: "Customer experiences, employee experiences, brand experiences, they’re the heart of your business.",
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+        },
+        {
+            img: {
+                src: 'portfolio-vertical-02',
+                srcMobile: 'portfolio-vertical-02_mobile',
+                alt: 'Portfolio vertical example'
+            },
+            tag: '4',
+            title: 'Applied creativity',
+            text: 'Customer experiences, employee experiences, brand experiences, they’re the heart of your business.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'vertical',
+        },
+    ],
+    hasBorder: true
+}) %>
+<!-- END: PORTFOLIO BASIC -->
+
 <!-- BASIC CONTENT - DESCRIPTION -->
 <%- include(`${module}/basicContent/description`, {
         title:'Our work',
@@ -81,6 +153,98 @@ const headerConfig = {
         hasBorder: false 
     }) %>
 <!-- END: BASIC CONTENT - DESCRIPTION -->
+
+<!-- TEAM GRID -->
+<%- include(`${module}/teamGrid/teamGridAlternative`, {
+    teamGrid: [
+            {
+                img: {
+                    src: 'gridcells-portfolio-02',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-component-01',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-portfolio-01',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-portfolio-03',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-portfolio-04',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-component-01',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-portfolio-05',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-component-01',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-component-01',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-portfolio-06',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-portfolio-07',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+            {
+                img: {
+                    src: 'gridcells-component-01',
+                    alt: 'grilCell image'
+                },
+                onGrid: 'basic',
+            },
+        ],
+        hasBorder: false
+}) %>
+<!-- END: TEAM GRID -->
 
 <!-- TESTIMONIAL -->
 <%- include(`${module}/testimonial/testimonial`, {
@@ -150,6 +314,26 @@ const headerConfig = {
     hasBorder: false
 }) %>
 <!-- END: TESTIMONIAL -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    background: {
+        src: 'cta-background',
+        alt: 'This is a description of image'
+    },
+    title: 'Get access to an integrated spectrum of offerings and perspectives to every challenge you’re trying to solve.',
+    isPlus: true,
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
 
 <!-- BASIC CONTENT -->
 <%- include(`${module}/basicContent/basic`, { 
