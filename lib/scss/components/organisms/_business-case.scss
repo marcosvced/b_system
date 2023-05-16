@@ -23,32 +23,29 @@
   background-color: $c-grayscale--1200;
 }
 
-.business-case {
-  $parent: &;
+.business-case-wrapper {
+  z-index: 0;
 
-  &-img-container {
-    width: helper.rem(466);
+  .icon-background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     z-index: -1;
-
-    @include mixin.screen(md) {
-      width: 100%;
-    }
-
-    @include mixin.screen(xl) {
-      width: auto;
-      height: 163%;
-    }
-
-    #{$parent}-img {
-      width: 100%;
-      height: 100%;
-      opacity: .16;
+    
+    [class*='icon-'] {
+      font-size: helper.rem(900);
+      color:  $c-opacity__gray--200;
     }
   }
+}
+
+.business-case {
+  $parent: &;
 
   #{$parent}-head {
     .action-link {
@@ -118,15 +115,7 @@
     }
 
     &-slide {
-      //padding: helper.space(24);
-      //justify-content: space-between;
-      //border-radius: 4px;
-      //font-size: $f-s-md;
-      //font-weight: bold;
-      //color: $c-grayscale--ash;
-      //background: $c-grayscale--light;
       opacity: 1;
-      //@include styles.shadow-500;
 
       @include mixin.screen(sm) {
         opacity: 0.9;
