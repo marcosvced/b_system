@@ -7,6 +7,7 @@
     $parent: &;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: relative;
     z-index: 0;
@@ -21,7 +22,7 @@
         }
     }
 
-    #{$parent}-title#{$parent}-plus {
+    #{$parent}-title#{$parent}-title-plus {
         max-width: helper.rem(964);
         color: helper.grayscale(light);
     }
@@ -35,5 +36,9 @@
         top: 0;
         left: 0;
         z-index: -1;
+    }
+
+    &-plus {
+        min-height: helper.rem(700);
     }
 }

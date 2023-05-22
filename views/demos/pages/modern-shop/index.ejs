@@ -91,6 +91,7 @@ const headerConfig = {
 <!-- FEATURED CARDS -->  
 <%- include( `${module}/featuredCard/avatar/featuredCard`, {
     id: 'creators',
+    background: 'eren-100',
     title: 'Recommended Creators',
     cards: [
     {
@@ -194,6 +195,99 @@ const headerConfig = {
 } ) %>
 <!-- END: FEATURED CARDS -->
 
+<!-- BASIC CONTENT -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Trends",
+    alignCenter: true,
+    isPlus:false, 
+    isDarkened: true, 
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT -->
+
+<!-- SERVICE GRID -->
+<%- include(`${module}//serviceGrid/serviceGrid`, {
+    cards: [
+        {
+            title: '0.4 EHT - € 924.97',
+            text: 'Strokes is a limited NFT collection of 3DNFTs created on Ethereum blockchain',
+            tag: '1',
+            img: {
+                src: 'card-service-grid-09',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'right'
+        },
+        {
+            title: '0.6 EHT - € 1027.91',
+            text: 'Strokes is a limited NFT collection of 3DNFTs created on Ethereum blockchain',
+            tag: '2',
+            img: {
+                src: 'card-service-grid-10',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'right'
+        },
+        {
+            title: '0.5 EHT - € 198.83',
+            text: 'Strokes is a limited NFT collection of 3DNFTs created on Ethereum blockchain',
+            tag: '3',
+            img: {
+                src: 'card-service-grid-11',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'left'
+        },
+        {
+            title: '45 BUSD - € 39.58',
+            text: 'Strokes is a limited NFT collection of 3DNFTs created on Ethereum blockchain',
+            tag: '4',
+            img: {
+                src: 'card-service-grid-12',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'left'
+        },
+    ],
+    isDark: false 
+}) %>
+<!-- END: SERVICE GRID -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Discover more NFTs',
+    btn: {
+        label: 'Discover more',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
 <!-- BASIC CONTENT - DESCRIPTION -->
 <%- include(`${module}/basicContent/description`, {
     title:'Create and sell your NFTs',
@@ -237,6 +331,26 @@ const headerConfig = {
     })
     %>
 <!-- END: ICON DESCRIPTION -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    background: {
+        src: 'cta-background-02',
+        alt: 'This is a description of image'
+    },
+    title: 'Find out everything about NFTs',
+    isPlus: true,
+    btn: {
+        label: 'Start here',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
 
 <!-- FAQ -->
 <%- include(`${module}/faq/faq`, {
