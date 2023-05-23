@@ -29,7 +29,7 @@ const headerConfig = {
 
 <!-- MARQUEE IMAGE -->
 <%- include(`${module}/marquee/image/image`, {
-        isDark: true,
+        isDark: false,
         isDarkened: false, 
         slides: [
             {
@@ -81,6 +81,118 @@ const headerConfig = {
 }) %>
 <!-- END: BASIC CONTENT: SIMPLE -->
 
+<!-- TEAM GRID -->
+<%- include(`${module}/teamGrid/teamGrid`, {
+    teamGrid: [
+            {
+                name: 'Bodybuilding',
+                img: {
+                    src: 'gridcells-basic-01',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                name: 'Personal Trainer',
+                img: {
+                    src: 'gridcells-basic-02',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                name: 'Spa',
+                img: {
+                    src: 'gridcells-basic-03',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                name: 'Wellness',
+                img: {
+                    src: 'gridcells-basic-04',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                name: 'Cross training',
+                img: {
+                    src: 'gridcells-basic-04',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                name: 'Tracking',
+                img: {
+                    src: 'gridcells-basic-03',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                name: 'Watersports',
+                img: {
+                    src: 'gridcells-basic-02',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                name: 'Functional training',
+                img: {
+                    src: 'gridcells-basic-01',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+        ],
+        hasBorder: false
+}) %>
+<!-- END: TEAM GRID -->
+
 <!-- BASIC CONTENT IMAGE -->
 <%- include(`${module}/basicContent/image`, {
     img: {
@@ -95,6 +207,26 @@ const headerConfig = {
     hasBorder: false
 }) %>
 <!-- END: BASIC CONTENT IMAGE -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    background: {
+        src: 'cta-background',
+        alt: 'This is a description of image'
+    },
+    title: 'B_system GYM Madrid, your fitness and bodybuilding space',
+    isPlus: true,
+    btn: {
+        label: 'Enroll here',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
 
 <!-- ICON DESCRIPTION -->
 <%- include(`${module}/iconDescription/icon/basic`, {
@@ -125,6 +257,7 @@ const headerConfig = {
 <!-- FEATURED CARDS -->  
 <%- include( `${module}/featuredCard/featuredCard`, {
     id: 'team',
+    background: 'eren-100',
     title: 'Meet our team',
     cards: [
     {
@@ -170,7 +303,7 @@ const headerConfig = {
     btn: {
         label: 'Check our articles',
         isCTA: true,
-        icon: 'links',
+        icon: 'clock',
         iconPosition: 'after'
     },
     isDarkened: false,
