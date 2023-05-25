@@ -9,7 +9,7 @@ const headerConfig = {
     mainHeader: true,
     size: 'full',
     hasBackground: false,
-    hasLightNav: true,
+    hasLightNav: false,
     buttons: [
         {
             label: 'Access',
@@ -19,133 +19,466 @@ const headerConfig = {
     ]
 }
 %>
+
+<!-- CONTACT BAR -->
+<%
+    const contactBarConfig = {
+            links: [
+            {
+                href: 'tel:916040581',
+                label: '91 604 05 81',
+                icon: 'call',
+                iconPosition: 'before'
+            },
+            {
+                href: 'mailto:info@b_bank.com',
+                label: 'info@b_bank.com',
+                icon: 'message',
+                iconPosition: 'before'
+            },
+        ],
+        texts: {
+            name: 'Say goodbye to all the red tape',
+            contact: 'Follow us:'
+        },
+        socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+        isDarkened: false,
+        isTop: true,
+        hasBorder: true
+    }
+%>
+
+<%- include(`${module}/contactBar/contactBar`, contactBarConfig) %>
+<!-- END: CONTACT BAR -->
+
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <%- contentFor('body') %>
 
-<!-- MARQUEE HERO -->
-<%- include(`${module}/marquee/extended/extended`, {
-    interactiveButtonCssClass: 'bg-light-100 text-light',
+<!-- MARQUEE IMAGE -->
+<%- include(`${module}/marquee/image/image`, {
+    isDark: false,
+    isDarkened: false, 
     slides: [
         {
             img: {
-                src: 'marquee-standard-01',
-                alt: 'Marquee image'
+                src: 'marquee-image-01',
+                alt: 'marquee image 01'
             },
-            title: "Let's do it different",
-            text: 'The web design tool with the most complete design system.',
-            btn: {
-                label: 'Start with B_system',
-                isCTA: true,
-                icon: 'links',
-            },
-            quote: 'People ignore design that ignores people',
-            isDarkened: true
+            title: 'Autumm / Winter 2022 Collections',
+            text: 'The taste for design, photography and art in general, has led us to focus on this project. This is an example of fashion store with modern layout.',
+            btn: 'Discover B_system'
         },
         {
             img: {
-                src: 'marquee-standard-02',
-                alt: 'Marquee image 2'
+                src: 'marquee-image-02',
+                alt: 'marquee image 02'
             },
-            title: "Work in an agile way",
-            text: 'B_system will help you create responsive web pages with very little effort.',
-            btn: {
-                label: 'Start with B_system',
-                isCTA: true,
-                icon: 'links',
-                iconPosition: 'after'
-            },
-            quote: 'People ignore design that ignores people',
-            isDarkened: true
+            title: 'Autumm / Winter 2022 Collections',
+            text: 'The taste for design, photography and art in general, has led us to focus on this project. This is an example of fashion store with modern layout.',
+            btn: 'Discover B_system'
         },
         {
             img: {
-                src: 'marquee-standard-03',
-                alt: 'Marquee image 3'
+                src: 'marquee-image-03',
+                alt: 'marquee image 03'
             },
-            title: "Enjoy the great result",
-            text: 'It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
-            btn: {
-                label: 'Start with B_system',
-                isCTA: true,
-                icon: 'links',
-                iconPosition: 'after'
-            },
-            quote: 'People ignore design that ignores people',
-            isDarkened: true
+            title: 'Autumm / Winter 2022 Collections',
+            text: 'The taste for design, photography and art in general, has led us to focus on this project. This is an example of fashion store with modern layout.',
+            btn: 'Discover B_system'
         },
     ]
 }) %>
-<!-- END: MARQUEE HERO -->
+<!-- END: MARQUEE IMAGE -->
 
-<!-- PORTFOLIO DECOMPOSED -->
-<%
-    const items = [
+<!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
+<%- include(`${module}/basicContent/simple`, {
+    variant:'2-columns',
+    title:'Our online store',
+    text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
+    hasBorder: true
+}) %>
+<!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
+
+<!-- PRODUCT CARD -->
+<%- include(`${module}/productCard/productCard`, {
+    title: 'Woman Autumm / Winter 2022',
+    cards: [
         {
+            cardStyle: 'basic',
             img: {
-                src: 'portfolio-basic-01',
-                alt: 'This is a image descriptive text'
-            }
+                src: 'light_product-image-rounded',
+                alt: 'Product 1'
+            },
+            name: 'Lumberjack woman',
+            price: '$ 60.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
         },
         {
+            cardStyle: 'basic',
             img: {
-                src: 'portfolio-basic-02',
-                alt: 'This is a image descriptive text'
-            }
-        }, 
+                src: 'light_product-card',
+                alt: 'Product 2'
+            },
+            name: 'Flowery dress',
+            price: '$ 70.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
         {
+            cardStyle: 'basic',
             img: {
-                src: 'portfolio-vertical-01',
-                alt: 'This is a image descriptive text'
-            }
-        }, 
+                src: 'light_product-image',
+                alt: 'Product 3'
+            },
+            name: 'Blue dress',
+            price: '$ 106.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
         {
+            cardStyle: 'basic',
             img: {
-                src: 'portfolio-basic-03',
-                alt: 'This is a image descriptive text'
-            }
-        }, 
+                src: 'light_product-extended',
+                alt: 'Product 4'
+            },
+            name: 'Combined dress',
+            price: '$ 78.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+    ],
+    btn: {
+        href: '#',
+        label: 'See complete collection',
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: PRODUCT CARD -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    background: {
+        src: 'cta-background',
+        alt: 'This is a description of image'
+    },
+    title: 'Urgan Fashion / Man 2022',
+    isPlus: true,
+    btn: {
+        label: 'See collection',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- BASIC CONTENT: DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    title:'New bohemians collection',
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT: DESCRIPTION -->
+
+<!-- TEAM GRID -->
+<%- include(`${module}/teamGrid/teamGrid`, {
+    teamGrid: [
+            {
+                name: 'Shiny shoes',
+                job: '$ 60.99',
+                img: {
+                    src: 'gridcells-basic-01',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Profile',
+                    icon: 'links'
+                },
+                social: ['twitter', 'whatsapp', 'linkedin'],
+                onGrid: 'basic'
+            },
+            {
+                name: 'Jacket',
+                job: '$ 70.99',
+                img: {
+                    src: 'gridcells-vertical-01',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Profile',
+                    icon: 'links'
+                },
+                social: ['twitter', 'whatsapp', 'linkedin'],
+                shape: 'vertical',
+                onGrid: 'vertical'
+            },
+            {
+                name: 'Wool cap',
+                job: '$ 10.00',
+                img: {
+                    src: 'gridcells-basic-02',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Profile',
+                    icon: 'links'
+                },
+                social: ['twitter', 'whatsapp', 'linkedin'],
+                onGrid: 'basic'
+            },
+            {
+                name: 'Shirt',
+                job: '$ 60.49',
+                img: {
+                    src: 'gridcells-basic-03',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Profile',
+                    icon: 'links'
+                },
+                social: ['twitter', 'whatsapp', 'linkedin'],
+                onGrid: 'basic'
+            },
+            {
+                name: 'Jumpers',
+                job: '$ 170.99',
+                img: {
+                    src: 'gridcells-basic-04',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Profile',
+                    icon: 'links'
+                },
+                social: ['twitter', 'whatsapp', 'linkedin'],
+                onGrid: 'basic'
+            },
+            {
+                name: 'White shirt',
+                job: 'Investor partners and lawyers',
+                img: {
+                    src: 'gridcells-horizontal-01',
+                    alt: '$ 60.99'
+                },
+                link: {
+                    href: '#',
+                    label: 'Profile',
+                    icon: 'links'
+                },
+                social: ['twitter', 'whatsapp', 'linkedin'],
+                shape: 'horizontal',
+                onGrid: 'horizontal'
+            },
+        ],
+        hasBorder: false
+}) %>
+<!-- END: TEAM GRID -->
+
+<!-- PRODUCT CARD -->
+<%- include(`${module}/productCard/productCard`, {
+    title: 'Outlet. California 705 T-Shirts',
+    cards: [
         {
+            cardStyle: 'basic',
             img: {
-                src: 'portfolio-horizontal-01',
-                alt: 'This is a image descriptive text'
-            }
-        }, 
+                src: 'light_product-image-rounded',
+                alt: 'Product 1'
+            },
+            name: 'White print dress',
+            price: '$ 60.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
         {
+            cardStyle: 'basic',
             img: {
-                src: 'portfolio-basic-04',
-                alt: 'This is a image descriptive text'
-            }
-        }, 
+                src: 'light_product-card',
+                alt: 'Product 2'
+            },
+            name: 'Flowery dress',
+            price: '$ 70.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
         {
+            cardStyle: 'basic',
             img: {
-                src: 'portfolio-basic-05',
-                alt: 'This is a image descriptive text'
-            }
-        }, 
+                src: 'light_product-image',
+                alt: 'Product 3'
+            },
+            name: 'Blue dress',
+            price: '$ 106.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
         {
+            cardStyle: 'basic',
             img: {
-                src: 'portfolio-basic-06',
-                alt: 'This is a image descriptive text'
-            }
-        }, 
+                src: 'light_product-extended',
+                alt: 'Product 4'
+            },
+            name: 'Combined dress',
+            price: '$ 78.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+    ],
+    btn: {
+        href: '#',
+        label: 'See collection',
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: PRODUCT CARD -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    background: {
+        src: 'cta-background',
+        alt: 'This is a description of image'
+    },
+    title: 'Street chic',
+    isPlus: true,
+    btn: {
+        label: 'See collection',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- PRODUCT CARD -->
+<%- include(`${module}/productCard/productCard`, {
+    title: 'Outlet. Spring / Summer 2021',
+    cards: [
         {
+            cardStyle: 'basic',
             img: {
-                src: 'portfolio-basic-07',
-                alt: 'This is a image descriptive text'
-            }
-        }
-    ]
-%>
-<%- include(`${module}/portfolioGrid/decomposed`, {items, hasBorder: true}) %>
-<!-- END: PORTFOLIO DECOMPOSED -->
+                src: 'light_product-basic',
+                alt: 'Product 1'
+            },
+            name: 'White print dress',
+            price: '$ 60.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-basic-02',
+                alt: 'Product 2'
+            },
+            name: 'Flowery dress',
+            price: '$ 70.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-image',
+                alt: 'Product 3'
+            },
+            name: 'Blue dress',
+            price: '$ 106.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+        {
+            cardStyle: 'basic',
+            img: {
+                src: 'light_product-extended',
+                alt: 'Product 4'
+            },
+            name: 'Combined dress',
+            price: '$ 78.99',
+            link: {
+                href: '#',
+                label: 'View more',
+                icon: 'links'
+            },
+            colors: ['#000', '#b8ddff', '#f6f6f6']
+        },
+    ],
+    btn: {
+        href: '#',
+        label: 'See collection',
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: PRODUCT CARD -->
 
 <!-- ICON SOCIAL -->
 <%- include(`${module}/iconSocial/iconSocial`, {
     socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
     isDarkened: false,
     isDark: false,
-    hasBorder: false
+    hasBorder: true
 }) -%>
 <!-- END: ICON SOCIAL -->
 
@@ -154,10 +487,9 @@ const headerConfig = {
 <%- include(`${component}/footer/standard`, {
     img: {src:'logo-dark-gray.svg', alt:'Logo'},
     text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
-    isDarkened: true
+    isDarkened: false
 }) %>
 <!-- END: FOOTER -->
 
 <%- contentFor('script') %>
-    transformHeader()
-    canSearch()
+canSearch()
