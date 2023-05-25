@@ -3,32 +3,28 @@
 
   <head>
     <title>B_system</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Bootstrap + reset styles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css"> <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> <!-- Highlight -->
-    <link rel='stylesheet' href='../../assets/css/style.min.css' />
-    <!--B_system styles-->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!-- Demo styles -->
     <style lang="css"> </style>
   </head>
 
-  <body>
-    <!--MAIN HEADER-->
-    <!-- CONTACT BAR -->
-    <div class="contact-bar contact-bar-top module section-divider  " id="">
-      <div class="contact-bar-contact column-gap-24"> <span class="action-link "> <i class="icon-call"></i> <span>91 604 05 81</span> </span> <span class="action-link "> <i class="icon-message"></i> <span>info@b_bank.com</span> </span> </div>
-      <p class="contact-bar-text body-italic-text">Say goodbye to all the red tape</p>
-      <div class="contact-bar-social d-flex">
-        <p class="contact-bar-text contact-bar-social-text d-none d-sm-block">Follow us:</p> <button type="button" class="btn btn-only-icon"> <i class="icon-behance"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-youtube"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-pinterest"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-twitter"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-linkedin"></i> </button>
-      </div>
-    </div><!-- END: CONTACT BAR -->
+  <body><!--MAIN HEADER-->
     <div class="header-wrapper header-fixed">
       <div class="collapsed-content">
         <div class="searcher module  darkened" id="">
           <div class="container d-grid grid-4 grid-md-8 grid-xl-12 px-0">
             <div class="form-floating"> <input id="searcher" type="text" class="form-control " placeholder="Search..." aria-invalid="false" aria-required="true"> <button type="button" id='searcher' class="btn btn-only-icon"> <i class="icon-m-glass"></i> </button> <label for="searcher" class="form-placeholder">Search...</label></div> <button type="button" id='close-searcher' class="btn btn-only-icon"> <i class="icon-blade"></i> </button>
           </div>
+        </div>
+      </div>
+      <div class="contact-bar contact-bar-top module section-divider  " id="">
+        <div class="contact-bar-contact column-gap-24"> <span class="action-link "> <i class="icon-call"></i> <span>91 604 05 81</span> </span> <span class="action-link "> <i class="icon-message"></i> <span>info@b_bank.com</span> </span> </div>
+        <p class="contact-bar-text body-italic-text">Say goodbye to all the red tape</p>
+        <div class="contact-bar-social d-flex">
+          <p class="contact-bar-text contact-bar-social-text d-none d-sm-block">Follow us:</p> <button type="button" class="btn btn-only-icon"> <i class="icon-behance"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-youtube"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-pinterest"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-twitter"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-linkedin"></i> </button>
         </div>
       </div>
       <header class="header header-fixed   " data-b-system-header-position="sticky" data-b-system-header="transparent">
@@ -244,8 +240,7 @@
           </div>
         </div>
       </header>
-    </div>
-    <!--END: MAIN HEADER-->
+    </div><!--END: MAIN HEADER-->
     <div id="sticky-banner" class="d-none d-xl-block card card-sticky card-bg space-y-24 inner-space-block-24 inner-space-inline-24 position-fixed">
       <div class="switch d-inline-flex justify-content-between space-x-24 w-100"> <label class="body-bold-text text-dark-mode" for="dark-mode-switch">Dark mode</label>
         <div class="form-check form-switch"> <input class="form-switch-input bg-transition" type="checkbox" id="dark-mode-switch">
@@ -389,14 +384,11 @@
           </li>
         </ul>
       </div>
-    </div>
-    <!--MAIN CONTENT-->
-    <main class="main">
-      <!-- MARQUEE IMAGE -->
+    </div><!--MAIN CONTENT-->
+    <main class="main"> <!-- MARQUEE IMAGE -->
       <div class="marquee-wrapper position-relative" id="">
         <div class="swiper" data-b-system="swiper" data-swiper-target="marquee-image" data-swiper-next=".button-next" data-swiper-prev=".button-prev" data-swiper-items="1">
-          <div class="swiper-wrapper">
-            <!-- swiper slide -->
+          <div class="swiper-wrapper"> <!-- swiper slide -->
             <div class="swiper-slide">
               <div class="marquee marquee-image marquee-space marquee-size position-relative">
                 <picture> <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-image-01.jpg" alt="marquee image 01"> <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-image-01_darkmode.jpg" alt="marquee image 01"> </picture>
@@ -430,8 +422,7 @@
         <div class="marquee-content-bottom"> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded  btn-interactive-tight  btn-interactive-effect-down"> <i class="icon-scroll"></i></button> </div>
         <div class="button-prev"> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded    btn-interactive-effect-left"> <i class="icon-back"></i></button> </div>
         <div class="button-next"> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded    btn-interactive-effect-right"> <i class="icon-next"></i></button> </div>
-      </div><!-- END: MARQUEE IMAGE -->
-      <!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
+      </div><!-- END: MARQUEE IMAGE --><!-- BASIC CONTENT SIMPLE 2 COLUMNS -->
       <div class="module section-divider  basic-content inner-space-inline-md-88 basic-content-simple 2-columns" id="">
         <div class="container">
           <div class="row align-items-center">
@@ -443,15 +434,13 @@
             </div>
           </div>
         </div>
-      </div><!-- END: BASIC CONTENT SIMPLE 2 COLUMNS -->
-      <!-- PRODUCT CARD -->
+      </div><!-- END: BASIC CONTENT SIMPLE 2 COLUMNS --><!-- PRODUCT CARD -->
       <div class="products-module module  section-divider" id="">
         <div class="container d-flex flex-column">
           <h3 class="products-module-title text-center space-bottom-48 space-bottom-md-56 space-bottom-xl-72">Woman Autumm / Winter 2022</h3>
           <div class="products-content">
             <div class="swiper" data-b-system="swiper" data-swiper-target="product-card" data-swiper-item-xl="4" data-swiper-item-lg="3" data-swiper-item-sm="2" data-swiper-item-xs="1">
-              <div class="swiper-wrapper">
-                <!-- swiper slide -->
+              <div class="swiper-wrapper"> <!-- swiper slide -->
                 <div class="swiper-slide">
                   <div class="product-card product-card-basic border-0  ">
                     <div class="product-image">
@@ -522,20 +511,17 @@
           </div>
           <div class="products-btn align-self-center space-top-48 space-top-md-56 space-top-xl-72"> <button type="button" href='#' class="btn btn-primary"> See complete collection </button> </div>
         </div>
-      </div><!-- END: PRODUCT CARD -->
-      <!-- CTA -->
+      </div><!-- END: PRODUCT CARD --><!-- CTA -->
       <div class="cta module space-y-32 cta-plus  " id="">
         <picture class="cta-bg-wrapper"> <img class="cta-bg" src="../../assets/img/cta-background.jpg" alt="This is a description of image"> </picture>
         <h1 class="cta-title cta-title-plus text-center ">Urgan Fashion / Man 2022</h1> <button type="button" class="btn btn-primary btn-primary-cta"> <span>See collection</span> <i class="icon-links"></i> </button>
-      </div><!-- END: CTA -->
-      <!-- BASIC CONTENT: DESCRIPTION -->
+      </div><!-- END: CTA --><!-- BASIC CONTENT: DESCRIPTION -->
       <div class="module   basic-content" id="">
         <div class="container row justify-content-center px-0 mx-auto">
           <h3 class="text-center col-md-12 col-xl-8 space-bottom-24 space-bottom-md-32 space-bottom-lg-40 px-0">New bohemians collection</h3>
           <p class="body-light-gray-text text-center col-md-10 col-xl-8 px-0">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.</p>
         </div>
-      </div><!-- END: BASIC CONTENT: DESCRIPTION -->
-      <!-- TEAM GRID -->
+      </div><!-- END: BASIC CONTENT: DESCRIPTION --><!-- TEAM GRID -->
       <div class="module  team-grid d-grid p-0" id="">
         <div class="team-grid-basic">
           <div class="grid-cell grid-cell-basic">
@@ -609,15 +595,13 @@
             <div class="grid-cell-social bg-opacity d-flex justify-content-center gap-48"> <button type="button" class="btn btn-only-icon"> <i class="icon-twitter"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-whatsapp"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-linkedin"></i> </button> </div>
           </div>
         </div>
-      </div><!-- END: TEAM GRID -->
-      <!-- PRODUCT CARD -->
+      </div><!-- END: TEAM GRID --><!-- PRODUCT CARD -->
       <div class="products-module module  " id="">
         <div class="container d-flex flex-column">
           <h3 class="products-module-title text-center space-bottom-48 space-bottom-md-56 space-bottom-xl-72">Outlet. California 705 T-Shirts</h3>
           <div class="products-content">
             <div class="swiper" data-b-system="swiper" data-swiper-target="product-card" data-swiper-item-xl="4" data-swiper-item-lg="3" data-swiper-item-sm="2" data-swiper-item-xs="1">
-              <div class="swiper-wrapper">
-                <!-- swiper slide -->
+              <div class="swiper-wrapper"> <!-- swiper slide -->
                 <div class="swiper-slide">
                   <div class="product-card product-card-basic border-0  ">
                     <div class="product-image">
@@ -688,20 +672,17 @@
           </div>
           <div class="products-btn align-self-center space-top-48 space-top-md-56 space-top-xl-72"> <button type="button" href='#' class="btn btn-primary"> See collection </button> </div>
         </div>
-      </div><!-- END: PRODUCT CARD -->
-      <!-- CTA -->
+      </div><!-- END: PRODUCT CARD --><!-- CTA -->
       <div class="cta module space-y-32 cta-plus  " id="">
         <picture class="cta-bg-wrapper"> <img class="cta-bg" src="../../assets/img/cta-background.jpg" alt="This is a description of image"> </picture>
         <h1 class="cta-title cta-title-plus text-center ">Street chic</h1> <button type="button" class="btn btn-primary btn-primary-cta"> <span>See collection</span> <i class="icon-links"></i> </button>
-      </div><!-- END: CTA -->
-      <!-- PRODUCT CARD -->
+      </div><!-- END: CTA --><!-- PRODUCT CARD -->
       <div class="products-module module  section-divider" id="">
         <div class="container d-flex flex-column">
           <h3 class="products-module-title text-center space-bottom-48 space-bottom-md-56 space-bottom-xl-72">Outlet. Spring / Summer 2021</h3>
           <div class="products-content">
             <div class="swiper" data-b-system="swiper" data-swiper-target="product-card" data-swiper-item-xl="4" data-swiper-item-lg="3" data-swiper-item-sm="2" data-swiper-item-xs="1">
-              <div class="swiper-wrapper">
-                <!-- swiper slide -->
+              <div class="swiper-wrapper"> <!-- swiper slide -->
                 <div class="swiper-slide">
                   <div class="product-card product-card-basic border-0  ">
                     <div class="product-image">
@@ -772,33 +753,25 @@
           </div>
           <div class="products-btn align-self-center space-top-48 space-top-md-56 space-top-xl-72"> <button type="button" href='#' class="btn btn-primary"> See collection </button> </div>
         </div>
-      </div><!-- END: PRODUCT CARD -->
-      <!-- ICON SOCIAL -->
+      </div><!-- END: PRODUCT CARD --><!-- ICON SOCIAL -->
       <div class="module section-divider " id="">
         <div class="icons-social"> <button type="button" class="btn btn-only-icon"> <i class="icon-behance"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-youtube"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-pinterest"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-twitter"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-linkedin"></i> </button> </div>
-      </div><!-- END: ICON SOCIAL -->
-      <!-- FOOTER -->
-    </main>
-    <!--END: MAIN CONTENT-->
-    <!--MAIN FOOTER-->
+      </div><!-- END: ICON SOCIAL --><!-- FOOTER -->
+    </main><!--END: MAIN CONTENT--><!--MAIN FOOTER-->
     <footer class="footer footer-estandar  inner-space-inline-16 inner-space-inline-sm-24  inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88">
       <div class="footer-wrapper container">
         <div class="footer-content d-flex gap-32"> <a class="footer-logo" href="../../home"> <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="Logo" /> </a>
           <p class="copy body-light-text"> Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio </p>
         </div>
       </div>
-    </footer><!-- END: FOOTER -->
-    <!--END: MAIN FOOTER-->
-    <!--SCRIPTS-->
-    <!--Bootstrap JS Bundle-->
+    </footer><!-- END: FOOTER --><!--END: MAIN FOOTER--><!--SCRIPTS--><!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script><!-- Swiper bundle CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-html.min.js"></script><!-- Highlight -->
     <script src="../../assets/vendor/highlight/js/highlight.js"></script>
     <script>
 hljs.highlightAll();
-    </script>
-    <!--B_system JS-->
+    </script><!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
     <script src="../../assets/js/script.min.js"></script>
     <script>
@@ -898,9 +871,8 @@ demos = Object.values(demos).map((value) => {
   return value;
 }).flat(1);
 window.demos = demos;
-canSearch()
-    </script>
-    <!--END: SCRIPTS-->
+canSearch();
+    </script><!--END: SCRIPTS-->
   </body>
 
 </html>

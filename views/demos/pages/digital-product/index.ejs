@@ -9,6 +9,7 @@ const headerConfig = {
     mainHeader: true,
     size: 'full',
     hasBackground: true,
+    hasContactBar: true,
     buttons: [
         {
             label: 'Access',
@@ -19,32 +20,6 @@ const headerConfig = {
 }
 %>
 
-<!-- CONTACT BAR -->
-<% const contactBarConfig = {
-    links: [
-        {
-            href: 'tel:916040581',
-            label: '91 604 05 81',
-            icon: 'call',
-            iconPosition: 'before'
-        },
-        {
-            href: 'mailto:info@b_bank.com',
-            label: 'info@b_bank.com',
-            icon: 'message',
-            iconPosition: 'before'
-        },
-    ],
-    texts: {
-        name: 'Say goodbye to all the red tape',
-        contact: 'Follow us:'
-    },
-    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
-    isDarkened: false,
-    isTop: true,
-    hasBorder: true
-}%>
-<%- include(`${module}/contactBar/contactBar`, contactBarConfig) %>
 <!-- END: CONTACT BAR -->
 <%- include(`${component}/header/header`, { ...headerConfig }) %>
 
@@ -488,4 +463,4 @@ const headerConfig = {
 }) %>
 <!-- END: FOOTER -->
 <%- contentFor('script') %>
-canSearch()
+canSearch();
