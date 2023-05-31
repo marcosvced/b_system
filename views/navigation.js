@@ -57,7 +57,7 @@ const navigation = [
                         entries: [
                             {
                                 label: 'Furniture',
-                                href: '#',
+                                href: DEMOS.FURNITURE,
                             },
                             {
                                 label: 'Modern Shop',

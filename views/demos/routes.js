@@ -56,6 +56,11 @@ route.get(DEMOS.CREATIVE_AGENCY, (request, response) => {
   render(response, path('creative-agency'), {}, { navigation })
 });
 
+/* Furniture */
+route.get(DEMOS.FURNITURE, (request, response) => {
+  render(response, path('furniture'), {}, { navigation })
+});
+
 /* Modern Shop */
 route.get(DEMOS.MODERN_SHOP, (request, response) => {
   render(response, path('modern-shop'), {}, { navigation })
@@ -71,9 +76,11 @@ route.get(DEMOS.LEGAL, (request, response) => {
   render(response, path('legal'), {}, { navigation })
 });
 
-/* Legal */
+/* Fitness */
 route.get(DEMOS.FITNESS, (request, response) => {
   render(response, path('fitness'), {}, { navigation })
 });
+
+/* Architecture */
 
 module.exports = route

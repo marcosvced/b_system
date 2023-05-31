@@ -1,0 +1,369 @@
+<%- include(`${view}/demos/layout`)%>
+
+<%- contentFor('header') %>
+
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
+    hasBackground: false,
+    hasLightNav: false,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('fixed') %>
+<%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>
+
+<%- contentFor('body') %>
+<!-- DIGITAL PRODUCT -->
+<%- include( `${module}/digitalProduct/digitalProduct`, {
+    id: 'marketplace-marquee',
+    masked: {
+        img: {
+            src: 'featured-content-14',
+            alt: 'featured content image',
+        },
+        shape: 'circle'
+    },
+    subtitle: '3D NFT_Market',
+    title: 'Meet fantastic 3D NFTs collections',
+    isSerif: false,
+    links: [
+        {
+            href: '#',
+            label: 'APP STORE',
+            icon: 'logo-apple'
+        },
+        {
+            href: '#',
+            label: 'GOOGLE PLAY',
+            icon: 'logo-android'
+        },
+    ],
+    btn: {
+        label: 'Recommended',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    contentPosition: 'left',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: DIGITAL PRODUCT -->
+
+<!-- BASIC CONTENT: SIMPLE -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Shop by category",
+    alignCenter: true, 
+    isPlus:false,
+    isDarkened: false, 
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT: SIMPLE -->
+
+<!-- FEATURED CARDS -->  
+<%- include( `${module}/featuredCard/featuredCard`, {
+    id: 'furniture-categories',
+    cards: [
+        {
+            img: {
+                src: 'card-basic-01',
+                alt: 'featured card image 1',
+            },
+            title: 'Sofas',
+        },
+        {
+            img: {
+                src: 'card-basic-02',
+                alt: 'featured card image 2',
+            },
+            title: 'Chairs and armchairs',
+        },
+        {
+            img: {
+                src: 'card-basic-03',
+                alt: 'featured card image 3',
+            },
+            title: 'Accessories',
+        },
+        {
+            img: {
+                src: 'card-basic-04',
+                alt: 'featured card image 3',
+            },
+            title: 'Textile and carpets',
+        },
+        {
+            img: {
+                src: 'card-basic-05',
+                alt: 'featured card image 3',
+            },
+            title: 'Illumination',
+        },
+        {
+            img: {
+                src: 'card-basic-03',
+                alt: 'featured card image 3',
+            },
+            title: 'Tablets and appliances',
+        },
+    ],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: FEATURED CARDS -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Looking for something specific? Know the offer of our store',
+    btn: {
+        label: 'View all',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: CTA -->
+
+<!-- FEATURED CARDS -->  
+<%- include( `${module}/featuredCard/featuredCard`, {
+    id: 'furniture-categories',
+    cards: [
+        {
+            img: {
+                src: 'card-basic-01',
+                alt: 'featured card image 1',
+            },
+            title: 'Bathroom storage',
+            text: 'Toilets'
+        },
+        {
+            img: {
+                src: 'card-basic-02',
+                alt: 'featured card image 2',
+            },
+            title: 'Japanese style beds',
+            text: 'Bedrooms'
+        },
+        {
+            img: {
+                src: 'card-basic-03',
+                alt: 'featured card image 3',
+            },
+            title: 'New tablets and appliances',
+            text: 'Tablets and appliances'
+        },
+    ],
+    link:{
+        href: '#',
+        label: 'See all news',
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: FEATURED CARDS -->
+
+<!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/icon/basic`, {
+    columns: [
+        {
+            icon: 'check-circle',
+            title: 'Original & Excellent Quality',
+            text: 'Create your digital brand in a natural and fluid way. Do we start?'
+        },
+        {
+            icon: 'secure-circle',
+            title: 'Secure Payment',
+            text: 'With fully scalable and reusable components.'
+        },
+        {
+            icon: 'saving-circle',
+            title: 'Free & Fast Shipping',
+            text: 'You can change every element of your system form one place.'
+        },
+    ],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: true
+    })
+%>
+<!-- END: ICON DESCRIPTION -->
+
+<!-- CTA -->
+<%- include(`${module}/brand/brand`, {
+    title: 'Awards and honours',
+    target: 'light',
+    brands: [
+        {
+            img: {
+                src: 'brand-01',
+                alt: 'light brand 01',
+            }
+        },
+        {
+            img: {
+                src: 'brand-02',
+                alt: 'light brand 02',
+            }
+        },
+        {
+            img: {
+                src: 'brand-03',
+                alt: 'light brand 03',
+            }
+        },
+        {
+            img: {
+                src: 'brand-04',
+                alt: 'light brand 04',
+            }
+        },
+    ],
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- ICON SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, {
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICON SOCIAL -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();
+    canSearch();
