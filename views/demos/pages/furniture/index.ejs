@@ -26,43 +26,42 @@ const headerConfig = {
 <%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>
 
 <%- contentFor('body') %>
-<!-- DIGITAL PRODUCT -->
-<%- include( `${module}/digitalProduct/digitalProduct`, {
-    id: 'marketplace-marquee',
-    masked: {
-        img: {
-            src: 'featured-content-14',
-            alt: 'featured content image',
-        },
-        shape: 'circle'
-    },
-    subtitle: '3D NFT_Market',
-    title: 'Meet fantastic 3D NFTs collections',
-    isSerif: false,
-    links: [
-        {
-            href: '#',
-            label: 'APP STORE',
-            icon: 'logo-apple'
-        },
-        {
-            href: '#',
-            label: 'GOOGLE PLAY',
-            icon: 'logo-android'
-        },
-    ],
-    btn: {
-        label: 'Recommended',
-        isCTA: true,
-        icon: 'links',
-        iconPosition: 'after'
-    },
-    contentPosition: 'left',
-    isDarkened: false,
+<!-- MARQUEE IMAGE -->
+<%- include(`${module}/marquee/image/image`, {
     isDark: false,
-    hasBorder: false
-} ) %>
-<!-- END: DIGITAL PRODUCT -->
+    isDarkened: false,
+    hasBorder: true,
+    slides: [
+        {
+            img: {
+                src: 'marquee-02',
+                alt: 'marquee image 01'
+            },
+            title: '25% discount on  appliances',
+            text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
+            btn: 'Discounts'
+        },
+        {
+            img: {
+                src: 'marquee-image-02',
+                alt: 'marquee image 02'
+            },
+            title: '25% discount on  appliances',
+            text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
+            btn: 'Discounts'
+        },
+        {
+            img: {
+                src: 'marquee-image-03',
+                alt: 'marquee image 03'
+            },
+            title: '25% discount on  appliances',
+            text: 'Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.',
+            btn: 'Discounts'
+        },
+    ]
+}) %>
+<!-- END: MARQUEE IMAGE --> 
 
 <!-- BASIC CONTENT: SIMPLE -->
 <%- include(`${module}/basicContent/basic`, { 
@@ -209,7 +208,7 @@ const headerConfig = {
 %>
 <!-- END: ICON DESCRIPTION -->
 
-<!-- CTA -->
+<!-- BRANDS -->
 <%- include(`${module}/brand/brand`, {
     title: 'Awards and honours',
     target: 'light',
@@ -242,7 +241,7 @@ const headerConfig = {
     isDark: false,
     hasBorder: false
 }) %>
-<!-- END: CTA -->
+<!-- END: BRANDS -->
 
 <!-- CTA -->
 <%- include(`${module}/cta/cta`, {

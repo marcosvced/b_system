@@ -15,6 +15,7 @@ module.exports = {
     CLASSIC_SHOP: '/demos/classic-shop',
     LEGAL: '/demos/legal',
     FITNESS: '/demos/fitness',
+    ARCHITECTURE: '/demos/architecture',
   },
   PAGES: {
     ABOUT_US: 'pages/about_us',

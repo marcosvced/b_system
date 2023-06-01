@@ -77,7 +77,7 @@ const navigation = [
                             },
                             {
                                 label: 'Architecture',
-                                href: '#',
+                                href: DEMOS.ARCHITECTURE,
                             },
                             {
                                 label: 'Marketplace',

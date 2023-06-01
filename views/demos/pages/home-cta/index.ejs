@@ -26,8 +26,8 @@ const headerConfig = {
 
 <%- contentFor('body'); %>
 <!-- MARQUEE HERO -->
-<section class="section section-divider p-0">
-    <%- include(`${module}/marquee/cta/cta`, {
+<%- include(`${module}/marquee/cta/cta`, {
+    hasBorder: true,
     slides: [
     {
     img: {
@@ -84,8 +84,7 @@ const headerConfig = {
     quote: '“People ignore design that ignores people”'
     },
     ]
-    }) %>
-</section>
+}) %>
 
 <!-- END: MARQUEE HERO -->
 

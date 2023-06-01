@@ -82,5 +82,8 @@ route.get(DEMOS.FITNESS, (request, response) => {
 });
 
 /* Architecture */
+route.get(DEMOS.ARCHITECTURE, (request, response) => {
+  render(response, path('architecture'), {}, { navigation })
+});
 
 module.exports = route

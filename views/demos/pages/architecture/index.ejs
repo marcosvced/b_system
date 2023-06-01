@@ -1,0 +1,445 @@
+<%- include(`${view}/demos/layout`)%>
+
+<%- contentFor('header') %>
+
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
+    hasBackground: false,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('fixed') %>
+<%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>
+
+<%- contentFor('body') %>
+<!-- MARQUEE TEXT + IMAGE -->
+<%- include(`${module}/marquee/textImage/textImage`, {
+    isDark: true,
+    isDarkened: true,
+    slides: [
+        {
+            img: {
+                src: 'marquee-textimage-02',
+                alt: 'Marquee text image'
+            },
+            title: 'Discover unique architecture porjects',
+            btn: {
+                label: 'View all', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            },
+            quote: '“People ignore design that ignores people”',
+        },
+        {
+            img: {
+                src: 'marquee-textimage-01',
+                alt: 'Marquee text image 02'
+            },
+            title: 'Discover unique architecture porjects',
+            btn: {
+                label: 'View all', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            },
+            quote: '“People ignore design that ignores people”',
+        },
+        {
+            img: {
+                src: 'marquee-textimage-03',
+                alt: 'Marquee text image 03'
+            },
+            title: 'Discover unique architecture porjects',
+            btn: {
+                label: 'View all', 
+                isCTA: true, 
+                icon: 'links', 
+                iconPosition: 'after' 
+            },
+            quote: '“People ignore design that ignores people”',
+        }
+    ]
+}) %>
+<!-- END: MARQUEE TEXT + IMAGE -->
+
+<!-- BASIC CONTENT: DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    title:'Our architectural company',
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: true
+}) %>
+<!-- END: BASIC CONTENT: DESCRIPTION -->
+
+<!-- BASIC GRID -->
+<%- include( `${module}/basicGrid/basicGrid`, {
+    basicGrid: [
+        {
+            pretitle: 'Work areas',
+            title: 'Architecture design',
+            text: "B System is a sketch design system created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand.",
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            img: {
+                src: 'basic-grid-03',
+                alt: 'basic grid image'
+            },
+            contentPosition: 'left',
+        },
+        {
+            pretitle: 'Work areas',
+            title: 'Integrated archictecture',
+            text: "B System is a sketch design system created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components.",
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            img: {
+                src: 'basic-grid-04',
+                alt: 'basic grid image'
+            },
+            contentPosition: 'right',
+        },
+        {
+            pretitle: 'Work areas',
+            title: 'Interior design',
+            text: "B System is a sketch design system created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand.",
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            img: {
+                src: 'basic-grid-05',
+                alt: 'basic grid image'
+            },
+            contentPosition: 'left',
+        },
+    ],
+    isDark: false,
+    hasBorder: true
+} ) %>
+<!-- END: BASIC GRID -->
+
+<!-- BASIC CONTENT: DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    title:'Our work',
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT: DESCRIPTION -->
+
+<!-- CATEGORY MENU -->
+<%- include(`${module}/categoriesMenu/categoriesMenu`, {
+    align: 'center',
+    items: [
+        {
+            label: 'Architecture design',
+            href: '#design',
+            id: 'menu-design',
+            active: true
+        },
+        {
+            label: 'Integrated architecture',
+            href: '#integrated',
+            id: 'menu-integrated'
+        },
+        {
+            label: 'Interior design',
+            href: '#interior',
+            id: 'menu-interior'
+        },
+        {
+            label: 'Landscape',
+            href: '#landscape',
+            id: 'menu-landscape'
+        },
+        {
+            label: 'Structure design',
+            href: '#structure',
+            id: 'menu-structure'
+        }
+    ]
+}) %>
+    <!-- END: CATEGORY MENU -->
+
+<!-- TEAM GRID -->
+<%- include(`${module}/teamGrid/teamGrid`, {
+    teamGrid: [
+            {
+                img: {
+                    src: 'gridcells-basic-01',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-02',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-03',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-04',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-04',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-03',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-02',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-01',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+        ],
+        hasBorder: false
+}) %>
+<!-- END: TEAM GRID -->
+
+<!-- BRANDS -->
+<%- include(`${module}/brand/brand`, {
+    title: 'Awards and honours',
+    target: 'light',
+    brands: [
+        {
+            img: {
+                src: 'brand-01',
+                alt: 'light brand 01',
+            }
+        },
+        {
+            img: {
+                src: 'brand-02',
+                alt: 'light brand 02',
+            }
+        },
+        {
+            img: {
+                src: 'brand-03',
+                alt: 'light brand 03',
+            }
+        },
+        {
+            img: {
+                src: 'brand-04',
+                alt: 'light brand 04',
+            }
+        },
+    ],
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: BRANDS -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: CTA -->
+
+<!-- ICON SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, {
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICON SOCIAL -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();
+    canSearch();
