@@ -85,7 +85,7 @@ const navigation = [
                             },
                             {
                                 label: 'Restaurant',
-                                href: '#',
+                                href: DEMOS.RESTAURANT,
                             },
                             {
                                 label: 'Portfolio',
@@ -114,27 +114,27 @@ const navigation = [
                             },
                             {
                                 label: 'Digital Product',
-                                href: '#',
+                                href: `${DEMOS.DIGITAL_PRODUCT}?theme=dark`,
                             },
                             {
                                 label: 'Creative Studio',
-                                href: '#',
+                                href: `${DEMOS.CREATIVE_STUDIO}?theme=dark`,
                             },
                             {
                                 label: 'Freelance',
-                                href: '#',
+                                href: `${DEMOS.FREELANCE}?theme=dark`,
                             },
                             {
                                 label: 'Development Studio',
-                                href: '#',
+                                href: `${DEMOS.DEVELOPMENT_STUDIO}?theme=dark`,
                             },
                             {
                                 label: 'Corporate',
-                                href: `${DEMOS.FINANCIAL}?theme=dark`,
+                                href: `${DEMOS.CORPORATIVE}?theme=dark`,
                             },
                             {
                                 label: 'Creative Agency',
-                                href: '#',
+                                href: `${DEMOS.CREATIVE_AGENCY}?theme=dark`,
                             },
 
                         ]
@@ -144,27 +144,27 @@ const navigation = [
                         entries: [
                             {
                                 label: 'Furniture',
-                                href: '#',
+                                href: `${DEMOS.FURNITURE}?theme=dark`,
                             },
                             {
                                 label: 'Modern Shop',
-                                href: '#',
+                                href: `${DEMOS.MODERN_SHOP}?theme=dark`,
                             },
                             {
                                 label: 'Classic Shop',
-                                href: '#',
+                                href: `${DEMOS.CLASSIC_SHOP}?theme=dark`,
                             },
                             {
                                 label: 'Legal',
-                                href: '#',
+                                href: `${DEMOS.LEGAL}?theme=dark`,
                             },
                             {
                                 label: 'Fitness',
-                                href: '#',
+                                href: `${DEMOS.FITNESS}?theme=dark`,
                             },
                             {
                                 label: 'Architecture',
-                                href: '#',
+                                href: `${DEMOS.ARCHITECTURE}?theme=dark`,
                             },
                             {
                                 label: 'Marketplace',
@@ -172,7 +172,7 @@ const navigation = [
                             },
                             {
                                 label: 'Restaurant',
-                                href: '#',
+                                href: `${DEMOS.RESTAURANT}?theme=dark`,
                             },
                             {
                                 label: 'Portfolio',

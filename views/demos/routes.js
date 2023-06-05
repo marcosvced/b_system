@@ -86,4 +86,8 @@ route.get(DEMOS.ARCHITECTURE, (request, response) => {
   render(response, path('architecture'), {}, { navigation })
 });
 
+/* Restaurant */
+route.get(DEMOS.RESTAURANT, (request, response) => {
+  render(response, path('restaurant'), {}, { navigation })
+});
 module.exports = route
