@@ -10,7 +10,14 @@
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!-- Demo styles -->
-    <style lang="css"> </style>
+    <style lang="css">
+.card-project {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 900;
+}
+    </style>
   </head>
 
   <body>
@@ -373,6 +380,18 @@
     </div>
     <!--MAIN CONTENT-->
     <main class="main">
+      <!-- STICKY BANNER CARD -->
+      <div class="card card-project card-bg   card-shadow d-grid grid-3 gap-0">
+        <div class="card-head col-1-to-4 col-md-1-to-2 d-flex align-items-center justify-content-center">
+          <p class="card-head-text fw-bold text-md-center w-100">01</p>
+        </div>
+        <div class="card-project-info-container col-1-to-4 col-md-2-to-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between inner-space-block-md-24 inner-space-bottom-24 inner-space-left-md-72 inner-space-left-xl-32 inner-space-left-xxl-72 inner-space-right-md-32">
+          <div class="card-project-info space-y-16 inner-space-right-md-32 inner-space-right-xxl-72">
+            <h3 class="card-project-title">Calgary museum</h3> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
+          </div>
+          <div class="card-project-controls d-flex flex-md-column-reverse gap-24"> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded   "> <i class="icon-back"></i></button> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded   "> <i class="icon-next"></i></button> </div>
+        </div>
+      </div><!-- END: STICKY BANNER CARD -->
       <!-- MARQUEE TEXT + IMAGE -->
       <section class="module marquee-wrapper position-relative p-0" id="" data-b-system-theme="dark">
         <div class="swiper" data-b-system="swiper" data-swiper-target="marquee-text-image" data-swiper-next=".button-next" data-swiper-prev=".button-prev" data-swiper-items="1">

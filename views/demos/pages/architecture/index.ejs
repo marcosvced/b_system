@@ -25,7 +25,28 @@ const headerConfig = {
 <%- contentFor('fixed') %>
 <%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>
 
+<%- contentFor('styles') %>
+.card-project {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 900;
+}
+
 <%- contentFor('body') %>
+<!-- STICKY BANNER CARD -->
+<%- include( `${component}/card/project`, {
+    header: '01',
+    title: 'Calgary museum',
+    link: {
+        href: '#',
+        label: 'Learn more',
+        icon: 'links',
+    },
+    hasShadow: true
+} ) %>
+<!-- END: STICKY BANNER CARD -->
+
 <!-- MARQUEE TEXT + IMAGE -->
 <%- include(`${module}/marquee/textImage/textImage`, {
     isDark: true,
