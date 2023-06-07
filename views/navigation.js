@@ -81,7 +81,7 @@ const navigation = [
                             },
                             {
                                 label: 'Marketplace',
-                                href: '#',
+                                href: DEMOS.MARKETPLACE,
                             },
                             {
                                 label: 'Restaurant',
@@ -168,7 +168,7 @@ const navigation = [
                             },
                             {
                                 label: 'Marketplace',
-                                href: '#',
+                                href: `${DEMOS.MARKETPLACE}?theme=dark`,
                             },
                             {
                                 label: 'Restaurant',

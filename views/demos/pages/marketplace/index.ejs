@@ -1,0 +1,573 @@
+<%- include(`${view}/demos/layout`)%>
+
+<%- contentFor('header') %>
+
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
+    hasBackground: false,
+    hasLightNav: false,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('fixed') %>
+<%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>
+
+<%- contentFor('body') %>
+<!-- STICKY BANNER CARD -->
+<%- include( `${component}/card/sticky`, {
+    title: 'Contact us',
+    contacts: [
+        {
+            link: {
+                href: '#',
+                label: 'Consult in our chat',
+                icon: 'whatsapp'
+            }
+        },
+        {
+            link: {
+                href: '#',
+                label: 'Shall we call you?',
+                icon: 'contact'
+            }
+        },
+    ],
+    isSticky: true,
+    hasShadow: true
+} ) %>
+<!-- END: STICKY BANNER CARD -->
+
+<!-- DIGITAL PRODUCT -->
+<%- include( `${module}/digitalProduct/digitalProduct`, {
+    id: 'marketplace-marquee',
+    masked: {
+        img: {
+            src: 'featured-content-14',
+            alt: 'featured content image',
+        },
+        shape: 'circle'
+    },
+    subtitle: '3D NFT_Market',
+    title: 'Meet fantastic 3D NFTs collections',
+    isSerif: false,
+    links: [
+        {
+            href: '#',
+            label: 'APP STORE',
+            icon: 'logo-apple'
+        },
+        {
+            href: '#',
+            label: 'GOOGLE PLAY',
+            icon: 'logo-android'
+        },
+    ],
+    btn: {
+        label: 'Recommended',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    contentPosition: 'left',
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: DIGITAL PRODUCT -->
+
+<!-- FEATURED CARDS -->  
+<%- include( `${module}/featuredCard/avatar/featuredCard`, {
+    id: 'creators',
+    background: 'eren-100',
+    title: 'Recommended Creators',
+    cards: [
+    {
+        img: {
+            src: 'card-feature-01',
+            alt: 'featured card image 1',
+        },
+        avatar: {
+            src: 'card-basic-avatar-02',
+            alt: 'avatar image'
+        },
+        title: 'NFTChamp',
+        text: 'A collection of 2,359 3D uniquely generated.'
+    },
+    {
+        img: {
+            src: 'card-basic-02',
+            alt: 'featured card image 2',
+        },
+        avatar: {
+            src: 'card-basic-avatar-02',
+            alt: 'avatar image'
+        },
+        title: 'Brandemic',
+        text: '3D Collection. 1,456 pieces.'
+    },
+    {
+        img: {
+            src: 'card-basic-03',
+            alt: 'featured card image 3',
+        },
+        avatar: {
+            src: 'card-basic-avatar-03',
+            alt: 'avatar image'
+        },
+        title: '3D Land',
+        text: 'A collection of 10,359 3D'
+    },
+    ],
+    link:{
+        href: '#',
+        label: 'Discover more',
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+} ) %>
+
+<%- include( `${module}/featuredCard/avatar/featuredCard`, {
+    id: 'creators',
+    title: 'Recommended Creators',
+    cards: [
+    {
+        img: {
+            src: 'card-feature-01',
+            alt: 'featured card image 1',
+        },
+        avatar: {
+            src: 'card-basic-avatar-02',
+            alt: 'avatar image'
+        },
+        title: '3DLanders',
+        text: '3DLanders is a collectible NFT project.'
+    },
+    {
+        img: {
+            src: 'card-basic-02',
+            alt: 'featured card image 2',
+        },
+        avatar: {
+            src: 'card-basic-avatar-02',
+            alt: 'avatar image'
+        },
+        title: 'DreamNFT',
+        text: 'A collection of 2,359 3D uniquely generated.'
+    },
+    {
+        img: {
+            src: 'card-basic-03',
+            alt: 'featured card image 3',
+        },
+        avatar: {
+            src: 'card-basic-avatar-03',
+            alt: 'avatar image'
+        },
+        title: 'Meta3D',
+        text: 'Metaverse 3D Collection.'
+    },
+    ],
+    link:{
+        href: '#',
+        label: 'Discover more',
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: FEATURED CARDS -->
+
+<!-- BASIC CONTENT -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Trends",
+    alignCenter: true,
+    isPlus:false, 
+    isDarkened: true, 
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT -->
+
+<!-- SERVICE GRID -->
+<%- include(`${module}//serviceGrid/serviceGrid`, {
+    cards: [
+        {
+            title: '0.4 EHT - € 924.97',
+            text: 'Strokes is a limited NFT collection of 3DNFTs created on Ethereum blockchain',
+            tag: '1',
+            img: {
+                src: 'card-service-grid-09',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'right'
+        },
+        {
+            title: '0.6 EHT - € 1027.91',
+            text: 'Strokes is a limited NFT collection of 3DNFTs created on Ethereum blockchain',
+            tag: '2',
+            img: {
+                src: 'card-service-grid-10',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'right'
+        },
+        {
+            title: '0.5 EHT - € 198.83',
+            text: 'Strokes is a limited NFT collection of 3DNFTs created on Ethereum blockchain',
+            tag: '3',
+            img: {
+                src: 'card-service-grid-11',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'left'
+        },
+        {
+            title: '45 BUSD - € 39.58',
+            text: 'Strokes is a limited NFT collection of 3DNFTs created on Ethereum blockchain',
+            tag: '4',
+            img: {
+                src: 'card-service-grid-12',
+                alt: 'service grid image',
+            },
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            contentPosition: 'left'
+        },
+    ],
+    isDark: false 
+}) %>
+<!-- END: SERVICE GRID -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Discover more NFTs',
+    btn: {
+        label: 'Discover more',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- BASIC CONTENT - DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    title:'Create and sell your NFTs',
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable.',
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT - DESCRIPTION -->
+
+<!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/microillustration/microillustrationDescription`, {
+    head: 'Our work methodology',
+    columns: [
+        {
+            microillustration: {
+                src: 'idea',
+                alt: 'system microillustration'
+            },
+            title: 'An organic design system',
+            text: 'Create your digital brand in a natural and fluid way. Do we start?'
+        },
+        {
+            microillustration: {
+                src: 'tools',
+                alt: 'efficiency microillustration'
+            },
+            title: 'Maximized efficiency',
+            text: 'With fully scalable and reusable components.'
+        },
+        {
+            microillustration: {
+                src: 'learn',
+                alt: 'choose template microillustration'
+            },
+            title: 'Consistency made easy',
+            text: 'You can change every element of your system from one place.'
+        },
+    ],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+    })
+    %>
+<!-- END: ICON DESCRIPTION -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    background: {
+        src: 'cta-background-02',
+        alt: 'This is a description of image'
+    },
+    title: 'Find out everything about NFTs',
+    isPlus: true,
+    btn: {
+        label: 'Start here',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- FAQ -->
+<%- include(`${module}/faq/faq`, {
+    title: 'Frequently asked questions',
+    links: [
+        {
+            tab: 'tab-system',
+            label: 'Brand System'
+        },
+        {
+            tab: 'tab-product',
+            label: 'Product contracting'
+        },
+        {
+            tab: 'tab-customer',
+            label: 'Customer Support'
+        },
+        {
+            tab: 'tab-commitment',
+            label: 'Our commitment'
+        },
+    ],
+    sections: [
+        [
+            {
+                idAccordion: 'accordion1',
+                idItem: 'item1',
+                label: 'What is B_system?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion2',
+                idItem: 'item2',
+                label: 'In what kind of projects can I use it?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion3',
+                idItem: 'item3',
+                label: 'What frameworks does the system use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion4',
+                idItem: 'item4',
+                label: 'How many demos does it have?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion5',
+                idItem: 'item5',
+                label: 'Is there any discount or promotion if I use it several times?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion6',
+                idItem: 'item6',
+                label: 'What programming languages ​​does it use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+        [
+            {
+                idAccordion: 'accordion1',
+                idItem: 'item1',
+                label: 'What is B_system?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion2',
+                idItem: 'item2',
+                label: 'In what kind of projects can I use it?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+        [
+
+            {
+                idAccordion: 'accordion4',
+                idItem: 'item4',
+                label: 'How many demos does it have?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion5',
+                idItem: 'item5',
+                label: 'Is there any discount or promotion if I use it several times?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion6',
+                idItem: 'item6',
+                label: 'What programming languages ​​does it use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+        [
+
+            {
+                idAccordion: 'accordion3',
+                idItem: 'item3',
+                label: 'What frameworks does the system use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+    ],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: FAQ -->
+
+<!-- ICON SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, {
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICON SOCIAL -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();
+    canSearch();

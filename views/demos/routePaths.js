@@ -16,6 +16,7 @@ module.exports = {
     LEGAL: '/demos/legal',
     FITNESS: '/demos/fitness',
     ARCHITECTURE: '/demos/architecture',
+    MARKETPLACE: '/demos/marketplace',
     RESTAURANT: '/demos/restaurant',
   },
   PAGES: {
