@@ -16,9 +16,9 @@ route.get(DEMOS.STARTUP, (request, response) => {
   render(response, path('startup'), {}, { navigation })
 });
 
-/* Home 2 */
-route.get(DEMOS.HOME2, (request, response) => {
-  render(response, path('home-cta'), {}, { navigation })
+/* Design Studio */
+route.get(DEMOS.DESIGN_STUDIO, (request, response) => {
+  render(response, path('design-studio'), {}, { navigation })
 });
 
 /* Branding */
@@ -46,9 +46,9 @@ route.get(DEMOS.DEVELOPMENT_STUDIO, (request, response) => {
   render(response, path('development-studio'), {}, { navigation })
 });
 
-/* Corporative */
-route.get(DEMOS.CORPORATIVE, (request, response) => {
-  render(response, path('corporative'), {}, { navigation })
+/* Corporate */
+route.get(DEMOS.CORPORATE, (request, response) => {
+  render(response, path('corporate'), {}, { navigation })
 });
 
 /* Creative Agency */

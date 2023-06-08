@@ -19,7 +19,7 @@ const navigation = [
                             },
                             {
                                 label: 'Design Studio',
-                                href: DEMOS.HOME2,
+                                href: DEMOS.DESIGN_STUDIO,
                             },
                             {
                                 label: 'Branding Agency',
@@ -43,7 +43,7 @@ const navigation = [
                             },
                             {
                                 label: 'Corporate',
-                                href: DEMOS.CORPORATIVE,
+                                href: DEMOS.CORPORATE,
                             },
                             {
                                 label: 'Creative Agency',
@@ -106,7 +106,7 @@ const navigation = [
                             },
                             {
                                 label: 'Design Studio',
-                                href: `${DEMOS.HOME2}?theme=dark`,
+                                href: `${DEMOS.DESIGN_STUDIO}?theme=dark`,
                             },
                             {
                                 label: 'Branding Agency',
@@ -130,7 +130,7 @@ const navigation = [
                             },
                             {
                                 label: 'Corporate',
-                                href: `${DEMOS.CORPORATIVE}?theme=dark`,
+                                href: `${DEMOS.CORPORATE}?theme=dark`,
                             },
                             {
                                 label: 'Creative Agency',
