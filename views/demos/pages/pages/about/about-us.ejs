@@ -1,0 +1,225 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
+<%- contentFor('body') %>
+<!-- MARQUEE BASIC -->
+<%- include(`${module}/marquee/basic`, {
+    img: {
+        src: 'marquee-01',
+        alt: 'About us header'
+    },
+    title: {
+        title: 'About us',
+        titleWhite: true,
+    },
+    onLeft: false,
+    isDarkened: true,
+    hasBorder: true
+}) %>
+<!-- END: MARQUEE BASIC -->
+
+<!-- BASIC CONTENT: DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    title:'What do we do',
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT: DESCRIPTION -->
+
+<!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/microillustration/microillustrationDescription`, {
+    id: 'methodology',
+    head: 'Our work methodology',
+    columns: [
+        {
+            microillustration: {
+                src: 'process',
+                alt: 'process microillustration'
+            },
+            title: '1. Exploration phase',
+            text: 'Explore new concepts, products, services, ventures, brands, and systems.'
+        },
+        {
+            microillustration: {
+                src: 'efficiency',
+                alt: 'efficiency microillustration'
+            },
+            title: '2. Empathy phase',
+            text: 'A deep understanding of the needs of the users involved in the solution.'
+        },
+        {
+            microillustration: {
+                src: 'choose-template',
+                alt: 'choose-template microillustration'
+            },
+            title: '3. Definition phase',
+            text: 'Staying with what really adds value and brings us to new interesting perspectives.'
+        },
+        {
+            microillustration: {
+                src: 'fonts',
+                alt: 'fonts microillustration'
+            },
+            title: '4. Ideation phase',
+            text: 'In this phase, activities favor expansive thinking and we eliminate value judgments.'
+        },
+        {
+            microillustration: {
+                src: 'image',
+                alt: 'image microillustration'
+            },
+            title: '5. Prototyping',
+            text: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.'
+        },
+        {
+            microillustration: {
+                src: 'template',
+                alt: 'template microillustration'
+            },
+            title: '6. Testing phase',
+            text: 'This phase helps us to identify significant improvements and faults to be solved.'
+        },
+    ],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+    })
+    %>
+<!-- END: ICON DESCRIPTION -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    isDark: false,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();
+    canSearch();

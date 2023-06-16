@@ -1,0 +1,178 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
+<%- contentFor('body') %>
+<!-- MARQUEE BASIC -->
+<%- include(`${module}/marquee/basic`, {
+    img: {
+        src: 'marquee-textimage-01',
+        alt: 'About b_system header'
+    },
+    title: {
+        title: 'About B_system',
+        titleWhite: true,
+    },
+    onLeft: false,
+    isDarkened: true,
+    hasBorder: true
+}) %>
+<!-- END: MARQUEE BASIC -->
+
+<!-- BASIC CONTENT: DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    text: "We've always known that design has the fundamental ability to change the way people live, work and play. We've seen it happen, and we've made it happen. But time has shown us that not all change is good. Not all movement is forward. There's growing complexity meaning many solutions spark a new set of problems. Creating something new, but not always better.",
+    hasBorder: false
+}) %>
+
+<%- include(`${module}/basicContent/description`, {
+    text: "The time has come to widen the lens. To ask questions and craft solutions that better connect brand, organisations, and businesses. A shift from a human-centred perspective towards a humanity-centred one. Pursuing long-term progress for all over immediate value for some. Together with our partners, we are hell-bent on turning change into progress. Shared progress.",
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT: DESCRIPTION -->
+
+<!-- COMPONENT: GRID CELL BASIC -->
+<%- include(`${component}/gridCell/content`, {
+    img: {src: 'gridcells_portfolio-02', alt: 'Grid basic portfolios cell'},
+    }) %>
+<!-- END: COMPONENT: GRID CELL BASIC -->
+
+<!-- BASIC CONTENT: DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    title: "We've always known that design has the fundamental",
+    text: "We've always known that design has the fundamental ability to change the way people live, work and play. We've seen it happen, and we've made it happen. But time has shown us that not all change is good. Not all movement is forward. There's growing complexity meaning many solutions spark a new set of problems. Creating something new, but not always better.",
+    hasBorder: false
+}) %>
+
+<%- include(`${module}/basicContent/description`, {
+    title: "There's growing complexity",
+    text: "We've always known that design has the fundamental ability to change the way people live, work and play. We've seen it happen, and we've made it happen. But time has shown us that not all change is good. Not all movement is forward. There's growing complexity meaning many solutions spark a new set of problems. Creating something new, but not always better.",
+    hasBorder: false
+}) %>
+
+<%- include(`${module}/basicContent/description`, {
+    text: "The time has come to widen the lens. To ask questions and craft solutions that better connect brand, organisations, and businesses. A shift from a human-centred perspective towards a humanity-centred one. Pursuing long-term progress for all over immediate value for some. Together with our partners, we are hell-bent on turning change into progress. Shared progress.",
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT: DESCRIPTION -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    isDark: false,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();
+    canSearch();

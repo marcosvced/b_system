@@ -10,19 +10,7 @@
     <link rel='stylesheet' href='../../assets/css/style.min.css' />
     <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!-- Demo styles -->
-    <style lang="css">
-.grid-cell.grid-cell-basic-horizontal {
-  padding-bottom: calc(50% - 12px);
-}
-
-.grid-cell.grid-cell-component {
-  padding-bottom: calc(100% - 24px);
-}
-
-.size-fixed .grid-cell.grid-cell-content {
-  padding-bottom: calc(100% - 24px);
-}
-    </style>
+    <style lang="css"> </style>
   </head>
 
   <body>
@@ -31,13 +19,13 @@
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-b-system-wrapper="buttons">
           <div class="d-flex d-xl-none order-0"> <button type="button" class="btn btn-only-icon"> <i class="icon-cart"></i> </button> </div>
-          <div class="d-none d-xl-block order-1"> <button type="button" class="btn btn-primary    btn-fit"> Purchase B_system </button> </div>
+          <div class="d-none d-xl-block order-1"> <button type="button" class="btn btn-subtle    btn-fit"> Purchase B_system </button> </div>
         </div> <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min "> <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" /> </a>
         <div class="nav-wrapper order-2 order-xl-1 col">
           <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
             <nav class="navbar navbar-expand-lg ">
               <ul class="navbar-nav">
-                <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Demos </a>
+                <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link active" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Demos </a>
                   <div class="dropdown-menu dropdown-grid repeat-4" aria-labelledby="demos_dropdown_menu">
                     <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Light mode demos</strong></span>
                       <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup"> Startup </a> </li>
@@ -208,7 +196,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link active" id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Components </a>
+                <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Components </a>
                   <div class="dropdown-menu dropdown-grid repeat-2" aria-labelledby="components_dropdown_menu">
                     <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Components</strong></span>
                       <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/buttons"> Buttons </a> </li>
@@ -375,106 +363,347 @@
     </div>
     <!--MAIN CONTENT-->
     <main class="main">
-      <!-- GRID CELLS -->
-      <!-- SECTION LIGHT -->
-      <section class="section">
+      <!-- STICKY BANNER CARD -->
+      <div class="card card-sticky card-bg   card-shadow sticky-banner d-none d-md-block space-y-24 inner-space-block-24 inner-space-inline-24">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="body-dark-gray-text fw-bold">Contact us</p> <i class="icon-blade"></i>
+        </div> <span class="border-bottom d-block"></span> <span class="action-link "> <span>Consult in our chat</span> <i class="icon-whatsapp"></i> </span> <span class="border-bottom"></span> <span class="action-link "> <span>Shall we call you?</span> <i class="icon-contact"></i> </span> <span class="border-bottom"></span>
+      </div>
+      <div class="card card-sticky-mobile sticky-banner d-flex flex-row d-md-none"> <span class="action-link "> <span>Consult in our chat</span> <i class="icon-whatsapp"></i> </span> <span class="action-link "> <span>Shall we call you?</span> <i class="icon-contact"></i> </span> </div><!-- END: STICKY BANNER CARD -->
+      <!-- MARQUEE BASIC -->
+      <div class="marquee marquee-basic module p-0 section-divider" id="">
         <div class="container">
-          <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Grid cells</h3>
-          <div class="d-grid grid-1 grid-lg-3 column-gap-24 space-bottom-48">
-            <div class="space-y-24">
-              <div class="grid-cell grid-cell-basic">
-                <picture class="grid-cell-container-img"> <img class="grid-cell-img" src="../../assets/img/grid-cell/gridcells-basic-01.jpg" alt="Grid cell basic"> </picture>
-                <div class="grid-cell-profile d-flex justify-content-between align-items-start">
-                  <div class="grid-cell-user">
-                    <p class="body-bold-text text-white mb-0">Danielle Jolie</p>
-                    <p class="text-white mb-0">UX/UI</p>
-                  </div> <span class="action-link "> <span>Profile</span> <i class="icon-links"></i> </span>
-                </div>
-                <div class="grid-cell-social bg-opacity d-flex justify-content-center gap-48"> <button type="button" class="btn btn-only-icon"> <i class="icon-twitter"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-behance"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-linkedin"></i> </button> </div>
-              </div> <span class="body-light-gray-text"> Grid cell basic </span>
-            </div>
-            <div class="col-span-lg-2 space-y-24">
-              <div class="grid-cell grid-cell-basic-horizontal">
-                <picture class="grid-cell-container-img"> <img class="grid-cell-img" src="../../assets/img/grid-cell/gridcells-horizontal-01.jpg" alt="Grid cell basic"> </picture>
-                <div class="grid-cell-profile d-flex justify-content-between align-items-start">
-                  <div class="grid-cell-user">
-                    <p class="body-bold-text text-white mb-0">Marza Jolie</p>
-                    <p class="text-white mb-0">UI Designer</p>
-                  </div> <span class="action-link "> <span>Profile</span> <i class="icon-links"></i> </span>
-                </div>
-              </div> <span class="body-light-gray-text"> Grid cell basic horizontal </span>
-            </div>
+          <picture> <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-02.jpg" alt="Marquee image"> <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-02_darkmode.jpg" alt="Marquee image"> </picture>
+          <div class="marquee-basic-content space-y-32 text-left">
+            <h1 class="marquee-title">Competitive agility</h1>
+            <p class="marquee-text">Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.</p> <button type="button" class="btn btn-primary btn-primary-cta"> <span>Discover B_system</span> <i class="icon-links"></i> </button>
           </div>
-          <div class="d-grid grid-1 grid-lg-3 column-gap-24 space-bottom-48">
-            <div class="space-y-24">
-              <div class="grid-cell grid-cell-basic-vertical">
-                <picture class="grid-cell-container-img"> <img class="grid-cell-img" src="../../assets/img/grid-cell/gridcells-vertical-01.jpg" alt="Grid cell basic"> </picture>
-                <div class="grid-cell-profile d-flex justify-content-between align-items-start">
-                  <div class="grid-cell-user">
-                    <p class="body-bold-text text-white mb-0">Martha Nielsen</p>
-                    <p class="text-white mb-0">UX Writer</p>
-                  </div> <span class="action-link "> <span>Profile</span> <i class="icon-links"></i> </span>
-                </div>
-              </div> <span class="body-light-gray-text"> Grid cell basic vertical </span>
+        </div>
+      </div><!-- END: MARQUEE BASIC -->
+      <!-- BASIC CONTENT ARGUMENTS MODULE -->
+      <div class="module section-divider  basic-content basic-content-arguments" id="">
+        <div class="container">
+          <div class="row space-y-32 space-y-sm-40 ">
+            <div class="d-flex flex-column col-12 col-md-6 col-lg-4 my-lg-0 space-y-24">
+              <h2 class="col-11 mx-0">Agility</h2>
+              <p class="body-light-gray-text col-11">Companies that dominate competitive agility achieve their growth, profitability, sustainability and trust objectives. Do you want to start?</p>
             </div>
-            <div class="col-span-lg-2 space-y-24">
-              <div class="grid-cell grid-cell-component overflow-hidden">
-                <picture class="grid-cell-container-img"> <img class="grid-cell-img" src="../../assets/img/grid-cell/gridcells-component-01.jpg" alt="Grid cell component"> </picture>
-                <div class="grid-cell-component-info inner-space-block-32 inner-space-inline-32">
-                  <div class="info-wrapper">
-                    <h4 class="text-white">An organic design system</h4>
-                    <p class="text-white mb-0">With fully scalable and reusable components.</p>
-                  </div>
-                </div>
-              </div> <span class="body-light-gray-text"> Grid cell component </span>
+            <div class="d-flex flex-column col-12 col-md-6 col-lg-4 my-lg-0 space-y-24">
+              <h2 class="col-11 mx-0">Innovation</h2>
+              <p class="body-light-gray-text col-11">Companies must manage their business in order to maximize their investments in innovation and restructure their resources.</p>
             </div>
-          </div>
-          <div class="d-grid grid-1 grid-lg-2 column-gap-24 space-bottom-48">
-            <div class=" space-y-24">
-              <div class="grid-cell grid-cell-content false">
-                <picture class="grid-cell-container-img"> <img class="grid-cell-img" src="../../assets/img/grid-cell/gridcells-portfolio-01.jpg" alt="Grid basic portfolios cell"> </picture>
-              </div> <span class="body-light-gray-text"> Grid basic portfolios cell </span>
-            </div>
-            <div class=" space-y-24 size-fixed">
-              <div class="grid-cell grid-cell-content bg-transparent grid-cell-border">
-                <div class="grid-cell-content-wrapper ">
-                  <div class="interaction-element"> 1 </div>
-                  <div class="grid-cell-content-info">
-                    <h4 class="text">Packaging design</h4>
-                    <p class="text body-light-gray-text mb-0">We create boxes, bottles, bags, packaging, labels, signage of spaces, exterior signage, corporeal.</p>
-                  </div> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
-                </div>
-              </div> <span class="body-light-gray-text"> Grid cell component </span>
-            </div>
-            <div class="space-y-24">
-              <div class="grid-cell grid-cell-content false">
-                <picture class="grid-cell-container-img"> <img class="grid-cell-img" src="../../assets/img/grid-cell/gridcells_portfolio-02.jpg" alt="Grid basic portfolios cell"> </picture>
-              </div> <span class="body-light-gray-text"> Grid basic portfolios cell </span>
-            </div>
-            <div class="space-y-24 size-fixed">
-              <div class="grid-cell grid-cell-content bg-dark">
-                <div class="grid-cell-content-wrapper ">
-                  <div class="interaction-element"> 1 </div>
-                  <div class="grid-cell-content-info">
-                    <h4 class="text">Packaging design</h4>
-                    <p class="text body-light-gray-text mb-0">We create boxes, bottles, bags, packaging, labels, signage of spaces, exterior signage, corporeal.</p>
-                  </div> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
-                </div>
-              </div> <span class="body-light-gray-text"> Grid cell component </span>
+            <div class="d-flex flex-column col-12 col-md-6 col-lg-4 my-lg-0 space-y-24">
+              <h2 class="col-11 mx-0">Disruption</h2>
+              <p class="body-light-gray-text col-11">Is a competition demanded from the outside and driven from the inside. Leaders turn disruption into an opportunity. Do you want to start?</p>
             </div>
           </div>
         </div>
-      </section>
+      </div><!-- END: BASIC CONTENT ARGUMENTS MODULE -->
+      <!-- BASIC CONTENT PLUS -->
+      <div class="module   basic-content" id="">
+        <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120">
+          <h1 class="text-center">Our services</h1>
+        </div>
+      </div><!-- END: BASIC CONTENT PLUS -->
+      <!-- CATEGORY MENU -->
+      <nav class="categories-menu-wrapper module position-sticky  p-0" id="">
+        <ul class="nav nav-tabs categories-menu bg-transparent flex-nowrap justify-content-center-safe" role="tablist">
+          <li class="nav-item py-0" role="presentation"> <button class="nav-link m-0 p-0 active" id="menu-ia" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="true"> <a href="#ia" class="d-block py-4 px-3"> Artificial Intelligence </a> </button></li>
+          <li class="nav-item py-0" role="presentation"> <button class="nav-link m-0 p-0 " id="menu-future" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false"> <a href="#future-systems" class="d-block py-4 px-3"> Future Systems </a> </button></li>
+          <li class="nav-item py-0" role="presentation"> <button class="nav-link m-0 p-0 " id="menu-methodology" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false"> <a href="#methodology" class="d-block py-4 px-3"> Our work methodology </a> </button></li>
+          <li class="nav-item py-0" role="presentation"> <button class="nav-link m-0 p-0 " id="menu-customer" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false"> <a href="#cuestomer" class="d-block py-4 px-3"> Customer experience </a> </button></li>
+          <li class="nav-item py-0" role="presentation"> <button class="nav-link m-0 p-0 " id="menu-strategic" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false"> <a href="#strategic" class="d-block py-4 px-3"> Strategic </a> </button></li>
+          <li class="nav-item py-0" role="presentation"> <button class="nav-link m-0 p-0 " id="menu-consulting" data-bs-toggle="tab" role="tab" type="button" aria-controls="nav-contact" aria-selected="false"> <a href="#consulting" class="d-block py-4 px-3"> Consulting </a> </button></li>
+        </ul>
+      </nav><!-- END: CATEGORY MENU -->
+      <!-- FEATURED CONTENT -->
+      <div class="module section-divider  " id="ia">
+        <div class="featured-content featured-content-extended container d-flex flex-column flex-xl-row mx-auto">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
+            <div class="icon-description icon-description-content icon-description-masked">
+              <picture class="masked d-flex justify-content-center align-items-center" style="mask-image:url(../../assets/masks/system.svg); -webkit-mask-image:url(../../assets/masks/system.svg);"> <img class="masked-img img-mode-light w-100" src="../../assets/img/featured-content/featured-content-10.jpg" alt="featured content image"> <img class="masked-img-mode-dark w-100" src="../../assets/img/featured-content/featured-content-10_darkmode.jpg" alt="featured content image"> </picture>
+            </div>
+          </div>
+          <div class="featured-content-wrapper d-flex flex-column justify-content-center space-y-24 space-y-md-40">
+            <div class="space-bottom-xl-56">
+              <h2 class="featured-content-title  mb-0">Artificial Intelligence</h2>
+              <p class="featured-content-text body-light-gray-text space-top-24 space-top-xl-40">Get up to speed on artificial intelligence and learn how it can help you drive business value. B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
+            </div> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
+          </div>
+        </div>
+      </div>
+      <div class="module section-divider  " id="future-systems">
+        <div class="featured-content featured-content-extended container d-flex flex-column flex-xl-row-reverse mx-auto">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
+            <div class="icon-description icon-description-content icon-description-masked">
+              <picture class="masked d-flex justify-content-center align-items-center" style="mask-image:url(../../assets/masks/template.svg); -webkit-mask-image:url(../../assets/masks/template.svg);"> <img class="masked-img img-mode-light w-100" src="../../assets/img/featured-content/featured-content-11.jpg" alt="featured content image"> <img class="masked-img-mode-dark w-100" src="../../assets/img/featured-content/featured-content-11_darkmode.jpg" alt="featured content image"> </picture>
+            </div>
+          </div>
+          <div class="featured-content-wrapper d-flex flex-column justify-content-center space-y-24 space-y-md-40">
+            <div class="space-bottom-xl-56">
+              <h2 class="featured-content-title  mb-0">Future Systems</h2>
+              <p class="featured-content-text body-light-gray-text space-top-24 space-top-xl-40">How can you realize the full value of your enterprise technology investments? B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
+            </div> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
+          </div>
+        </div>
+      </div>
+      <div class="module section-divider  " id="customer">
+        <div class="featured-content featured-content-extended container d-flex flex-column flex-xl-row mx-auto">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
+            <div class="icon-description icon-description-content icon-description-masked">
+              <picture class="masked d-flex justify-content-center align-items-center" style="mask-image:url(../../assets/masks/circle.svg); -webkit-mask-image:url(../../assets/masks/circle.svg);"> <img class="masked-img img-mode-light w-100" src="../../assets/img/featured-content/featured-content-12.jpg" alt="featured content image"> <img class="masked-img-mode-dark w-100" src="../../assets/img/featured-content/featured-content-12_darkmode.jpg" alt="featured content image"> </picture>
+            </div>
+          </div>
+          <div class="featured-content-wrapper d-flex flex-column justify-content-center space-y-24 space-y-md-40">
+            <div class="space-bottom-xl-56">
+              <h2 class="featured-content-title  mb-0">Customer experience</h2>
+              <p class="featured-content-text body-light-gray-text space-top-24 space-top-xl-40">B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
+            </div> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
+          </div>
+        </div>
+      </div>
+      <div class="module section-divider  " id="strategic">
+        <div class="featured-content featured-content-extended container d-flex flex-column flex-xl-row-reverse mx-auto">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
+            <div class="icon-description icon-description-content icon-description-masked">
+              <picture class="masked d-flex justify-content-center align-items-center" style="mask-image:url(../../assets/masks/consistency.svg); -webkit-mask-image:url(../../assets/masks/consistency.svg);"> <img class="masked-img img-mode-light w-100" src="../../assets/img/featured-content/featured-content-13.jpg" alt="featured content image"> <img class="masked-img-mode-dark w-100" src="../../assets/img/featured-content/featured-content-13_darkmode.jpg" alt="featured content image"> </picture>
+            </div>
+          </div>
+          <div class="featured-content-wrapper d-flex flex-column justify-content-center space-y-24 space-y-md-40">
+            <div class="space-bottom-xl-56">
+              <h2 class="featured-content-title  mb-0">Strategic & Reputation Risk</h2>
+              <p class="featured-content-text body-light-gray-text space-top-24 space-top-xl-40">B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
+            </div> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
+          </div>
+        </div>
+      </div>
+      <div class="module   " id="consulting">
+        <div class="featured-content featured-content-extended container d-flex flex-column flex-xl-row mx-auto">
+          <div class="featured-content-masked space-bottom-48 space-bottom-md-56">
+            <div class="icon-description icon-description-content icon-description-masked">
+              <picture class="masked d-flex justify-content-center align-items-center"> <img class="masked-img img-mode-light w-100" src="../../assets/img/featured-content/featured-content-unmasked_01.jpg" alt="featured content image"> <img class="masked-img-mode-dark w-100" src="../../assets/img/featured-content/featured-content-unmasked_01_darkmode.jpg" alt="featured content image"> </picture>
+            </div>
+          </div>
+          <div class="featured-content-wrapper d-flex flex-column justify-content-center space-y-24 space-y-md-40">
+            <div class="space-bottom-xl-56">
+              <h2 class="featured-content-title  mb-0">Technological consulting</h2>
+              <p class="featured-content-text body-light-gray-text space-top-24 space-top-xl-40">B_system is a multipurpose HTML5 template that will help you build responsive web pages with very little effort. It is made with fully scalable and reusable components, so you only have to worry about creating your wonderful project.</p>
+            </div> <span class="action-link "> <span>Learn more</span> <i class="icon-links"></i> </span>
+          </div>
+        </div>
+      </div><!-- END: FEATURED CONTENT -->
+      <!-- BUSINESS CASES -->
+      <div class="module section-bg-color business-case-wrapper  darkened" id="">
+        <div class="icon-background"> <i class="icon-check-circle"></i> </div>
+        <div class="business-case container mx-auto">
+          <div class="d-grid grid-8 grid-xl-12 align-items-center">
+            <div class="business-case-head space-y-24 space-y-xl-32 col-span-9 col-md-2-to-8 col-lg-3-to-7 col-span-xl-4">
+              <h3 class="business-case-title text-center text-xl-start">Business cases</h3>
+              <p class="business-case-text text-center text-xl-start">Know all the brands that have successfully used our product. You will be amazed at what they have achieved in a short time.</p>
+              <div class="d-none d-xl-block"> <span class="action-link "> <span>See all</span> <i class="icon-links"></i> </span> </div>
+            </div>
+            <div class="slider col-span-8 col-xl-6-to-13">
+              <div class="d-sm-none">
+                <div class="swiper" data-b-system="swiper" data-swiper-target="business-centered" data-swiper-effect="centered" data-swiper-items="1">
+                  <div class="swiper-wrapper">
+                    <!-- swiper slide -->
+                    <div class="swiper-slide">
+                      <div class="darkened" style="height: 100%"> <a href="#" class="card-business card card-bg    card-interaction d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
+                          <div class="card-head d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                            <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p> <i class="icon-award"></i>
+                            <p class="body-light-gray-text w-100">New brand</p>
+                          </div>
+                          <picture class="d-flex justify-content-center"> <img class="card-business-img img-mode-light" src="../../assets/img/card/card-business-brandemic.svg" alt="case image 1"> <img class="card-business-img img-mode-dark" src="../../assets/img/card/card-business-brandemic_darkmode.svg" alt="case image 1"> </picture>
+                          <div class="d-flex justify-content-between">
+                            <p class="body-light-gray-text">23/03/2019</p> <span class="action-link "> <span>More info</span> <i class="icon-info"></i> </span>
+                          </div>
+                        </a></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="darkened" style="height: 100%"> <a href="#" class="card-business card card-bg    card-interaction d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
+                          <div class="card-head d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                            <p class="body-light-gray-text fw-bold">Business case 2: B_system</p> <i class="icon-view-code"></i>
+                            <p class="body-light-gray-text w-100">Web template system</p>
+                          </div>
+                          <picture class="d-flex justify-content-center"> <img class="card-business-img img-mode-light" src="../../assets/img/card/card-business-brandemic.svg" alt="case image 2"> <img class="card-business-img img-mode-dark" src="../../assets/img/card/card-business-brandemic_darkmode.svg" alt="case image 2"> </picture>
+                          <div class="d-flex justify-content-between">
+                            <p class="body-light-gray-text">24/03/2019</p> <span class="action-link "> <span>More info</span> <i class="icon-info"></i> </span>
+                          </div>
+                        </a></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="darkened" style="height: 100%"> <a href="#" class="card-business card card-bg    card-interaction d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
+                          <div class="card-head d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                            <p class="body-light-gray-text fw-bold">Business case 3: Brandemic</p> <i class="icon-award"></i>
+                            <p class="body-light-gray-text w-100">New brand</p>
+                          </div>
+                          <picture class="d-flex justify-content-center"> <img class="card-business-img img-mode-light" src="../../assets/img/card/card-business-brandemic.svg" alt="case image 3"> <img class="card-business-img img-mode-dark" src="../../assets/img/card/card-business-brandemic_darkmode.svg" alt="case image 3"> </picture>
+                          <div class="d-flex justify-content-between">
+                            <p class="body-light-gray-text">25/03/2019</p> <span class="action-link "> <span>More info</span> <i class="icon-info"></i> </span>
+                          </div>
+                        </a></div>
+                    </div> <!-- end: swiper slide -->
+                  </div>
+                  <div class="swiper-pagination "></div>
+                </div>
+              </div>
+              <div class="d-none d-sm-block">
+                <div class="swiper" data-b-system="swiper" data-swiper-target="business-cards" data-swiper-effect="cards" data-swiper-next=".business-next" data-swiper-prev=".business-prev" data-swiper-items="1">
+                  <div class="swiper-wrapper">
+                    <!-- swiper slide -->
+                    <div class="swiper-slide">
+                      <div class="darkened" style="height: 100%"> <a href="#" class="card-business card card-bg    card-interaction d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
+                          <div class="card-head d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                            <p class="body-light-gray-text fw-bold">Business case 1: Brandemic</p> <i class="icon-award"></i>
+                            <p class="body-light-gray-text w-100">New brand</p>
+                          </div>
+                          <picture class="d-flex justify-content-center"> <img class="card-business-img img-mode-light" src="../../assets/img/card/card-business-brandemic.svg" alt="case image 1"> <img class="card-business-img img-mode-dark" src="../../assets/img/card/card-business-brandemic_darkmode.svg" alt="case image 1"> </picture>
+                          <div class="d-flex justify-content-between">
+                            <p class="body-light-gray-text">23/03/2019</p> <span class="action-link "> <span>More info</span> <i class="icon-info"></i> </span>
+                          </div>
+                        </a></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="darkened" style="height: 100%"> <a href="#" class="card-business card card-bg    card-interaction d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
+                          <div class="card-head d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                            <p class="body-light-gray-text fw-bold">Business case 2: B_system</p> <i class="icon-view-code"></i>
+                            <p class="body-light-gray-text w-100">Web template system</p>
+                          </div>
+                          <picture class="d-flex justify-content-center"> <img class="card-business-img img-mode-light" src="../../assets/img/card/card-business-brandemic.svg" alt="case image 2"> <img class="card-business-img img-mode-dark" src="../../assets/img/card/card-business-brandemic_darkmode.svg" alt="case image 2"> </picture>
+                          <div class="d-flex justify-content-between">
+                            <p class="body-light-gray-text">24/03/2019</p> <span class="action-link "> <span>More info</span> <i class="icon-info"></i> </span>
+                          </div>
+                        </a></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="darkened" style="height: 100%"> <a href="#" class="card-business card card-bg    card-interaction d-flex flex-column justify-content-between h-100 inner-space-block-24 inner-space-inline-24">
+                          <div class="card-head d-flex flex-wrap justify-content-between header-card d-flex justify-content-between">
+                            <p class="body-light-gray-text fw-bold">Business case 3: Brandemic</p> <i class="icon-award"></i>
+                            <p class="body-light-gray-text w-100">New brand</p>
+                          </div>
+                          <picture class="d-flex justify-content-center"> <img class="card-business-img img-mode-light" src="../../assets/img/card/card-business-brandemic.svg" alt="case image 3"> <img class="card-business-img img-mode-dark" src="../../assets/img/card/card-business-brandemic_darkmode.svg" alt="case image 3"> </picture>
+                          <div class="d-flex justify-content-between">
+                            <p class="body-light-gray-text">25/03/2019</p> <span class="action-link "> <span>More info</span> <i class="icon-info"></i> </span>
+                          </div>
+                        </a></div>
+                    </div> <!-- end: swiper slide -->
+                  </div>
+                  <div class="swiper-pagination "></div>
+                </div>
+              </div>
+              <div class="business-next d-none d-xl-block"> <i class="icon-dart-next"></i> </div>
+              <div class="business-prev d-none d-xl-block"> <i class="icon-dart-back"></i> </div>
+              <div class="business-pagination d-none d-sm-flex d-xl-none space-top-56 mx-auto col-min"></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- END: BUSINESS CASES -->
+      <!-- CTA -->
+      <div class="cta module space-y-32  section-divider " id="">
+        <p class="cta-title x7-text text-center">Do you want to start with B_system today?</p> <button type="button" class="btn btn-primary btn-primary-cta"> <span>Purchase B_system</span> <i class="icon-links"></i> </button>
+      </div><!-- END: CTA -->
+      <!-- CONTACT-->
+      <div class="contact module section-divider" id="">
+        <div class="container row flex-nowrap flex-column flex-md-row align-items-start mx-auto px-0">
+          <div class="contact-form-container col-md-8 col-xl-6">
+            <div class="contact-header space-y-24 space-y-md-32 space-y-xl-24 space-bottom-32">
+              <h3 class="contact-title">Contact us!</h3>
+              <p class="contact-text body-light-gray-text">Please fill out this form to send your message:</p>
+            </div>
+            <form class="contact-form">
+              <div class="form-floating"> <input id="contact-name" type="text" class="form-control " placeholder="Name" aria-invalid="false" aria-required="true"> <label for="contact-name" class="form-placeholder">Name</label></div>
+              <div class="form-floating"> <input id="contact-surnames" type="text" class="form-control " placeholder="Surnames" aria-invalid="false" aria-required="true"> <label for="contact-surnames" class="form-placeholder">Surnames</label></div>
+              <div class="form-floating"> <input id="contact-email" type="text" class="form-control " placeholder="Email" aria-invalid="false" aria-required="true"> <label for="contact-email" class="form-placeholder">Email</label></div>
+              <div class="form-floating"> <input id="contact-subject" type="text" class="form-control " placeholder="Subject" aria-invalid="false" aria-required="true"> <label for="contact-subject" class="form-placeholder">Subject</label></div>
+              <div class="form-floating"> <textarea id="contact-message" type="text" class="form-control " placeholder="Message" aria-invalid="false" aria-required="true"></textarea> <label for="contact-message" class="form-placeholder">Message</label></div>
+              <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="checkbox-one"> <i class="icon-done"></i> <label class="form-check-label" for="checkbox-one"> I authorize the treatment of my data. </label></div> <button type="button" class="btn btn-tertiary"> Send </button>
+            </form>
+          </div>
+          <div class="contact-alerts-container col-md-4 col-xl-6 d-flex flex-column">
+            <div class="alert alert-info space-y-24"> <i class="icon-call"></i>
+              <p class="alert-text body-light-gray-text">If you have an urgent query you can call us :</p>
+              <div class="alert-contact">
+                <p class="alert-text body-light-gray-text">T. (+34) 915 805 007</p>
+                <p class="alert-text body-light-gray-text">F. (+34) 915 806 082</p>
+              </div>
+            </div>
+            <div class="alert alert-info space-y-24"> <i class="icon-message"></i>
+              <p class="alert-text body-light-gray-text">You can also write an email to these departments and we will get back to you as soon as possible:</p>
+              <div class="alert-contact">
+                <p class="alert-text body-light-gray-text">bsystem@company.com</p>
+              </div>
+            </div>
+            <div class="alert alert-link space-y-24"> <span class="action-link "> <i class="icon-place"></i> <span>Find our offices easily in our search engine</span> </span> </div>
+          </div>
+        </div>
+      </div><!-- END: CONTACT -->
+      <!-- ICON SOCIAL -->
+      <div class="module  " id="">
+        <div class="icons-social"> <button type="button" class="btn btn-only-icon"> <i class="icon-behance"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-youtube"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-pinterest"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-twitter"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-linkedin"></i> </button> </div>
+      </div><!-- END: ICON SOCIAL -->
+      <!-- FOOTER -->
     </main>
     <!--END: MAIN CONTENT-->
     <!--MAIN FOOTER-->
-    <footer class="footer footer-basic darkened inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88">
+    <footer class="footer footer-corporate darkened inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88">
       <div class="footer-wrapper container">
-        <div class="footer-content d-flex gap-32"> <a class="footer-logo" href="../../home"> <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="logo" /> </a>
-          <p class="copy body-light-text"> Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio </p>
+        <div class="footer-contain">
+          <div class="footer-content d-flex align-items-start gap-24 space-bottom-48 space-bottom-sm-64"> <a class="footer-logo" href="../../home"> <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="logo" /> </a>
+            <p class="copy body-light-text"> Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved. </p> <span class="action-link "> <i class="icon-message"></i> <span>info@itertika.studio</span> </span>
+          </div>
+          <div class="footer-columns-container d-grid grid-2 grid-md-4 column-gap-32 row-gap-40">
+            <div class="footer-column">
+              <p class="footer-column-title body-bold-text space-bottom-32">About</p>
+              <ul class="list-unstyled space-y-16">
+                <li class="footer-list-item"> <a class="footer-link" href=""> </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> About us </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> About me </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> About B_system </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> How we work </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Portfolio classic </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Portfolio gallery </a> </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <p class="footer-column-title body-bold-text space-bottom-32">Services</p>
+              <ul class="list-unstyled space-y-16">
+                <li class="footer-list-item"> <a class="footer-link" href=""> </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Our services </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> What we offer </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Contact classic </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Contracting </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Product packs </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Services portfolio </a> </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <p class="footer-column-title body-bold-text space-bottom-32">Customer</p>
+              <ul class="list-unstyled space-y-16">
+                <li class="footer-list-item"> <a class="footer-link" href=""> </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Customer support </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Testimonials </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Team classic </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Team modern </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Product classic </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Product modern </a> </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <p class="footer-column-title body-bold-text space-bottom-32">Featured demos</p>
+              <ul class="list-unstyled space-y-16">
+                <li class="footer-list-item"> <a class="footer-link" href=""> </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Startup </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Design studio </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Branding agency </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Freelance </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Restaurant </a> </li>
+                <li class="footer-list-item"> <a class="footer-link" href="#"> Decor </a> </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+    </footer><!-- END: FOOTER -->
     <!--END: MAIN FOOTER-->
     <!--SCRIPTS-->
     <!--Bootstrap JS Bundle-->

@@ -1,0 +1,225 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
+<%- contentFor('body') %>
+<!-- MARQUEE BASIC -->
+<%- include(`${module}/marquee/basic`, {
+    img: {
+        src: 'marquee-standard-01',
+        alt: 'About me header'
+    },
+    title: {
+        title: 'About me',
+        titleWhite: true,
+    },
+    onLeft: false,
+    isDarkened: true,
+    hasBorder: true
+}) %>
+<!-- END: MARQUEE BASIC -->
+
+<!-- BASIC CONTENT: DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    title:'What i do',
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT: DESCRIPTION -->
+
+<!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/microillustration/microillustrationDescription`, {
+    id: 'methodology',
+    head: 'My career path',
+    columns: [
+        {
+            microillustration: {
+                src: 'testimonial',
+                alt: 'testimonial microillustration'
+            },
+            title: '2006 - 2008. Junior Consultant',
+            text: 'Explore new concepts, products, services, ventures, brands, and systems.'
+        },
+        {
+            microillustration: {
+                src: 'testimonial',
+                alt: 'testimonial microillustration'
+            },
+            title: '2008 - 2009. Social Media Intern',
+            text: 'A deep understanding of the needs of the users involved in the solution.'
+        },
+        {
+            microillustration: {
+                src: 'testimonial',
+                alt: 'testimonial microillustration'
+            },
+            title: '2009 - 2011. Social Media Specialist',
+            text: 'Staying with what really adds value and brings us to new interesting perspectives.'
+        },
+        {
+            microillustration: {
+                src: 'testimonial',
+                alt: 'testimonial microillustration'
+            },
+            title: '2011 - 2014. Social Media Specialist',
+            text: 'In this phase, activities favor expansive thinking and we eliminate value judgments.'
+        },
+        {
+            microillustration: {
+                src: 'testimonial',
+                alt: 'testimonial microillustration'
+            },
+            title: '2014 - 2019. Social Media Specialist',
+            text: 'Building prototypes makes ideas tangible and helps us visualize possible solutions.'
+        },
+        {
+            microillustration: {
+                src: 'testimonial',
+                alt: 'testimonial microillustration'
+            },
+            title: '2019. CM and Digital Marketing',
+            text: 'This phase helps us to identify significant improvements and faults to be solved.'
+        },
+    ],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+    })
+    %>
+<!-- END: ICON DESCRIPTION -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    isDark: false,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();
+    canSearch();
