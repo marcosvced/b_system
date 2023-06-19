@@ -1,0 +1,84 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: false,
+    buttons: [
+        {
+            label: 'Access',
+            mobileIcon: 'avatar',
+            variant: 'Subtle'
+        },
+        {
+            label: 'Cart',
+            mobileIcon: 'cart',
+            variant: 'Subtle'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
+<%- contentFor('body') %>
+<!-- Product profile -->
+<!-- END: Product profile -->
+
+<!-- FEATURED CARDS -->  
+<%- include( `${module}/featuredCard/featuredCard`, {
+    id: 'new-arrivals',
+    title: 'New Arrivals',
+    cards: [
+    {
+        img: {
+            src: 'card-feature-01',
+            alt: 'featured card image 1',
+        },
+        title: 'Bathroom storage',
+        text: 'Toilets'
+    },
+    {
+        img: {
+            src: 'card-basic-02',
+            alt: 'featured card image 2',
+        },
+        title: "Japanese style beds",
+        text: 'Bedrooms'
+    },
+    {
+        img: {
+            src: 'card-basic-03',
+            alt: 'featured card image 3',
+        },
+        title: 'Nordic consoles',
+        text: 'consoles'
+    },
+    ],
+    link:{
+        href: '#',
+        label: 'See all news',
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+} ) %>
+<!-- END: FEATURED CARDS -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/standard`, {
+    img: {src:'logo-dark-gray.svg', alt:'Logo'},
+    text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();

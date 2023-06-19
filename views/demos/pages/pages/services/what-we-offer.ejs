@@ -1,0 +1,330 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
+<%- contentFor('body') %>
+
+<!-- BASIC CONTENT: ARGUMENT -->
+<%- include(`${module}/basicContent/argument`, {
+    columns: [
+        {
+            title: 'Agility',
+            text: 'Companies that dominate competitive agility achieve their growth, profitability, sustainability and trust objectives. Do you want to start?'
+        },
+        {
+            title: 'Innovation',
+            text: 'Companies must manage their business in order to maximize their investments in innovation and restructure their resources.'
+        },
+        {
+            title: 'Disruption',
+            text: 'Is a competition demanded from the outside and driven from the inside. Leaders turn disruption into an opportunity. Do you want to start?'
+        }
+    ],
+    isPlus: false,
+    alignCenter: false,
+    hasBorder: true
+}) %>
+<!-- END: BASIC CONTENT: ARGUMENT -->
+
+<!-- PORTFOLIO BASIC -->
+<%- include(`${module}/portfolioGrid/basic`, {
+    grid: [
+        {
+            img: {
+                src: 'portfolio-basic-05',
+                alt: 'Portfolio example'
+            },
+            tag: '1',
+            title: 'Digital strategy',
+            text: 'We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+        },
+        {
+            img: {
+                src: 'portfolio-basic-06',
+                alt: 'Portfolio example'
+            },
+            tag: '2',
+            title: 'Digital marketing',
+            text: 'In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+            contentPosition: 'right'
+        },
+        {
+            img: {
+                src: 'portfolio-horizontal-02',
+                srcMobile: 'portfolio-horizontal-02_mobile',
+                alt: 'Portfolio horizontal example'
+            },
+            tag: '3',
+            title: 'Social media',
+            text: "A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.",
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'basic',
+        },
+        {
+            img: {
+                src: 'portfolio-vertical-02',
+                srcMobile: 'portfolio-vertical-02_mobile',
+                alt: 'Portfolio vertical example'
+            },
+            tag: '4',
+            title: 'Paid media',
+            text: 'We optimize all the means to help you sell. Our extensive Know How in performance supports our experience.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links'
+            },
+            shape: 'vertical',
+        },
+    ],
+    hasBorder: true
+}) %>
+<!-- END: PORTFOLIO BASIC -->
+
+<!-- PRICES -->
+<%- include(`${module}/price/price`, {
+    title: {
+        extended: 'Choose your ideal plan',
+        shortened: 'Choose your ideal plan'
+    },
+    cards: [
+        {
+            price: '$ 44 per month',
+            icon: 'saving-filled',
+            title: 'Basic plan',
+            text: 'Access at any time range and use of the bodybuilding room.',
+            link: {
+                href: '#',
+                label: 'Choose',
+                icon: 'links'
+            },
+            typesListElements: [
+                {
+                    icon: 'check',
+                    text: 'Basic training.'
+                },
+                {
+                    icon: 'close-blade',
+                    text: 'Spa and hydromassage.'
+                },
+                {
+                    icon: 'close-blade',
+                    text: 'Personal trainer.'
+                },
+            ],
+            hasShadow: false,
+            hasBorder: true,
+        },
+        {
+            price: '$ 60 per month',
+            icon: 'heart-filled',
+            title: 'Standard plan',
+            text: 'Unlimited use of the bodybuilding room, spa and hydromassage.',
+            link: {
+                href: '#',
+                label: 'Choose',
+                icon: 'links'
+            },
+            typesListElements: [
+            {
+                    icon: 'check',
+                    text: 'Basic training.'
+                },
+                {
+                    icon: 'check',
+                    text: 'Spa and hydromassage.'
+                },
+                {
+                    icon: 'close-blade',
+                    text: 'Personal trainer.'
+                },
+            ],
+            hasShadow: false,
+            hasBorder: true,
+        },
+        {
+            price: '$ 68 per month',
+            icon: 'star',
+            title: 'Premium plan. Special offer!',
+            text: 'Unlimited use of all facilities and personal trainer.',
+            link: {
+                href: '#',
+                label: 'Choose',
+                icon: 'links'
+            },
+            typesListElements: [
+            {
+                    icon: 'check',
+                    text: 'Basic training.'
+                },
+                {
+                    icon: 'check',
+                    text: 'Spa and hydromassage.'
+                },
+                {
+                    icon: 'check',
+                    text: 'Personal trainer.'
+                },
+            ],
+            hasShadow: false,
+            hasBorder: true,
+        },
+    ],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: PRICES -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    isDark: false,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();
+    canSearch();

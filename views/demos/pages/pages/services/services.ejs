@@ -1,0 +1,283 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
+<%- contentFor('body') %>
+<!-- MARQUEE BASIC -->
+<%- include(`${module}/marquee/basic`, {
+    img: {
+        src: 'marquee-textimage-01',
+        alt: 'About b_system header'
+    },
+    title: {
+        title: 'Our services',
+        titleWhite: true,
+    },
+    onLeft: false,
+    isDarkened: true,
+    hasBorder: true
+}) %>
+<!-- END: MARQUEE BASIC -->
+
+<!-- BASIC CONTENT: DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, {
+    title:'What do we do',
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT: DESCRIPTION -->
+
+<!-- CARROUSELS SERVICE -->
+<%
+const carrouselsServiceParams = {
+    title: "What disciplines do our business integrate?",
+    services: [
+        {
+            title: "Digital strategy",
+            text: "We create competitive agility for shareholders by partnering with C-suite boards, CEOs and executives to define and answer their most strategic business questions. We take everything we do and how it impacts our customers very seriously. ",
+            tag: "1",
+            img: {
+                src: "card-service-02",
+                alt: "Service image"
+            },
+            link: {
+                href: "#",
+                label: "Learn more",
+                icon: "links"
+            }
+        },
+        {
+            title: "Digital marketing",
+            text: "In markets as competitive as the current ones, we must focus on real online marketing strategies that work and on strategies based on results.",
+            tag: "2",
+            img: {
+                src: "card-service-03",
+                alt: "Service image"
+            },
+            link: {
+                href: "#",
+                label: "Learn more",
+                icon: "links"
+            }
+        },
+        {
+            title: "Social media",
+            text: "A team with great experience in Social & Content Marketing that has worked with more than 500 social profiles for different clients simultaneously.",
+            tag: "3",
+            img: {
+                src: "card-service-04",
+                alt: "Service image"
+            },
+            link: {
+                href: "#",
+                label: "Learn more",
+                icon: "links"
+            }
+        },
+    ],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}
+%>
+<%- include(`${module}/service/service`, carrouselsServiceParams) %>
+<!-- END: CARROUSELS SERVICE -->
+
+<!-- STATISTICS -->
+<%- include(`${module}/statistic/background`, {
+    background: {
+        srcDark: 'statistic-background-02',
+        alt: 'statistic background'
+    },
+    img: {
+        src: 'statistic-1',
+        alt: 'statistic image'
+    },
+    columns: [
+        {
+            data: '24_',
+            title: 'Successful projects',
+            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links',
+                iconPosition: 'after'
+            }
+        },
+        {
+            data: '16_',
+            title: 'Big trademark',
+            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links',
+                iconPosition: 'after'
+            }
+        },
+        {
+            data: '10_',
+            title: 'Countries',
+            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links',
+                iconPosition: 'after'
+            }
+        },
+        {
+            data: '26_',
+            title: 'Collaborators',
+            text: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very.',
+            link: {
+                href: '#',
+                label: 'Learn more',
+                icon: 'links',
+                iconPosition: 'after'
+            }
+        },
+    ],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+    })
+%>
+<!-- END: STATISTICS -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    isDark: false,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();
+    canSearch();
