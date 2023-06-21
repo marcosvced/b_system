@@ -1,0 +1,107 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    isSticky: true,
+    canSearch: true,
+    mainHeader: true,
+    size: 'full',
+    hasBackground: true,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'tertiary'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('body') %>
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Meet the team that has won so many awards", 
+    isPlus:true, 
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
+
+<!-- FEATURED CARDS -->  
+<%- include( `${module}/featuredCard/featuredCard`, {
+    id: 'managers',
+    title: 'Meet our managers',
+    cards: [
+    {
+        img: {
+            src: 'card-feature-01',
+            alt: 'Danielle Jolie',
+        },
+        title: 'Danielle Jolie',
+        text: 'CEO and founder'
+    },
+    {
+        img: {
+            src: 'card-basic-02',
+            alt: 'Martha Nielsen',
+        },
+        title: "Martha Nielsen",
+        text: 'Head of operations'
+    },
+    {
+        img: {
+            src: 'card-basic-03',
+            alt: 'Marcos Pascual',
+        },
+        title: 'Marcos Pascual',
+        text: 'Head of human resources'
+    },
+    ],
+    link:{
+        href: '#',
+        label: 'Meet our team',
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+} ) %>
+<!-- END: FEATURED CARDS -->
+
+<!-- ICONS SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, { 
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: true,
+    isDark: false,
+    hasBorder: false
+}) -%>
+<!-- END: ICONS SOCIAL -->
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/standard`, {
+    img: {src:'logo-dark-gray.svg', alt:'Logo'},
+    text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+    isDarkened: true
+}) %>
+<!-- END: FOOTER -->
+
+<%- contentFor('script') %>
+    transformHeader();

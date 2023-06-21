@@ -1,0 +1,227 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
+<%- contentFor('body') %>
+<!-- MARQUEE BASIC -->
+<%- include(`${module}/marquee/basic`, {
+    img: {
+        src: 'marquee-01',
+        alt: 'About us header'
+    },
+    title: {
+        title: 'How can we help you?',
+        titleWhite: true,
+    },
+    onLeft: false,
+    isDarkened: false,
+    hasBorder: false
+}) %>
+<!-- END: MARQUEE BASIC -->
+
+<!-- TESTIMONIAL -->
+<%- include(`${module}/testimonial/testimonial`, {
+    title: 'We have been learning from our clients',
+    testimonials: [
+        {
+            text: "Many of the failures in people's lives occurred when they did not realize what was close to success.",
+            avatar: {
+                src: 'avatar-testimonial-4',
+                alt: 'Melissa Edgar',
+                name: 'Melissa Edgar',
+                job: 'UX designer'
+            },
+            stars: [
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+            ],
+            hasBackground: true,
+            hasBorder: false,
+            hasShadow: false
+        },
+        {
+            text: "Our greatest glory is not in never failing, but in getting up every time we fall. All your dreams can come true.",
+            avatar: {
+                src: 'avatar-testimonial-5',
+                alt: 'Sandra Golpe',
+                name: 'Sandra Golpe',
+                job: 'Marketing manager'
+            },
+            stars: [
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: false},
+            ],
+            hasBackground: true,
+            hasBorder: false,
+            hasShadow: false
+        },
+        {
+            text: "Always keep in mind that your own will to succeed is much more important than anything else.",
+            avatar: {
+                src: 'avatar-testimonial-6',
+                alt: 'Mario Golpe',
+                name: 'Mario Golpe',
+                job: 'Marketing manager'
+            },
+            stars: [
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: true},
+                {state: false},
+            ],
+            hasBackground: true,
+            hasBorder: false,
+            hasShadow: false
+        },
+        
+    ],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: TESTIMONIAL -->
+
+
+
+<!-- CTA -->
+<%- include(`${module}/cta/cta`, {
+    title: 'Do you want to start with B_system today?',
+    btn: {
+        label: 'Purchase B_system',
+        isCTA: true,
+        icon: 'links',
+        iconPosition: 'after'
+    },
+    isDarkened: false,
+    isDark: false,
+    hasBorder: false
+}) %>
+<!-- END: CTA -->
+
+<!-- BASIC CONTENT BG -->
+<!-- END: BASIC CONTENT BG -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+<%- contentFor('script') %>
+canSearch();

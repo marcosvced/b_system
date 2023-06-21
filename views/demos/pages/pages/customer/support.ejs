@@ -1,0 +1,284 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    hasBackground: false,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart',
+            variant: 'primary'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+
+<%- contentFor('body') %>
+<!-- MARQUEE BASIC -->
+<%- include(`${module}/marquee/basic`, {
+    img: {
+        src: 'marquee-01',
+        alt: 'About us header'
+    },
+    title: {
+        title: 'How can we help you?',
+        titleWhite: true,
+    },
+    onLeft: false,
+    isDarkened: false,
+    hasBorder: false
+}) %>
+<!-- END: MARQUEE BASIC -->
+
+<!-- ICON DESCRIPTION -->
+<%- include(`${module}/iconDescription/icon/basic`, {
+    columns: [
+        {
+            icon: 'people-circle',
+            title: 'Do you want to talk?',
+            text: '965 123 123, we will assist you 24 hours a day, every day.'
+        },
+        {
+            icon: 'check-circle',
+            title: 'Do you want to chat?',
+            text: 'Access our online chat and solve all your doubts.'
+        },
+        {
+            icon: 'pencil-circle',
+            title: 'Do you have any doubt?',
+            text: 'Write to us, and find an answer to your specific questions: info@itertika.studio'
+        },
+    ],
+    isDarkened: false,
+    hasBorder: true
+    })
+%>
+<!-- END: ICON DESCRIPTION -->
+
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"First of all, check the most frequently asked questions by category",
+    alignCenter: true, 
+    isPlus:false,
+    isDarkened: false, 
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
+
+<!-- FAQ -->
+<%- include(`${module}/faq/faq`, {
+    title: 'Frequently asked questions',
+    links: [
+        {
+            tab: 'tab-system',
+            label: 'Brand System'
+        },
+        {
+            tab: 'tab-product',
+            label: 'Product contracting'
+        },
+        {
+            tab: 'tab-customer',
+            label: 'Customer Support'
+        },
+        {
+            tab: 'tab-commitment',
+            label: 'Our commitment'
+        },
+    ],
+    sections: [
+        [
+            {
+                idAccordion: 'accordion1',
+                idItem: 'item1',
+                label: 'What is B_system?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion2',
+                idItem: 'item2',
+                label: 'In what kind of projects can I use it?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion3',
+                idItem: 'item3',
+                label: 'What frameworks does the system use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion4',
+                idItem: 'item4',
+                label: 'How many demos does it have?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion5',
+                idItem: 'item5',
+                label: 'Is there any discount or promotion if I use it several times?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion6',
+                idItem: 'item6',
+                label: 'What programming languages ​​does it use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+        [
+            {
+                idAccordion: 'accordion1',
+                idItem: 'item1',
+                label: 'What is B_system?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion2',
+                idItem: 'item2',
+                label: 'In what kind of projects can I use it?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+        [
+
+            {
+                idAccordion: 'accordion4',
+                idItem: 'item4',
+                label: 'How many demos does it have?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion5',
+                idItem: 'item5',
+                label: 'Is there any discount or promotion if I use it several times?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+            {
+                idAccordion: 'accordion6',
+                idItem: 'item6',
+                label: 'What programming languages ​​does it use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+        [
+
+            {
+                idAccordion: 'accordion3',
+                idItem: 'item3',
+                label: 'What frameworks does the system use?',
+                content: 'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.'
+            },
+        ],
+    ],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) %>
+<!-- END: FAQ -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/corporate`, {
+    img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+    text:'Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved.',
+    link: {href: 'info@itertika.studio', label: 'info@itertika.studio', icon: 'message', iconPosition: 'before'},
+    isDarkened: true,
+    columns: [
+        [
+            {
+                title: 'Company',
+            },
+            {
+                name: 'B_system',
+                href: '#'
+            },
+            {
+                name: 'About us',
+                href: '#'
+            },
+            {
+                name: 'Our services',
+                href: '#'
+            },
+            {
+                name: 'Contact us',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Blog'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Most read',
+                href: '#'
+            },
+            {
+                name: 'Latest articles',
+                href: '#'
+            },
+            {
+                name: 'Article',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Shop'
+            },
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: "What's new?",
+                href: '#'
+            },
+            {
+                name: 'Offers',
+                href: '#'
+            },
+            {
+                name: 'Product',
+                href: '#'
+            },
+        ],
+        [
+            {
+                title: 'Featured demos'
+            },
+            {
+                name: 'Startup',
+                href: '#'
+            },
+            {
+                name: 'Agency',
+                href: '#'
+            },
+            {
+                name: 'Corporative',
+                href: '#'
+            },
+            {
+                name: 'Studio',
+                href: '#'
+            },
+        ]
+    ]
+}) %>
+<!-- END: FOOTER -->
+<%- contentFor('script') %>
+canSearch();
