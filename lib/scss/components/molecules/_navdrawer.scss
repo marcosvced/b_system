@@ -13,8 +13,8 @@
   border: none;
 
   .offcanvas-body {
-    height: calc(100vh - var(--s-min-top, 0px));
-    padding: calc(#{size.space(32)} + var(--s-min-top, 56px)) size.space(16) size.space(16);
+    height: calc(100vh - var(--hb-height, 0px));
+    padding: calc(#{size.space(32)} + var(--hb-height, 56px)) size.space(16) size.space(16);
     @include themed.properties {
       background-color: themed.values($c-grayscale--light, $c-grayscale--1100);
     }

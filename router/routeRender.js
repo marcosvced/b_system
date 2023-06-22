@@ -5,12 +5,14 @@ const build = require('./routeBuild');
 
 const quickStartPaths = require('../views/quick_start/routePaths');
 const demosPaths = require('../views/demos/routePaths');
+const pagesPaths = require('../views/pages/routePaths');
 
 const defaultOptions = {
   title: 'B_system',
   ...srcDirs,
   ...quickStartPaths,
   ...demosPaths,
+  ...pagesPaths,
   layout: `${srcDirs.layout}/default`,
   pretty,
   beautify,

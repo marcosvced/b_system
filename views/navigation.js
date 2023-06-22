@@ -1,5 +1,6 @@
 const {QUICK_START} = require('./quick_start/routePaths')
-const {DEMOS, PAGES} = require('./demos/routePaths')
+const {DEMOS} = require('./demos/routePaths')
+const {PAGES} = require('./pages/routePaths')
 
 const navigation = [
     {
