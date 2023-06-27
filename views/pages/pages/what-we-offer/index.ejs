@@ -7,7 +7,7 @@ const headerConfig = {
     size: 'full',
     isSticky: true,
     hasBackground: false,
-    canSearch: true,
+    canSearch: false,
     mainHeader: true,
     hasLightNav: true,
     buttons: [
@@ -23,6 +23,21 @@ const headerConfig = {
 <%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
 
 <%- contentFor('body') %>
+<!-- MARQUEE BASIC -->
+<%- include(`${module}/marquee/basic`, {
+    img: {
+        src: 'marquee-standard-01',
+        alt: 'what we offer header'
+    },
+    title: {
+        title: 'What we offer',
+        titleWhite: true,
+    },
+    onLeft: false,
+    isDarkened: true,
+    hasBorder: false
+}) %>
+<!-- END: MARQUEE BASIC -->
 
 <!-- BASIC CONTENT: ARGUMENT -->
 <%- include(`${module}/basicContent/argument`, {
@@ -45,6 +60,14 @@ const headerConfig = {
     hasBorder: true
 }) %>
 <!-- END: BASIC CONTENT: ARGUMENT -->
+
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"How it's done", 
+    isPlus:false, 
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
 
 <!-- PORTFOLIO BASIC -->
 <%- include(`${module}/portfolioGrid/basic`, {
@@ -121,8 +144,8 @@ const headerConfig = {
 <!-- PRICES -->
 <%- include(`${module}/price/price`, {
     title: {
-        extended: 'Choose your ideal plan',
-        shortened: 'Choose your ideal plan'
+        extended: 'Know our prices and choose your ideal pack',
+        shortened: 'Know our prices and choose your ideal pack'
     },
     cards: [
         {
@@ -149,6 +172,7 @@ const headerConfig = {
                     text: 'Personal trainer.'
                 },
             ],
+            hasBackground: false,
             hasShadow: false,
             hasBorder: true,
         },
@@ -176,6 +200,7 @@ const headerConfig = {
                     text: 'Personal trainer.'
                 },
             ],
+            hasBackground: false,
             hasShadow: false,
             hasBorder: true,
         },
@@ -203,8 +228,9 @@ const headerConfig = {
                     text: 'Personal trainer.'
                 },
             ],
+            hasBackground: false,
             hasShadow: false,
-            hasBorder: true,
+            hasBorder: false,
         },
     ],
     isDarkened: false,
@@ -327,4 +353,3 @@ const headerConfig = {
 
 <%- contentFor('script') %>
     transformHeader();
-    canSearch();

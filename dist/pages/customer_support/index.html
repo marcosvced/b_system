@@ -3,237 +3,231 @@
 
   <head>
     <title>B_system</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Bootstrap + reset styles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css"> <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> <!-- Highlight -->
-    <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!--B_system styles-->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' />
+    <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!-- Demo styles -->
     <style lang="css"> </style>
   </head>
 
-  <body><!--MAIN HEADER-->
-    <div class="header-wrapper header-fixed">
-      <div class="collapsed-content">
-        <div class="searcher module  darkened" id="">
-          <div class="container d-grid grid-4 grid-md-8 grid-xl-12 px-0">
-            <div class="form-floating"> <input id="searcher" type="text" class="form-control " placeholder="Search..." aria-invalid="false" aria-required="true"> <button type="button" id='searcher' class="btn btn-only-icon"> <i class="icon-m-glass"></i> </button> <label for="searcher" class="form-placeholder">Search...</label></div> <button type="button" id='close-searcher' class="btn btn-only-icon"> <i class="icon-blade"></i> </button>
+  <body>
+    <!--MAIN HEADER-->
+    <header class="header header-fixed  header-clear " data-b-system-header-position="sticky" data-b-system-header="transparent">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-b-system-wrapper="buttons">
+          <div class="d-flex d-xl-none order-0"> <button type="button" class="btn btn-only-icon"> <i class="icon-cart"></i> </button> </div>
+          <div class="d-none d-xl-block order-1"> <button type="button" class="btn btn-primary    btn-fit"> Purchase B_system </button> </div>
+        </div> <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min "> <img src="../../assets/img/logo-light.svg" class="logo" alt="b system logo" /> </a>
+        <div class="nav-wrapper order-2 order-xl-1 col">
+          <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
+            <nav class="navbar navbar-expand-lg ">
+              <ul class="navbar-nav">
+                <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Demos </a>
+                  <div class="dropdown-menu dropdown-grid repeat-4" aria-labelledby="demos_dropdown_menu">
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Light mode demos</strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup"> Startup </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/design-studio"> Design Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/branding"> Branding Agency </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/digital-product"> Digital Product </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-studio"> Creative Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/freelance"> Freelance </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/development-studio"> Development Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/corporate"> Corporate </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-agency"> Creative Agency </a> </li>
+                    </ul>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong></strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/furniture"> Furniture </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/modern-shop"> Modern Shop </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/classic-shop"> Classic Shop </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/legal"> Legal </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/fitness"> Fitness </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/architecture"> Architecture </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/marketplace"> Marketplace </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/restaurant"> Restaurant </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Portfolio </a> </li>
+                    </ul>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Dark mode demos</strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup?theme=dark"> Startup </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/design-studio?theme=dark"> Design Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/branding?theme=dark"> Branding Agency </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/digital-product?theme=dark"> Digital Product </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-studio?theme=dark"> Creative Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/freelance?theme=dark"> Freelance </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/development-studio?theme=dark"> Development Studio </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/corporate?theme=dark"> Corporate </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-agency?theme=dark"> Creative Agency </a> </li>
+                    </ul>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong></strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/furniture?theme=dark"> Furniture </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/modern-shop?theme=dark"> Modern Shop </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/classic-shop?theme=dark"> Classic Shop </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/legal?theme=dark"> Legal </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/fitness?theme=dark"> Fitness </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/architecture?theme=dark"> Architecture </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/marketplace?theme=dark"> Marketplace </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/restaurant?theme=dark"> Restaurant </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Portfolio </a> </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link active" id="pages_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pages </a>
+                  <ul class="dropdown-menu dropdown-multilevel " aria-labelledby="pages_dropdown_menu">
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>About</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/about_us"> About Us </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/about_me"> About Me </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/about_b_system"> About B_System </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/how_we_work"> How we work </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Services</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/our_services"> Our services </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/what_we_offer"> What we offer </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Our work</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_classic_grid"> Portfolio classic grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_classic_wide"> Portfolio classic wide </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_gallery_wide"> Portfolio gallery wide </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_masonry"> Portfolio masonry </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_masonry_path"> Portfolio masonry path </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_pattern"> Portfolio pattern </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/services_portfolio"> Services portfolio </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Our team</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/team_classic"> Team classic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/team_modern"> Team modern </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Product</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/product_classic"> Product classic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/product_modern"> Product modern </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Customer</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/customer_support"> Customer Support </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/testimonials"> Testimonials </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Contact</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/contact_classic"> Contact classic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/product_packs"> Product packs </a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Modules </a>
+                  <ul class="dropdown-menu dropdown-multilevel " aria-labelledby="modules_dropdown_menu">
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Menus</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/headers"> Header menus </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/categories-menu"> Categories menu </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/contactBar"> Contact menu </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Headers</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/basic"> Marquee basic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/standar"> Marquee standard </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/extended"> Marquee extended </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/illustration"> Marquee illustration </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/image"> Marquee image </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/cta"> Marquee text </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/textImage"> Marquee text + image </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Content</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/basicContents"> Basic Content </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/businessCases"> Business Cases </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconsDescription"> Icon description </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconServices"> Services </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconSocial"> Social module </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/cta"> Call to action </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/faqs"> FAQs </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/statistics"> Statistics </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/featuredContents"> Featured content </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/brands"> Brands </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Grids</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/basicGrids"> Basic grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/teamGrids"> Team grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/serviceGrids"> Service grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/portfolios/basic"> Portfolio grid </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/portfolio/decomposed"> Portfolio deconstructed </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Cards</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/featureCards"> Featured </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/services"> Services </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/productCards"> Product </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/testimonials"> Testimonials </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/prices"> Prices </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/digitalProducts"> Digital Products </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Forms</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/contacts"> Contact </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/login"> Login </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/searchers"> Searchers </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Footers</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/basic"> Basic </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/standard"> Standard </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/newsletter"> Newsletter </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/corporate"> Corporate </a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Components </a>
+                  <div class="dropdown-menu dropdown-grid repeat-2" aria-labelledby="components_dropdown_menu">
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Components</strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/buttons"> Buttons </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/forms"> Forms </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/interaction"> Interaction </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/cards"> Cards </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/productCards"> Product Cards </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/links"> Links </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/gridCells"> Grid cells </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/iconsDescription"> Icon + description </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/accordions"> Accordions </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/alerts"> Alerts </a> </li>
+                    </ul>
+                    <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Brand elements</strong></span>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/illustrations"> Illustrations </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/scenes"> Illustrations Scenes </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/microillustrations"> Microillustrations </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/icons"> Icons </a> </li>
+                      <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/texts"> Texts </a> </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item  "> <a class="nav-link "> Transitions </a> </li>
+              </ul>
+            </nav>
           </div>
+          <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16"> <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> <i class="icon-menu"></i> </button> </div>
         </div>
       </div>
-      <header class="header header-fixed  header-clear " data-b-system-header-position="sticky" data-b-system-header="transparent">
-        <div class="d-flex justify-content-between align-items-center ">
-          <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-b-system-wrapper="buttons">
-            <div class="order-2 order-xl-0 space-right-xl-32"> <button type="button" id='searcher-button' class="btn btn-only-icon"> <i class="icon-m-glass"></i> </button> </div>
-            <div class="d-flex d-xl-none order-0"> <button type="button" class="btn btn-only-icon"> <i class="icon-cart"></i> </button> </div>
-            <div class="d-none d-xl-block order-1"> <button type="button" class="btn btn-primary    btn-fit"> Purchase B_system </button> </div>
-          </div> <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-min "> <img src="../../assets/img/logo-light.svg" class="logo" alt="b system logo" /> </a>
-          <div class="nav-wrapper order-2 order-xl-1 col">
-            <div class="d-none d-xl-flex space-right-xl-32 justify-content-end">
-              <nav class="navbar navbar-expand-lg ">
-                <ul class="navbar-nav">
-                  <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Demos </a>
-                    <div class="dropdown-menu dropdown-grid repeat-4" aria-labelledby="demos_dropdown_menu">
-                      <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Light mode demos</strong></span>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup"> Startup </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/design-studio"> Design Studio </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/branding"> Branding Agency </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/digital-product"> Digital Product </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-studio"> Creative Studio </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/freelance"> Freelance </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/development-studio"> Development Studio </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/corporate"> Corporate </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-agency"> Creative Agency </a> </li>
-                      </ul>
-                      <ul class="dropdown-submenu"> <span class="dropdown-header"><strong></strong></span>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/furniture"> Furniture </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/modern-shop"> Modern Shop </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/classic-shop"> Classic Shop </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/legal"> Legal </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/fitness"> Fitness </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/architecture"> Architecture </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/marketplace"> Marketplace </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/restaurant"> Restaurant </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Portfolio </a> </li>
-                      </ul>
-                      <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Dark mode demos</strong></span>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup?theme=dark"> Startup </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/design-studio?theme=dark"> Design Studio </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/branding?theme=dark"> Branding Agency </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/digital-product?theme=dark"> Digital Product </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-studio?theme=dark"> Creative Studio </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/freelance?theme=dark"> Freelance </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/development-studio?theme=dark"> Development Studio </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/corporate?theme=dark"> Corporate </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/creative-agency?theme=dark"> Creative Agency </a> </li>
-                      </ul>
-                      <ul class="dropdown-submenu"> <span class="dropdown-header"><strong></strong></span>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/furniture?theme=dark"> Furniture </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/modern-shop?theme=dark"> Modern Shop </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/classic-shop?theme=dark"> Classic Shop </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/legal?theme=dark"> Legal </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/fitness?theme=dark"> Fitness </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/architecture?theme=dark"> Architecture </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/marketplace?theme=dark"> Marketplace </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/restaurant?theme=dark"> Restaurant </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="#"> Portfolio </a> </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link active" id="pages_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pages </a>
-                    <ul class="dropdown-menu dropdown-multilevel " aria-labelledby="pages_dropdown_menu">
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>About</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/about_us"> About Us </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/about_me"> About Me </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/about_b_system"> About B_System </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/how_we_work"> How we work </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Services</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/our_services"> Our services </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/what_we_offer"> What we offer </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Our work</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_classic_grid"> Portfolio classic grid </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_classic_wide"> Portfolio classic wide </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_gallery_wide"> Portfolio gallery wide </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_masonry"> Portfolio masonry </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_masonry_path"> Portfolio masonry path </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/portfolio_pattern"> Portfolio pattern </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/services_portfolio"> Services portfolio </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Our team</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/team_classic"> Team classic </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/team_modern"> Team modern </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Product</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/product_classic"> Product classic </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/product_modern"> Product modern </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Customer</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/customer_support"> Customer Support </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/testimonials"> Testimonials </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Contact</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/contact_classic"> Contact classic </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../pages/product_packs"> Product packs </a> </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="modules_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Modules </a>
-                    <ul class="dropdown-menu dropdown-multilevel " aria-labelledby="modules_dropdown_menu">
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Menus</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/headers"> Header menus </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/categories-menu"> Categories menu </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/contactBar"> Contact menu </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Headers</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/basic"> Marquee basic </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/standar"> Marquee standard </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/extended"> Marquee extended </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/illustration"> Marquee illustration </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/image"> Marquee image </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/cta"> Marquee text </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/marquees/textImage"> Marquee text + image </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Content</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/basicContents"> Basic Content </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/businessCases"> Business Cases </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconsDescription"> Icon description </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconServices"> Services </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/iconSocial"> Social module </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/cta"> Call to action </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/faqs"> FAQs </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/statistics"> Statistics </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/featuredContents"> Featured content </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/brands"> Brands </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Grids</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/basicGrids"> Basic grid </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/teamGrids"> Team grid </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/serviceGrids"> Service grid </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/portfolios/basic"> Portfolio grid </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/portfolio/decomposed"> Portfolio deconstructed </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Cards</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/featureCards"> Featured </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/services"> Services </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/productCards"> Product </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/testimonials"> Testimonials </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/prices"> Prices </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/digitalProducts"> Digital Products </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Forms</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/contacts"> Contact </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/login"> Login </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/searchers"> Searchers </a> </li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Footers</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
-                        <ul class="multilevel dropdown-menu">
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/basic"> Basic </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/standard"> Standard </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/newsletter"> Newsletter </a> </li>
-                          <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../modules/footers/corporate"> Corporate </a> </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="components_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Components </a>
-                    <div class="dropdown-menu dropdown-grid repeat-2" aria-labelledby="components_dropdown_menu">
-                      <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Components</strong></span>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/buttons"> Buttons </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/forms"> Forms </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/interaction"> Interaction </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/cards"> Cards </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/productCards"> Product Cards </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/links"> Links </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/gridCells"> Grid cells </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/iconsDescription"> Icon + description </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/accordions"> Accordions </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/alerts"> Alerts </a> </li>
-                      </ul>
-                      <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Brand elements</strong></span>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/illustrations"> Illustrations </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/scenes"> Illustrations Scenes </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/microillustrations"> Microillustrations </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/icons"> Icons </a> </li>
-                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../components/texts"> Texts </a> </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="nav-item  "> <a class="nav-link "> Transitions </a> </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16"> <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> <i class="icon-menu"></i> </button> </div>
-          </div>
-        </div>
-      </header>
-    </div><!--END: MAIN HEADER-->
+    </header>
+    <!--END: MAIN HEADER-->
     <div id="sticky-banner" class="d-none d-xl-block card card-sticky card-bg space-y-24 inner-space-block-24 inner-space-inline-24 position-fixed">
       <div class="switch d-inline-flex justify-content-between space-x-24 w-100"> <label class="body-bold-text text-dark-mode" for="dark-mode-switch">Dark mode</label>
         <div class="form-check form-switch"> <input class="form-switch-input bg-transition" type="checkbox" id="dark-mode-switch">
@@ -377,8 +371,10 @@
           </li>
         </ul>
       </div>
-    </div><!--MAIN CONTENT-->
-    <main class="main"> <!-- MARQUEE BASIC -->
+    </div>
+    <!--MAIN CONTENT-->
+    <main class="main">
+      <!-- MARQUEE BASIC -->
       <div class="marquee marquee-basic module p-0" id="">
         <div class="container">
           <picture> <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-01.jpg" alt="About us header"> <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-01_darkmode.jpg" alt="About us header"> </picture>
@@ -386,8 +382,10 @@
             <h1 class="marquee-title text-white">How can we help you?</h1>
           </div>
         </div>
-      </div><!-- END: MARQUEE BASIC --><!-- ICON DESCRIPTION -->
-      <div class="module section-divider  " id=""> <!-- Desktop -->
+      </div><!-- END: MARQUEE BASIC -->
+      <!-- ICON DESCRIPTION -->
+      <div class="module section-divider  " id="">
+        <!-- Desktop -->
         <div class="container d-none d-xl-grid grid-xl-12">
           <div class="col-span-4 col-span-md-8 col-span-xl-4">
             <div class="icon-description icon-description-content"> <i class="icon-people-circle"></i>
@@ -407,10 +405,12 @@
               <p class="icon-description-text body-light-gray-text">Write to us, and find an answer to your specific questions: info@itertika.studio</p>
             </div>
           </div>
-        </div> <!-- END: Desktop --> <!-- Tablet & Mobile -->
+        </div> <!-- END: Desktop -->
+        <!-- Tablet & Mobile -->
         <div class="d-xl-none overflow-hidden">
           <div class="swiper" data-b-system="swiper" data-swiper-target="icon-description-basic" data-swiper-effect="centered" data-swiper-items="1">
-            <div class="swiper-wrapper"> <!-- swiper slide -->
+            <div class="swiper-wrapper">
+              <!-- swiper slide -->
               <div class="swiper-slide">
                 <div class="icon-description icon-description-content"> <i class="icon-people-circle"></i>
                   <h5 class="icon-description-title m-0">Do you want to talk?</h5>
@@ -433,13 +433,15 @@
             <div class="swiper-pagination pagination-dark"></div>
           </div>
         </div> <!-- END: Tablet & Mobile -->
-      </div><!-- END: ICON DESCRIPTION --><!-- BASIC CONTENT PLUS -->
+      </div><!-- END: ICON DESCRIPTION -->
+      <!-- BASIC CONTENT PLUS -->
       <div class="module section-divider  basic-content" id="">
         <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120">
           <h2 class="text-center">First of all, check the most frequently asked questions by category</h2>
         </div>
-      </div><!-- END: BASIC CONTENT PLUS --><!-- FAQ -->
-      <div class="module  section-divider " id="">
+      </div><!-- END: BASIC CONTENT PLUS -->
+      <!-- FAQ -->
+      <div class="module   " id="">
         <div class="container">
           <div class="faq row space-y-48 d-none d-md-flex">
             <div class="col-12 col-md-5 col-xl-3 mb-md-0">
@@ -714,8 +716,11 @@
             </div>
           </div>
         </div>
-      </div><!-- END: FAQ --><!-- FOOTER -->
-    </main><!--END: MAIN CONTENT--><!--MAIN FOOTER-->
+      </div><!-- END: FAQ -->
+      <!-- FOOTER -->
+    </main>
+    <!--END: MAIN CONTENT-->
+    <!--MAIN FOOTER-->
     <footer class="footer footer-corporate darkened inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88">
       <div class="footer-wrapper container">
         <div class="footer-contain">
@@ -766,14 +771,18 @@
           </div>
         </div>
       </div>
-    </footer><!-- END: FOOTER --><!--END: MAIN FOOTER--><!--SCRIPTS--><!--Bootstrap JS Bundle-->
+    </footer><!-- END: FOOTER -->
+    <!--END: MAIN FOOTER-->
+    <!--SCRIPTS-->
+    <!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script><!-- Swiper bundle CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-html.min.js"></script><!-- Highlight -->
     <script src="../../assets/vendor/highlight/js/highlight.js"></script>
     <script>
 hljs.highlightAll();
-    </script><!--B_system JS-->
+    </script>
+    <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
     <script src="../../assets/js/script.min.js"></script>
     <script>
@@ -877,8 +886,8 @@ demos = Object.values(demos).map((value) => {
   return value;
 }).flat(1);
 window.demos = demos;
-canSearch();
-    </script><!--END: SCRIPTS-->
+    </script>
+    <!--END: SCRIPTS-->
   </body>
 
 </html>

@@ -7,7 +7,7 @@ const headerConfig = {
     size: 'full',
     isSticky: true,
     hasBackground: false,
-    canSearch: true,
+    canSearch: false,
     mainHeader: true,
     hasLightNav: true,
     buttons: [
@@ -35,7 +35,7 @@ const headerConfig = {
     },
     onLeft: false,
     isDarkened: true,
-    hasBorder: true
+    hasBorder: false
 }) %>
 <!-- END: MARQUEE BASIC -->
 
@@ -44,7 +44,7 @@ const headerConfig = {
     variant:'2-columns',
     title:'Our work methodology',
     text:'B_system is a multipurpose HTML5 template that will help you create responsive web pages with very little effort. It is made with completely scalable and reusable components, so you only have to worry about creating your wonderful project.',
-    hasBorder: false
+    hasBorder: true
 }) %>
 <!-- END: BASIC CONTENT: DESCRIPTION -->
 
@@ -313,4 +313,3 @@ const headerConfig = {
 
 <%- contentFor('script') %>
     transformHeader();
-    canSearch();

@@ -3,15 +3,18 @@
 
   <head>
     <title>B_system</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Bootstrap + reset styles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css"> <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> <!-- Highlight -->
-    <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!--B_system styles-->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' />
+    <!--B_system styles-->
     <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!-- Demo styles -->
     <style lang="css"> </style>
   </head>
 
-  <body><!--MAIN HEADER-->
+  <body>
+    <!--MAIN HEADER-->
     <div class="header-wrapper header-fixed">
       <div class="collapsed-content">
         <div class="searcher module  darkened" id="">
@@ -233,7 +236,8 @@
           </div>
         </div>
       </header>
-    </div><!--END: MAIN HEADER-->
+    </div>
+    <!--END: MAIN HEADER-->
     <div id="sticky-banner" class="d-none d-xl-block card card-sticky card-bg space-y-24 inner-space-block-24 inner-space-inline-24 position-fixed">
       <div class="switch d-inline-flex justify-content-between space-x-24 w-100"> <label class="body-bold-text text-dark-mode" for="dark-mode-switch">Dark mode</label>
         <div class="form-check form-switch"> <input class="form-switch-input bg-transition" type="checkbox" id="dark-mode-switch">
@@ -377,19 +381,23 @@
           </li>
         </ul>
       </div>
-    </div><!--MAIN CONTENT-->
-    <main class="main"> <!-- BASIC CONTENT PLUS -->
+    </div>
+    <!--MAIN CONTENT-->
+    <main class="main">
+      <!-- BASIC CONTENT PLUS -->
       <div class="module section-divider  basic-content" id="">
         <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120">
           <h1 class="text-center">Meet the team that has won so many awards</h1>
         </div>
-      </div><!-- END: BASIC CONTENT PLUS --><!-- FEATURED CARDS -->
+      </div><!-- END: BASIC CONTENT PLUS -->
+      <!-- FEATURED CARDS -->
       <div class="module   " id="managers">
         <div class="container p-0 d-flex flex-column align-items-center space-y-48 space-y-md-56 space-y-xl-72">
           <h3 class="featured-card-title text-center">Meet our managers</h3>
           <div class="featured-slide-wrapper w-100 overflow-hidden">
             <div class="swiper" data-b-system="swiper" data-swiper-target="featured-card-xl" data-swiper-item-xl="3" data-swiper-item-md="2" data-swiper-item-xs="1">
-              <div class="swiper-wrapper"> <!-- swiper slide -->
+              <div class="swiper-wrapper">
+                <!-- swiper slide -->
                 <div class="swiper-slide">
                   <div class="card space-y-24">
                     <div class="img-container position-relative">
@@ -428,28 +436,37 @@
             </div>
           </div> <span class="action-link "> <span>Meet our team</span> <i class="icon-links"></i> </span>
         </div>
-      </div><!-- END: FEATURED CARDS --><!-- ICONS SOCIAL -->
+      </div><!-- END: FEATURED CARDS -->
+      <!-- ICONS SOCIAL -->
       <div class="module  darkened" id="">
         <div class="icons-social"> <button type="button" class="btn btn-only-icon"> <i class="icon-behance"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-youtube"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-pinterest"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-twitter"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-linkedin"></i> </button> </div>
-      </div><!-- END: ICONS SOCIAL --><!-- CTA -->
+      </div><!-- END: ICONS SOCIAL -->
+      <!-- CTA -->
       <div class="cta module space-y-32   " id="">
         <p class="cta-title x7-text text-center">Do you want to start with B_system today?</p> <button type="button" class="btn btn-primary btn-primary-cta"> <span>Purchase B_system</span> <i class="icon-links"></i> </button>
-      </div><!-- END: CTA --><!-- FOOTER -->
-    </main><!--END: MAIN CONTENT--><!--MAIN FOOTER-->
+      </div><!-- END: CTA -->
+      <!-- FOOTER -->
+    </main>
+    <!--END: MAIN CONTENT-->
+    <!--MAIN FOOTER-->
     <footer class="footer footer-estandar darkened inner-space-inline-16 inner-space-inline-sm-24  inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88">
       <div class="footer-wrapper container">
         <div class="footer-content d-flex gap-32"> <a class="footer-logo" href="../../home"> <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="Logo" /> </a>
           <p class="copy body-light-text"> Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio </p>
         </div>
       </div>
-    </footer><!-- END: FOOTER --><!--END: MAIN FOOTER--><!--SCRIPTS--><!--Bootstrap JS Bundle-->
+    </footer><!-- END: FOOTER -->
+    <!--END: MAIN FOOTER-->
+    <!--SCRIPTS-->
+    <!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script><!-- Swiper bundle CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-html.min.js"></script><!-- Highlight -->
     <script src="../../assets/vendor/highlight/js/highlight.js"></script>
     <script>
 hljs.highlightAll();
-    </script><!--B_system JS-->
+    </script>
+    <!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
     <script src="../../assets/js/script.min.js"></script>
     <script>
@@ -554,7 +571,8 @@ demos = Object.values(demos).map((value) => {
 }).flat(1);
 window.demos = demos;
 transformHeader();
-    </script><!--END: SCRIPTS-->
+    </script>
+    <!--END: SCRIPTS-->
   </body>
 
 </html>

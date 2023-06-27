@@ -7,7 +7,7 @@ const headerConfig = {
     size: 'full',
     isSticky: true,
     hasBackground: false,
-    canSearch: true,
+    canSearch: false,
     mainHeader: true,
     hasLightNav: true,
     buttons: [
@@ -30,7 +30,7 @@ const headerConfig = {
         alt: 'About us header'
     },
     title: {
-        title: 'How can we help you?',
+        title: 'Know the opinion of our clients',
         titleWhite: true,
     },
     onLeft: false,
@@ -41,7 +41,8 @@ const headerConfig = {
 
 <!-- TESTIMONIAL -->
 <%- include(`${module}/testimonial/testimonial`, {
-    title: 'We have been learning from our clients',
+    title: 'The real and unfiltered opinion of our users',
+    score: '4.6 average grade',
     testimonials: [
         {
             text: "Many of the failures in people's lives occurred when they did not realize what was close to success.",
@@ -223,5 +224,3 @@ const headerConfig = {
     ]
 }) %>
 <!-- END: FOOTER -->
-<%- contentFor('script') %>
-canSearch();

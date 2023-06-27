@@ -3,6 +3,7 @@
 <%
 const headerConfig = {
     items: navigation,
+    justify: 'center',
     size: 'full',
     isSticky: true,
     hasBackground: true,
@@ -12,19 +13,19 @@ const headerConfig = {
     buttons: [
         {
             label: 'Access',
-            mobileIcon: 'avatar',
-            variant: 'Subtle'
+            icon: 'avatar',
+            variant: 'subtle'
         },
         {
             label: 'Cart',
-            mobileIcon: 'cart',
-            variant: 'Subtle'
+            icon: 'shopping',
+            variant: 'subtle'
         }
     ]
 }
 %>
 
-<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
 
 <%- contentFor('body') %>
 <!-- Product profile -->
