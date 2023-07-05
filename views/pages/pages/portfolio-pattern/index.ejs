@@ -1,0 +1,146 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'center',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: false,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'subtle'
+        },
+        {
+            label: 'Cart',
+            icon: 'shopping',
+            variant: 'subtle'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('body') %>
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Hi, I'm Matias Eriksson, photographer and designer", 
+    isPlus:true, 
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
+
+<!-- PORTFOLIO DECOMPOSED -->
+
+<%
+    const items = [
+        {
+            title: 'Organic',
+            subtitle: 'Tecnology',
+            img: {
+                src: 'portfolio-basic-01',
+                alt: 'This is a image descriptive text'
+            }
+        },
+        {
+            title: '.US',
+            subtitle: 'Product design',
+            img: {
+                src: 'portfolio-basic-02',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            title: 'Joy',
+            subtitle: 'Editorial',
+            img: {
+                src: 'portfolio-vertical-01',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            title: 'Amazon toy',
+            subtitle: 'Packaging',
+            img: {
+                src: 'portfolio-basic-03',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            title: 'Rucksack',
+            subtitle: 'Editorial',
+            img: {
+                src: 'portfolio-horizontal-01',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            title: 'Hello',
+            subtitle: 'Tecnology',
+            img: {
+                src: 'portfolio-basic-04',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            title: '30 Paths',
+            subtitle: 'Tecnology',
+            img: {
+                src: 'portfolio-basic-05',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            title: 'White',
+            subtitle: 'Editorial',
+            img: {
+                src: 'portfolio-basic-06',
+                alt: 'This is a image descriptive text'
+            }
+        }, 
+        {
+            title: 'Drop',
+            subtitle: 'Tecnology',
+            img: {
+                src: 'portfolio-basic-07',
+                alt: 'This is a image descriptive text'
+            }
+        }
+    ]
+%>
+<%- include(`${module}/portfolioGrid/decomposed`, {items, hasBorder: true}) %>
+<!-- END: PORTFOLIO DECOMPOSED -->
+
+<!-- BASIC CONTENT DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, { 
+    title:'About me', 
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT DESCRIPTION -->
+
+<!-- ICONS SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, { 
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) -%>
+<!-- END: ICONS SOCIAL -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/standard`, {
+    img: {src:'logo-dark-gray.svg', alt:'Logo'},
+    text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+}) %>
+<!-- END: FOOTER -->
+<%- contentFor('script') %>
+    canSearch();
+    transformHeader();

@@ -1,0 +1,169 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'center',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: false,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'subtle'
+        },
+        {
+            label: 'Cart',
+            icon: 'shopping',
+            variant: 'subtle'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('body') %>
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Welcome! Learn about all our digital services", 
+    isPlus:true, 
+    hasBorder: false 
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
+
+<!-- PORTFOLIO -->
+<%- include(`${module}/portfolioGrid/basic`, {
+        grid: [
+            {
+                img: {
+                    src: 'portfolio-basic-05',
+                    alt: 'Portfolio example'
+                },
+                tag: '1',
+                title: 'Strategy',
+                text: 'B_system is a multipurpose HTML5 template.',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                shape: 'basic',
+                contentPosition: 'right'
+            },
+            {
+                img: {
+                    src: 'portfolio-basic-02',
+                    alt: 'Portfolio example'
+                },
+                tag: '2',
+                title: 'Design',
+                text: 'It is made with completely scalable components.',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                shape: 'basic',
+                contentPosition: 'right'
+            },
+            {
+                img: {
+                    src: 'portfolio-basic-01',
+                    alt: 'Portfolio example'
+                },
+                tag: '3',
+                title: '3D',
+                text: 'Created with the proposal of maximizing efficiency.',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                shape: 'basic',
+                contentPosition: 'right'
+            },
+            {
+                img: {
+                    src: 'portfolio-horizontal-01',
+                    alt: 'Portfolio example'
+                },
+                tag: '4',
+                title: 'Marketing',
+                text: 'You only have to worry about creating your brand.',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                shape: 'basic',
+                contentPosition: 'right'
+            },
+            {
+                img: {
+                    src: 'portfolio-basic-03',
+                    alt: 'Portfolio example'
+                },
+                tag: '5',
+                title: 'Tech',
+                text: 'It is made with completely scalable components.',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                shape: 'basic',
+                contentPosition: 'right'
+            },
+            {
+                img: {
+                    src: 'portfolio-basic-04',
+                    alt: 'Portfolio example'
+                },
+                tag: '6',
+                title: 'UX',
+                text: 'For any type of brand.',
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                shape: 'basic',
+                contentPosition: 'right'
+            },
+        ], 
+        hasBorder: true
+}) %>
+<!-- END: PORTFOLIO -->
+
+<!-- BASIC CONTENT DESCRIPTION -->
+<%- include(`${module}/basicContent/description`, { 
+    title:'About us', 
+    text: 'B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.',
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT DESCRIPTION -->
+
+<!-- ICONS SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, { 
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) -%>
+<!-- END: ICONS SOCIAL -->
+
+<!-- FOOTER -->
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/standard`, {
+    img: {src:'logo-dark-gray.svg', alt:'Logo'},
+    text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+}) %>
+<!-- END: FOOTER -->
+<%- contentFor('script') %>
+    canSearch();
+    transformHeader();

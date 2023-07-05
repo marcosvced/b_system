@@ -23,18 +23,19 @@
           </div>
         </div>
       </div>
-      <header class="header header-fixed   " data-b-system-header-position="sticky" data-b-system-header="transparent">
+      <header class="header header-fixed header-light  " data-b-system-header-position="sticky" data-b-system-header="light">
         <div class="d-flex justify-content-between align-items-center ">
           <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-3" data-b-system-wrapper="buttons">
-            <div class="order-2 order-xl-0 space-right-xl-32"> <button type="button" id='searcher-button' class="btn btn-only-icon"> <i class="icon-m-glass"></i> </button> </div>
+            <div class="order-3 order-xl-0 space-right-xl-32"> <button type="button" id='searcher-button' class="btn btn-only-icon"> <i class="icon-m-glass"></i> </button> </div>
             <div class="d-flex d-xl-none order-0"> <button type="button" class="btn btn-only-icon"> <i class="icon-avatar"></i> </button> </div>
-            <div class="d-none d-xl-block order-1"> <button type="button" class="btn btn-primary    btn-fit"> <span>Access</span> <i class="icon-avatar"></i> </button> </div>
+            <div class="d-none d-xl-block order-1"> <button type="button" class="btn btn-subtle    btn-fit"> <span>Access</span> <i class="icon-avatar"></i> </button> </div>
+            <div class="d-none d-xl-block order-2"> <button type="button" class="btn btn-subtle    btn-fit"> <span>Cart</span> <i class="icon-shopping"></i> </button> </div>
           </div> <a href="#" class="navbar-brand order-1 order-xl-0 d-flex d-xl-block justify-content-center col-8 col-xl-3 "> <img src="../../assets/img/logo-dark.svg" class="logo" alt="b system logo" /> </a>
           <div class="nav-wrapper order-2 order-xl-1 col-2 col-xl-6">
             <div class="d-none d-xl-flex justify-content-center">
               <nav class="navbar navbar-expand-lg ">
                 <ul class="navbar-nav">
-                  <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link active" id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Demos </a>
+                  <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="demos_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Demos </a>
                     <div class="dropdown-menu dropdown-grid repeat-4" aria-labelledby="demos_dropdown_menu">
                       <ul class="dropdown-submenu"> <span class="dropdown-header"><strong>Light mode demos</strong></span>
                         <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../demos/startup"> Startup </a> </li>
@@ -82,7 +83,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="pages_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pages </a>
+                  <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link active" id="pages_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pages </a>
                     <ul class="dropdown-menu dropdown-multilevel " aria-labelledby="pages_dropdown_menu">
                       <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>About</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
                         <ul class="multilevel dropdown-menu">
@@ -232,12 +233,23 @@
                 </ul>
               </nav>
             </div>
-            <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16"> <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> <i class="icon-menu"></i> </button> </div>
+            <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16"> <button type="button" class="btn btn-only-icon"> <i class="icon-shopping"></i> </button> <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> <i class="icon-menu"></i> </button> </div>
           </div>
         </div>
       </header>
     </div>
     <!--END: MAIN HEADER-->
+    <div id="sticky-banner" class="d-none d-xl-block card card-sticky card-bg space-y-24 inner-space-block-24 inner-space-inline-24 position-fixed">
+      <div class="switch d-inline-flex justify-content-between space-x-24 w-100"> <label class="body-bold-text text-dark-mode" for="dark-mode-switch">Dark mode</label>
+        <div class="form-check form-switch"> <input class="form-switch-input bg-transition" type="checkbox" id="dark-mode-switch">
+          <div class="form-switch-wrapper"> <span class="form-switch-dot"></span> </div>
+        </div>
+      </div>
+      <hr class="border-bottom d-block m-0 space-bottom-24">
+      <div class="d-inline-flex align-items-center space-x-8 space-bottom-16"> <i class="icon-filters" style="--size: 1.25rem"></i> <span>+ 150 pages</span> </div>
+      <div class="d-inline-flex align-items-center space-x-8"> <i class="icon-edit" style="--size: 1.25rem"></i> <span>+ 300 components</span> </div>
+      <hr class="border-bottom d-block m-0 space-bottom-24"> <span class="action-link "> <span>Purchase B_system</span> </span>
+    </div>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-body">
         <ul class="navbar-nav" id="accordion-nav">
@@ -373,366 +385,101 @@
     </div>
     <!--MAIN CONTENT-->
     <main class="main">
-      <!-- MARQUEE IMAGE -->
-      <section class="module marquee-wrapper position-relative p-0 section-divider" id="">
-        <div class="swiper" data-b-system="swiper" data-swiper-target="marquee-image" data-swiper-next=".button-next" data-swiper-prev=".button-prev" data-swiper-items="1">
-          <div class="swiper-wrapper">
-            <!-- swiper slide -->
-            <div class="swiper-slide">
-              <div class="marquee marquee-image marquee-space marquee-size position-relative">
-                <picture> <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-02.jpg" alt="marquee image 01"> <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-02_darkmode.jpg" alt="marquee image 01"> </picture>
-                <div class="marquee-content align-items-center align-items-md-start space-y-32 space-y-xl-64">
-                  <h1 class="marquee-title">25% discount on appliances</h1>
-                  <p class="marquee-text body-light-text">Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.</p> <button type="button" class="btn btn-primary"> Discounts </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="marquee marquee-image marquee-space marquee-size position-relative">
-                <picture> <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-image-02.jpg" alt="marquee image 02"> <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-image-02_darkmode.jpg" alt="marquee image 02"> </picture>
-                <div class="marquee-content align-items-center align-items-md-start space-y-32 space-y-xl-64">
-                  <h1 class="marquee-title">25% discount on appliances</h1>
-                  <p class="marquee-text body-light-text">Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.</p> <button type="button" class="btn btn-primary"> Discounts </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="marquee marquee-image marquee-space marquee-size position-relative">
-                <picture> <img class="marquee-bg img-mode-light" src="../../assets/img/marquee/marquee-image-03.jpg" alt="marquee image 03"> <img class="marquee-bg img-mode-dark" src="../../assets/img/marquee/marquee-image-03_darkmode.jpg" alt="marquee image 03"> </picture>
-                <div class="marquee-content align-items-center align-items-md-start space-y-32 space-y-xl-64">
-                  <h1 class="marquee-title">25% discount on appliances</h1>
-                  <p class="marquee-text body-light-text">Competitive advantage is redefined every day. We help our clients to improve their business results by taking advantage of disruption.</p> <button type="button" class="btn btn-primary"> Discounts </button>
-                </div>
-              </div>
-            </div> <!-- end: swiper slide -->
-          </div>
-          <div class="swiper-pagination pagination-dark"></div>
-        </div>
-        <div class="marquee-content-bottom"> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded  btn-interactive-tight  btn-interactive-effect-down"> <i class="icon-scroll"></i></button> </div>
-        <div class="button-prev"> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded    btn-interactive-effect-left"> <i class="icon-back"></i></button> </div>
-        <div class="button-next"> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded    btn-interactive-effect-right"> <i class="icon-next"></i></button> </div>
-      </section><!-- END: MARQUEE IMAGE -->
-      <!-- BASIC CONTENT: SIMPLE -->
-      <div class="module   basic-content" id="">
+      <!-- BASIC CONTENT PLUS -->
+      <div class="module section-divider  basic-content" id="">
         <div class="container px-0 inner-space-inline-md-80 inner-space-inline-xl-120">
-          <h2 class="text-center">Shop by category</h2>
+          <h1 class="text-center">Hi, I'm Matias Eriksson, photographer and designer</h1>
         </div>
-      </div><!-- END: BASIC CONTENT: SIMPLE -->
-      <!-- FEATURED CARDS -->
-      <div class="module  darkened " id="furniture-categories">
-        <div class="container p-0 d-flex flex-column align-items-center space-y-48 space-y-md-56 space-y-xl-72">
-          <div class="featured-slide-wrapper w-100 overflow-hidden">
-            <div class="swiper" data-b-system="swiper" data-swiper-target="featured-card-xl" data-swiper-item-xl="3" data-swiper-item-md="2" data-swiper-item-xs="1">
-              <div class="swiper-wrapper">
-                <!-- swiper slide -->
-                <div class="swiper-slide">
-                  <div class="card space-y-24">
-                    <div class="img-container position-relative">
-                      <picture class="card-basic"> <img class="card-basic-img w-100" src="../../assets/img/card/card-basic-01.jpg" alt="featured card image 1"> </picture>
-                    </div>
-                    <div class="card-text">
-                      <p class="body-dark-gray-text body-bold-text">Sofas</p>
-                      <p class="body-light-gray-text"></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card space-y-24">
-                    <div class="img-container position-relative">
-                      <picture class="card-basic"> <img class="card-basic-img w-100" src="../../assets/img/card/card-basic-02.jpg" alt="featured card image 2"> </picture>
-                    </div>
-                    <div class="card-text">
-                      <p class="body-dark-gray-text body-bold-text">Chairs and armchairs</p>
-                      <p class="body-light-gray-text"></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card space-y-24">
-                    <div class="img-container position-relative">
-                      <picture class="card-basic"> <img class="card-basic-img w-100" src="../../assets/img/card/card-basic-03.jpg" alt="featured card image 3"> </picture>
-                    </div>
-                    <div class="card-text">
-                      <p class="body-dark-gray-text body-bold-text">Accessories</p>
-                      <p class="body-light-gray-text"></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card space-y-24">
-                    <div class="img-container position-relative">
-                      <picture class="card-basic"> <img class="card-basic-img w-100" src="../../assets/img/card/card-basic-04.jpg" alt="featured card image 3"> </picture>
-                    </div>
-                    <div class="card-text">
-                      <p class="body-dark-gray-text body-bold-text">Textile and carpets</p>
-                      <p class="body-light-gray-text"></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card space-y-24">
-                    <div class="img-container position-relative">
-                      <picture class="card-basic"> <img class="card-basic-img w-100" src="../../assets/img/card/card-basic-05.jpg" alt="featured card image 3"> </picture>
-                    </div>
-                    <div class="card-text">
-                      <p class="body-dark-gray-text body-bold-text">Illumination</p>
-                      <p class="body-light-gray-text"></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card space-y-24">
-                    <div class="img-container position-relative">
-                      <picture class="card-basic"> <img class="card-basic-img w-100" src="../../assets/img/card/card-basic-03.jpg" alt="featured card image 3"> </picture>
-                    </div>
-                    <div class="card-text">
-                      <p class="body-dark-gray-text body-bold-text">Tablets and appliances</p>
-                      <p class="body-light-gray-text"></p>
-                    </div>
-                  </div>
-                </div> <!-- end: swiper slide -->
-              </div>
-              <div class="swiper-pagination pagination-dark"></div>
+      </div><!-- END: BASIC CONTENT PLUS -->
+      <!-- PORTFOLIO DECOMPOSED -->
+      <div class="module section-divider pb-0" id="">
+        <div class="portfolio portfolio-deconstructed  container p-0">
+          <div class="item-wrapper item-1">
+            <picture class="decomposed-container-img"> <img class="decomposed-img img-mode-light" src="../../assets/img/portfolio/decomposed/portfolio-basic-01.jpg" alt="This is a image descriptive text"> <img class="decomposed-img img-mode-dark" src="../../assets/img/portfolio/decomposed/portfolio-basic-01_darkmode.jpg" alt="This is a image descriptive text"> </picture>
+            <div class="item-info">
+              <p class="item-title body-regular-gray-text">Organic</p>
+              <p class="item-subtitle body-light-gray-text">Tecnology</p>
+            </div>
+          </div>
+          <div class="item-wrapper item-2">
+            <picture class="decomposed-container-img"> <img class="decomposed-img img-mode-light" src="../../assets/img/portfolio/decomposed/portfolio-basic-02.jpg" alt="This is a image descriptive text"> <img class="decomposed-img img-mode-dark" src="../../assets/img/portfolio/decomposed/portfolio-basic-02_darkmode.jpg" alt="This is a image descriptive text"> </picture>
+            <div class="item-info">
+              <p class="item-title body-regular-gray-text">.US</p>
+              <p class="item-subtitle body-light-gray-text">Product design</p>
+            </div>
+          </div>
+          <div class="item-wrapper item-3">
+            <picture class="decomposed-container-img"> <img class="decomposed-img img-mode-light" src="../../assets/img/portfolio/decomposed/portfolio-vertical-01.jpg" alt="This is a image descriptive text"> <img class="decomposed-img img-mode-dark" src="../../assets/img/portfolio/decomposed/portfolio-vertical-01_darkmode.jpg" alt="This is a image descriptive text"> </picture>
+            <div class="item-info">
+              <p class="item-title body-regular-gray-text">Joy</p>
+              <p class="item-subtitle body-light-gray-text">Editorial</p>
+            </div>
+          </div>
+          <div class="item-wrapper item-4">
+            <picture class="decomposed-container-img"> <img class="decomposed-img img-mode-light" src="../../assets/img/portfolio/decomposed/portfolio-basic-03.jpg" alt="This is a image descriptive text"> <img class="decomposed-img img-mode-dark" src="../../assets/img/portfolio/decomposed/portfolio-basic-03_darkmode.jpg" alt="This is a image descriptive text"> </picture>
+            <div class="item-info">
+              <p class="item-title body-regular-gray-text">Amazon toy</p>
+              <p class="item-subtitle body-light-gray-text">Packaging</p>
+            </div>
+          </div>
+          <div class="item-wrapper item-5">
+            <picture class="decomposed-container-img"> <img class="decomposed-img img-mode-light" src="../../assets/img/portfolio/decomposed/portfolio-horizontal-01.jpg" alt="This is a image descriptive text"> <img class="decomposed-img img-mode-dark" src="../../assets/img/portfolio/decomposed/portfolio-horizontal-01_darkmode.jpg" alt="This is a image descriptive text"> </picture>
+            <div class="item-info">
+              <p class="item-title body-regular-gray-text">Rucksack</p>
+              <p class="item-subtitle body-light-gray-text">Editorial</p>
+            </div>
+          </div>
+          <div class="item-wrapper item-6">
+            <picture class="decomposed-container-img"> <img class="decomposed-img img-mode-light" src="../../assets/img/portfolio/decomposed/portfolio-basic-04.jpg" alt="This is a image descriptive text"> <img class="decomposed-img img-mode-dark" src="../../assets/img/portfolio/decomposed/portfolio-basic-04_darkmode.jpg" alt="This is a image descriptive text"> </picture>
+            <div class="item-info">
+              <p class="item-title body-regular-gray-text">Hello</p>
+              <p class="item-subtitle body-light-gray-text">Tecnology</p>
+            </div>
+          </div>
+          <div class="item-wrapper item-7">
+            <picture class="decomposed-container-img"> <img class="decomposed-img img-mode-light" src="../../assets/img/portfolio/decomposed/portfolio-basic-05.jpg" alt="This is a image descriptive text"> <img class="decomposed-img img-mode-dark" src="../../assets/img/portfolio/decomposed/portfolio-basic-05_darkmode.jpg" alt="This is a image descriptive text"> </picture>
+            <div class="item-info">
+              <p class="item-title body-regular-gray-text">30 Paths</p>
+              <p class="item-subtitle body-light-gray-text">Tecnology</p>
+            </div>
+          </div>
+          <div class="item-wrapper item-8">
+            <picture class="decomposed-container-img"> <img class="decomposed-img img-mode-light" src="../../assets/img/portfolio/decomposed/portfolio-basic-06.jpg" alt="This is a image descriptive text"> <img class="decomposed-img img-mode-dark" src="../../assets/img/portfolio/decomposed/portfolio-basic-06_darkmode.jpg" alt="This is a image descriptive text"> </picture>
+            <div class="item-info">
+              <p class="item-title body-regular-gray-text">White</p>
+              <p class="item-subtitle body-light-gray-text">Editorial</p>
+            </div>
+          </div>
+          <div class="item-wrapper item-9">
+            <picture class="decomposed-container-img"> <img class="decomposed-img img-mode-light" src="../../assets/img/portfolio/decomposed/portfolio-basic-07.jpg" alt="This is a image descriptive text"> <img class="decomposed-img img-mode-dark" src="../../assets/img/portfolio/decomposed/portfolio-basic-07_darkmode.jpg" alt="This is a image descriptive text"> </picture>
+            <div class="item-info">
+              <p class="item-title body-regular-gray-text">Drop</p>
+              <p class="item-subtitle body-light-gray-text">Tecnology</p>
             </div>
           </div>
         </div>
-      </div><!-- END: FEATURED CARDS -->
-      <!-- CTA -->
-      <div class="cta module space-y-32  section-divider " id="">
-        <p class="cta-title x7-text text-center">Looking for something specific? Know the offer of our store</p> <button type="button" class="btn btn-primary btn-primary-cta"> <span>View all</span> <i class="icon-links"></i> </button>
-      </div><!-- END: CTA -->
-      <!-- FEATURED CARDS -->
-      <div class="module   " id="furniture-categories">
-        <div class="container p-0 d-flex flex-column align-items-center space-y-48 space-y-md-56 space-y-xl-72">
-          <div class="featured-slide-wrapper w-100 overflow-hidden">
-            <div class="swiper" data-b-system="swiper" data-swiper-target="featured-card-xl" data-swiper-item-xl="3" data-swiper-item-md="2" data-swiper-item-xs="1">
-              <div class="swiper-wrapper">
-                <!-- swiper slide -->
-                <div class="swiper-slide">
-                  <div class="card space-y-24">
-                    <div class="img-container position-relative">
-                      <picture class="card-basic"> <img class="card-basic-img w-100" src="../../assets/img/card/card-basic-01.jpg" alt="featured card image 1"> </picture>
-                    </div>
-                    <div class="card-text">
-                      <p class="body-dark-gray-text body-bold-text">Bathroom storage</p>
-                      <p class="body-light-gray-text">Toilets</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card space-y-24">
-                    <div class="img-container position-relative">
-                      <picture class="card-basic"> <img class="card-basic-img w-100" src="../../assets/img/card/card-basic-02.jpg" alt="featured card image 2"> </picture>
-                    </div>
-                    <div class="card-text">
-                      <p class="body-dark-gray-text body-bold-text">Japanese style beds</p>
-                      <p class="body-light-gray-text">Bedrooms</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card space-y-24">
-                    <div class="img-container position-relative">
-                      <picture class="card-basic"> <img class="card-basic-img w-100" src="../../assets/img/card/card-basic-03.jpg" alt="featured card image 3"> </picture>
-                    </div>
-                    <div class="card-text">
-                      <p class="body-dark-gray-text body-bold-text">New tablets and appliances</p>
-                      <p class="body-light-gray-text">Tablets and appliances</p>
-                    </div>
-                  </div>
-                </div> <!-- end: swiper slide -->
-              </div>
-              <div class="swiper-pagination pagination-dark"></div>
-            </div>
-          </div> <span class="action-link "> <span>See all news</span> <i class="icon-links"></i> </span>
+      </div><!-- END: PORTFOLIO DECOMPOSED -->
+      <!-- BASIC CONTENT DESCRIPTION -->
+      <div class="module section-divider  basic-content" id="">
+        <div class="container row justify-content-center px-0 mx-auto">
+          <h3 class="text-center col-md-12 col-xl-8 space-bottom-24 space-bottom-md-32 space-bottom-lg-40 px-0">About me</h3>
+          <p class="body-light-gray-text text-center col-md-10 col-xl-8 px-0">B_system is a multipurpose template created with the proposal of maximizing efficiency in the construction of digital touch points for any type of brand. It is made with completely scalable and reusable components so you only have to worry about creating the personality of your brand.</p>
         </div>
-      </div><!-- END: FEATURED CARDS -->
-      <!-- ICON DESCRIPTION -->
-      <div class="module section-divider  darkened" id="">
-        <!-- Desktop -->
-        <div class="container d-none d-xl-grid grid-xl-12">
-          <div class="col-span-4 col-span-md-8 col-span-xl-4">
-            <div class="icon-description icon-description-content"> <i class="icon-check-circle"></i>
-              <h5 class="icon-description-title m-0">Original & Excellent Quality</h5>
-              <p class="icon-description-text body-light-gray-text">Create your digital brand in a natural and fluid way. Do we start?</p>
-            </div>
-          </div>
-          <div class="col-span-4 col-span-md-8 col-span-xl-4">
-            <div class="icon-description icon-description-content"> <i class="icon-secure-circle"></i>
-              <h5 class="icon-description-title m-0">Secure Payment</h5>
-              <p class="icon-description-text body-light-gray-text">With fully scalable and reusable components.</p>
-            </div>
-          </div>
-          <div class="col-span-4 col-span-md-8 col-span-xl-4">
-            <div class="icon-description icon-description-content"> <i class="icon-saving-circle"></i>
-              <h5 class="icon-description-title m-0">Free & Fast Shipping</h5>
-              <p class="icon-description-text body-light-gray-text">You can change every element of your system form one place.</p>
-            </div>
-          </div>
-        </div> <!-- END: Desktop -->
-        <!-- Tablet & Mobile -->
-        <div class="d-xl-none overflow-hidden">
-          <div class="swiper" data-b-system="swiper" data-swiper-target="icon-description-basic" data-swiper-effect="centered" data-swiper-items="1">
-            <div class="swiper-wrapper">
-              <!-- swiper slide -->
-              <div class="swiper-slide">
-                <div class="icon-description icon-description-content"> <i class="icon-check-circle"></i>
-                  <h5 class="icon-description-title m-0">Original & Excellent Quality</h5>
-                  <p class="icon-description-text body-light-gray-text">Create your digital brand in a natural and fluid way. Do we start?</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="icon-description icon-description-content"> <i class="icon-secure-circle"></i>
-                  <h5 class="icon-description-title m-0">Secure Payment</h5>
-                  <p class="icon-description-text body-light-gray-text">With fully scalable and reusable components.</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="icon-description icon-description-content"> <i class="icon-saving-circle"></i>
-                  <h5 class="icon-description-title m-0">Free & Fast Shipping</h5>
-                  <p class="icon-description-text body-light-gray-text">You can change every element of your system form one place.</p>
-                </div>
-              </div> <!-- end: swiper slide -->
-            </div>
-            <div class="swiper-pagination pagination-dark"></div>
-          </div>
-        </div> <!-- END: Tablet & Mobile -->
-      </div><!-- END: ICON DESCRIPTION -->
-      <!-- BRANDS -->
-      <div class="brands module " id="">
-        <div class="container d-flex flex-column align-items-center p-0 space-y-48 space-y-md-56 space-y-xl-72">
-          <h3 class="brands-title text-center">Awards and honours</h3> <!-- Desktop -->
-          <div class="brands-content-desktop m-0 d-none d-xl-block w-100 overflow-hidden position-relative">
-            <div class="inner-space-inline-32">
-              <div class="swiper" data-b-system="swiper" data-swiper-target="brand-xl-light" data-swiper-next=".button-next" data-swiper-prev=".button-prev" data-swiper-items="4">
-                <div class="swiper-wrapper">
-                  <!-- swiper slide -->
-                  <div class="swiper-slide">
-                    <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-01.jpg" alt="light brand 01"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-01_darkmode.jpg" alt="light brand 01"></picture>
-                  </div>
-                  <div class="swiper-slide">
-                    <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-02.jpg" alt="light brand 02"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-02_darkmode.jpg" alt="light brand 02"></picture>
-                  </div>
-                  <div class="swiper-slide">
-                    <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-03.jpg" alt="light brand 03"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-03_darkmode.jpg" alt="light brand 03"></picture>
-                  </div>
-                  <div class="swiper-slide">
-                    <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-04.jpg" alt="light brand 04"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-04_darkmode.jpg" alt="light brand 04"></picture>
-                  </div> <!-- end: swiper slide -->
-                </div>
-                <div class="swiper-pagination "></div>
-              </div>
-            </div>
-            <div class="button-prev"> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded   "> <i class="icon-back"></i></button> </div>
-            <div class="button-next"> <button class="btn-interactive btn-interactive-effect btn-interactive-rounded   "> <i class="icon-next"></i></button> </div>
-          </div> <!-- END: Desktop -->
-          <!-- Tablet -->
-          <div class="brands-content-tablet d-none d-md-block d-xl-none w-100 overflow-hidden ">
-            <div class="swiper" data-b-system="swiper" data-swiper-target="brand-md-light" data-swiper-loop="true" data-swiper-items="3">
-              <div class="swiper-wrapper">
-                <!-- swiper slide -->
-                <div class="swiper-slide">
-                  <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-01.jpg" alt="light brand 01"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-01_darkmode.jpg" alt="light brand 01"></picture>
-                </div>
-                <div class="swiper-slide">
-                  <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-02.jpg" alt="light brand 02"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-02_darkmode.jpg" alt="light brand 02"></picture>
-                </div>
-                <div class="swiper-slide">
-                  <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-03.jpg" alt="light brand 03"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-03_darkmode.jpg" alt="light brand 03"></picture>
-                </div>
-                <div class="swiper-slide">
-                  <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-04.jpg" alt="light brand 04"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-04_darkmode.jpg" alt="light brand 04"></picture>
-                </div> <!-- end: swiper slide -->
-              </div>
-              <div class="swiper-pagination pagination-dark"></div>
-            </div>
-          </div> <!-- END: Tablet -->
-          <!-- Mobile -->
-          <div class="brands-content-mobile d-block d-md-none w-100 overflow-hidden">
-            <div class="swiper" data-b-system="swiper" data-swiper-target="brand-light" data-swiper-effect="centered" data-swiper-loop="true" data-swiper-items="1">
-              <div class="swiper-wrapper">
-                <!-- swiper slide -->
-                <div class="swiper-slide">
-                  <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-01.jpg" alt="light brand 01"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-01_darkmode.jpg" alt="light brand 01"></picture>
-                </div>
-                <div class="swiper-slide">
-                  <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-02.jpg" alt="light brand 02"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-02_darkmode.jpg" alt="light brand 02"></picture>
-                </div>
-                <div class="swiper-slide">
-                  <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-03.jpg" alt="light brand 03"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-03_darkmode.jpg" alt="light brand 03"></picture>
-                </div>
-                <div class="swiper-slide">
-                  <picture class="brands-logo-container"> <img class="brands-logo img-mode-light" src="../../assets/img/brands/brand-04.jpg" alt="light brand 04"> <img class="brands-logo img-mode-dark" src="../../assets/img/brands/brand-04_darkmode.jpg" alt="light brand 04"></picture>
-                </div> <!-- end: swiper slide -->
-              </div>
-              <div class="swiper-pagination pagination-dark"></div>
-            </div>
-          </div> <!-- END: Mobile -->
-        </div>
-      </div><!-- END: BRANDS -->
-      <!-- CTA -->
-      <div class="cta module space-y-32   darkened" id="">
-        <p class="cta-title x7-text text-center">Do you want to start B_system today?</p> <button type="button" class="btn btn-primary btn-primary-cta"> <span>Purchase B_system</span> <i class="icon-links"></i> </button>
-      </div><!-- END: CTA -->
-      <!-- ICON SOCIAL -->
-      <div class="module  " id="">
+      </div><!-- END: BASIC CONTENT DESCRIPTION -->
+      <!-- ICONS SOCIAL -->
+      <div class="module section-divider " id="">
         <div class="icons-social"> <button type="button" class="btn btn-only-icon"> <i class="icon-behance"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-youtube"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-pinterest"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-twitter"></i> </button> <button type="button" class="btn btn-only-icon"> <i class="icon-linkedin"></i> </button> </div>
-      </div><!-- END: ICON SOCIAL -->
-      <!-- FOOTER -->
+      </div><!-- END: ICONS SOCIAL -->
     </main>
     <!--END: MAIN CONTENT-->
     <!--MAIN FOOTER-->
-    <footer class="footer footer-corporate darkened inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88">
+    <footer class="footer footer-basic darkened inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88">
       <div class="footer-wrapper container">
-        <div class="footer-contain">
-          <div class="footer-content d-flex align-items-start gap-24 space-bottom-48 space-bottom-sm-64"> <a class="footer-logo" href="../../home"> <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="logo" /> </a>
-            <p class="copy body-light-text"> Multipurpose HTML5 template + Organic Design System. © 2021 B_system. All rights reserved. </p> <span class="action-link "> <i class="icon-message"></i> <span>info@itertika.studio</span> </span>
-          </div>
-          <div class="footer-columns-container d-grid grid-2 grid-md-4 column-gap-32 row-gap-40">
-            <div class="footer-column">
-              <p class="footer-column-title body-bold-text space-bottom-32">Company</p>
-              <ul class="list-unstyled space-y-16">
-                <li class="footer-list-item"> <a class="footer-link" href=""> </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> B_system </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> About us </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Our services </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Contact us </a> </li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <p class="footer-column-title body-bold-text space-bottom-32">Blog</p>
-              <ul class="list-unstyled space-y-16">
-                <li class="footer-list-item"> <a class="footer-link" href=""> </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Home </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Most read </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Latest articles </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Article </a> </li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <p class="footer-column-title body-bold-text space-bottom-32">Shop</p>
-              <ul class="list-unstyled space-y-16">
-                <li class="footer-list-item"> <a class="footer-link" href=""> </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Home </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> What's new? </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Offers </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Product </a> </li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <p class="footer-column-title body-bold-text space-bottom-32">Featured demos</p>
-              <ul class="list-unstyled space-y-16">
-                <li class="footer-list-item"> <a class="footer-link" href=""> </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Startup </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Agency </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Corporative </a> </li>
-                <li class="footer-list-item"> <a class="footer-link" href="#"> Studio </a> </li>
-              </ul>
-            </div>
-          </div>
+        <div class="footer-content d-flex gap-32"> <a class="footer-logo" href="../../home"> <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="logo" /> </a>
+          <p class="copy body-light-text"> Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio </p>
         </div>
       </div>
-    </footer><!-- END: FOOTER -->
+    </footer>
     <!--END: MAIN FOOTER-->
     <!--SCRIPTS-->
     <!--Bootstrap JS Bundle-->
@@ -847,8 +594,8 @@ demos = Object.values(demos).map((value) => {
   return value;
 }).flat(1);
 window.demos = demos;
-transformHeader();
 canSearch();
+transformHeader();
     </script>
     <!--END: SCRIPTS-->
   </body>

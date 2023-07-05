@@ -1,0 +1,237 @@
+<%- include(`${view}/demos/layout`)%>
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'center',
+    size: 'full',
+    isSticky: true,
+    hasBackground: true,
+    canSearch: true,
+    mainHeader: true,
+    hasLightNav: false,
+    buttons: [
+        {
+            label: 'Access',
+            icon: 'avatar',
+            variant: 'subtle'
+        },
+        {
+            label: 'Cart',
+            icon: 'shopping',
+            variant: 'subtle'
+        }
+    ]
+}
+%>
+
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('body') %>
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/basic`, { 
+    title:"Hi, I'm Matias Eriksson, photographer and designer", 
+    isPlus:true, 
+    hasBorder: true 
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
+
+<!-- CATEGORY MENU -->
+<%- include(`${module}/categoriesMenu/categoriesMenu`, {
+    align: 'center',
+    items: [
+        {
+            label: 'All categories',
+            href: '#categories',
+            id: 'menu-categories',
+            active: true
+        },
+        {
+            label: 'Editorial',
+            href: '#editorial',
+            id: 'menu-editorial'
+        },
+        {
+            label: 'Packaging',
+            href: '#packaging',
+            id: 'menu-packaging'
+        },
+        {
+            label: 'Digital product',
+            href: '#product',
+            id: 'menu-product'
+        },
+        {
+            label: 'Tecnology',
+            href: '#tecnology',
+            id: 'menu-tecnology'
+        }
+    ],
+    isDarkened: false
+}) %>
+<!-- END: CATEGORY MENU -->
+
+<!-- TEAM GRID -->
+<%- include(`${module}/teamGrid/teamGrid`, {
+    teamGrid: [
+            {
+                img: {
+                    src: 'gridcells-basic-01',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-02',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-03',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-04',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-04',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-03',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-02',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-01',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-01',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-02',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-03',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+            {
+                img: {
+                    src: 'gridcells-basic-04',
+                    alt: 'grilCell image'
+                },
+                link: {
+                    href: '#',
+                    label: 'Learn more',
+                    icon: 'links'
+                },
+                onGrid: 'basic'
+            },
+        ],
+        hasBorder: false
+}) %>
+<!-- END: TEAM GRID -->
+
+<!-- ICONS SOCIAL -->
+<%- include(`${module}/iconSocial/iconSocial`, { 
+    socials: ['behance', 'youtube', 'pinterest', 'twitter', 'linkedin'],
+    isDarkened: false,
+    isDark: false,
+    hasBorder: true
+}) -%>
+<!-- END: ICONS SOCIAL -->
+
+<%- contentFor('script') %>
+    canSearch();
+    transformHeader();
