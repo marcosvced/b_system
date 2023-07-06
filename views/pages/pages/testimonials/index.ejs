@@ -109,7 +109,17 @@ const headerConfig = {
 }) %>
 <!-- END: TESTIMONIAL -->
 
-
+<!-- BASIC CONTENT PLUS -->
+<%- include(`${module}/basicContent/background`, {
+    background: {
+        src: 'basic-content-02',
+        alt: 'basic content background'
+    }, 
+    title:"Always keep in mind that your own will to succeed is much more important than anything. Sandra Golpe - Featured testimonial", 
+    isPlus:false, 
+    hasBorder: false
+}) %>
+<!-- END: BASIC CONTENT PLUS -->
 
 <!-- CTA -->
 <%- include(`${module}/cta/cta`, {
