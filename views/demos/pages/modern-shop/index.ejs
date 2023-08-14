@@ -1,26 +1,32 @@
 <%- include(`${view}/demos/layout`)%>
 
 <%- contentFor('header') %>
-
 <%
 const headerConfig = {
     items: navigation,
+    justify: 'center',
+    size: 'full',
     isSticky: true,
+    hasBackground: false,
     canSearch: true,
     mainHeader: true,
-    size: 'full',
-    hasBackground: false,
     hasLightNav: true,
     buttons: [
         {
-            label: 'Access',
-            icon: 'avatar',
+            label: 'Access', 
+            mobileIcon: 'avatar',
+            variant: 'glass'
+        },
+        {
+            label: 'card', 
+            mobileIcon: 'card',
             variant: 'glass'
         }
     ]
 }
 %>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
 
 <%- contentFor('fixed') %>
 <%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>

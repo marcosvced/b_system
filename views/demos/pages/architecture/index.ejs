@@ -20,7 +20,7 @@ const headerConfig = {
     ]
 }
 %>
-<%- include(`${component}/header/header`, { ...headerConfig }) %>
+<%- include(`${component}/header/header`, { ...headerConfig, logo: 'light' }) %>
 
 <%- contentFor('fixed') %>
 <%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>
