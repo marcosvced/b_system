@@ -3,13 +3,12 @@
 
   <head>
     <title>B_system</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Bootstrap + reset styles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Bootstrap + reset styles-->
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/5.1/css/bootstrap.min.css"> <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> <!-- Highlight -->
-    <link rel='stylesheet' href='../../assets/css/style.min.css' />
-    <!--B_system styles-->
-    <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!-- Demo styles -->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!--B_system styles-->
+    <link rel='stylesheet' href='../../assets/css/style.min.css' /> <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> <!-- Demo styles-->
     <style lang="css">
 body {
   background-color: var(--c-grayscale__100);
@@ -17,8 +16,7 @@ body {
     </style>
   </head>
 
-  <body>
-    <!--MAIN HEADER-->
+  <body><!--MAIN HEADER-->
     <header class="header header-fixed header-light  " data-b-system-header-position="sticky" data-b-system-header="light">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="buttons-wrapper d-flex justify-content-xl-end order-0 order-xl-2 align-items-center space-x-16 space-x-xl-16 col-2 col-xl-min" data-b-system-wrapper="buttons">
@@ -223,15 +221,41 @@ body {
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item  "> <a class="nav-link "> Transitions </a> </li>
+                <li class="nav-item  dropdown dropdown-center  "> <a class="nav-link " id="transitions_dropdown_menu" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Transitions </a>
+                  <ul class="dropdown-menu dropdown-multilevel " aria-labelledby="transitions_dropdown_menu">
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Attention seekers</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/bounce"> Bounce </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/flash"> Flash </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/pulse"> Pulse </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/rubberband"> RubberBand </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/shakex"> ShakeX </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/shakey"> ShakeY </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/headshake"> HeadShake </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/swing"> Swing </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/tada"> Tada </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/wobble"> Wobble </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/jello"> Jello </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/heartbeat"> HeartBeat </a> </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item-multilevel"> <span class="dropdown-item"> <span>Back entrances</span> <span class="chevron"> <i class="icon-next"></i> </span> </span>
+                      <ul class="multilevel dropdown-menu">
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/bounce"> BackInDown </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/flash"> BackInLeft </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/pulse"> BackInRight </a> </li>
+                        <li> <a class="dropdown-item submenu-item inner-space-right-32" href="../../transitions/rubberband"> BackInUp </a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </nav>
           </div>
           <div class="d-flex d-xl-none justify-content-end align-items-center space-x-16 space-x-xl-16"> <button type="button" class="btn btn-only-icon navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> <i class="icon-menu"></i> </button> </div>
         </div>
       </div>
-    </header>
-    <!--END: MAIN HEADER-->
+    </header> <!--END: MAIN HEADER-->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-body">
         <ul class="navbar-nav" id="accordion-nav">
@@ -359,17 +383,27 @@ body {
           </li>
           <li class="nav-item accordion-item"> <span id="heading-transitions" data-bs-toggle="collapse" aria-controls="transitions" data-bs-target="#transitions" class="collapsed"> Transitions <span class="chevron"> <i class="icon-open"></i> </span> <span class="chevron-active"> <i class="icon-close"></i> </span> </span>
             <div id="transitions" class="accordion-collapse collapse" aria-labelledby="heading-transitions" data-bs-parent="#accordion-nav">
-              <div class="accordion-body"> </div>
+              <div class="accordion-body">
+                <ul class="navbar-nav" id="accordion-transitions">
+                  <li class="nav-item accordion-item"> <span id="heading-key_attention_seekers" data-bs-toggle="collapse" aria-controls="key_attention_seekers" data-bs-target="#key_attention_seekers" class="collapsed"> Attention seekers <span class="chevron"> <i class="icon-open"></i> </span> <span class="chevron-active"> <i class="icon-close"></i> </span> </span>
+                    <div id="key_attention_seekers" class="accordion-collapse collapse" aria-labelledby="heading-key_attention_seekers" data-bs-parent="#accordion-transitions">
+                      <div class="accordion-body"> <a class="nav-link" href="../../transitions/bounce"> Bounce </a> <a class="nav-link" href="../../transitions/flash"> Flash </a> <a class="nav-link" href="../../transitions/pulse"> Pulse </a> <a class="nav-link" href="../../transitions/rubberband"> RubberBand </a> <a class="nav-link" href="../../transitions/shakex"> ShakeX </a> <a class="nav-link" href="../../transitions/shakey"> ShakeY </a> <a class="nav-link" href="../../transitions/headshake"> HeadShake </a> <a class="nav-link" href="../../transitions/swing"> Swing </a> <a class="nav-link" href="../../transitions/tada"> Tada </a> <a class="nav-link" href="../../transitions/wobble"> Wobble </a> <a class="nav-link" href="../../transitions/jello"> Jello </a> <a class="nav-link" href="../../transitions/heartbeat"> HeartBeat </a> </div>
+                    </div>
+                  </li>
+                  <li class="nav-item accordion-item"> <span id="heading-key_back_entrances" data-bs-toggle="collapse" aria-controls="key_back_entrances" data-bs-target="#key_back_entrances" class="collapsed"> Back entrances <span class="chevron"> <i class="icon-open"></i> </span> <span class="chevron-active"> <i class="icon-close"></i> </span> </span>
+                    <div id="key_back_entrances" class="accordion-collapse collapse" aria-labelledby="heading-key_back_entrances" data-bs-parent="#accordion-transitions">
+                      <div class="accordion-body"> <a class="nav-link" href="../../transitions/bounce"> BackInDown </a> <a class="nav-link" href="../../transitions/flash"> BackInLeft </a> <a class="nav-link" href="../../transitions/pulse"> BackInRight </a> <a class="nav-link" href="../../transitions/rubberband"> BackInUp </a> </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
         </ul>
       </div>
-    </div>
-    <!--MAIN CONTENT-->
-    <main class="main">
-      <!-- Section light -->
-      <section class="section section-divider darkened px-0 pb-0">
-        <!--Basic-->
+    </div><!--MAIN CONTENT-->
+    <main class="main"> <!-- Section light -->
+      <section class="section section-divider darkened px-0 pb-0"> <!--Basic-->
         <div class="container">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header basic</h3>
         </div>
@@ -391,9 +425,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Basic-->
-        <!--Basic Plus-->
+        </div> <!--END:Basic--> <!--Basic Plus-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header basic plus</h3>
         </div>
@@ -415,9 +447,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Basic plus-->
-        <!--Simple-->
+        </div> <!--END:Basic plus--> <!--Simple-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple </h3>
         </div>
@@ -440,9 +470,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Simple-->
-        <!--Simple 2 columns-->
+        </div> <!--END:Simple--> <!--Simple 2 columns-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple 2 columns</h3>
         </div>
@@ -471,9 +499,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Simple 2 columns-->
-        <!--Simple left-->
+        </div> <!--END:Simple 2 columns--> <!--Simple left-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple left aligned</h3>
         </div>
@@ -496,9 +522,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Simple left-->
-        <!--Simple left fit-->
+        </div> <!--END:Simple left--> <!--Simple left fit-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple left aligned fit</h3>
         </div>
@@ -521,9 +545,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Simple left fit-->
-        <!--Argument-->
+        </div> <!--END:Simple left fit--> <!--Argument-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Arguments module</h3>
         </div>
@@ -558,9 +580,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Argument-->
-        <!--Description module-->
+        </div> <!--END:Argument--> <!--Description module-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Description module</h3>
         </div>
@@ -583,9 +603,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Description module-->
-        <!--Header 2 columns-->
+        </div> <!--END:Description module--> <!--Header 2 columns-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header 2 columns</h3>
         </div>
@@ -616,9 +634,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Header 2 columns-->
-        <!--Header image-->
+        </div> <!--END:Header 2 columns--> <!--Header image-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header image</h3>
         </div>
@@ -647,12 +663,9 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Header image-->
-      </section> <!-- END:Section light -->
-      <!-- Section dark -->
-      <section class="section section-divider darkened px-0 pb-0" data-b-system-theme="dark">
-        <!--Basic-->
+        </div> <!--END:Header image-->
+      </section> <!-- END:Section light --> <!-- Section dark -->
+      <section class="section section-divider darkened px-0 pb-0" data-b-system-theme="dark"> <!--Basic-->
         <div class="container">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header basic</h3>
         </div>
@@ -674,9 +687,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Basic-->
-        <!--Basic Plus-->
+        </div> <!--END:Basic--> <!--Basic Plus-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header basic plus</h3>
         </div>
@@ -698,9 +709,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Basic plus-->
-        <!--Simple-->
+        </div> <!--END:Basic plus--> <!--Simple-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple </h3>
         </div>
@@ -723,9 +732,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Simple-->
-        <!--Simple 2 columns-->
+        </div> <!--END:Simple--> <!--Simple 2 columns-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple 2 columns</h3>
         </div>
@@ -754,9 +761,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Simple 2 columns-->
-        <!--Simple left-->
+        </div> <!--END:Simple 2 columns--> <!--Simple left-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple left aligned</h3>
         </div>
@@ -779,9 +784,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Simple left-->
-        <!--Simple left fit-->
+        </div> <!--END:Simple left--> <!--Simple left fit-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header simple left aligned fit</h3>
         </div>
@@ -804,9 +807,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Simple left fit-->
-        <!--Argument-->
+        </div> <!--END:Simple left fit--> <!--Argument-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Arguments module</h3>
         </div>
@@ -841,9 +842,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Argument-->
-        <!--Description module-->
+        </div> <!--END:Argument--> <!--Description module-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Description module</h3>
         </div>
@@ -866,9 +865,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Description module-->
-        <!--Header 2 columns-->
+        </div> <!--END:Description module--> <!--Header 2 columns-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header 2 columns</h3>
         </div>
@@ -899,9 +896,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Header 2 columns-->
-        <!--Header image-->
+        </div> <!--END:Header 2 columns--> <!--Header image-->
         <div class="container space-top-48 space-top-lg-56 space-top-xl-88">
           <h3 class="space-bottom-48 space-bottom-lg-56 space-bottom-xl-88">Header image</h3>
         </div>
@@ -930,30 +925,23 @@ body {
               </div>
             </div>
           </div>
-        </div>
-        <!--END:Header image-->
+        </div> <!--END:Header image-->
       </section> <!-- END:Section dark -->
-    </main>
-    <!--END: MAIN CONTENT-->
-    <!--MAIN FOOTER-->
+    </main><!--END: MAIN CONTENT--><!--MAIN FOOTER-->
     <footer class="footer footer-basic darkened inner-space-inline-16 inner-space-inline-sm-24 inner-space-block-48 inner-space-block-md-56 inner-space-block-xl-88">
       <div class="footer-wrapper container">
         <div class="footer-content d-flex gap-32"> <a class="footer-logo" href="../../home"> <img src="../../assets/img/logo-dark-gray.svg" class="logo" alt="logo" /> </a>
           <p class="copy body-light-text"> Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio </p>
         </div>
       </div>
-    </footer>
-    <!--END: MAIN FOOTER-->
-    <!--SCRIPTS-->
-    <!--Bootstrap JS Bundle-->
+    </footer><!--END: MAIN FOOTER--><!--SCRIPTS--><!--Bootstrap JS Bundle-->
     <script src="../../assets/vendor/bootstrap/5.1/js/bootstrap.bundle.min.js"></script><!-- Swiper bundle CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-html.min.js"></script><!-- Highlight -->
     <script src="../../assets/vendor/highlight/js/highlight.js"></script>
     <script>
 hljs.highlightAll();
-    </script>
-    <!--B_system JS-->
+    </script><!--B_system JS-->
     <script src="../../assets/js/bsystem.min.js"></script>
     <script src="../../assets/js/script.min.js"></script>
     <script>
@@ -1057,8 +1045,7 @@ demos = Object.values(demos).map((value) => {
   return value;
 }).flat(1);
 window.demos = demos;
-    </script>
-    <!--END: SCRIPTS-->
+    </script><!--END: SCRIPTS-->
   </body>
 
 </html>

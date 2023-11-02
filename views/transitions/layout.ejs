@@ -1,0 +1,27 @@
+<%- contentFor('header') %>
+<%
+const headerConfig = {
+    items: navigation,
+    justify: 'right',
+    size: 'full',
+    isSticky: true,
+    mainHeader: true,
+    buttons: [
+        {
+            label: 'Purchase B_system',
+            mobileIcon: 'cart'
+        }
+    ]
+}
+%>
+<%- include(`${component}/header/header`, { ...headerConfig }) %>
+
+<%- contentFor('fixed') %>
+<%- include(`${component}/navdrawer/navdrawer`, {navigation}) %>
+
+<%- contentFor('footer') %>
+<%- include(`${component}/footer/basic`, {
+img: {src: 'logo-dark-gray.svg', alt: 'logo'},
+text:'Massive Multipurpose HTML5 Template + Organic Design System. © 2022 B_system. All rights reserved. Customer Service: info@iteratika.studio',
+isDarkened: true,
+}) %>

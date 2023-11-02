@@ -1,0 +1,34 @@
+<%- include(`${view}/transitions/layout`) %>
+
+<%- contentFor('body') %>
+
+<!--Basic Plus-->
+<div class="container space-top-48 space-top-lg-56 space-top-xl-88">
+    <%- include(`${component}/text/head-x3`, { text: 'Attention seekers - Bounce'}) %>
+</div>
+
+<%
+const basicPlus = {
+    title:"Hi, I'm Matias Eriksson, photographer and designer",
+    isPlus:true,
+    hasBorder: false,
+    id: 'random-id-plus',
+    cssClass: 'animate__animated animate__bounce'
+
+}
+
+const basicPlusModule = include(`${module}/basicContent/basic`, basicPlus)
+
+const codePreviewPlus = {
+    idAccordion: 'basic',
+    idItem: 'basic-item-plus',
+    isDarkened: true,
+    content: basicPlusModule,
+}
+%>
+<div class="section section-divider">
+    <%- basicPlusModule %>
+</div>
+<%- include(`${component}/codePreview/codePreview`, codePreviewPlus) %>
+
+<!--END:Basic plus-->

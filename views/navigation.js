@@ -1,6 +1,7 @@
 const {QUICK_START} = require('./quick_start/routePaths')
 const {DEMOS} = require('./demos/routePaths')
 const {PAGES} = require('./pages/routePaths')
+const {TRANSITIONS} = require('./transitions/routePaths')
 
 const navigation = [
     {
@@ -596,6 +597,96 @@ const navigation = [
     {
         label: 'Transitions',
         key: 'transitions',
+        display: 'multilevel',
+        entries: [
+            {
+                label: 'Attention seekers',
+                entries: [
+                    {
+                        href: TRANSITIONS.BOUNCE,
+                        label: 'Bounce',
+                    },
+                    {
+                        href: TRANSITIONS.FLASH,
+                        label: 'Flash',
+                    },
+                    {
+                        href: TRANSITIONS.PULSE,
+                        label: 'Pulse',
+                    },
+                    {
+                        href: TRANSITIONS.RUBBERBAND,
+                        label: 'RubberBand',
+                    },
+                    {
+                        href: TRANSITIONS.SHAKEX,
+                        label: 'ShakeX',
+                    },
+                    {
+                        href: TRANSITIONS.SHAKEY,
+                        label: 'ShakeY',
+                    },
+                    {
+                        href: TRANSITIONS.HEADSHAKE,
+                        label: 'HeadShake',
+                    },
+                    {
+                        href: TRANSITIONS.SWING,
+                        label: 'Swing',
+                    },
+                    {
+                        href: TRANSITIONS.TADA,
+                        label: 'Tada',
+                    },
+                    {
+                        href: TRANSITIONS.WOBBLE,
+                        label: 'Wobble',
+                    },
+                    {
+                        href: TRANSITIONS.JELLO,
+                        label: 'Jello',
+                    },
+                    {
+                        href: TRANSITIONS.HEARTBEAT,
+                        label: 'HeartBeat',
+                    },
+                ]
+            },
+            {
+                label: 'Back entrances',
+                entries: [
+                    {
+                        href: TRANSITIONS.BOUNCE,
+                        label: 'BackInDown',
+                    },
+                    {
+                        href: TRANSITIONS.FLASH,
+                        label: 'BackInLeft',
+                    },
+                    {
+                        href: TRANSITIONS.PULSE,
+                        label: 'BackInRight',
+                    },
+                    {
+                        href: TRANSITIONS.RUBBERBAND,
+                        label: 'BackInUp',
+                    },
+
+                ]
+            },
+        ],
     },
 ]
 module.exports = navigation
+
+
+
+
+
+
+
+
+
+
+
+
