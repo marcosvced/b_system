@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/demos/home-cta",
+      "permanent": true
+    }
+  ]
+}

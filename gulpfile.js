@@ -36,6 +36,9 @@ const build = async () => {
   await gulp.src('./netlify.toml')
     .pipe(gulp.dest('./dist/'));
 
+  await gulp.src('./vercel.json')
+    .pipe(gulp.dest('./dist/'));
+
   await gulp.src('./assets/**/*')
     .pipe(gulp.dest('./dist/assets/'));
 };
